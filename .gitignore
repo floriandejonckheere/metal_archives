@@ -1,0 +1,6 @@
+# Ruby version
+.ruby-version
+.ruby-gemset
+
+# RSpec API cache
+tmp/
