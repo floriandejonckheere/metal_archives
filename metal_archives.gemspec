@@ -15,6 +15,7 @@ Gem::Specification.new do |gem|
   gem.license       = "MIT"
 
   gem.add_dependency('faraday')
+  gem.add_dependency('nokogiri')
 
   gem.add_development_dependency('rspec')
 end
