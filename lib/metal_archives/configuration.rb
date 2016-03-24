@@ -1,8 +1,10 @@
 module MetalArchives
   class << self
+    attr_accessor :config
+
     def configure
       raise 'Configuration block missing' unless block_given?
-      yield @config ||= MetalArchives::Configuration.new
+      yield MetalArchives.config ||= MetalArchives::Configuration.new
     end
   end
 

@@ -19,7 +19,7 @@ MetalArchives.configure do |c|
   # Application identity (required)
   c.app_name = "My App"
   c.app_version = "1.0"
-  c.contact = "support@mymusicapp.com"
+  c.app_contact = "support@mymusicapp.com"
 
   # Cache config (optional)
   c.cache_path = "/tmp/metal_archives-cache"
@@ -31,7 +31,7 @@ MetalArchives.configure do |c|
 end
 ```
 
-### Usage
+## Usage
 
 ```ruby
 require 'metal_archives'
@@ -43,11 +43,17 @@ require 'metal_archives'
 @iron_maiden = MusicBrainz::Artist.find_by_name("Iron Maiden")
 ```
 
-### Testing
+## Debugging
+
+```
+$ irb -r metal_archives
+```
+
+## Testing
 ```
 bundle exec rspec
 ```
 
-### Copyright
+## Copyright
 
-Copyright (c) 2016 Florian Dejonckheere. See `LICENSE` for further details.
+Copyright 2016 Florian Dejonckheere. See `LICENSE` for further details.
