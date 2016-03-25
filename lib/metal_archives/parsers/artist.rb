@@ -1,3 +1,5 @@
+require 'date'
+
 module MetalArchives
 module Parsers
   class Artist
@@ -44,7 +46,7 @@ module Parsers
               props[:themes] = []
               break if dt.next_element.text == 'N/A'
               dt.next_element.text.split(',').each do |theme|
-                t = genre.split.map(&:capitalize)
+                t = theme.split.map(&:capitalize)
                 t.delete '(early)'
                 t.delete '(later)'
                 props[:themes] << t.join(' ')

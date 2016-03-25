@@ -1,3 +1,5 @@
+require 'date'
+
 module MetalArchives
   class Artist < BaseModel
     property :id

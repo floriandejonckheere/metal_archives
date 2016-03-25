@@ -4,8 +4,7 @@ module MetalArchives
     class << self
       private
         def property(*args)
-          name = args.first
-          opts = args.last
+          name, opts = args.first, args.last
           attr_accessor name
           define_method("#{name}?") do
             !instance_variable_get("@#{name}").nil?
