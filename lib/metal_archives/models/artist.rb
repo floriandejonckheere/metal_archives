@@ -2,6 +2,7 @@ module MetalArchives
   class Artist < BaseModel
     property :id
     property :name
+    property :aliases,                        :multiple => true
     property :country,      :type => MetalArchives::Country
     property :location
     property :date_formed,  :type => Date
