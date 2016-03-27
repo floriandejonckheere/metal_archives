@@ -8,7 +8,7 @@ module MetalArchives
     property :country,      :type => MetalArchives::Country
     property :location
     property :date_formed,  :type => Date
-    property :date_active,  :type => Range,   :multiple => true
+    property :date_active,  :type => MetalArchives::Range,   :multiple => true
     property :genres,                         :multiple => true
     property :themes,                         :multiple => true
     property :label,        :type => MetalArchives::Label

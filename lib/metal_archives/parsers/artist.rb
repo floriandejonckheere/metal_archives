@@ -13,7 +13,7 @@ module Parsers
         doc = Nokogiri::HTML(response)
 
         props[:name] = doc.css('#band_info .band_name a').first.content
-        props[:comments] = doc.css('#band_info .band_comment').first.content
+        props[:comment] = doc.css('#band_info .band_comment').first.content.gsub(/\n/, '').strip
 
         props[:aliases] = []
 

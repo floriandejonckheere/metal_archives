@@ -14,6 +14,7 @@ Gem::Specification.new do |gem|
   gem.version       = MetalArchives::VERSION
   gem.license       = "MIT"
 
+  gem.add_development_dependency 'byebug'
   gem.add_development_dependency 'rake'
   gem.add_development_dependency 'test-unit'
 

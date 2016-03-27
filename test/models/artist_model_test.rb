@@ -3,7 +3,7 @@ require_relative '../test_helper'
 require 'metal_archives/models/artist'
 
 class ArtistModelTest < Test::Unit::TestCase
-  def test_basic_attributes
+  def test_basic_attribute_presence
     artist = MetalArchives::Artist.new
 
     [:id, :name, :aliases, :location, :date_formed, :date_active, :genres, :themes, :comment, :status].each do |attr|

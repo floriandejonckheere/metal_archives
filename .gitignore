@@ -2,5 +2,5 @@
 .ruby-version
 .ruby-gemset
 
-# RSpec API cache
-tmp/
+# Temp files
+.byebug_history
