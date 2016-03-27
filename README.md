@@ -51,7 +51,7 @@ $ irb -r metal_archives
 
 ## Testing
 ```
-bundle exec rspec
+bundle exec rake test
 ```
 
 ## Copyright

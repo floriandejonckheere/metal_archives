@@ -58,7 +58,7 @@ module Parsers
               props[:date_active] = []
               dt.next_element.text.split(',').each do |range|
                 # Aliases
-                names = range.scan(/\(as ([^)]*)\)/).each { |name| props[:aliases] << name.first }
+                range.scan(/\(as ([^)]*)\)/).each { |name| props[:aliases] << name.first }
                 # Ranges
                 range.gsub!(/ *\(as ([^)]*)\) */, '')
                 r = range.split('-')
