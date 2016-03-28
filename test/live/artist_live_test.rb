@@ -12,6 +12,7 @@ class ArtistLivetest < Test::Unit::TestCase
     artist = MetalArchives::Artist.find_by_name('Alquimia', 3540361100)
 
     assert_equal 'Alquimia', artist.name
+    assert_equal ISO3166::Country['ES'], artist.country
     assert_equal 'Grado, Asturias', artist.location
     assert_equal :active, artist.status
     assert_equal Date.new(2013), artist.date_formed
