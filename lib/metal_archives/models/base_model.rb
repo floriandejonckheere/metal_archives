@@ -44,7 +44,8 @@ module MetalArchives
           end
 
           define_method("#{name}=") do |value|
-            raise TypeError, "invalid value #{value.class} for #{name}" unless value.is_a?(opts[:type] || String)
+            type = opts[:multiple] == true ? Array : (opts[:type] || String)
+            raise TypeError, "invalid type #{value.class}, must be #{type} for #{name}" unless value.is_a? type
             instance_variable_set("@#{name}", value)
           end
         end

@@ -17,6 +17,12 @@ class ArtistParserTest < Test::Unit::TestCase
     assert_equal 'Pathfinder was founded by Arkadiusz Ruth and Karol Mania.', artist[:comment]
   end
 
+  def test_multiple
+    artist = MetalArchives::Parsers::Artist.parse(data_for('rhapsody_of_fire.html'))
+
+    assert_equal ['Thundercross', 'Rhapsody'].sort, artist[:aliases].sort
+  end
+
   def test_associations
     artist = MetalArchives::Parsers::Artist.parse(data_for('pathfinder.html'))
     # :date_active

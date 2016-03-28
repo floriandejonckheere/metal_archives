@@ -13,5 +13,5 @@ MetalArchives.configure do |c|
 end
 
 def data_for(filename)
-  File.read(File.join(File.dirname(__FILE__) + '/data/pathfinder.html'))
+  File.read(File.join(File.dirname(__FILE__) + "/data/#{filename}"))
 end
