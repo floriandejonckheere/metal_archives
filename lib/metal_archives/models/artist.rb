@@ -1,4 +1,5 @@
 require 'date'
+require 'countries'
 
 module MetalArchives
 
@@ -9,7 +10,7 @@ module MetalArchives
     property :id
     property :name
     property :aliases,                        :multiple => true
-    property :country,      :type => MetalArchives::Country
+    property :country,      :type => ISO3166::Country
     property :location
     property :date_formed,  :type => Date
     property :date_active,  :type => MetalArchives::Range,   :multiple => true

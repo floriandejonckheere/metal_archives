@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     metal_archives (0.0.1)
+      countries
       faraday
       nokogiri
 
@@ -9,8 +10,13 @@ GEM
   remote: https://rubygems.org/
   specs:
     byebug (8.2.2)
+    countries (1.2.5)
+      currencies (~> 0.4.2)
+      i18n_data (~> 0.7.0)
+    currencies (0.4.2)
     faraday (0.9.2)
       multipart-post (>= 1.2, < 3)
+    i18n_data (0.7.0)
     mini_portile2 (2.0.0)
     multipart-post (2.0.0)
     nokogiri (1.6.7.2)

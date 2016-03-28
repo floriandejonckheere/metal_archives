@@ -21,7 +21,7 @@ module Parsers
           dl.search('dt').each do |dt|
             case dt.text
             when 'Country of origin:'
-              # TODO
+              props[:country] = ISO3166::Country.find_country_by_name dt.next_element.css('a').first.text
             when 'Location:'
               break if dt.next_element.text == 'N/A'
               props[:location] = dt.next_element.text

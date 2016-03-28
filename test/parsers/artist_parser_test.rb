@@ -8,6 +8,7 @@ class ArtistParserTest < Test::Unit::TestCase
 
     assert_equal 'Pathfinder', artist[:name]
     assert_equal [], artist[:aliases]
+    assert_equal ISO3166::Country['PL'], artist[:country]
     assert_equal 'Poznań', artist[:location]
     assert_equal Date.new(2006), artist[:date_formed]
     assert_equal [MetalArchives::Range.new(Date.new(2006), nil)], artist[:date_active]
