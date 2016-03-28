@@ -56,7 +56,7 @@ $ bundle exec rake test
 
 ## Documentation
 ```
-$ bundle exec rdoc
+$ bundle exec rake rdoc
 ```
 
 ## Copyright

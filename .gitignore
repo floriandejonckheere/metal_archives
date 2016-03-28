@@ -6,4 +6,4 @@
 .byebug_history
 
 # RDoc
-doc/
+html/
