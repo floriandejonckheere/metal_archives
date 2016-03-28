@@ -4,3 +4,6 @@
 
 # Temp files
 .byebug_history
+
+# RDoc
+doc/

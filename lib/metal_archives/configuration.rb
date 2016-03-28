@@ -2,15 +2,57 @@ module MetalArchives
   class << self
     attr_accessor :config
 
+    ##
+    # Configure API options.
+    #
+    # A block must be specified, to which a
+    # rdoc-ref:MetalArchives::Configuration parameter will be passed.
+    #
+    # Raises rdoc-ref:InvalidConfigurationException
+    #
     def configure
-      raise 'Configuration block missing' unless block_given?
+      raise ArgumentError, 'No configuration block given' unless block_given?
       yield MetalArchives.config ||= MetalArchives::Configuration.new
     end
   end
 
+  ##
+  # Contains possible configuration options
+  #
   class Configuration
-    attr_accessor :app_name, :app_version, :app_contact,
-                  :cache_path, :perform_caching,
-                  :query_interval, :tries_limit
+    ##
+    # *Required.* Application name (used in request header)
+    #
+    attr_accessor :app_name
+
+    ##
+    # *Required.* Application version (used in request header)
+    #
+    attr_accessor :app_version
+
+    ##
+    # *Required.* Application contact email (used in request header)
+    #
+    attr_accessor :app_contact
+
+    ##
+    # Path to cache directory
+    #
+    attr_accessor :cache_path
+
+    ##
+    # Whether to enable the cache
+    #
+    attr_accessor :perform_caching
+
+    ##
+    # Minimum time between queries
+    #
+    attr_accessor :query_interval
+
+    ##
+    # Maximum number of tries
+    #
+    attr_accessor :tries_limit
   end
 end

@@ -1,5 +1,6 @@
 require 'metal_archives/version'
 require 'metal_archives/configuration'
+require 'metal_archives/error'
 
 require 'metal_archives/models/base_model'
 require 'metal_archives/models/range'

@@ -18,6 +18,7 @@ class ArtistParserTest < Test::Unit::TestCase
   end
 
   def test_associations
+    artist = MetalArchives::Parsers::Artist.parse(data_for('pathfinder.html'))
     # :date_active
     # country
     # label

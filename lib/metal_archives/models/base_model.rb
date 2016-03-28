@@ -1,6 +1,5 @@
 module MetalArchives
   class BaseModel
-
     class << self
       private
         def property(*args)
@@ -11,7 +10,7 @@ module MetalArchives
           end
 
           define_method("#{name}=") do |value|
-            raise "invalid value #{value.class} for #{name}" unless value.is_a?(opts[:type] || String)
+            raise TypeError, "invalid value #{value.class} for #{name}" unless value.is_a?(opts[:type] || String)
             instance_variable_set("@#{name}", value)
           end
         end
@@ -23,10 +22,15 @@ module MetalArchives
           end
 
           define_method("#{name}=") do |value|
-            raise "invalid enum value #{value} for #{name}" unless opts[:values].include?(value)
+            raise TypeError, "invalid enum value #{value} for #{name}" unless opts[:values].include?(value)
             instance_variable_set("@#{name}", value)
           end
         end
     end
+
+    private
+      def client
+        MetalArchives.client
+      end
   end
 end

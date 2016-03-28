@@ -1,6 +1,10 @@
 require 'date'
 
 module MetalArchives
+
+  ##
+  # Represents an artist (person or group)
+  #
   class Artist < BaseModel
     property :id
     property :name
@@ -20,13 +24,25 @@ module MetalArchives
     # TODO: n-way associations
 
     class << self
+      ##
+      # Search for an artist.
+      #
+      # Returns an +Array+ with rdoc-ref:Artist instances.
+      #
       def search(name)
         results = []
         results
       end
 
+      ##
+      # Find an artist by name and id.
+      #
+      # Returns an rdoc-ref:Artist instance.
+      #
+      # Raises rdoc-ref:
+      #
       def find_by_name(name, id)
-        Client.find_resource(
+        client.find_resource(
             :artist,
               :name => name,
               :id => id
