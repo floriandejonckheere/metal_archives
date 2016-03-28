@@ -12,7 +12,7 @@ module MetalArchives
     end
 
     def user_agent_string
-      "#{MetalArchives.config.app_name}/#{MetalArchives.config.app_version} ( #{MetalArchives.config.contact} )"
+      "#{MetalArchives.config.app_name}/#{MetalArchives.config.app_version} ( #{MetalArchives.config.app_contact} )"
     end
 
     def accept_string

@@ -21,13 +21,13 @@ module MetalArchives
     # a +Hash+ containing query parameters.
     #
     def find_resource(model, query)
-      raise InvalidConfigurationException.new('No configuration present') unless MetalArchives.config
+      raise InvalidConfigurationError, 'Not configured yet' unless MetalArchives.config
 
-      parser = Parser.constantize(model)
+      parser = Parsers.const_get model.to_s.capitalize
 
       url = parser.find_endpoint(query)
       response = http.get(url)
-      object = constantize(model).new parser.parse(response)
+      object = MetalArchives.const_get(model.to_s.capitalize).new parser.parse response.body
 
       object
     end

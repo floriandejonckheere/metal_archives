@@ -20,7 +20,6 @@ module MetalArchives
 
     enum :status,       :values => [:active, :split_up, :on_hold, :unknown, :changed_name, :disputed]
 
-
     # TODO: n-way associations
 
     class << self

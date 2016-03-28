@@ -1,10 +1,31 @@
+require 'byebug'
+
 module MetalArchives
+  ##
+  # Base model class all models are derived from
+  #
   class BaseModel
+    ##
+    # Generic constructor
+    #
+    def initialize(hash = {})
+      self.class.properties.each do |property|
+        instance_variable_set("@#{property}", hash[property] || nil)
+      end
+    end
+
     class << self
+      ##
+      # +Array+ of declared properties
+      #
+      attr_accessor :properties
+
       private
         def property(*args)
           name, opts = args.first, args.last
           attr_accessor name
+          (@properties ||= []) << name
+
           define_method("#{name}?") do
             !instance_variable_get("@#{name}").nil?
           end
@@ -17,6 +38,8 @@ module MetalArchives
 
         def enum(name, args)
           attr_accessor name
+          (@properties ||= []) << name
+
           define_method("#{name}?") do
             !instance_variable_get("@#{name}").nil?
           end
@@ -26,11 +49,10 @@ module MetalArchives
             instance_variable_set("@#{name}", value)
           end
         end
-    end
 
-    private
-      def client
-        MetalArchives.client
-      end
+        def client
+          MetalArchives.client
+        end
+    end
   end
 end
