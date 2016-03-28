@@ -38,8 +38,6 @@ module MetalArchives
       #
       # Returns an rdoc-ref:Artist instance.
       #
-      # Raises rdoc-ref:
-      #
       def find_by_name(name, id)
         client.find_resource(
             :artist,

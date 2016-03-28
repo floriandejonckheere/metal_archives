@@ -1,5 +1,3 @@
-require 'byebug'
-
 module MetalArchives
   ##
   # Base model class all models are derived from
@@ -20,9 +18,24 @@ module MetalArchives
       #
       attr_accessor :properties
 
-      private
-        def property(*args)
-          name, opts = args.first, args.last
+      protected
+        ##
+        # Defines a model property.
+        #
+        # [+name+]
+        #     Name of the property
+        #
+        # [+opts+]
+        #   [+type+]
+        #       Data type of property (a constant)
+        #
+        #       Default: +String+
+        #
+        #   [+multiple+]
+        #       Whether or not the property has multiple values (which
+        #       turns it into an +Array+ of +type+)
+        #
+        def property(name, opts = {})
           attr_accessor name
           (@properties ||= []) << name
 
@@ -36,7 +49,21 @@ module MetalArchives
           end
         end
 
-        def enum(name, args)
+        ##
+        # Defines a model enum property.
+        #
+        # [+name+]
+        #     Name of the property
+        #
+        # [+opts+]
+        #   [+values+]
+        #       An array of possible values
+        #
+        #   [+multiple+]
+        #       Whether or not the property has multiple values (which
+        #       turns it into an +Array+ of +type+)
+        #
+        def enum(name, opts)
           attr_accessor name
           (@properties ||= []) << name
 
@@ -50,6 +77,7 @@ module MetalArchives
           end
         end
 
+      private
         def client
           MetalArchives.client
         end
