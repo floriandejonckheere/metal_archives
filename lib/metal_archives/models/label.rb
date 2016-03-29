@@ -70,6 +70,18 @@ module MetalArchives
     #
     boolean :online_shopping
 
-    enum :status,       :values => [:active, :closed, :unknown]
+    ##
+    # :attr_reader: contact
+    #
+    # Returns +Hash+ with the following keys: +title+, +content+
+    #
+    property :contact, :type => Hash, :multiple => true
+
+    ##
+    # :attr_reader: status
+    #
+    # Returns +:active+, +:closed+ or +:unknown+
+    #
+    enum :status, :values => [:active, :closed, :unknown]
   end
 end
