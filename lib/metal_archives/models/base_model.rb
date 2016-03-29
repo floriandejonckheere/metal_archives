@@ -44,8 +44,15 @@ module MetalArchives
           end
 
           define_method("#{name}=") do |value|
-            type = opts[:multiple] == true ? Array : (opts[:type] || String)
-            raise TypeError, "invalid type #{value.class}, must be #{type} for #{name}" unless value.is_a? type
+            type = opts[:type] || String
+            if opts[:multiple]
+              raise TypeError, "invalid type #{value.class}, must be Array for #{name}" unless value.is_a? Array
+              value.each do |val|
+                raise TypeError, "invalid type #{val.class}, must be #{type} for #{name}" unless val.is_a? type
+              end
+            else
+              raise TypeError, "invalid type #{value.class}, must be #{type} for #{name}" unless value.is_a? type
+            end
             instance_variable_set("@#{name}", value)
           end
         end
@@ -58,13 +65,15 @@ module MetalArchives
         #
         # [+opts+]
         #   [+values+]
-        #       An array of possible values
+        #       Required. An array of possible values
         #
         #   [+multiple+]
         #       Whether or not the property has multiple values (which
         #       turns it into an +Array+ of +type+)
         #
         def enum(name, opts)
+          raise ArgumentError, 'opts[:values] is required' unless opts and opts[:values]
+
           attr_accessor name
           (@properties ||= []) << name
 
@@ -73,9 +82,32 @@ module MetalArchives
           end
 
           define_method("#{name}=") do |value|
-            raise TypeError, "invalid enum value #{value} for #{name}" unless opts[:values].include?(value)
+            if opts[:multiple]
+              raise TypeError, "invalid enum value #{value}, must be Array for #{name}" unless value.is_a? Array
+              value.each do |val|
+                raise TypeError, "invalid enum value #{val} for #{name}" unless opts[:values].include? val
+              end
+            else
+              raise TypeError, "invalid enum value #{value} for #{name}" unless opts[:values].include? value
+            end
             instance_variable_set("@#{name}", value)
           end
+        end
+
+        ##
+        # Defines a model boolean property. This method is an alias for +enum name, :values => [true, false]+
+        #
+        # [+name+]
+        #     Name of the property
+        #
+        # [+opts+]
+        #   [+multiple+]
+        #       Whether or not the property has multiple values (which
+        #       turns it into an +Array+ of +type+)
+        #
+        def boolean(name, opts = {})
+          opts[:values] = [true, false]
+          enum name, opts
         end
 
       private
