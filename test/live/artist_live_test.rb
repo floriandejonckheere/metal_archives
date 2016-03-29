@@ -17,6 +17,6 @@ class ArtistLivetest < Test::Unit::TestCase
     assert_equal :active, artist.status
     assert_equal Date.new(2013), artist.date_formed
     assert_equal ['Melodic Power'], artist.genres
-    assert_equal ['Epic', 'Legends', 'Medieval'].sort, artist.themes.sort
+    assert_equal ['Epic', 'Legends', 'Medieval'].sort, artist.lyrical_themes.sort
   end
 end

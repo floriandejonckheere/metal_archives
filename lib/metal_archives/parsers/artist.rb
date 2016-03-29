@@ -43,13 +43,13 @@ module Parsers
                 end
               end
             when 'Lyrical themes:'
-              props[:themes] = []
+              props[:lyrical_themes] = []
               break if dt.next_element.text == 'N/A'
               dt.next_element.text.split(',').each do |theme|
                 t = theme.split.map(&:capitalize)
                 t.delete '(early)'
                 t.delete '(later)'
-                props[:themes] << t.join(' ')
+                props[:lyrical_themes] << t.join(' ')
               end
             when 'Current label:'
               # TODO

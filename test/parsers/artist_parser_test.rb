@@ -14,7 +14,7 @@ class ArtistParserTest < Test::Unit::TestCase
     assert_equal [MetalArchives::Range.new(Date.new(2006), nil)], artist[:date_active]
     assert_equal :active, artist[:status]
     assert_equal ['Symphonic Power'], artist[:genres]
-    assert_equal ['Fantasy', 'Battles', 'Glory', 'The Four Elements', 'Metal'].sort, artist[:themes].sort
+    assert_equal ['Fantasy', 'Battles', 'Glory', 'The Four Elements', 'Metal'].sort, artist[:lyrical_themes].sort
     assert_equal 'Pathfinder was founded by Arkadiusz Ruth and Karol Mania.', artist[:comment]
   end
 
