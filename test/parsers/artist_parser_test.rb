@@ -25,9 +25,8 @@ class ArtistParserTest < Test::Unit::TestCase
   end
 
   def test_associations
+    omit 'not implemented yet'
     artist = MetalArchives::Parsers::Artist.parse(data_for('pathfinder.html'))
-    # :date_active
-    # country
     # label
   end
 end

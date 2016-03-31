@@ -1,4 +1,5 @@
 require 'date'
+require 'countries'
 
 module MetalArchives
 module Parsers
@@ -19,33 +20,24 @@ module Parsers
 
         doc.css('#band_stats dl').each do |dl|
           dl.search('dt').each do |dt|
-            case dt.text
+            case dt.content
             when 'Country of origin:'
-              props[:country] = ISO3166::Country.find_country_by_name dt.next_element.css('a').first.text
+              props[:country] = ISO3166::Country.find_country_by_name dt.next_element.css('a').first.content
             when 'Location:'
-              break if dt.next_element.text == 'N/A'
-              props[:location] = dt.next_element.text
+              break if dt.next_element.content == 'N/A'
+              props[:location] = dt.next_element.content
             when 'Status:'
-              props[:status] = dt.next_element.text.downcase.gsub(/ /, '_').to_sym
+              props[:status] = dt.next_element.content.downcase.gsub(/ /, '_').to_sym
             when 'Formed in:'
-              break if dt.next_element.text == 'N/A'
-              props[:date_formed] = Date.new dt.next_element.text.to_i
+              break if dt.next_element.content == 'N/A'
+              props[:date_formed] = Date.new dt.next_element.content.to_i
             when 'Genre:'
-              props[:genres] = []
-              break if dt.next_element.text == 'N/A'
-              dt.next_element.text.split(',').each do |genre|
-                genre.split('/').each do |g|
-                  g = genre.split.map(&:capitalize)
-                  g.delete 'Metal'
-                  g.delete '(later)'
-                  g.delete '(early)'
-                  props[:genres] << g.join(' ')
-                end
-              end
+              break if dt.next_element.content == 'N/A'
+              props[:genres] = ParserHelper.parse_genre dt.next_element.content
             when 'Lyrical themes:'
               props[:lyrical_themes] = []
-              break if dt.next_element.text == 'N/A'
-              dt.next_element.text.split(',').each do |theme|
+              break if dt.next_element.content == 'N/A'
+              dt.next_element.content.split(',').each do |theme|
                 t = theme.split.map(&:capitalize)
                 t.delete '(early)'
                 t.delete '(later)'
@@ -54,9 +46,9 @@ module Parsers
             when 'Current label:'
               # TODO
             when 'Years active:'
-              break if dt.next_element.text == 'N/A'
+              break if dt.next_element.content == 'N/A'
               props[:date_active] = []
-              dt.next_element.text.split(',').each do |range|
+              dt.next_element.content.split(',').each do |range|
                 # Aliases
                 range.scan(/\(as ([^)]*)\)/).each { |name| props[:aliases] << name.first }
                 # Ranges
@@ -67,7 +59,7 @@ module Parsers
                 props[:date_active] << Range.new(date_start, date_end)
               end
             else
-              raise "Unknown token: #{dt.text}"
+              raise "Unknown token: #{dt.content}"
             end
           end
         end
