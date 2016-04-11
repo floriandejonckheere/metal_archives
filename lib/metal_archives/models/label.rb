@@ -83,5 +83,30 @@ module MetalArchives
     # Returns +:active+, +:closed+ or +:unknown+
     #
     enum :status, :values => [:active, :closed, :unknown]
+
+    class << self
+      ##
+      # Search by name.
+      #
+      # Returns +Array+ of rdoc-ref:Label
+      #
+      def search(name)
+        results = []
+        results
+      end
+
+      ##
+      # Find by name and id.
+      #
+      # Returns rdoc-ref:Artist
+      #
+      def find_by_name(name, id)
+        client.find_resource(
+            :artist,
+              :name => name,
+              :id => id
+        )
+      end
+    end
   end
 end

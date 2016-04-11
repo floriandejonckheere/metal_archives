@@ -9,6 +9,9 @@ module Parsers
         "http://www.metal-archives.com/bands/#{params[:name]}/#{params[:id]}"
       end
 
+      def search_endpoint(params)
+      end
+
       def parse(response)
         props = {}
         doc = Nokogiri::HTML(response)

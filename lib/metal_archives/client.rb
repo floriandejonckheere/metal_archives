@@ -17,10 +17,31 @@ module MetalArchives
     ##
     # Find a +model+ using +query+
     #
+    # [+model+]
+    #     +Symbol+ representing a class < rdoc-ref:BaseModel
+    #
+    # [+query+]
+    #     +Hash+ containing query parameters
+    #
+    def find_resource(model, query)
+      raise InvalidConfigurationError, 'Not configured yet' unless MetalArchives.config
+
+      parser = Parsers.const_get model.to_s.capitalize
+
+      url = parser.find_endpoint(query)
+      response = http.get(url)
+      object = MetalArchives.const_get(model.to_s.capitalize).new parser.parse response.body
+
+      object
+    end
+
+    ##
+    # Find multiple +model+s using +query+
+    #
     # +model+ is an object deriving from rdoc-ref:BaseModel . +query+ is
     # a +Hash+ containing query parameters.
     #
-    def find_resource(model, query)
+    def search_resource(model, query)
       raise InvalidConfigurationError, 'Not configured yet' unless MetalArchives.config
 
       parser = Parsers.const_get model.to_s.capitalize

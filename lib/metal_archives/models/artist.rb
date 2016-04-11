@@ -91,30 +91,81 @@ module MetalArchives
     #
     enum :status,       :values => [:active, :split_up, :on_hold, :unknown, :changed_name, :disputed]
 
-    # TODO: n-way associations
+    # TODO: releases
+    # TODO: members
+    # TODO: reviews
+    # TODO: similar artists
+    # TODO: links
+    # TODO: artist art
 
     class << self
+      ##
+      # Search by attributes
+      #
+      # Returns rdoc-ref:Artist
+      #
+      # [+query+]
+      #     Hash containing one or more of the following keys:
+      #     - +:name+
+      #
+      def search_by(query)
+        client.search_resource(
+          :artist,
+            query
+        )
+      end
+
       ##
       # Search by name.
       #
       # Returns +Array+ of rdoc-ref:Artist
       #
       def search(name)
-        results = []
-        results
+        search_by :name => name
       end
 
       ##
-      # Find by name and id.
+      # Search by genre.
+      #
+      # Returns +Array+ of rdoc-ref:Artist
+      #
+      def search_by_genre(name)
+        raise NotImplementedError
+      end
+
+      ##
+      # Find by attributes
       #
       # Returns rdoc-ref:Artist
       #
-      def find_by_name(name, id)
+      # Returns first match by attributes
+      #
+      # [+query+]
+      #     Hash containing one or more of the following keys:
+      #     - +:name+
+      #
+      def find_by(query)
         client.find_resource(
-            :artist,
-              :name => name,
-              :id => id
+          :artist,
+            query
         )
+      end
+
+      ##
+      # Find by name.
+      #
+      # Returns rdoc-ref:Artist
+      #
+      # Returns first match by name or exact match
+      # if id is specified
+      #
+      def find(name, id = nil)
+        if id
+          find_by :name => name,
+                  :id => id
+        else
+          find_by :name => name
+        end
       end
     end
   end
