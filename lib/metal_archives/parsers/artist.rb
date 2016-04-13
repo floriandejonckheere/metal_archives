@@ -12,7 +12,7 @@ module Parsers
       def search_endpoint(params)
       end
 
-      def parse(response)
+      def parse_html(response)
         props = {}
         doc = Nokogiri::HTML(response)
 
@@ -47,6 +47,7 @@ module Parsers
                 props[:lyrical_themes] << t.join(' ')
               end
             when 'Current label:'
+              props[:independent] = (dt.next_element.content == 'Unsigned/independent')
               # TODO
             when 'Years active:'
               break if dt.next_element.content == 'N/A'

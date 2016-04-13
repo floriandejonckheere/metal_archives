@@ -78,6 +78,13 @@ module MetalArchives
     property :label, :type => MetalArchives::Label
 
     ##
+    # :attr_reader: independent
+    #
+    # Returns boolean
+    #
+    enum :independent,  :values => [true, false]
+
+    ##
     # :attr_reader: comment
     #
     # Returns +String+
