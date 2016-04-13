@@ -109,35 +109,38 @@ module MetalArchives
       ##
       # Search by attributes
       #
-      # Returns rdoc-ref:Artist
+      # Returns +Array+ of rdoc-ref:Artist
       #
       # [+query+]
       #     Hash containing one or more of the following keys:
-      #     - +:name+
+      #     - +:name+: +String+
+      #     - +:genre+: +String+
+      #     - +:country+: +ISO366::Country+
+      #     - +:year_formation+: rdoc-ref:Range of +Date+
+      #     - +:comment+: +String+
+      #     - +:status+: see rdoc-ref:Artist.status
+      #     - +:lyrical_themes+: +String+
+      #     - +:location+: +String+
+      #     - +:label+: rdoc-ref:Label
+      #     - +:independant+: boolean
       #
       def search_by(query)
-        client.search_resource(
+        client.search_by(
           :artist,
             query
         )
       end
 
       ##
-      # Search by name.
+      # Search by name
       #
       # Returns +Array+ of rdoc-ref:Artist
+      #
+      # [+name+]
+      #     +String+
       #
       def search(name)
         search_by :name => name
-      end
-
-      ##
-      # Search by genre.
-      #
-      # Returns +Array+ of rdoc-ref:Artist
-      #
-      def search_by_genre(name)
-        raise NotImplementedError
       end
 
       ##
@@ -145,34 +148,31 @@ module MetalArchives
       #
       # Returns rdoc-ref:Artist
       #
-      # Returns first match by attributes
+      # Returns first match
       #
       # [+query+]
-      #     Hash containing one or more of the following keys:
-      #     - +:name+
+      #     see rdoc-ref:Artist.search_by
       #
       def find_by(query)
-        client.find_resource(
+        client.find_by(
           :artist,
             query
         )
       end
 
       ##
-      # Find by name.
+      # Find by ID
       #
       # Returns rdoc-ref:Artist
       #
-      # Returns first match by name or exact match
-      # if id is specified
+      # [+id+]
+      #     +Integer+
       #
-      def find(name, id = nil)
-        if id
-          find_by :name => name,
-                  :id => id
-        else
-          find_by :name => name
-        end
+      def find(id)
+        client.find_by_id(
+          :artist,
+            id
+        )
       end
     end
   end

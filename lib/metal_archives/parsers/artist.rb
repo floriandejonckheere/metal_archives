@@ -1,3 +1,4 @@
+require 'json'
 require 'date'
 require 'countries'
 
@@ -5,11 +6,37 @@ module MetalArchives
 module Parsers
   class Artist
     class << self
-      def find_endpoint(params)
-        "http://www.metal-archives.com/bands/#{params[:name]}/#{params[:id]}"
+      def find_endpoint(query)
+        "http://www.metal-archives.com/bands/#{query[:name] || ''}/#{query[:id]}"
       end
 
-      def search_endpoint(params)
+      def search_endpoint(query)
+        "http://www.metal-archives.com/search/ajax-advanced/searching/bands/"
+      end
+
+      ##
+      # Map attributes to MA attributes
+      #
+      # Returns +Hash+
+      #
+      # [+params+]
+      #     +Hash+
+      #
+      def map_params(params)
+        {
+          :bandName => params[:name] || '',
+          :exactBandMatch => 0,
+          :genre => params[:genre] || '',
+          :country => ((params[:country].is_a? ISO3166::Country) ? params[:country].alpha2 : (params[:country] || '')),
+          :yearCreationFrom => (params[:year] ? params[:year].begin.year || '' : ''),
+          :yearCreationTo => (params[:year] ? params[:year].end.year || '' : ''),
+          :bandNotes => params[:comment],
+          :status => map_status(params[:status]),
+          :themes => params[:lyrical_themes],
+          :location => params[:location],
+          :bandLabelName => params[:label],
+          :indieLabelBand => !!params[:independent]
+        }
       end
 
       def parse_html(response)
@@ -63,13 +90,31 @@ module Parsers
                 props[:date_active] << Range.new(date_start, date_end)
               end
             else
-              raise "Unknown token: #{dt.content}"
+              raise ParserError, "Unknown token: #{dt.content}"
             end
           end
         end
 
         props
       end
+
+      def parse_json(response)
+        props = {}
+        doc = JSON.parse response
+      end
+
+      private
+        def map_status(status)
+          return {
+            nil => '',
+            :active => 'Active',
+            :split_up => 'Split-up',
+            :on_hold => 'On hold',
+            :unknown => 'Unknown',
+            :changed_name => 'Changed name',
+            :disputed => 'Disputed'
+          }[status]
+        end
     end
   end
 end
