@@ -4,7 +4,7 @@ require 'countries'
 
 module MetalArchives
 module Parsers
-  class Artist
+  class Band
     class << self
       def find_endpoint(query)
         "http://www.metal-archives.com/bands/#{query[:name] || ''}/#{query[:id]}"

@@ -4,9 +4,9 @@ require 'countries'
 module MetalArchives
 
   ##
-  # Represents an artist (person or group)
+  # Represents an band (person or group)
   #
-  class Artist < BaseModel
+  class Band < BaseModel
     ##
     # :attr_reader: id
     #
@@ -101,15 +101,15 @@ module MetalArchives
     # TODO: releases
     # TODO: members
     # TODO: reviews
-    # TODO: similar artists
+    # TODO: similar bands
     # TODO: links
-    # TODO: artist art
+    # TODO: band art
 
     class << self
       ##
       # Search by attributes
       #
-      # Returns +Array+ of rdoc-ref:Artist
+      # Returns +Array+ of rdoc-ref:Band
       #
       # [+query+]
       #     Hash containing one or more of the following keys:
@@ -118,7 +118,7 @@ module MetalArchives
       #     - +:country+: +ISO366::Country+
       #     - +:year_formation+: rdoc-ref:Range of +Date+
       #     - +:comment+: +String+
-      #     - +:status+: see rdoc-ref:Artist.status
+      #     - +:status+: see rdoc-ref:Band.status
       #     - +:lyrical_themes+: +String+
       #     - +:location+: +String+
       #     - +:label+: rdoc-ref:Label
@@ -126,7 +126,7 @@ module MetalArchives
       #
       def search_by(query)
         client.search_by(
-          :artist,
+          :band,
             query
         )
       end
@@ -134,7 +134,7 @@ module MetalArchives
       ##
       # Search by name
       #
-      # Returns +Array+ of rdoc-ref:Artist
+      # Returns +Array+ of rdoc-ref:Band
       #
       # [+name+]
       #     +String+
@@ -146,16 +146,16 @@ module MetalArchives
       ##
       # Find by attributes
       #
-      # Returns rdoc-ref:Artist
+      # Returns rdoc-ref:Band
       #
       # Returns first match
       #
       # [+query+]
-      #     see rdoc-ref:Artist.search_by
+      #     see rdoc-ref:Band.search_by
       #
       def find_by(query)
         client.find_by(
-          :artist,
+          :band,
             query
         )
       end
@@ -163,14 +163,14 @@ module MetalArchives
       ##
       # Find by ID
       #
-      # Returns rdoc-ref:Artist
+      # Returns rdoc-ref:Band
       #
       # [+id+]
       #     +Integer+
       #
       def find(id)
         client.find_by_id(
-          :artist,
+          :band,
             id
         )
       end

@@ -1,13 +1,13 @@
 require_relative '../test_helper'
 
-require 'metal_archives/models/artist'
+require 'metal_archives/models/band'
 
-class ArtistModelTest < Test::Unit::TestCase
+class BandModelTest < Test::Unit::TestCase
   def test_attribute_presence
-    artist = MetalArchives::Artist.new
+    band = MetalArchives::Band.new
 
     [:id, :name, :aliases, :country, :location, :date_formed, :date_active, :genres, :lyrical_themes, :comment, :status, :label].each do |attr|
-      assert_respond_to artist, attr
+      assert_respond_to band, attr
     end
   end
 end

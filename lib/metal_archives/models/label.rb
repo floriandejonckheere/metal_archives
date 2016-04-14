@@ -98,11 +98,11 @@ module MetalArchives
       ##
       # Find by name and id.
       #
-      # Returns rdoc-ref:Artist
+      # Returns rdoc-ref:Band
       #
       def find_by_name(name, id)
         client.find_resource(
-            :artist,
+            :band,
               :name => name,
               :id => id
         )
