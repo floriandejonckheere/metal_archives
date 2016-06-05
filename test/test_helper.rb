@@ -10,6 +10,7 @@ MetalArchives.configure do |c|
 
   c.cache_path = File.join(File.dirname(__FILE__), '..', 'tmp', 'spec_cache')
   c.perform_caching = true
+  c.debug = true
 end
 
 def data_for(filename)

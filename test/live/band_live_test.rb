@@ -14,12 +14,10 @@ class BandLiveTest < Test::Unit::TestCase
   def test_search
     countries = MetalArchives::Band.search('Alquimia').map { |a| a.country }.sort
 
-    assert_equals 3, countries.size
-    assert_equals [
-              ISO3166::Country['AR'],
-              ISO3166::Country['ES'],
-              ISO3166::Country['CL']
-            ], countries
+    assert_equal 5, countries.size
+    assert countries.include? ISO3166::Country['AR']
+    assert countries.include? ISO3166::Country['ES']
+    assert countries.include? ISO3166::Country['CL']
   end
 
   def test_find_by
