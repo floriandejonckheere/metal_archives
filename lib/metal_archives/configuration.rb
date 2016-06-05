@@ -54,5 +54,10 @@ module MetalArchives
     # Maximum number of tries
     #
     attr_accessor :tries_limit
+
+    ##
+    # Print debug information
+    #
+    attr_accessor :debug
   end
 end

@@ -2,14 +2,18 @@
 
 ## Installation
 
-```
-gem install metal_archives
+```shell
+$ gem install metal_archives
 ```
 
 or add it to your Gemfile
 
 ```ruby
 gem 'metal_archives'
+```
+
+```shell
+$ bundle install
 ```
 
 ## Configuration
@@ -28,6 +32,9 @@ MetalArchives.configure do |c|
   # Querying config (optional)
   c.query_interval = 1.2 # seconds
   c.tries_limit = 2
+
+  # Print debugging information
+  c.debug = false
 end
 ```
 
