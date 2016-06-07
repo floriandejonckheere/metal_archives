@@ -28,7 +28,7 @@ module Parsers
       def map_params(query)
         params = {
           :bandName => query[:name] || '',
-          :exactBandMatch => 0,
+          :exactBandMatch => (!!query[:exact] ? 1 : 0),
           :genre => query[:genre] || '',
           :yearCreationFrom => (query[:year] ? query[:year].begin.year || '' : ''),
           :yearCreationTo => (query[:year] ? query[:year].end.year || '' : ''),

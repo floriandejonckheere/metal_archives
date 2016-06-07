@@ -114,6 +114,7 @@ module MetalArchives
       # [+query+]
       #     Hash containing one or more of the following keys:
       #     - +:name+: +String+
+      #     - +:exact+: +Boolean+
       #     - +:genre+: +String+
       #     - +:country+: +ISO366::Country+
       #     - +:year_formation+: rdoc-ref:Range of +Date+

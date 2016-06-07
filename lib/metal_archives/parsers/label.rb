@@ -1,4 +1,5 @@
 require 'date'
+require 'nokogiri'
 
 module MetalArchives
 module Parsers

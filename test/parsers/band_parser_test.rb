@@ -47,6 +47,12 @@ class BandParserTest < Test::Unit::TestCase
 
   def test_map_params
     assert_equal 'name', MetalArchives::Parsers::Band.map_params(:name => 'name')[:bandName]
+
+    assert_equal 1, MetalArchives::Parsers::Band.map_params(:exact => true)[:exactBandMatch]
+    assert_equal 1, MetalArchives::Parsers::Band.map_params(:exact => 'somevalue')[:exactBandMatch]
+    assert_equal 0, MetalArchives::Parsers::Band.map_params(:exact => false)[:exactBandMatch]
+    assert_equal 0, MetalArchives::Parsers::Band.map_params(:exact => nil)[:exactBandMatch]
+
     assert_equal '', MetalArchives::Parsers::Band.map_params({})[:bandName]
     assert_equal 0, MetalArchives::Parsers::Band.map_params({})[:exactBandMatch]
     assert_equal 'genre', MetalArchives::Parsers::Band.map_params({ :genre => 'genre'})[:genre]
