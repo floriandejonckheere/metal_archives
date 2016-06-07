@@ -7,7 +7,7 @@ module Parsers
   class Band
     class << self
       def find_endpoint(query)
-        "http://www.metal-archives.com/bands/#{query[:name] || ''}/#{query[:id]}"
+        "http://www.metal-archives.com/band/view/id/#{query[:id]}"
       end
 
       def search_endpoint(query)
@@ -22,21 +22,27 @@ module Parsers
       # [+params+]
       #     +Hash+
       #
-      def map_params(params)
-        {
-          :bandName => params[:name] || '',
+      def map_params(query)
+        params = {
+          :bandName => query[:name] || '',
           :exactBandMatch => 0,
-          :genre => params[:genre] || '',
-          :country => ((params[:country].is_a? ISO3166::Country) ? params[:country].alpha2 : (params[:country] || '')),
-          :yearCreationFrom => (params[:year] ? params[:year].begin.year || '' : ''),
-          :yearCreationTo => (params[:year] ? params[:year].end.year || '' : ''),
-          :bandNotes => params[:comment],
-          :status => map_status(params[:status]),
-          :themes => params[:lyrical_themes],
-          :location => params[:location],
-          :bandLabelName => params[:label],
-          :indieLabelBand => !!params[:independent]
+          :genre => query[:genre] || '',
+          :yearCreationFrom => (query[:year] ? query[:year].begin.year || '' : ''),
+          :yearCreationTo => (query[:year] ? query[:year].end.year || '' : ''),
+          :bandNotes => query[:comment],
+          :status => map_status(query[:status]),
+          :themes => query[:lyrical_themes],
+          :location => query[:location],
+          :bandLabelName => query[:label],
+          :indieLabelBand => !!query[:independent]
         }
+
+        params[:country] = []
+        Array(query[:country]).each do |country|
+          params[:country] << (country.is_a?(ISO3166::Country) ? country.alpha2 : (country || ''))
+        end
+
+        params
       end
 
       def parse_html(response)
@@ -105,7 +111,7 @@ module Parsers
 
       private
         def map_status(status)
-          return {
+          s = {
             nil => '',
             :active => 'Active',
             :split_up => 'Split-up',
@@ -113,7 +119,11 @@ module Parsers
             :unknown => 'Unknown',
             :changed_name => 'Changed name',
             :disputed => 'Disputed'
-          }[status]
+          }
+
+          raise ParserError, "Unknown status: #{status}" unless s[status]
+
+          s[status]
         end
     end
   end

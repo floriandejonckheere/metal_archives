@@ -30,4 +30,51 @@ class BandParserTest < Test::Unit::TestCase
     band = MetalArchives::Parsers::Band.parse_html(data_for('pathfinder.html'))
     # label
   end
+
+  def test_map_status
+    assert_equal '', MetalArchives::Parsers::Band.send(:map_status, nil)
+    assert_equal 'Active', MetalArchives::Parsers::Band.send(:map_status, :active)
+    assert_equal 'Split-up', MetalArchives::Parsers::Band.send(:map_status, :split_up)
+    assert_equal 'On hold', MetalArchives::Parsers::Band.send(:map_status, :on_hold)
+    assert_equal 'Unknown', MetalArchives::Parsers::Band.send(:map_status, :unknown)
+    assert_equal 'Changed name', MetalArchives::Parsers::Band.send(:map_status, :changed_name)
+    assert_equal 'Disputed', MetalArchives::Parsers::Band.send(:map_status, :disputed)
+
+    assert_raises MetalArchives::ParserError do
+      MetalArchives::Parsers::Band.send(:map_status, :invalid_status)
+    end
+  end
+
+  def test_map_params
+    assert_equal 'name', MetalArchives::Parsers::Band.map_params(:name => 'name')[:bandName]
+    assert_equal '', MetalArchives::Parsers::Band.map_params({})[:bandName]
+    assert_equal 0, MetalArchives::Parsers::Band.map_params({})[:exactBandMatch]
+    assert_equal 'genre', MetalArchives::Parsers::Band.map_params({ :genre => 'genre'})[:genre]
+    assert_equal '', MetalArchives::Parsers::Band.map_params({})[:genre]
+
+    range = Range.new Date.new(2016), Date.new(2017)
+    assert_equal 2016, MetalArchives::Parsers::Band.map_params({ :year => range })[:yearCreationFrom]
+    assert_equal 2017, MetalArchives::Parsers::Band.map_params({ :year => range })[:yearCreationTo]
+    assert_equal '', MetalArchives::Parsers::Band.map_params({})[:yearCreationFrom]
+    assert_equal '', MetalArchives::Parsers::Band.map_params({})[:yearCreationTo]
+
+    assert_equal 'comment', MetalArchives::Parsers::Band.map_params({ :comment => 'comment' })[:bandNotes]
+    # :status is tested in test_map_status
+    assert_equal 'themes', MetalArchives::Parsers::Band.map_params({ :lyrical_themes => 'themes' })[:themes]
+    assert_equal 'location', MetalArchives::Parsers::Band.map_params({ :location => 'location' })[:location]
+    assert_equal 'label', MetalArchives::Parsers::Band.map_params({ :label => 'label' })[:bandLabelName]
+    assert_equal true, MetalArchives::Parsers::Band.map_params({ :independent => true })[:indieLabelBand]
+    assert_equal true, MetalArchives::Parsers::Band.map_params({ :independent => 'some value' })[:indieLabelBand]
+    assert_equal true, MetalArchives::Parsers::Band.map_params({ :independent => '' })[:indieLabelBand]
+    assert_equal false, MetalArchives::Parsers::Band.map_params({ :independent => false })[:indieLabelBand]
+    assert_equal false, MetalArchives::Parsers::Band.map_params({ :independent => nil })[:indieLabelBand]
+
+    country = ISO3166::Country['BE']
+    country2 = ISO3166::Country['NL']
+    assert_equal ['BE'], MetalArchives::Parsers::Band.map_params({ :country => country })[:country]
+    assert_equal ['BE', 'NL'], MetalArchives::Parsers::Band.map_params({ :country => [country, country2] })[:country]
+
+    assert_equal ['BE'], MetalArchives::Parsers::Band.map_params({ :country => ['BE'] })[:country]
+    assert_equal ['BE', 'NL'], MetalArchives::Parsers::Band.map_params({ :country => ['BE', 'NL'] })[:country]
+  end
 end
