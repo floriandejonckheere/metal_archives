@@ -8,7 +8,7 @@ module MetalArchives
     #
     def initialize(hash = {})
       self.class.properties.each do |property|
-        instance_variable_set("@#{property}", hash[property] || nil)
+        instance_variable_set("@#{property}", (hash[property] || nil))
       end
     end
 
@@ -111,6 +111,9 @@ module MetalArchives
         end
 
       private
+        ##
+        # Get a client instance
+        #
         def client
           MetalArchives.client
         end

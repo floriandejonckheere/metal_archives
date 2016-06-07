@@ -1,3 +1,6 @@
 module MetalArchives
-  VERSION = '0.0.1'
+  ##
+  # MetalArchives API version
+  #
+  VERSION = '0.1.0'
 end

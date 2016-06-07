@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    metal_archives (0.0.1)
+    metal_archives (0.1.0)
       countries
       faraday
       nokogiri

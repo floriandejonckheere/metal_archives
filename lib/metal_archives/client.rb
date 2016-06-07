@@ -1,5 +1,4 @@
 require 'faraday'
-require 'nokogiri'
 
 module MetalArchives
   class << self
@@ -98,6 +97,9 @@ module MetalArchives
     end
 
     private
+      ##
+      # Get a http client
+      #
       def http
         raise InvalidConfigurationError, 'Not configured yet' unless MetalArchives.config
 
@@ -109,6 +111,9 @@ module MetalArchives
         end
       end
 
+      ##
+      # Map models to parser classes
+      #
       def resolve_parser(model)
         Parsers.const_get model.to_s.capitalize
       end

@@ -63,7 +63,7 @@ class BaseModelTest < Test::Unit::TestCase
     end
   end
 
-  def test_multiple_complex
+  def test_multiple_complex_property
     assert !@object.multiple_complex?
 
     assert_nothing_raised do
@@ -81,7 +81,7 @@ class BaseModelTest < Test::Unit::TestCase
     end
   end
 
-  def test_enum_type
+  def test_enum_property
     assert !@object.enum?
 
     assert_nothing_raised do
@@ -100,7 +100,7 @@ class BaseModelTest < Test::Unit::TestCase
     end
   end
 
-  def test_boolean_type
+  def test_boolean_property
     assert !@object.boolean?
 
     assert_nothing_raised do
@@ -121,7 +121,7 @@ class BaseModelTest < Test::Unit::TestCase
     end
   end
 
-  def test_multiple_boolean
+  def test_multiple_boolean_property
     assert !@object.multiple_boolean?
 
     assert_nothing_raised do

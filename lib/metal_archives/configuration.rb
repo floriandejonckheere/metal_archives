@@ -17,7 +17,7 @@ module MetalArchives
   end
 
   ##
-  # Contains possible configuration options
+  # Contains configuration options
   #
   class Configuration
     ##

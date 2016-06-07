@@ -2,6 +2,9 @@ require 'date'
 
 module MetalArchives
 module Parsers
+  ##
+  # Label parser
+  #
   class Label
     class << self
       def find_endpoint(params)

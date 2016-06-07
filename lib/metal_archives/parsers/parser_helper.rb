@@ -3,6 +3,9 @@ require 'countries'
 
 module MetalArchives
 module Parsers
+  ##
+  # Parsing utilities
+  #
   class ParserHelper
     class << self
       ##

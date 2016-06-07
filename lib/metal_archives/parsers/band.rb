@@ -4,6 +4,9 @@ require 'countries'
 
 module MetalArchives
 module Parsers
+  ##
+  # Band parser
+  #
   class Band
     class << self
       def find_endpoint(query)
