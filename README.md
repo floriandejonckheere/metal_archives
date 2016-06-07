@@ -43,14 +43,29 @@ end
 ```ruby
 require 'metal_archives'
 
-# Search for artists
-@alquimia_list = MetalArchives::Artist.search("Alquimia")
+# Search for bands
+@alquimia_list = MetalArchives::Band.search('Alquimia')
 
-# Find artist by name
-@iron_maiden = MusicBrainz::Artist.find_by_name("Iron Maiden")
+# Find bands by name
+@iron_maiden = MetalArchives::Band.find_by(:name => 'Iron Maiden')
+
+# Find bands by attributes
+require 'countries'
+
+@bands_in_belgium = MetalArchives::Band.search_by :country => ISO3166::Country['BE']
+@bands_formed_in_1990 = MetalArchives::Band.search_by :year => Range.new(Date.new(1990))
+
+# Metal Archives' usual tips apply
+
+@bands_containing_hell = MetalArchives::Band.search_by :name => '*hell*'
+@non_melodic_death_bands = MetalArchives::Band.search_by :genre => 'death -melodic'
 ```
 
+Refer to the model's RDoc documentation for full documentation.
+
 ## Debugging
+
+Turn on `debug` in the configuration block to enable logging HTTP requests and responses.
 
 ```
 $ irb -r metal_archives
