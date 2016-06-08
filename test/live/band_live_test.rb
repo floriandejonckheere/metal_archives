@@ -8,7 +8,11 @@ require_relative '../test_helper'
 #
 class BandLiveTest < Test::Unit::TestCase
   def test_search_by
-    omit 'not implemented yet'
+    assert_equal 5, MetalArchives::Band.search_by(:name => 'Alquimia').count
+    assert_equal 1, MetalArchives::Band.search_by(:name => 'Alquimia', :country => ISO3166::Country['ES']).count
+    assert_equal 3, MetalArchives::Band.search_by(:name => 'Alquimia', :country => ISO3166::Country['AR']).count
+    assert_equal 3, MetalArchives::Band.search_by(:name => 'Alquimia', :country => ISO3166::Country['AR']).count
+    assert_equal 1, MetalArchives::Band.search_by(:name => 'Alquimia', :label => 'Mutus Liber').count
   end
 
   def test_search
@@ -40,5 +44,9 @@ class BandLiveTest < Test::Unit::TestCase
     band = MetalArchives::Band.find(2)
 
     assert_nil band
+  end
+
+  def test_find
+    omit 'not implemented yet'
   end
 end

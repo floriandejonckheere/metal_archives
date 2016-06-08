@@ -32,18 +32,19 @@ module Parsers
           :genre => query[:genre] || '',
           :yearCreationFrom => (query[:year] ? query[:year].begin.year || '' : ''),
           :yearCreationTo => (query[:year] ? query[:year].end.year || '' : ''),
-          :bandNotes => query[:comment],
+          :bandNotes => query[:comment] || '',
           :status => map_status(query[:status]),
-          :themes => query[:lyrical_themes],
-          :location => query[:location],
-          :bandLabelName => query[:label],
-          :indieLabelBand => !!query[:independent]
+          :themes => query[:lyrical_themes] || '',
+          :location => query[:location] || '',
+          :bandLabelName => query[:label] || '',
+          :indieLabelBand => (!!query[:independent] ? 1 : 0)
         }
 
         params[:country] = []
         Array(query[:country]).each do |country|
           params[:country] << (country.is_a?(ISO3166::Country) ? country.alpha2 : (country || ''))
         end
+        params[:country] = params[:country].first if (params[:country].size == 1)
 
         params
       end
