@@ -99,7 +99,7 @@ module Parsers
                 props[:date_active] << Range.new(date_start, date_end)
               end
             else
-              raise ParserError, "Unknown token: #{dt.content}"
+              raise MetalArchives::Errors::ParserError, "Unknown token: #{dt.content}"
             end
           end
         end
@@ -124,7 +124,7 @@ module Parsers
             :disputed => 'Disputed'
           }
 
-          raise ParserError, "Unknown status: #{status}" unless s[status]
+          raise MetalArchives::Errors::ParserError, "Unknown status: #{status}" unless s[status]
 
           s[status]
         end

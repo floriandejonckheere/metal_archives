@@ -22,7 +22,7 @@ module MetalArchives
     # [+query+]
     #     +Hash+ containing query parameters
     #
-    # Raises rdoc-ref:APIError on error
+    # Raises rdoc-ref:MetalArchives::Errors::APIError on error
     #
     def find_by(model, query)
       parser = resolve_parser model
@@ -31,7 +31,7 @@ module MetalArchives
       params = parser.map_params query
 
       response = http.get url, params
-      raise APIError, response.status if response.status > 400
+      raise MetalArchives::Errors::APIError, response.status if response.status > 400
 
       object = MetalArchives.const_get(model.to_s.capitalize).new parser.parse_json response.body
 
@@ -49,7 +49,7 @@ module MetalArchives
     #
     # Returns +Array+
     #
-    # Raises rdoc-ref:APIError on error
+    # Raises rdoc-ref:MetalArchives::Errors::APIError on error
     #
     def search_by(model, query)
       parser = resolve_parser model
@@ -58,7 +58,7 @@ module MetalArchives
       params = parser.map_params query
 
       response = http.get url, params
-      raise APIError, response.status if response.status > 400
+      raise MetalArchives::Errors::APIError, response.status if response.status > 400
 
       json = parser.parse_json response.body
 
@@ -101,7 +101,7 @@ module MetalArchives
       # Get a http client
       #
       def http
-        raise InvalidConfigurationError, 'Not configured yet' unless MetalArchives.config
+        raise MetalArchives::Errors::InvalidConfigurationError, 'Not configured yet' unless MetalArchives.config
 
         @faraday ||= Faraday.new do |f|
           f.request   :url_encoded            # form-encode POST params

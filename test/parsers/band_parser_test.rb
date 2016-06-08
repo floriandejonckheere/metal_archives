@@ -40,7 +40,7 @@ class BandParserTest < Test::Unit::TestCase
     assert_equal 'Changed name', MetalArchives::Parsers::Band.send(:map_status, :changed_name)
     assert_equal 'Disputed', MetalArchives::Parsers::Band.send(:map_status, :disputed)
 
-    assert_raises MetalArchives::ParserError do
+    assert_raises MetalArchives::Errors::ParserError do
       MetalArchives::Parsers::Band.send(:map_status, :invalid_status)
     end
   end

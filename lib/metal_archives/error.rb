@@ -1,4 +1,5 @@
 module MetalArchives
+module Errors
   ##
   # Generic error
   #
@@ -22,4 +23,5 @@ module MetalArchives
   # Error in backend response
   #
   class APIError < Error; end
+end
 end
