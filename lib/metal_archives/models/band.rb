@@ -109,6 +109,8 @@ module MetalArchives
       ##
       # Search by attributes
       #
+      # Refer to {MA's FAQ}[http://www.metal-archives.com/content/help?index=3#tab_db] for searching tips.
+      #
       # Returns +Array+ of rdoc-ref:Band
       #
       # [+query+]
@@ -123,7 +125,7 @@ module MetalArchives
       #     - +:lyrical_themes+: +String+
       #     - +:location+: +String+
       #     - +:label+: rdoc-ref:Label
-      #     - +:independant+: boolean
+      #     - +:independent+: boolean
       #
       def search_by(query)
         client.search_by(
@@ -134,6 +136,8 @@ module MetalArchives
 
       ##
       # Search by name
+      #
+      # Refer to {MA's FAQ}[http://www.metal-archives.com/content/help?index=3#tab_db] for searching tips.
       #
       # Returns +Array+ of rdoc-ref:Band
       #
@@ -147,9 +151,9 @@ module MetalArchives
       ##
       # Find by attributes
       #
-      # Returns rdoc-ref:Band
+      # Refer to {MA's FAQ}[http://www.metal-archives.com/content/help?index=3#tab_db] for searching tips.
       #
-      # Returns first match
+      # Returns rdoc-ref:Band
       #
       # [+query+]
       #     see rdoc-ref:Band.search_by
@@ -163,6 +167,8 @@ module MetalArchives
 
       ##
       # Find by ID
+      #
+      # Refer to {MA's FAQ}[http://www.metal-archives.com/content/help?index=3#tab_db] for searching tips.
       #
       # Returns rdoc-ref:Band
       #
