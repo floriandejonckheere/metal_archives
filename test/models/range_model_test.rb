@@ -1,3 +1,5 @@
+require_relative '../test_helper'
+
 require 'metal_archives/models/range'
 
 class RangeModelTest < Test::Unit::TestCase
