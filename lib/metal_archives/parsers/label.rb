@@ -6,7 +6,7 @@ module Parsers
   ##
   # Label parser
   #
-  class Label
+  class Label # :nodoc:
     class << self
       def find_endpoint(params)
         "http://www.metal-archives.com/labels/#{params[:name]}/#{params[:id]}"

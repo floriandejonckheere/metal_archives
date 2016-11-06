@@ -7,7 +7,7 @@ module Parsers
   ##
   # Band parser
   #
-  class Band
+  class Band # :nodoc:
     class << self
       def find_endpoint(query)
         "http://www.metal-archives.com/band/view/id/#{query[:id]}"

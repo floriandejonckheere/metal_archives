@@ -1,37 +1,23 @@
-require 'faraday'
-
 module MetalArchives
-  class << self
-    ##
-    # Retrieve a rdoc-ref:Client instance
-    #
-    def client
-      @client ||= Client.new
-    end
-  end
+module Clients
   ##
-  # HTTP request client
+  # Band client
   #
-  class Client
+  class Band < BaseClient # :nodoc:
     ##
     # Find a +model+ using +query+
-    #
-    # [+model+]
-    #     +Symbol+ representing a class < rdoc-ref:BaseModel
     #
     # [+query+]
     #     +Hash+ containing query parameters
     #
     # Raises rdoc-ref:MetalArchives::Errors::APIError on error
     #
-    def find_by(model, query)
-      parser = resolve_parser model
-
+    def find_by(query)
       url = parser.search_endpoint query
       params = parser.map_params query
 
       response = http.get url, params
-      raise MetalArchives::Errors::APIError, response.status if response.status > 400
+      raise MetalArchives::Errors::APIError, response.status if response.status >= 400
 
       object = MetalArchives.const_get(model.to_s.capitalize).new parser.parse_json response.body
 
@@ -41,9 +27,6 @@ module MetalArchives
     ##
     # Find multiple +model+s using +query+
     #
-    # [+model+]
-    #     +Symbol+ representing a class < rdoc-ref:BaseModel
-    #
     # [+query+]
     #     +Hash+ containing query parameters
     #
@@ -51,14 +34,12 @@ module MetalArchives
     #
     # Raises rdoc-ref:MetalArchives::Errors::APIError on error
     #
-    def search_by(model, query)
-      parser = resolve_parser model
-
+    def search_by(query)
       url = parser.search_endpoint query
       params = parser.map_params query
 
       response = http.get url, params
-      raise MetalArchives::Errors::APIError, response.status if response.status > 400
+      raise MetalArchives::Errors::APIError, response.status if response.status >= 400
 
       json = parser.parse_json response.body
 
@@ -78,15 +59,10 @@ module MetalArchives
     ##
     # Find a +model+ using ID
     #
-    # [+model+]
-    #     +Symbol+ representing a class < rdoc-ref:BaseModel
-    #
     # [+id+]
     #     +Integer+
     #
-    def find_by_id(model, id)
-      parser = resolve_parser model
-
+    def find_by_id(id)
       url = parser.find_endpoint :id => id
 
       response = http.get url
@@ -95,27 +71,6 @@ module MetalArchives
 
       object
     end
-
-    private
-      ##
-      # Get a http client
-      #
-      def http
-        raise MetalArchives::Errors::InvalidConfigurationError, 'Not configured yet' unless MetalArchives.config
-
-        @faraday ||= Faraday.new do |f|
-          f.request   :url_encoded            # form-encode POST params
-          f.adapter   Faraday.default_adapter
-          f.response  :logger if !!MetalArchives.config.debug      # log requests to STDOUT
-          f.use       MetalArchives::Middleware
-        end
-      end
-
-      ##
-      # Map models to parser classes
-      #
-      def resolve_parser(model)
-        Parsers.const_get model.to_s.capitalize
-      end
   end
+end
 end

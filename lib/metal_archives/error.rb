@@ -1,4 +1,7 @@
 module MetalArchives
+##
+# MetalArchives gem specific errors
+#
 module Errors
   ##
   # Generic error

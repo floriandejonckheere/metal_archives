@@ -2,7 +2,7 @@ module MetalArchives
   ##
   # Base model class all models are derived from
   #
-  class BaseModel
+  class BaseModel # :nodoc:
     ##
     # Generic constructor
     #
@@ -115,7 +115,7 @@ module MetalArchives
         # Get a client instance
         #
         def client
-          MetalArchives.client
+          MetalArchives::Clients.const_get(self.class.to_s)
         end
     end
   end

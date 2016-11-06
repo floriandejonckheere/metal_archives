@@ -3,7 +3,7 @@ require File.expand_path('../lib/metal_archives/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Florian Dejonckheere"]
   gem.email         = ["florian@floriandejonckheere.be"]
-  gem.summary       = %q{Metal Archives Web Service wrapper with ActiveRecord-style models}
+  gem.summary       = %q{Metal Archives Web Service Ruby API wrapper}
   gem.homepage      = "http://github.com/floriandejonckheere/metal_archives"
 
   gem.files         = %x{git ls-files}.split($\)

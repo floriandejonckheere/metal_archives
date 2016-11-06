@@ -2,11 +2,11 @@ require 'date'
 require 'countries'
 
 module MetalArchives
-module Parsers
+module Parsers # :nodoc:
   ##
   # Parsing utilities
   #
-  class ParserHelper
+  class ParserHelper # :nodoc:
     class << self
       ##
       # Parse a country
