@@ -83,7 +83,7 @@ module Parsers
                 t.delete '(later)'
                 props[:lyrical_themes] << t.join(' ')
               end
-            when 'Current label:'
+            when /(Current|Last) label:/
               props[:independent] = (dt.next_element.content == 'Unsigned/independent')
               # TODO
             when 'Years active:'
@@ -109,7 +109,6 @@ module Parsers
       end
 
       def parse_json(response)
-        props = {}
         doc = JSON.parse response
       end
 

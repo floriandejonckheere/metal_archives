@@ -7,6 +7,8 @@ module Clients
     ##
     # Find a +model+ using +query+
     #
+    # Returns rdoc-ref:Band
+    #
     # Raises rdoc-ref:MetalArchives::Errors::APIError on error
     #
     def find
@@ -31,7 +33,7 @@ module Clients
     ##
     # Find multiple +model+s using +query+
     #
-    # Returns +Array+
+    # Returns (possibly empty) +Array+ of rdoc-ref:Band
     #
     # Raises rdoc-ref:MetalArchives::Errors::APIError on error
     #
@@ -42,17 +44,12 @@ module Clients
       response = http.get url, params
       raise MetalArchives::Errors::APIError, response.status if response.status >= 400
 
-      # TODO: move this section to Parser#parse_json
       json = parser.parse_json response.body
 
       objects = []
       json['aaData'].each do |data|
-        object = {
-          :name => Nokogiri::HTML(data[0]).xpath("//text()").to_s.strip,
-          :genres => MetalArchives::Parsers::ParserHelper.parse_genre(data[1]),
-          :country => ISO3166::Country.find_country_by_name(data[2])
-        }
-        objects << model.new(object)
+        # Fetch Band for every ID in the results list
+        objects << model.find(Nokogiri::HTML(data[0]).xpath('//a/@href').first.value.gsub('\\', '').split('/').last.gsub(/\D/, '').to_i)
       end
 
       objects

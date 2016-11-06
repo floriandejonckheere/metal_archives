@@ -4,7 +4,7 @@ module MetalArchives
   #
   class BaseModel # :nodoc:
     ##
-    # Generic constructor
+    # Generic shallow copy constructor
     #
     def initialize(hash = {})
       self.class.properties.each do |property|
