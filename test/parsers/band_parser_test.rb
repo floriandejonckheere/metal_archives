@@ -77,10 +77,10 @@ class BandParserTest < Test::Unit::TestCase
 
     country = ISO3166::Country['BE']
     country2 = ISO3166::Country['NL']
-    assert_equal ['BE'], MetalArchives::Parsers::Band.map_params({ :country => country })[:country]
+    assert_equal 'BE', MetalArchives::Parsers::Band.map_params({ :country => country })[:country]
     assert_equal ['BE', 'NL'], MetalArchives::Parsers::Band.map_params({ :country => [country, country2] })[:country]
 
-    assert_equal ['BE'], MetalArchives::Parsers::Band.map_params({ :country => ['BE'] })[:country]
+    assert_equal 'BE', MetalArchives::Parsers::Band.map_params({ :country => ['BE'] })[:country]
     assert_equal ['BE', 'NL'], MetalArchives::Parsers::Band.map_params({ :country => ['BE', 'NL'] })[:country]
   end
 end

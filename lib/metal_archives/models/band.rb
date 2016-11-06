@@ -111,7 +111,7 @@ module MetalArchives
       #
       # Refer to {MA's FAQ}[http://www.metal-archives.com/content/help?index=3#tab_db] for search tips.
       #
-      # Returns +Array+ of rdoc-ref:Band
+      # Returns (possibly empty) +Array+ of rdoc-ref:Band
       #
       # [+query+]
       #     Hash containing one or more of the following keys:
@@ -137,7 +137,7 @@ module MetalArchives
       #
       # Refer to {MA's FAQ}[http://www.metal-archives.com/content/help?index=3#tab_db] for search tips.
       #
-      # Returns +Array+ of rdoc-ref:Band
+      # Returns (possibly empty) +Array+ of rdoc-ref:Band
       #
       # [+name+]
       #     +String+
@@ -152,7 +152,7 @@ module MetalArchives
       #
       # Refer to {MA's FAQ}[http://www.metal-archives.com/content/help?index=3#tab_db] for search tips.
       #
-      # Returns rdoc-ref:Band
+      # Returns rdoc-ref:Band or nil
       #
       # [+query+]
       #     Hash containing one or more of the following keys:
@@ -171,6 +171,8 @@ module MetalArchives
       def find_by(query)
         client = MetalArchives::Clients::Band.new query
         client.find
+      rescue MetalArchives::Errors::APIError
+        nil
       end
 
       ##
@@ -178,7 +180,7 @@ module MetalArchives
       #
       # Refer to {MA's FAQ}[http://www.metal-archives.com/content/help?index=3#tab_db] for search tips.
       #
-      # Returns rdoc-ref:Band
+      # Returns rdoc-ref:Band or nil
       #
       # [+id+]
       #     +Integer+
@@ -186,6 +188,8 @@ module MetalArchives
       def find(id)
         client = MetalArchives::Clients::Band.new :id => id
         client.find
+      rescue MetalArchives::Errors::APIError
+        nil
       end
     end
   end

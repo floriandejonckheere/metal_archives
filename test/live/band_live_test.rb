@@ -17,7 +17,7 @@ class BandLiveTest < Test::Unit::TestCase
   def test_search_by
     assert_equal 5, MetalArchives::Band.search_by(:name => 'Alquimia').count
 
-    assert_equal 48, MetalArchives::Band.search_by(:name => 'Horizon').count
+    assert_equal 49, MetalArchives::Band.search_by(:name => 'Horizon').count
     assert_equal 5, MetalArchives::Band.search_by(:name => 'Horizon', :exact => true).count
 
     assert_equal 2, MetalArchives::Band.search_by(:name => 'Alquimia', :genre => 'Melodic Power').count
