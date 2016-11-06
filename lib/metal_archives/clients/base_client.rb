@@ -16,17 +16,22 @@ module Clients # :nodoc:
       @query = query
     end
 
-    def http
-      MetalArchives::HTTPClient.client
-    end
+    protected
+      def http
+        MetalArchives::HTTPClient.client
+      end
 
-    def parser
-      MetalArchives::Parsers.const_get self.class.name
-    end
+      def parser
+        @parser ||= MetalArchives::Parsers.const_get self.class.name.split('::').last
+      rescue NameError
+        raise MetalArchives::Error, "No parser for class #{self.class.name}"
+      end
 
-    def model
-      MetalArchives.const_get self.class.name
-    end
+      def model
+        @model ||= MetalArchives.const_get self.class.name.split('::').last
+      rescue NameError
+        raise MetalArchives::Error, "No model for class #{self.class.name}"
+      end
   end
 end
 end

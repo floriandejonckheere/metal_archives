@@ -11,18 +11,21 @@ module Clients
     #
     def find
       if @query[:id]
-        url = parser.find_endpoint id
+        url = parser.find_endpoint @query[:id]
 
         response = http.get url
+        raise MetalArchives::Errors::APIError, response.status if response.status >= 400
+
+        return model.new parser.parse_html(response.body)
       else
         url = parser.search_endpoint @query
         params = parser.map_params @query
 
         response = http.get url, params
         raise MetalArchives::Errors::APIError, response.status if response.status >= 400
-      end
 
-      model.new parser.parse_json(response.body)
+        return model.new parser.parse_json(response.body)
+      end
     end
 
     ##
@@ -49,7 +52,7 @@ module Clients
           :genres => MetalArchives::Parsers::ParserHelper.parse_genre(data[1]),
           :country => ISO3166::Country.find_country_by_name(data[2])
         }
-        objects << MetalArchives.const_get(model.to_s.capitalize).new(object)
+        objects << model.new(object)
       end
 
       objects

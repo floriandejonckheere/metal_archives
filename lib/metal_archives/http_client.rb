@@ -7,24 +7,17 @@ module MetalArchives
   class HTTPClient # :nodoc:
     class << self
       ##
-      # Retrieve a rdoc-ref:HTTPClient instance
+      # Retrieve a HTTP client
       #
       def client
-        @client ||= HTTPClient.new
-      end
-    end
+        raise MetalArchives::Errors::InvalidConfigurationError, 'Not configured yet' unless MetalArchives.config
 
-    ##
-    # Get a http client
-    #
-    def http
-      raise MetalArchives::Errors::InvalidConfigurationError, 'Not configured yet' unless MetalArchives.config
-
-      @faraday ||= Faraday.new do |f|
-        f.request   :url_encoded            # form-encode POST params
-        f.adapter   Faraday.default_adapter
-        f.response  :logger if !!MetalArchives.config.debug      # log requests to STDOUT
-        f.use       MetalArchives::Middleware
+        @faraday ||= Faraday.new do |f|
+          f.request   :url_encoded            # form-encode POST params
+          f.adapter   Faraday.default_adapter
+          f.response  :logger if !!MetalArchives.config.debug      # log requests to STDOUT
+          f.use       MetalArchives::Middleware
+        end
       end
     end
   end
