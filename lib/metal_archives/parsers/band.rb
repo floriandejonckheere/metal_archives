@@ -9,8 +9,8 @@ module Parsers
   #
   class Band # :nodoc:
     class << self
-      def find_endpoint(query)
-        "http://www.metal-archives.com/band/view/id/#{query[:id]}"
+      def find_endpoint(id)
+        "http://www.metal-archives.com/band/view/id/#{id}"
       end
 
       def search_endpoint(query)

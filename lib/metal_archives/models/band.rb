@@ -128,7 +128,8 @@ module MetalArchives
       #     - +:independent+: boolean
       #
       def search_by(query)
-        client.search_by query
+        client = MetalArchives::Clients::Band.new query
+        client.search
       end
 
       ##
@@ -142,7 +143,8 @@ module MetalArchives
       #     +String+
       #
       def search(name)
-        client.search_by :name => name
+        client = MetalArchives::Clients::Band.new :name => name
+        client.search
       end
 
       ##
@@ -156,7 +158,8 @@ module MetalArchives
       #     see rdoc-ref:Band.search_by
       #
       def find_by(query)
-        client.find_by query
+        client = MetalArchives::Clients::Band.new query
+        client.find
       end
 
       ##
@@ -170,7 +173,8 @@ module MetalArchives
       #     +Integer+
       #
       def find(id)
-        client.find_by_id id
+        client = MetalArchives::Clients::Band.new :id => id
+        client.find
       end
     end
   end

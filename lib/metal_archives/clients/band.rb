@@ -7,40 +7,39 @@ module Clients
     ##
     # Find a +model+ using +query+
     #
-    # [+query+]
-    #     +Hash+ containing query parameters
-    #
     # Raises rdoc-ref:MetalArchives::Errors::APIError on error
     #
-    def find_by(query)
-      url = parser.search_endpoint query
-      params = parser.map_params query
+    def find
+      if @query[:id]
+        url = parser.find_endpoint id
 
-      response = http.get url, params
-      raise MetalArchives::Errors::APIError, response.status if response.status >= 400
+        response = http.get url
+      else
+        url = parser.search_endpoint @query
+        params = parser.map_params @query
 
-      object = MetalArchives.const_get(model.to_s.capitalize).new parser.parse_json response.body
+        response = http.get url, params
+        raise MetalArchives::Errors::APIError, response.status if response.status >= 400
+      end
 
-      object
+      model.new parser.parse_json(response.body)
     end
 
     ##
     # Find multiple +model+s using +query+
     #
-    # [+query+]
-    #     +Hash+ containing query parameters
-    #
     # Returns +Array+
     #
     # Raises rdoc-ref:MetalArchives::Errors::APIError on error
     #
-    def search_by(query)
-      url = parser.search_endpoint query
-      params = parser.map_params query
+    def search
+      url = parser.search_endpoint @query
+      params = parser.map_params @query
 
       response = http.get url, params
       raise MetalArchives::Errors::APIError, response.status if response.status >= 400
 
+      # TODO: move this section to Parser#parse_json
       json = parser.parse_json response.body
 
       objects = []
@@ -54,22 +53,6 @@ module Clients
       end
 
       objects
-    end
-
-    ##
-    # Find a +model+ using ID
-    #
-    # [+id+]
-    #     +Integer+
-    #
-    def find_by_id(id)
-      url = parser.find_endpoint :id => id
-
-      response = http.get url
-      return nil if response.status > 400
-      object = MetalArchives.const_get(model.to_s.capitalize).new parser.parse_html response.body
-
-      object
     end
   end
 end

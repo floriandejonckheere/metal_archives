@@ -109,14 +109,6 @@ module MetalArchives
           opts[:values] = [true, false]
           enum name, opts
         end
-
-      private
-        ##
-        # Get a client instance
-        #
-        def client
-          MetalArchives::Clients.const_get(self.class.to_s)
-        end
     end
   end
 end

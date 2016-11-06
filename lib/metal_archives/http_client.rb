@@ -1,19 +1,19 @@
 require 'faraday'
 
 module MetalArchives
-  class << self
-    ##
-    # Retrieve a rdoc-ref:HTTPClient instance
-    #
-    def client
-      @client ||= HTTPClient.new
-    end
-  end
-
   ##
   # HTTP request client
   #
   class HTTPClient # :nodoc:
+    class << self
+      ##
+      # Retrieve a rdoc-ref:HTTPClient instance
+      #
+      def client
+        @client ||= HTTPClient.new
+      end
+    end
+
     ##
     # Get a http client
     #

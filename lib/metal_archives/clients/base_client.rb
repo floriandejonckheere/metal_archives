@@ -7,17 +7,25 @@ module Clients # :nodoc:
   # Base client class all client are derived from
   #
   class BaseClient # :nodoc:
+    attr_accessor :query, :parser
+
+    ##
+    # Instantiate a client
+    #
+    def initialize(query)
+      @query = query
+    end
+
     def http
       MetalArchives::HTTPClient.client
     end
 
-    ##
-    # Resolve model parser
-    #
     def parser
-      MetalArchives::Parsers.const_get self.class.name.gsub('Client', '')
-    rescue NameError => e
-      raise MetalArchives::Error, "No parser found for client #{self.class.name}"
+      MetalArchives::Parsers.const_get self.class.name
+    end
+
+    def model
+      MetalArchives.const_get self.class.name
     end
   end
 end

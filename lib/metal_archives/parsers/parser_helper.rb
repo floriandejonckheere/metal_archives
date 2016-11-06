@@ -2,6 +2,9 @@ require 'date'
 require 'countries'
 
 module MetalArchives
+##
+# Mapping layer from and to MA Web Service
+#
 module Parsers # :nodoc:
   ##
   # Parsing utilities
