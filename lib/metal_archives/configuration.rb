@@ -11,8 +11,13 @@ module MetalArchives
     # Raises rdoc-ref:InvalidConfigurationException
     #
     def configure
-      raise ArgumentError, 'No configuration block given' unless block_given?
+      raise MetalArchives::Errors::InvalidConfigurationError, 'No configuration block given' unless block_given?
       yield MetalArchives.config ||= MetalArchives::Configuration.new
+
+      raise MetalArchives::Errors::InvalidConfigurationError, 'app_name has not been configured' unless MetalArchives.config.app_name and not MetalArchives.config.app_name.empty?
+      raise MetalArchives::Errors::InvalidConfigurationError, 'app_version has not been configured' unless MetalArchives.config.app_version and not MetalArchives.config.app_version.empty?
+      raise MetalArchives::Errors::InvalidConfigurationError, 'app_contact has not been configured' unless MetalArchives.config.app_contact and not MetalArchives.config.app_contact.empty?
+
     end
   end
 
