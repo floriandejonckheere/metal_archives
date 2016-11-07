@@ -46,18 +46,26 @@ module MetalArchives
     attr_accessor :cache_store
 
     ##
-    # Minimum time between queries
+    # Request throttling rate (in seconds per request per path)
     #
-    attr_accessor :query_interval
+    attr_accessor :request_rate
 
     ##
-    # Maximum number of tries
+    # Request timeout (in seconds per request per path)
     #
-    attr_accessor :tries_limit
+    attr_accessor :request_timeout
 
     ##
     # Print debug information
     #
     attr_accessor :debug
+
+    ##
+    # Default configuration values
+    #
+    def initialize
+      @throttle_rate = 1
+      @throttle_wait = 3
+    end
   end
 end

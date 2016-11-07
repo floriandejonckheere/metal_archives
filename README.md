@@ -31,9 +31,9 @@ MetalArchives.configure do |c|
   c.enable_cache = true
   c.cache_store = ActiveSupport::Cache.lookup_store(:file_store, '/tmp/metal_archives-cache')
 
-  # Querying config (optional)
-  c.query_interval = 1.2 # seconds
-  c.tries_limit = 2
+  # Request throttling (optional, overrides defaults)
+  c.request_rate = 1
+  c.request_timeout = 3
 
   # Print debugging information
   c.debug = false

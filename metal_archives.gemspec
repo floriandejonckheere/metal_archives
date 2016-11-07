@@ -22,6 +22,7 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency 'faraday'
   gem.add_dependency 'faraday-http-cache'
+  gem.add_dependency 'faraday_throttler'
   gem.add_dependency 'nokogiri'
   gem.add_dependency 'countries'
 end
