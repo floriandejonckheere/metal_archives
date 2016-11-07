@@ -19,6 +19,8 @@ $ bundle install
 ## Configuration
 
 ```ruby
+require 'active_support/cache'
+
 MetalArchives.configure do |c|
   # Application identity (required)
   c.app_name = "My App"
@@ -26,8 +28,8 @@ MetalArchives.configure do |c|
   c.app_contact = "support@mymusicapp.com"
 
   # Cache config (optional)
-  c.cache_path = "/tmp/metal_archives-cache"
-  c.perform_caching = true
+  c.enable_cache = true
+  c.cache_store = ActiveSupport::Cache.lookup_store(:file_store, '/tmp/metal_archives-cache')
 
   # Querying config (optional)
   c.query_interval = 1.2 # seconds

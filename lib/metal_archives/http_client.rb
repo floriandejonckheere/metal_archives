@@ -1,4 +1,6 @@
 require 'faraday'
+require 'faraday-http-cache'
+require 'logger'
 
 module MetalArchives
   ##
@@ -14,9 +16,11 @@ module MetalArchives
 
         @faraday ||= Faraday.new do |f|
           f.request   :url_encoded            # form-encode POST params
-          f.adapter   Faraday.default_adapter
           f.response  :logger if !!MetalArchives.config.debug      # log requests to STDOUT
           f.use       MetalArchives::Middleware
+          f.use       Faraday::HttpCache, :store => MetalArchives.config.cache_store if !!MetalArchives.config.enable_cache
+
+          f.adapter   Faraday.default_adapter
         end
       end
     end

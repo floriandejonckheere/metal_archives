@@ -36,14 +36,14 @@ module MetalArchives
     attr_accessor :app_contact
 
     ##
-    # Path to cache directory
-    #
-    attr_accessor :cache_path
-
-    ##
     # Whether to enable the cache
     #
-    attr_accessor :perform_caching
+    attr_accessor :enable_cache
+
+    ##
+    # ActiveSupport::Cache compatible store
+    #
+    attr_accessor :cache_store
 
     ##
     # Minimum time between queries

@@ -18,8 +18,10 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'rake'
   gem.add_development_dependency 'rdoc'
   gem.add_development_dependency 'test-unit'
+  gem.add_development_dependency 'activesupport'
 
   gem.add_dependency 'faraday'
+  gem.add_dependency 'faraday-http-cache'
   gem.add_dependency 'nokogiri'
   gem.add_dependency 'countries'
 end
