@@ -5,6 +5,9 @@ module MetalArchives
   class Range
     include Comparable
 
+    ##
+    # Begin- and endpoint of range
+    #
     attr_accessor :begin, :end
 
     ##
@@ -39,6 +42,9 @@ module MetalArchives
     !!@end
     end
 
+    ##
+    # Comparison operator
+    #
     def <=>(other)
       comparison = self.begin <=> other.begin
 

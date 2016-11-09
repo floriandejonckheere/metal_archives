@@ -33,7 +33,7 @@ module MetalArchives
     #
     # Returns +ISO3166::Country+
     #
-    property :country, :type => ISO3166::Country
+    property :country, :type => ::ISO3166::Country
 
     ##
     # :attr_reader: location

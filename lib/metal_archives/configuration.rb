@@ -1,5 +1,10 @@
 module MetalArchives
   class << self
+    ##
+    # API configuration
+    #
+    # Instance of rdoc-ref:MetalArchives::Configuration
+    #
     attr_accessor :config
 
     ##
