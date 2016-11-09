@@ -124,16 +124,13 @@ module MetalArchives
       #
       # Refer to {MA's FAQ}[http://www.metal-archives.com/content/help?index=3#tab_db] for search tips.
       #
-      # Returns rdoc-ref:Band or nil
+      # Returns rdoc-ref:Band, even when ID is invalid (because the data is lazily fetched)
       #
       # [+id+]
       #     +Integer+
       #
       def find(id)
-        client = MetalArchives::Clients::Band.new :id => id
-        client.find_by_id
-      rescue MetalArchives::Errors::APIError
-        nil
+        MetalArchives::Band.new :id => id
       end
 
       ##

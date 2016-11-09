@@ -9,6 +9,11 @@ module Errors
   class Error < StandardError; end
 
   ##
+  # Error in data
+  #
+  class DataError < Error; end
+
+  ##
   # No or invalid configuration found
   #
   class InvalidConfigurationError < Error; end
