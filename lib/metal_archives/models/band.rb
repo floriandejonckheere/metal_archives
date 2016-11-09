@@ -101,8 +101,18 @@ module MetalArchives
     # TODO: releases
     # TODO: members
     # TODO: reviews
-    # TODO: similar bands
     # TODO: links
+
+    ##
+    # :attr_reader: similar
+    #
+    # Returns +Array+ of +Hash+ containing the following keys
+    #
+    # [+similar+]
+    #     - +:band+: rdoc-ref:Band
+    #     - +:score+: +Integer+
+    #
+    property :similar, :type => Hash, :multiple => true
 
     ##
     # :attr_reader: logo
@@ -126,15 +136,21 @@ module MetalArchives
     #
     def assemble # :nodoc:
       ## Base attributes
-      url = Parsers::Band.find_endpoint id
-
+      url = "http://www.metal-archives.com/band/view/id/#{id}"
       response = HTTPClient.client.get url
       raise Errors::APIError, response.status if response.status >= 400
 
       properties = Parsers::Band.parse_html response.body
-      initialize properties
 
       ## Similar artists
+      url = "http://www.metal-archives.com/band/ajax-recommendations/id/#{id}"
+      response = HTTPClient.client.get url
+      raise Errors::APIError, response.status if response.status >= 400
+
+      properties[:similar] = Parsers::Band.parse_similar_bands_html response.body
+
+      ## Use constructor to fill properties
+      initialize properties
     end
 
     class << self
@@ -174,7 +190,7 @@ module MetalArchives
       #     - +:independent+: boolean
       #
       def find_by(query)
-        url = Parsers::Band.search_endpoint query
+        url = "http://www.metal-archives.com/search/ajax-advanced/searching/bands/"
         params = Parsers::Band.map_params query
 
         response = HTTPClient.client.get url, params
@@ -214,7 +230,7 @@ module MetalArchives
       #     - +:independent+: boolean
       #
       def search_by(query)
-        url = Parsers::Band.search_endpoint query
+        url = "http://www.metal-archives.com/search/ajax-advanced/searching/bands/"
         params = Parsers::Band.map_params query
 
         response = HTTPClient.client.get url, params

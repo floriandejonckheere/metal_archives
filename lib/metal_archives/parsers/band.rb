@@ -9,14 +9,6 @@ module Parsers
   #
   class Band # :nodoc:
     class << self
-      def find_endpoint(id)
-        "http://www.metal-archives.com/band/view/id/#{id}"
-      end
-
-      def search_endpoint(query)
-        "http://www.metal-archives.com/search/ajax-advanced/searching/bands/"
-      end
-
       ##
       # Map attributes to MA attributes
       #
@@ -107,6 +99,20 @@ module Parsers
         end
 
         props
+      end
+
+      def parse_similar_bands_html(response)
+        similar = []
+
+        doc = Nokogiri::HTML(response)
+        doc.css('#artist_list tbody tr').each do |row|
+          similar << {
+              :band => MetalArchives::Band.new(:id => row.css('td a').first['href'].split('/').last.to_i),
+              :score => row.css('td').last.content.strip
+          }
+        end
+
+        similar
       end
 
       def parse_json(response)
