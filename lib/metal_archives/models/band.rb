@@ -103,7 +103,20 @@ module MetalArchives
     # TODO: reviews
     # TODO: similar bands
     # TODO: links
-    # TODO: band art
+
+    ##
+    # :attr_reader: logo
+    #
+    # Returns +String+
+    #
+    property :logo
+
+    ##
+    # :attr_reader: photo
+    #
+    # Returns +String+
+    #
+    property :photo
 
     class << self
       ##

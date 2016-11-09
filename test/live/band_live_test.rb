@@ -15,6 +15,8 @@ class BandLiveTest < Test::Unit::TestCase
     assert_equal 'Alquimia', band.name
     assert_equal ISO3166::Country['ES'], band.country
 
+    assert_match 'http', band.logo
+    assert_match 'http', band.photo
 
     band = MetalArchives::Band.find(2)
 
