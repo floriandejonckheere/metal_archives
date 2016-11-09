@@ -20,7 +20,7 @@ class BandLiveTest < Test::Unit::TestCase
 
     band = MetalArchives::Band.find(2)
 
-    assert_nil band
+    assert band.is_a? MetalArchives::Band
   end
 
   def test_find_by

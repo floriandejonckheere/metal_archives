@@ -17,7 +17,7 @@ module MetalArchives
 
     protected
       ##
-      # Retrieve the data
+      # Eagerly fetch the data
       #
       # Raises rdoc-ref:MetalArchives::Errors::APIError
       #
@@ -169,8 +169,7 @@ module MetalArchives
         #       turns it into an +Array+ of +type+)
         #
         def boolean(name, opts = {})
-          opts[:values] = [true, false]
-          enum name, opts
+          enum name, opts.merge(:values => [true, false])
         end
     end
   end

@@ -58,7 +58,7 @@ module Parsers
 
         props[:aliases] = []
         props[:logo] = doc.css('.band_name_img img').first.attr('src') unless doc.css('.band_name_img').empty?
-        props[:photo] = doc.css('.band_img img').first.attr('src') unless doc.css('.band_name').empty?
+        props[:photo] = doc.css('.band_img img').first.attr('src') unless doc.css('.band_img').empty?
 
         doc.css('#band_stats dl').each do |dl|
           dl.search('dt').each do |dt|

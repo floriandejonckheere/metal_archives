@@ -8,6 +8,7 @@ class LabelModelTest < Test::Unit::TestCase
 
       [:id, :name, :address, :country, :phone, :specializations, :date_founded, :sub_labels, :online_shopping].each do |attr|
         assert_respond_to label, attr
+        assert_respond_to label, "#{attr}?"
       end
     end
 end

@@ -138,7 +138,7 @@ module MetalArchives
       #
       # Refer to {MA's FAQ}[http://www.metal-archives.com/content/help?index=3#tab_db] for search tips.
       #
-      # Returns rdoc-ref:Band or nil
+      # Returns rdoc-ref:Band or nil when ID is invalid
       #
       # [+query+]
       #     Hash containing one or more of the following keys:
@@ -155,8 +155,20 @@ module MetalArchives
       #     - +:independent+: boolean
       #
       def find_by(query)
-        client = MetalArchives::Clients::Band.new query
-        client.find
+        url = MetalArchives::Parsers::Band.search_endpoint query
+        params = MetalArchives::Parsers::Band.map_params query
+
+        response = MetalArchives::HTTPClient.client.get url, params
+        raise MetalArchives::Errors::APIError, response.status if response.status >= 400
+
+        json = MetalArchives::Parsers::Band.parse_json response.body
+
+        return nil if json['aaData'].empty?
+
+        data = json['aaData'].first
+        id = Nokogiri::HTML(data.first).xpath('//a/@href').first.value.gsub('\\', '').split('/').last.gsub(/\D/, '').to_i
+
+        MetalArchives::Band.new :id => id
       rescue MetalArchives::Errors::APIError
         nil
       end
@@ -183,8 +195,22 @@ module MetalArchives
       #     - +:independent+: boolean
       #
       def search_by(query)
-        client = MetalArchives::Clients::Band.new query
-        client.search
+        url = MetalArchives::Parsers::Band.search_endpoint query
+        params = MetalArchives::Parsers::Band.map_params query
+
+        response = MetalArchives::HTTPClient.client.get url, params
+        raise MetalArchives::Errors::APIError, response.status if response.status >= 400
+
+        json = MetalArchives::Parsers::Band.parse_json response.body
+
+        objects = []
+        json['aaData'].each do |data|
+          # Fetch Band for every ID in the results list
+          id = Nokogiri::HTML(data.first).xpath('//a/@href').first.value.gsub('\\', '').split('/').last.gsub(/\D/, '').to_i
+          objects << MetalArchives::Band.new(:id => id)
+        end
+
+        objects
       end
 
       ##
