@@ -95,8 +95,7 @@ module Parsers
                 # Aliases
                 range.scan(/\(as ([^)]*)\)/).each { |name| props[:aliases] << name.first }
                 # Ranges
-                range.gsub!(/ *\(as ([^)]*)\) */, '')
-                r = range.split('-')
+                r = range.gsub(/ *\(as ([^)]*)\) */, '').strip.split('-')
                 date_start = (r.first == '?' ? nil : Date.new(r.first.to_i))
                 date_end = (r.last == '?' or r.last == 'present' ? nil : Date.new(r.first.to_i))
                 props[:date_active] << Range.new(date_start, date_end)
