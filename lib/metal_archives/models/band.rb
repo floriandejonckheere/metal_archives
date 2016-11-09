@@ -33,7 +33,7 @@ module MetalArchives
     #
     # Returns +ISO3166::Country+
     #
-    property :country, :type => ::ISO3166::Country
+    property :country, :type => ISO3166::Country
 
     ##
     # :attr_reader: location
@@ -118,6 +118,25 @@ module MetalArchives
     #
     property :photo
 
+    protected
+    ##
+    # Fetch the data and assemble the model
+    #
+    # Raises rdoc-ref:MetalArchives::Errors::APIError
+    #
+    def assemble # :nodoc:
+      ## Base attributes
+      url = Parsers::Band.find_endpoint id
+
+      response = HTTPClient.client.get url
+      raise Errors::APIError, response.status if response.status >= 400
+
+      properties = Parsers::Band.parse_html response.body
+      initialize properties
+
+      ## Similar artists
+    end
+
     class << self
       ##
       # Find by ID
@@ -130,7 +149,7 @@ module MetalArchives
       #     +Integer+
       #
       def find(id)
-        MetalArchives::Band.new :id => id
+        Band.new :id => id
       end
 
       ##
@@ -155,21 +174,21 @@ module MetalArchives
       #     - +:independent+: boolean
       #
       def find_by(query)
-        url = MetalArchives::Parsers::Band.search_endpoint query
-        params = MetalArchives::Parsers::Band.map_params query
+        url = Parsers::Band.search_endpoint query
+        params = Parsers::Band.map_params query
 
-        response = MetalArchives::HTTPClient.client.get url, params
-        raise MetalArchives::Errors::APIError, response.status if response.status >= 400
+        response = HTTPClient.client.get url, params
+        raise Errors::APIError, response.status if response.status >= 400
 
-        json = MetalArchives::Parsers::Band.parse_json response.body
+        json = Parsers::Band.parse_json response.body
 
         return nil if json['aaData'].empty?
 
         data = json['aaData'].first
         id = Nokogiri::HTML(data.first).xpath('//a/@href').first.value.gsub('\\', '').split('/').last.gsub(/\D/, '').to_i
 
-        MetalArchives::Band.new :id => id
-      rescue MetalArchives::Errors::APIError
+        Band.new :id => id
+      rescue Errors::APIError
         nil
       end
 
@@ -195,19 +214,19 @@ module MetalArchives
       #     - +:independent+: boolean
       #
       def search_by(query)
-        url = MetalArchives::Parsers::Band.search_endpoint query
-        params = MetalArchives::Parsers::Band.map_params query
+        url = Parsers::Band.search_endpoint query
+        params = Parsers::Band.map_params query
 
-        response = MetalArchives::HTTPClient.client.get url, params
-        raise MetalArchives::Errors::APIError, response.status if response.status >= 400
+        response = HTTPClient.client.get url, params
+        raise Errors::APIError, response.status if response.status >= 400
 
-        json = MetalArchives::Parsers::Band.parse_json response.body
+        json = Parsers::Band.parse_json response.body
 
         objects = []
         json['aaData'].each do |data|
           # Fetch Band for every ID in the results list
           id = Nokogiri::HTML(data.first).xpath('//a/@href').first.value.gsub('\\', '').split('/').last.gsub(/\D/, '').to_i
-          objects << MetalArchives::Band.new(:id => id)
+          objects << Band.new(:id => id)
         end
 
         objects

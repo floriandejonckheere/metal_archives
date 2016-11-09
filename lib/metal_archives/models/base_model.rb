@@ -21,32 +21,12 @@ module MetalArchives
       #
       # Raises rdoc-ref:MetalArchives::Errors::APIError
       #
-      def fetch(source_attr)
-        raise MetalArchives::Errors::DataError, 'no id present' unless !!id
+      def fetch
+        raise Errors::DataError, 'no id present' unless !!id
 
-        url = parser.find_endpoint id
+        raise Errors::NotImplementedError, 'no :assemble method in model' unless self.respond_to? :assemble, true
 
-        response = http.get url
-        raise MetalArchives::Errors::APIError, response.status if response.status >= 400
-
-        properties = parser.parse_html(response.body)
-        initialize(properties)
-      end
-
-      ##
-      # Retrieve a HTTPClient instance
-      #
-      def http
-        MetalArchives::HTTPClient.client
-      end
-
-      ##
-      # Retrieve a parser instance
-      #
-      def parser
-        @parser ||= MetalArchives::Parsers.const_get self.class.name.split('::').last
-      rescue NameError
-        raise MetalArchives::NotImplementedError, "No parser for class #{self.class.name}"
+        assemble
       end
 
     class << self
@@ -77,13 +57,13 @@ module MetalArchives
 
           # property
           define_method(name) do
-            self.fetch(name) unless !!instance_variable_get("@_#{name}") or name == :id
+            self.fetch unless !!instance_variable_get("@_#{name}") or name == :id
             instance_variable_get("@#{name}")
           end
 
           # property?
           define_method("#{name}?") do
-            self.fetch(name) unless !!instance_variable_get("@_#{name}") or name == :id
+            self.fetch unless !!instance_variable_get("@_#{name}") or name == :id
 
             property = instance_variable_get("@#{name}")
             property.respond_to?(:empty?) ? !property.empty? : !!property
@@ -128,13 +108,13 @@ module MetalArchives
 
           # property
           define_method(name) do
-            self.fetch(name) unless !!instance_variable_get("@_#{name}")
+            self.fetch unless !!instance_variable_get("@_#{name}")
             instance_variable_get("@#{name}")
           end
 
           # property?
           define_method("#{name}?") do
-            self.fetch(name) unless !!instance_variable_get("@_#{name}")
+            self.fetch unless !!instance_variable_get("@_#{name}")
 
             property = instance_variable_get("@#{name}")
             property.respond_to?(:empty?) ? !property.empty? : !!property
