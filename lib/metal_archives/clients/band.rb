@@ -5,29 +5,43 @@ module Clients
   #
   class Band < BaseClient # :nodoc:
     ##
-    # Find a +model+ using +query+
+    # Find a +model+ using ID
     #
     # Returns rdoc-ref:Band
     #
     # Raises rdoc-ref:MetalArchives::Errors::APIError on error
     #
+    def find_by_id
+      url = parser.find_endpoint @query[:id]
+
+      response = http.get url
+      raise MetalArchives::Errors::APIError, response.status if response.status >= 400
+
+      model.new parser.parse_html(response.body).merge(:id => @query[:id])
+    end
+
+    ##
+    # Find a +model+ using +query+
+    #
+    # Returns rdoc-ref:Band or nil
+    #
+    # Raises rdoc-ref:MetalArchives::Errors::APIError on error
+    #
     def find
-      if @query[:id]
-        url = parser.find_endpoint @query[:id]
+      url = parser.search_endpoint @query
+      params = parser.map_params @query
 
-        response = http.get url
-        raise MetalArchives::Errors::APIError, response.status if response.status >= 400
+      response = http.get url, params
+      raise MetalArchives::Errors::APIError, response.status if response.status >= 400
 
-        return model.new parser.parse_html(response.body)
-      else
-        url = parser.search_endpoint @query
-        params = parser.map_params @query
+      json = parser.parse_json response.body
 
-        response = http.get url, params
-        raise MetalArchives::Errors::APIError, response.status if response.status >= 400
+      return nil if json['aaData'].empty?
 
-        return model.new parser.parse_json(response.body)
-      end
+      data = json['aaData'].first
+      @query[:id] = Nokogiri::HTML(data.first).xpath('//a/@href').first.value.gsub('\\', '').split('/').last.gsub(/\D/, '').to_i
+
+      find_by_id
     end
 
     ##
@@ -49,7 +63,7 @@ module Clients
       objects = []
       json['aaData'].each do |data|
         # Fetch Band for every ID in the results list
-        objects << model.find(Nokogiri::HTML(data[0]).xpath('//a/@href').first.value.gsub('\\', '').split('/').last.gsub(/\D/, '').to_i)
+        objects << model.find(Nokogiri::HTML(data.first).xpath('//a/@href').first.value.gsub('\\', '').split('/').last.gsub(/\D/, '').to_i)
       end
 
       objects

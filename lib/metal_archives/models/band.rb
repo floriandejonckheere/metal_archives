@@ -107,44 +107,20 @@ module MetalArchives
 
     class << self
       ##
-      # Search by attributes
+      # Find by ID
       #
       # Refer to {MA's FAQ}[http://www.metal-archives.com/content/help?index=3#tab_db] for search tips.
       #
-      # Returns (possibly empty) +Array+ of rdoc-ref:Band
+      # Returns rdoc-ref:Band or nil
       #
-      # [+query+]
-      #     Hash containing one or more of the following keys:
-      #     - +:name+: +String+
-      #     - +:exact+: +Boolean+
-      #     - +:genre+: +String+
-      #     - +:country+: +ISO366::Country+
-      #     - +:year_formation+: rdoc-ref:Range of +Date+
-      #     - +:comment+: +String+
-      #     - +:status+: see rdoc-ref:Band.status
-      #     - +:lyrical_themes+: +String+
-      #     - +:location+: +String+
-      #     - +:label+: rdoc-ref:Label
-      #     - +:independent+: boolean
+      # [+id+]
+      #     +Integer+
       #
-      def search_by(query)
-        client = MetalArchives::Clients::Band.new query
-        client.search
-      end
-
-      ##
-      # Search by name
-      #
-      # Refer to {MA's FAQ}[http://www.metal-archives.com/content/help?index=3#tab_db] for search tips.
-      #
-      # Returns (possibly empty) +Array+ of rdoc-ref:Band
-      #
-      # [+name+]
-      #     +String+
-      #
-      def search(name)
-        client = MetalArchives::Clients::Band.new :name => name
-        client.search
+      def find(id)
+        client = MetalArchives::Clients::Band.new :id => id
+        client.find_by_id
+      rescue MetalArchives::Errors::APIError
+        nil
       end
 
       ##
@@ -176,20 +152,43 @@ module MetalArchives
       end
 
       ##
-      # Find by ID
+      # Search by attributes
       #
       # Refer to {MA's FAQ}[http://www.metal-archives.com/content/help?index=3#tab_db] for search tips.
       #
-      # Returns rdoc-ref:Band or nil
+      # Returns (possibly empty) +Array+ of rdoc-ref:Band
       #
-      # [+id+]
-      #     +Integer+
+      # [+query+]
+      #     Hash containing one or more of the following keys:
+      #     - +:name+: +String+
+      #     - +:exact+: +Boolean+
+      #     - +:genre+: +String+
+      #     - +:country+: +ISO366::Country+
+      #     - +:year_formation+: rdoc-ref:Range of +Date+
+      #     - +:comment+: +String+
+      #     - +:status+: see rdoc-ref:Band.status
+      #     - +:lyrical_themes+: +String+
+      #     - +:location+: +String+
+      #     - +:label+: rdoc-ref:Label
+      #     - +:independent+: boolean
       #
-      def find(id)
-        client = MetalArchives::Clients::Band.new :id => id
-        client.find
-      rescue MetalArchives::Errors::APIError
-        nil
+      def search_by(query)
+        client = MetalArchives::Clients::Band.new query
+        client.search
+      end
+
+      ##
+      # Search by name, resolves to rdoc-ref:Band.search_by <tt>(:name => name)</tt>
+      #
+      # Refer to {MA's FAQ}[http://www.metal-archives.com/content/help?index=3#tab_db] for search tips.
+      #
+      # Returns (possibly empty) +Array+ of rdoc-ref:Band
+      #
+      # [+name+]
+      #     +String+
+      #
+      def search(name)
+        search_by :name => name
       end
     end
   end
