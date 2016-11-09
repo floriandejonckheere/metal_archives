@@ -1,8 +1,8 @@
-require_relative '../test_helper'
+require 'test_helper'
 
 require 'metal_archives/models/range'
 
-class RangeModelTest < Test::Unit::TestCase
+class RangeTest < Test::Unit::TestCase
   def test_basic_attributes
     range = MetalArchives::Range.new 3, 5
 
