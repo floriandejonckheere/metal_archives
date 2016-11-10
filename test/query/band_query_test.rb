@@ -1,12 +1,12 @@
 require_relative '../test_helper'
 
 ##
-# Tests on live API
+# Query method testing
 #
 # If a test fails, please check the online results to make sure it's not
 # the content itself that has changed.
 #
-class BandLiveTest < Test::Unit::TestCase
+class BandQueryTest < Test::Unit::TestCase
   def test_find
     band = MetalArchives::Band.find 3540361100
 

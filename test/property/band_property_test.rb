@@ -2,7 +2,13 @@ require_relative '../test_helper'
 
 require 'metal_archives/parsers/band'
 
-class BandParserTest < Test::Unit::TestCase
+##
+# Property testing
+#
+# If a test fails, please check the online results to make sure it's not
+# the content itself that has changed.
+#
+class BandPropertyTest < Test::Unit::TestCase
   def test_basic_attributes
     band = MetalArchives::Band.find 122302
 

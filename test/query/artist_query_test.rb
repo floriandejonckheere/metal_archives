@@ -1,12 +1,12 @@
 require_relative '../test_helper'
 
 ##
-# Tests on live API
+# Query method testing
 #
 # If a test fails, please check the online results to make sure it's not
 # the content itself that has changed.
 #
-class ArtistLiveTest < Test::Unit::TestCase
+class ArtistQueryTest < Test::Unit::TestCase
   def test_find
     artist = MetalArchives::Artist.find 60908
 
