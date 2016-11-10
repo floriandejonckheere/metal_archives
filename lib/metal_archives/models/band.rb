@@ -82,7 +82,7 @@ module MetalArchives
     #
     # Returns boolean
     #
-    enum :independent,  :values => [true, false]
+    enum :independent, :values => [true, false]
 
     ##
     # :attr_reader: comment
@@ -96,7 +96,7 @@ module MetalArchives
     #
     # Returns +:active+, +:split_up+, +:on_hold+, +:unknown+, +:changed_name+ or +:disputed+
     #
-    enum :status,       :values => [:active, :split_up, :on_hold, :unknown, :changed_name, :disputed]
+    enum :status, :values => [:active, :split_up, :on_hold, :unknown, :changed_name, :disputed]
 
     # TODO: releases
     # TODO: members
@@ -128,30 +128,32 @@ module MetalArchives
     #
     property :photo
 
+
+
     protected
-    ##
-    # Fetch the data and assemble the model
-    #
-    # Raises rdoc-ref:MetalArchives::Errors::APIError
-    #
-    def assemble # :nodoc:
-      ## Base attributes
-      url = "http://www.metal-archives.com/band/view/id/#{id}"
-      response = HTTPClient.client.get url
-      raise Errors::APIError, response.status if response.status >= 400
+      ##
+      # Fetch the data and assemble the model
+      #
+      # Raises rdoc-ref:MetalArchives::Errors::APIError
+      #
+      def assemble # :nodoc:
+        ## Base attributes
+        url = "http://www.metal-archives.com/band/view/id/#{id}"
+        response = HTTPClient.client.get url
+        raise Errors::APIError, response.status if response.status >= 400
 
-      properties = Parsers::Band.parse_html response.body
+        properties = Parsers::Band.parse_html response.body
 
-      ## Similar artists
-      url = "http://www.metal-archives.com/band/ajax-recommendations/id/#{id}"
-      response = HTTPClient.client.get url
-      raise Errors::APIError, response.status if response.status >= 400
+        ## Similar artists
+        url = "http://www.metal-archives.com/band/ajax-recommendations/id/#{id}"
+        response = HTTPClient.client.get url
+        raise Errors::APIError, response.status if response.status >= 400
 
-      properties[:similar] = Parsers::Band.parse_similar_bands_html response.body
+        properties[:similar] = Parsers::Band.parse_similar_bands_html response.body
 
-      ## Use constructor to fill properties
-      initialize properties
-    end
+        ## Use constructor to fill properties
+        initialize properties
+      end
 
     class << self
       ##
