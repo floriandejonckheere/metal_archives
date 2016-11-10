@@ -204,11 +204,11 @@ module MetalArchives
       #     - +:independent+: boolean
       #
       def find_by(query)
-        url = "http://www.metal-archives.com/search/ajax-advanced/searching/bands/"
+        url = 'http://www.metal-archives.com/search/ajax-advanced/searching/bands/'
         params = Parsers::Band.map_params query
 
         response = HTTPClient.get url, params
-        json = Parsers::Band.parse_json response.body
+        json = JSON.parse response.body
 
         return nil if json['aaData'].empty?
 
@@ -242,11 +242,11 @@ module MetalArchives
       #     - +:independent+: boolean
       #
       def search_by(query)
-        url = "http://www.metal-archives.com/search/ajax-advanced/searching/bands/"
+        url = 'http://www.metal-archives.com/search/ajax-advanced/searching/bands/'
         params = Parsers::Band.map_params query
 
         response = HTTPClient.get url, params
-        json = Parsers::Band.parse_json response.body
+        json = JSON.parse response.body
 
         objects = []
         json['aaData'].each do |data|

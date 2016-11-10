@@ -138,10 +138,6 @@ module Parsers
         links
       end
 
-      def parse_json(response)
-        doc = JSON.parse response
-      end
-
       private
         def map_status(status)
           s = {
