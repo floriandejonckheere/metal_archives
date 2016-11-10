@@ -100,7 +100,6 @@ module MetalArchives
 
     # TODO: releases
     # TODO: members
-    # TODO: reviews
 
     ##
     # :attr_reader: similar
@@ -148,22 +147,19 @@ module MetalArchives
       def assemble # :nodoc:
         ## Base attributes
         url = "http://www.metal-archives.com/band/view/id/#{id}"
-        response = HTTPClient.client.get url
-        raise Errors::APIError, response.status if response.status >= 400
+        response = HTTPClient.get url
 
         properties = Parsers::Band.parse_html response.body
 
         ## Similar artists
         url = "http://www.metal-archives.com/band/ajax-recommendations/id/#{id}"
-        response = HTTPClient.client.get url
-        raise Errors::APIError, response.status if response.status >= 400
+        response = HTTPClient.get url
 
         properties[:similar] = Parsers::Band.parse_similar_bands_html response.body
 
         ## Related links
         url = "http://www.metal-archives.com/link/ajax-list/type/band/id/#{id}"
-        response = HTTPClient.client.get url
-        raise Errors::APIError, response.status if response.status >= 400
+        response = HTTPClient.get url
 
         properties[:links] = Parsers::Band.parse_related_links_html response.body
 
@@ -211,9 +207,7 @@ module MetalArchives
         url = "http://www.metal-archives.com/search/ajax-advanced/searching/bands/"
         params = Parsers::Band.map_params query
 
-        response = HTTPClient.client.get url, params
-        raise Errors::APIError, response.status if response.status >= 400
-
+        response = HTTPClient.get url, params
         json = Parsers::Band.parse_json response.body
 
         return nil if json['aaData'].empty?
@@ -251,9 +245,7 @@ module MetalArchives
         url = "http://www.metal-archives.com/search/ajax-advanced/searching/bands/"
         params = Parsers::Band.map_params query
 
-        response = HTTPClient.client.get url, params
-        raise Errors::APIError, response.status if response.status >= 400
-
+        response = HTTPClient.get url, params
         json = Parsers::Band.parse_json response.body
 
         objects = []

@@ -8,26 +8,41 @@ module MetalArchives
   #
   class HTTPClient # :nodoc:
     class << self
+
       ##
-      # Retrieve a HTTP client
+      # Retrieve a HTTP resource
       #
-      def client
-        raise MetalArchives::Errors::InvalidConfigurationError, 'Not configured yet' unless MetalArchives.config
+      def get(*params)
+        response = client.get *params
 
-        @faraday ||= Faraday.new do |f|
-          f.request   :url_encoded            # form-encode POST params
-          f.response  :logger if !!MetalArchives.config.debug      # log requests to STDOUT
+        raise Errors::APIError, response.status if response.status >= 400
 
-          f.use       MetalArchives::Middleware
-          f.use       Faraday::HttpCache,
-                                      :store => MetalArchives.config.cache_store if !!MetalArchives.config.enable_cache
-          f.use       :throttler,
-                              :rate => MetalArchives.config.request_rate,
-                              :wait => MetalArchives.config.request_timeout
-
-          f.adapter   Faraday.default_adapter
-        end
+        response
+      rescue Faraday::Error::ClientError => e
+        raise Errors::APIError, e
       end
+
+      private
+        ##
+        # Retrieve a HTTP client
+        #
+        def client
+          raise Errors::InvalidConfigurationError, 'Not configured yet' unless MetalArchives.config
+
+          @faraday ||= Faraday.new do |f|
+            f.request   :url_encoded            # form-encode POST params
+            f.response  :logger if !!MetalArchives.config.debug      # log requests to STDOUT
+
+            f.use       MetalArchives::Middleware
+            f.use       Faraday::HttpCache,
+                                        :store => MetalArchives.config.cache_store if !!MetalArchives.config.enable_cache
+            f.use       :throttler,
+                                :rate => MetalArchives.config.request_rate,
+                                :wait => MetalArchives.config.request_timeout
+
+            f.adapter   Faraday.default_adapter
+          end
+        end
     end
   end
 
