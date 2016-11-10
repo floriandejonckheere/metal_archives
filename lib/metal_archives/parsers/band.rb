@@ -43,7 +43,7 @@ module Parsers
 
       def parse_html(response)
         props = {}
-        doc = Nokogiri::HTML(response)
+        doc = Nokogiri::HTML response
 
         props[:name] = doc.css('#band_info .band_name a').first.content
         props[:comment] = doc.css('#band_info .band_comment').first.content.gsub(/\n/, '').strip
@@ -104,7 +104,7 @@ module Parsers
       def parse_similar_bands_html(response)
         similar = []
 
-        doc = Nokogiri::HTML(response)
+        doc = Nokogiri::HTML response
         doc.css('#artist_list tbody tr').each do |row|
           similar << {
               :band => MetalArchives::Band.new(:id => row.css('td a').first['href'].split('/').last.to_i),
@@ -113,6 +113,29 @@ module Parsers
         end
 
         similar
+      end
+
+      def parse_related_links_html(response)
+        links = []
+
+        doc = Nokogiri::HTML response
+        doc.css('#linksTableOfficial td a').each do |a|
+          # require 'byebug'; byebug
+          links << {
+            :url => a['href'],
+            :type => :official,
+            :title => a.content
+          }
+        end
+        doc.css('#linksTableOfficial_merchandise td a').each do |a|
+          links << {
+            :url => a['href'],
+            :type => :merchandise,
+            :title => a.content
+          }
+        end
+
+        links
       end
 
       def parse_json(response)

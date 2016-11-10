@@ -101,7 +101,6 @@ module MetalArchives
     # TODO: releases
     # TODO: members
     # TODO: reviews
-    # TODO: links
 
     ##
     # :attr_reader: similar
@@ -128,7 +127,17 @@ module MetalArchives
     #
     property :photo
 
-
+    ##
+    # :attr_reader: links
+    #
+    # Returns +Array+ of +Hash+ containing the following keys
+    #
+    # [+similar+]
+    #     - +:url+: +String+
+    #     - +:type+: +Symbol+, either +:official+ or +:merchandise+
+    #     - +:title+: +String+
+    #
+    property :links, :multiple => true
 
     protected
       ##
@@ -150,6 +159,13 @@ module MetalArchives
         raise Errors::APIError, response.status if response.status >= 400
 
         properties[:similar] = Parsers::Band.parse_similar_bands_html response.body
+
+        ## Related links
+        url = "http://www.metal-archives.com/link/ajax-list/type/band/id/#{id}"
+        response = HTTPClient.client.get url
+        raise Errors::APIError, response.status if response.status >= 400
+
+        properties[:links] = Parsers::Band.parse_related_links_html response.body
 
         ## Use constructor to fill properties
         initialize properties

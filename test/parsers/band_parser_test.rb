@@ -18,18 +18,19 @@ class BandParserTest < Test::Unit::TestCase
     assert_equal 'Pathfinder was founded by Arkadiusz Ruth and Karol Mania.', band.comment
     assert_equal 'http://www.metal-archives.com/images/1/2/2/3/122302_logo.jpg', band.logo
     assert_equal 'http://www.metal-archives.com/images/1/2/2/3/122302_photo.jpg?5400', band.photo
-    assert_equal 19, band.similar.count
     assert !band.independent
+    assert_equal 19, band.similar.count
+    assert_equal 15, band.links.count
+    assert_equal 12, band.links.count { |l| l[:type] == :official }
+    assert_equal 3, band.links.count { |l| l[:type] == :merchandise }
+    assert_equal 'http://www.amazon.com/Fifth-Element-Pathfinder/dp/B007MNNCVW', band.links.select { |l| l[:type] == :merchandise }.first[:url]
+    assert_equal 'Amazon', band.links.select { |l| l[:type] == :merchandise }.first[:title]
 
 
     band = MetalArchives::Band.find 32
 
     assert_equal 'Rhapsody of Fire', band.name
     assert_equal ['Thundercross', 'Rhapsody'].sort, band.aliases.sort
-  end
-
-  def test_associations
-    omit 'not implemented yet'
   end
 
   def test_map_status
