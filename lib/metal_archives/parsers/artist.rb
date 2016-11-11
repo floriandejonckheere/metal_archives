@@ -31,13 +31,19 @@ module Parsers
 
         doc.css('#member_info dl').each do |dl|
           dl.css('dt').each do |dt|
-            case dt.content
+            case dt.content.strip
             when 'Real/full name:'
               props[:name] = dt.next_element.content.strip
             when 'Age:'
               break if dt.next_element.content == 'N/A'
               date = dt.next_element.content.gsub(/ [0-9]* \(born ([^\)]*)\)/, '\1')
               props[:date_of_birth] = Date.parse date
+            when 'R.I.P.:'
+              break if dt.next_element.content == 'N/A'
+              props[:date_of_death] = Date.parse dt.next_element.content
+            when 'Died of:'
+              break if dt.next_element.content = 'N/A'
+              props[:cause_of_death] = dt.next_element.content
             when 'Place of origin:'
               break if dt.next_element.content == 'N/A'
               props[:country] = ISO3166::Country.find_country_by_name(dt.next_element.css('a').first.content)

@@ -50,6 +50,20 @@ module MetalArchives
     property :date_of_birth, :type => Date
 
     ##
+    # :attr_reader: date_of_death
+    #
+    # Returns +Date+
+    #
+    property :date_of_death, :type => Date
+
+    ##
+    # :attr_reader: cause_of_death
+    #
+    # Returns +String+
+    #
+    property :cause_of_death
+
+    ##
     # :attr_reader: gender
     #
     # Returns +Symbol+, either +:male+ or +:female+

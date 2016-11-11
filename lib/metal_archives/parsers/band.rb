@@ -120,7 +120,6 @@ module Parsers
 
         doc = Nokogiri::HTML response
         doc.css('#linksTableOfficial td a').each do |a|
-          # require 'byebug'; byebug
           links << {
             :url => a['href'],
             :type => :official,
