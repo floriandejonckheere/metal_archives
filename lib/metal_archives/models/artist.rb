@@ -77,21 +77,33 @@ module MetalArchives
     # TODO: links
 
     protected
-    ##
-    # Fetch the data and assemble the model
-    #
-    # Raises rdoc-ref:MetalArchives::Errors::APIError
-    #
-    def assemble # :nodoc:
-      ## Base attributes
-      url = "http://www.metal-archives.com/artist/view/id/#{id}"
-      response = HTTPClient.get url
+      ##
+      # Fetch the data and assemble the model
+      #
+      # Raises rdoc-ref:MetalArchives::Errors::APIError
+      #
+      def assemble # :nodoc:
+        ## Base attributes
+        url = "http://www.metal-archives.com/artist/view/id/#{id}"
+        response = HTTPClient.get url
 
-      properties = Parsers::Artist.parse_html response.body
+        properties = Parsers::Artist.parse_html response.body
 
-      ## Use constructor to fill properties
-      initialize properties
-    end
+        ## Biography
+        url = "http://www.metal-archives.com/artist/read-more/id/#{id}/field/biography"
+        response = HTTPClient.get url
+
+        properties[:biography] = response.body
+
+        ## Trivia
+        url = "http://www.metal-archives.com/artist/read-more/id/#{id}/field/trivia"
+        response = HTTPClient.get url
+
+        properties[:trivia] = response.body
+
+        ## Use constructor to fill properties
+        initialize properties
+      end
 
     class << self
       ##
