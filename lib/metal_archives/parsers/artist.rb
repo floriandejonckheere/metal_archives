@@ -20,6 +20,8 @@ module Parsers
       def map_params(query)
         params = {
           :query => query[:name] || '',
+
+          :iDisplayStart => query[:iDisplayStart] || 0
         }
 
         params

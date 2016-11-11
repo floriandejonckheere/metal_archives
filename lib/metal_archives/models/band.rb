@@ -254,7 +254,7 @@ module MetalArchives
           json = JSON.parse response.body
 
           json['aaData'].each do |data|
-            # Fetch Band for every ID in the results list
+            # Create Band object for every ID in the results list
             id = Nokogiri::HTML(data.first).xpath('//a/@href').first.value.gsub('\\', '').split('/').last.gsub(/\D/, '').to_i
             objects << Band.new(:id => id)
           end

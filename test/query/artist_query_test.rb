@@ -39,5 +39,6 @@ class ArtistQueryTest < Test::Unit::TestCase
     assert_equal 1, MetalArchives::Artist.search('Alberto Rionda').length
     assert_equal 9, MetalArchives::Artist.search('Name').length
     assert_equal 0, MetalArchives::Artist.search('SomeNonExistantName').length
+    assert_equal 293, MetalArchives::Artist.search('Filip').length
   end
 end

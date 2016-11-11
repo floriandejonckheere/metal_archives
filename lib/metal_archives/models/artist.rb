@@ -184,17 +184,29 @@ module MetalArchives
       #     +String+
       #
       def search(name)
-        url = "http://www.metal-archives.com/search/ajax-artist-search/"
-        params = Parsers::Artist.map_params :name => name
-
-        response = HTTPClient.get url, params
-        json = JSON.parse response.body
-
         objects = []
-        json['aaData'].each do |data|
-          # Fetch Band for every ID in the results list
-          id = Nokogiri::HTML(data.first).xpath('//a/@href').first.value.gsub('\\', '').split('/').last.gsub(/\D/, '').to_i
-          objects << Artist.new(:id => id)
+
+        url = 'http://www.metal-archives.com/search/ajax-artist-search/'
+        query = {
+          :name => name,
+          :iDisplayStart => 0
+        }
+
+        loop do
+          params = Parsers::Artist.map_params query
+
+          response = HTTPClient.get url, params
+          json = JSON.parse response.body
+
+          json['aaData'].each do |data|
+            # Create Artist object for every ID in the results list
+            id = Nokogiri::HTML(data.first).xpath('//a/@href').first.value.gsub('\\', '').split('/').last.gsub(/\D/, '').to_i
+            objects << Artist.new(:id => id)
+          end
+
+          break if objects.length == json['iTotalRecords']
+
+          query[:iDisplayStart] += 200
         end
 
         objects
