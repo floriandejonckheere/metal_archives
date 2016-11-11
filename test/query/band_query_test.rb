@@ -46,12 +46,12 @@ class BandQueryTest < Test::Unit::TestCase
   end
 
   def test_search_by
-    assert_equal 5, MetalArchives::Band.search_by(:name => 'Alquimia').count
+    assert_equal 5, MetalArchives::Band.search_by(:name => 'Alquimia').length
 
-    assert_equal 3, MetalArchives::Band.search_by(:name => 'Lost Horizon').count
-    assert_equal 2, MetalArchives::Band.search_by(:name => 'Lost Horizon', :exact => true).count
+    assert_equal 3, MetalArchives::Band.search_by(:name => 'Lost Horizon').length
+    assert_equal 2, MetalArchives::Band.search_by(:name => 'Lost Horizon', :exact => true).length
 
-    assert_equal 2, MetalArchives::Band.search_by(:name => 'Alquimia', :genre => 'Melodic Power').count
+    assert_equal 2, MetalArchives::Band.search_by(:name => 'Alquimia', :genre => 'Melodic Power').length
 
 
       countries = MetalArchives::Band.search('Alquimia').map { |a| a.country }.sort
@@ -62,23 +62,23 @@ class BandQueryTest < Test::Unit::TestCase
       assert countries.include? ISO3166::Country['CL']
 
     assert_equal 5, MetalArchives::Band.search_by(
-              :name => 'Alquimia', :year => MetalArchives::Range.new(nil, nil)).count
+              :name => 'Alquimia', :year => MetalArchives::Range.new(nil, nil)).length
     assert_equal 1, MetalArchives::Band.search_by(
-              :name => 'Alquimia', :year => MetalArchives::Range.new(Date.new(2013), nil)).count
+              :name => 'Alquimia', :year => MetalArchives::Range.new(Date.new(2013), nil)).length
     assert_equal 1, MetalArchives::Band.search_by(
-              :name => 'Alquimia', :year => MetalArchives::Range.new(Date.new(2008), Date.new(2008))).count
+              :name => 'Alquimia', :year => MetalArchives::Range.new(Date.new(2008), Date.new(2008))).length
     assert_equal 2, MetalArchives::Band.search_by(
-              :name => 'Alquimia', :year => MetalArchives::Range.new(Date.new(2008), Date.new(2013))).count
+              :name => 'Alquimia', :year => MetalArchives::Range.new(Date.new(2008), Date.new(2013))).length
     assert_equal 5, MetalArchives::Band.search_by(
-              :name => 'Alquimia', :year => MetalArchives::Range.new(nil, Date.new(2013))).count
+              :name => 'Alquimia', :year => MetalArchives::Range.new(nil, Date.new(2013))).length
 
-    assert_equal 1, MetalArchives::Band.search_by(:name => 'Alquimia', :country => ISO3166::Country['ES']).count
-    assert_equal 3, MetalArchives::Band.search_by(:name => 'Alquimia', :country => ISO3166::Country['AR']).count
-    assert_equal 3, MetalArchives::Band.search_by(:name => 'Alquimia', :country => ISO3166::Country['AR']).count
-    assert_equal 1, MetalArchives::Band.search_by(:name => 'Alquimia', :label => 'Mutus Liber').count
+    assert_equal 1, MetalArchives::Band.search_by(:name => 'Alquimia', :country => ISO3166::Country['ES']).length
+    assert_equal 3, MetalArchives::Band.search_by(:name => 'Alquimia', :country => ISO3166::Country['AR']).length
+    assert_equal 3, MetalArchives::Band.search_by(:name => 'Alquimia', :country => ISO3166::Country['AR']).length
+    assert_equal 1, MetalArchives::Band.search_by(:name => 'Alquimia', :label => 'Mutus Liber').length
 
     assert_empty MetalArchives::Band.search_by(:name => 'SomeNonExistantName')
 
-    assert_equal 274, MetalArchives::Band.search_by(:country => ISO3166::Country['CN']).count
+    assert_equal 274, MetalArchives::Band.search_by(:country => ISO3166::Country['CN']).length
   end
 end
