@@ -16,7 +16,7 @@ require 'metal_archives/parsers/band'
 require 'metal_archives/http_client'
 
 ##
-# Metal Archives Web Service Ruby API wrapper
+# Metal Archives Ruby API
 #
 module MetalArchives
 end
