@@ -29,7 +29,9 @@ module Parsers
           :themes => query[:lyrical_themes] || '',
           :location => query[:location] || '',
           :bandLabelName => query[:label] || '',
-          :indieLabelBand => (!!query[:independent] ? 1 : 0)
+          :indieLabelBand => (!!query[:independent] ? 1 : 0),
+
+          :iDisplayStart => query[:iDisplayStart] || 0
         }
 
         params[:country] = []

@@ -78,5 +78,7 @@ class BandQueryTest < Test::Unit::TestCase
     assert_equal 1, MetalArchives::Band.search_by(:name => 'Alquimia', :label => 'Mutus Liber').count
 
     assert_empty MetalArchives::Band.search_by(:name => 'SomeNonExistantName')
+
+    assert_equal 274, MetalArchives::Band.search_by(:country => ISO3166::Country['CN']).count
   end
 end
