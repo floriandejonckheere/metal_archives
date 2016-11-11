@@ -184,19 +184,22 @@ module MetalArchives
       #     +String+
       #
       def search(name)
-        objects = []
-
         url = 'http://www.metal-archives.com/search/ajax-artist-search/'
-        query = {
-          :name => name,
-          :iDisplayStart => 0
-        }
+        query = { :name => name }
 
-        loop do
-          params = Parsers::Artist.map_params query
+        params = Parsers::Artist.map_params query
 
-          response = HTTPClient.get url, params
+        l = lambda do
+          @start ||= 0
+
+          return [] if @max_items and @start >= @max_items
+
+          response = HTTPClient.get url, params.merge(:iDisplayStart => @start)
           json = JSON.parse response.body
+
+          @max_items = json['iTotalRecords']
+
+          objects = []
 
           json['aaData'].each do |data|
             # Create Artist object for every ID in the results list
@@ -204,12 +207,12 @@ module MetalArchives
             objects << Artist.new(:id => id)
           end
 
-          break if objects.length == json['iTotalRecords']
+          @start += 200
 
-          query[:iDisplayStart] += 200
+          objects
         end
 
-        objects
+        MetalArchives::Collection.new l
       end
     end
   end

@@ -265,7 +265,7 @@ module MetalArchives
             objects << Band.new(:id => id)
           end
 
-          break if objects.length == json['iTotalRecords']
+          break if (json['aaData'].empty? || objects.length == json['iTotalRecords'])
 
           query[:iDisplayStart] += 200
         end

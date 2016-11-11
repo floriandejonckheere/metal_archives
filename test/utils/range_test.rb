@@ -1,6 +1,7 @@
-require 'test_helper'
+$:.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
+require 'test/unit'
 
-require 'metal_archives/models/range'
+require 'metal_archives/utils/range'
 
 class RangeTest < Test::Unit::TestCase
   def test_basic_attributes

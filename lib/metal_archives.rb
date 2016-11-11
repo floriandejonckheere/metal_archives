@@ -2,8 +2,10 @@ require 'metal_archives/version'
 require 'metal_archives/configuration'
 require 'metal_archives/error'
 
+require 'metal_archives/utils/range'
+require 'metal_archives/utils/collection'
+
 require 'metal_archives/models/base_model'
-require 'metal_archives/models/range'
 require 'metal_archives/models/label'
 require 'metal_archives/models/artist'
 require 'metal_archives/models/band'
