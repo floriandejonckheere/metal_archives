@@ -84,11 +84,22 @@ module MetalArchives
     #
     property :trivia
 
+    ##
+    # :attr_reader: links
+    #
+    # Returns +Array+ of +Hash+ containing the following keys
+    #
+    # [+similar+]
+    #     - +:url+: +String+
+    #     - +:type+: +Symbol+, either +:official+, +:unofficial+ or +:unlisted_bands+
+    #     - +:title+: +String+
+    #
+    property :links, :multiple => true
+
     # TODO: active bands/albums
     # TODO: past bands/albums
     # TODO: guest bands/albums
     # TODO: misc bands/albums
-    # TODO: links
 
     protected
       ##
@@ -114,6 +125,12 @@ module MetalArchives
         response = HTTPClient.get url
 
         properties[:trivia] = response.body
+
+        ## Related links
+        url = "http://www.metal-archives.com/link/ajax-list/type/person/id/#{id}"
+        response = HTTPClient.get url
+
+        properties[:links] = Parsers::Artist.parse_links_html response.body
 
         ## Use constructor to fill properties
         initialize properties

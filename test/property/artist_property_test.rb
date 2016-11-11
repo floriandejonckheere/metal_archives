@@ -22,6 +22,19 @@ class ArtistPropertyTest < Test::Unit::TestCase
     assert_equal :male, artist.gender
     assert_match 'Avalanch', artist.biography
     assert_match 'Sanctuarium Estudios', artist.trivia
+
+    artist = MetalArchives::Artist.find 260
+
+    assert artist.is_a? MetalArchives::Artist
+    assert_equal 'Ian Fraser Kilmister', artist.name
+    assert_equal ['Lemmy Kilmister'], artist.aliases
+    assert_equal Date.new(2015, 12, 28), artist.date_of_death
+    assert_equal 4, artist.links.count
+    assert_equal 1, artist.links.count { |l| l[:type] == :official }
+    assert_equal 2, artist.links.count { |l| l[:type] == :unofficial }
+    assert_equal 1, artist.links.count { |l| l[:type] == :unlisted_bands }
+    assert_equal 'https://www.facebook.com/OfficialLemmy', artist.links.select { |l| l[:type] == :official }.first[:url]
+    assert_equal 'Facebook', artist.links.select { |l| l[:type] == :official }.first[:title]
   end
 
   def test_map_params

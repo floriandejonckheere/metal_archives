@@ -71,6 +71,30 @@ module Parsers
 
         props
       end
+
+      def parse_links_html(response)
+        links = []
+
+        doc = Nokogiri::HTML response
+
+        # Default to official links
+        type = :official
+
+        doc.css('#linksTablemain tr').each do |row|
+          if row['id'] =~ /^header_/
+            type = row['id'].gsub(/^header_/, '').downcase.to_sym
+          else
+            a = row.css('td a').first
+            links << {
+                :url => a['href'],
+                :type => type,
+                :title => a.content
+            }
+          end
+        end
+
+        links
+      end
     end
   end
 end
