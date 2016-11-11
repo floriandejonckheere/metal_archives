@@ -21,7 +21,7 @@ class BandPropertyTest < Test::Unit::TestCase
     assert_equal :active, band.status
     assert_equal ['Symphonic Power'], band.genres
     assert_equal ['Fantasy', 'Battles', 'Glory', 'The Four Elements', 'Metal'].sort, band.lyrical_themes.sort
-    assert_equal 'Pathfinder was founded by Arkadiusz Ruth and Karol Mania.', band.comment
+    assert_match 'Pathfinder was founded by', band.comment
     assert_equal 'http://www.metal-archives.com/images/1/2/2/3/122302_logo.jpg', band.logo
     assert_equal 'http://www.metal-archives.com/images/1/2/2/3/122302_photo.jpg?5400', band.photo
     assert !band.independent

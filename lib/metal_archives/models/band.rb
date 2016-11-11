@@ -87,7 +87,7 @@ module MetalArchives
     ##
     # :attr_reader: comment
     #
-    # Returns +String+
+    # Returns raw HTML +String+
     #
     property :comment
 
@@ -150,6 +150,12 @@ module MetalArchives
         response = HTTPClient.get url
 
         properties = Parsers::Band.parse_html response.body
+
+        ## Comment
+        url = "http://www.metal-archives.com/band/read-more/id/#{id}"
+        response = HTTPClient.get url
+
+        properties[:comment] = response.body
 
         ## Similar artists
         url = "http://www.metal-archives.com/band/ajax-recommendations/id/#{id}"

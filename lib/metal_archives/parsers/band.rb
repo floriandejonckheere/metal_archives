@@ -48,7 +48,6 @@ module Parsers
         doc = Nokogiri::HTML response
 
         props[:name] = doc.css('#band_info .band_name a').first.content
-        props[:comment] = doc.css('#band_info .band_comment').first.content.gsub(/\n/, '').strip
 
         props[:aliases] = []
         props[:logo] = doc.css('.band_name_img img').first.attr('src') unless doc.css('.band_name_img').empty?

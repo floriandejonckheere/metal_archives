@@ -73,14 +73,14 @@ module MetalArchives
     ##
     # :attr_reader: biography
     #
-    # Returns +String+
+    # Returns raw HTML +String+
     #
     property :biography
 
     ##
     # :attr_reader: trivia
     #
-    # Returns +String+
+    # Returns raw HTML +String+
     #
     property :trivia
 
