@@ -7,11 +7,10 @@ module MetalArchives
     # Generic shallow copy constructor
     #
     def initialize(hash = {})
+      raise Errors::NotImplementedError, 'no :id property in model' unless self.respond_to? :id?, true
+
       hash.each do |property, value|
-        if self.class.properties.include? property
-          instance_variable_set("@#{property}", value)
-          instance_variable_set("@_#{property}", true)
-        end
+        instance_variable_set("@#{property}", value) if self.class.properties.include? property
       end
     end
 
@@ -57,13 +56,13 @@ module MetalArchives
 
           # property
           define_method(name) do
-            self.fetch unless !!instance_variable_get("@_#{name}") or name == :id
+            self.fetch unless instance_variable_defined?("@#{name}") or name == :id
             instance_variable_get("@#{name}")
           end
 
           # property?
           define_method("#{name}?") do
-            self.fetch unless !!instance_variable_get("@_#{name}") or name == :id
+            self.fetch unless instance_variable_defined?("@#{name}") or name == :id
 
             property = instance_variable_get("@#{name}")
             property.respond_to?(:empty?) ? !property.empty? : !!property
@@ -83,7 +82,6 @@ module MetalArchives
             end
 
             instance_variable_set name, value
-            instance_variable_set "@_#{name}", true
           end
         end
 
@@ -108,13 +106,13 @@ module MetalArchives
 
           # property
           define_method(name) do
-            self.fetch unless !!instance_variable_get("@_#{name}")
+            self.fetch unless instance_variable_defined?("@#{name}")
             instance_variable_get("@#{name}")
           end
 
           # property?
           define_method("#{name}?") do
-            self.fetch unless !!instance_variable_get("@_#{name}")
+            self.fetch unless instance_variable_defined?("@#{name}")
 
             property = instance_variable_get("@#{name}")
             property.respond_to?(:empty?) ? !property.empty? : !!property
@@ -133,7 +131,6 @@ module MetalArchives
             end
 
             instance_variable_set name, value
-            instance_variable_set "@_#{name}", true
           end
         end
 
