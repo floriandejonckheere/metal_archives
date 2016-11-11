@@ -85,4 +85,4 @@ $ bundle exec rake rdoc
 
 ## Copyright
 
-Copyright 2016 Florian Dejonckheere. See `LICENSE` for further details.
+Copyright 2016 Florian Dejonckheere. All content acquired through the usage of this API is copyrighted by the respective owner.
