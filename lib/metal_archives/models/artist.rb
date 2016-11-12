@@ -178,7 +178,7 @@ module MetalArchives
       ##
       # Search by name
       #
-      # Returns (possibly empty) +Array+ of rdoc-ref:Artist
+      # Returns rdoc-ref:Collection of rdoc-ref:Artist
       #
       # [+name+]
       #     +String+
