@@ -13,7 +13,7 @@ module MetalArchives
       return to_enum :each unless block_given?
 
       loop do
-        items = instance_exec &@proc
+        items = instance_exec(&@proc)
 
         items.each do |item|
           yield item
