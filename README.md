@@ -61,9 +61,15 @@ require 'countries'
 
 @bands_containing_hell = MetalArchives::Band.search_by :name => '*hell*'
 @non_melodic_death_bands = MetalArchives::Band.search_by :genre => 'death -melodic'
+
+# Methods returning multiple results return a MetalArchives::Collection.
+# Collection wraps a paginated resource, and can be used to iterate over huge queries.
+@non_melodic_death_bands.first(100).each do |band|
+  puts band.name
+end
 ```
 
-Refer to the model's RDoc documentation for full documentation.
+Refer to the model's [RDoc documentation](https://floriandejonckheere.github.io/metal_archives/html/).
 
 ## Debugging
 
