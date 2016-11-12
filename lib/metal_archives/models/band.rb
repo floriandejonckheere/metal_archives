@@ -231,7 +231,7 @@ module MetalArchives
       #
       # Refer to {MA's FAQ}[http://www.metal-archives.com/content/help?index=3#tab_db] for search tips.
       #
-      # Returns (possibly empty) +Array+ of rdoc-ref:Band
+      # Returns rdoc-ref:Collection of rdoc-ref:Band
       #
       # [+query+]
       #     Hash containing one or more of the following keys:
@@ -248,16 +248,21 @@ module MetalArchives
       #     - +:independent+: boolean
       #
       def search_by(query)
-        objects = []
-
         url = 'http://www.metal-archives.com/search/ajax-advanced/searching/bands/'
-        query[:iDisplayStart] = 0
 
-        loop do
-          params = Parsers::Band.map_params query
+        params = Parsers::Band.map_params query
 
-          response = HTTPClient.get url, params
+        l = lambda do
+          @start ||= 0
+
+          return [] if instance_variable_defined?('@max_items') and @start >= @max_items
+
+          response = HTTPClient.get url, params.merge(:iDisplayStart => @start)
           json = JSON.parse response.body
+
+          @max_items = json['iTotalRecords']
+
+          objects = []
 
           json['aaData'].each do |data|
             # Create Band object for every ID in the results list
@@ -265,12 +270,12 @@ module MetalArchives
             objects << Band.new(:id => id)
           end
 
-          break if (json['aaData'].empty? || objects.length == json['iTotalRecords'])
+          @start += 200
 
-          query[:iDisplayStart] += 200
+          objects
         end
 
-        objects
+        MetalArchives::Collection.new l
       end
 
       ##

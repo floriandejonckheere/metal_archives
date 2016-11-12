@@ -192,7 +192,7 @@ module MetalArchives
         l = lambda do
           @start ||= 0
 
-          return [] if @max_items and @start >= @max_items
+          return [] if instance_variable_defined?('@max_items') and @start >= @max_items
 
           response = HTTPClient.get url, params.merge(:iDisplayStart => @start)
           json = JSON.parse response.body

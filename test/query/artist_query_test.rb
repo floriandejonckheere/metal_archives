@@ -11,20 +11,20 @@ class ArtistQueryTest < Test::Unit::TestCase
     artist = MetalArchives::Artist.find 60908
 
     assert_not_nil artist
-    assert artist.is_a? MetalArchives::Artist
+    assert_instance_of MetalArchives::Artist, artist
     assert_equal 'Alberto Rionda', artist.name
     assert_equal ISO3166::Country['ES'], artist.country
 
     artist = MetalArchives::Artist.find(999999)
 
-    assert artist.is_a? MetalArchives::Artist
+    assert_instance_of MetalArchives::Artist, artist
   end
 
   def test_find_by
     artist = MetalArchives::Artist.find_by :name => 'Alberto Rionda'
 
     assert_not_nil artist
-    assert artist.is_a? MetalArchives::Artist
+    assert_instance_of MetalArchives::Artist, artist
     assert_equal 'Alberto Rionda', artist.name
     assert_equal 60908, artist.id
     assert_equal ISO3166::Country['ES'], artist.country
@@ -36,9 +36,12 @@ class ArtistQueryTest < Test::Unit::TestCase
   end
 
   def test_search
-    assert_equal 1, MetalArchives::Artist.search('Alberto Rionda').length
-    assert_equal 9, MetalArchives::Artist.search('Name').length
-    assert_equal 0, MetalArchives::Artist.search('SomeNonExistantName').length
-    assert_equal 293, MetalArchives::Artist.search('Filip').length
+    assert_instance_of MetalArchives::Collection, MetalArchives::Artist.search('Alberto Rionda')
+    assert_equal 1, MetalArchives::Artist.search('Alberto Rionda').count
+    assert_equal 9, MetalArchives::Artist.search('Name').count
+    assert_equal 0, MetalArchives::Artist.search('SomeNonExistantName').count
+    assert_equal 293, MetalArchives::Artist.search('Filip').count
+
+    assert !MetalArchives::Artist.search('SomeNonExistantName').any?
   end
 end

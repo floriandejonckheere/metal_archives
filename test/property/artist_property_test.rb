@@ -12,7 +12,7 @@ class ArtistPropertyTest < Test::Unit::TestCase
   def test_basic_attributes
     artist = MetalArchives::Artist.find 60908
 
-    assert artist.is_a? MetalArchives::Artist
+    assert_instance_of MetalArchives::Artist, artist
     assert_equal 60908, artist.id
     assert_equal 'Alberto Rionda', artist.name
     assert_empty artist.aliases
@@ -25,7 +25,7 @@ class ArtistPropertyTest < Test::Unit::TestCase
 
     artist = MetalArchives::Artist.find 260
 
-    assert artist.is_a? MetalArchives::Artist
+    assert_instance_of MetalArchives::Artist, artist
     assert_equal 'Ian Fraser Kilmister', artist.name
     assert_equal ['Lemmy Kilmister'], artist.aliases
     assert_equal Date.new(2015, 12, 28), artist.date_of_death
