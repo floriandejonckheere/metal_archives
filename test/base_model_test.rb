@@ -18,9 +18,21 @@ class ModelTwo < MetalArchives::BaseModel
 end
 
 ##
-# Sample model
+# Sample complete model
 #
 class ModelThree < MetalArchives::BaseModel
+  property :id
+  property :property_one
+
+  def assemble
+    instance_variable_set "@property_one", 'Property One'
+  end
+end
+
+##
+# Sample complete model
+#
+class ModelFour < MetalArchives::BaseModel
   property :id
   property :property_one
 
@@ -83,5 +95,17 @@ class BaseModelTest < Test::Unit::TestCase
     assert model.instance_variable_defined? '@id'
     assert model.instance_variable_defined? '@property_one'
     assert_equal 'Property One', model.property_one
+  end
+
+  def test_equality
+    m1 = ModelThree.new :id => 'id_one'
+    m2 = ModelThree.new :id => 'id_one'
+    m3 = ModelThree.new :id => 'id_two'
+    m4 = ModelFour.new :id => 'id_one'
+
+    assert_equal m1, m2
+    assert_not_equal m2, m3
+    assert_not_equal m1, m3
+    assert_not_equal m1, m4
   end
 end

@@ -14,6 +14,13 @@ module MetalArchives
       end
     end
 
+    ##
+    # Returns true if two objects have the same type and id
+    #
+    def ==(obj)
+      obj.instance_of? self.class and self.id == obj.id
+    end
+
     protected
       ##
       # Eagerly fetch the data
