@@ -13,7 +13,8 @@ module MetalArchives
     # A block must be specified, to which a
     # rdoc-ref:MetalArchives::Configuration parameter will be passed.
     #
-    # Raises rdoc-ref:InvalidConfigurationException
+    # [Raises]
+    # - rdoc-ref:InvalidConfigurationException
     #
     def configure
       raise MetalArchives::Errors::InvalidConfigurationError, 'No configuration block given' unless block_given?

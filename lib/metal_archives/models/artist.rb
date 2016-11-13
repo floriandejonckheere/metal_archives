@@ -6,7 +6,7 @@ module MetalArchives
   ##
   # Represents a single performer (but not a solo artist)
   #
-  class Artist < BaseModel
+  class Artist < MetalArchives::BaseModel
     ##
     # :attr_reader: id
     #
@@ -19,8 +19,9 @@ module MetalArchives
     #
     # Returns +String+
     #
-    # Raises rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
-    # Raises rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
+    # [Raises]
+    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
+    # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
     property :name
 
@@ -29,8 +30,9 @@ module MetalArchives
     #
     # Returns +Array+ of +String+
     #
-    # Raises rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
-    # Raises rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
+    # [Raises]
+    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
+    # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
     property :aliases, :multiple => true
 
@@ -39,8 +41,9 @@ module MetalArchives
     #
     # Returns +ISO3166::Country+
     #
-    # Raises rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
-    # Raises rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
+    # [Raises]
+    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
+    # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
     property :country, :type => ISO3166::Country
 
@@ -49,8 +52,9 @@ module MetalArchives
     #
     # Returns +String+
     #
-    # Raises rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
-    # Raises rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
+    # [Raises]
+    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
+    # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
     property :location
 
@@ -59,8 +63,9 @@ module MetalArchives
     #
     # Returns +Date+
     #
-    # Raises rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
-    # Raises rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
+    # [Raises]
+    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
+    # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
     property :date_of_birth, :type => Date
 
@@ -69,8 +74,9 @@ module MetalArchives
     #
     # Returns +Date+
     #
-    # Raises rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
-    # Raises rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
+    # [Raises]
+    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
+    # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
     property :date_of_death, :type => Date
 
@@ -79,8 +85,9 @@ module MetalArchives
     #
     # Returns +String+
     #
-    # Raises rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
-    # Raises rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
+    # [Raises]
+    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
+    # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
     property :cause_of_death
 
@@ -89,8 +96,9 @@ module MetalArchives
     #
     # Returns +Symbol+, either +:male+ or +:female+
     #
-    # Raises rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
-    # Raises rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
+    # [Raises]
+    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
+    # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
     enum :gender, :values => [:male, :female]
 
@@ -99,8 +107,9 @@ module MetalArchives
     #
     # Returns raw HTML +String+
     #
-    # Raises rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
-    # Raises rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
+    # [Raises]
+    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
+    # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
     property :biography
 
@@ -109,8 +118,9 @@ module MetalArchives
     #
     # Returns raw HTML +String+
     #
-    # Raises rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
-    # Raises rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
+    # [Raises]
+    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
+    # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
     property :trivia
 
@@ -119,8 +129,9 @@ module MetalArchives
     #
     # Returns +Array+ of +Hash+ containing the following keys
     #
-    # Raises rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
-    # Raises rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
+    # [Raises]
+    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
+    # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
     # [+similar+]
     #     - +:url+: +String+
@@ -138,8 +149,9 @@ module MetalArchives
       ##
       # Fetch the data and assemble the model
       #
-      # Raises rdoc-ref:MetalArchives::Errors::InvalidIDError when receiving a status code == 404
-      # Raises rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
+      # [Raises]
+      # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
+      # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
       #
       def assemble # :nodoc:
         ## Base attributes
@@ -187,8 +199,9 @@ module MetalArchives
       #
       # Returns rdoc-ref:Band
       #
-      # Raises rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
-      # Raises rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
+      # [Raises]
+      # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
+      # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
       #
       # [+id+]
       #     +Integer+
@@ -205,7 +218,8 @@ module MetalArchives
       #
       # Returns rdoc-ref:Artist or nil when no results
       #
-      # Raises rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400
+      # [Raises]
+      # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400
       #
       # [+query+]
       #     Hash containing one or more of the following keys:
@@ -231,7 +245,8 @@ module MetalArchives
       #
       # Returns rdoc-ref:Collection of rdoc-ref:Artist
       #
-      # Raises rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400
+      # [Raises]
+      # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400
       #
       # [+name+]
       #     +String+
