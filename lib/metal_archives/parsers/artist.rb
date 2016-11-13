@@ -7,7 +7,7 @@ module Parsers
   ##
   # Artist parser
   #
-  class Artist # :nodoc:
+  class Artist < Parser # :nodoc:
     class << self
       ##
       # Map attributes to MA attributes
@@ -19,47 +19,52 @@ module Parsers
       #
       def map_params(query)
         params = {
-          :query => query[:name] || '',
-
-          :iDisplayStart => query[:iDisplayStart] || 0
+          :query => query[:name] || ''
         }
 
         params
       end
 
+      ##
+      # Parse main HTML page
+      #
+      # Returns +Hash+
+      #
+      # [Raises]
+      # - rdoc-ref:MetalArchives::Errors::ParserError when parsing failed. Please report this error.
+      #
       def parse_html(response)
         props = {}
         doc = Nokogiri::HTML response
 
         doc.css('#member_info dl').each do |dl|
           dl.css('dt').each do |dt|
-            case dt.content.strip
+            content = sanitize(dt.next_element.content)
+
+            next if content == 'N/A'
+
+            case sanitize(dt.content)
             when 'Real/full name:'
-              props[:name] = dt.next_element.content.strip
+              props[:name] = content
             when 'Age:'
-              break if dt.next_element.content == 'N/A'
-              date = dt.next_element.content.gsub(/ [0-9]* \(born ([^\)]*)\)/, '\1')
+              date = content.gsub(/ [0-9]* \(born ([^\)]*)\)/, '\1')
               props[:date_of_birth] = Date.parse date
             when 'R.I.P.:'
-              break if dt.next_element.content == 'N/A'
-              props[:date_of_death] = Date.parse dt.next_element.content
+              props[:date_of_death] = Date.parse content
             when 'Died of:'
-              break if dt.next_element.content = 'N/A'
-              props[:cause_of_death] = dt.next_element.content
+              props[:cause_of_death] = content
             when 'Place of origin:'
-              break if dt.next_element.content == 'N/A'
-              props[:country] = ISO3166::Country.find_country_by_name(dt.next_element.css('a').first.content)
+              props[:country] = ISO3166::Country.find_country_by_name(sanitize(dt.next_element.css('a').first.content))
               location = dt.next_element.xpath('text()').map { |x| x.content }.join('').strip.gsub(/[()]/, '')
               props[:location] = location unless location.empty?
             when 'Gender:'
-              break if dt.next_element.content == 'N/A'
-              case dt.next_element.content
+              case content
               when 'Male'
                 props[:gender] = :male
               when 'Female'
                 props[:gender] = :female
               else
-                raise Errors::ParserError, "Unknown gender: #{dt.next_element.content}"
+                raise Errors::ParserError, "Unknown gender: #{content}"
               end
             else
               raise Errors::ParserError, "Unknown token: #{dt.content}"
@@ -68,14 +73,23 @@ module Parsers
         end
 
         props[:aliases] = []
-        alt = doc.css('.band_member_name').first.content
+        alt = sanitize doc.css('.band_member_name').first.content
         props[:aliases] << alt unless props[:name] == alt
 
         props
       rescue => e
-        raise ParserError, e
+        e.backtrace.each { |b| MetalArchives::config.logger.error b }
+        raise Errors::ParserError, e
       end
 
+      ##
+      # Parse links HTML page
+      #
+      # Returns +Hash+
+      #
+      # [Raises]
+      # - rdoc-ref:MetalArchives::Errors::ParserError when parsing failed. Please report this error.
+      #
       def parse_links_html(response)
         links = []
 
@@ -89,6 +103,10 @@ module Parsers
             type = row['id'].gsub(/^header_/, '').downcase.to_sym
           else
             a = row.css('td a').first
+
+            # No links have been added yet
+            next unless a
+
             links << {
                 :url => a['href'],
                 :type => type,
@@ -98,6 +116,9 @@ module Parsers
         end
 
         links
+      rescue => e
+        e.backtrace.each { |b| MetalArchives::config.logger.error b }
+        raise Errors::ParserError, e
       end
     end
   end

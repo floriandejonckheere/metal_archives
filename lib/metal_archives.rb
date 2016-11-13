@@ -10,7 +10,7 @@ require 'metal_archives/models/label'
 require 'metal_archives/models/artist'
 require 'metal_archives/models/band'
 
-require 'metal_archives/parsers/parser_helper'
+require 'metal_archives/parsers/parser'
 require 'metal_archives/parsers/label'
 require 'metal_archives/parsers/artist'
 require 'metal_archives/parsers/band'

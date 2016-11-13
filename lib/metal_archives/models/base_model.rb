@@ -1,8 +1,8 @@
 module MetalArchives
   ##
-  # Base model class all models are derived from
+  # Abstract model class
   #
-  class BaseModel # :nodoc:
+  class BaseModel
     ##
     # Generic shallow copy constructor
     #
@@ -21,21 +21,32 @@ module MetalArchives
       obj.instance_of? self.class and self.id == obj.id
     end
 
+    ##
+    # Fetch, parse and load the data
+    #
+    # [Raises]
+    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no id
+    # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
+    #
+    def load!
+      raise Errors::InvalidIDError, 'no id present' unless !!id
+
+      # Use constructor to set attributes
+      initialize assemble
+    end
+
     protected
       ##
-      # Eagerly fetch the data
+      # Fetch the data and assemble the model
       #
-      # Raises rdoc-ref:MetalArchives::Errors::InvalidIDError when no id
-      # Raises rdoc-ref:MetalArchives::Errors::NotImplementedError when no :assemble method is implemented
-      # Raises rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
+      # Override this method
       #
-      def fetch
-        raise Errors::InvalidIDError, 'no id present' unless !!id
-
-        raise Errors::NotImplementedError, 'no :assemble method in model' unless self.respond_to? :assemble, true
-
-        # Use constructor to set attributes
-        initialize assemble
+      # [Raises]
+      # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
+      # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
+      #
+      def assemble
+        raise Errors::NotImplementedError, 'method :assemble not implemented'
       end
 
     class << self
@@ -66,13 +77,13 @@ module MetalArchives
 
           # property
           define_method(name) do
-            self.fetch unless instance_variable_defined?("@#{name}") or name == :id
+            load! unless instance_variable_defined?("@#{name}") or name == :id
             instance_variable_get("@#{name}")
           end
 
           # property?
           define_method("#{name}?") do
-            self.fetch unless instance_variable_defined?("@#{name}") or name == :id
+            load! unless instance_variable_defined?("@#{name}") or name == :id
 
             property = instance_variable_get("@#{name}")
             property.respond_to?(:empty?) ? !property.empty? : !!property
@@ -116,13 +127,13 @@ module MetalArchives
 
           # property
           define_method(name) do
-            self.fetch unless instance_variable_defined?("@#{name}")
+            load! unless instance_variable_defined?("@#{name}")
             instance_variable_get("@#{name}")
           end
 
           # property?
           define_method("#{name}?") do
-            self.fetch unless instance_variable_defined?("@#{name}")
+            load! unless instance_variable_defined?("@#{name}")
 
             property = instance_variable_get("@#{name}")
             property.respond_to?(:empty?) ? !property.empty? : !!property
@@ -145,7 +156,7 @@ module MetalArchives
         end
 
         ##
-        # Defines a model boolean property. This method is an alias for +enum name, :values => [true, false]+
+        # Defines a model boolean property. This method is an alias for <tt>enum name, :values => [true, false]</tt>
         #
         # [+name+]
         #     Name of the property

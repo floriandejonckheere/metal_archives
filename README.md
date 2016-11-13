@@ -73,7 +73,9 @@ Refer to the model's [RDoc documentation](https://floriandejonckheere.github.io/
 
 ## Lazy loading
 
-By default when an model (Artist, Band, ...) is created, no data is fetched. This leads to instantiation of a model with an invalid ID not throwing any errors. Calling any attribute other than `id` will cause all data to be fetched and any errors to be thrown. Refer to the respective methods to find out what errors are thrown in what circumstances.  
+By default when an model (Artist, Band, ...) is created, no data is fetched. This leads to instantiation of a model with an invalid ID not throwing any errors. Calling any attribute other than `id` will cause all data to be fetched and any errors to be thrown. Refer to the respective methods to find out what errors are thrown in what circumstances.
+
+Models can be forced to load all data by calling the `:load!` method.  
 
 ## Testing
 ```

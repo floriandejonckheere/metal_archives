@@ -259,13 +259,14 @@ module MetalArchives
       # [Raises]
       # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
       # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
+      # - rdoc-ref:MetalArchives::Errors::ParserError when parsing failed. Please report this error.
       #
       # [+id+]
       #     +Integer+
       #
       def find!(id)
         obj = find id
-        obj.send :fetch
+        obj.load!
 
         obj
       end
@@ -279,6 +280,7 @@ module MetalArchives
       #
       # [Raises]
       # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400
+      # - rdoc-ref:MetalArchives::Errors::ParserError when parsing failed. Please report this error.
       #
       # [+query+]
       #     Hash containing one or more of the following keys:
@@ -320,6 +322,7 @@ module MetalArchives
       #
       # [Raises]
       # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400
+      # - rdoc-ref:MetalArchives::Errors::ParserError when parsing failed. Please report this error.
       #
       # [+query+]
       #     Hash containing one or more of the following keys:

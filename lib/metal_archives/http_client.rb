@@ -12,8 +12,12 @@ module MetalArchives
       ##
       # Retrieve a HTTP resource
       #
+      # [Raises]
+      # - rdoc-ref:MetalArchives::Errors::InvalidIDError when receiving a status code == 404n
+      # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
+      #
       def get(*params)
-        response = client.get *params
+        response = client.get(*params)
 
         raise Errors::InvalidIDError, response.status if response.status == 404
         raise Errors::APIError, response.status if response.status >= 400
@@ -26,6 +30,7 @@ module MetalArchives
       private
         ##
         # Retrieve a HTTP client
+        #
         #
         def client
           raise Errors::InvalidConfigurationError, 'Not configured yet' unless MetalArchives.config

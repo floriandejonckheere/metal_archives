@@ -7,7 +7,7 @@ module Parsers
   ##
   # Band parser
   #
-  class Band # :nodoc:
+  class Band < Parser # :nodoc:
     class << self
       ##
       # Map attributes to MA attributes
@@ -29,9 +29,7 @@ module Parsers
           :themes => query[:lyrical_themes] || '',
           :location => query[:location] || '',
           :bandLabelName => query[:label] || '',
-          :indieLabelBand => (!!query[:independent] ? 1 : 0),
-
-          :iDisplayStart => query[:iDisplayStart] || 0
+          :indieLabelBand => (!!query[:independent] ? 1 : 0)
         }
 
         params[:country] = []
@@ -43,11 +41,19 @@ module Parsers
         params
       end
 
+      ##
+      # Parse main HTML page
+      #
+      # Returns +Hash+
+      #
+      # [Raises]
+      # - rdoc-ref:MetalArchives::Errors::ParserError when parsing failed. Please report this error.
+      #
       def parse_html(response)
         props = {}
         doc = Nokogiri::HTML response
 
-        props[:name] = doc.css('#band_info .band_name a').first.content
+        props[:name] = sanitize doc.css('#band_info .band_name a').first.content
 
         props[:aliases] = []
         props[:logo] = doc.css('.band_name_img img').first.attr('src') unless doc.css('.band_name_img').empty?
@@ -55,43 +61,42 @@ module Parsers
 
         doc.css('#band_stats dl').each do |dl|
           dl.search('dt').each do |dt|
+            content = sanitize(dt.next_element.content)
+
+            next if content == 'N/A'
+
             case dt.content
             when 'Country of origin:'
-              props[:country] = ISO3166::Country.find_country_by_name dt.next_element.css('a').first.content
+              props[:country] = ISO3166::Country.find_country_by_name sanitize(dt.next_element.css('a').first.content)
             when 'Location:'
-              break if dt.next_element.content == 'N/A'
-              props[:location] = dt.next_element.content
+              props[:location] = content
             when 'Status:'
-              props[:status] = dt.next_element.content.downcase.gsub(/ /, '_').to_sym
+              props[:status] = content.downcase.gsub(/ /, '_').to_sym
             when 'Formed in:'
-              break if dt.next_element.content == 'N/A'
-              props[:date_formed] = Date.new dt.next_element.content.to_i
+              props[:date_formed] = Date.new content.to_i
             when 'Genre:'
-              break if dt.next_element.content == 'N/A'
-              props[:genres] = ParserHelper.parse_genre dt.next_element.content
+              props[:genres] = parse_genre content
             when 'Lyrical themes:'
               props[:lyrical_themes] = []
-              break if dt.next_element.content == 'N/A'
-              dt.next_element.content.split(',').each do |theme|
+              content.split(',').each do |theme|
                 t = theme.split.map(&:capitalize)
                 t.delete '(early)'
                 t.delete '(later)'
                 props[:lyrical_themes] << t.join(' ')
               end
             when /(Current|Last) label:/
-              props[:independent] = (dt.next_element.content == 'Unsigned/independent')
+              props[:independent] = (content == 'Unsigned/independent')
               # TODO
             when 'Years active:'
-              break if dt.next_element.content == 'N/A'
               props[:date_active] = []
-              dt.next_element.content.split(',').each do |range|
+              content.split(',').each do |range|
                 # Aliases
                 range.scan(/\(as ([^)]*)\)/).each { |name| props[:aliases] << name.first }
                 # Ranges
                 r = range.gsub(/ *\(as ([^)]*)\) */, '').strip.split('-')
                 date_start = (r.first == '?' ? nil : Date.new(r.first.to_i))
                 date_end = (r.last == '?' or r.last == 'present' ? nil : Date.new(r.first.to_i))
-                props[:date_active] << Range.new(date_start, date_end)
+                props[:date_active] << MetalArchives::Range.new(date_start, date_end)
               end
             else
               raise MetalArchives::Errors::ParserError, "Unknown token: #{dt.content}"
@@ -101,9 +106,18 @@ module Parsers
 
         props
       rescue => e
-        raise ParserError, e
+        e.backtrace.each { |b| MetalArchives::config.logger.error b }
+        raise Errors::ParserError, e
       end
 
+      ##
+      # Parse similar bands HTML page
+      #
+      # Returns +Hash+
+      #
+      # [Raises]
+      # - rdoc-ref:MetalArchives::Errors::ParserError when parsing failed. Please report this error.
+      #
       def parse_similar_bands_html(response)
         similar = []
 
@@ -116,8 +130,19 @@ module Parsers
         end
 
         similar
+      rescue => e
+        e.backtrace.each { |b| MetalArchives::config.logger.error b }
+        raise Errors::ParserError, e
       end
 
+      ##
+      # Parse related links HTML page
+      #
+      # Returns +Hash+
+      #
+      # [Raises]
+      # - rdoc-ref:MetalArchives::Errors::ParserError when parsing failed. Please report this error.
+      #
       def parse_related_links_html(response)
         links = []
 
@@ -138,9 +163,20 @@ module Parsers
         end
 
         links
+      rescue => e
+        e.backtrace.each { |b| MetalArchives::config.logger.error b }
+        raise Errors::ParserError, e
       end
 
       private
+        ##
+        # Map MA band status
+        #
+        # Returns +Symbol+
+        #
+        # [Raises]
+        # - rdoc-ref:MetalArchives::Errors::ParserError when parsing failed. Please report this error.
+        #
         def map_status(status)
           s = {
             nil => '',

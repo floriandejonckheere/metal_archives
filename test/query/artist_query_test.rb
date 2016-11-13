@@ -39,7 +39,7 @@ class ArtistQueryTest < Test::Unit::TestCase
     end
 
     assert_raise MetalArchives::Errors::APIError do
-      MetalArchives::Artist.find! -1
+      MetalArchives::Artist.find!(-1)
     end
   end
 

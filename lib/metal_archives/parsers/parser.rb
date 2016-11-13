@@ -7,9 +7,9 @@ module MetalArchives
 #
 module Parsers # :nodoc:
   ##
-  # Parsing utilities
+  # Parser base class
   #
-  class ParserHelper # :nodoc:
+  class Parser
     class << self
       ##
       # Parse a country
@@ -18,6 +18,15 @@ module Parsers # :nodoc:
       #
       def parse_country(input)
         ISO3166::Country.find_country_by_name (input)
+      end
+
+      ##
+      # Sanitize a string
+      #
+      # Return +String+
+      #
+      def sanitize(input)
+        input.gsub(/^"/, '').gsub(/"$/, '').strip
       end
 
       ##
@@ -32,7 +41,7 @@ module Parsers # :nodoc:
       #
       # All genres are capitalized.
       #
-      # For examples on how genres are parsed, refer to +ParserHelperTest::test_parse_genre+
+      # For examples on how genres are parsed, refer to +ParserTest#test_parse_genre+
       #
       def parse_genre(input)
         genres = []

@@ -45,7 +45,7 @@ class BandQueryTest < Test::Unit::TestCase
     end
 
     assert_raise MetalArchives::Errors::APIError do
-      MetalArchives::Band.find! -1
+      MetalArchives::Band.find!(-1)
     end
   end
 
