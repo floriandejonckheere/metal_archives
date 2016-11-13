@@ -66,9 +66,9 @@ module MetalArchives
     attr_accessor :request_timeout
 
     ##
-    # Print debug information
+    # Logger instance
     #
-    attr_accessor :debug
+    attr_accessor :logger
 
     ##
     # Default configuration values
@@ -76,6 +76,7 @@ module MetalArchives
     def initialize
       @throttle_rate = 1
       @throttle_wait = 3
+      @logger = Logger.new STDOUT
     end
   end
 end

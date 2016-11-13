@@ -31,14 +31,15 @@ module MetalArchives
 
           @faraday ||= Faraday.new do |f|
             f.request   :url_encoded            # form-encode POST params
-            f.response  :logger if !!MetalArchives.config.debug      # log requests to STDOUT
+            f.response  :logger, MetalArchives.config.logger
 
             f.use       MetalArchives::Middleware
             f.use       Faraday::HttpCache,
                                         :store => MetalArchives.config.cache_store if !!MetalArchives.config.enable_cache
             f.use       :throttler,
                                 :rate => MetalArchives.config.request_rate,
-                                :wait => MetalArchives.config.request_timeout
+                                :wait => MetalArchives.config.request_timeout,
+                                :logger => MetalArchives.config.logger
 
             f.adapter   Faraday.default_adapter
           end

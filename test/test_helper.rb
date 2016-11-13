@@ -4,6 +4,9 @@ require 'test/unit'
 require 'metal_archives'
 
 # Configuration
+logger = Logger.new STDOUT
+logger.level = Logger::DEBUG
+
 MetalArchives.configure do |c|
   c.app_name = 'MetalArchivesGemTestSuite'
   c.app_version = MetalArchives::VERSION
@@ -17,10 +20,6 @@ MetalArchives.configure do |c|
   c.request_rate = 1
   c.request_timeout = 3
 
-  # Print debugging information
-  c.debug = false
-end
-
-def data_for(filename)
-  File.read(File.join(File.dirname(__FILE__) + "/data/#{filename}"))
+  # Custom logger (optional)
+  c.logger = logger
 end
