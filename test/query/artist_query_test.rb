@@ -12,12 +12,35 @@ class ArtistQueryTest < Test::Unit::TestCase
 
     assert_not_nil artist
     assert_instance_of MetalArchives::Artist, artist
+    assert_equal 60908, artist.id
     assert_equal 'Alberto Rionda', artist.name
     assert_equal ISO3166::Country['ES'], artist.country
 
     artist = MetalArchives::Artist.find(999999)
 
     assert_instance_of MetalArchives::Artist, artist
+  end
+
+  def test_find!
+    artist = MetalArchives::Artist.find! 60908
+
+    assert_not_nil artist
+    assert_instance_of MetalArchives::Artist, artist
+    assert_equal 60908, artist.id
+    assert_equal 'Alberto Rionda', artist.name
+    assert_equal ISO3166::Country['ES'], artist.country
+
+    assert_raise MetalArchives::Errors::InvalidIDError do
+      MetalArchives::Artist.find! nil
+    end
+
+    assert_raise MetalArchives::Errors::InvalidIDError do
+      MetalArchives::Artist.find! 0
+    end
+
+    assert_raise MetalArchives::Errors::APIError do
+      MetalArchives::Artist.find! -1
+    end
   end
 
   def test_find_by

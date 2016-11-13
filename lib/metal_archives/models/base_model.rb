@@ -25,14 +25,17 @@ module MetalArchives
       ##
       # Eagerly fetch the data
       #
-      # Raises rdoc-ref:MetalArchives::Errors::APIError
+      # Raises rdoc-ref:MetalArchives::Errors::InvalidIDError when no id
+      # Raises rdoc-ref:MetalArchives::Errors::NotImplementedError when no :assemble method is implemented
+      # Raises rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
       #
       def fetch
         raise Errors::InvalidIDError, 'no id present' unless !!id
 
         raise Errors::NotImplementedError, 'no :assemble method in model' unless self.respond_to? :assemble, true
 
-        assemble
+        # Use constructor to set attributes
+        initialize assemble
       end
 
     class << self

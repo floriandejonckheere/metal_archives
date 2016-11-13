@@ -218,8 +218,7 @@ module MetalArchives
 
         properties[:links] = Parsers::Band.parse_related_links_html response.body
 
-        ## Use constructor to fill properties
-        initialize properties
+        properties
       end
 
     class << self
@@ -233,6 +232,24 @@ module MetalArchives
       #
       def find(id)
         Band.new :id => id
+      end
+
+      ##
+      # Find by ID (no lazy loading)
+      #
+      # Returns rdoc-ref:Band
+      #
+      # Raises rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
+      # Raises rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
+      #
+      # [+id+]
+      #     +Integer+
+      #
+      def find!(id)
+        obj = find id
+        obj.send :fetch
+
+        obj
       end
 
       ##

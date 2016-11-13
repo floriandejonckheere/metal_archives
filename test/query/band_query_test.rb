@@ -12,6 +12,7 @@ class BandQueryTest < Test::Unit::TestCase
 
     assert_not_nil band
     assert_instance_of MetalArchives::Band, band
+    assert_equal 3540361100, band.id
     assert_equal 'Alquimia', band.name
     assert_equal ISO3166::Country['ES'], band.country
 
@@ -21,6 +22,31 @@ class BandQueryTest < Test::Unit::TestCase
     band = MetalArchives::Band.find(2)
 
     assert_instance_of MetalArchives::Band, band
+  end
+
+  def test_find!
+    band = MetalArchives::Band.find! 3540361100
+
+    assert_not_nil band
+    assert_instance_of MetalArchives::Band, band
+    assert_equal 3540361100, band.id
+    assert_equal 'Alquimia', band.name
+    assert_equal ISO3166::Country['ES'], band.country
+
+    assert_match 'http', band.logo
+    assert_match 'http', band.photo
+
+    assert_raise MetalArchives::Errors::InvalidIDError do
+      MetalArchives::Band.find! nil
+    end
+
+    assert_raise MetalArchives::Errors::InvalidIDError do
+      MetalArchives::Band.find! 0
+    end
+
+    assert_raise MetalArchives::Errors::APIError do
+      MetalArchives::Band.find! -1
+    end
   end
 
   def test_find_by
