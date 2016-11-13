@@ -100,6 +100,8 @@ module Parsers
         end
 
         props
+      rescue => e
+        raise ParserError, e
       end
 
       def parse_similar_bands_html(response)

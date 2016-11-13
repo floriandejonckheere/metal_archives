@@ -15,6 +15,7 @@ module MetalArchives
       def get(*params)
         response = client.get *params
 
+        raise Errors::InvalidIDError, response.status if response.status == 404
         raise Errors::APIError, response.status if response.status >= 400
 
         response

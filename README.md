@@ -71,13 +71,9 @@ end
 
 Refer to the model's [RDoc documentation](https://floriandejonckheere.github.io/metal_archives/html/).
 
-## Debugging
+## Lazy loading
 
-Turn on `debug` in the configuration block to enable logging HTTP requests and responses.
-
-```
-$ irb -r metal_archives
-```
+By default when an model (Artist, Band, ...) is created, no data is fetched. This leads to instantiation of a model with an invalid ID not throwing any errors. Calling any attribute other than `id` will cause all data to be fetched and any errors to be thrown. Refer to the respective methods to find out what errors are thrown in what circumstances.  
 
 ## Testing
 ```

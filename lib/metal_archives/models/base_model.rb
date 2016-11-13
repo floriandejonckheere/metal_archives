@@ -28,7 +28,7 @@ module MetalArchives
       # Raises rdoc-ref:MetalArchives::Errors::APIError
       #
       def fetch
-        raise Errors::DataError, 'no id present' unless !!id
+        raise Errors::InvalidIDError, 'no id present' unless !!id
 
         raise Errors::NotImplementedError, 'no :assemble method in model' unless self.respond_to? :assemble, true
 

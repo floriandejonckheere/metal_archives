@@ -44,4 +44,29 @@ class ArtistQueryTest < Test::Unit::TestCase
 
     assert !MetalArchives::Artist.search('SomeNonExistantName').any?
   end
+
+  def test_errors
+    assert_nothing_raised do
+      MetalArchives::Artist.new :id => nil
+      MetalArchives::Artist.new :id => 0
+      MetalArchives::Artist.new :id => -1
+      MetalArchives::Artist.find_by :name => 'SomeNonExistantName'
+      MetalArchives::Artist.search 'SomeNonExistantName'
+    end
+
+    assert_raise MetalArchives::Errors::InvalidIDError do
+      MetalArchives::Artist.new(:id => nil).send :assemble
+    end
+
+    assert_raise MetalArchives::Errors::InvalidIDError do
+      MetalArchives::Artist.new(:id => 0).send :assemble
+    end
+
+    assert_raise MetalArchives::Errors::APIError do
+      MetalArchives::Artist.new(:id => -1).send :assemble
+    end
+
+    assert_nil MetalArchives::Artist.find_by :name => 'SomeNonExistantName'
+    assert !MetalArchives::Artist.search('SomeNonExistantName').any?
+  end
 end

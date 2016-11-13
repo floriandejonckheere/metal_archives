@@ -82,4 +82,31 @@ class BandQueryTest < Test::Unit::TestCase
 
     assert_equal 274, MetalArchives::Band.search_by(:country => ISO3166::Country['CN']).count
   end
+
+  def test_errors
+    assert_nothing_raised do
+      MetalArchives::Band.new :id => nil
+      MetalArchives::Band.new :id => 0
+      MetalArchives::Band.new :id => -1
+      MetalArchives::Band.find_by :name => 'SomeNonExistantName'
+      MetalArchives::Band.search_by :name => 'SomeNonExistantName'
+      MetalArchives::Band.search 'SomeNonExistantName'
+    end
+
+    assert_raise MetalArchives::Errors::InvalidIDError do
+      MetalArchives::Band.new(:id => nil).send :assemble
+    end
+
+    assert_raise MetalArchives::Errors::InvalidIDError do
+      MetalArchives::Band.new(:id => 0).send :assemble
+    end
+
+    assert_raise MetalArchives::Errors::APIError do
+      MetalArchives::Band.new(:id => -1).send :assemble
+    end
+
+    assert_nil MetalArchives::Band.find_by :name => 'SomeNonExistantName'
+    assert !MetalArchives::Band.search_by(:name => 'SomeNonExistantName').any?
+    assert !MetalArchives::Band.search('SomeNonExistantName').any?
+  end
 end

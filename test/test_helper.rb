@@ -4,7 +4,8 @@ require 'test/unit'
 require 'metal_archives'
 
 # Configuration
-logger = Logger.new STDOUT
+puts "Debug log is written to /tmp/test-#{Process.pid}.log"
+logger = Logger.new File.open('/tmp/test-#{Process.pid}.log', 'a')
 logger.level = Logger::DEBUG
 
 MetalArchives.configure do |c|

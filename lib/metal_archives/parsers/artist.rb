@@ -72,6 +72,8 @@ module Parsers
         props[:aliases] << alt unless props[:name] == alt
 
         props
+      rescue => e
+        raise ParserError, e
       end
 
       def parse_links_html(response)
