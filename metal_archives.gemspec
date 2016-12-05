@@ -14,15 +14,15 @@ Gem::Specification.new do |gem|
   gem.version       = MetalArchives::VERSION
   gem.license       = "MIT"
 
-  gem.add_development_dependency 'byebug', '~> 9.0.6', '>= 9.0.6'
-  gem.add_development_dependency 'rake', '~> 11.3.0', '>= 11.3.0'
-  gem.add_development_dependency 'rdoc', '~> 5.0.0', '>= 5.0.0'
-  gem.add_development_dependency 'test-unit', '~> 3.2.2', '>= 3.2.2'
-  gem.add_development_dependency 'activesupport', '~> 5.0.0.1', '>= 5.0.0'
+  gem.add_development_dependency 'byebug', '~> 9.0'
+  gem.add_development_dependency 'rake', '~> 11.0'
+  gem.add_development_dependency 'rdoc', '~> 5.0'
+  gem.add_development_dependency 'test-unit', '~> 3.0'
+  gem.add_development_dependency 'activesupport', '~> 5.0'
 
-  gem.add_dependency 'faraday', '~> 0.10.0', '>= 0.10.0'
-  gem.add_dependency 'faraday-http-cache', '~> 1.3.1', '>= 1.3'
-  gem.add_dependency 'faraday_throttler', '~> 0.0.3', '>= 0.0.3'
-  gem.add_dependency 'nokogiri', '~> 1.6.8.1', '>= 1.6.8'
-  gem.add_dependency 'countries', '~> 1.2.5', '>= 1.2.5'
+  gem.add_dependency 'faraday', '~> 0.9'
+  gem.add_dependency 'faraday-http-cache', '~> 2.0'
+  gem.add_dependency 'faraday_throttler', '~> 0.0.3'
+  gem.add_dependency 'nokogiri', '~> 1.6.8'
+  gem.add_dependency 'countries', '~> 1.2.5'
 end
