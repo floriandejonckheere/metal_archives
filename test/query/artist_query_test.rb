@@ -73,7 +73,7 @@ class ArtistQueryTest < Test::Unit::TestCase
     assert_equal 1, MetalArchives::Artist.search('Alberto Rionda').count
     assert_equal 9, MetalArchives::Artist.search('Name').count
     assert_equal 0, MetalArchives::Artist.search('SomeNonExistantName').count
-    assert_equal 293, MetalArchives::Artist.search('Filip').count
+    assert_equal 296, MetalArchives::Artist.search('Filip').count
 
     assert !MetalArchives::Artist.search('SomeNonExistantName').any?
   end

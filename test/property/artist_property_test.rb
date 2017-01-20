@@ -29,7 +29,7 @@ class ArtistPropertyTest < Test::Unit::TestCase
     assert_equal 'Ian Fraser Kilmister', artist.name
     assert_equal ['Lemmy Kilmister'], artist.aliases
     assert_equal Date.new(2015, 12, 28), artist.date_of_death
-    assert_equal 4, artist.links.length
+    assert_equal 5, artist.links.length
     assert_equal 1, artist.links.count { |l| l[:type] == :official }
     assert_equal 2, artist.links.count { |l| l[:type] == :unofficial }
     assert_equal 1, artist.links.count { |l| l[:type] == :unlisted_bands }

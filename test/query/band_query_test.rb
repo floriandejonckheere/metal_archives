@@ -116,7 +116,7 @@ class BandQueryTest < Test::Unit::TestCase
     assert_equal 0, MetalArchives::Band.search_by(:name => 'SomeNonExistantName').count
     assert !MetalArchives::Band.search_by(:name => 'SomeNonExistantName').any?
 
-    assert_equal 274, MetalArchives::Band.search_by(:country => ISO3166::Country['CN']).count
+    assert_equal 279, MetalArchives::Band.search_by(:country => ISO3166::Country['CN']).count
   end
 
   def test_errors

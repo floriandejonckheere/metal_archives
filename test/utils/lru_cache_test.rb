@@ -1,7 +1,4 @@
-$:.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
-require 'test/unit'
-
-require 'metal_archives/utils/lru_cache'
+require_relative '../test_helper'
 
 class LruCacheTest < Test::Unit::TestCase
   def test_lru
@@ -11,11 +8,11 @@ class LruCacheTest < Test::Unit::TestCase
     cache[:b] = 'two'
     cache[:c] = 'three'
 
-    assert_equal 3, cache.size
+    assert_equal 3, cache.instance_variable_get('@size')
 
     cache[:d] = 'four'
 
-    assert_equal 3, cache.size
+    assert_equal 3, cache.instance_variable_get('@size')
 
     assert_equal 'two', cache[:b]
     assert_equal 'three', cache[:c]
