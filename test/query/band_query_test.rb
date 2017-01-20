@@ -71,6 +71,16 @@ class BandQueryTest < Test::Unit::TestCase
     assert_equal 3540361100, band.id
   end
 
+  def test_find_by!
+    band = MetalArchives::Band.find_by! :name => 'Falconer'
+
+    assert_instance_of MetalArchives::Band, band
+
+    band = MetalArchives::Band.find_by! :name => 'SomeNonExistantName'
+
+    assert_nil band
+  end
+
   def test_search_by
     assert_instance_of MetalArchives::Collection, MetalArchives::Band.search_by(:name => 'Alquimia')
 

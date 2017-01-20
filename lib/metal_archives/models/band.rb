@@ -314,6 +314,38 @@ module MetalArchives
       end
 
       ##
+      # Find by attributes (no lazy loading)
+      #
+      # Refer to {MA's FAQ}[http://www.metal-archives.com/content/help?index=3#tab_db] for search tips.
+      #
+      # Returns rdoc-ref:Band or nil when no results
+      #
+      # [Raises]
+      # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400
+      # - rdoc-ref:MetalArchives::Errors::ParserError when parsing failed. Please report this error.
+      #
+      # [+query+]
+      #     Hash containing one or more of the following keys:
+      #     - +:name+: +String+
+      #     - +:exact+: +Boolean+
+      #     - +:genre+: +String+
+      #     - +:country+: +ISO366::Country+
+      #     - +:year_formation+: rdoc-ref:Range of +Date+
+      #     - +:comment+: +String+
+      #     - +:status+: see rdoc-ref:Band.status
+      #     - +:lyrical_themes+: +String+
+      #     - +:location+: +String+
+      #     - +:label+: rdoc-ref:Label
+      #     - +:independent+: boolean
+      #
+      def find_by!(query)
+        obj = find_by query
+        obj.load! if obj
+
+        obj
+      end
+
+      ##
       # Search by attributes
       #
       # Refer to {MA's FAQ}[http://www.metal-archives.com/content/help?index=3#tab_db] for search tips.
