@@ -58,6 +58,16 @@ class ArtistQueryTest < Test::Unit::TestCase
     assert_nil artist
   end
 
+  def test_find_by!
+    artist = MetalArchives::Artist.find_by! :name => 'Alberto Rionda'
+
+    assert_instance_of MetalArchives::Artist, artist
+
+    artist = MetalArchives::Artist.find_by! :name => 'SomeNonExistantName'
+
+    assert_nil artist
+  end
+
   def test_search
     assert_instance_of MetalArchives::Collection, MetalArchives::Artist.search('Alberto Rionda')
     assert_equal 1, MetalArchives::Artist.search('Alberto Rionda').count

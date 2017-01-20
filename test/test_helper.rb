@@ -13,9 +13,8 @@ MetalArchives.configure do |c|
   c.app_version = MetalArchives::VERSION
   c.app_contact = `git config user.email`.chomp || 'user@example.com'
 
-  # Cache config (optional)
-  c.enable_cache = false
-  # c.cache_store = ActiveSupport::Cache.lookup_store(:file_store, '/tmp/metal_archives-cache')
+  # Custom cache size per object class (optional, overrides defaults)
+  c.cache_size = 1
 
   # Request throttling (optional, overrides defaults)
   c.request_rate = 1

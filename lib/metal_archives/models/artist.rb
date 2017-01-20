@@ -199,7 +199,7 @@ module MetalArchives
       ##
       # Find by ID (no lazy loading)
       #
-      # Returns rdoc-ref:Band
+      # Returns rdoc-ref:Artist
       #
       # [Raises]
       # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
@@ -211,7 +211,7 @@ module MetalArchives
       #
       def find!(id)
         obj = find id
-        obj.load!
+        obj.load! if obj
 
         obj
       end
@@ -245,6 +245,28 @@ module MetalArchives
         id = Nokogiri::HTML(data.first).xpath('//a/@href').first.value.gsub('\\', '').split('/').last.gsub(/\D/, '').to_i
 
         find id
+      end
+
+      ##
+      # Find by attributes (no lazy loading)
+      #
+      # Returns rdoc-ref:Artist or nil when no results
+      #
+      # [Raises]
+      # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
+      # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400
+      # - rdoc-ref:MetalArchives::Errors::ParserError when parsing failed. Please report this error.
+      # - rdoc-ref:MetalArchives::Errors::ArgumentError when query contains no :name key
+      #
+      # [+query+]
+      #     Hash containing one or more of the following keys:
+      #     - +:name+: +String+
+      #
+      def find_by!(query)
+        obj = find_by query
+        obj.load! if obj
+
+        obj
       end
 
       ##
