@@ -40,8 +40,6 @@ module MetalArchives
             f.response  :logger, MetalArchives.config.logger
 
             f.use       MetalArchives::Middleware
-            f.use       Faraday::HttpCache,
-                                        :store => MetalArchives.config.cache_store if !!MetalArchives.config.enable_cache
             f.use       :throttler,
                                 :rate => MetalArchives.config.request_rate,
                                 :wait => MetalArchives.config.request_timeout,

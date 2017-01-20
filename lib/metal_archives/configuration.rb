@@ -24,6 +24,7 @@ module MetalArchives
       raise MetalArchives::Errors::InvalidConfigurationError, 'app_version has not been configured' unless MetalArchives.config.app_version and not MetalArchives.config.app_version.empty?
       raise MetalArchives::Errors::InvalidConfigurationError, 'app_contact has not been configured' unless MetalArchives.config.app_contact and not MetalArchives.config.app_contact.empty?
 
+      MetalArchives.config.cache = MetalArchives::LRUCache.new unless MetalArchives.config.cache
     end
   end
 
@@ -47,11 +48,6 @@ module MetalArchives
     attr_accessor :app_contact
 
     ##
-    # Whether to enable the cache
-    #
-    attr_accessor :enable_cache
-
-    ##
     # ActiveSupport::Cache compatible store
     #
     attr_accessor :cache_store
@@ -70,6 +66,11 @@ module MetalArchives
     # Logger instance
     #
     attr_accessor :logger
+
+    ##
+    # Object cache
+    #
+    attr_accessor :cache
 
     ##
     # Default configuration values

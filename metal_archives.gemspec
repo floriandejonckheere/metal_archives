@@ -21,7 +21,6 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'activesupport', '~> 5.0'
 
   gem.add_dependency 'faraday', '~> 0.9'
-  gem.add_dependency 'faraday-http-cache', '~> 2.0'
   gem.add_dependency 'faraday_throttler', '~> 0.0.3'
   gem.add_dependency 'nokogiri', '~> 1.6.8'
   gem.add_dependency 'countries', '~> 1.2.5'

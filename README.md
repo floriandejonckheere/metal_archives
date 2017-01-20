@@ -27,13 +27,12 @@ MetalArchives.configure do |c|
   c.app_version = "1.0"
   c.app_contact = "support@mymusicapp.com"
 
-  # Cache config (optional)
-  c.enable_cache = true
-  c.cache_store = ActiveSupport::Cache.lookup_store(:file_store, '/tmp/metal_archives-cache')
-
   # Request throttling (optional, overrides defaults)
   c.request_rate = 1
   c.request_timeout = 3
+
+  # Custom object cache (optional, overrides defaults)
+  c.cache = MetalArchives::LRUCache 200
 
   # Custom logger (optional)
   c.logger = Logger.new File.new('metal_archives.log')
