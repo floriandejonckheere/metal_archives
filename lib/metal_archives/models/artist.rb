@@ -191,7 +191,9 @@ module MetalArchives
       #     +Integer+
       #
       def find(id)
-        Artist.new :id => id
+        cache[id] = Artist.new :id => id unless cache.include? id
+
+        cache[id]
       end
 
       ##
@@ -239,7 +241,7 @@ module MetalArchives
         data = json['aaData'].first
         id = Nokogiri::HTML(data.first).xpath('//a/@href').first.value.gsub('\\', '').split('/').last.gsub(/\D/, '').to_i
 
-        Artist.new :id => id
+        find id
       end
 
       ##
@@ -275,7 +277,7 @@ module MetalArchives
           json['aaData'].each do |data|
             # Create Artist object for every ID in the results list
             id = Nokogiri::HTML(data.first).xpath('//a/@href').first.value.gsub('\\', '').split('/').last.gsub(/\D/, '').to_i
-            objects << Artist.new(:id => id)
+            objects << find(:id)
           end
 
           @start += 200

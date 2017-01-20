@@ -3,8 +3,6 @@ module MetalArchives
   # Generic LRU memory cache
   #
   class LRUCache
-    attr_accessor :size
-
     def initialize(size = 100)
       @size = size
 
@@ -27,8 +25,11 @@ module MetalArchives
 
     def [](key)
       if @keys.include? key
+        MetalArchives.config.logger.debug "Cache hit for #{key}"
         @keys.delete key
         @keys << key
+      else
+        MetalArchives.config.logger.debug "Cache miss for #{key}"
       end
 
       @cache[key]

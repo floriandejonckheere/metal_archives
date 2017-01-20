@@ -72,6 +72,7 @@ module MetalArchives
       @throttle_rate = 1
       @throttle_wait = 3
       @logger = Logger.new STDOUT
+      @cache_size = 100
     end
   end
 end
