@@ -248,7 +248,9 @@ module MetalArchives
       #     +Integer+
       #
       def find(id)
-        Band.new :id => id
+        cache[id] = Band.new :id => id unless cache.include? id
+
+        cache[id]
       end
 
       ##
@@ -308,9 +310,7 @@ module MetalArchives
         data = json['aaData'].first
         id = Nokogiri::HTML(data.first).xpath('//a/@href').first.value.gsub('\\', '').split('/').last.gsub(/\D/, '').to_i
 
-        Band.new :id => id
-      rescue Errors::APIError
-        nil
+        find id
       end
 
       ##
@@ -358,7 +358,7 @@ module MetalArchives
           json['aaData'].each do |data|
             # Create Band object for every ID in the results list
             id = Nokogiri::HTML(data.first).xpath('//a/@href').first.value.gsub('\\', '').split('/').last.gsub(/\D/, '').to_i
-            objects << Band.new(:id => id)
+            objects << find(:id)
           end
 
           @start += 200
@@ -378,11 +378,13 @@ module MetalArchives
       #
       # [Raises]
       # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400
+      # - rdoc-ref:MetalArchives::Errors::ArgumentError when +name+ isn't a +String+
       #
       # [+name+]
       #     +String+
       #
       def search(name)
+        raise MetalArchives::Errors::ArgumentError unless name.is_a? String
         search_by :name => name
       end
     end

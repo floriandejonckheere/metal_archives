@@ -31,5 +31,10 @@ module Errors
   # Error in backend response
   #
   class APIError < Error; end
+
+  ##
+  # Error in method argument
+  #
+  class ArgumentError < Error; end
 end
 end

@@ -252,11 +252,14 @@ module MetalArchives
       # [Raises]
       # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400
       # - rdoc-ref:MetalArchives::Errors::ParserError when parsing failed. Please report this error.
+      # - rdoc-ref:MetalArchives::Errors::ArgumentError when +name+ isn't a +String+
       #
       # [+name+]
       #     +String+
       #
       def search(name)
+        raise MetalArchives::Errors::ArgumentError unless name.is_a? String
+
         url = 'http://www.metal-archives.com/search/ajax-artist-search/'
         query = { :name => name }
 
