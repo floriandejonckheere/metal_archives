@@ -224,12 +224,15 @@ module MetalArchives
       # [Raises]
       # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400
       # - rdoc-ref:MetalArchives::Errors::ParserError when parsing failed. Please report this error.
+      # - rdoc-ref:MetalArchives::Errors::ArgumentError when query contains no :name key
       #
       # [+query+]
       #     Hash containing one or more of the following keys:
       #     - +:name+: +String+
       #
       def find_by(query)
+        raise MetalArchives::Errors::ArgumentError unless query.include? :name
+
         url = 'http://www.metal-archives.com/search/ajax-artist-search/'
         params = Parsers::Artist.map_params query
 
