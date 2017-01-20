@@ -268,24 +268,26 @@ module MetalArchives
         l = lambda do
           @start ||= 0
 
-          return [] if instance_variable_defined?('@max_items') and @start >= @max_items
+          if @max_items and @start >= @max_items
+            []
+          else
+            response = HTTPClient.get url, params.merge(:iDisplayStart => @start)
+            json = JSON.parse response.body
 
-          response = HTTPClient.get url, params.merge(:iDisplayStart => @start)
-          json = JSON.parse response.body
+            @max_items = json['iTotalRecords']
 
-          @max_items = json['iTotalRecords']
+            objects = []
 
-          objects = []
+            json['aaData'].each do |data|
+              # Create Artist object for every ID in the results list
+              id = Nokogiri::HTML(data.first).xpath('//a/@href').first.value.gsub('\\', '').split('/').last.gsub(/\D/, '').to_i
+              objects << Artist.find(id)
+            end
 
-          json['aaData'].each do |data|
-            # Create Artist object for every ID in the results list
-            id = Nokogiri::HTML(data.first).xpath('//a/@href').first.value.gsub('\\', '').split('/').last.gsub(/\D/, '').to_i
-            objects << find(:id)
+            @start += 200
+
+            objects
           end
-
-          @start += 200
-
-          objects
         end
 
         MetalArchives::Collection.new l
