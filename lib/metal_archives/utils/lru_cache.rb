@@ -39,6 +39,10 @@ module MetalArchives
       @keys.clear
     end
 
+    def include?(key)
+      @cache.include? key
+    end
+
     private
       def pop
         to_remove = @keys.shift @keys.size - @size

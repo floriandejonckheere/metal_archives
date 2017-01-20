@@ -169,6 +169,13 @@ module MetalArchives
         def boolean(name, opts = {})
           enum name, opts.merge(:values => [true, false])
         end
+
+        ##
+        # Get class-level object cache
+        #
+        def cache
+          @cache ||= MetalArchives::LRUCache.new MetalArchives.config.cache_size
+        end
     end
   end
 end

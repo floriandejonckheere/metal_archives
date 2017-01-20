@@ -1,5 +1,4 @@
 require 'faraday'
-require 'faraday-http-cache'
 require 'faraday_throttler'
 
 module MetalArchives

@@ -23,8 +23,6 @@ module MetalArchives
       raise MetalArchives::Errors::InvalidConfigurationError, 'app_name has not been configured' unless MetalArchives.config.app_name and not MetalArchives.config.app_name.empty?
       raise MetalArchives::Errors::InvalidConfigurationError, 'app_version has not been configured' unless MetalArchives.config.app_version and not MetalArchives.config.app_version.empty?
       raise MetalArchives::Errors::InvalidConfigurationError, 'app_contact has not been configured' unless MetalArchives.config.app_contact and not MetalArchives.config.app_contact.empty?
-
-      MetalArchives.config.cache = MetalArchives::LRUCache.new unless MetalArchives.config.cache
     end
   end
 
@@ -48,11 +46,6 @@ module MetalArchives
     attr_accessor :app_contact
 
     ##
-    # ActiveSupport::Cache compatible store
-    #
-    attr_accessor :cache_store
-
-    ##
     # Request throttling rate (in seconds per request per path)
     #
     attr_accessor :request_rate
@@ -68,9 +61,9 @@ module MetalArchives
     attr_accessor :logger
 
     ##
-    # Object cache
+    # Cache size (per object class)
     #
-    attr_accessor :cache
+    attr_accessor :cache_size
 
     ##
     # Default configuration values

@@ -31,8 +31,8 @@ MetalArchives.configure do |c|
   c.request_rate = 1
   c.request_timeout = 3
 
-  # Custom object cache (optional, overrides defaults)
-  c.cache = MetalArchives::LRUCache 200
+  # Custom cache size per object class (optional, overrides defaults)
+  c.cache_size = 100
 
   # Custom logger (optional)
   c.logger = Logger.new File.new('metal_archives.log')
