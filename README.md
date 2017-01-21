@@ -19,8 +19,6 @@ $ bundle install
 ## Configuration
 
 ```ruby
-require 'active_support/cache'
-
 MetalArchives.configure do |c|
   # Application identity (required)
   c.app_name = "My App"
