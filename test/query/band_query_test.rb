@@ -119,6 +119,10 @@ class BandQueryTest < Test::Unit::TestCase
     assert_equal 279, MetalArchives::Band.search_by(:country => ISO3166::Country['CN']).count
   end
 
+  def test_all
+    assert_instance_of MetalArchives::Collection, MetalArchives::Band.all
+  end
+
   def test_errors
     assert_nothing_raised do
       MetalArchives::Band.new :id => nil

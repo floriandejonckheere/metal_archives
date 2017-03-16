@@ -98,7 +98,7 @@ module MetalArchives
       ##
       # Find by name and id.
       #
-      # Returns rdoc-ref:Band
+      # Returns rdoc-ref:Label
       #
       def find_by_name(name, id)
         client.find_resource(

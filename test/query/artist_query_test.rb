@@ -78,6 +78,10 @@ class ArtistQueryTest < Test::Unit::TestCase
     assert !MetalArchives::Artist.search('SomeNonExistantName').any?
   end
 
+  def test_all
+    assert_instance_of MetalArchives::Collection, MetalArchives::Artist.all
+  end
+
   def test_errors
     assert_nothing_raised do
       MetalArchives::Artist.new :id => nil

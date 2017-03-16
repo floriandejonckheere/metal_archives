@@ -421,6 +421,19 @@ module MetalArchives
         raise MetalArchives::Errors::ArgumentError unless name.is_a? String
         search_by :name => name
       end
+
+      ##
+      # Get all bands
+      #
+      # Returns rdoc-ref:Collection of rdoc-ref:Band
+      #
+      # [Raises]
+      # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400
+      # - rdoc-ref:MetalArchives::Errors::ParserError when parsing failed. Please report this error.
+      #
+      def all
+        search_by Hash.new
+      end
     end
   end
 end
