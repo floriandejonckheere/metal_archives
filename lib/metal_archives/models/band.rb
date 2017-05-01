@@ -212,25 +212,25 @@ module MetalArchives
       #
       def assemble # :nodoc:
         ## Base attributes
-        url = "http://www.metal-archives.com/band/view/id/#{id}"
+        url = "#{MetalArchives.config.endpoint}band/view/id/#{id}"
         response = HTTPClient.get url
 
         properties = Parsers::Band.parse_html response.body
 
         ## Comment
-        url = "http://www.metal-archives.com/band/read-more/id/#{id}"
+        url = "#{MetalArchives.config.endpoint}band/read-more/id/#{id}"
         response = HTTPClient.get url
 
         properties[:comment] = response.body
 
         ## Similar artists
-        url = "http://www.metal-archives.com/band/ajax-recommendations/id/#{id}"
+        url = "#{MetalArchives.config.endpoint}band/ajax-recommendations/id/#{id}"
         response = HTTPClient.get url
 
         properties[:similar] = Parsers::Band.parse_similar_bands_html response.body
 
         ## Related links
-        url = "http://www.metal-archives.com/link/ajax-list/type/band/id/#{id}"
+        url = "#{MetalArchives.config.endpoint}link/ajax-list/type/band/id/#{id}"
         response = HTTPClient.get url
 
         properties[:links] = Parsers::Band.parse_related_links_html response.body
@@ -299,7 +299,7 @@ module MetalArchives
       #     - +:independent+: boolean
       #
       def find_by(query)
-        url = 'http://www.metal-archives.com/search/ajax-advanced/searching/bands/'
+        url = "#{MetalArchives.config.endpoint}search/ajax-advanced/searching/bands"
         params = Parsers::Band.map_params query
 
         response = HTTPClient.get url, params
@@ -371,7 +371,7 @@ module MetalArchives
       #     - +:independent+: boolean
       #
       def search_by(query)
-        url = 'http://www.metal-archives.com/search/ajax-advanced/searching/bands/'
+        url = "#{MetalArchives.config.endpoint}search/ajax-advanced/searching/bands"
 
         params = Parsers::Band.map_params query
 

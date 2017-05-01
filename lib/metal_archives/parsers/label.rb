@@ -9,7 +9,7 @@ module Parsers
   class Label # :nodoc:
     class << self
       def find_endpoint(params)
-        "http://www.metal-archives.com/labels/#{params[:name]}/#{params[:id]}"
+        "#{MetalArchives.config.endpoint}labels/#{params[:name]}/#{params[:id]}"
       end
 
       def parse(response)

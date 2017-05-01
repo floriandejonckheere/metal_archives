@@ -155,25 +155,25 @@ module MetalArchives
       #
       def assemble # :nodoc:
         ## Base attributes
-        url = "http://www.metal-archives.com/artist/view/id/#{id}"
+        url = "#{MetalArchives.config.endpoint}artist/view/id/#{id}"
         response = HTTPClient.get url
 
         properties = Parsers::Artist.parse_html response.body
 
         ## Biography
-        url = "http://www.metal-archives.com/artist/read-more/id/#{id}/field/biography"
+        url = "#{MetalArchives.config.endpoint}artist/read-more/id/#{id}/field/biography"
         response = HTTPClient.get url
 
         properties[:biography] = response.body
 
         ## Trivia
-        url = "http://www.metal-archives.com/artist/read-more/id/#{id}/field/trivia"
+        url = "#{MetalArchives.config.endpoint}artist/read-more/id/#{id}/field/trivia"
         response = HTTPClient.get url
 
         properties[:trivia] = response.body
 
         ## Related links
-        url = "http://www.metal-archives.com/link/ajax-list/type/person/id/#{id}"
+        url = "#{MetalArchives.config.endpoint}link/ajax-list/type/person/id/#{id}"
         response = HTTPClient.get url
 
         properties[:links] = Parsers::Artist.parse_links_html response.body
@@ -233,7 +233,7 @@ module MetalArchives
       def find_by(query)
         raise MetalArchives::Errors::ArgumentError unless query.include? :name
 
-        url = 'http://www.metal-archives.com/search/ajax-artist-search/'
+        url = "#{MetalArchives.config.endpoint}search/ajax-artist-search/"
         params = Parsers::Artist.map_params query
 
         response = HTTPClient.get url, params
@@ -285,7 +285,7 @@ module MetalArchives
       def search(name)
         raise MetalArchives::Errors::ArgumentError unless name.is_a? String
 
-        url = 'http://www.metal-archives.com/search/ajax-artist-search/'
+        url = "#{MetalArchives.config.endpoint}search/ajax-artist-search/"
         query = { :name => name }
 
         params = Parsers::Artist.map_params query
@@ -328,7 +328,7 @@ module MetalArchives
       # - rdoc-ref:MetalArchives::Errors::ParserError when parsing failed. Please report this error.
       #
       def all
-        url = 'http://www.metal-archives.com/search/ajax-artist-search/'
+        url = "#{MetalArchives.config.endpoint}search/ajax-artist-search/"
 
         l = lambda do
           @start ||= 0
