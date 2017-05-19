@@ -1,12 +1,17 @@
-require File.expand_path('../lib/metal_archives/version', __FILE__)
+# frozen_string_literal: true
+
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+
+require 'metal_archives/version'
 
 Gem::Specification.new do |gem|
   gem.authors       = ['Florian Dejonckheere']
   gem.email         = ['florian@floriandejonckheere.be']
-  gem.summary       = %q{Metal Archives Ruby API}
+  gem.summary       = 'Metal Archives Ruby API'
   gem.homepage      = 'http://github.com/floriandejonckheere/metal_archives'
 
-  gem.files         = %x{git ls-files}.split($\)
+  gem.files         = `git ls-files`.split($OUTPUT_RECORD_SEPARATOR)
   gem.executables   = []
   gem.test_files    = gem.files.grep(%r{^spec/})
   gem.name          = 'metal_archives'
@@ -21,6 +26,7 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'rspec', '~> 3.6'
   gem.add_development_dependency 'factory_girl', '~> 4.8'
   gem.add_development_dependency 'faker', '~> 1.7'
+  gem.add_development_dependency 'rubocop', '~> 0.48'
 
   gem.add_dependency 'faraday', '~> 0.9'
   gem.add_dependency 'faraday_throttler', '~> 0.0.3'
