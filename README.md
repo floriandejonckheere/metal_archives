@@ -20,19 +20,22 @@ $ bundle install
 
 ```ruby
 MetalArchives.configure do |c|
-  # Application identity (required)
-  c.app_name = "My App"
-  c.app_version = "1.0"
-  c.app_contact = "support@mymusicapp.com"
+  ## Application identity (required)
+  c.app_name = 'My App'
+  c.app_version = '1.0'
+  c.app_contact = 'support@mymusicapp.com'
 
-  # Request throttling (optional, overrides defaults)
+  ## Request throttling (optional, overrides defaults)
   c.request_rate = 1
   c.request_timeout = 3
 
-  # Custom cache size per object class (optional, overrides defaults)
+  ## Custom cache size per object class (optional, overrides defaults)
   c.cache_size = 100
-
-  # Custom logger (optional)
+  
+  ## Metal Archives endpoint (optional, overrides default)
+  # c.endpoint = 'http://www.metal-archives.com/'
+  
+  ## Custom logger (optional)
   c.logger = Logger.new File.new('metal_archives.log')
 end
 ```
