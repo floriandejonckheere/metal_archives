@@ -18,6 +18,9 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'rake', '~> 11.0'
   gem.add_development_dependency 'rdoc', '~> 5.0'
   gem.add_development_dependency 'test-unit', '~> 3.0'
+  gem.add_development_dependency 'rspec', '~> 3.6'
+  gem.add_development_dependency 'factory_girl', '~> 4.8'
+  gem.add_development_dependency 'faker', '~> 1.7'
 
   gem.add_dependency 'faraday', '~> 0.9'
   gem.add_dependency 'faraday_throttler', '~> 0.0.3'
