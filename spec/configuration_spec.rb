@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 RSpec.describe MetalArchives::Configuration do
-  let(:config) { MetalArchives::Configuration.new }
-
   it 'has the correct properties' do
     expect(subject).to respond_to :app_name
     expect(subject).to respond_to :app_version
@@ -20,8 +18,15 @@ RSpec.describe MetalArchives::Configuration do
     expect(subject.cache_size).to be_an Integer
   end
 
-  it 'is invalid on no configuration' do
-    expect(-> { MetalArchives::Band.search 'foo' }).to raise_error MetalArchives::Errors::InvalidConfigurationError
+  it 'overrides defaults' do
+    subject.endpoint = 'http://my-proxy.com/'
+    logger = Logger.new STDERR
+    subject.logger = logger
+    subject.cache_size = 0
+
+    expect(subject.endpoint).to eq 'http://my-proxy.com/'
+    expect(subject.logger).to be logger
+    expect(subject.cache_size).to eq 0
   end
 
   it 'is invalid without app_name' do

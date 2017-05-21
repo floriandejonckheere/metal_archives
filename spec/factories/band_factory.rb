@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 FactoryGirl.define do
-  factory :band do
+  factory :band, :class => MetalArchives::Band do
     id { Faker::Number.number [1, 2, 3, 4].sample }
     name { Faker::Name.name }
     status { %i[active split_up on_hold unknown changed_name disputed].sample }
@@ -14,7 +14,7 @@ FactoryGirl.define do
     date_formed { Faker::Date.birthday 0, 50 }
     date_active { build_list :range }
 
-    label { [build :label, nil].sample }
+    label { [build(:label), nil].sample }
     independent { label.nil? }
 
     logo { Faker::Internet.url }
@@ -35,7 +35,7 @@ FactoryGirl.define do
     similar do
       4.times.collect do
         {
-          :band => build :band,
+          :band => build(:band),
           :score => Faker::Number.between(1, 100)
         }
       end
