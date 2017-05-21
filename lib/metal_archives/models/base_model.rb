@@ -100,7 +100,12 @@ module MetalArchives
         end
 
         # property=
-        define_method("#{name}=") do
+        define_method("#{name}=") do |value|
+          if value.nil?
+            instance_variable_set "@#{name}", value
+            return
+          end
+
           # Check value type
           type = opts[:type] || String
           if opts[:multiple]
@@ -112,7 +117,7 @@ module MetalArchives
             raise MetalArchives::Errors::TypeError, "invalid type #{value.class}, must be #{type} for #{name}" unless value.is_a? type
           end
 
-          instance_variable_set name, value
+          instance_variable_set "@#{name}", value
         end
       end
 
