@@ -38,5 +38,10 @@ module MetalArchives
     # Error in method argument
     #
     class ArgumentError < Error; end
+
+    ##
+    # Incorrect type
+    #
+    class TypeError < Error; end
   end
 end
