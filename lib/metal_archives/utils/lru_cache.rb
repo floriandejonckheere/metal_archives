@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module MetalArchives
   ##
   # Generic LRU memory cache
@@ -45,10 +47,11 @@ module MetalArchives
     end
 
     private
-      def pop
-        to_remove = @keys.shift @keys.size - @size
 
-        to_remove.each { |key| @cache.delete key }
-      end
+    def pop
+      to_remove = @keys.shift @keys.size - @size
+
+      to_remove.each { |key| @cache.delete key }
+    end
   end
 end

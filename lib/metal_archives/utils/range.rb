@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module MetalArchives
   ##
   # Range which can start and/or end with +nil+
@@ -32,14 +34,14 @@ module MetalArchives
     # Whether start of range is present
     #
     def begin?
-    !!@begin
+      !!@begin
     end
 
     ##
     # Whether end of range is present
     #
     def end?
-    !!@end
+      !!@end
     end
 
     ##

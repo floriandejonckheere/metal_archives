@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'faraday'
 require 'faraday_throttler'
 
@@ -7,7 +9,6 @@ module MetalArchives
   #
   class HTTPClient # :nodoc:
     class << self
-
       ##
       # Retrieve a HTTP resource
       #
@@ -27,26 +28,27 @@ module MetalArchives
       end
 
       private
-        ##
-        # Retrieve a HTTP client
-        #
-        #
-        def client
-          raise Errors::InvalidConfigurationError, 'Not configured yet' unless MetalArchives.config
 
-          @faraday ||= Faraday.new do |f|
-            f.request   :url_encoded            # form-encode POST params
-            f.response  :logger, MetalArchives.config.logger
+      ##
+      # Retrieve a HTTP client
+      #
+      #
+      def client
+        raise Errors::InvalidConfigurationError, 'Not configured yet' unless MetalArchives.config
 
-            f.use       MetalArchives::Middleware
-            f.use       :throttler,
-                                :rate => MetalArchives.config.request_rate,
-                                :wait => MetalArchives.config.request_timeout,
-                                :logger => MetalArchives.config.logger
+        @faraday ||= Faraday.new do |f|
+          f.request   :url_encoded # form-encode POST params
+          f.response  :logger, MetalArchives.config.logger
 
-            f.adapter   Faraday.default_adapter
-          end
+          f.use       MetalArchives::Middleware
+          f.use       :throttler,
+                      :rate => MetalArchives.config.request_rate,
+                      :wait => MetalArchives.config.request_timeout,
+                      :logger => MetalArchives.config.logger
+
+          f.adapter   Faraday.default_adapter
         end
+      end
     end
   end
 
@@ -64,16 +66,17 @@ module MetalArchives
     end
 
     private
-      def user_agent_string
-        "#{MetalArchives.config.app_name}/#{MetalArchives.config.app_version} ( #{MetalArchives.config.app_contact} )"
-      end
 
-      def accept_string
-        'application/json'
-      end
+    def user_agent_string
+      "#{MetalArchives.config.app_name}/#{MetalArchives.config.app_version} ( #{MetalArchives.config.app_contact} )"
+    end
 
-      def via_string
-        "gem metal_archives/#{VERSION}"
-      end
+    def accept_string
+      'application/json'
+    end
+
+    def via_string
+      "gem metal_archives/#{VERSION}"
+    end
   end
 end

@@ -1,8 +1,9 @@
+# frozen_string_literal: true
+
 require 'date'
 require 'countries'
 
 module MetalArchives
-
   ##
   # Represents an band (person or group)
   #
@@ -144,7 +145,7 @@ module MetalArchives
     # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    enum :status, :values => [:active, :split_up, :on_hold, :unknown, :changed_name, :disputed]
+    enum :status, :values => %i[active split_up on_hold unknown changed_name disputed]
 
     # TODO: releases
     # TODO: members
@@ -203,40 +204,41 @@ module MetalArchives
     property :links, :multiple => true
 
     protected
-      ##
-      # Fetch the data and assemble the model
-      #
-      # [Raises]
-      # - rdoc-ref:MetalArchives::Errors::InvalidIDError when receiving a status code == 404
-      # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
-      #
-      def assemble # :nodoc:
-        ## Base attributes
-        url = "#{MetalArchives.config.endpoint}band/view/id/#{id}"
-        response = HTTPClient.get url
 
-        properties = Parsers::Band.parse_html response.body
+    ##
+    # Fetch the data and assemble the model
+    #
+    # [Raises]
+    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when receiving a status code == 404
+    # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
+    #
+    def assemble # :nodoc:
+      ## Base attributes
+      url = "#{MetalArchives.config.endpoint}band/view/id/#{id}"
+      response = HTTPClient.get url
 
-        ## Comment
-        url = "#{MetalArchives.config.endpoint}band/read-more/id/#{id}"
-        response = HTTPClient.get url
+      properties = Parsers::Band.parse_html response.body
 
-        properties[:comment] = response.body
+      ## Comment
+      url = "#{MetalArchives.config.endpoint}band/read-more/id/#{id}"
+      response = HTTPClient.get url
 
-        ## Similar artists
-        url = "#{MetalArchives.config.endpoint}band/ajax-recommendations/id/#{id}"
-        response = HTTPClient.get url
+      properties[:comment] = response.body
 
-        properties[:similar] = Parsers::Band.parse_similar_bands_html response.body
+      ## Similar artists
+      url = "#{MetalArchives.config.endpoint}band/ajax-recommendations/id/#{id}"
+      response = HTTPClient.get url
 
-        ## Related links
-        url = "#{MetalArchives.config.endpoint}link/ajax-list/type/band/id/#{id}"
-        response = HTTPClient.get url
+      properties[:similar] = Parsers::Band.parse_similar_bands_html response.body
 
-        properties[:links] = Parsers::Band.parse_related_links_html response.body
+      ## Related links
+      url = "#{MetalArchives.config.endpoint}link/ajax-list/type/band/id/#{id}"
+      response = HTTPClient.get url
 
-        properties
-      end
+      properties[:links] = Parsers::Band.parse_related_links_html response.body
+
+      properties
+    end
 
     class << self
       ##
@@ -308,7 +310,7 @@ module MetalArchives
         return nil if json['aaData'].empty?
 
         data = json['aaData'].first
-        id = Nokogiri::HTML(data.first).xpath('//a/@href').first.value.gsub('\\', '').split('/').last.gsub(/\D/, '').to_i
+        id = Nokogiri::HTML(data.first).xpath('//a/@href').first.value.delete('\\').split('/').last.gsub(/\D/, '').to_i
 
         find id
       end
@@ -340,7 +342,7 @@ module MetalArchives
       #
       def find_by!(query)
         obj = find_by query
-        obj.load! if obj
+        obj&.load!
 
         obj
       end
@@ -378,7 +380,7 @@ module MetalArchives
         l = lambda do
           @start ||= 0
 
-          if @max_items and @start >= @max_items
+          if @max_items && @start >= @max_items
             []
           else
             response = HTTPClient.get url, params.merge(:iDisplayStart => @start)
@@ -390,8 +392,8 @@ module MetalArchives
 
             json['aaData'].each do |data|
               # Create Band object for every ID in the results list
-              id = Nokogiri::HTML(data.first).xpath('//a/@href').first.value.gsub('\\', '').split('/').last.gsub(/\D/, '').to_i
-              objects << Band.find(id)
+              id = Nokogiri::HTML(data.first).xpath('//a/@href').first.value.delete('\\').split('/').last.gsub(/\D/, '').to_i
+              objects << find(id)
             end
 
             @start += 200
@@ -432,7 +434,7 @@ module MetalArchives
       # - rdoc-ref:MetalArchives::Errors::ParserError when parsing failed. Please report this error.
       #
       def all
-        search_by Hash.new
+        search_by({})
       end
     end
   end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module MetalArchives
   ##
   # Enumerable collection over a paginated resource
@@ -20,7 +22,7 @@ module MetalArchives
     # Calls the given block once for each element, passing that element as a parameter.
     # If no block is given, an Enumerator is returned.
     #
-    def each(&block)
+    def each
       return to_enum :each unless block_given?
 
       loop do

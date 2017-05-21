@@ -1,8 +1,9 @@
+# frozen_string_literal: true
+
 require 'date'
 require 'countries'
 
 module MetalArchives
-
   ##
   # Represents a single performer (but not a solo artist)
   #
@@ -100,7 +101,7 @@ module MetalArchives
     # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    enum :gender, :values => [:male, :female]
+    enum :gender, :values => %i[male female]
 
     ##
     # :attr_reader: biography
@@ -146,40 +147,41 @@ module MetalArchives
     # TODO: misc bands/albums
 
     protected
-      ##
-      # Fetch the data and assemble the model
-      #
-      # [Raises]
-      # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
-      # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
-      #
-      def assemble # :nodoc:
-        ## Base attributes
-        url = "#{MetalArchives.config.endpoint}artist/view/id/#{id}"
-        response = HTTPClient.get url
 
-        properties = Parsers::Artist.parse_html response.body
+    ##
+    # Fetch the data and assemble the model
+    #
+    # [Raises]
+    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
+    # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
+    #
+    def assemble # :nodoc:
+      ## Base attributes
+      url = "#{MetalArchives.config.endpoint}artist/view/id/#{id}"
+      response = HTTPClient.get url
 
-        ## Biography
-        url = "#{MetalArchives.config.endpoint}artist/read-more/id/#{id}/field/biography"
-        response = HTTPClient.get url
+      properties = Parsers::Artist.parse_html response.body
 
-        properties[:biography] = response.body
+      ## Biography
+      url = "#{MetalArchives.config.endpoint}artist/read-more/id/#{id}/field/biography"
+      response = HTTPClient.get url
 
-        ## Trivia
-        url = "#{MetalArchives.config.endpoint}artist/read-more/id/#{id}/field/trivia"
-        response = HTTPClient.get url
+      properties[:biography] = response.body
 
-        properties[:trivia] = response.body
+      ## Trivia
+      url = "#{MetalArchives.config.endpoint}artist/read-more/id/#{id}/field/trivia"
+      response = HTTPClient.get url
 
-        ## Related links
-        url = "#{MetalArchives.config.endpoint}link/ajax-list/type/person/id/#{id}"
-        response = HTTPClient.get url
+      properties[:trivia] = response.body
 
-        properties[:links] = Parsers::Artist.parse_links_html response.body
+      ## Related links
+      url = "#{MetalArchives.config.endpoint}link/ajax-list/type/person/id/#{id}"
+      response = HTTPClient.get url
 
-        properties
-      end
+      properties[:links] = Parsers::Artist.parse_links_html response.body
+
+      properties
+    end
 
     class << self
       ##
@@ -211,7 +213,7 @@ module MetalArchives
       #
       def find!(id)
         obj = find id
-        obj.load! if obj
+        obj&.load!
 
         obj
       end
@@ -242,7 +244,7 @@ module MetalArchives
         return nil if json['aaData'].empty?
 
         data = json['aaData'].first
-        id = Nokogiri::HTML(data.first).xpath('//a/@href').first.value.gsub('\\', '').split('/').last.gsub(/\D/, '').to_i
+        id = Nokogiri::HTML(data.first).xpath('//a/@href').first.value.delete('\\').split('/').last.gsub(/\D/, '').to_i
 
         find id
       end
@@ -264,7 +266,7 @@ module MetalArchives
       #
       def find_by!(query)
         obj = find_by query
-        obj.load! if obj
+        obj&.load!
 
         obj
       end
@@ -293,7 +295,7 @@ module MetalArchives
         l = lambda do
           @start ||= 0
 
-          if @max_items and @start >= @max_items
+          if @max_items && @start >= @max_items
             []
           else
             response = HTTPClient.get url, params.merge(:iDisplayStart => @start)
@@ -305,7 +307,7 @@ module MetalArchives
 
             json['aaData'].each do |data|
               # Create Artist object for every ID in the results list
-              id = Nokogiri::HTML(data.first).xpath('//a/@href').first.value.gsub('\\', '').split('/').last.gsub(/\D/, '').to_i
+              id = Nokogiri::HTML(data.first).xpath('//a/@href').first.value.delete('\\').split('/').last.gsub(/\D/, '').to_i
               objects << Artist.find(id)
             end
 
@@ -333,7 +335,7 @@ module MetalArchives
         l = lambda do
           @start ||= 0
 
-          if @max_items and @start >= @max_items
+          if @max_items && @start >= @max_items
             []
           else
             response = HTTPClient.get url, :iDisplayStart => @start
@@ -345,7 +347,7 @@ module MetalArchives
 
             json['aaData'].each do |data|
               # Create Artist object for every ID in the results list
-              id = Nokogiri::HTML(data.first).xpath('//a/@href').first.value.gsub('\\', '').split('/').last.gsub(/\D/, '').to_i
+              id = Nokogiri::HTML(data.first).xpath('//a/@href').first.value.delete('\\').split('/').last.gsub(/\D/, '').to_i
               objects << Artist.find(id)
             end
 

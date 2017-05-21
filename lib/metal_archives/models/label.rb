@@ -1,8 +1,9 @@
+# frozen_string_literal: true
+
 require 'date'
 require 'countries'
 
 module MetalArchives
-
   ##
   # Represents a record label
   #
@@ -82,7 +83,7 @@ module MetalArchives
     #
     # Returns +:active+, +:closed+ or +:unknown+
     #
-    enum :status, :values => [:active, :closed, :unknown]
+    enum :status, :values => %i[active closed unknown]
 
     class << self
       ##
@@ -90,7 +91,7 @@ module MetalArchives
       #
       # Returns +Array+ of rdoc-ref:Label
       #
-      def search(name)
+      def search(_name)
         results = []
         results
       end
@@ -102,9 +103,9 @@ module MetalArchives
       #
       def find_by_name(name, id)
         client.find_resource(
-            :band,
-              :name => name,
-              :id => id
+          :band,
+          :name => name,
+          :id => id
         )
       end
     end
