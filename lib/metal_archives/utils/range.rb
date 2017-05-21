@@ -48,13 +48,19 @@ module MetalArchives
     # Comparison operator
     #
     def <=>(other)
-      comparison = self.begin <=> other.begin
+      comp_begin = self.begin <=> other.begin
+      comp_end = self.end <=> other.end
+      # Return nil if begin or end is uncomparable
+      return nil if comp_begin.nil? || comp_end.nil?
 
-      if comparison == 0
-        return self.end <=> other.end
-      else
-        return comparison
-      end
+      # Compare end if begin is equal
+      return comp_end if comp_begin.zero?
+
+      # Compare begin if end is equal
+      return comp_begin if comp_begin.zero?
+
+      # Compare actual range
+      (self.end - self.begin) <=> (other.end - other.begin)
     end
   end
 end

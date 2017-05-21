@@ -36,16 +36,28 @@ RSpec.describe MetalArchives::Range do
     expect(end_range.begin?).to be false
   end
 
-  it 'implements the equal operator' do
-    range1 = MetalArchives::Range.new(1, 3)
-    range2 = MetalArchives::Range.new(1, 3)
-    range3 = MetalArchives::Range.new(nil, 3)
-    range4 = MetalArchives::Range.new(nil, 3)
-    range5 = MetalArchives::Range.new(1, nil)
-    range6 = MetalArchives::Range.new(1, nil)
+  it 'implements comparable' do
+    range1 = described_class.new 1, 3
+    range1a = described_class.new 1, 3
+    range2 = described_class.new nil, 3
+    range2a = described_class.new nil, 3
+    range3 = described_class.new 1, nil
+    range3a = described_class.new 1, nil
 
-    expect(range1).to eq range2
-    expect(range3).to eq range4
-    expect(range5).to eq range6
+    range4 = described_class.new 1, 4
+    range5 = described_class.new 0, 3
+
+    expect(range1 <=> range1a).to eq 0
+    expect(range2 <=> range2a).to eq 0
+    expect(range3 <=> range3a).to eq 0
+
+    expect(range1 <=> range2).to be_nil
+    expect(range2 <=> range3).to be_nil
+    expect(range3 <=> range1).to be_nil
+
+    expect(range1 <=> range4).to eq -1
+    expect(range1 <=> range5).to eq -1
+    expect(range4 <=> range1).to eq 1
+    expect(range5 <=> range1).to eq 1
   end
 end
