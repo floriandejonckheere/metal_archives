@@ -2,6 +2,7 @@
 
 FactoryGirl.define do
   factory :artist do
+    id { Faker::Number.number [1, 2, 3, 4].sample }
     name { Faker::Name.name }
     gender { %i[male female].sample }
     biography { Faker::Lorem.words(200).join ' ' }
