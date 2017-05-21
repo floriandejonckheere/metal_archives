@@ -27,6 +27,7 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'factory_girl', '~> 4.8'
   gem.add_development_dependency 'faker', '~> 1.7'
   gem.add_development_dependency 'rubocop', '~> 0.48'
+  gem.add_development_dependency 'coveralls', '~> 0.8'
 
   gem.add_dependency 'faraday', '~> 0.9'
   gem.add_dependency 'faraday_throttler', '~> 0.0.3'

@@ -1,0 +1,11 @@
+language: ruby
+rvm:
+  - 2.4.1
+cache:
+  bundler: true
+env:
+  - RAILS_ENV=test CI=true TRAVIS=true
+install:
+  - bundle install
+script:
+  - bundle exec rspec

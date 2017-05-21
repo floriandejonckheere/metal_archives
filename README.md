@@ -1,4 +1,4 @@
-# Metal Archives Web Service Wrapper
+# Metal Archives Web Service Wrapper [![Travis](https://travis-ci.org/floriandejonckheere/metal_archives.svg?branch=master)](https://travis-ci.org/floriandejonckheere/metal_archives) [![Coverage Status](https://coveralls.io/repos/github/floriandejonckheere/metal_archives/badge.svg)](https://coveralls.io/github/floriandejonckheere/metal_archives)
 
 ## Installation
 

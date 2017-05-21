@@ -18,6 +18,8 @@
 
 require 'factory_girl'
 require 'faker'
+require 'coveralls'
+Coveralls.wear!
 
 require 'metal_archives'
 
