@@ -6,7 +6,7 @@ MetalArchives.configure do |c|
   ## Application identity (required)
   c.app_name = 'MetalArchivesGemTestSuite'
   c.app_version = MetalArchives::VERSION
-  c.app_contact = `git config user.email`.chomp
+  c.app_contact = 'user@example.com'
 
   ## Custom cache size per object class (optional, overrides defaults)
   # c.cache_size = 100

@@ -28,7 +28,7 @@ RSpec.describe MetalArchives::Configuration do
     proc = -> do
       MetalArchives.configure do |c|
         c.app_version = MetalArchives::VERSION
-        c.app_contact = `git config user.email`.chomp || 'user@example.com'
+        c.app_contact = 'user@example.com'
       end
     end
 
@@ -39,7 +39,7 @@ RSpec.describe MetalArchives::Configuration do
     proc = -> do
       MetalArchives.configure do |c|
         c.app_name = 'MetalArchivesGemTestSuite'
-        c.app_contact = `git config user.email`.chomp || 'user@example.com'
+        c.app_contact = 'user@example.com'
       end
     end
 
@@ -62,7 +62,7 @@ RSpec.describe MetalArchives::Configuration do
       MetalArchives.configure do |c|
         c.app_name = 'MetalArchivesGemTestSuite'
         c.app_version = MetalArchives::VERSION
-        c.app_contact = `git config user.email`.chomp || 'user@example.com'
+        c.app_contact = 'user@example.com'
       end
     end
 
