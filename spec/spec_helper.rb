@@ -19,7 +19,9 @@
 require 'factory_girl'
 require 'faker'
 
-Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
+require 'metal_archives'
+
+Dir[File.join(__FILE__, 'support/**/*.rb')].each { |f| require f }
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate

@@ -7,7 +7,11 @@ module MetalArchives
     #
     # Instance of rdoc-ref:MetalArchives::Configuration
     #
-    attr_accessor :config
+    def config
+      raise MetalArchives::Errors::InvalidConfigurationError, 'Gem has not been configured' unless @config
+
+      @config
+    end
 
     ##
     # Configure API options.
@@ -20,7 +24,8 @@ module MetalArchives
     #
     def configure
       raise MetalArchives::Errors::InvalidConfigurationError, 'No configuration block given' unless block_given?
-      yield MetalArchives.config ||= MetalArchives::Configuration.new
+      @config = MetalArchives::Configuration.new
+      yield @config
 
       raise MetalArchives::Errors::InvalidConfigurationError, 'app_name has not been configured' unless MetalArchives.config.app_name && !MetalArchives.config.app_name.empty?
       raise MetalArchives::Errors::InvalidConfigurationError, 'app_version has not been configured' unless MetalArchives.config.app_version && !MetalArchives.config.app_version.empty?
