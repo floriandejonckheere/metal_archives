@@ -7,6 +7,7 @@ require 'metal_archives/error'
 require 'metal_archives/utils/range'
 require 'metal_archives/utils/collection'
 require 'metal_archives/utils/lru_cache'
+require 'metal_archives/utils/date'
 
 require 'metal_archives/models/base_model'
 require 'metal_archives/models/label'
