@@ -6,7 +6,7 @@ module MetalArchives
   #
   # WARNING: No validation on actual date is performed
   #
-  class Date
+  class NilDate
     attr_accessor :year, :month, :day
 
     def initialize(year = nil, month = nil, day = nil)
@@ -46,7 +46,7 @@ module MetalArchives
       month = Integer(split[1]) if split.length > 1
       day = Integer(split[2]) if split.length > 2
 
-      return MetalArchives::Date.new year, month, day
+      return MetalArchives::NilDate.new year, month, day
     rescue
       raise MetalArchives::Errors::ArgumentError, 'invalid date'
     end

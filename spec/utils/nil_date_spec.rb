@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-RSpec.describe MetalArchives::Date do
-  let(:date) { build :date }
-  let(:date_without_day) { build :date, :day => nil }
-  let(:date_without_month) { build :date, :month => nil }
+RSpec.describe MetalArchives::NilDate do
+  let(:date) { build :nil_date }
+  let(:date_without_day) { build :nil_date, :day => nil }
+  let(:date_without_month) { build :nil_date, :month => nil }
 
   it 'has the correct properties' do
     expect(date).to respond_to :year
