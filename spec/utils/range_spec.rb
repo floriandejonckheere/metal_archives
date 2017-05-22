@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-
 RSpec.describe MetalArchives::Range do
   let(:range) { build :range }
   let(:begin_range) { build :range, :end => nil }
@@ -27,12 +26,12 @@ RSpec.describe MetalArchives::Range do
   end
 
   it 'does not require an end date' do
-    expect(begin_range.end).to be nil
+    expect(begin_range.end).to be_nil
     expect(begin_range.end?).to be false
   end
 
   it 'does not require a begin date' do
-    expect(end_range.begin).to be nil
+    expect(end_range.begin).to be_nil
     expect(end_range.begin?).to be false
   end
 
