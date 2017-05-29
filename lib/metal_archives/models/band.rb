@@ -250,9 +250,9 @@ module MetalArchives
       #     +Integer+
       #
       def find(id)
-        cache[id] = Band.new(:id => id) unless cache.include? id
+        return cache[id] if cache.include? id
 
-        cache[id]
+        Band.new :id => id
       end
 
       ##

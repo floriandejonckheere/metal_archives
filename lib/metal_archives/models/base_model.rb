@@ -34,6 +34,27 @@ module MetalArchives
 
       # Use constructor to set attributes
       initialize assemble
+
+      @loaded = true
+      self.class.cache[id] = self
+    rescue => e
+      # Don't cache invalid requests
+      self.class.cache.delete id
+      raise e
+    end
+
+    ##
+    # Whether or not the object is currently loaded
+    #
+    def loaded?
+      !@loaded.nil?
+    end
+
+    ##
+    # Whether or not the object is currently cached
+    #
+    def cached?
+      loaded? && self.class.cache.include?(id)
     end
 
     protected
