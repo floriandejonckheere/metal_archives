@@ -77,6 +77,60 @@ By default when an model (Artist, Band, ...) is created, no data is fetched. Thi
 
 Models can be forced to load all data by calling the `:load!` method.  
 
+## Cache
+
+In order not to stress the Metal Archives server, you can quickly set up a local proxy that caches the requests. For NGINX, adjust the following configuration:
+
+```
+# Set cache dir
+proxy_cache_path /var/cache/nginx/metal_archives levels=1:2 keys_zone=metal_archives:10m;
+
+# Set cache key to include identifying components
+proxy_cache_key $scheme$proxy_host$request_uri;
+
+# Add cache status to log
+log_format cache '$remote_addr - $remote_user [$time_local] "$request" $status $body_bytes_sent "$http_referer" "$http_user_agent" cs=$upstream_cache_status';
+
+server {
+	server_name metal-archives.myhost.com;
+	listen 443	ssl;
+	listen [::]:443	ssl;
+
+	ssl_certificate		/path/to/ssl_certificate.crt;
+	ssl_certificate_key /path/to/ssl_certificate_key.key;
+
+	access_log      /var/log/nginx/metal_archives_access.log;
+	error_log       /var/log/nginx/metal_archives_error.log;
+
+	location / {
+		proxy_redirect off; 
+		proxy_set_header		Host www.metal-archives.com;
+		proxy_set_header		X-Forwarded-Host $host;
+		proxy_set_header		X-Forwarded-Server $host;
+		proxy_set_header		X-Forwarded-For $proxy_add_x_forwarded_for;
+		proxy_set_header		X-Real-IP  $remote_addr;
+
+		proxy_pass			https://www.metal-archives.com/;
+		proxy_cache			metal_archives;
+
+		proxy_ignore_headers	X-Accel-Expires;
+		proxy_ignore_headers	Expires;
+		proxy_ignore_headers	Cache-Control;
+		proxy_ignore_headers	Set-Cookie;
+
+		proxy_hide_header	Set-Cookie;
+		proxy_hide_header	Pragma;
+
+		# Cache valid responses for 30 days
+		proxy_cache_valid 200 301 302 30d;
+		proxy_cache_valid 404 7d;
+		expires 30d;
+	}
+
+	add_header	X-Cache-Status	$upstream_cache_status;
+}
+```
+
 ## Testing
 ```
 $ bundle exec rake test
