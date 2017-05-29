@@ -13,7 +13,7 @@ RSpec.describe MetalArchives::Configuration do
   end
 
   it 'has default properties' do
-    expect(subject.endpoint).to eq 'http://www.metal-archives.com/'
+    expect(subject.endpoint).to eq 'https://www.metal-archives.com/'
     expect(subject.logger).not_to be_nil
     expect(subject.cache_size).to be_an Integer
   end

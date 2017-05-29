@@ -81,7 +81,7 @@ module MetalArchives
     # Default configuration values
     #
     def initialize
-      @endpoint = 'http://www.metal-archives.com/'
+      @endpoint = 'https://www.metal-archives.com/'
       @throttle_rate = 1
       @throttle_wait = 3
       @logger = Logger.new STDOUT
