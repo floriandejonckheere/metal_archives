@@ -35,5 +35,9 @@ module MetalArchives
         break if items.empty?
       end
     end
+
+    def empty?
+      first.nil?
+    end
   end
 end
