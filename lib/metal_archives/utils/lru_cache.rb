@@ -46,6 +46,10 @@ module MetalArchives
       @cache.include? key
     end
 
+    def delete(key)
+      @cache.delete key
+    end
+
     private
 
     def pop

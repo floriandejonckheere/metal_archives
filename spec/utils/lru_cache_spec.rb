@@ -24,6 +24,16 @@ RSpec.describe MetalArchives::LRUCache do
     expect(cache).to include :key
   end
 
+  it 'deletes' do
+    cache[:key] = 'MyString'
+
+    expect(cache).to include :key
+
+    cache.delete :key
+
+    expect(cache).not_to include :key
+  end
+
   it 'implements LRU caching' do
     cache[:a] = 'one'
     cache[:b] = 'two'
