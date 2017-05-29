@@ -36,4 +36,93 @@ RSpec.describe MetalArchives::Artist do
       expect(MetalArchives::Parsers::Artist.map_params(:name => 'name')[:query]).to eq 'name'
     end
   end
+
+  describe 'methods' do
+    describe 'find' do
+      it 'finds an artist' do
+        artist = MetalArchives::Artist.find 60908
+
+        expect(artist).to be_instance_of MetalArchives::Artist
+        expect(artist.name).to eq 'Alberto Rionda'
+      end
+
+      it 'lazily loads' do
+        artist = MetalArchives::Artist.find -1
+
+        expect(artist).to be_instance_of MetalArchives::Artist
+      end
+    end
+
+    describe 'find!' do
+      it 'finds an artist' do
+        artist = MetalArchives::Artist.find! 60908
+
+        expect(artist).to be_instance_of MetalArchives::Artist
+        expect(artist.name).to eq 'Alberto Rionda'
+      end
+
+      it 'raises on invalid id' do
+        expect(-> { MetalArchives::Artist.find! -1 }).to raise_error MetalArchives::Errors::APIError
+        expect(-> { MetalArchives::Artist.find! 0 }).to raise_error MetalArchives::Errors::InvalidIDError
+        expect(-> { MetalArchives::Artist.find! nil }).to raise_error MetalArchives::Errors::InvalidIDError
+      end
+    end
+
+    describe 'find_by' do
+      it 'finds an artist' do
+        artist = MetalArchives::Artist.find_by :name => 'Alberto Rionda'
+
+        expect(artist).to be_instance_of MetalArchives::Artist
+        expect(artist.id).to eq 60908
+      end
+
+      it 'returns nil on invalid id' do
+        artist = MetalArchives::Artist.find_by :name => 'SomeNonExistantName'
+
+        expect(artist).to be_nil
+      end
+    end
+
+    describe 'find_by!' do
+      it 'finds an artist' do
+        artist = MetalArchives::Artist.find_by! :name => 'Alberto Rionda'
+
+        expect(artist).to be_instance_of MetalArchives::Artist
+        expect(artist.id).to eq 60908
+      end
+
+      it 'returns nil on invalid id' do
+        artist = MetalArchives::Artist.find_by! :name => 'SomeNonExistantName'
+
+        expect(artist).to be_nil
+      end
+    end
+
+    describe 'search' do
+      it 'returns a collection' do
+        collection = MetalArchives::Artist.search 'Alberto Rionda'
+
+        expect(collection).to be_instance_of MetalArchives::Collection
+        expect(collection.first).to be_instance_of MetalArchives::Artist
+      end
+
+      it 'returns a collection' do
+        expect(MetalArchives::Artist.search('Alberto Rionda').count).to eq 1
+        expect(MetalArchives::Artist.search('Name').count).to eq 10
+        expect(MetalArchives::Artist.search('SomeNonExistantName').count).to eq 0
+        expect(MetalArchives::Artist.search 'SomeNonExistantName').to be_empty
+        expect(MetalArchives::Artist.search('Filip').count).to eq 296
+      end
+
+      it 'returns an empty collection' do
+        expect(MetalArchives::Artist.search 'SomeNoneExistantName').to be_empty
+      end
+    end
+
+    describe 'all' do
+      it 'returns a collection' do
+        expect(MetalArchives::Artist.all).to be_instance_of MetalArchives::Collection
+      end
+    end
+  end
 end

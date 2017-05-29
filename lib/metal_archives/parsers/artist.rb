@@ -49,7 +49,7 @@ module MetalArchives
               when 'Real/full name:'
                 props[:name] = content
               when 'Age:'
-                date = content.gsub(/ [0-9]* \(born ([^\)]*)\)/, '\1')
+                date = content.strip.gsub(/[0-9]* *\(born ([^\)]*)\)/, '\1')
                 props[:date_of_birth] = Date.parse date
               when 'R.I.P.:'
                 props[:date_of_death] = Date.parse content
