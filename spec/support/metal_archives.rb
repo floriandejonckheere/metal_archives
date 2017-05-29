@@ -14,6 +14,11 @@ MetalArchives.configure do |c|
   ## Metal Archives endpoint (optional, overrides default)
   c.endpoint = ENV['MA_ENDPOINT'] if ENV['MA_ENDPOINT']
 
+  if ENV['MA_ENDPOINT']
+    puts "Using '#{ENV['MA_ENDPOINT']}' as MA endpoint"
+  end
+
   ## Custom logger (optional)
-  # c.logger = Logger.new File.new('metal_archives.log')
+  c.logger = Logger.new 'metal_archives.log'
+  c.logger.level = Logger::WARN
 end
