@@ -330,34 +330,7 @@ module MetalArchives
       # - rdoc-ref:MetalArchives::Errors::ParserError when parsing failed. Please report this error.
       #
       def all
-        url = "#{MetalArchives.config.endpoint}search/ajax-artist-search/"
-
-        l = lambda do
-          @start ||= 0
-
-          if @max_items && @start >= @max_items
-            []
-          else
-            response = HTTPClient.get url, :iDisplayStart => @start
-            json = JSON.parse response.body
-
-            @max_items = json['iTotalRecords']
-
-            objects = []
-
-            json['aaData'].each do |data|
-              # Create Artist object for every ID in the results list
-              id = Nokogiri::HTML(data.first).xpath('//a/@href').first.value.delete('\\').split('/').last.gsub(/\D/, '').to_i
-              objects << Artist.find(id)
-            end
-
-            @start += 200
-
-            objects
-          end
-        end
-
-        MetalArchives::Collection.new l
+        search ''
       end
     end
   end
