@@ -105,6 +105,9 @@ server {
 	access_log      /var/log/nginx/metal_archives_access.log;
 	error_log       /var/log/nginx/metal_archives_error.log;
 
+	# Limit HTTP requests
+	limit_req_zone $binary_remote_addr zone=ma_limit_req:10m rate=2r/s;
+
 	location / {
 		proxy_redirect off; 
 		proxy_set_header		Host www.metal-archives.com;
@@ -114,7 +117,8 @@ server {
 		proxy_set_header		X-Real-IP  $remote_addr;
 
 		proxy_pass			https://www.metal-archives.com/;
-		proxy_cache			metal_archives;
+
+		limit_req		zone=ma_limit_req burst=5;
 
 		proxy_ignore_headers	X-Accel-Expires;
 		proxy_ignore_headers	Expires;
@@ -125,6 +129,7 @@ server {
 		proxy_hide_header	Pragma;
 
 		# Cache valid responses for 30 days
+		proxy_cache			metal_archives;
 		proxy_cache_valid 200 301 302 30d;
 		proxy_cache_valid 404 7d;
 		expires 30d;
