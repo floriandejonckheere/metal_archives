@@ -9,12 +9,14 @@ RSpec.describe MetalArchives::Configuration do
     expect(subject).to respond_to :request_rate
     expect(subject).to respond_to :request_timeout
     expect(subject).to respond_to :logger
+    expect(subject).to respond_to :debug
     expect(subject).to respond_to :cache_size
   end
 
   it 'has default properties' do
     expect(subject.endpoint).to eq 'https://www.metal-archives.com/'
     expect(subject.logger).not_to be_nil
+    expect(subject.debug).to be false
     expect(subject.cache_size).to be_an Integer
   end
 
@@ -22,10 +24,12 @@ RSpec.describe MetalArchives::Configuration do
     subject.endpoint = 'http://my-proxy.com/'
     logger = Logger.new STDERR
     subject.logger = logger
+    subject.debug = true
     subject.cache_size = 0
 
     expect(subject.endpoint).to eq 'http://my-proxy.com/'
     expect(subject.logger).to be logger
+    expect(subject.debug).to be true
     expect(subject.cache_size).to eq 0
   end
 

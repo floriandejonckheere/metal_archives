@@ -21,4 +21,7 @@ MetalArchives.configure do |c|
   ## Custom logger (optional)
   c.logger = Logger.new 'metal_archives.log'
   c.logger.level = Logger::WARN
+
+  ## Verbose output
+  # c.debug = false
 end

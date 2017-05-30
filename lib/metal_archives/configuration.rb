@@ -73,6 +73,11 @@ module MetalArchives
     attr_accessor :logger
 
     ##
+    # Verbose output
+    #
+    attr_accessor :debug
+
+    ##
     # Cache size (per object class)
     #
     attr_accessor :cache_size
@@ -85,6 +90,7 @@ module MetalArchives
       @throttle_rate = 1
       @throttle_wait = 3
       @logger = Logger.new STDOUT
+      @debug = false
       @cache_size = 100
     end
   end
