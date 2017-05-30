@@ -27,6 +27,8 @@ module MetalArchives
       @config = MetalArchives::Configuration.new
       yield @config
 
+      @config.logger.level = @config.debug ? Logger::DEBUG : Logger::WARN
+
       raise MetalArchives::Errors::InvalidConfigurationError, 'app_name has not been configured' unless MetalArchives.config.app_name && !MetalArchives.config.app_name.empty?
       raise MetalArchives::Errors::InvalidConfigurationError, 'app_version has not been configured' unless MetalArchives.config.app_version && !MetalArchives.config.app_version.empty?
       raise MetalArchives::Errors::InvalidConfigurationError, 'app_contact has not been configured' unless MetalArchives.config.app_contact && !MetalArchives.config.app_contact.empty?

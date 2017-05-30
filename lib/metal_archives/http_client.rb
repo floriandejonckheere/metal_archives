@@ -38,7 +38,7 @@ module MetalArchives
 
         @faraday ||= Faraday.new do |f|
           f.request   :url_encoded # form-encode POST params
-          f.response  :logger, MetalArchives.config.logger if MetalArchives.config.debug
+          f.response  :logger, MetalArchives.config.logger
 
           f.use       MetalArchives::Middleware
           f.use       :throttler,

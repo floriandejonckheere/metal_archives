@@ -28,6 +28,7 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'faker'
   gem.add_development_dependency 'rubocop'
   gem.add_development_dependency 'coveralls'
+  gem.add_development_dependency 'debase'
 
   gem.add_dependency 'faraday'
   gem.add_dependency 'faraday_throttler'
