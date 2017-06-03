@@ -4,18 +4,28 @@ RSpec.describe MetalArchives::Configuration do
   describe 'properties' do
     it 'has the correct properties' do
       expect(subject).to respond_to :app_name
+      expect(subject).to respond_to :app_name=
       expect(subject).to respond_to :app_version
+      expect(subject).to respond_to :app_version=
       expect(subject).to respond_to :app_contact
+      expect(subject).to respond_to :app_contact=
       expect(subject).to respond_to :endpoint
+      expect(subject).to respond_to :endpoint=
+      expect(subject).to respond_to :default_endpoint
       expect(subject).to respond_to :request_rate
+      expect(subject).to respond_to :request_rate=
       expect(subject).to respond_to :request_timeout
+      expect(subject).to respond_to :request_timeout=
       expect(subject).to respond_to :logger
+      expect(subject).to respond_to :logger=
       expect(subject).to respond_to :debug
+      expect(subject).to respond_to :debug=
       expect(subject).to respond_to :cache_size
+      expect(subject).to respond_to :cache_size=
     end
 
     it 'has default properties' do
-      expect(subject.endpoint).to eq 'https://www.metal-archives.com/'
+      expect(subject.default_endpoint).to eq 'https://www.metal-archives.com/'
       expect(subject.logger).not_to be_nil
       expect(subject.debug).to be false
       expect(subject.cache_size).to be_an Integer

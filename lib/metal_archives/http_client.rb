@@ -41,6 +41,7 @@ module MetalArchives
           f.response  :logger, MetalArchives.config.logger
 
           f.use       MetalArchives::Middleware::Headers
+          f.use       MetalArchives::Middleware::RewriteEndpoint
           f.use       :throttler,
                       :rate => MetalArchives.config.request_rate,
                       :wait => MetalArchives.config.request_timeout,

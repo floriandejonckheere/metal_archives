@@ -55,9 +55,10 @@ module MetalArchives
     attr_accessor :app_contact
 
     ##
-    # Metal Archives endpoint (defaults to http://www.metal-archives.com/)
+    # Override Metal Archives endpoint (defaults to http://www.metal-archives.com/)
     #
     attr_accessor :endpoint
+    attr_reader :default_endpoint
 
     ##
     # Request throttling rate (in seconds per request per path)
@@ -88,7 +89,7 @@ module MetalArchives
     # Default configuration values
     #
     def initialize
-      @endpoint = 'https://www.metal-archives.com/'
+      @default_endpoint = 'https://www.metal-archives.com/'
       @throttle_rate = 1
       @throttle_wait = 3
       @logger = Logger.new STDOUT

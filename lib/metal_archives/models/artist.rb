@@ -157,25 +157,25 @@ module MetalArchives
     #
     def assemble # :nodoc:
       ## Base attributes
-      url = "#{MetalArchives.config.endpoint}artist/view/id/#{id}"
+      url = "#{MetalArchives.config.default_endpoint}artist/view/id/#{id}"
       response = HTTPClient.get url
 
       properties = Parsers::Artist.parse_html response.body
 
       ## Biography
-      url = "#{MetalArchives.config.endpoint}artist/read-more/id/#{id}/field/biography"
+      url = "#{MetalArchives.config.default_endpoint}artist/read-more/id/#{id}/field/biography"
       response = HTTPClient.get url
 
       properties[:biography] = response.body
 
       ## Trivia
-      url = "#{MetalArchives.config.endpoint}artist/read-more/id/#{id}/field/trivia"
+      url = "#{MetalArchives.config.default_endpoint}artist/read-more/id/#{id}/field/trivia"
       response = HTTPClient.get url
 
       properties[:trivia] = response.body
 
       ## Related links
-      url = "#{MetalArchives.config.endpoint}link/ajax-list/type/person/id/#{id}"
+      url = "#{MetalArchives.config.default_endpoint}link/ajax-list/type/person/id/#{id}"
       response = HTTPClient.get url
 
       properties[:links] = Parsers::Artist.parse_links_html response.body
@@ -235,7 +235,7 @@ module MetalArchives
       def find_by(query)
         raise MetalArchives::Errors::ArgumentError unless query.include? :name
 
-        url = "#{MetalArchives.config.endpoint}search/ajax-artist-search/"
+        url = "#{MetalArchives.config.default_endpoint}search/ajax-artist-search/"
         params = Parsers::Artist.map_params query
 
         response = HTTPClient.get url, params
@@ -287,7 +287,7 @@ module MetalArchives
       def search(name)
         raise MetalArchives::Errors::ArgumentError unless name.is_a? String
 
-        url = "#{MetalArchives.config.endpoint}search/ajax-artist-search/"
+        url = "#{MetalArchives.config.default_endpoint}search/ajax-artist-search/"
         query = { :name => name }
 
         params = Parsers::Artist.map_params query
