@@ -40,7 +40,7 @@ module MetalArchives
           f.request   :url_encoded # form-encode POST params
           f.response  :logger, MetalArchives.config.logger
 
-          f.use       MetalArchives::Middleware
+          f.use       MetalArchives::Middleware::Headers
           f.use       :throttler,
                       :rate => MetalArchives.config.request_rate,
                       :wait => MetalArchives.config.request_timeout,
@@ -49,34 +49,6 @@ module MetalArchives
           f.adapter   Faraday.default_adapter
         end
       end
-    end
-  end
-
-  ##
-  # Faraday middleware
-  #
-  class Middleware < Faraday::Middleware # :nodoc:
-    def call(env)
-      env[:request_headers].merge!(
-        'User-Agent'  => user_agent_string,
-        'Via'         => via_string,
-        'Accept'      => accept_string
-      )
-      @app.call(env)
-    end
-
-    private
-
-    def user_agent_string
-      "#{MetalArchives.config.app_name}/#{MetalArchives.config.app_version} ( #{MetalArchives.config.app_contact} )"
-    end
-
-    def accept_string
-      'application/json'
-    end
-
-    def via_string
-      "gem metal_archives/#{VERSION}"
     end
   end
 end
