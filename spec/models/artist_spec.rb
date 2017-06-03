@@ -111,7 +111,7 @@ RSpec.describe MetalArchives::Artist do
         expect(MetalArchives::Artist.search('Name').count).to eq 10
         expect(MetalArchives::Artist.search('SomeNonExistantName').count).to eq 0
         expect(MetalArchives::Artist.search 'SomeNonExistantName').to be_empty
-        expect(MetalArchives::Artist.search('Filip').count).to eq 297
+        expect(MetalArchives::Artist.search('Filip').count).to be > 200
       end
 
       it 'returns an empty collection' do

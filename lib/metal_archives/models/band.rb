@@ -393,7 +393,7 @@ module MetalArchives
             json['aaData'].each do |data|
               # Create Band object for every ID in the results list
               id = Nokogiri::HTML(data.first).xpath('//a/@href').first.value.delete('\\').split('/').last.gsub(/\D/, '').to_i
-              objects << find(id)
+              objects << Band.find(id)
             end
 
             @start += 200
