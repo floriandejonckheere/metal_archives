@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'openssl'
+
 require 'metal_archives/version'
 require 'metal_archives/configuration'
 require 'metal_archives/error'
