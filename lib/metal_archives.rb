@@ -2,6 +2,9 @@
 
 require 'openssl'
 
+require 'metal_archives/middleware/headers'
+require 'metal_archives/middleware/rewrite_endpoint'
+
 require 'metal_archives/version'
 require 'metal_archives/configuration'
 require 'metal_archives/error'
@@ -20,9 +23,6 @@ require 'metal_archives/parsers/parser'
 require 'metal_archives/parsers/label'
 require 'metal_archives/parsers/artist'
 require 'metal_archives/parsers/band'
-
-require 'metal_archives/middleware/headers'
-require 'metal_archives/middleware/rewrite_endpoint'
 
 require 'metal_archives/http_client'
 

@@ -16,8 +16,10 @@ RSpec.describe MetalArchives::Band do
       expect(band.genres).to eq ['Symphonic Power']
       expect(band.lyrical_themes.sort).to eq ['Fantasy', 'Battles', 'Glory', 'The Four Elements', 'Metal'].sort
       expect(band.comment).to match 'Pathfinder was founded by'
-      expect(band.logo).to eq URI('https://www.metal-archives.com/images/1/2/2/3/122302_logo.jpg')
-      expect(band.photo).to eq URI('https://www.metal-archives.com/images/1/2/2/3/122302_photo.jpg?5400')
+      expect(band.logo).to be_instance_of URI::HTTPS
+      expect(band.logo.path).to eq '/images/1/2/2/3/122302_logo.jpg'
+      expect(band.photo).to be_instance_of URI::HTTPS
+      expect(band.photo.path).to eq '/images/1/2/2/3/122302_photo.jpg'
       expect(band.independent).not_to be true
       expect(band.similar.length).to eq 19
       expect(band.links.length).to eq 15
@@ -46,6 +48,21 @@ RSpec.describe MetalArchives::Band do
 
       expect(-> { MetalArchives::Parsers::Band.send(:map_status, :invalid_status) }).to raise_error MetalArchives::Errors::ParserError
     end
+
+    it 'rewrites URIs' do
+      old_endpoint = MetalArchives.config.endpoint
+      MetalArchives.config.endpoint = 'https://foo.bar/'
+
+      band = MetalArchives::Band.find! 122302
+
+      expect(band.logo.scheme).to eq 'https'
+      expect(band.logo.host).to eq 'foo.bar'
+
+      expect(band.logo.scheme).to eq 'https'
+      expect(band.photo.host).to eq 'foo.bar'
+
+      MetalArchives.config.endpoint = old_endpoint
+    end
   end
 
   describe 'methods' do
@@ -59,8 +76,11 @@ RSpec.describe MetalArchives::Band do
         expect(band.name).to eq 'Alquimia'
         expect(band.country).to eq ISO3166::Country['ES']
 
-        expect(band.logo).to eq URI('https://www.metal-archives.com/images/3/5/4/0/3540361100_logo.gif?1856')
-        expect(band.photo).to eq URI('https://www.metal-archives.com/images/3/5/4/0/3540361100_photo.jpg?3737')
+        expect(band.logo).to be_instance_of URI::HTTPS
+        expect(band.logo.path).to eq '/images/3/5/4/0/3540361100_logo.gif'
+
+        expect(band.photo).to be_instance_of URI::HTTPS
+        expect(band.photo.path).to eq '/images/3/5/4/0/3540361100_photo.jpg'
       end
 
       it 'lazily loads' do

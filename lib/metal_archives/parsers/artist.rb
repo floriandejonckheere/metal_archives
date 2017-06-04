@@ -4,6 +4,8 @@ require 'json'
 require 'date'
 require 'countries'
 
+require 'metal_archives/middleware/rewrite_endpoint'
+
 module MetalArchives
   module Parsers
     ##
@@ -41,8 +43,8 @@ module MetalArchives
 
           # Photo
           unless doc.css('.member_img').empty?
-            photo = doc.css('.member_img img').first.attr('src')
-            props[:photo] = URI photo
+            photo_uri = URI doc.css('.member_img img').first.attr('src')
+            props[:photo] = Middleware::RewriteEndpoint.rewrite photo_uri
           end
 
           doc.css('#member_info dl').each do |dl|

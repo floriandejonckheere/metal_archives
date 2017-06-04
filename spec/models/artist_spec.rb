@@ -15,7 +15,8 @@ RSpec.describe MetalArchives::Artist do
       expect(artist.gender).to eq :male
       expect(artist.biography).to match 'Avalanch'
       expect(artist.trivia).to match 'Sanctuarium Estudios'
-      expect(artist.photo).to eq URI('https://www.metal-archives.com/images/6/0/9/0/60908_artist.jpg?5002')
+      expect(artist.photo).to be_instance_of URI::HTTPS
+      expect(artist.photo.path).to eq '/images/6/0/9/0/60908_artist.jpg'
     end
 
     it 'Lemmy Kilmister has properties' do
@@ -35,6 +36,18 @@ RSpec.describe MetalArchives::Artist do
 
     it 'maps query parameters' do
       expect(MetalArchives::Parsers::Artist.map_params(:name => 'name')[:query]).to eq 'name'
+    end
+
+    it 'rewrites URIs' do
+      old_endpoint = MetalArchives.config.endpoint
+      MetalArchives.config.endpoint = 'https://foo.bar/'
+
+      artist = MetalArchives::Artist.find! 60908
+
+      expect(artist.photo.scheme).to eq 'https'
+      expect(artist.photo.host).to eq 'foo.bar'
+
+      MetalArchives.config.endpoint = old_endpoint
     end
   end
 
