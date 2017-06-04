@@ -16,7 +16,7 @@ module MetalArchives
 
       class << self
         def rewrite(uri)
-          return unless MetalArchives.config.endpoint
+          return uri unless MetalArchives.config.endpoint
 
           new_uri = uri.clone
 
