@@ -39,6 +39,12 @@ module MetalArchives
           props = {}
           doc = Nokogiri::HTML response
 
+          # Photo
+          unless doc.css('.member_img').empty?
+            photo = doc.css('.member_img img').first.attr('src')
+            props[:photo] = URI photo
+          end
+
           doc.css('#member_info dl').each do |dl|
             dl.css('dt').each do |dt|
               content = sanitize(dt.next_element.content)
@@ -74,8 +80,7 @@ module MetalArchives
             end
           end
 
-          props[:photo] = doc.css('.member_img img').first.attr('src') unless doc.css('.member_img').empty?
-
+          # Aliases
           props[:aliases] = []
           alt = sanitize doc.css('.band_member_name').first.content
           props[:aliases] << alt unless props[:name] == alt

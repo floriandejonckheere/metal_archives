@@ -16,8 +16,8 @@ RSpec.describe MetalArchives::Band do
       expect(band.genres).to eq ['Symphonic Power']
       expect(band.lyrical_themes.sort).to eq ['Fantasy', 'Battles', 'Glory', 'The Four Elements', 'Metal'].sort
       expect(band.comment).to match 'Pathfinder was founded by'
-      expect(band.logo).to eq 'https://www.metal-archives.com/images/1/2/2/3/122302_logo.jpg'
-      expect(band.photo).to eq 'https://www.metal-archives.com/images/1/2/2/3/122302_photo.jpg?5400'
+      expect(band.logo).to eq URI('https://www.metal-archives.com/images/1/2/2/3/122302_logo.jpg')
+      expect(band.photo).to eq URI('https://www.metal-archives.com/images/1/2/2/3/122302_photo.jpg?5400')
       expect(band.independent).not_to be true
       expect(band.similar.length).to eq 19
       expect(band.links.length).to eq 15
@@ -59,8 +59,8 @@ RSpec.describe MetalArchives::Band do
         expect(band.name).to eq 'Alquimia'
         expect(band.country).to eq ISO3166::Country['ES']
 
-        expect(band.logo).to match 'http'
-        expect(band.photo).to match 'http'
+        expect(band.logo).to eq URI('https://www.metal-archives.com/images/3/5/4/0/3540361100_logo.gif?1856')
+        expect(band.photo).to eq URI('https://www.metal-archives.com/images/3/5/4/0/3540361100_photo.jpg?3737')
       end
 
       it 'lazily loads' do

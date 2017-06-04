@@ -57,8 +57,18 @@ module MetalArchives
           props[:name] = sanitize doc.css('#band_info .band_name a').first.content
 
           props[:aliases] = []
-          props[:logo] = doc.css('.band_name_img img').first.attr('src') unless doc.css('.band_name_img').empty?
-          props[:photo] = doc.css('.band_img img').first.attr('src') unless doc.css('.band_img').empty?
+
+          # Logo
+          unless doc.css('.band_name_img').empty?
+            photo = doc.css('.band_name_img img').first.attr('src')
+            props[:logo] = URI photo
+          end
+
+          # Photo
+          unless doc.css('.band_img').empty?
+            photo = doc.css('.band_img img').first.attr('src')
+            props[:photo] = URI photo
+          end
 
           doc.css('#band_stats dl').each do |dl|
             dl.search('dt').each do |dt|

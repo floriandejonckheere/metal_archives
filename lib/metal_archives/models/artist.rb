@@ -128,7 +128,7 @@ module MetalArchives
     ##
     # :attr_reader: photo
     #
-    # Returns +String+
+    # Returns +URI+ (rewritten if config option was enabled)
     #
     # [Raises]
     # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id

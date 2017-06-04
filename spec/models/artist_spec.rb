@@ -15,7 +15,7 @@ RSpec.describe MetalArchives::Artist do
       expect(artist.gender).to eq :male
       expect(artist.biography).to match 'Avalanch'
       expect(artist.trivia).to match 'Sanctuarium Estudios'
-      expect(artist.photo).to eq 'https://www.metal-archives.com/images/6/0/9/0/60908_artist.jpg?5002'
+      expect(artist.photo).to eq URI('https://www.metal-archives.com/images/6/0/9/0/60908_artist.jpg?5002')
     end
 
     it 'Lemmy Kilmister has properties' do
