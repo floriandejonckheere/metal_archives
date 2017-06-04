@@ -126,6 +126,17 @@ module MetalArchives
     property :trivia
 
     ##
+    # :attr_reader: photo
+    #
+    # Returns +String+
+    #
+    # [Raises]
+    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
+    # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
+    #
+    property :photo
+
+    ##
     # :attr_reader: links
     #
     # Returns +Array+ of +Hash+ containing the following keys

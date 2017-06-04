@@ -74,6 +74,8 @@ module MetalArchives
             end
           end
 
+          props[:photo] = doc.css('.member_img img').first.attr('src') unless doc.css('.member_img').empty?
+
           props[:aliases] = []
           alt = sanitize doc.css('.band_member_name').first.content
           props[:aliases] << alt unless props[:name] == alt
