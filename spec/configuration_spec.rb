@@ -12,6 +12,8 @@ RSpec.describe MetalArchives::Configuration do
       expect(subject).to respond_to :endpoint
       expect(subject).to respond_to :endpoint=
       expect(subject).to respond_to :default_endpoint
+      expect(subject).to respond_to :middleware
+      expect(subject).to respond_to :middleware=
       expect(subject).to respond_to :request_rate
       expect(subject).to respond_to :request_rate=
       expect(subject).to respond_to :request_timeout

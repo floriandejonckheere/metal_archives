@@ -42,6 +42,9 @@ module MetalArchives
 
           f.use       MetalArchives::Middleware::Headers
           f.use       MetalArchives::Middleware::RewriteEndpoint
+
+          MetalArchives.config.middleware.each { |m| f.use m } if MetalArchives.config.middleware
+
           f.use       :throttler,
                       :rate => MetalArchives.config.request_rate,
                       :wait => MetalArchives.config.request_timeout,

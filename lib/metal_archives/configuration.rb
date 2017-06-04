@@ -61,6 +61,11 @@ module MetalArchives
     attr_reader :default_endpoint
 
     ##
+    # Additional Faraday middleware
+    #
+    attr_accessor :middleware
+
+    ##
     # Request throttling rate (in seconds per request per path)
     #
     attr_accessor :request_rate
