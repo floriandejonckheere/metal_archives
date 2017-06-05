@@ -9,7 +9,7 @@ module MetalArchives
     #
     class RewriteEndpoint < Faraday::Middleware
       def call(env)
-        RewriteEndpoint.rewrite(env[:url])
+        env[:url] = RewriteEndpoint.rewrite(env[:url])
 
         @app.call env
       end
