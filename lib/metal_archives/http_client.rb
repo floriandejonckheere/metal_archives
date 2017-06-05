@@ -41,6 +41,7 @@ module MetalArchives
           f.response  :logger, MetalArchives.config.logger
 
           f.use       MetalArchives::Middleware::Headers
+          f.use       MetalArchives::Middleware::CacheCheck
           f.use       MetalArchives::Middleware::RewriteEndpoint
 
           MetalArchives.config.middleware.each { |m| f.use m } if MetalArchives.config.middleware
