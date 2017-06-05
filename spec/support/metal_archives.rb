@@ -19,8 +19,6 @@ MetalArchives.configure do |c|
   end
 
   ## Custom logger (optional)
-  # c.logger = Logger.new 'metal_archives.log'
-
-  ## Verbose output
-  # c.debug = false
+  c.logger = Logger.new STDOUT
+  c.logger.level = Logger::INFO
 end

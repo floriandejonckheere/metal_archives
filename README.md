@@ -40,9 +40,7 @@ MetalArchives.configure do |c|
   
   ## Custom logger (optional)
   c.logger = Logger.new File.new('metal_archives.log')
-  
-  ## Verbose output
-  # c.debug = false
+  c.logger.level = Logger::INFO
 end
 ```
 

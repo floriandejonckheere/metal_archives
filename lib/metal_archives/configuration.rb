@@ -27,8 +27,6 @@ module MetalArchives
       @config = MetalArchives::Configuration.new
       yield @config
 
-      @config.logger.level = @config.debug ? Logger::DEBUG : Logger::WARN
-
       raise MetalArchives::Errors::InvalidConfigurationError, 'app_name has not been configured' unless MetalArchives.config.app_name && !MetalArchives.config.app_name.empty?
       raise MetalArchives::Errors::InvalidConfigurationError, 'app_version has not been configured' unless MetalArchives.config.app_version && !MetalArchives.config.app_version.empty?
       raise MetalArchives::Errors::InvalidConfigurationError, 'app_contact has not been configured' unless MetalArchives.config.app_contact && !MetalArchives.config.app_contact.empty?
@@ -81,11 +79,6 @@ module MetalArchives
     attr_accessor :logger
 
     ##
-    # Verbose output
-    #
-    attr_accessor :debug
-
-    ##
     # Cache size (per object class)
     #
     attr_accessor :cache_size
@@ -98,7 +91,6 @@ module MetalArchives
       @throttle_rate = 1
       @throttle_wait = 3
       @logger = Logger.new STDOUT
-      @debug = false
       @cache_size = 100
     end
   end
