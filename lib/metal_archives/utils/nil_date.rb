@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'date'
+
 module MetalArchives
   ##
   # Date with nullable year, month and day
@@ -7,6 +9,8 @@ module MetalArchives
   # WARNING: No validation on actual date is performed
   #
   class NilDate
+    include Comparable
+
     attr_accessor :year, :month, :day
 
     def initialize(year = nil, month = nil, day = nil)
@@ -49,6 +53,38 @@ module MetalArchives
       return MetalArchives::NilDate.new year, month, day
     rescue
       raise MetalArchives::Errors::ArgumentError, 'invalid date'
+    end
+
+    def to_s
+      "#<NilDate: #{@year || 0}-#{@month || 0}-#{@day || 0} >"
+    end
+
+    ##
+    # Comparison operator
+    #
+    def <=>(other)
+      return nil if other.nil?
+
+      # Return nil if one of the two years is nil
+      return nil if (@year.nil? && !other.year.nil?) || !@year.nil? && other.year.nil?
+
+      # Return nil if one of the two months is nil
+      return nil if (@month.nil? && !other.month.nil?) || !@month.nil? && other.month.nil?
+
+      # Return nil if one of the two months is nil
+      return nil if (@day.nil? && !other.day.nil?) || !@day.nil? && other.day.nil?
+
+      comp_year = @year <=> other.year
+      if comp_year == 0
+        comp_month = @month <=> other.month
+        if comp_month == 0
+          return @day <=> other.day
+        else
+          return comp_month
+        end
+      else
+        comp_year
+      end
     end
   end
 end

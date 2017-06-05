@@ -95,4 +95,44 @@ RSpec.describe MetalArchives::NilDate do
       expect(-> { described_class.parse "This isn't a date" }).to raise_error MetalArchives::Errors::ArgumentError
     end
   end
+
+  it 'includes comparable' do
+    date1 = described_class.new 2015, 01, 01
+    date2 = described_class.new 2015, 01, 02
+    date3 = described_class.new 2015, 02, 01
+    date4 = described_class.new 2016, 01, 02
+    date5 = described_class.new 2015, 01, 01
+    date6 = described_class.new 2014, 12, 31
+    date7 = described_class.new 2015, 01, nil
+    date8 = described_class.new 2015, 01, nil
+    date9 = described_class.new 2015, 02, nil
+    date10 = described_class.new 2015, nil, nil
+    date11 = described_class.new 2016, nil, nil
+
+    expect(date1 <=> date2).to eq -1
+    expect(date2 <=> date1).to eq 1
+    expect(date1 <=> date3).to eq -1
+    expect(date3 <=> date1).to eq 1
+    expect(date1 <=> date4).to eq -1
+    expect(date4 <=> date1).to eq 1
+    expect(date1 <=> date5).to eq 0
+    expect(date5 <=> date1).to eq 0
+    expect(date6 <=> date1).to eq -1
+    expect(date1 <=> date6).to eq 1
+
+    expect(date1 <=> date7).to eq nil
+    expect(date7 <=> date1).to eq nil
+    expect(date1 <=> date9).to eq nil
+    expect(date9 <=> date1).to eq nil
+    expect(date7 <=> date8).to eq 0
+    expect(date8 <=> date7).to eq 0
+    expect(date7 <=> date9).to eq -1
+    expect(date9 <=> date7).to eq 1
+    expect(date7 <=> date10).to eq nil
+    expect(date10 <=> date7).to eq nil
+    expect(date10 <=> date11).to eq -1
+    expect(date11 <=> date10).to eq 1
+
+
+  end
 end
