@@ -78,6 +78,14 @@ RSpec.describe MetalArchives::NilDate do
       expect(date.day?).to be false
     end
 
+    it 'parses dates with leading zeroes' do
+      date = described_class.parse '2017-01-00'
+
+      expect(date.year).to eq 2017
+      expect(date.month).to eq 1
+      expect(date.day).to eq nil
+    end
+
     it 'parses full dates' do
       date = described_class.parse '2012-10-02'
 

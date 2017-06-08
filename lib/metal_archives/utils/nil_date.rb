@@ -46,9 +46,14 @@ module MetalArchives
     def self.parse(value)
       split = value.split('-')
 
-      year = Integer(split[0]) unless split.empty?
-      month = Integer(split[1]) if split.length > 1
-      day = Integer(split[2]) if split.length > 2
+      year = Integer(split[0], 10) if split.any? && split[0] && !split[0].empty?
+      year = nil if year == 0
+
+      month = Integer(split[1], 10) if split.length > 1 && split[1] && !split[1].empty?
+      month = nil if month == 0
+
+      day = Integer(split[2], 10) if split.length > 2 && split[2] && !split[2].empty?
+      day = nil if day == 0
 
       return MetalArchives::NilDate.new year, month, day
     rescue => e
