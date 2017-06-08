@@ -8,6 +8,15 @@ MetalArchives.configure do |c|
   c.app_version = MetalArchives::VERSION
   c.app_contact = 'user@example.com'
 
+  if ENV.has_key? 'TRAVIS'
+    ## Request throttling (optional, overrides defaults)
+    c.request_rate = 1
+    c.request_timeout = 3
+  end
+
+  ## Connect additional Faraday middleware
+  # c.middleware = [MyMiddleware, MyOtherMiddleware]
+
   ## Custom cache size per object class (optional, overrides defaults)
   # c.cache_size = 100
 
