@@ -7,18 +7,22 @@ module MetalArchives
   ##
   # Represents a record label
   #
-  class Label < BaseModel
+  class Label < MetalArchives::BaseModel
     ##
     # :attr_reader: id
     #
     # Returns +Integer+
     #
-    property :id
+    property :id, :type => Integer
 
     ##
     # :attr_reader: name
     #
     # Returns +String+
+    #
+    # [Raises]
+    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
+    # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
     property :name
 
@@ -27,12 +31,20 @@ module MetalArchives
     #
     # Returns multiline +String+
     #
+    # [Raises]
+    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
+    # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
+    #
     property :address
 
     ##
     # :attr_reader: country
     #
     # Returns +ISO316::Country+
+    #
+    # [Raises]
+    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
+    # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
     property :country, :type => ISO3166::Country
 
@@ -41,6 +53,10 @@ module MetalArchives
     #
     # Returns +String+
     #
+    # [Raises]
+    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
+    # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
+    #
     property :phone
 
     ##
@@ -48,14 +64,22 @@ module MetalArchives
     #
     # Returns +Array+ of +String+
     #
+    # [Raises]
+    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
+    # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
+    #
     property :specializations, :multiple => true
 
     ##
     # :attr_reader: date_founded
     #
-    # Returns +Date+
+    # Returns +NilDate+
     #
-    property :date_founded, :type => Date
+    # [Raises]
+    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
+    # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
+    #
+    property :date_founded, :type => NilDate
 
     ##
     # :attr_reader: sub_labels

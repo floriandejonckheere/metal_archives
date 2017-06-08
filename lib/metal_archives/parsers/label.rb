@@ -30,30 +30,34 @@ module MetalArchives
 
           doc.css('#label_info dl').each do |dl|
             dl.search('dt').each do |dt|
-              case dt.content
+              content = sanitize(dt.next_element.content)
+
+              next if content == 'N/A'
+
+              case sanitize(dt.content)
               when 'Address:'
-                break if dt.next_element.content == 'N/A'
-                props[:address] = dt.next_element.content
+                props[:address] = content
               when 'Country:'
-                break if dt.next_element.content == 'N/A'
-                props[:country] = ParserHelper.parse_country dt.next_element.css('a').first.content
+                props[:country] = ParserHelper.parse_country css('a').first.content
               when 'Phone number:'
-                break if dt.next_element.content == 'N/A'
-                props[:phone] = dt.next_element.content
+                props[:phone] = content
               when 'Status:'
-                props[:status] = dt.next_element.content.downcase.tr(' ', '_').to_sym
+                props[:status] = content.downcase.tr(' ', '_').to_sym
               when 'Specialised in:'
-                break if dt.next_element.content == 'N/A'
-                props[:specializations] = ParserHelper.parse_genre dt.next_element.content
+                props[:specializations] = ParserHelper.parse_genre content
               when 'Founding date :'
-                break if dt.next_element.content == 'N/A'
-                props[:date_founded] = Date.new dt.next_element.content.to_i
+                begin
+                  dof = Date.parse content
+                  props[:date_founded] = NilDate.new dof.year, dof.month, dof.day
+                rescue ArgumentError => e
+                  props[:date_founded] = NilDate.parse content
+                end
               when 'Sub-labels:'
                 # TODO
               when 'Online shopping:'
-                if dt.next_element.content == 'Yes'
+                if content == 'Yes'
                   props[:online_shopping] = true
-                elsif dt.next_element.content == 'No'
+                elsif content == 'No'
                   props[:online_shopping] = false
                 end
               else
