@@ -35,6 +35,11 @@ module MetalArchives
       # Use constructor to set attributes
       initialize assemble
 
+      # Set empty properties to nil
+      self.class.properties.each do |prop|
+        instance_variable_set("@#{prop}", nil) unless instance_variable_defined? "@#{prop}"
+      end
+
       @loaded = true
       self.class.cache[id] = self
     rescue => e

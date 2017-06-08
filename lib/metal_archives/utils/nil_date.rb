@@ -35,7 +35,7 @@ module MetalArchives
     # Return a +Date+ object
     #
     def date
-      raise MetalArchives::Errors::ArgumentError, 'invalid date' unless year?
+      raise MetalArchives::Errors::ArgumentError, "Invalid conversion to Date: #{self.to_s}" unless year?
 
       ::Date.new @year, month || 1, day || 1
     end
@@ -51,8 +51,8 @@ module MetalArchives
       day = Integer(split[2]) if split.length > 2
 
       return MetalArchives::NilDate.new year, month, day
-    rescue
-      raise MetalArchives::Errors::ArgumentError, 'invalid date'
+    rescue => e
+      raise MetalArchives::Errors::ArgumentError, "Invalid date: #{value}: #{e}"
     end
 
     def to_s
