@@ -120,7 +120,7 @@ module MetalArchives
           type = :official
 
           doc.css('#linksTablemain tr').each do |row|
-            if row['id'].match?(/^header_/)
+            if row['id'].match /^header_/
               type = row['id'].gsub(/^header_/, '').downcase.to_sym
             else
               a = row.css('td a').first
