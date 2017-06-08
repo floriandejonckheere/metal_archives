@@ -48,21 +48,6 @@ RSpec.describe MetalArchives::Band do
 
       expect(-> { MetalArchives::Parsers::Band.send(:map_status, :invalid_status) }).to raise_error MetalArchives::Errors::ParserError
     end
-
-    it 'rewrites URIs' do
-      old_endpoint = MetalArchives.config.endpoint
-      MetalArchives.config.endpoint = 'https://foo.bar/'
-
-      band = MetalArchives::Band.find! 122302
-
-      expect(band.logo.scheme).to eq 'https'
-      expect(band.logo.host).to eq 'foo.bar'
-
-      expect(band.logo.scheme).to eq 'https'
-      expect(band.photo.host).to eq 'foo.bar'
-
-      MetalArchives.config.endpoint = old_endpoint
-    end
   end
 
   describe 'methods' do
