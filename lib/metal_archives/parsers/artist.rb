@@ -58,9 +58,19 @@ module MetalArchives
                 props[:name] = content
               when 'Age:'
                 date = content.strip.gsub(/[0-9]* *\(born ([^\)]*)\)/, '\1')
-                props[:date_of_birth] = Date.parse date
+                begin
+                  props[:date_of_birth] = NilDate.parse date
+                rescue MetalArchives::Errors::ArgumentError => e
+                  dob = Date.parse date
+                  props[:date_of_birth] = NilDate.new dob.year, dob.month, dob.day
+                end
               when 'R.I.P.:'
-                props[:date_of_death] = Date.parse content
+                begin
+                  dod = Date.parse content
+                  props[:date_of_death] = NilDate.new dod.year, dod.month, dod.day
+                rescue ArgumentError => e
+                  props[:date_of_death] = NilDate.parse content
+                end
               when 'Died of:'
                 props[:cause_of_death] = content
               when 'Place of origin:'

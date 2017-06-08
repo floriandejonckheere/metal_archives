@@ -68,18 +68,18 @@ module MetalArchives
     # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :date_of_birth, :type => Date
+    property :date_of_birth, :type => NilDate
 
     ##
     # :attr_reader: date_of_death
     #
-    # Returns +Date+
+    # Returns rdoc-ref:NilDate
     #
     # [Raises]
     # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :date_of_death, :type => Date
+    property :date_of_death, :type => NilDate
 
     ##
     # :attr_reader: cause_of_death

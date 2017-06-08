@@ -11,7 +11,7 @@ RSpec.describe MetalArchives::Artist do
       expect(artist.aliases).to be_empty
       expect(artist.country).to eq ISO3166::Country['ES']
       expect(artist.location).to eq 'Oviedo, Asturias'
-      expect(artist.date_of_birth).to eq Date.new(1972, 9, 2)
+      expect(artist.date_of_birth).to eq MetalArchives::NilDate.new(1972, 9, 2)
       expect(artist.gender).to eq :male
       expect(artist.biography).to match 'Avalanch'
       expect(artist.trivia).to match 'Sanctuarium Estudios'
@@ -25,7 +25,7 @@ RSpec.describe MetalArchives::Artist do
       expect(artist).to be_instance_of MetalArchives::Artist
       expect(artist.name).to eq 'Ian Fraser Kilmister'
       expect(artist.aliases).to include 'Lemmy Kilmister'
-      expect(artist.date_of_death).to eq Date.new(2015, 12, 28)
+      expect(artist.date_of_death).to eq MetalArchives::NilDate.new(2015, 12, 28)
       expect(artist.links.length).to eq 5
       expect(artist.links.count { |l| l[:type] == :official }).to eq 1
       expect(artist.links.count { |l| l[:type] == :unofficial }).to eq 2
@@ -38,16 +38,12 @@ RSpec.describe MetalArchives::Artist do
       expect(MetalArchives::Parsers::Artist.map_params(:name => 'name')[:query]).to eq 'name'
     end
 
-    it 'rewrites URIs' do
-      old_endpoint = MetalArchives.config.endpoint
-      MetalArchives.config.endpoint = 'https://foo.bar/'
+    it 'uses NilDate' do
+      artist = MetalArchives::Artist.find 35049
 
-      artist = MetalArchives::Artist.find! 60908
-
-      expect(artist.photo.scheme).to eq 'https'
-      expect(artist.photo.host).to eq 'foo.bar'
-
-      MetalArchives.config.endpoint = old_endpoint
+      expect(artist.name).to eq 'Johan Johansson'
+      expect(artist.date_of_birth).to be_instance_of MetalArchives::NilDate
+      expect(artist.date_of_birth).to eq MetalArchives::NilDate.new(1975, nil, nil)
     end
   end
 
