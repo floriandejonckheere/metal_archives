@@ -56,7 +56,11 @@ module MetalArchives
     end
 
     def to_s
-      "#<NilDate: #{@year || 0}-#{@month || 0}-#{@day || 0} >"
+      year = (@year || 0).to_s.rjust 2, '0'
+      month = (@month || 0).to_s.rjust 2, '0'
+      day = (@day || 0).to_s.rjust 2, '0'
+
+      "#{year}-#{month}-#{day}"
     end
 
     ##

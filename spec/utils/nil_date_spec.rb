@@ -132,7 +132,17 @@ RSpec.describe MetalArchives::NilDate do
     expect(date10 <=> date7).to eq nil
     expect(date10 <=> date11).to eq -1
     expect(date11 <=> date10).to eq 1
+  end
 
+  it 'prints to string' do
+    date1 = described_class.new 2015, nil, nil
+    date2 = described_class.new 2015, 01, nil
+    date3 = described_class.new 2015, 01, 01
+    date4 = described_class.new 2015, nil, 01
 
+    expect(date1.to_s).to eq '2015-00-00'
+    expect(date2.to_s).to eq '2015-01-00'
+    expect(date3.to_s).to eq '2015-01-01'
+    expect(date4.to_s).to eq '2015-00-01'
   end
 end
