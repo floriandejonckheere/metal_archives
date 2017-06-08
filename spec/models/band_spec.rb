@@ -10,7 +10,7 @@ RSpec.describe MetalArchives::Band do
       expect(band.aliases).to be_empty
       expect(band.country).to eq ISO3166::Country['PL']
       expect(band.location).to eq 'Poznań'
-      expect(band.date_formed).to eq Date.new(2006)
+      expect(band.date_formed).to eq MetalArchives::NilDate.new(2006)
       expect(band.date_active).to eq [MetalArchives::Range.new(Date.new(2006), nil)]
       expect(band.status).to eq :active
       expect(band.genres).to eq ['Symphonic Power']

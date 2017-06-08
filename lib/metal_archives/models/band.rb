@@ -62,7 +62,7 @@ module MetalArchives
     ##
     # :attr_reader: date_formed
     #
-    # Returns +Date+
+    # Returns rdoc-ref:NilDate
     #
     # [Raises]
     # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
@@ -292,7 +292,7 @@ module MetalArchives
       #     - +:exact+: +Boolean+
       #     - +:genre+: +String+
       #     - +:country+: +ISO366::Country+
-      #     - +:year_formation+: rdoc-ref:Range of +Date+
+      #     - +:year_formation+: rdoc-ref:Range of rdoc-ref:NilDate
       #     - +:comment+: +String+
       #     - +:status+: see rdoc-ref:Band.status
       #     - +:lyrical_themes+: +String+

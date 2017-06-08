@@ -62,7 +62,7 @@ module MetalArchives
     ##
     # :attr_reader: date_of_birth
     #
-    # Returns +Date+
+    # Returns rdoc-ref:NilDate
     #
     # [Raises]
     # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id

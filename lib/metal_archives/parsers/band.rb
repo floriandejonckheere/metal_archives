@@ -84,7 +84,12 @@ module MetalArchives
               when 'Status:'
                 props[:status] = content.downcase.tr(' ', '_').to_sym
               when 'Formed in:'
-                props[:date_formed] = Date.new content.to_i
+                begin
+                  dof = Date.parse content
+                  props[:date_formed] = NilDate.new dof.year, dof.month, dof.day
+                rescue ArgumentError => e
+                  props[:date_formed] = NilDate.parse content
+                end
               when 'Genre:'
                 props[:genres] = parse_genre content
               when 'Lyrical themes:'
