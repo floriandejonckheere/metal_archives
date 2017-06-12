@@ -270,7 +270,7 @@ module MetalArchives
       #
       def find!(id)
         obj = find id
-        obj.load!
+        obj.load! if obj && !obj.loaded?
 
         obj
       end
@@ -342,7 +342,7 @@ module MetalArchives
       #
       def find_by!(query)
         obj = find_by query
-        obj && obj.load!
+        obj.load! if obj && !obj.loaded?
 
         obj
       end

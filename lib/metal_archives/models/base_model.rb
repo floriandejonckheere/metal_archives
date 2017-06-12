@@ -113,13 +113,13 @@ module MetalArchives
 
         # property
         define_method(name) do
-          load! unless instance_variable_defined?("@#{name}") || name ==(:id)
+          load! unless loaded? && instance_variable_defined?("@#{name}") || name ==(:id)
           instance_variable_get("@#{name}")
         end
 
         # property?
         define_method("#{name}?") do
-          load! unless instance_variable_defined?("@#{name}") || name ==(:id)
+          load! unless loaded? && instance_variable_defined?("@#{name}") || name ==(:id)
 
           property = instance_variable_get("@#{name}")
           property.respond_to?(:empty?) ? !property.empty? : !!property
@@ -168,13 +168,13 @@ module MetalArchives
 
         # property
         define_method(name) do
-          load! unless instance_variable_defined?("@#{name}")
+          load! unless loaded? && instance_variable_defined?("@#{name}")
           instance_variable_get("@#{name}")
         end
 
         # property?
         define_method("#{name}?") do
-          load! unless instance_variable_defined?("@#{name}")
+          load! unless loaded? && instance_variable_defined?("@#{name}")
 
           property = instance_variable_get("@#{name}")
           property.respond_to?(:empty?) ? !property.empty? : !!property

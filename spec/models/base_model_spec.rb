@@ -78,6 +78,7 @@ RSpec.describe MetalArchives::BaseModel do
   it 'returns properties' do
     model = ModelThree.new :id => 'foo', :property_one => 'bar'
 
+    model.instance_eval { |m| @loaded = true }
     expect(model.id).to eq 'foo'
     expect(model.property_one).to eq 'bar'
   end
@@ -85,6 +86,7 @@ RSpec.describe MetalArchives::BaseModel do
   it 'sets properties' do
     model = ModelThree.new :id => 'foo', :property_one => 'bar'
 
+    model.instance_eval { |m| @loaded = true }
     model.id = 'baz'
     model.property_one = 'bat'
 
