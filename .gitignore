@@ -1,6 +1,7 @@
 Gemfile.lock
 .idea
 
+*.tar.gz
 *.gem
 *.rbc
 /.config
