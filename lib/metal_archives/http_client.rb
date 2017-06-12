@@ -24,6 +24,7 @@ module MetalArchives
 
         response
       rescue Faraday::Error::ClientError => e
+        MetalArchives.config.logger.error e.response
         raise Errors::APIError, e
       end
 
@@ -43,6 +44,7 @@ module MetalArchives
           f.use       MetalArchives::Middleware::Headers
           f.use       MetalArchives::Middleware::CacheCheck
           f.use       MetalArchives::Middleware::RewriteEndpoint
+          f.use       MetalArchives::Middleware::Encoding
 
           MetalArchives.config.middleware.each { |m| f.use m } if MetalArchives.config.middleware
 

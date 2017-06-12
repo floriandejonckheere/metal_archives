@@ -5,6 +5,7 @@ require 'openssl'
 require 'metal_archives/middleware/headers'
 require 'metal_archives/middleware/cache_check'
 require 'metal_archives/middleware/rewrite_endpoint'
+require 'metal_archives/middleware/encoding'
 
 require 'metal_archives/version'
 require 'metal_archives/configuration'
