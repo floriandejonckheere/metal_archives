@@ -1,6 +1,9 @@
 Metrics/LineLength:
   Max: 120
 
+Metrics/ClassLength:
+  Enabled: false
+
 Metrics/MethodLength:
   Enabled: false
 
