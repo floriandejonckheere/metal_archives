@@ -291,7 +291,7 @@ module MetalArchives
       #     - +:name+: +String+
       #     - +:exact+: +Boolean+
       #     - +:genre+: +String+
-      #     - +:country+: +ISO366::Country+
+      #     - +:country+: +ISO3166::Country+
       #     - +:year_formation+: rdoc-ref:Range of rdoc-ref:NilDate
       #     - +:comment+: +String+
       #     - +:status+: see rdoc-ref:Band.status
@@ -331,7 +331,7 @@ module MetalArchives
       #     - +:name+: +String+
       #     - +:exact+: +Boolean+
       #     - +:genre+: +String+
-      #     - +:country+: +ISO366::Country+
+      #     - +:country+: +ISO3166::Country+
       #     - +:year_formation+: rdoc-ref:Range of +Date+
       #     - +:comment+: +String+
       #     - +:status+: see rdoc-ref:Band.status
@@ -363,7 +363,7 @@ module MetalArchives
       #     - +:name+: +String+
       #     - +:exact+: +Boolean+
       #     - +:genre+: +String+
-      #     - +:country+: +ISO366::Country+
+      #     - +:country+: +ISO3166::Country+
       #     - +:year_formation+: rdoc-ref:Range of +Date+
       #     - +:comment+: +String+
       #     - +:status+: see rdoc-ref:Band.status
