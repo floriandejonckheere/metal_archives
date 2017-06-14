@@ -87,7 +87,7 @@ In order not to stress the Metal Archives server, you can quickly set up a local
 
 ```
 # Set cache dir
-proxy_cache_path /var/cache/nginx/metal_archives levels=1:2 keys_zone=metal_archives:10m;
+proxy_cache_path /var/cache/nginx/metal_archives levels=1:2 keys_zone=metal_archives:10m max_size=1g inactive=30d;
 
 # Set cache key to include identifying components
 proxy_cache_key $scheme$proxy_host$request_uri;
