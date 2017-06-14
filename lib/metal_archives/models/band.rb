@@ -196,7 +196,7 @@ module MetalArchives
     # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    # [+similar+]
+    # [+links+]
     #     - +:url+: +String+
     #     - +:type+: +Symbol+, either +:official+ or +:merchandise+
     #     - +:title+: +String+
