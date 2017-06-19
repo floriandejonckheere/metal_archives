@@ -84,6 +84,21 @@ module MetalArchives
           end
           genres.uniq
         end
+
+        ##
+        # Parse year range
+        #
+        def parse_year_range(input)
+          r = input.split('-')
+          date_start = (r.first == '?' ? nil : NilDate.new(r.first.to_i))
+          if r.length > 1
+            date_end = (r.last == '?' || r.last == 'present' ? nil : NilDate.new(r.last.to_i))
+          else
+            date_end = date_start.dup
+          end
+
+          MetalArchives::Range.new date_start, date_end
+        end
       end
     end
   end

@@ -59,6 +59,9 @@ module MetalArchives
       # Compare begin if end is equal
       return comp_begin if comp_begin.zero?
 
+      return nil unless self.begin.instance_of?(Integer) && self.end.instance_of?(Integer)
+      return nil unless other.begin.instance_of?(Integer) && other.end.instance_of?(Integer)
+
       # Compare actual range
       (self.end - self.begin) <=> (other.end - other.begin)
     end

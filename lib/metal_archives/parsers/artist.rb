@@ -97,6 +97,39 @@ module MetalArchives
           alt = sanitize doc.css('.band_member_name').first.content
           props[:aliases] << alt unless props[:name] == alt
 
+          # Active bands
+          props[:bands] = []
+
+          proc = proc do |row|
+            link = row.css('h3 a')
+            if link.any?
+              # Band name contains a link
+              band = MetalArchives::Band.find Integer(link.attr('href').text.gsub /^.*\/([^\/#]*)#.*$/, '\1')
+            else
+              # Band name does not contain a link
+              band = sanitize row.css('h3').text
+            end
+
+            r = row.css('.member_in_band_role')
+
+            range = parse_year_range r.xpath('text()').map(&:content).join('').strip.gsub(/[\n\r\t]/, '').gsub(/.*\((.*)\)/, '\1')
+            role = sanitize r.css('strong').first.content
+
+            {
+              :band => band,
+              :date_active => range,
+              :role => role
+            }
+          end
+
+          doc.css('#artist_tab_active .member_in_band').each do |row|
+            props[:bands] << proc.call(row).merge(:active => true)
+          end
+
+          doc.css('#artist_tab_past .member_in_band').each do |row|
+            props[:bands] << proc.call(row).merge(:active => false)
+          end
+
           props
         rescue => e
           e.backtrace.each { |b| MetalArchives.config.logger.error b }

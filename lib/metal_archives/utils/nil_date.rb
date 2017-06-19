@@ -35,7 +35,7 @@ module MetalArchives
     # Return a +Date+ object
     #
     def date
-      raise MetalArchives::Errors::ArgumentError, "Invalid conversion to Date: #{self.to_s}" unless year?
+      raise MetalArchives::Errors::ArgumentError, "Invalid conversion to Date: #{self}" unless year?
 
       ::Date.new @year, month || 1, day || 1
     end
@@ -60,14 +60,6 @@ module MetalArchives
       raise MetalArchives::Errors::ArgumentError, "Invalid date: #{value}: #{e}"
     end
 
-    def to_s
-      year = (@year || 0).to_s.rjust 2, '0'
-      month = (@month || 0).to_s.rjust 2, '0'
-      day = (@day || 0).to_s.rjust 2, '0'
-
-      "#{year}-#{month}-#{day}"
-    end
-
     ##
     # Comparison operator
     #
@@ -75,13 +67,13 @@ module MetalArchives
       return nil if other.nil?
 
       # Return nil if one of the two years is nil
-      return nil if (@year.nil? && !other.year.nil?) || !@year.nil? && other.year.nil?
+      return nil if (@year.nil? && !other.year.nil?) || (!@year.nil? && other.year.nil?)
 
       # Return nil if one of the two months is nil
-      return nil if (@month.nil? && !other.month.nil?) || !@month.nil? && other.month.nil?
+      return nil if (@month.nil? && !other.month.nil?) || (!@month.nil? && other.month.nil?)
 
       # Return nil if one of the two months is nil
-      return nil if (@day.nil? && !other.day.nil?) || !@day.nil? && other.day.nil?
+      return nil if (@day.nil? && !other.day.nil?) || (!@day.nil? && other.day.nil?)
 
       comp_year = @year <=> other.year
       if comp_year == 0

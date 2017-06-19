@@ -17,6 +17,31 @@ RSpec.describe MetalArchives::Artist do
       expect(artist.trivia).to match 'Sanctuarium Estudios'
       expect(artist.photo).to be_instance_of URI::HTTPS
       expect(artist.photo.path).to eq '/images/6/0/9/0/60908_artist.jpg'
+
+      expect(artist.bands[0]).to eq :band => MetalArchives::Band.find(3540361100),
+                                    :date_active => MetalArchives::Range.new(MetalArchives::NilDate.new(2013), nil),
+                                    :role => 'Guitars',
+                                    :active => true
+
+      expect(artist.bands[1]).to eq :band => MetalArchives::Band.find(5795),
+                                    :date_active => MetalArchives::Range.new(MetalArchives::NilDate.new(1994), nil),
+                                    :role => 'Guitars (lead), Vocals (backing)',
+                                    :active => true
+
+      expect(artist.bands[2]).to eq :band => 'Geysser',
+                                    :date_active => MetalArchives::Range.new(MetalArchives::NilDate.new(2009), nil),
+                                    :role => 'Guitars',
+                                    :active => false
+
+      expect(artist.bands[3]).to eq :band => 'Speed Demons',
+                                    :date_active => MetalArchives::Range.new(MetalArchives::NilDate.new(1988), MetalArchives::NilDate.new(1989)),
+                                    :role => 'Guitars',
+                                    :active => false
+
+      expect(artist.bands[4]).to eq :band => 'Stunned Parrots',
+                                    :date_active => MetalArchives::Range.new(MetalArchives::NilDate.new(2006), nil),
+                                    :role => 'Guitars, Keyboards',
+                                    :active => false
     end
 
     it 'Lemmy Kilmister has properties' do
@@ -32,6 +57,47 @@ RSpec.describe MetalArchives::Artist do
       expect(artist.links.count { |l| l[:type] == :unlisted_bands }).to eq 2
       expect(artist.links.select { |l| l[:type] == :official }.first[:url]).to eq 'https://www.facebook.com/OfficialLemmy'
       expect(artist.links.select { |l| l[:type] == :official }.first[:title]).to eq 'Facebook'
+
+
+      expect(artist.bands[0]).to eq :band => 'Hawkwind',
+                                    :date_active => MetalArchives::Range.new(MetalArchives::NilDate.new(1971), MetalArchives::NilDate.new(1975)),
+                                    :role => 'Bass, Vocals (additional)',
+                                    :active => false
+
+      expect(artist.bands[1]).to eq :band => 'Headcat',
+                                    :date_active => MetalArchives::Range.new(MetalArchives::NilDate.new(2000), MetalArchives::NilDate.new(2015)),
+                                    :role => 'Bass, Guitars, Vocals',
+                                    :active => false
+
+      expect(artist.bands[2]).to eq :band => MetalArchives::Band.find(203),
+                                    :date_active => MetalArchives::Range.new(MetalArchives::NilDate.new(1975), MetalArchives::NilDate.new(2015)),
+                                    :role => 'Bass, Vocals',
+                                    :active => false
+
+      expect(artist.bands[3]).to eq :band => 'Opal Butterfly',
+                                    :date_active => MetalArchives::Range.new(MetalArchives::NilDate.new(1970), MetalArchives::NilDate.new(1970)),
+                                    :role => 'Guitars',
+                                    :active => false
+
+      expect(artist.bands[4]).to eq :band => 'Sam Gopal',
+                                    :date_active => MetalArchives::Range.new(MetalArchives::NilDate.new(1968), MetalArchives::NilDate.new(1968)),
+                                    :role => 'Guitars',
+                                    :active => false
+
+      expect(artist.bands[5]).to eq :band => 'The Motown Sect',
+                                    :date_active => MetalArchives::Range.new(MetalArchives::NilDate.new(1966), MetalArchives::NilDate.new(1966)),
+                                    :role => 'Guitars, Vocals',
+                                    :active => false
+
+      expect(artist.bands[6]).to eq :band => 'The Rainmakers',
+                                    :date_active => MetalArchives::Range.new(MetalArchives::NilDate.new(1963), MetalArchives::NilDate.new(1966)),
+                                    :role => 'Guitars',
+                                    :active => false
+
+      expect(artist.bands[7]).to eq :band => 'The Rockin\' Vickers',
+                                    :date_active => MetalArchives::Range.new(MetalArchives::NilDate.new(1965), MetalArchives::NilDate.new(1967)),
+                                    :role => 'Guitars',
+                                    :active => false
     end
 
     it 'maps query parameters' do

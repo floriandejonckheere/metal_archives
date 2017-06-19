@@ -152,10 +152,25 @@ module MetalArchives
     #
     property :links, :multiple => true
 
-    # TODO: active bands/albums
-    # TODO: past bands/albums
-    # TODO: guest bands/albums
-    # TODO: misc bands/albums
+    ##
+    # :attr_reader: bands
+    #
+    # Returns +Array+ of +Hash+ containing the following keys
+    #
+    # [Raises]
+    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
+    # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
+    #
+    # [+bands+]
+    #     - +:band+: rdoc-ref:Band
+    #     - +:active+: Boolean
+    #     - +:date_active+: +Array+ of rdoc-ref:Range
+    #     - +:role+: +String+
+    #
+    property :bands, :multiple => true
+
+    # TODO: guest/session bands
+    # TODO: misc bands
 
     protected
 
