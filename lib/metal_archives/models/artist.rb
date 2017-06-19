@@ -164,7 +164,7 @@ module MetalArchives
     # [+bands+]
     #     - +:band+: rdoc-ref:Band
     #     - +:active+: Boolean
-    #     - +:date_active+: +Array+ of rdoc-ref:Range
+    #     - +:date_active+: +Array+ of rdoc-ref:Range containing rdoc-ref:NilDate
     #     - +:role+: +String+
     #
     property :bands, :multiple => true

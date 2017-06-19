@@ -110,8 +110,8 @@ module MetalArchives
                   range.scan(/\(as ([^)]*)\)/).each { |name| props[:aliases] << name.first }
                   # Ranges
                   r = range.gsub(/ *\(as ([^)]*)\) */, '').strip.split('-')
-                  date_start = (r.first == '?' ? nil : Date.new(r.first.to_i))
-                  date_end = (r.last ==( '?') || r.last == 'present' ? nil : Date.new(r.first.to_i))
+                  date_start = (r.first == '?' ? nil : NilDate.new(r.first.to_i))
+                  date_end = (r.last == '?' || r.last == 'present' ? nil : NilDate.new(r.first.to_i))
                   props[:date_active] << MetalArchives::Range.new(date_start, date_end)
                 end
               else

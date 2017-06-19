@@ -68,12 +68,12 @@ module MetalArchives
     # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :date_formed, :type => Date
+    property :date_formed, :type => NilDate
 
     ##
     # :attr_reader: date_active
     #
-    # Returns +Array+ of rdoc-ref:Range
+    # Returns +Array+ of rdoc-ref:Range containing rdoc-ref:NilDate
     #
     # [Raises]
     # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
@@ -292,7 +292,7 @@ module MetalArchives
       #     - +:exact+: +Boolean+
       #     - +:genre+: +String+
       #     - +:country+: +ISO3166::Country+
-      #     - +:year_formation+: rdoc-ref:Range of rdoc-ref:NilDate
+      #     - +:year_formation+: rdoc-ref:Range containing rdoc-ref:NilDate
       #     - +:comment+: +String+
       #     - +:status+: see rdoc-ref:Band.status
       #     - +:lyrical_themes+: +String+
@@ -332,7 +332,7 @@ module MetalArchives
       #     - +:exact+: +Boolean+
       #     - +:genre+: +String+
       #     - +:country+: +ISO3166::Country+
-      #     - +:year_formation+: rdoc-ref:Range of +Date+
+      #     - +:year_formation+: rdoc-ref:Range containing rdoc-ref:NilDate
       #     - +:comment+: +String+
       #     - +:status+: see rdoc-ref:Band.status
       #     - +:lyrical_themes+: +String+
@@ -364,7 +364,7 @@ module MetalArchives
       #     - +:exact+: +Boolean+
       #     - +:genre+: +String+
       #     - +:country+: +ISO3166::Country+
-      #     - +:year_formation+: rdoc-ref:Range of +Date+
+      #     - +:year_formation+: rdoc-ref:Range containing rdoc-ref:NilDate
       #     - +:comment+: +String+
       #     - +:status+: see rdoc-ref:Band.status
       #     - +:lyrical_themes+: +String+
