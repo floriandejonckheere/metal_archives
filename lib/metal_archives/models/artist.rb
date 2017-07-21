@@ -167,7 +167,7 @@ module MetalArchives
     #     - +:date_active+: +Array+ of rdoc-ref:Range containing rdoc-ref:NilDate
     #     - +:role+: +String+
     #
-    property :bands, :multiple => true
+    property :bands, :type => Hash, :multiple => true
 
     # TODO: guest/session bands
     # TODO: misc bands

@@ -147,7 +147,18 @@ module MetalArchives
     #
     enum :status, :values => %i[active split_up on_hold unknown changed_name disputed]
 
-    # TODO: releases
+    ##
+    # :attr_reader: releases
+    #
+    # Returns +Array+ of rdoc-ref:Release
+    #
+    # [Raises]
+    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
+    # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
+    #
+    property :releases, :type => MetalArchives::Release, :multiple => true
+
+
     # TODO: members
 
     ##
@@ -236,6 +247,12 @@ module MetalArchives
       response = HTTPClient.get url
 
       properties[:links] = Parsers::Band.parse_related_links_html response.body
+
+      ## Releases
+      url = "#{MetalArchives.config.default_endpoint}band/discography/id/#{id}/tab/all"
+      response = HTTPClient.get url
+
+      properties[:releases] = Parsers::Band.parse_releases_html response.body
 
       properties
     end

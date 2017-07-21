@@ -27,14 +27,17 @@ RSpec.describe MetalArchives::Band do
       expect(band.links.count { |l| l[:type] == :merchandise }).to eq 3
       expect(band.links.select { |l| l[:type] == :merchandise }.first[:url]).to eq 'http://www.amazon.com/Fifth-Element-Pathfinder/dp/B007MNNCVW'
       expect(band.links.select { |l| l[:type] == :merchandise }.first[:title]).to eq 'Amazon'
+
+      expect(band.releases.map { |r| r.title }).to match ['Pathfinder / Demo 2007', 'The Beginning', 'Moonlight Shadow', 'Beyond the Space, Beyond the Time', 'Fifth Element']
     end
 
-    it 'Lemmy Kilmister has properties' do
+    it 'Rhapsody of Fire has properties' do
       band = MetalArchives::Band.find 32
 
       expect(band).to be_instance_of MetalArchives::Band
       expect(band.name).to eq 'Rhapsody of Fire'
       expect(band.aliases).to match %w(Thundercross Rhapsody)
+      expect(band.releases.map { |r| r.title }).to match ['Eternal Glory', 'Legendary Tales', 'Emerald Sword', 'Symphony of Enchanted Lands', 'Holy Thunderforce', 'Dawn of Victory', 'Rain of a Thousand Flames', 'Power of the Dragonflame', 'Tales from the Emerald Sword Saga', 'The Dark Secret', 'Symphony of Enchanted Lands II - The Dark Secret', 'The Magic of the Wizard\'s Dream', 'Live in Canada 2005 - The Dark Secret', 'A New Saga Begins', 'Triumph or Agony', 'Demons, Dragons and Warriors', 'Visions from the Enchanted Lands', 'The Frozen Tears of Angels', 'The Cold Embrace of Fear - A Dark Romantic Symphony', 'Aeons of Raging Darkness', 'From Chaos to Eternity', 'Live - From Chaos to Eternity', 'Dark Wings of Steel', 'Live in Atlanta', 'Shining Star', 'Into the Legend', 'When Demons Awake', 'Legendary Years']
     end
 
     it 'maps status' do

@@ -102,7 +102,7 @@ module MetalArchives
                 end
               when /(Current|Last) label:/
                 props[:independent] = (content == 'Unsigned/independent')
-                # TODO
+                # TODO: label
               when 'Years active:'
                 props[:date_active] = []
                 content.split(',').each do |range|
@@ -123,7 +123,7 @@ module MetalArchives
           props
         rescue => e
           e.backtrace.each { |b| MetalArchives.config.logger.error b }
-          raise Errors::ParserError, e
+          raise MetalArchives::Errors::ParserError, e
         end
 
         ##
@@ -141,14 +141,14 @@ module MetalArchives
           doc.css('#artist_list tbody tr').each do |row|
             similar << {
               :band => MetalArchives::Band.new(:id => row.css('td a').first['href'].split('/').last.to_i),
-                :score => row.css('td').last.content.strip
+              :score => row.css('td').last.content.strip
             }
           end
 
           similar
         rescue => e
           e.backtrace.each { |b| MetalArchives.config.logger.error b }
-          raise Errors::ParserError, e
+          raise MetalArchives::Errors::ParserError, e
         end
 
         ##
@@ -181,7 +181,29 @@ module MetalArchives
           links
         rescue => e
           e.backtrace.each { |b| MetalArchives.config.logger.error b }
-          raise Errors::ParserError, e
+          raise MetalArchives::Errors::ParserError, e
+        end
+
+        ##
+        # Parse releases HTML page
+        #
+        # Returns +Array+
+        # [Raises]
+        # - rdoc-ref:MetalArchives::Errors::ParserError when parsing failed. Please report this error.
+        #
+        def parse_releases_html(response)
+          releases = []
+
+          doc = Nokogiri::HTML response
+          doc.css('tbody tr td:first a').each do |a|
+            id = a['href'].split('/').last.to_i
+            releases << MetalArchives::Release.find(id)
+          end
+
+          releases
+        rescue => e
+          e.backtrace.each { |b| MetalArchives.config.logger.error b }
+          raise MetalArchives::Errors::ParserError, e
         end
 
         private
