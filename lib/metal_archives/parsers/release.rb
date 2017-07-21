@@ -46,7 +46,8 @@ module MetalArchives
           :dvd => 'DVD',
           :digital => 'Digital',
           :blu_ray => 'Blu-ray*',
-          :other => 'Other'
+          :other => 'Other',
+          :unknown => 'Unknown'
         }.freeze
 
         FORMAT_TO_SYM = {
@@ -55,7 +56,8 @@ module MetalArchives
           'VHS' => :vhs,
           'DVD' => :dvd,
           'Digital' => :digital,
-          'Other' => :other
+          'Other' => :other,
+          'Unknown' => :unknown
         }
 
         ##
@@ -220,6 +222,7 @@ module MetalArchives
         # Returns +Symbol+, see rdoc-ref:Release.format
         #
         def map_format(format)
+          return :cd if format =~ /CD/
           return :vinyl if format =~ /[Vv]inyl/
           return :blu_ray if format =~ /[Bb]lu.?[Rr]ay/
 

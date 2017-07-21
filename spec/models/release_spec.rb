@@ -32,6 +32,18 @@ RSpec.describe MetalArchives::Release do
       expect(release.notes).to be_nil
     end
 
+    it 'From Chaos To Eternity has multiple cds' do
+      release = MetalArchives::Release.find 596840
+
+      expect(release.format).to eq :cd
+    end
+
+    it 'Live in Canada 2005 - The Dark Secret has unknown format' do
+      release = MetalArchives::Release.find 100770
+
+      expect(release.format).to eq :unknown
+    end
+
     it 'uses NilDate' do
       release = MetalArchives::Release.find 123563
 

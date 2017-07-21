@@ -76,7 +76,7 @@ module MetalArchives
     ##
     # :attr_reader: format
     #
-    # Returns +:cd+, +:cassette+, +:vinyl+, +:vhs+, +:dvd+, +:digital+, +:blu_ray+, +:other+
+    # Returns +:cd+, +:cassette+, +:vinyl+, +:vhs+, +:dvd+, +:digital+, +:blu_ray+, +:other+, +:unknown+
     #
     # [Raises]
     # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
