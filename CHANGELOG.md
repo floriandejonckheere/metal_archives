@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.0
+
+- Support for Ruby < 2.5 dropped
+
 ## 2.2.0
 
 - Add `Release` model
