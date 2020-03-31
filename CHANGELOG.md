@@ -1,5 +1,23 @@
 # Changelog
 
+## 2.2.0
+
+- Add `Release` model
+
+## 2.1.1
+
+- Fix UTF-8 conversion errors
+- Don't `load!` unconditionally on `find!` and `find_by!`
+
+## 2.1.0
+
+- Added Ruby compatibility down to 2.1
+- Band and Label: return `NilDate`
+
+## 2.0.0
+
+- Artist returns `NilDate`s
+
 ## 1.0.0
 
 - Add `Artist#photo`
