@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :range, class: MetalArchives::Range do
-    send(:begin) { Faker::Date.birthday 0, 50 }
-    send(:end) { Faker::Date.birthday }
+    send(:begin) { FFaker::Date.birthday 0, 50 }
+    send(:end) { FFaker::Date.birthday }
   end
 end

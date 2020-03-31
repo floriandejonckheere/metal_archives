@@ -2,23 +2,23 @@
 
 FactoryGirl.define do
   factory :band, class: MetalArchives::Band do
-    id { Faker::Number.number [1, 2, 3, 4].sample }
-    name { Faker::Name.name }
+    id { FFaker::Number.number [1, 2, 3, 4].sample }
+    name { FFaker::Name.name }
     status { %i(active split_up on_hold unknown changed_name disputed).sample }
 
-    comment { Faker::Lorem.words(200).join " " }
+    comment { FFaker::Lorem.words(200).join " " }
 
-    country { ISO3166::Country[Faker::Address.country_code] }
-    location { Faker::Address.city }
+    country { ISO3166::Country[FFaker::Address.country_code] }
+    location { FFaker::Address.city }
 
-    date_formed { Faker::Date.birthday 0, 50 }
+    date_formed { FFaker::Date.birthday 0, 50 }
     date_active { build_list :range }
 
     label { [build(:label), nil].sample }
     independent { label.nil? }
 
-    logo { Faker::Internet.url }
-    photo { Faker::Internet.url }
+    logo { FFaker::Internet.url }
+    photo { FFaker::Internet.url }
 
     genres do
       3.times.collect do
@@ -36,7 +36,7 @@ FactoryGirl.define do
       4.times.collect do
         {
           band: build(:band),
-          score: Faker::Number.between(1, 100),
+          score: FFaker::Number.between(1, 100),
         }
       end
     end
@@ -44,16 +44,16 @@ FactoryGirl.define do
     links do
       3.times.collect do
         {
-          url: Faker::Internet.url,
+          url: FFaker::Internet.url,
           type: %i(official unofficial unlisted_bands).sample,
-          title: Faker::Lorem.words(4).join(" "),
+          title: FFaker::Lorem.words(4).join(" "),
         }
       end
     end
 
     trait :with_aliases do
       aliases do
-        3.times.collect { Faker::Name.name }
+        3.times.collect { FFaker::Name.name }
       end
     end
   end
