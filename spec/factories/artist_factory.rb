@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 FactoryGirl.define do
-  factory :artist, class: MetalArchives::Artist do
+  factory :artist, class: "MetalArchives::Artist" do
     id { FFaker::Number.number [1, 2, 3, 4].sample }
     name { FFaker::Name.name }
     gender { %i(male female).sample }

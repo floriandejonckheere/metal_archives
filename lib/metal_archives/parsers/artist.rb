@@ -4,8 +4,6 @@ require "json"
 require "date"
 require "countries"
 
-require "metal_archives/middleware/rewrite_endpoint"
-
 module MetalArchives
   module Parsers
     ##

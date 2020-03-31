@@ -2,6 +2,7 @@
 
 require "date"
 require "countries"
+require "nokogiri"
 
 module MetalArchives
   ##

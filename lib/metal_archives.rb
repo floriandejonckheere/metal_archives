@@ -2,36 +2,56 @@
 
 require "openssl"
 
-require "metal_archives/middleware/headers"
-require "metal_archives/middleware/cache_check"
-require "metal_archives/middleware/rewrite_endpoint"
-require "metal_archives/middleware/encoding"
-
-require "metal_archives/version"
-require "metal_archives/configuration"
-require "metal_archives/error"
-
-require "metal_archives/utils/range"
-require "metal_archives/utils/collection"
-require "metal_archives/utils/lru_cache"
-require "metal_archives/utils/nil_date"
-
-require "metal_archives/models/base_model"
-require "metal_archives/models/release"
-require "metal_archives/models/label"
-require "metal_archives/models/artist"
-require "metal_archives/models/band"
-
-require "metal_archives/parsers/parser"
-require "metal_archives/parsers/release"
-require "metal_archives/parsers/label"
-require "metal_archives/parsers/artist"
-require "metal_archives/parsers/band"
-
-require "metal_archives/http_client"
+require "zeitwerk"
+loader = Zeitwerk::Loader.for_gem
+load.enable_reloading if ENV["METAL_ARCHIVES_ENV"] == "development"
+loader.inflector.inflect(
+  "http_client" => "HTTPClient",
+  "lru_cache" => "LRUCache"
+)
+loader.collapse("lib/metal_archives/models")
+loader.setup
 
 ##
 # Metal Archives Ruby API
 #
 module MetalArchives
+  class << self
+    ##
+    # API configuration
+    #
+    # Instance of rdoc-ref:MetalArchives::Configuration
+    #
+    def config
+      raise MetalArchives::Errors::InvalidConfigurationError, "Gem has not been configured" unless @config
+
+      @config
+    end
+
+    ##
+    # Configure API options.
+    #
+    # A block must be specified, to which a
+    # rdoc-ref:MetalArchives::Configuration parameter will be passed.
+    #
+    # [Raises]
+    # - rdoc-ref:InvalidConfigurationException
+    #
+    def configure
+      raise MetalArchives::Errors::InvalidConfigurationError, "No configuration block given" unless block_given?
+
+      @config = MetalArchives::Configuration.new
+      yield @config
+
+      unless MetalArchives.config.app_name && !MetalArchives.config.app_name.empty?
+        raise MetalArchives::Errors::InvalidConfigurationError, "app_name has not been configured"
+      end
+      unless MetalArchives.config.app_version && !MetalArchives.config.app_version.empty?
+        raise MetalArchives::Errors::InvalidConfigurationError, "app_version has not been configured"
+      end
+      unless MetalArchives.config.app_contact && !MetalArchives.config.app_contact.empty?
+        raise MetalArchives::Errors::InvalidConfigurationError, "app_contact has not been configured"
+      end
+    end
+  end
 end

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 FactoryGirl.define do
-  factory :band, class: MetalArchives::Band do
+  factory :band, class: "MetalArchives::Band" do
     id { FFaker::Number.number [1, 2, 3, 4].sample }
     name { FFaker::Name.name }
     status { %i(active split_up on_hold unknown changed_name disputed).sample }
