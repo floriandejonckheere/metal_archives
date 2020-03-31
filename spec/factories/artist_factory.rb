@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
 FactoryGirl.define do
-  factory :artist, :class => MetalArchives::Artist do
+  factory :artist, class: MetalArchives::Artist do
     id { Faker::Number.number [1, 2, 3, 4].sample }
     name { Faker::Name.name }
-    gender { %i[male female].sample }
-    biography { Faker::Lorem.words(200).join ' ' }
-    trivia { Faker::Lorem.words(200).join ' ' }
+    gender { %i(male female).sample }
+    biography { Faker::Lorem.words(200).join " " }
+    trivia { Faker::Lorem.words(200).join " " }
 
     country { ISO3166::Country[Faker::Address.country_code] }
     location { Faker::Address.city }
@@ -16,9 +16,9 @@ FactoryGirl.define do
     links do
       3.times.collect do
         {
-          :url => Faker::Internet.url,
-          :type => %i[official unofficial unlisted_bands].sample,
-          :title => Faker::Lorem.words(4).join(' ')
+          url: Faker::Internet.url,
+          type: %i(official unofficial unlisted_bands).sample,
+          title: Faker::Lorem.words(4).join(" "),
         }
       end
     end

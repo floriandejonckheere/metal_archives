@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require 'date'
-require 'countries'
+require "date"
+require "countries"
 
 module MetalArchives
   ##
@@ -13,7 +13,7 @@ module MetalArchives
     #
     # Returns +Integer+
     #
-    property :id, :type => Integer
+    property :id, type: Integer
 
     ##
     # :attr_reader: name
@@ -46,7 +46,7 @@ module MetalArchives
     # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :country, :type => ISO3166::Country
+    property :country, type: ISO3166::Country
 
     ##
     # :attr_reader: phone
@@ -68,7 +68,7 @@ module MetalArchives
     # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :specializations, :multiple => true
+    property :specializations, multiple: true
 
     ##
     # :attr_reader: date_founded
@@ -79,14 +79,14 @@ module MetalArchives
     # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :date_founded, :type => NilDate
+    property :date_founded, type: NilDate
 
     ##
     # :attr_reader: sub_labels
     #
     # Returns +Array+ of rdoc-ref:Label
     #
-    property :sub_labels, :type => MetalArchives::Label, :multiple => true
+    property :sub_labels, type: MetalArchives::Label, multiple: true
 
     ##
     # :attr_reader: online_shopping
@@ -100,14 +100,14 @@ module MetalArchives
     #
     # Returns +Hash+ with the following keys: +title+, +content+
     #
-    property :contact, :type => Hash, :multiple => true
+    property :contact, type: Hash, multiple: true
 
     ##
     # :attr_reader: status
     #
     # Returns +:active+, +:closed+ or +:unknown+
     #
-    enum :status, :values => %i[active closed unknown]
+    enum :status, values: %i(active closed unknown)
 
     class << self
       ##
@@ -128,8 +128,8 @@ module MetalArchives
       def find_by_name(name, id)
         client.find_resource(
           :band,
-          :name => name,
-          :id => id
+          name: name,
+          id: id
         )
       end
     end

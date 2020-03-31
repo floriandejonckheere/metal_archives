@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require 'faraday'
-require 'faraday_throttler'
+require "faraday"
+require "faraday_throttler"
 
 module MetalArchives
   ##
@@ -35,7 +35,7 @@ module MetalArchives
       #
       #
       def client
-        raise Errors::InvalidConfigurationError, 'Not configured yet' unless MetalArchives.config
+        raise Errors::InvalidConfigurationError, "Not configured yet" unless MetalArchives.config
 
         @faraday ||= Faraday.new do |f|
           f.request   :url_encoded # form-encode POST params
@@ -46,12 +46,12 @@ module MetalArchives
           f.use       MetalArchives::Middleware::RewriteEndpoint
           f.use       MetalArchives::Middleware::Encoding
 
-          MetalArchives.config.middleware.each { |m| f.use m } if MetalArchives.config.middleware
+          MetalArchives.config.middleware&.each { |m| f.use m }
 
           f.use       :throttler,
-                      :rate => MetalArchives.config.request_rate,
-                      :wait => MetalArchives.config.request_timeout,
-                      :logger => MetalArchives.config.logger
+                      rate: MetalArchives.config.request_rate,
+                      wait: MetalArchives.config.request_timeout,
+                      logger: MetalArchives.config.logger
 
           f.adapter   Faraday.default_adapter
         end

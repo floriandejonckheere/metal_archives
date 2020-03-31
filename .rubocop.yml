@@ -1,17 +1,64 @@
-Metrics/LineLength:
+AllCops:
+  TargetRubyVersion: 2.7
+
+Layout/LineLength:
   Max: 120
 
-Metrics/ClassLength:
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Layout/ParameterAlignment:
+  EnforcedStyle: with_fixed_indentation
+
+Lint/AssignmentInCondition:
+  AllowSafeAssignment: true
+
+Lint/SafeNavigationWithEmpty:
   Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*.rb
 
 Metrics/MethodLength:
   Enabled: false
 
-Metrics/BlockLength:
+Style/Alias:
+  EnforcedStyle: prefer_alias_method
+
+Style/FrozenStringLiteralComment:
+  Enabled: true
+
+Style/HashEachMethods:
+  Enabled: true
+
+Style/HashTransformKeys:
+  Enabled: true
+
+Style/HashTransformValues:
+  Enabled: true
+
+Style/PercentLiteralDelimiters:
+  PreferredDelimiters:
+    default: "()"
+    "%i": "()"
+    "%I": "()"
+    "%r": "()"
+    "%w": "()"
+    "%W": "()"
+
+Style/RegexpLiteral:
+  EnforcedStyle: slashes
+  AllowInnerSlashes: false
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/SymbolArray:
   Enabled: false
 
-Style/HashSyntax:
-  EnforcedStyle: hash_rockets
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: comma
 
-Style/NestedParenthesizedCalls:
-  Enabled: false
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: comma

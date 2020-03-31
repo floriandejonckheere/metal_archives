@@ -16,15 +16,15 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
-require 'factory_girl'
-require 'faker'
-require 'coveralls'
+require "factory_girl"
+require "faker"
+require "coveralls"
 Coveralls.wear!
 
-require 'metal_archives'
+require "metal_archives"
 
-Dir[File.join(__dir__, 'support/**/*.rb')].each { |f| require f }
-Dir[File.join(__dir__, 'factories/**/*.rb')].each { |f| require f }
+Dir[File.join(__dir__, "support/**/*.rb")].sort.each { |f| require f }
+Dir[File.join(__dir__, "factories/**/*.rb")].sort.each { |f| require f }
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate

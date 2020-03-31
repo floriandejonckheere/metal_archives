@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'faraday'
+require "faraday"
 
 module MetalArchives
   module Middleware
@@ -10,9 +10,9 @@ module MetalArchives
     class Headers < Faraday::Middleware # :nodoc:
       def call(env)
         headers = {
-          'User-Agent' => user_agent_string,
-          'Via' => via_string,
-          'Accept' => accept_string
+          "User-Agent" => user_agent_string,
+          "Via" => via_string,
+          "Accept" => accept_string,
         }
 
         env[:request_headers].merge! headers
@@ -27,7 +27,7 @@ module MetalArchives
       end
 
       def accept_string
-        'application/json'
+        "application/json"
       end
 
       def via_string

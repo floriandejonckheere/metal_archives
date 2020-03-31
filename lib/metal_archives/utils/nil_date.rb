@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'date'
+require "date"
 
 module MetalArchives
   ##
@@ -44,7 +44,7 @@ module MetalArchives
     # Parse YYYY[-MM[-DD]]
     #
     def self.parse(value)
-      split = value.split('-')
+      split = value.split("-")
 
       year = Integer(split[0], 10) if split.any? && split[0] && !split[0].empty?
       year = nil if year == 0
@@ -55,8 +55,8 @@ module MetalArchives
       day = Integer(split[2], 10) if split.length > 2 && split[2] && !split[2].empty?
       day = nil if day == 0
 
-      return MetalArchives::NilDate.new year, month, day
-    rescue => e
+      MetalArchives::NilDate.new year, month, day
+    rescue StandardError => e
       raise MetalArchives::Errors::ArgumentError, "Invalid date: #{value}: #{e}"
     end
 
@@ -79,9 +79,9 @@ module MetalArchives
       if comp_year == 0
         comp_month = @month <=> other.month
         if comp_month == 0
-          return @day <=> other.day
+          @day <=> other.day
         else
-          return comp_month
+          comp_month
         end
       else
         comp_year

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require 'date'
-require 'countries'
+require "date"
+require "countries"
 
 module MetalArchives
   ##
@@ -28,7 +28,7 @@ module MetalArchives
         # Return +String+
         #
         def sanitize(input)
-          input.gsub(/^"/, '').gsub(/"$/, '').strip
+          input.gsub(/^"/, "").gsub(/"$/, "").strip
         end
 
         ##
@@ -48,7 +48,7 @@ module MetalArchives
         def parse_genre(input)
           genres = []
           # Split fields
-          input.split(',').each do |genre|
+          input.split(",").each do |genre|
             ##
             # Start with a single empty genre string. Split the genre by spaces
             # and process each component. If a component does not have a slash,
@@ -63,14 +63,14 @@ module MetalArchives
             #                                       'Traditional Heavy', 'Traditional Power',
             #                                       'Classical Heavy', 'Classical Power']
             #
-            temp = ['']
-            genre.downcase.split.reject { |g| ['(early)', '(later)', 'metal'].include? g }.each do |g|
-              if g.include? '/'
+            temp = [""]
+            genre.downcase.split.reject { |g| ["(early)", "(later)", "metal"].include? g }.each do |g|
+              if g.include? "/"
                 # Duplicate all WIP genres
                 temp2 = temp.dup
 
                 # Assign first and last components to temp and temp2 respectively
-                split = g.split '/'
+                split = g.split "/"
                 temp.map! { |t| t.empty? ? split.first.capitalize : "#{t.capitalize} #{split.first.capitalize}" }
                 temp2.map! { |t| t.empty? ? split.last.capitalize : "#{t.capitalize} #{split.last.capitalize}" }
 
@@ -89,13 +89,13 @@ module MetalArchives
         # Parse year range
         #
         def parse_year_range(input)
-          r = input.split('-')
-          date_start = (r.first == '?' ? nil : NilDate.new(r.first.to_i))
-          if r.length > 1
-            date_end = (r.last == '?' || r.last == 'present' ? nil : NilDate.new(r.last.to_i))
-          else
-            date_end = date_start.dup
-          end
+          r = input.split("-")
+          date_start = (r.first == "?" ? nil : NilDate.new(r.first.to_i))
+          date_end = if r.length > 1
+                       (r.last == "?" || r.last == "present" ? nil : NilDate.new(r.last.to_i))
+                     else
+                       date_start.dup
+                     end
 
           MetalArchives::Range.new date_start, date_end
         end

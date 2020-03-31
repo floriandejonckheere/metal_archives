@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 RSpec.describe MetalArchives::Configuration do
-  describe 'properties' do
-    it 'has the correct properties' do
+  describe "properties" do
+    it "has the correct properties" do
       expect(subject).to respond_to :app_name
       expect(subject).to respond_to :app_name=
       expect(subject).to respond_to :app_version
@@ -24,56 +24,56 @@ RSpec.describe MetalArchives::Configuration do
       expect(subject).to respond_to :cache_size=
     end
 
-    it 'has default properties' do
-      expect(subject.default_endpoint).to eq 'https://www.metal-archives.com/'
+    it "has default properties" do
+      expect(subject.default_endpoint).to eq "https://www.metal-archives.com/"
       expect(subject.logger).not_to be_nil
       expect(subject.cache_size).to be_an Integer
     end
 
-    it 'overrides defaults' do
-      subject.endpoint = 'http://my-proxy.com/'
+    it "overrides defaults" do
+      subject.endpoint = "http://my-proxy.com/"
       logger = Logger.new STDERR
       subject.logger = logger
       subject.cache_size = 0
 
-      expect(subject.endpoint).to eq 'http://my-proxy.com/'
+      expect(subject.endpoint).to eq "http://my-proxy.com/"
       expect(subject.logger).to be logger
       expect(subject.cache_size).to eq 0
     end
   end
 
-  describe 'configuration' do
+  describe "configuration" do
     after(:each) do
       # Reset configuration
-      load 'support/metal_archives.rb'
+      load "support/metal_archives.rb"
     end
 
-    it 'is invalid without app_name' do
-      proc = -> do
+    it "is invalid without app_name" do
+      proc = lambda do
         MetalArchives.configure do |c|
           c.app_version = MetalArchives::VERSION
-          c.app_contact = 'user@example.com'
+          c.app_contact = "user@example.com"
         end
       end
 
       expect(proc).to raise_error MetalArchives::Errors::InvalidConfigurationError
     end
 
-    it 'is invalid without app_version' do
-      proc = -> do
+    it "is invalid without app_version" do
+      proc = lambda do
         MetalArchives.configure do |c|
-          c.app_name = 'MetalArchivesGemTestSuite'
-          c.app_contact = 'user@example.com'
+          c.app_name = "MetalArchivesGemTestSuite"
+          c.app_contact = "user@example.com"
         end
       end
 
       expect(proc).to raise_error MetalArchives::Errors::InvalidConfigurationError
     end
 
-    it 'is invalid without app_contact' do
-      proc = -> do
+    it "is invalid without app_contact" do
+      proc = lambda do
         MetalArchives.configure do |c|
-          c.app_name = 'MetalArchivesGemTestSuite'
+          c.app_name = "MetalArchivesGemTestSuite"
           c.app_version = MetalArchives::VERSION
         end
       end
@@ -81,12 +81,12 @@ RSpec.describe MetalArchives::Configuration do
       expect(proc).to raise_error MetalArchives::Errors::InvalidConfigurationError
     end
 
-    it 'is valid' do
-      proc = -> do
+    it "is valid" do
+      proc = lambda do
         MetalArchives.configure do |c|
-          c.app_name = 'MetalArchivesGemTestSuite'
+          c.app_name = "MetalArchivesGemTestSuite"
           c.app_version = MetalArchives::VERSION
-          c.app_contact = 'user@example.com'
+          c.app_contact = "user@example.com"
         end
       end
 

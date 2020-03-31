@@ -1,12 +1,13 @@
 # frozen_string_literal: true
 
 RSpec.describe MetalArchives::Collection do
-  it 'iterates' do
+  it "iterates" do
     l = lambda do
       @i ||= 0
 
       next [] if @i >= 100
-      items = (@i .. (@i + 9)).to_a
+
+      items = (@i..(@i + 9)).to_a
       @i += 10
 
       items
@@ -21,12 +22,13 @@ RSpec.describe MetalArchives::Collection do
     end
   end
 
-  it 'returns' do
+  it "returns" do
     l = lambda do
       @i ||= 0
 
       raise StandardError if @i >= 100
-      items = (@i .. (@i + 9)).to_a
+
+      items = (@i..(@i + 9)).to_a
       @i += 10
 
       items
@@ -37,6 +39,7 @@ RSpec.describe MetalArchives::Collection do
     i = 0
     c.each do |item|
       break if i == 99
+
       expect(item).to eq i
       i += 1
     end
@@ -44,13 +47,14 @@ RSpec.describe MetalArchives::Collection do
     expect(i).to eq 99
   end
 
-  describe 'empty?' do
-    it 'is not empty' do
+  describe "empty?" do
+    it "is not empty" do
       l = lambda do
         @i ||= 0
 
         next [] if @i >= 100
-        items = (@i .. (@i + 9)).to_a
+
+        items = (@i..(@i + 9)).to_a
         @i += 10
 
         items
@@ -63,7 +67,7 @@ RSpec.describe MetalArchives::Collection do
       expect(c).not_to be_empty
     end
 
-    it 'is empty' do
+    it "is empty" do
       c = MetalArchives::Collection.new -> { [] }
 
       expect(c).to be_empty

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'faraday'
+require "faraday"
 
 module MetalArchives
   module Middleware
@@ -9,7 +9,7 @@ module MetalArchives
     #
     class Encoding < Faraday::Response::Middleware # :nodoc:
       def on_complete(env)
-        env.response.body.force_encoding('utf-8')
+        env.response.body.force_encoding("utf-8")
       end
     end
   end

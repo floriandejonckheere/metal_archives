@@ -34,14 +34,14 @@ module MetalArchives
     # Whether start of range is present
     #
     def begin?
-      !!@begin
+      @begin.present?
     end
 
     ##
     # Whether end of range is present
     #
     def end?
-      !!@end
+      @end.present?
     end
 
     ##

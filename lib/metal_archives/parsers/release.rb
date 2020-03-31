@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require 'json'
-require 'date'
+require "json"
+require "date"
 
 module MetalArchives
   module Parsers
@@ -11,54 +11,54 @@ module MetalArchives
     class Release < Parser # :nodoc:
       class << self
         TYPE_TO_QUERY = {
-          :full_length => 1,
-          :live => 2,
-          :demo => 3,
-          :single => 4,
-          :ep => 5,
-          :video => 6,
-          :boxed_set => 7,
-          :split => 8,
-          :compilation => 10,
-          :split_video => 12,
-          :collaboration => 13
+          full_length: 1,
+          live: 2,
+          demo: 3,
+          single: 4,
+          ep: 5,
+          video: 6,
+          boxed_set: 7,
+          split: 8,
+          compilation: 10,
+          split_video: 12,
+          collaboration: 13,
         }.freeze
 
         TYPE_TO_SYM = {
-          'Full-length' => :full_length,
-          'Live album' => :live,
-          'Demo' => :demo,
-          'Single' => :single,
-          'EP' => :ep,
-          'Video' => :video,
-          'Boxed set' => :boxed_set,
-          'Split' => :split,
-          'Compilation' => :compilation,
-          'Split video' => :split_video,
-          'Collaboration' => :collaboration
+          "Full-length" => :full_length,
+          "Live album" => :live,
+          "Demo" => :demo,
+          "Single" => :single,
+          "EP" => :ep,
+          "Video" => :video,
+          "Boxed set" => :boxed_set,
+          "Split" => :split,
+          "Compilation" => :compilation,
+          "Split video" => :split_video,
+          "Collaboration" => :collaboration,
         }.freeze
 
         FORMAT_TO_QUERY = {
-          :cd => 'CD',
-          :cassette => 'Cassette',
-          :vinyl => 'Vinyl*',
-          :vhs => 'VHS',
-          :dvd => 'DVD',
-          :digital => 'Digital',
-          :blu_ray => 'Blu-ray*',
-          :other => 'Other',
-          :unknown => 'Unknown'
+          cd: "CD",
+          cassette: "Cassette",
+          vinyl: "Vinyl*",
+          vhs: "VHS",
+          dvd: "DVD",
+          digital: "Digital",
+          blu_ray: "Blu-ray*",
+          other: "Other",
+          unknown: "Unknown",
         }.freeze
 
         FORMAT_TO_SYM = {
-          'CD' => :cd,
-          'Cassette' => :cassette,
-          'VHS' => :vhs,
-          'DVD' => :dvd,
-          'Digital' => :digital,
-          'Other' => :other,
-          'Unknown' => :unknown
-        }
+          "CD" => :cd,
+          "Cassette" => :cassette,
+          "VHS" => :vhs,
+          "DVD" => :dvd,
+          "Digital" => :digital,
+          "Other" => :other,
+          "Unknown" => :unknown,
+        }.freeze
 
         ##
         # Map attributes to MA attributes
@@ -70,23 +70,23 @@ module MetalArchives
         #
         def map_params(query)
           params = {
-            :bandName => query[:band_name] || '',
-            :releaseTitle => query[:title] || '',
-            :releaseYearFrom => query[:from_year] || '',
-            :releaseMonthFrom => query[:from_month] || '',
-            :releaseYearTo => query[:to_year] || '',
-            :releaseMonthTo => query[:to_month] || '',
-            :country => map_countries(query[:country]) || '',
-            :location => query[:location] || '',
-            :releaseLabelName => query[:label_name] || '',
-            :releaseCatalogNumber => query[:catalog_id] || '',
-            :releaseIdentifiers => query[:identifier] || '',
-            :releaseRecordingInfo => query[:recording_info] || '',
-            :releaseDescription => query[:version_description] || '',
-            :releaseNotes => query[:notes] || '',
-            :genre => query[:genre] || '',
-            :releaseType => map_types(query[:types]),
-            :releaseFormat => map_formats(query[:formats])
+            bandName: query[:band_name] || "",
+            releaseTitle: query[:title] || "",
+            releaseYearFrom: query[:from_year] || "",
+            releaseMonthFrom: query[:from_month] || "",
+            releaseYearTo: query[:to_year] || "",
+            releaseMonthTo: query[:to_month] || "",
+            country: map_countries(query[:country]) || "",
+            location: query[:location] || "",
+            releaseLabelName: query[:label_name] || "",
+            releaseCatalogNumber: query[:catalog_id] || "",
+            releaseIdentifiers: query[:identifier] || "",
+            releaseRecordingInfo: query[:recording_info] || "",
+            releaseDescription: query[:version_description] || "",
+            releaseNotes: query[:notes] || "",
+            genre: query[:genre] || "",
+            releaseType: map_types(query[:types]),
+            releaseFormat: map_formats(query[:formats]),
           }
 
           params
@@ -104,38 +104,38 @@ module MetalArchives
           props = {}
           doc = Nokogiri::HTML response
 
-          props[:title] = sanitize doc.css('#album_info .album_name a').first.content
+          props[:title] = sanitize doc.css("#album_info .album_name a").first.content
 
-          doc.css('#album_info dl').each do |dl|
-            dl.search('dt').each do |dt|
+          doc.css("#album_info dl").each do |dl|
+            dl.search("dt").each do |dt|
               content = sanitize dt.next_element.content
 
-              next if content == 'N/A'
+              next if content == "N/A"
 
               case sanitize(dt.content)
-              when 'Type:'
+              when "Type:"
                 props[:type] = map_type content
-              when 'Release date:'
+              when "Release date:"
                 begin
                   props[:date_released] = NilDate.parse content
                 rescue MetalArchives::Errors::ArgumentError => e
                   dr = Date.parse content
                   props[:date_released] = NilDate.new dr.year, dr.month, dr.day
                 end
-              when 'Catalog ID:'
+              when "Catalog ID:"
                 props[:catalog_id] = content
-              when 'Identifier:'
+              when "Identifier:"
                 props[:identifier] = content
-              when 'Version desc.:'
+              when "Version desc.:"
                 props[:version_description] = content
-              when 'Label:'
+              when "Label:"
                 # TODO: label
-              when 'Format:'
+              when "Format:"
                 props[:format] = map_format content
-              when 'Limitation:'
+              when "Limitation:"
                 props[:limitation] = content.to_i
-              when 'Reviews:'
-                next if content == 'None yet'
+              when "Reviews:"
+                next if content == "None yet"
                 # TODO: reviews
               else
                 raise MetalArchives::Errors::ParserError, "Unknown token: #{dt.content}"
@@ -144,7 +144,7 @@ module MetalArchives
           end
 
           props
-        rescue => e
+        rescue StandardError => e
           e.backtrace.each { |b| MetalArchives.config.logger.error b }
           raise Errors::ParserError, e
         end
@@ -160,7 +160,7 @@ module MetalArchives
         #     +Array+ containing one or more +String+s
         #
         def map_countries(countries)
-          countries && countries.map { |c| c.alpha2 }
+          countries&.map(&:alpha2)
         end
 
         ##

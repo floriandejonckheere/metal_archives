@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require 'date'
-require 'countries'
+require "date"
+require "countries"
 
 module MetalArchives
   ##
@@ -13,7 +13,7 @@ module MetalArchives
     #
     # Returns +Integer+
     #
-    property :id, :type => Integer
+    property :id, type: Integer
 
     ##
     # :attr_reader: name
@@ -35,7 +35,7 @@ module MetalArchives
     # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :aliases, :multiple => true
+    property :aliases, multiple: true
 
     ##
     # :attr_reader: country
@@ -46,7 +46,7 @@ module MetalArchives
     # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :country, :type => ISO3166::Country
+    property :country, type: ISO3166::Country
 
     ##
     # :attr_reader: location
@@ -68,7 +68,7 @@ module MetalArchives
     # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :date_of_birth, :type => NilDate
+    property :date_of_birth, type: NilDate
 
     ##
     # :attr_reader: date_of_death
@@ -79,7 +79,7 @@ module MetalArchives
     # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :date_of_death, :type => NilDate
+    property :date_of_death, type: NilDate
 
     ##
     # :attr_reader: cause_of_death
@@ -101,7 +101,7 @@ module MetalArchives
     # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    enum :gender, :values => %i[male female]
+    enum :gender, values: %i(male female)
 
     ##
     # :attr_reader: biography
@@ -150,7 +150,7 @@ module MetalArchives
     #     - +:type+: +Symbol+, either +:official+, +:unofficial+ or +:unlisted_bands+
     #     - +:title+: +String+
     #
-    property :links, :multiple => true
+    property :links, multiple: true
 
     ##
     # :attr_reader: bands
@@ -167,7 +167,7 @@ module MetalArchives
     #     - +:date_active+: +Array+ of rdoc-ref:Range containing rdoc-ref:NilDate
     #     - +:role+: +String+
     #
-    property :bands, :type => Hash, :multiple => true
+    property :bands, type: Hash, multiple: true
 
     # TODO: guest/session bands
     # TODO: misc bands
@@ -221,7 +221,7 @@ module MetalArchives
       def find(id)
         return cache[id] if cache.include? id
 
-        Artist.new :id => id
+        Artist.new id: id
       end
 
       ##
@@ -267,10 +267,10 @@ module MetalArchives
         response = HTTPClient.get url, params
         json = JSON.parse response.body
 
-        return nil if json['aaData'].empty?
+        return nil if json["aaData"].empty?
 
-        data = json['aaData'].first
-        id = Nokogiri::HTML(data.first).xpath('//a/@href').first.value.delete('\\').split('/').last.gsub(/\D/, '').to_i
+        data = json["aaData"].first
+        id = Nokogiri::HTML(data.first).xpath("//a/@href").first.value.delete('\\').split("/").last.gsub(/\D/, "").to_i
 
         find id
       end
@@ -314,7 +314,7 @@ module MetalArchives
         raise MetalArchives::Errors::ArgumentError unless name.is_a? String
 
         url = "#{MetalArchives.config.default_endpoint}search/ajax-artist-search/"
-        query = { :name => name }
+        query = { name: name }
 
         params = Parsers::Artist.map_params query
 
@@ -324,16 +324,16 @@ module MetalArchives
           if @max_items && @start >= @max_items
             []
           else
-            response = HTTPClient.get url, params.merge(:iDisplayStart => @start)
+            response = HTTPClient.get url, params.merge(iDisplayStart: @start)
             json = JSON.parse response.body
 
-            @max_items = json['iTotalRecords']
+            @max_items = json["iTotalRecords"]
 
             objects = []
 
-            json['aaData'].each do |data|
+            json["aaData"].each do |data|
               # Create Artist object for every ID in the results list
-              id = Nokogiri::HTML(data.first).xpath('//a/@href').first.value.delete('\\').split('/').last.gsub(/\D/, '').to_i
+              id = Nokogiri::HTML(data.first).xpath("//a/@href").first.value.delete('\\').split("/").last.gsub(/\D/, "").to_i
               objects << Artist.find(id)
             end
 
@@ -356,7 +356,7 @@ module MetalArchives
       # - rdoc-ref:MetalArchives::Errors::ParserError when parsing failed. Please report this error.
       #
       def all
-        search ''
+        search ""
       end
     end
   end

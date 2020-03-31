@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require 'date'
-require 'countries'
+require "date"
+require "countries"
 
 module MetalArchives
   ##
@@ -13,7 +13,7 @@ module MetalArchives
     #
     # Returns +Integer+
     #
-    property :id, :type => Integer
+    property :id, type: Integer
 
     ##
     # :attr_reader: name
@@ -35,7 +35,7 @@ module MetalArchives
     # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :aliases, :multiple => true
+    property :aliases, multiple: true
 
     ##
     # :attr_reader: country
@@ -46,7 +46,7 @@ module MetalArchives
     # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :country, :type => ISO3166::Country
+    property :country, type: ISO3166::Country
 
     ##
     # :attr_reader: location
@@ -68,7 +68,7 @@ module MetalArchives
     # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :date_formed, :type => NilDate
+    property :date_formed, type: NilDate
 
     ##
     # :attr_reader: date_active
@@ -79,7 +79,7 @@ module MetalArchives
     # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :date_active, :type => MetalArchives::Range, :multiple => true
+    property :date_active, type: MetalArchives::Range, multiple: true
 
     ##
     # :attr_reader: genres
@@ -90,7 +90,7 @@ module MetalArchives
     # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :genres, :multiple => true
+    property :genres, multiple: true
 
     ##
     # :attr_reader: lyrical_themes
@@ -101,7 +101,7 @@ module MetalArchives
     # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :lyrical_themes, :multiple => true
+    property :lyrical_themes, multiple: true
 
     ##
     # :attr_reader: label
@@ -112,7 +112,7 @@ module MetalArchives
     # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :label, :type => MetalArchives::Label
+    property :label, type: MetalArchives::Label
 
     ##
     # :attr_reader: independent
@@ -123,7 +123,7 @@ module MetalArchives
     # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    enum :independent, :values => [true, false]
+    enum :independent, values: [true, false]
 
     ##
     # :attr_reader: comment
@@ -145,7 +145,7 @@ module MetalArchives
     # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    enum :status, :values => %i[active split_up on_hold unknown changed_name disputed]
+    enum :status, values: %i(active split_up on_hold unknown changed_name disputed)
 
     ##
     # :attr_reader: releases
@@ -156,8 +156,7 @@ module MetalArchives
     # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :releases, :type => MetalArchives::Release, :multiple => true
-
+    property :releases, type: MetalArchives::Release, multiple: true
 
     # TODO: members
 
@@ -174,7 +173,7 @@ module MetalArchives
     #     - +:band+: rdoc-ref:Band
     #     - +:score+: +Integer+
     #
-    property :similar, :type => Hash, :multiple => true
+    property :similar, type: Hash, multiple: true
 
     ##
     # :attr_reader: logo
@@ -212,7 +211,7 @@ module MetalArchives
     #     - +:type+: +Symbol+, either +:official+ or +:merchandise+
     #     - +:title+: +String+
     #
-    property :links, :multiple => true
+    property :links, multiple: true
 
     protected
 
@@ -269,7 +268,7 @@ module MetalArchives
       def find(id)
         return cache[id] if cache.include? id
 
-        Band.new :id => id
+        Band.new id: id
       end
 
       ##
@@ -324,10 +323,10 @@ module MetalArchives
         response = HTTPClient.get url, params
         json = JSON.parse response.body
 
-        return nil if json['aaData'].empty?
+        return nil if json["aaData"].empty?
 
-        data = json['aaData'].first
-        id = Nokogiri::HTML(data.first).xpath('//a/@href').first.value.delete('\\').split('/').last.gsub(/\D/, '').to_i
+        data = json["aaData"].first
+        id = Nokogiri::HTML(data.first).xpath("//a/@href").first.value.delete('\\').split("/").last.gsub(/\D/, "").to_i
 
         find id
       end
@@ -400,16 +399,16 @@ module MetalArchives
           if @max_items && @start >= @max_items
             []
           else
-            response = HTTPClient.get url, params.merge(:iDisplayStart => @start)
+            response = HTTPClient.get url, params.merge(iDisplayStart: @start)
             json = JSON.parse response.body
 
-            @max_items = json['iTotalRecords']
+            @max_items = json["iTotalRecords"]
 
             objects = []
 
-            json['aaData'].each do |data|
+            json["aaData"].each do |data|
               # Create Band object for every ID in the results list
-              id = Nokogiri::HTML(data.first).xpath('//a/@href').first.value.delete('\\').split('/').last.gsub(/\D/, '').to_i
+              id = Nokogiri::HTML(data.first).xpath("//a/@href").first.value.delete('\\').split("/").last.gsub(/\D/, "").to_i
               objects << Band.find(id)
             end
 
@@ -438,7 +437,8 @@ module MetalArchives
       #
       def search(name)
         raise MetalArchives::Errors::ArgumentError unless name.is_a? String
-        search_by :name => name
+
+        search_by name: name
       end
 
       ##

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'date'
+require "date"
 
 module MetalArchives
   ##
@@ -12,7 +12,7 @@ module MetalArchives
     #
     # Returns +Integer+
     #
-    property :id, :type => Integer
+    property :id, type: Integer
 
     ##
     # :attr_reader: title
@@ -36,7 +36,7 @@ module MetalArchives
     # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    enum :type, :values => %i[full_length live demo single ep video boxed_set split compilation split_video collaboration]
+    enum :type, values: %i(full_length live demo single ep video boxed_set split compilation split_video collaboration)
 
     ##
     # :attr_reader: date_released
@@ -47,7 +47,7 @@ module MetalArchives
     # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :date_released, :type => NilDate
+    property :date_released, type: NilDate
 
     ##
     # :attr_reader_: catalog_id
@@ -143,7 +143,7 @@ module MetalArchives
       def find(id)
         return cache[id] if cache.include? id
 
-        Release.new :id => id
+        Release.new id: id
       end
 
       ##
@@ -205,10 +205,10 @@ module MetalArchives
         response = HTTPClient.get url, params
         json = JSON.parse response.body
 
-        return nil if json['aaData'].empty?
+        return nil if json["aaData"].empty?
 
-        data = json['aaData'].first
-        id = Nokogiri::HTML(data[1]).xpath('//a/@href').first.value.delete('\\').split('/').last.gsub(/\D/, '').to_i
+        data = json["aaData"].first
+        id = Nokogiri::HTML(data[1]).xpath("//a/@href").first.value.delete('\\').split("/").last.gsub(/\D/, "").to_i
 
         find id
       end
@@ -295,16 +295,16 @@ module MetalArchives
           if @max_items && @start >= @max_items
             []
           else
-            response = HTTPClient.get url, params.merge(:iDisplayStart => @start)
+            response = HTTPClient.get url, params.merge(iDisplayStart: @start)
             json = JSON.parse response.body
 
-            @max_items = json['iTotalRecords']
+            @max_items = json["iTotalRecords"]
 
             objects = []
 
-            json['aaData'].each do |data|
+            json["aaData"].each do |data|
               # Create Release object for every ID in the results list
-              id = Nokogiri::HTML(data.first).xpath('//a/@href').first.value.delete('\\').split('/').last.gsub(/\D/, '').to_i
+              id = Nokogiri::HTML(data.first).xpath("//a/@href").first.value.delete('\\').split("/").last.gsub(/\D/, "").to_i
               objects << Release.find(id)
             end
 
@@ -333,7 +333,8 @@ module MetalArchives
       #
       def search(title)
         raise MetalArchives::Errors::ArgumentError unless title.is_a? String
-        search_by :title => title
+
+        search_by title: title
       end
 
       ##
@@ -346,7 +347,7 @@ module MetalArchives
       # - rdoc-ref:MetalArchives::Errors::ParserError when parsing failed. Please report this error.
       #
       def all
-        search ''
+        search ""
       end
     end
   end

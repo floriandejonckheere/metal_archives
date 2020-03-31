@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
 FactoryGirl.define do
-  factory :band, :class => MetalArchives::Band do
+  factory :band, class: MetalArchives::Band do
     id { Faker::Number.number [1, 2, 3, 4].sample }
     name { Faker::Name.name }
-    status { %i[active split_up on_hold unknown changed_name disputed].sample }
+    status { %i(active split_up on_hold unknown changed_name disputed).sample }
 
-    comment { Faker::Lorem.words(200).join ' ' }
+    comment { Faker::Lorem.words(200).join " " }
 
     country { ISO3166::Country[Faker::Address.country_code] }
     location { Faker::Address.city }
@@ -28,15 +28,15 @@ FactoryGirl.define do
 
     lyrical_themes do
       3.times.collect do
-        ['Fantasy', 'Epic battles', 'Tales', 'Myths', 'Legends', 'Feelings', 'Life', 'Eden', 'Glory', 'the Four Elements', 'Metal'].sample
+        ["Fantasy", "Epic battles", "Tales", "Myths", "Legends", "Feelings", "Life", "Eden", "Glory", "the Four Elements", "Metal"].sample
       end
     end
 
     similar do
       4.times.collect do
         {
-          :band => build(:band),
-          :score => Faker::Number.between(1, 100)
+          band: build(:band),
+          score: Faker::Number.between(1, 100),
         }
       end
     end
@@ -44,9 +44,9 @@ FactoryGirl.define do
     links do
       3.times.collect do
         {
-          :url => Faker::Internet.url,
-          :type => %i[official unofficial unlisted_bands].sample,
-          :title => Faker::Lorem.words(4).join(' ')
+          url: Faker::Internet.url,
+          type: %i(official unofficial unlisted_bands).sample,
+          title: Faker::Lorem.words(4).join(" "),
         }
       end
     end

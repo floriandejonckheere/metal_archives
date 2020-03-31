@@ -8,7 +8,7 @@ module MetalArchives
     # Instance of rdoc-ref:MetalArchives::Configuration
     #
     def config
-      raise MetalArchives::Errors::InvalidConfigurationError, 'Gem has not been configured' unless @config
+      raise MetalArchives::Errors::InvalidConfigurationError, "Gem has not been configured" unless @config
 
       @config
     end
@@ -23,13 +23,20 @@ module MetalArchives
     # - rdoc-ref:InvalidConfigurationException
     #
     def configure
-      raise MetalArchives::Errors::InvalidConfigurationError, 'No configuration block given' unless block_given?
+      raise MetalArchives::Errors::InvalidConfigurationError, "No configuration block given" unless block_given?
+
       @config = MetalArchives::Configuration.new
       yield @config
 
-      raise MetalArchives::Errors::InvalidConfigurationError, 'app_name has not been configured' unless MetalArchives.config.app_name && !MetalArchives.config.app_name.empty?
-      raise MetalArchives::Errors::InvalidConfigurationError, 'app_version has not been configured' unless MetalArchives.config.app_version && !MetalArchives.config.app_version.empty?
-      raise MetalArchives::Errors::InvalidConfigurationError, 'app_contact has not been configured' unless MetalArchives.config.app_contact && !MetalArchives.config.app_contact.empty?
+      unless MetalArchives.config.app_name && !MetalArchives.config.app_name.empty?
+        raise MetalArchives::Errors::InvalidConfigurationError, "app_name has not been configured"
+      end
+      unless MetalArchives.config.app_version && !MetalArchives.config.app_version.empty?
+        raise MetalArchives::Errors::InvalidConfigurationError, "app_version has not been configured"
+      end
+      unless MetalArchives.config.app_contact && !MetalArchives.config.app_contact.empty?
+        raise MetalArchives::Errors::InvalidConfigurationError, "app_contact has not been configured"
+      end
     end
   end
 
@@ -87,7 +94,7 @@ module MetalArchives
     # Default configuration values
     #
     def initialize
-      @default_endpoint = 'https://www.metal-archives.com/'
+      @default_endpoint = "https://www.metal-archives.com/"
       @throttle_rate = 1
       @throttle_wait = 3
       @logger = Logger.new STDOUT

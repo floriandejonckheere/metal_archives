@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'faraday'
+require "faraday"
 
 module MetalArchives
   module Middleware
@@ -27,7 +27,7 @@ module MetalArchives
             new_uri.host = rewritten_uri.host
             new_uri.scheme = rewritten_uri.scheme
 
-            MetalArchives.config.logger.debug "Rewrite #{uri.to_s} to #{new_uri}"
+            MetalArchives.config.logger.debug "Rewrite #{uri} to #{new_uri}"
           end
 
           new_uri

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'faraday'
+require "faraday"
 
 module MetalArchives
   module Middleware
@@ -11,8 +11,8 @@ module MetalArchives
       def on_complete(env)
         return unless MetalArchives.config.endpoint
 
-        if env[:response_headers].has_key? 'x-cache-status'
-          MetalArchives.config.logger.info "Cache #{env[:response_headers]['x-cache-status'].downcase} for #{env.url.to_s}"
+        if env[:response_headers].key? "x-cache-status"
+          MetalArchives.config.logger.info "Cache #{env[:response_headers]['x-cache-status'].downcase} for #{env.url}"
         end
       end
     end
