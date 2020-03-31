@@ -1,22 +1,30 @@
-# Metal Archives Web Service Wrapper [![Travis](https://travis-ci.org/floriandejonckheere/metal_archives.svg?branch=master)](https://travis-ci.org/floriandejonckheere/metal_archives) [![Coverage Status](https://coveralls.io/repos/github/floriandejonckheere/metal_archives/badge.svg)](https://coveralls.io/github/floriandejonckheere/metal_archives)
+# Metal Archives Ruby API [![Travis](https://travis-ci.org/floriandejonckheere/metal_archives.svg?branch=master)](https://travis-ci.org/floriandejonckheere/metal_archives) [![Coverage Status](https://coveralls.io/repos/github/floriandejonckheere/metal_archives/badge.svg)](https://coveralls.io/github/floriandejonckheere/metal_archives)
+
+MetalArchives is a Ruby API that transparently wraps, caches and normalizes the [Metal Archives](https://www.metal-archives.com) website.
 
 ## Installation
 
-```shell
-$ gem install metal_archives
-```
-
-or add it to your Gemfile
+Add this line to your application's Gemfile.
 
 ```ruby
-gem 'metal_archives'
+gem "apollo", "0.1.0", source: "https://rubygems.pkg.github.com/nephroflow"
 ```
 
-```shell
-$ bundle install
+And then execute:
+
+```sh
+bundle
+```
+
+Or install it yourself as:
+
+```sh
+gem install apollo
 ```
 
 ## Configuration
+
+Configure MetalArchives before using it:
 
 ```ruby
 MetalArchives.configure do |c|
@@ -77,7 +85,10 @@ Refer to the model's [RDoc documentation](https://floriandejonckheere.github.io/
 
 ## Lazy loading
 
-By default when an model (Artist, Band, ...) is created, no data is fetched. This leads to instantiation of a model with an invalid ID not throwing any errors. Calling any attribute other than `id` will cause all data to be fetched and any errors to be thrown. Refer to the respective methods to find out what errors are thrown in what circumstances.
+By default when an model (Artist, Band, ...) is created, no data is fetched. 
+This leads to instantiation of a model with an invalid ID not throwing any errors. 
+Calling any attribute other than `id` will cause all data to be fetched and any errors to be thrown. 
+Refer to the respective methods to find out what errors are thrown in what circumstances.
 
 Models can be forced to load all data by calling the `:load!` method.  
 
@@ -141,15 +152,22 @@ server {
 ```
 
 ## Testing
+
+Run tests:
+
 ```
-$ bundle exec rake test
+bundle exec rake test
 ```
 
 ## Documentation
+
+Generate documentation:
+
 ```
 $ bundle exec rake rdoc
 ```
 
 ## Copyright
 
-Copyright 2016 Florian Dejonckheere. All content acquired through the usage of this API is copyrighted by the respective owner.
+Copyright 2016-2020 Florian Dejonckheere.
+All content acquired through the usage of this API is copyrighted by the respective owner.
