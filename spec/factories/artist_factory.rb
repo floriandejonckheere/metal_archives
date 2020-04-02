@@ -11,7 +11,7 @@ FactoryGirl.define do
     country { ISO3166::Country[FFaker::Address.country_code] }
     location { FFaker::Address.city }
 
-    date_of_birth { FFaker::Date.birthday 18, 65 }
+    date_of_birth { FFaker::Time.date }
 
     links do
       3.times.collect do
@@ -24,7 +24,7 @@ FactoryGirl.define do
     end
 
     trait :has_died do
-      date_of_death { FFaker::Date.between date_of_birth, Date.today }
+      date_of_death { FFaker::Time.between date_of_birth, Date.today }
       cause_of_death { %w(Suicide N/A Accident Cancer Illness Murder).sample }
     end
 

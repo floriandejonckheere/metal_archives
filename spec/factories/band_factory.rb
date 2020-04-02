@@ -11,7 +11,7 @@ FactoryGirl.define do
     country { ISO3166::Country[FFaker::Address.country_code] }
     location { FFaker::Address.city }
 
-    date_formed { FFaker::Date.birthday 0, 50 }
+    date_formed { FFaker::Time.date }
     date_active { build_list :range }
 
     label { [build(:label), nil].sample }
@@ -28,7 +28,19 @@ FactoryGirl.define do
 
     lyrical_themes do
       3.times.collect do
-        ["Fantasy", "Epic battles", "Tales", "Myths", "Legends", "Feelings", "Life", "Eden", "Glory", "the Four Elements", "Metal"].sample
+        [
+          "Fantasy",
+          "Epic battles",
+          "Tales",
+          "Myths",
+          "Legends",
+          "Feelings",
+          "Life",
+          "Eden",
+          "Glory",
+          "the Four Elements",
+          "Metal",
+        ].sample
       end
     end
 
