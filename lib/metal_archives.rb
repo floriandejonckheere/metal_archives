@@ -6,6 +6,8 @@ require "zeitwerk"
 loader = Zeitwerk::Loader.for_gem
 load.enable_reloading if ENV["METAL_ARCHIVES_ENV"] == "development"
 loader.inflector.inflect(
+  "id" => "ID",
+  "api" => "API",
   "http_client" => "HTTPClient",
   "lru_cache" => "LRUCache"
 )
@@ -49,9 +51,10 @@ module MetalArchives
       unless MetalArchives.config.app_version && !MetalArchives.config.app_version.empty?
         raise MetalArchives::Errors::InvalidConfigurationError, "app_version has not been configured"
       end
-      unless MetalArchives.config.app_contact && !MetalArchives.config.app_contact.empty?
-        raise MetalArchives::Errors::InvalidConfigurationError, "app_contact has not been configured"
-      end
+
+      return if MetalArchives.config.app_contact && !MetalArchives.config.app_contact.empty?
+
+      raise MetalArchives::Errors::InvalidConfigurationError, "app_contact has not been configured"
     end
   end
 end

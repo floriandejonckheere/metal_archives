@@ -26,7 +26,7 @@ MetalArchives.configure do |c|
   c.cache_size = 100
 
   ## Metal Archives endpoint (optional, overrides default)
-  # c.endpoint = 'http://www.metal-archives.com/'
+  # c.endpoint = "http://www.metal-archives.com/"
 
   ## Custom logger (optional)
   c.logger = Logger.new STDOUT

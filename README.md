@@ -7,7 +7,7 @@ MetalArchives is a Ruby API that transparently wraps, caches and normalizes the 
 Add this line to your application's Gemfile.
 
 ```ruby
-gem "apollo", "0.1.0", source: "https://rubygems.pkg.github.com/nephroflow"
+gem "metal_archives", "0.1.0"
 ```
 
 And then execute:
@@ -19,7 +19,7 @@ bundle
 Or install it yourself as:
 
 ```sh
-gem install apollo
+gem install metal_archives
 ```
 
 ## Configuration
@@ -44,7 +44,7 @@ MetalArchives.configure do |c|
   c.cache_size = 100
   
   ## Metal Archives endpoint (optional, overrides default)
-  # c.endpoint = 'http://www.metal-archives.com/'
+  # c.endpoint = "https://www.metal-archives.com/"
   
   ## Custom logger (optional)
   c.logger = Logger.new File.new('metal_archives.log')
