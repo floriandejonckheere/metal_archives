@@ -123,7 +123,7 @@ module MetalArchives
           load! unless loaded? && instance_variable_defined?("@#{name}") || name == :id
 
           property = instance_variable_get("@#{name}")
-          property.respond_to?(:empty?) ? !property.empty? : property.present?
+          property.respond_to?(:empty?) ? !property.empty? : !property.nil?
         end
 
         # property=
@@ -185,7 +185,7 @@ module MetalArchives
           load! unless loaded? && instance_variable_defined?("@#{name}")
 
           property = instance_variable_get("@#{name}")
-          property.respond_to?(:empty?) ? !property.empty? : property.present?
+          property.respond_to?(:empty?) ? !property.empty? : !property.nil?
         end
 
         # property=
