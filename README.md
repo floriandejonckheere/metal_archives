@@ -45,6 +45,8 @@ MetalArchives.configure do |c|
   
   ## Metal Archives endpoint (optional, overrides default)
   # c.endpoint = "https://www.metal-archives.com/"
+  # c.endpoint_user = "my_user"
+  # c.endpoint_password = "my_password"
   
   ## Custom logger (optional)
   c.logger = Logger.new File.new('metal_archives.log')

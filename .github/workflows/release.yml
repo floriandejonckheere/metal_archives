@@ -34,6 +34,8 @@ jobs:
       - name: Test
         env:
           MA_ENDPOINT: ${{ secrets.MA_ENDPOINT }}
+          MA_ENDPOINT_USER: ${{ secrets.MA_ENDPOINT_USER }}
+          MA_ENDPOINT_PASSWORD: ${{ secrets.MA_ENDPOINT_PASSWORD }}
           WEBMOCK_ALLOW_HOST: ${{ secrets.WEBMOCK_ALLOW_HOST }}
         run: bundle exec rspec --profile 10 --format progress
 

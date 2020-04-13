@@ -20,6 +20,8 @@ MetalArchives.configure do |c|
 
   ## Metal Archives endpoint (optional, overrides default)
   c.endpoint = ENV["MA_ENDPOINT"] if ENV["MA_ENDPOINT"]
+  c.endpoint_user = ENV["MA_ENDPOINT_USER"] if ENV["MA_ENDPOINT_USER"]
+  c.endpoint_password = ENV["MA_ENDPOINT_PASSWORD"] if ENV["MA_ENDPOINT_PASSWORD"]
 
   puts "Using #{c.endpoint} as MA endpoint"
 

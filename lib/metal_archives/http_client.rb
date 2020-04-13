@@ -54,6 +54,11 @@ module MetalArchives
                       logger: MetalArchives.config.logger
 
           f.adapter   Faraday.default_adapter
+
+          next unless MetalArchives.config.endpoint_user
+
+          f.basic_auth MetalArchives.config.endpoint_user,
+                       MetalArchives.config.endpoint_password
         end
       end
     end

@@ -29,6 +29,12 @@ module MetalArchives
     attr_reader :default_endpoint
 
     ##
+    # Endpoint HTTP Basic authentication
+    #
+    attr_accessor :endpoint_user
+    attr_accessor :endpoint_password
+
+    ##
     # Additional Faraday middleware
     #
     attr_accessor :middleware
