@@ -9,6 +9,7 @@ on:
 
 jobs:
   build:
+    name: Continous Integration
     runs-on: ubuntu-latest
 
     steps:

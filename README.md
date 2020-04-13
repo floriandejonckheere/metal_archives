@@ -1,4 +1,4 @@
-# Metal Archives Ruby API [![Travis](https://travis-ci.org/floriandejonckheere/metal_archives.svg?branch=master)](https://travis-ci.org/floriandejonckheere/metal_archives) [![Coverage Status](https://coveralls.io/repos/github/floriandejonckheere/metal_archives/badge.svg)](https://coveralls.io/github/floriandejonckheere/metal_archives)
+# Metal Archives Ruby API
 
 MetalArchives is a Ruby API that transparently wraps, caches and normalizes the [Metal Archives](https://www.metal-archives.com) website.
 

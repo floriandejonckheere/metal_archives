@@ -18,10 +18,7 @@
 
 require "factory_girl"
 require "ffaker"
-require "coveralls"
 require "webmock/rspec"
-
-Coveralls.wear!
 
 require "metal_archives"
 

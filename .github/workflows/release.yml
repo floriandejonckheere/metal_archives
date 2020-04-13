@@ -7,7 +7,7 @@ on:
 
 jobs:
   generate:
-    name: Create release-artifacts
+    name: Create release
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1

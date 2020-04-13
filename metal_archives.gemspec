@@ -32,7 +32,6 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "zeitwerk"
 
   spec.add_development_dependency "byebug"
-  spec.add_development_dependency "coveralls"
   spec.add_development_dependency "debase"
   spec.add_development_dependency "factory_girl"
   spec.add_development_dependency "fasterer"
