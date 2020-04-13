@@ -30,7 +30,7 @@ MetalArchives.configure do |c|
 
   ## Custom logger (optional)
   c.logger = Logger.new STDOUT
-  c.logger.level = Logger::INFO
+  c.logger.level = Logger::WARN
 end
 
 # (If you use this, don't forget to add pry to your Gemfile!)

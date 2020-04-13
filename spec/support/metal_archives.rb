@@ -27,5 +27,5 @@ MetalArchives.configure do |c|
 
   ## Custom logger (optional)
   c.logger = Logger.new STDOUT
-  c.logger.level = Logger::INFO
+  c.logger.level = Logger::WARN
 end
