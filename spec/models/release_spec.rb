@@ -38,10 +38,10 @@ RSpec.describe MetalArchives::Release do
       expect(release.format).to eq :cd
     end
 
-    it "Live in Canada 2005 - The Dark Secret has unknown format" do
+    it "Live in Canada 2005 - The Dark Secret has cd format" do
       release = MetalArchives::Release.find 100_770
 
-      expect(release.format).to eq :unknown
+      expect(release.format).to eq :cd
     end
 
     it "uses NilDate" do
@@ -65,7 +65,7 @@ RSpec.describe MetalArchives::Release do
       end
 
       it "lazily loads" do
-        release = MetalArchives::Releasefind(-1)
+        release = MetalArchives::Release.find(-1)
 
         expect(release).to be_instance_of MetalArchives::Release
       end
@@ -129,7 +129,7 @@ RSpec.describe MetalArchives::Release do
       end
 
       it "searches by title" do
-        expect(MetalArchives::Release.search_by(title: "Rhapsody").count).to eq 13
+        expect(MetalArchives::Release.search_by(title: "Rhapsody").count).to eq 17
         # expect(MetalArchives::Release.search_by(:title => 'Lost Horizon').count).to eq 3
         # expect(MetalArchives::Release.search_by(:title => 'Lost Horizon', :exact => true).count).to eq 2
         # expect(MetalArchives::Release.search_by(:title => 'Alquimia', :genre => 'Melodic Power').count).to eq 2

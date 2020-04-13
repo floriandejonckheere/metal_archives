@@ -23,7 +23,7 @@ module MetalArchives
         raise Errors::APIError, response.status if response.status >= 400
 
         response
-      rescue Faraday::Error::ClientError => e
+      rescue Faraday::ClientError => e
         MetalArchives.config.logger.error e.response
         raise Errors::APIError, e
       end

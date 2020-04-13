@@ -8,11 +8,9 @@ MetalArchives.configure do |c|
   c.app_version = MetalArchives::VERSION
   c.app_contact = "user@example.com"
 
-  if ENV.key? "TRAVIS"
-    ## Request throttling (optional, overrides defaults)
-    c.request_rate = 1
-    c.request_timeout = 3
-  end
+  ## Request throttling (optional, overrides defaults)
+  c.request_rate = ENV.key?("TRAVIS") ? 1 : 10
+  c.request_timeout = 3
 
   ## Connect additional Faraday middleware
   # c.middleware = [MyMiddleware, MyOtherMiddleware]

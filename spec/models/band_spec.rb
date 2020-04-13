@@ -9,7 +9,7 @@ RSpec.describe MetalArchives::Band do
       expect(band.name).to eq "Pathfinder"
       expect(band.aliases).to be_empty
       expect(band.country).to eq ISO3166::Country["PL"]
-      expect(band.location).to eq "Poznań"
+      expect(band.location).to eq "Poznań, Greater Poland"
       expect(band.date_formed).to eq MetalArchives::NilDate.new(2006)
       expect(band.date_active).to eq [MetalArchives::Range.new(MetalArchives::NilDate.new(2006), nil)]
       expect(band.status).to eq :active
@@ -21,11 +21,11 @@ RSpec.describe MetalArchives::Band do
       expect(band.photo).to be_instance_of URI::HTTPS
       expect(band.photo.path).to eq "/images/1/2/2/3/122302_photo.jpg"
       expect(band.independent).not_to be true
-      expect(band.similar.length).to eq 19
+      expect(band.similar.length).to eq 21
       expect(band.links.length).to eq 15
       expect(band.links.count { |l| l[:type] == :official }).to eq 12
       expect(band.links.count { |l| l[:type] == :merchandise }).to eq 3
-      expect(band.links.select { |l| l[:type] == :merchandise }.first[:url]).to eq "http://www.amazon.com/Fifth-Element-Pathfinder/dp/B007MNNCVW"
+      expect(band.links.select { |l| l[:type] == :merchandise }.first[:url]).to eq "https://www.amazon.com/Fifth-Element-Pathfinder/dp/B007MNNCVW"
       expect(band.links.select { |l| l[:type] == :merchandise }.first[:title]).to eq "Amazon"
 
       expect(band.releases.map(&:title)).to match ["Pathfinder / Demo 2007", "The Beginning", "Moonlight Shadow", "Beyond the Space, Beyond the Time", "Fifth Element"]
@@ -37,7 +37,7 @@ RSpec.describe MetalArchives::Band do
       expect(band).to be_instance_of MetalArchives::Band
       expect(band.name).to eq "Rhapsody of Fire"
       expect(band.aliases).to match %w(Thundercross Rhapsody)
-      expect(band.releases.map(&:title)).to match ["Eternal Glory", "Legendary Tales", "Emerald Sword", "Symphony of Enchanted Lands", "Holy Thunderforce", "Dawn of Victory", "Rain of a Thousand Flames", "Power of the Dragonflame", "Tales from the Emerald Sword Saga", "The Dark Secret", "Symphony of Enchanted Lands II - The Dark Secret", "The Magic of the Wizard's Dream", "Live in Canada 2005 - The Dark Secret", "A New Saga Begins", "Triumph or Agony", "Demons, Dragons and Warriors", "Visions from the Enchanted Lands", "The Frozen Tears of Angels", "The Cold Embrace of Fear - A Dark Romantic Symphony", "Aeons of Raging Darkness", "From Chaos to Eternity", "Live - From Chaos to Eternity", "Dark Wings of Steel", "Live in Atlanta", "Shining Star", "Into the Legend", "When Demons Awake", "Legendary Years"]
+      expect(band.releases.map(&:title)).to match ["Eternal Glory", "Legendary Tales", "Emerald Sword", "Symphony of Enchanted Lands", "Dawn of Victory/Primo CD", "Holy Thunderforce", "Dawn of Victory", "Rain of a Thousand Flames", "Power of the Dragonflame", "Tales from the Emerald Sword Saga", "The Dark Secret", "Symphony of Enchanted Lands II - The Dark Secret", "The Magic of the Wizard's Dream", "Live in Canada 2005 - The Dark Secret", "A New Saga Begins", "Triumph or Agony", "Demons, Dragons and Warriors", "Visions from the Enchanted Lands", "The Frozen Tears of Angels", "The Cold Embrace of Fear: A Dark Romantic Symphony", "Aeons of Raging Darkness", "From Chaos to Eternity", "Live: From Chaos to Eternity", "Dark Wings of Steel", "Live in Atlanta", "Shining Star", "Into the Legend", "When Demons Awake", "Land of Immortals", "Knightrider of Doom", "Legendary Years", "The Legend Goes On", "Rain of Fury", "Master of Peace", "The Eighth Mountain"]
     end
 
     it "maps status" do
@@ -72,7 +72,7 @@ RSpec.describe MetalArchives::Band do
       end
 
       it "lazily loads" do
-        band = MetalArchives::Bandfind(-1)
+        band = MetalArchives::Band.find(-1)
 
         expect(band).to be_instance_of MetalArchives::Band
       end
@@ -136,22 +136,22 @@ RSpec.describe MetalArchives::Band do
       end
 
       it "searches by name" do
-        expect(MetalArchives::Band.search_by(name: "Alquimia").count).to eq 5
-        expect(MetalArchives::Band.search_by(name: "Lost Horizon").count).to eq 3
+        expect(MetalArchives::Band.search_by(name: "Alquimia").count).to eq 6
+        expect(MetalArchives::Band.search_by(name: "Lost Horizon").count).to eq 2
         expect(MetalArchives::Band.search_by(name: "Lost Horizon", exact: true).count).to eq 2
         expect(MetalArchives::Band.search_by(name: "Alquimia", genre: "Melodic Power").count).to eq 2
       end
 
       it "searches by year" do
-        expect(MetalArchives::Band.search_by(name: "Alquimia", year: MetalArchives::Range.new(nil, nil)).count).to eq 5
+        expect(MetalArchives::Band.search_by(name: "Alquimia", year: MetalArchives::Range.new(nil, nil)).count).to eq 6
         expect(MetalArchives::Band.search_by(name: "Alquimia", year: MetalArchives::Range.new(Date.new(2013), nil)).count).to eq 1
         expect(MetalArchives::Band.search_by(name: "Alquimia", year: MetalArchives::Range.new(Date.new(2008), Date.new(2008))).count).to eq 1
         expect(MetalArchives::Band.search_by(name: "Alquimia", year: MetalArchives::Range.new(Date.new(2008), Date.new(2013))).count).to eq 2
-        expect(MetalArchives::Band.search_by(name: "Alquimia", year: MetalArchives::Range.new(nil, Date.new(2013))).count).to eq 5
+        expect(MetalArchives::Band.search_by(name: "Alquimia", year: MetalArchives::Range.new(nil, Date.new(2013))).count).to eq 6
       end
 
       it "searches by country" do
-        expect(MetalArchives::Band.search_by(name: "Alquimia", country: ISO3166::Country["ES"]).count).to eq 1
+        expect(MetalArchives::Band.search_by(name: "Alquimia", country: ISO3166::Country["ES"]).count).to eq 2
         expect(MetalArchives::Band.search_by(name: "Alquimia", country: ISO3166::Country["AR"]).count).to eq 3
         expect(MetalArchives::Band.search_by(name: "Alquimia", country: ISO3166::Country["AR"]).count).to eq 3
         expect(MetalArchives::Band.search_by(name: "Alquimia", label: "Mutus Liber").count).to eq 1

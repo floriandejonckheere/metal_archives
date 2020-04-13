@@ -51,52 +51,45 @@ RSpec.describe MetalArchives::Artist do
       expect(artist.name).to eq "Ian Fraser Kilmister"
       expect(artist.aliases).to include "Lemmy Kilmister"
       expect(artist.date_of_death).to eq MetalArchives::NilDate.new(2015, 12, 28)
-      expect(artist.links.length).to eq 5
+      expect(artist.links.length).to eq 6
       expect(artist.links.count { |l| l[:type] == :official }).to eq 1
       expect(artist.links.count { |l| l[:type] == :unofficial }).to eq 2
       expect(artist.links.count { |l| l[:type] == :unlisted_bands }).to eq 2
       expect(artist.links.select { |l| l[:type] == :official }.first[:url]).to eq "https://www.facebook.com/OfficialLemmy"
       expect(artist.links.select { |l| l[:type] == :official }.first[:title]).to eq "Facebook"
 
-      expect(artist.bands[0]).to eq band: "Hawkwind",
-                                    date_active: MetalArchives::Range.new(MetalArchives::NilDate.new(1971), MetalArchives::NilDate.new(1975)),
-                                    role: "Bass, Vocals (additional)",
-                                    active: false
-
-      expect(artist.bands[1]).to eq band: "Headcat",
-                                    date_active: MetalArchives::Range.new(MetalArchives::NilDate.new(2000), MetalArchives::NilDate.new(2015)),
-                                    role: "Bass, Guitars, Vocals",
-                                    active: false
-
-      expect(artist.bands[2]).to eq band: MetalArchives::Band.find(203),
-                                    date_active: MetalArchives::Range.new(MetalArchives::NilDate.new(1975), MetalArchives::NilDate.new(2015)),
-                                    role: "Bass, Vocals",
-                                    active: false
-
-      expect(artist.bands[3]).to eq band: "Opal Butterfly",
-                                    date_active: MetalArchives::Range.new(MetalArchives::NilDate.new(1970), MetalArchives::NilDate.new(1970)),
-                                    role: "Guitars",
-                                    active: false
-
-      expect(artist.bands[4]).to eq band: "Sam Gopal",
-                                    date_active: MetalArchives::Range.new(MetalArchives::NilDate.new(1968), MetalArchives::NilDate.new(1968)),
-                                    role: "Guitars",
-                                    active: false
-
-      expect(artist.bands[5]).to eq band: "The Motown Sect",
-                                    date_active: MetalArchives::Range.new(MetalArchives::NilDate.new(1966), MetalArchives::NilDate.new(1966)),
-                                    role: "Guitars, Vocals",
-                                    active: false
-
-      expect(artist.bands[6]).to eq band: "The Rainmakers",
-                                    date_active: MetalArchives::Range.new(MetalArchives::NilDate.new(1963), MetalArchives::NilDate.new(1966)),
-                                    role: "Guitars",
-                                    active: false
-
-      expect(artist.bands[7]).to eq band: "The Rockin' Vickers",
-                                    date_active: MetalArchives::Range.new(MetalArchives::NilDate.new(1965), MetalArchives::NilDate.new(1967)),
-                                    role: "Guitars",
-                                    active: false
+      expect(artist.bands).to include hash_including(band: "Hawkwind",
+                                                     date_active: MetalArchives::Range.new(MetalArchives::NilDate.new(1971), MetalArchives::NilDate.new(1975)),
+                                                     role: "Bass, Vocals (additional)",
+                                                     active: false),
+                                      hash_including(band: "Headcat",
+                                                     date_active: MetalArchives::Range.new(MetalArchives::NilDate.new(2000), MetalArchives::NilDate.new(2015)),
+                                                     role: "Bass, Guitars, Vocals",
+                                                     active: false),
+                                      hash_including(band: MetalArchives::Band.find(203),
+                                                     date_active: MetalArchives::Range.new(MetalArchives::NilDate.new(1975), MetalArchives::NilDate.new(2015)),
+                                                     role: "Bass, Vocals",
+                                                     active: false),
+                                      hash_including(band: "Opal Butterfly",
+                                                     date_active: MetalArchives::Range.new(MetalArchives::NilDate.new(1970), MetalArchives::NilDate.new(1970)),
+                                                     role: "Guitars",
+                                                     active: false),
+                                      hash_including(band: "Sam Gopal",
+                                                     date_active: MetalArchives::Range.new(MetalArchives::NilDate.new(1968), MetalArchives::NilDate.new(1968)),
+                                                     role: "Guitars",
+                                                     active: false),
+                                      hash_including(band: "The Motown Sect",
+                                                     date_active: MetalArchives::Range.new(MetalArchives::NilDate.new(1966), MetalArchives::NilDate.new(1966)),
+                                                     role: "Guitars, Vocals",
+                                                     active: false),
+                                      hash_including(band: "The Rainmakers",
+                                                     date_active: MetalArchives::Range.new(MetalArchives::NilDate.new(1963), MetalArchives::NilDate.new(1966)),
+                                                     role: "Guitars",
+                                                     active: false),
+                                      hash_including(band: "The Rockin' Vickers",
+                                                     date_active: MetalArchives::Range.new(MetalArchives::NilDate.new(1965), MetalArchives::NilDate.new(1967)),
+                                                     role: "Guitars",
+                                                     active: false)
     end
 
     it "maps query parameters" do
@@ -122,7 +115,7 @@ RSpec.describe MetalArchives::Artist do
       end
 
       it "lazily loads" do
-        artist = MetalArchives::Artistfind(-1)
+        artist = MetalArchives::Artist.find(-1)
 
         expect(artist).to be_instance_of MetalArchives::Artist
       end
