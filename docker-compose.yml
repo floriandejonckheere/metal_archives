@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/:/etc/nginx/conf.d/
+      - nginx:/cache/
+    restart: always
+
+volumes:
+  nginx:
