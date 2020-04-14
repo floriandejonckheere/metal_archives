@@ -4,5 +4,16 @@ module MetalArchives
   ##
   # MetalArchives API version
   #
-  VERSION = "2.2.0"
+  module Version
+    MAJOR = 2
+    MINOR = 2
+    PATCH = 1
+    PRE   = nil
+
+    VERSION = [MAJOR, MINOR, PATCH].compact.join(".")
+
+    STRING = [VERSION, PRE].compact.join("-")
+  end
+
+  VERSION = MetalArchives::Version::STRING
 end
