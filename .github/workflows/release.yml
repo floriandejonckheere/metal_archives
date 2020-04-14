@@ -46,16 +46,16 @@ jobs:
         id: get_version
         run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
 
-      - name: Publish to Registry
-        uses: jstastny/publish-gem-to-github@master
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          owner: floriandejonckheere
-
-      - name: Publish gem
-        uses: dawidd6/action-publish-gem@v1
-        with:
-          api_key: ${{ secrets.RUBYGEMS_API_KEY }}
+      - name: Publish to RubyGems
+        run: |
+          mkdir -p ~/.gem
+          touch ~/.gem/credentials
+          chmod 0600 ~/.gem/credentials
+          printf -- "---\n:rubygems_api_key: ${GEM_HOST_API_KEY}\n" > ~/.gem/credentials
+          gem build *.gemspec
+          gem push *.gem
+        env:
+          GEM_HOST_API_KEY: ${{secrets.RUBYGEMS_API_KEY}}
 
       - name: Create Release
         uses: actions/create-release@v1.0.0
