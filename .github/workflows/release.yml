@@ -55,7 +55,7 @@ jobs:
       - name: Publish gem
         uses: dawidd6/action-publish-gem@v1
         with:
-          api_key: ${{secrets.RUBYGEMS_API_KEY}}
+          api_key: ${{ secrets.RUBYGEMS_API_KEY }}
 
       - name: Create Release
         uses: actions/create-release@v1.0.0
