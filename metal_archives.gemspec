@@ -33,7 +33,7 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "byebug"
   spec.add_development_dependency "debase"
-  spec.add_development_dependency "factory_girl"
+  spec.add_development_dependency "factory_bot"
   spec.add_development_dependency "fasterer"
   spec.add_development_dependency "ffaker"
   spec.add_development_dependency "flay"
