@@ -45,12 +45,8 @@ module MetalArchives
       @config = MetalArchives::Configuration.new
       yield @config
 
-      unless MetalArchives.config.app_name && !MetalArchives.config.app_name.empty?
-        raise MetalArchives::Errors::InvalidConfigurationError, "app_name has not been configured"
-      end
-      unless MetalArchives.config.app_version && !MetalArchives.config.app_version.empty?
-        raise MetalArchives::Errors::InvalidConfigurationError, "app_version has not been configured"
-      end
+      raise MetalArchives::Errors::InvalidConfigurationError, "app_name has not been configured" unless MetalArchives.config.app_name && !MetalArchives.config.app_name.empty?
+      raise MetalArchives::Errors::InvalidConfigurationError, "app_version has not been configured" unless MetalArchives.config.app_version && !MetalArchives.config.app_version.empty?
 
       return if MetalArchives.config.app_contact && !MetalArchives.config.app_contact.empty?
 

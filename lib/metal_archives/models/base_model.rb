@@ -136,19 +136,13 @@ module MetalArchives
           # Check value type
           type = opts[:type] || String
           if opts[:multiple]
-            unless value.is_a? Array
-              raise MetalArchives::Errors::TypeError, "invalid type #{value.class}, must be Array for #{name}"
-            end
+            raise MetalArchives::Errors::TypeError, "invalid type #{value.class}, must be Array for #{name}" unless value.is_a? Array
 
             value.each do |val|
-              unless val.is_a? type
-                raise MetalArchives::Errors::TypeError, "invalid type #{val.class}, must be #{type} for #{name}"
-              end
+              raise MetalArchives::Errors::TypeError, "invalid type #{val.class}, must be #{type} for #{name}" unless val.is_a? type
             end
           else
-            unless value.is_a? type
-              raise MetalArchives::Errors::TypeError, "invalid type #{value.class}, must be #{type} for #{name}"
-            end
+            raise MetalArchives::Errors::TypeError, "invalid type #{value.class}, must be #{type} for #{name}" unless value.is_a? type
           end
 
           instance_variable_set "@#{name}", value
@@ -192,19 +186,13 @@ module MetalArchives
         define_method("#{name}=") do |value|
           # Check enum type
           if opts[:multiple]
-            unless value.is_a? Array
-              raise MetalArchives::Errors::TypeError, "invalid enum value #{value}, must be Array for #{name}"
-            end
+            raise MetalArchives::Errors::TypeError, "invalid enum value #{value}, must be Array for #{name}" unless value.is_a? Array
 
             value.each do |val|
-              unless opts[:values].include? val
-                raise MetalArchives::Errors::TypeError, "invalid enum value #{val} for #{name}"
-              end
+              raise MetalArchives::Errors::TypeError, "invalid enum value #{val} for #{name}" unless opts[:values].include? val
             end
           else
-            unless opts[:values].include? value
-              raise MetalArchives::Errors::TypeError, "invalid enum value #{value} for #{name}"
-            end
+            raise MetalArchives::Errors::TypeError, "invalid enum value #{value} for #{name}" unless opts[:values].include? value
           end
 
           instance_variable_set name, value

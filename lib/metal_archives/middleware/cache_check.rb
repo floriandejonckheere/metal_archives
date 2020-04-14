@@ -11,9 +11,7 @@ module MetalArchives
       def on_complete(env)
         return unless MetalArchives.config.endpoint
 
-        if env[:response_headers].key? "x-cache-status"
-          MetalArchives.config.logger.info "Cache #{env[:response_headers]['x-cache-status'].downcase} for #{env.url}"
-        end
+        MetalArchives.config.logger.info "Cache #{env[:response_headers]['x-cache-status'].downcase} for #{env.url}" if env[:response_headers].key? "x-cache-status"
       end
     end
   end
