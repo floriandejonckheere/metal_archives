@@ -5,9 +5,9 @@ module MetalArchives
   # MetalArchives API version
   #
   module Version
-    MAJOR = 2
-    MINOR = 2
-    PATCH = 3
+    MAJOR = 3
+    MINOR = 0
+    PATCH = 0
     PRE   = nil
 
     VERSION = [MAJOR, MINOR, PATCH].compact.join(".")
