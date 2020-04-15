@@ -7,7 +7,7 @@ MetalArchives is a Ruby API that transparently wraps, caches and normalizes the 
 Add this line to your application's Gemfile.
 
 ```ruby
-gem "metal_archives", "0.1.0"
+gem "metal_archives"
 ```
 
 And then execute:
@@ -29,19 +29,12 @@ Configure MetalArchives before using it:
 ```ruby
 MetalArchives.configure do |c|
   ## Application identity (required)
-  c.app_name = 'My App'
-  c.app_version = '1.0'
-  c.app_contact = 'support@mymusicapp.com'
-
-  ## Request throttling (optional, overrides defaults)
-  c.request_rate = 1
-  c.request_timeout = 3
-  
-  ## Connect additional Faraday middleware
-  # c.middleware = [MyMiddleware, MyOtherMiddleware]
+  c.app_name = "My App"
+  c.app_version = "1.0"
+  c.app_contact = "support@mymusicapp.com"
 
   ## Custom cache size per object class (optional, overrides defaults)
-  c.cache_size = 100
+  # c.cache_size = 100
   
   ## Metal Archives endpoint (optional, overrides default)
   # c.endpoint = "https://www.metal-archives.com/"
@@ -49,7 +42,7 @@ MetalArchives.configure do |c|
   # c.endpoint_password = "my_password"
   
   ## Custom logger (optional)
-  c.logger = Logger.new File.new('metal_archives.log')
+  c.logger = Logger.new File.new("metal_archives.log")
   c.logger.level = Logger::INFO
 end
 ```
@@ -57,24 +50,24 @@ end
 ## Usage
 
 ```ruby
-require 'metal_archives'
+require "metal_archives"
 
 # Search for bands
-@alquimia_list = MetalArchives::Band.search('Alquimia')
+@alquimia_list = MetalArchives::Band.search("Alquimia")
 
 # Find bands by name
-@iron_maiden = MetalArchives::Band.find_by(:name => 'Iron Maiden')
+@iron_maiden = MetalArchives::Band.find_by(:name => "Iron Maiden")
 
 # Find bands by attributes
-require 'countries'
+require "countries"
 
-@bands_in_belgium = MetalArchives::Band.search_by :country => ISO3166::Country['BE']
+@bands_in_belgium = MetalArchives::Band.search_by :country => ISO3166::Country["BE"]
 @bands_formed_in_1990 = MetalArchives::Band.search_by :year => Range.new(Date.new(1990))
 
-# Metal Archives' usual tips apply
+# Metal Archives" usual tips apply
 
-@bands_containing_hell = MetalArchives::Band.search_by :name => '*hell*'
-@non_melodic_death_bands = MetalArchives::Band.search_by :genre => 'death -melodic'
+@bands_containing_hell = MetalArchives::Band.search_by :name => "*hell*"
+@non_melodic_death_bands = MetalArchives::Band.search_by :genre => "death -melodic"
 
 # Methods returning multiple results return a MetalArchives::Collection.
 # Collection wraps a paginated resource, and can be used to iterate over huge queries.
