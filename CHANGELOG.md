@@ -2,7 +2,10 @@
 
 ## 3.0.0
 
-- Support for Ruby < 2.5 dropped
+- Dropped support for Ruby < 2.5
+- `MetalArchives::Errors::APIError` changed
+- Dropped support for Faraday middleware
+- Added support for basic authentication
 
 ## 2.2.0
 
