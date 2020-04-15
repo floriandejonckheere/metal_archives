@@ -124,10 +124,9 @@ module MetalArchives
     #
     def assemble # :nodoc:
       ## Base attributes
-      url = "#{MetalArchives.config.default_endpoint}albums/view/id/#{id}"
-      response = HTTPClient.get url
+      response = HTTPClient.get "/albums/view/id/#{id}"
 
-      properties = Parsers::Release.parse_html response.body
+      properties = Parsers::Release.parse_html response.to_s
 
       properties
     end
@@ -200,11 +199,10 @@ module MetalArchives
       #     - +:formats+: +Array+ of +Symbol+, see rdoc-ref:Release.format
       #
       def find_by(query)
-        url = "#{MetalArchives.config.default_endpoint}search/ajax-advanced/searching/albums"
         params = Parsers::Release.map_params query
 
-        response = HTTPClient.get url, params
-        json = JSON.parse response.body
+        response = HTTPClient.get "/search/ajax-advanced/searching/albums", params
+        json = JSON.parse response.to_s
 
         return nil if json["aaData"].empty?
 
@@ -286,8 +284,6 @@ module MetalArchives
       #     - +:formats+: +Array+ of +Symbol+, see rdoc-ref:Release.format
       #
       def search_by(query)
-        url = "#{MetalArchives.config.default_endpoint}search/ajax-advanced/searching/albums"
-
         params = Parsers::Release.map_params query
 
         l = lambda do
@@ -296,8 +292,8 @@ module MetalArchives
           if @max_items && @start >= @max_items
             []
           else
-            response = HTTPClient.get url, params.merge(iDisplayStart: @start)
-            json = JSON.parse response.body
+            response = HTTPClient.get "/search/ajax-advanced/searching/albums", params.merge(iDisplayStart: @start)
+            json = JSON.parse response.to_s
 
             @max_items = json["iTotalRecords"]
 

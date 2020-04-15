@@ -26,8 +26,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_runtime_dependency "countries"
-  spec.add_runtime_dependency "faraday"
-  spec.add_runtime_dependency "faraday_throttler"
+  spec.add_runtime_dependency "http"
   spec.add_runtime_dependency "nokogiri"
   spec.add_runtime_dependency "zeitwerk"
 

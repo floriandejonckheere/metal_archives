@@ -20,7 +20,7 @@ module MetalArchives
 
           new_uri = uri.clone
 
-          default_uri = URI MetalArchives.config.default_endpoint
+          default_uri = URI MetalArchives.config.endpoint
           rewritten_uri = URI MetalArchives.config.endpoint
 
           if uri.host == default_uri.host && uri.scheme == default_uri.scheme

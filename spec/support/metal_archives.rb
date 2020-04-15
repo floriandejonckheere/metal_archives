@@ -8,13 +8,6 @@ MetalArchives.configure do |c|
   c.app_version = MetalArchives::VERSION
   c.app_contact = "user@example.com"
 
-  ## Request throttling (optional, overrides defaults)
-  c.request_rate = 10
-  c.request_timeout = 3
-
-  ## Connect additional Faraday middleware
-  # c.middleware = [MyMiddleware, MyOtherMiddleware]
-
   ## Custom cache size per object class (optional, overrides defaults)
   # c.cache_size = 100
 
@@ -27,5 +20,5 @@ MetalArchives.configure do |c|
 
   ## Custom logger (optional)
   c.logger = Logger.new STDOUT
-  c.logger.level = Logger::WARN
+  c.logger.level = Logger::INFO
 end

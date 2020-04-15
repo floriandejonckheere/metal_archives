@@ -15,18 +15,13 @@ MetalArchives.configure do |c|
   c.app_version = "1.0"
   c.app_contact = "support@mymusicapp.com"
 
-  ## Request throttling (optional, overrides defaults)
-  # c.request_rate = 1
-  # c.request_timeout = 3
-
-  ## Connect additional Faraday middleware
-  # c.middleware = [MyMiddleware, MyOtherMiddleware]
-
   ## Custom cache size per object class (optional, overrides defaults)
   # c.cache_size = 100
 
   ## Metal Archives endpoint (optional, overrides default)
-  # c.endpoint = "http://www.metal-archives.com/"
+  c.endpoint = ENV["MA_ENDPOINT"] if ENV["MA_ENDPOINT"]
+  c.endpoint_user = ENV["MA_ENDPOINT_USER"] if ENV["MA_ENDPOINT_USER"]
+  c.endpoint_password = ENV["MA_ENDPOINT_PASSWORD"] if ENV["MA_ENDPOINT_PASSWORD"]
 
   ## Custom logger (optional)
   c.logger = Logger.new STDOUT

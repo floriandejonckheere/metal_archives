@@ -11,13 +11,10 @@ RSpec.describe MetalArchives::Configuration do
       expect(subject).to respond_to :app_contact=
       expect(subject).to respond_to :endpoint
       expect(subject).to respond_to :endpoint=
-      expect(subject).to respond_to :default_endpoint
-      expect(subject).to respond_to :middleware
-      expect(subject).to respond_to :middleware=
-      expect(subject).to respond_to :request_rate
-      expect(subject).to respond_to :request_rate=
-      expect(subject).to respond_to :request_timeout
-      expect(subject).to respond_to :request_timeout=
+      expect(subject).to respond_to :endpoint_user
+      expect(subject).to respond_to :endpoint_user=
+      expect(subject).to respond_to :endpoint_password
+      expect(subject).to respond_to :endpoint_password=
       expect(subject).to respond_to :logger
       expect(subject).to respond_to :logger=
       expect(subject).to respond_to :cache_size
@@ -25,7 +22,7 @@ RSpec.describe MetalArchives::Configuration do
     end
 
     it "has default properties" do
-      expect(subject.default_endpoint).to eq "https://www.metal-archives.com/"
+      expect(subject.endpoint).to eq "https://www.metal-archives.com/"
       expect(subject.logger).not_to be_nil
       expect(subject.cache_size).to be_an Integer
     end

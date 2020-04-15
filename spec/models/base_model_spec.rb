@@ -47,7 +47,7 @@ class ModelFive < MetalArchives::BaseModel
   property :property_one
 
   def assemble
-    raise MetalArchives::Errors::APIError
+    raise MetalArchives::Errors::APIError, OpenStruct.new(code: 500, reason: "Internal Server Error", body: "")
   end
 end
 

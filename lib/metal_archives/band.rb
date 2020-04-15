@@ -225,34 +225,29 @@ module MetalArchives
     #
     def assemble # :nodoc:
       ## Base attributes
-      url = "#{MetalArchives.config.default_endpoint}band/view/id/#{id}"
-      response = HTTPClient.get url
+      response = HTTPClient.get "/band/view/id/#{id}"
 
-      properties = Parsers::Band.parse_html response.body
+      properties = Parsers::Band.parse_html response.to_s
 
       ## Comment
-      url = "#{MetalArchives.config.default_endpoint}band/read-more/id/#{id}"
-      response = HTTPClient.get url
+      response = HTTPClient.get "/band/read-more/id/#{id}"
 
-      properties[:comment] = response.body
+      properties[:comment] = response.to_s
 
       ## Similar artists
-      url = "#{MetalArchives.config.default_endpoint}band/ajax-recommendations/id/#{id}"
-      response = HTTPClient.get url
+      response = HTTPClient.get "/band/ajax-recommendations/id/#{id}"
 
-      properties[:similar] = Parsers::Band.parse_similar_bands_html response.body
+      properties[:similar] = Parsers::Band.parse_similar_bands_html response.to_s
 
       ## Related links
-      url = "#{MetalArchives.config.default_endpoint}link/ajax-list/type/band/id/#{id}"
-      response = HTTPClient.get url
+      response = HTTPClient.get "/link/ajax-list/type/band/id/#{id}"
 
-      properties[:links] = Parsers::Band.parse_related_links_html response.body
+      properties[:links] = Parsers::Band.parse_related_links_html response.to_s
 
       ## Releases
-      url = "#{MetalArchives.config.default_endpoint}band/discography/id/#{id}/tab/all"
-      response = HTTPClient.get url
+      response = HTTPClient.get "/band/discography/id/#{id}/tab/all"
 
-      properties[:releases] = Parsers::Band.parse_releases_html response.body
+      properties[:releases] = Parsers::Band.parse_releases_html response.to_s
 
       properties
     end
@@ -318,11 +313,10 @@ module MetalArchives
       #     - +:independent+: boolean
       #
       def find_by(query)
-        url = "#{MetalArchives.config.default_endpoint}search/ajax-advanced/searching/bands"
         params = Parsers::Band.map_params query
 
-        response = HTTPClient.get url, params
-        json = JSON.parse response.body
+        response = HTTPClient.get "/search/ajax-advanced/searching/bands", params
+        json = JSON.parse response.to_s
 
         return nil if json["aaData"].empty?
 
@@ -390,8 +384,6 @@ module MetalArchives
       #     - +:independent+: boolean
       #
       def search_by(query)
-        url = "#{MetalArchives.config.default_endpoint}search/ajax-advanced/searching/bands"
-
         params = Parsers::Band.map_params query
 
         l = lambda do
@@ -400,8 +392,8 @@ module MetalArchives
           if @max_items && @start >= @max_items
             []
           else
-            response = HTTPClient.get url, params.merge(iDisplayStart: @start)
-            json = JSON.parse response.body
+            response = HTTPClient.get "/search/ajax-advanced/searching/bands", params.merge(iDisplayStart: @start)
+            json = JSON.parse response.to_s
 
             @max_items = json["iTotalRecords"]
 

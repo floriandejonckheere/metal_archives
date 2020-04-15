@@ -184,28 +184,24 @@ module MetalArchives
     #
     def assemble # :nodoc:
       ## Base attributes
-      url = "#{MetalArchives.config.default_endpoint}artist/view/id/#{id}"
-      response = HTTPClient.get url
+      response = HTTPClient.get "/artist/view/id/#{id}"
 
-      properties = Parsers::Artist.parse_html response.body
+      properties = Parsers::Artist.parse_html response.to_s
 
       ## Biography
-      url = "#{MetalArchives.config.default_endpoint}artist/read-more/id/#{id}/field/biography"
-      response = HTTPClient.get url
+      response = HTTPClient.get "/artist/read-more/id/#{id}/field/biography"
 
-      properties[:biography] = response.body
+      properties[:biography] = response.to_s
 
       ## Trivia
-      url = "#{MetalArchives.config.default_endpoint}artist/read-more/id/#{id}/field/trivia"
-      response = HTTPClient.get url
+      response = HTTPClient.get "/artist/read-more/id/#{id}/field/trivia"
 
-      properties[:trivia] = response.body
+      properties[:trivia] = response.to_s
 
       ## Related links
-      url = "#{MetalArchives.config.default_endpoint}link/ajax-list/type/person/id/#{id}"
-      response = HTTPClient.get url
+      response = HTTPClient.get "/link/ajax-list/type/person/id/#{id}"
 
-      properties[:links] = Parsers::Artist.parse_links_html response.body
+      properties[:links] = Parsers::Artist.parse_links_html response.to_s
 
       properties
     end
@@ -262,11 +258,10 @@ module MetalArchives
       def find_by(query)
         raise MetalArchives::Errors::ArgumentError unless query.include? :name
 
-        url = "#{MetalArchives.config.default_endpoint}search/ajax-artist-search/"
         params = Parsers::Artist.map_params query
 
-        response = HTTPClient.get url, params
-        json = JSON.parse response.body
+        response = HTTPClient.get "/search/ajax-artist-search/", params
+        json = JSON.parse response.to_s
 
         return nil if json["aaData"].empty?
 
@@ -314,7 +309,6 @@ module MetalArchives
       def search(name)
         raise MetalArchives::Errors::ArgumentError unless name.is_a? String
 
-        url = "#{MetalArchives.config.default_endpoint}search/ajax-artist-search/"
         query = { name: name }
 
         params = Parsers::Artist.map_params query
@@ -325,8 +319,8 @@ module MetalArchives
           if @max_items && @start >= @max_items
             []
           else
-            response = HTTPClient.get url, params.merge(iDisplayStart: @start)
-            json = JSON.parse response.body
+            response = HTTPClient.get "/search/ajax-artist-search/", params.merge(iDisplayStart: @start)
+            json = JSON.parse response.to_s
 
             @max_items = json["iTotalRecords"]
 

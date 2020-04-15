@@ -1,66 +1,56 @@
 # frozen_string_literal: true
 
-require "faraday"
-require "faraday_throttler"
+require "http"
+
+require "active_support/core_ext/hash/keys"
+require "active_support/core_ext/module/delegation"
 
 module MetalArchives
-  ##
-  # HTTP request client
-  #
-  class HTTPClient # :nodoc:
+  class HTTPClient
+    include Singleton
+
     class << self
-      ##
-      # Retrieve a HTTP resource
-      #
-      # [Raises]
-      # - rdoc-ref:MetalArchives::Errors::InvalidIDError when receiving a status code == 404n
-      # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
-      #
-      def get(*params)
-        response = client.get(*params)
+      delegate_missing_to :instance
+    end
 
-        raise Errors::InvalidIDError, response.status if response.status == 404
-        raise Errors::APIError, response.status if response.status >= 400
+    attr_reader :endpoint
 
-        response
-      rescue Faraday::ClientError => e
-        MetalArchives.config.logger.error e.response
-        raise Errors::APIError, e
-      end
+    def initialize(endpoint = MetalArchives.config.endpoint)
+      @endpoint = endpoint
+    end
 
-      private
+    def get(path, params = {})
+      response = http
+        .get(url_for(path), params: params)
 
-      ##
-      # Retrieve a HTTP client
-      #
-      #
-      def client
-        raise Errors::InvalidConfigurationError, "Not configured yet" unless MetalArchives.config
+      raise MetalArchives::Errors::InvalidIDError, response if response.code == 404
+      raise MetalArchives::Errors::APIError, response unless response.status.success?
 
-        @faraday ||= Faraday.new do |f|
-          f.request   :url_encoded # form-encode POST params
-          f.response  :logger, MetalArchives.config.logger
+      response
+    end
 
-          f.use       MetalArchives::Middleware::Headers
-          f.use       MetalArchives::Middleware::CacheCheck
-          f.use       MetalArchives::Middleware::RewriteEndpoint
-          f.use       MetalArchives::Middleware::Encoding
+    private
 
-          MetalArchives.config.middleware&.each { |m| f.use m }
+    def http
+      @http ||= HTTP
+        .headers(headers)
+        .use(logging: { logger: MetalArchives.config.logger })
 
-          f.use       :throttler,
-                      rate: MetalArchives.config.request_rate,
-                      wait: MetalArchives.config.request_timeout,
-                      logger: MetalArchives.config.logger
+      return @http unless MetalArchives.config.endpoint_user && MetalArchives.config.endpoint_password
 
-          f.adapter   Faraday.default_adapter
+      @http
+        .basic_auth(user: MetalArchives.config.endpoint_user, pass: MetalArchives.config.endpoint_password)
+    end
 
-          next unless MetalArchives.config.endpoint_user
+    def headers
+      {
+        user_agent: "#{MetalArchives.config.app_name}/#{MetalArchives.config.app_version} (#{MetalArchives.config.app_contact})",
+        accept: "application/json",
+      }
+    end
 
-          f.basic_auth MetalArchives.config.endpoint_user,
-                       MetalArchives.config.endpoint_password
-        end
-      end
+    def url_for(path)
+      "#{endpoint}#{path}"
     end
   end
 end

@@ -4,10 +4,9 @@ require "openssl"
 
 require "zeitwerk"
 loader = Zeitwerk::Loader.for_gem
-load.enable_reloading if ENV["METAL_ARCHIVES_ENV"] == "development"
+loader.enable_reloading if ENV["METAL_ARCHIVES_ENV"] == "development"
 loader.inflector.inflect(
   "id" => "ID",
-  "api" => "API",
   "http_client" => "HTTPClient",
   "lru_cache" => "LRUCache"
 )
