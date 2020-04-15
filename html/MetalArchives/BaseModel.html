@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class MetalArchives::BaseModel - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+  var index_rel_prefix = "../";
+</script>
+
+<script src="../js/navigation.js" defer></script>
+<script src="../js/search.js" defer></script>
+<script src="../js/search_index.js" defer></script>
+<script src="../js/searcher.js" defer></script>
+<script src="../js/darkfish.js" defer></script>
+
+<link href="../css/fonts.css" rel="stylesheet">
+<link href="../css/rdoc.css" rel="stylesheet">
+
+
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link">Object
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-c-boolean">::boolean</a>
+    
+    <li ><a href="#method-c-cache">::cache</a>
+    
+    <li ><a href="#method-c-enum">::enum</a>
+    
+    <li ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-c-property">::property</a>
+    
+    <li ><a href="#method-i-3D-3D">#==</a>
+    
+    <li ><a href="#method-i-assemble">#assemble</a>
+    
+    <li ><a href="#method-i-cached-3F">#cached?</a>
+    
+    <li ><a href="#method-i-load-21">#load!</a>
+    
+    <li ><a href="#method-i-loaded-3F">#loaded?</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-MetalArchives::BaseModel">
+  <h1 id="class-MetalArchives::BaseModel" class="class">
+    class MetalArchives::BaseModel
+  </h1>
+
+  <section class="description">
+    
+<p>Abstract model class</p>
+
+  </section>
+
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+    <section class="attribute-method-details" class="method-section">
+      <header>
+        <h3>Attributes</h3>
+      </header>
+
+      
+      <div id="attribute-c-properties" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">properties</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p><code>Array</code> of declared properties</p>
+        
+        </div>
+      </div>
+      
+    </section>
+    
+
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(hash = {})</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Generic shallow copy constructor</p>
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/metal_archives/models/base_model.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>(<span class="ruby-identifier">hash</span> = {})
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">Errors</span><span class="ruby-operator">::</span><span class="ruby-constant">NotImplementedError</span>, <span class="ruby-string">&quot;no :id property in model&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">respond_to?</span> <span class="ruby-value">:id?</span>, <span class="ruby-keyword">true</span>
+
+  <span class="ruby-identifier">hash</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">property</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">instance_variable_set</span>(<span class="ruby-node">&quot;@#{property}&quot;</span>, <span class="ruby-identifier">value</span>) <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">properties</span>.<span class="ruby-identifier">include?</span> <span class="ruby-identifier">property</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+     <section id="protected-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Protected Class Methods</h3>
+       </header>
+
+    
+      <div id="method-c-boolean" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">boolean</span><span
+            class="method-args">(name, opts = {})</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Defines a model boolean property. This method is an alias for <code>enum name, :values =&gt; [true, false]</code></p>
+<dl class="rdoc-list label-list"><dt><code>name</code>
+<dd>
+<p>Name of the property</p>
+</dd><dt><code>opts</code>
+<dd><dl class="rdoc-list label-list"><dt><code>multiple</code>
+<dd>
+<p>Whether or not the property has multiple values (which turns it into an <code>Array</code> of <code>type</code>)</p>
+</dd></dl>
+</dd></dl>
+          
+          
+
+          
+          <div class="method-source-code" id="boolean-source">
+            <pre><span class="ruby-comment"># File lib/metal_archives/models/base_model.rb, line 213</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">boolean</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">opts</span> = {})
+  <span class="ruby-identifier">enum</span> <span class="ruby-identifier">name</span>, <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">merge</span>(<span class="ruby-value">values:</span> [<span class="ruby-keyword">true</span>, <span class="ruby-keyword">false</span>])
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-cache" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">cache</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Get class-level object cache</p>
+          
+          
+
+          
+          <div class="method-source-code" id="cache-source">
+            <pre><span class="ruby-comment"># File lib/metal_archives/models/base_model.rb, line 90</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">cache</span>
+  <span class="ruby-ivar">@cache</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">MetalArchives</span><span class="ruby-operator">::</span><span class="ruby-constant">LRUCache</span>.<span class="ruby-identifier">new</span> <span class="ruby-constant">MetalArchives</span>.<span class="ruby-identifier">config</span>.<span class="ruby-identifier">cache_size</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-enum" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">enum</span><span
+            class="method-args">(name, opts)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Defines a model enum property.</p>
+<dl class="rdoc-list label-list"><dt><code>name</code>
+<dd>
+<p>Name of the property</p>
+</dd><dt><code>opts</code>
+<dd><dl class="rdoc-list label-list"><dt><code>values</code>
+<dd>
+<p>Required. An array of possible values</p>
+</dd><dt><code>multiple</code>
+<dd>
+<p>Whether or not the property has multiple values (which turns it into an <code>Array</code> of <code>type</code>)</p>
+</dd></dl>
+</dd></dl>
+          
+          
+
+          
+          <div class="method-source-code" id="enum-source">
+            <pre><span class="ruby-comment"># File lib/metal_archives/models/base_model.rb, line 166</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">enum</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">opts</span>)
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;opts[:values] is required&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">opts</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:values</span>]
+
+  (<span class="ruby-ivar">@properties</span> <span class="ruby-operator">||=</span> []) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">name</span>
+
+  <span class="ruby-comment"># property</span>
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-identifier">name</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">load!</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">loaded?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">instance_variable_defined?</span>(<span class="ruby-node">&quot;@#{name}&quot;</span>)
+    <span class="ruby-identifier">instance_variable_get</span>(<span class="ruby-node">&quot;@#{name}&quot;</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># property?</span>
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-node">&quot;#{name}?&quot;</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">load!</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">loaded?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">instance_variable_defined?</span>(<span class="ruby-node">&quot;@#{name}&quot;</span>)
+
+    <span class="ruby-identifier">property</span> = <span class="ruby-identifier">instance_variable_get</span>(<span class="ruby-node">&quot;@#{name}&quot;</span>)
+    <span class="ruby-identifier">property</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:empty?</span>) <span class="ruby-operator">?</span> <span class="ruby-operator">!</span><span class="ruby-identifier">property</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">:</span> <span class="ruby-operator">!</span><span class="ruby-identifier">property</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># property=</span>
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-node">&quot;#{name}=&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+    <span class="ruby-comment"># Check enum type</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:multiple</span>]
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">MetalArchives</span><span class="ruby-operator">::</span><span class="ruby-constant">Errors</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeError</span>, <span class="ruby-node">&quot;invalid enum value #{value}, must be Array for #{name}&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Array</span>
+
+      <span class="ruby-identifier">value</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">val</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-constant">MetalArchives</span><span class="ruby-operator">::</span><span class="ruby-constant">Errors</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeError</span>, <span class="ruby-node">&quot;invalid enum value #{val} for #{name}&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:values</span>].<span class="ruby-identifier">include?</span> <span class="ruby-identifier">val</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">MetalArchives</span><span class="ruby-operator">::</span><span class="ruby-constant">Errors</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeError</span>, <span class="ruby-node">&quot;invalid enum value #{value} for #{name}&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:values</span>].<span class="ruby-identifier">include?</span> <span class="ruby-identifier">value</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">instance_variable_set</span> <span class="ruby-identifier">name</span>, <span class="ruby-identifier">value</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-property" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">property</span><span
+            class="method-args">(name, opts = {})</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Defines a model property.</p>
+<dl class="rdoc-list label-list"><dt><code>name</code>
+<dd>
+<p>Name of the property</p>
+</dd><dt><code>opts</code>
+<dd><dl class="rdoc-list label-list"><dt><code>type</code>
+<dd>
+<p>Data type of property (a constant)</p>
+
+<p>Default: <code>String</code></p>
+</dd><dt><code>multiple</code>
+<dd>
+<p>Whether or not the property has multiple values (which turns it into an <code>Array</code> of <code>type</code>)</p>
+</dd></dl>
+</dd></dl>
+          
+          
+
+          
+          <div class="method-source-code" id="property-source">
+            <pre><span class="ruby-comment"># File lib/metal_archives/models/base_model.rb, line 112</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">property</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">opts</span> = {})
+  (<span class="ruby-ivar">@properties</span> <span class="ruby-operator">||=</span> []) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">name</span>
+
+  <span class="ruby-comment"># property</span>
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-identifier">name</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">load!</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">loaded?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">instance_variable_defined?</span>(<span class="ruby-node">&quot;@#{name}&quot;</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">name</span> <span class="ruby-operator">==</span> <span class="ruby-value">:id</span>
+    <span class="ruby-identifier">instance_variable_get</span>(<span class="ruby-node">&quot;@#{name}&quot;</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># property?</span>
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-node">&quot;#{name}?&quot;</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">load!</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">loaded?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">instance_variable_defined?</span>(<span class="ruby-node">&quot;@#{name}&quot;</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">name</span> <span class="ruby-operator">==</span> <span class="ruby-value">:id</span>
+
+    <span class="ruby-identifier">property</span> = <span class="ruby-identifier">instance_variable_get</span>(<span class="ruby-node">&quot;@#{name}&quot;</span>)
+    <span class="ruby-identifier">property</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:empty?</span>) <span class="ruby-operator">?</span> <span class="ruby-operator">!</span><span class="ruby-identifier">property</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">:</span> <span class="ruby-operator">!</span><span class="ruby-identifier">property</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># property=</span>
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-node">&quot;#{name}=&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-identifier">instance_variable_set</span> <span class="ruby-node">&quot;@#{name}&quot;</span>, <span class="ruby-identifier">value</span>
+      <span class="ruby-keyword">return</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-comment"># Check value type</span>
+    <span class="ruby-identifier">type</span> = <span class="ruby-identifier">opts</span>[<span class="ruby-value">:type</span>] <span class="ruby-operator">||</span> <span class="ruby-constant">String</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:multiple</span>]
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">MetalArchives</span><span class="ruby-operator">::</span><span class="ruby-constant">Errors</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeError</span>, <span class="ruby-node">&quot;invalid type #{value.class}, must be Array for #{name}&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Array</span>
+
+      <span class="ruby-identifier">value</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">val</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-constant">MetalArchives</span><span class="ruby-operator">::</span><span class="ruby-constant">Errors</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeError</span>, <span class="ruby-node">&quot;invalid type #{val.class}, must be #{type} for #{name}&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">val</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-identifier">type</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">MetalArchives</span><span class="ruby-operator">::</span><span class="ruby-constant">Errors</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeError</span>, <span class="ruby-node">&quot;invalid type #{value.class}, must be #{type} for #{name}&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-identifier">type</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">instance_variable_set</span> <span class="ruby-node">&quot;@#{name}&quot;</span>, <span class="ruby-identifier">value</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-3D-3D" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">==</span><span
+            class="method-args">(obj)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns true if two objects have the same type and id</p>
+          
+          
+
+          
+          <div class="method-source-code" id="3D-3D-source">
+            <pre><span class="ruby-comment"># File lib/metal_archives/models/base_model.rb, line 22</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">==</span>(<span class="ruby-identifier">obj</span>)
+  <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">instance_of?</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">id</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-cached-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">cached?</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Whether or not the object is currently cached</p>
+          
+          
+
+          
+          <div class="method-source-code" id="cached-3F-source">
+            <pre><span class="ruby-comment"># File lib/metal_archives/models/base_model.rb, line 62</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">cached?</span>
+  <span class="ruby-identifier">loaded?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">cache</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">id</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-load-21" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">load!</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Fetch, parse and load the data</p>
+<dl class="rdoc-list label-list"><dt>Raises
+<dd></dd></dl>
+<ul><li>
+<p><a href="Errors/InvalidIDError.html"><code>MetalArchives::Errors::InvalidIDError</code></a> when no id</p>
+</li><li>
+<p><a href="Errors/APIError.html"><code>MetalArchives::Errors::APIError</code></a> when receiving a status code &gt;= 400 (except 404)</p>
+</li></ul>
+          
+          
+
+          
+          <div class="method-source-code" id="load-21-source">
+            <pre><span class="ruby-comment"># File lib/metal_archives/models/base_model.rb, line 33</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">load!</span>
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">Errors</span><span class="ruby-operator">::</span><span class="ruby-constant">InvalidIDError</span>, <span class="ruby-string">&quot;no id present&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">id</span>
+
+  <span class="ruby-comment"># Use constructor to set attributes</span>
+  <span class="ruby-identifier">initialize</span> <span class="ruby-identifier">assemble</span>
+
+  <span class="ruby-comment"># Set empty properties to nil</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">properties</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">prop</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">instance_variable_set</span>(<span class="ruby-node">&quot;@#{prop}&quot;</span>, <span class="ruby-keyword">nil</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">instance_variable_defined?</span> <span class="ruby-node">&quot;@#{prop}&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-ivar">@loaded</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">cache</span>[<span class="ruby-identifier">id</span>] = <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">StandardError</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">e</span>
+  <span class="ruby-comment"># Don&#39;t cache invalid requests</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">cache</span>.<span class="ruby-identifier">delete</span> <span class="ruby-identifier">id</span>
+  <span class="ruby-identifier">raise</span> <span class="ruby-identifier">e</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-loaded-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">loaded?</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Whether or not the object is currently loaded</p>
+          
+          
+
+          
+          <div class="method-source-code" id="loaded-3F-source">
+            <pre><span class="ruby-comment"># File lib/metal_archives/models/base_model.rb, line 55</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">loaded?</span>
+  <span class="ruby-operator">!</span><span class="ruby-ivar">@loaded</span>.<span class="ruby-identifier">nil?</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+     <section id="protected-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Protected Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-assemble" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">assemble</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Fetch the data and assemble the model</p>
+
+<p>Override this method</p>
+<dl class="rdoc-list label-list"><dt>Raises
+<dd></dd></dl>
+<ul><li>
+<p><a href="Errors/InvalidIDError.html"><code>MetalArchives::Errors::InvalidIDError</code></a> when no or invalid id</p>
+</li><li>
+<p><a href="Errors/APIError.html"><code>MetalArchives::Errors::APIError</code></a> when receiving a status code &gt;= 400 (except 404)</p>
+</li></ul>
+          
+          
+
+          
+          <div class="method-source-code" id="assemble-source">
+            <pre><span class="ruby-comment"># File lib/metal_archives/models/base_model.rb, line 77</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">assemble</span>
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">Errors</span><span class="ruby-operator">::</span><span class="ruby-constant">NotImplementedError</span>, <span class="ruby-string">&quot;method :assemble not implemented&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.2.1.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

@@ -1,0 +1,25 @@
+Wed, 15 Apr 2020 19:39:51 +0200
+README.md	Wed, 15 Apr 2020 19:39:38 +0200
+lib/metal_archives.rb	Wed, 15 Apr 2020 19:39:38 +0200
+lib/metal_archives/collection.rb	Wed, 15 Apr 2020 19:39:38 +0200
+lib/metal_archives/configuration.rb	Wed, 15 Apr 2020 19:39:38 +0200
+lib/metal_archives/errors.rb	Wed, 15 Apr 2020 19:39:38 +0200
+lib/metal_archives/http_client.rb	Wed, 15 Apr 2020 19:39:38 +0200
+lib/metal_archives/lru_cache.rb	Wed, 15 Apr 2020 19:39:38 +0200
+lib/metal_archives/middleware/cache_check.rb	Wed, 15 Apr 2020 19:39:38 +0200
+lib/metal_archives/middleware/encoding.rb	Wed, 15 Apr 2020 19:39:38 +0200
+lib/metal_archives/middleware/headers.rb	Wed, 15 Apr 2020 19:39:38 +0200
+lib/metal_archives/middleware/rewrite_endpoint.rb	Wed, 15 Apr 2020 19:39:38 +0200
+lib/metal_archives/models/artist.rb	Wed, 15 Apr 2020 19:39:38 +0200
+lib/metal_archives/models/band.rb	Wed, 15 Apr 2020 19:39:38 +0200
+lib/metal_archives/models/base_model.rb	Wed, 15 Apr 2020 19:39:38 +0200
+lib/metal_archives/models/label.rb	Wed, 15 Apr 2020 19:39:38 +0200
+lib/metal_archives/models/release.rb	Wed, 15 Apr 2020 19:39:38 +0200
+lib/metal_archives/nil_date.rb	Wed, 15 Apr 2020 19:39:38 +0200
+lib/metal_archives/parsers/artist.rb	Wed, 15 Apr 2020 19:39:38 +0200
+lib/metal_archives/parsers/band.rb	Wed, 15 Apr 2020 19:39:38 +0200
+lib/metal_archives/parsers/label.rb	Wed, 15 Apr 2020 19:39:38 +0200
+lib/metal_archives/parsers/parser.rb	Wed, 15 Apr 2020 19:39:38 +0200
+lib/metal_archives/parsers/release.rb	Wed, 15 Apr 2020 19:39:38 +0200
+lib/metal_archives/range.rb	Wed, 15 Apr 2020 19:39:38 +0200
+lib/metal_archives/version.rb	Wed, 15 Apr 2020 19:39:38 +0200
