@@ -11,7 +11,6 @@ loader.inflector.inflect(
   "http_client" => "HTTPClient",
   "lru_cache" => "LRUCache"
 )
-loader.collapse("lib/metal_archives/models")
 loader.setup
 
 ##
