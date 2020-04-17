@@ -54,3 +54,5 @@ module MetalArchives
     end
   end
 end
+
+loader.eager_load
