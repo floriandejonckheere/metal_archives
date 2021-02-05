@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = "Metal Archives Ruby API"
   spec.description   = "Ruby API layer that transparently queries, scrapes and caches Metal Archives' website"
-  spec.homepage      = "http://github.com/floriandejonckheere/metal_archives"
+  spec.homepage      = "https://github.com/floriandejonckheere/metal_archives"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.5.8")
 
