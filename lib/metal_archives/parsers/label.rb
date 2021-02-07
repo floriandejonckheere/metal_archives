@@ -49,15 +49,16 @@ module MetalArchives
                 begin
                   dof = Date.parse content
                   props[:date_founded] = NilDate.new dof.year, dof.month, dof.day
-                rescue ArgumentError => e
+                rescue ArgumentError
                   props[:date_founded] = NilDate.parse content
                 end
               when "Sub-labels:"
                 # TODO
               when "Online shopping:"
-                if content == "Yes"
+                case content
+                when "Yes"
                   props[:online_shopping] = true
-                elsif content == "No"
+                when "No"
                   props[:online_shopping] = false
                 end
               else

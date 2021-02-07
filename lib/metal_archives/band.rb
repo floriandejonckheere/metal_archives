@@ -146,7 +146,7 @@ module MetalArchives
     # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    enum :status, values: %i(active split_up on_hold unknown changed_name disputed)
+    enum :status, values: [:active, :split_up, :on_hold, :unknown, :changed_name, :disputed]
 
     ##
     # :attr_reader: releases

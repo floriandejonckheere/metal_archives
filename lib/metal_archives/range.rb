@@ -25,9 +25,9 @@ module MetalArchives
     #
     #     Default: +nil+
     #
-    def initialize(_begin = nil, _end = nil)
-      @begin = _begin
-      @end = _end
+    def initialize(range_begin = nil, range_end = nil)
+      @begin = range_begin
+      @end = range_end
     end
 
     ##

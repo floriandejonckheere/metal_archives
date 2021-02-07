@@ -4,7 +4,7 @@ FactoryBot.define do
   factory :band, class: "MetalArchives::Band" do
     id { FFaker::Number.number [1, 2, 3, 4].sample }
     name { FFaker::Name.name }
-    status { %i(active split_up on_hold unknown changed_name disputed).sample }
+    status { [:active, :split_up, :on_hold, :unknown, :changed_name, :disputed].sample }
 
     comment { FFaker::Lorem.words(200).join " " }
 
@@ -21,13 +21,13 @@ FactoryBot.define do
     photo { FFaker::Internet.url }
 
     genres do
-      3.times.collect do
+      Array.new(3) do
         "#{%w(Black Death Doom Power Progressive Speed Thrash).sample} Metal"
       end
     end
 
     lyrical_themes do
-      3.times.collect do
+      Array.new(3) do
         [
           "Fantasy",
           "Epic battles",
@@ -45,7 +45,7 @@ FactoryBot.define do
     end
 
     similar do
-      4.times.collect do
+      Array.new(4) do
         {
           band: build(:band),
           score: FFaker::Number.between(1, 100),
@@ -54,10 +54,10 @@ FactoryBot.define do
     end
 
     links do
-      3.times.collect do
+      Array.new(3) do
         {
           url: FFaker::Internet.url,
-          type: %i(official unofficial unlisted_bands).sample,
+          type: [:official, :unofficial, :unlisted_bands].sample,
           title: FFaker::Lorem.words(4).join(" "),
         }
       end
@@ -65,7 +65,7 @@ FactoryBot.define do
 
     trait :with_aliases do
       aliases do
-        3.times.collect { FFaker::Name.name }
+        Array.new(3) { FFaker::Name.name }
       end
     end
   end

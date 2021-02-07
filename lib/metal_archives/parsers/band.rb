@@ -88,7 +88,7 @@ module MetalArchives
                 begin
                   dof = Date.parse content
                   props[:date_formed] = NilDate.new dof.year, dof.month, dof.day
-                rescue ArgumentError => e
+                rescue ArgumentError
                   props[:date_formed] = NilDate.parse content
                 end
               when "Genre:"

@@ -6,6 +6,9 @@ require "active_support/core_ext/hash/keys"
 require "active_support/core_ext/module/delegation"
 
 module MetalArchives
+  ##
+  # Generic HTTP client
+  #
   class HTTPClient
     include Singleton
 

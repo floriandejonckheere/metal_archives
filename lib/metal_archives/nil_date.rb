@@ -47,13 +47,13 @@ module MetalArchives
       split = value.split("-")
 
       year = Integer(split[0], 10) if split.any? && split[0] && !split[0].empty?
-      year = nil if year == 0
+      year = nil if year.zero?
 
       month = Integer(split[1], 10) if split.length > 1 && split[1] && !split[1].empty?
-      month = nil if month == 0
+      month = nil if month.zero?
 
       day = Integer(split[2], 10) if split.length > 2 && split[2] && !split[2].empty?
-      day = nil if day == 0
+      day = nil if day.zero?
 
       MetalArchives::NilDate.new year, month, day
     rescue StandardError => e
@@ -76,9 +76,9 @@ module MetalArchives
       return nil if (@day.nil? && !other.day.nil?) || (!@day.nil? && other.day.nil?)
 
       comp_year = @year <=> other.year
-      if comp_year == 0
+      if comp_year.zero?
         comp_month = @month <=> other.month
-        if comp_month == 0
+        if comp_month.zero?
           @day <=> other.day
         else
           comp_month

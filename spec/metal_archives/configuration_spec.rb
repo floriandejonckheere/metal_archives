@@ -1,46 +1,38 @@
 # frozen_string_literal: true
 
 RSpec.describe MetalArchives::Configuration do
+  subject(:configuration) { described_class.new }
+
   describe "properties" do
-    it "has the correct properties" do
-      expect(subject).to respond_to :app_name
-      expect(subject).to respond_to :app_name=
-      expect(subject).to respond_to :app_version
-      expect(subject).to respond_to :app_version=
-      expect(subject).to respond_to :app_contact
-      expect(subject).to respond_to :app_contact=
-      expect(subject).to respond_to :endpoint
-      expect(subject).to respond_to :endpoint=
-      expect(subject).to respond_to :endpoint_user
-      expect(subject).to respond_to :endpoint_user=
-      expect(subject).to respond_to :endpoint_password
-      expect(subject).to respond_to :endpoint_password=
-      expect(subject).to respond_to :logger
-      expect(subject).to respond_to :logger=
-      expect(subject).to respond_to :cache_size
-      expect(subject).to respond_to :cache_size=
-    end
+    it { is_expected.to respond_to :app_name, :app_name= }
+    it { is_expected.to respond_to :app_version, :app_version= }
+    it { is_expected.to respond_to :app_contact, :app_contact= }
+    it { is_expected.to respond_to :endpoint, :endpoint= }
+    it { is_expected.to respond_to :endpoint_user, :endpoint_user= }
+    it { is_expected.to respond_to :endpoint_password, :endpoint_password= }
+    it { is_expected.to respond_to :logger, :logger= }
+    it { is_expected.to respond_to :cache_size, :cache_size= }
 
     it "has default properties" do
-      expect(subject.endpoint).to eq "https://www.metal-archives.com/"
-      expect(subject.logger).not_to be_nil
-      expect(subject.cache_size).to be_an Integer
+      expect(configuration.endpoint).to eq "https://www.metal-archives.com/"
+      expect(configuration.logger).not_to be_nil
+      expect(configuration.cache_size).to be_an Integer
     end
 
     it "overrides defaults" do
-      subject.endpoint = "http://my-proxy.com/"
-      logger = Logger.new STDERR
-      subject.logger = logger
-      subject.cache_size = 0
+      configuration.endpoint = "http://my-proxy.com/"
+      logger = Logger.new $stderr
+      configuration.logger = logger
+      configuration.cache_size = 0
 
-      expect(subject.endpoint).to eq "http://my-proxy.com/"
-      expect(subject.logger).to be logger
-      expect(subject.cache_size).to eq 0
+      expect(configuration.endpoint).to eq "http://my-proxy.com/"
+      expect(configuration.logger).to be logger
+      expect(configuration.cache_size).to eq 0
     end
   end
 
   describe "configuration" do
-    after(:each) do
+    after do
       # Reset configuration
       load "support/metal_archives.rb"
     end

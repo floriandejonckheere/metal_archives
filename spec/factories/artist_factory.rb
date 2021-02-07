@@ -4,7 +4,7 @@ FactoryBot.define do
   factory :artist, class: "MetalArchives::Artist" do
     id { FFaker::Number.number [1, 2, 3, 4].sample }
     name { FFaker::Name.name }
-    gender { %i(male female).sample }
+    gender { [:male, :female].sample }
     biography { FFaker::Lorem.words(200).join " " }
     trivia { FFaker::Lorem.words(200).join " " }
 
@@ -14,10 +14,10 @@ FactoryBot.define do
     date_of_birth { FFaker::Time.date }
 
     links do
-      3.times.collect do
+      Array.new(3) do
         {
           url: FFaker::Internet.url,
-          type: %i(official unofficial unlisted_bands).sample,
+          type: [:official, :unofficial, :unlisted_bands].sample,
           title: FFaker::Lorem.words(4).join(" "),
         }
       end
@@ -30,7 +30,7 @@ FactoryBot.define do
 
     trait :with_aliases do
       aliases do
-        3.times.collect { FFaker::Name.name }
+        Array.new(3) { FFaker::Name.name }
       end
     end
   end

@@ -64,7 +64,10 @@ module MetalArchives
             #                                       'Classical Heavy', 'Classical Power']
             #
             temp = [""]
-            genre.downcase.split.reject { |g| ["(early)", "(later)", "metal"].include? g }.each do |g|
+
+            suffixes = %w((early) (later) metal).freeze
+
+            genre.downcase.split.reject { |g| suffixes.include? g }.each do |g|
               if g.include? "/"
                 # Duplicate all WIP genres
                 temp2 = temp.dup

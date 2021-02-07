@@ -8,7 +8,7 @@ loader.enable_reloading if ENV["METAL_ARCHIVES_ENV"] == "development"
 loader.inflector.inflect(
   "id" => "ID",
   "http_client" => "HTTPClient",
-  "lru_cache" => "LRUCache"
+  "lru_cache" => "LRUCache",
 )
 loader.setup
 

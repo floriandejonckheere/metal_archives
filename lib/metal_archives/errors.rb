@@ -33,12 +33,12 @@ module MetalArchives
     # Error in backend response
     #
     class APIError < Error
-      attr_reader :code,
-                  :message
+      attr_reader :code
 
       def initialize(response)
+        super("#{response.reason}: #{response.body}")
+
         @code = response.code
-        @message = "#{response.reason}: #{response.body}"
       end
     end
 

@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
+# rubocop:disable RSpec/InstanceVariable
 RSpec.describe MetalArchives::Collection do
+  subject(:collection) { described_class.new }
+
   it "iterates" do
     l = lambda do
       @i ||= 0
@@ -13,7 +16,7 @@ RSpec.describe MetalArchives::Collection do
       items
     end
 
-    c = MetalArchives::Collection.new l
+    c = described_class.new l
 
     i = 0
     c.each do |item|
@@ -34,7 +37,7 @@ RSpec.describe MetalArchives::Collection do
       items
     end
 
-    c = MetalArchives::Collection.new l
+    c = described_class.new l
 
     i = 0
     c.each do |item|
@@ -60,17 +63,16 @@ RSpec.describe MetalArchives::Collection do
         items
       end
 
-      c = MetalArchives::Collection.new l
-
-      i = 0
+      c = described_class.new l
 
       expect(c).not_to be_empty
     end
 
     it "is empty" do
-      c = MetalArchives::Collection.new -> { [] }
+      c = described_class.new -> { [] }
 
       expect(c).to be_empty
     end
   end
 end
+# rubocop:enable RSpec/InstanceVariable

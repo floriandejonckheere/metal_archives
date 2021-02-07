@@ -48,7 +48,7 @@ module MetalArchives
     #
     def initialize
       @endpoint = "https://www.metal-archives.com/"
-      @logger = Logger.new STDOUT
+      @logger = Logger.new $stdout
       @cache_size = 100
     end
   end

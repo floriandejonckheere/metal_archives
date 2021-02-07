@@ -20,11 +20,9 @@ module MetalArchives
         #     +Hash+
         #
         def map_params(query)
-          params = {
+          {
             query: query[:name] || "",
           }
-
-          params
         end
 
         ##
@@ -55,10 +53,10 @@ module MetalArchives
               when "Real/full name:"
                 props[:name] = content
               when "Age:"
-                date = content.strip.gsub(/[0-9]* *\(born ([^\)]*)\)/, '\1')
+                date = content.strip.gsub(/[0-9]* *\(born ([^)]*)\)/, '\1')
                 begin
                   props[:date_of_birth] = NilDate.parse date
-                rescue MetalArchives::Errors::ArgumentError => e
+                rescue MetalArchives::Errors::ArgumentError
                   dob = Date.parse date
                   props[:date_of_birth] = NilDate.new dob.year, dob.month, dob.day
                 end
@@ -66,14 +64,14 @@ module MetalArchives
                 begin
                   dod = Date.parse content
                   props[:date_of_death] = NilDate.new dod.year, dod.month, dod.day
-                rescue ArgumentError => e
+                rescue ArgumentError
                   props[:date_of_death] = NilDate.parse content
                 end
               when "Died of:"
                 props[:cause_of_death] = content
               when "Place of origin:"
                 props[:country] = ISO3166::Country.find_country_by_name(sanitize(dt.next_element.css("a").first.content))
-                location = dt.next_element.xpath("text()").map(&:content).join("").strip.gsub(/[()]/, "")
+                location = dt.next_element.xpath("text()").map(&:content).join.strip.gsub(/[()]/, "")
                 props[:location] = location unless location.empty?
               when "Gender:"
                 case content
@@ -110,7 +108,7 @@ module MetalArchives
 
             r = row.css(".member_in_band_role")
 
-            range = parse_year_range r.xpath("text()").map(&:content).join("").strip.gsub(/[\n\r\t]/, "").gsub(/.*\((.*)\)/, '\1')
+            range = parse_year_range r.xpath("text()").map(&:content).join.strip.gsub(/[\n\r\t]/, "").gsub(/.*\((.*)\)/, '\1')
             role = sanitize r.css("strong").first.content
 
             {
@@ -151,7 +149,7 @@ module MetalArchives
           type = :official
 
           doc.css("#linksTablemain tr").each do |row|
-            if row["id"].match /^header_/
+            if /^header_/.match?(row["id"])
               type = row["id"].gsub(/^header_/, "").downcase.to_sym
             else
               a = row.css("td a").first

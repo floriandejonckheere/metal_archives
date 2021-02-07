@@ -71,7 +71,7 @@ module MetalArchives
         #     +Hash+
         #
         def map_params(query)
-          params = {
+          {
             bandName: query[:band_name] || "",
             releaseTitle: query[:title] || "",
             releaseYearFrom: query[:from_year] || "",
@@ -90,8 +90,6 @@ module MetalArchives
             releaseType: map_types(query[:types]),
             releaseFormat: map_formats(query[:formats]),
           }
-
-          params
         end
 
         ##
@@ -120,7 +118,7 @@ module MetalArchives
               when "Release date:"
                 begin
                   props[:date_released] = NilDate.parse content
-                rescue MetalArchives::Errors::ArgumentError => e
+                rescue MetalArchives::Errors::ArgumentError
                   dr = Date.parse content
                   props[:date_released] = NilDate.new dr.year, dr.month, dr.day
                 end
@@ -224,9 +222,9 @@ module MetalArchives
         # Returns +Symbol+, see rdoc-ref:Release.format
         #
         def map_format(format)
-          return :cd if format =~ /CD/
-          return :vinyl if format =~ /[Vv]inyl/
-          return :blu_ray if format =~ /[Bb]lu.?[Rr]ay/
+          return :cd if /CD/.match?(format)
+          return :vinyl if /[Vv]inyl/.match?(format)
+          return :blu_ray if /[Bb]lu.?[Rr]ay/.match?(format)
 
           raise MetalArchives::Errors::ParserError, "Unknown format: #{format}" unless FORMAT_TO_SYM[format]
 

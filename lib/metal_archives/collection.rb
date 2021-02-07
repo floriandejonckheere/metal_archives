@@ -22,15 +22,13 @@ module MetalArchives
     # Calls the given block once for each element, passing that element as a parameter.
     # If no block is given, an Enumerator is returned.
     #
-    def each
-      return to_enum :each unless block_given?
+    def each(&block)
+      return to_enum :each unless block
 
       loop do
         items = instance_exec(&@proc)
 
-        items.each do |item|
-          yield item
-        end
+        items.each(&block)
 
         break if items.empty?
       end

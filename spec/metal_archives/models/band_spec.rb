@@ -3,9 +3,9 @@
 RSpec.describe MetalArchives::Band do
   describe "properties" do
     it "Pathfinder has properties" do
-      band = MetalArchives::Band.find 122_302
+      band = described_class.find 122_302
 
-      expect(band).to be_instance_of MetalArchives::Band
+      expect(band).to be_instance_of described_class
       expect(band.name).to eq "Pathfinder"
       expect(band.aliases).to be_empty
       expect(band.country).to eq ISO3166::Country["PL"]
@@ -25,16 +25,16 @@ RSpec.describe MetalArchives::Band do
       expect(band.links.length).to eq 15
       expect(band.links.count { |l| l[:type] == :official }).to eq 12
       expect(band.links.count { |l| l[:type] == :merchandise }).to eq 3
-      expect(band.links.select { |l| l[:type] == :merchandise }.first[:url]).to eq "https://www.amazon.com/Fifth-Element-Pathfinder/dp/B007MNNCVW"
-      expect(band.links.select { |l| l[:type] == :merchandise }.first[:title]).to eq "Amazon"
+      expect(band.links.find { |l| l[:type] == :merchandise }[:url]).to eq "https://www.amazon.com/Fifth-Element-Pathfinder/dp/B007MNNCVW"
+      expect(band.links.find { |l| l[:type] == :merchandise }[:title]).to eq "Amazon"
 
       expect(band.releases.map(&:title)).to match ["Pathfinder / Demo 2007", "The Beginning", "Moonlight Shadow", "Beyond the Space, Beyond the Time", "Fifth Element"]
     end
 
     it "Rhapsody of Fire has properties" do
-      band = MetalArchives::Band.find 32
+      band = described_class.find 32
 
-      expect(band).to be_instance_of MetalArchives::Band
+      expect(band).to be_instance_of described_class
       expect(band.name).to eq "Rhapsody of Fire"
       expect(band.aliases).to match %w(Thundercross Rhapsody)
       expect(band.releases.map(&:title)).to match ["Eternal Glory", "Legendary Tales", "Emerald Sword", "Symphony of Enchanted Lands", "Dawn of Victory/Primo CD", "Holy Thunderforce", "Dawn of Victory", "Rain of a Thousand Flames", "Power of the Dragonflame", "Tales from the Emerald Sword Saga", "The Dark Secret", "Symphony of Enchanted Lands II - The Dark Secret", "The Magic of the Wizard's Dream", "Live in Canada 2005 - The Dark Secret", "A New Saga Begins", "Triumph or Agony", "Demons, Dragons and Warriors", "Visions from the Enchanted Lands", "The Frozen Tears of Angels", "The Cold Embrace of Fear: A Dark Romantic Symphony", "Aeons of Raging Darkness", "From Chaos to Eternity", "Live: From Chaos to Eternity", "Dark Wings of Steel", "Live in Atlanta", "Shining Star", "Into the Legend", "When Demons Awake", "Land of Immortals", "Knightrider of Doom", "Legendary Years", "The Legend Goes On", "Rain of Fury", "Master of Peace", "The Eighth Mountain"]
@@ -56,10 +56,10 @@ RSpec.describe MetalArchives::Band do
   describe "methods" do
     describe "find" do
       it "finds a band" do
-        band = MetalArchives::Band.find 3_540_361_100
+        band = described_class.find 3_540_361_100
 
         expect(band).not_to be_nil
-        expect(band).to be_instance_of MetalArchives::Band
+        expect(band).to be_instance_of described_class
         expect(band.id).to eq 3_540_361_100
         expect(band.name).to eq "Alquimia"
         expect(band.country).to eq ISO3166::Country["ES"]
@@ -72,37 +72,37 @@ RSpec.describe MetalArchives::Band do
       end
 
       it "lazily loads" do
-        band = MetalArchives::Band.find(-1)
+        band = described_class.find(-1)
 
-        expect(band).to be_instance_of MetalArchives::Band
+        expect(band).to be_instance_of described_class
       end
     end
 
     describe "find!" do
       it "finds a band" do
-        band = MetalArchives::Band.find! 3_540_361_100
+        band = described_class.find! 3_540_361_100
 
-        expect(band).to be_instance_of MetalArchives::Band
+        expect(band).to be_instance_of described_class
         expect(band.name).to eq "Alquimia"
       end
 
       it "raises on invalid id" do
-        expect(-> { MetalArchives::Band.find!(-1) }).to raise_error MetalArchives::Errors::APIError
-        expect(-> { MetalArchives::Band.find! 0 }).to raise_error MetalArchives::Errors::InvalidIDError
-        expect(-> { MetalArchives::Band.find! nil }).to raise_error MetalArchives::Errors::InvalidIDError
+        expect(-> { described_class.find!(-1) }).to raise_error MetalArchives::Errors::APIError
+        expect(-> { described_class.find! 0 }).to raise_error MetalArchives::Errors::InvalidIDError
+        expect(-> { described_class.find! nil }).to raise_error MetalArchives::Errors::InvalidIDError
       end
     end
 
     describe "find_by" do
       it "finds a band" do
-        band = MetalArchives::Band.find_by name: "Falconer"
+        band = described_class.find_by name: "Falconer"
 
-        expect(band).to be_instance_of MetalArchives::Band
+        expect(band).to be_instance_of described_class
         expect(band.id).to eq 74
       end
 
       it "returns nil on invalid id" do
-        band = MetalArchives::Band.find_by name: "SomeNonExistantName"
+        band = described_class.find_by name: "SomeNonExistantName"
 
         expect(band).to be_nil
       end
@@ -110,14 +110,14 @@ RSpec.describe MetalArchives::Band do
 
     describe "find_by!" do
       it "finds a band" do
-        band = MetalArchives::Band.find_by! name: "Falconer"
+        band = described_class.find_by! name: "Falconer"
 
-        expect(band).to be_instance_of MetalArchives::Band
+        expect(band).to be_instance_of described_class
         expect(band.id).to eq 74
       end
 
       it "returns nil on invalid id" do
-        band = MetalArchives::Band.find_by! name: "SomeNonExistantName"
+        band = described_class.find_by! name: "SomeNonExistantName"
 
         expect(band).to be_nil
       end
@@ -125,42 +125,42 @@ RSpec.describe MetalArchives::Band do
 
     describe "search" do
       it "returns a collection" do
-        collection = MetalArchives::Band.search "Alquimia"
+        collection = described_class.search "Alquimia"
 
         expect(collection).to be_instance_of MetalArchives::Collection
-        expect(collection.first).to be_instance_of MetalArchives::Band
+        expect(collection.first).to be_instance_of described_class
       end
 
       it "returns an empty collection" do
-        expect(MetalArchives::Band.search("SomeNoneExistantName")).to be_empty
+        expect(described_class.search("SomeNoneExistantName")).to be_empty
       end
 
       it "searches by name" do
-        expect(MetalArchives::Band.search_by(name: "Alquimia").count).to eq 6
-        expect(MetalArchives::Band.search_by(name: "Lost Horizon").count).to eq 2
-        expect(MetalArchives::Band.search_by(name: "Lost Horizon", exact: true).count).to eq 2
-        expect(MetalArchives::Band.search_by(name: "Alquimia", genre: "Melodic Power").count).to eq 2
+        expect(described_class.search_by(name: "Alquimia").count).to eq 6
+        expect(described_class.search_by(name: "Lost Horizon").count).to eq 2
+        expect(described_class.search_by(name: "Lost Horizon", exact: true).count).to eq 2
+        expect(described_class.search_by(name: "Alquimia", genre: "Melodic Power").count).to eq 2
       end
 
       it "searches by year" do
-        expect(MetalArchives::Band.search_by(name: "Alquimia", year: MetalArchives::Range.new(nil, nil)).count).to eq 6
-        expect(MetalArchives::Band.search_by(name: "Alquimia", year: MetalArchives::Range.new(Date.new(2013), nil)).count).to eq 1
-        expect(MetalArchives::Band.search_by(name: "Alquimia", year: MetalArchives::Range.new(Date.new(2008), Date.new(2008))).count).to eq 1
-        expect(MetalArchives::Band.search_by(name: "Alquimia", year: MetalArchives::Range.new(Date.new(2008), Date.new(2013))).count).to eq 2
-        expect(MetalArchives::Band.search_by(name: "Alquimia", year: MetalArchives::Range.new(nil, Date.new(2013))).count).to eq 6
+        expect(described_class.search_by(name: "Alquimia", year: MetalArchives::Range.new(nil, nil)).count).to eq 6
+        expect(described_class.search_by(name: "Alquimia", year: MetalArchives::Range.new(Date.new(2013), nil)).count).to eq 1
+        expect(described_class.search_by(name: "Alquimia", year: MetalArchives::Range.new(Date.new(2008), Date.new(2008))).count).to eq 1
+        expect(described_class.search_by(name: "Alquimia", year: MetalArchives::Range.new(Date.new(2008), Date.new(2013))).count).to eq 2
+        expect(described_class.search_by(name: "Alquimia", year: MetalArchives::Range.new(nil, Date.new(2013))).count).to eq 6
       end
 
       it "searches by country" do
-        expect(MetalArchives::Band.search_by(name: "Alquimia", country: ISO3166::Country["ES"]).count).to eq 2
-        expect(MetalArchives::Band.search_by(name: "Alquimia", country: ISO3166::Country["AR"]).count).to eq 3
-        expect(MetalArchives::Band.search_by(name: "Alquimia", country: ISO3166::Country["AR"]).count).to eq 3
-        expect(MetalArchives::Band.search_by(name: "Alquimia", label: "Mutus Liber").count).to eq 1
+        expect(described_class.search_by(name: "Alquimia", country: ISO3166::Country["ES"]).count).to eq 2
+        expect(described_class.search_by(name: "Alquimia", country: ISO3166::Country["AR"]).count).to eq 3
+        expect(described_class.search_by(name: "Alquimia", country: ISO3166::Country["AR"]).count).to eq 3
+        expect(described_class.search_by(name: "Alquimia", label: "Mutus Liber").count).to eq 1
       end
     end
 
     describe "all" do
       it "returns a collection" do
-        expect(MetalArchives::Band.all).to be_instance_of MetalArchives::Collection
+        expect(described_class.all).to be_instance_of MetalArchives::Collection
       end
     end
   end

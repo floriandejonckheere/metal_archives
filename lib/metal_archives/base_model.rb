@@ -19,8 +19,8 @@ module MetalArchives
     ##
     # Returns true if two objects have the same type and id
     #
-    def ==(obj)
-      obj.instance_of?(self.class) && id == obj.id
+    def ==(other)
+      other.instance_of?(self.class) && id == other.id
     end
 
     ##

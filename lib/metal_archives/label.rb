@@ -107,7 +107,7 @@ module MetalArchives
     #
     # Returns +:active+, +:closed+ or +:unknown+
     #
-    enum :status, values: %i(active closed unknown)
+    enum :status, values: [:active, :closed, :unknown]
 
     class << self
       ##
@@ -116,8 +116,7 @@ module MetalArchives
       # Returns +Array+ of rdoc-ref:Label
       #
       def search(_name)
-        results = []
-        results
+        []
       end
 
       ##
@@ -129,7 +128,7 @@ module MetalArchives
         client.find_resource(
           :band,
           name: name,
-          id: id
+          id: id,
         )
       end
     end

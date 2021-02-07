@@ -24,7 +24,7 @@ MetalArchives.configure do |c|
   c.endpoint_password = ENV["MA_ENDPOINT_PASSWORD"] if ENV["MA_ENDPOINT_PASSWORD"]
 
   ## Custom logger (optional)
-  c.logger = Logger.new STDOUT
+  c.logger = Logger.new $stdout
   c.logger.level = Logger::WARN
 end
 

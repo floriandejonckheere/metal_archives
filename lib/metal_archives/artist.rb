@@ -102,7 +102,7 @@ module MetalArchives
     # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    enum :gender, values: %i(male female)
+    enum :gender, values: [:male, :female]
 
     ##
     # :attr_reader: biography

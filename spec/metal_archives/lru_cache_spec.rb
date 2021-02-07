@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe MetalArchives::LRUCache do
-  let(:cache) { MetalArchives::LRUCache.new 3 }
+  let(:cache) { described_class.new 3 }
 
   it "stores and retrieves objects" do
     cache[:key] = "MyString"

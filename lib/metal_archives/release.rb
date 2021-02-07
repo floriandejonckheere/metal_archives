@@ -37,7 +37,7 @@ module MetalArchives
     # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    enum :type, values: %i(full_length live demo single ep video boxed_set split compilation split_video collaboration)
+    enum :type, values: [:full_length, :live, :demo, :single, :ep, :video, :boxed_set, :split, :compilation, :split_video, :collaboration]
 
     ##
     # :attr_reader: date_released
@@ -126,9 +126,7 @@ module MetalArchives
       ## Base attributes
       response = HTTPClient.get "/albums/view/id/#{id}"
 
-      properties = Parsers::Release.parse_html response.to_s
-
-      properties
+      Parsers::Release.parse_html response.to_s
     end
 
     class << self

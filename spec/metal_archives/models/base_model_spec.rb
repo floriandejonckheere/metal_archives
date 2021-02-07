@@ -172,7 +172,7 @@ RSpec.describe MetalArchives::BaseModel do
   end
 
   describe "cached?" do
-    context "valid model" do
+    context "when the model is valid" do
       it "has a :cached? method" do
         expect(ModelThree.new).to respond_to :cached?
       end
@@ -193,7 +193,7 @@ RSpec.describe MetalArchives::BaseModel do
       end
     end
 
-    context "invalid model" do
+    context "when the model is invalid" do
       it "has a :cached? method" do
         expect(ModelFive.new).to respond_to :cached?
       end

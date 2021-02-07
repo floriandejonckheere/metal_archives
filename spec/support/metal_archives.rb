@@ -19,6 +19,6 @@ MetalArchives.configure do |c|
   puts "Using #{c.endpoint} as MA endpoint"
 
   ## Custom logger (optional)
-  c.logger = Logger.new STDOUT
+  c.logger = Logger.new $stdout
   c.logger.level = Logger::INFO
 end
