@@ -2,6 +2,8 @@
 
 require "zeitwerk"
 
+require "active_support/all"
+
 ##
 # Metal Archives Ruby API
 #
