@@ -24,7 +24,7 @@ RSpec.describe MetalArchives::Release do
       expect(release.id).to eq 123_563
       expect(release.title).to eq "...and Oceans"
       expect(release.type).to eq :compilation
-      expect(release.date_released).to eq MetalArchives::NilDate.new(2000)
+      expect(release.date_released).to eq MetalArchives::NilDate.new(2001)
       expect(release.catalog_id).to eq "NMLP 025"
       expect(release.version_description).to be_nil
       expect(release.format).to eq :vinyl
@@ -49,7 +49,7 @@ RSpec.describe MetalArchives::Release do
 
       expect(release.title).to eq "...and Oceans"
       expect(release.date_released).to be_instance_of MetalArchives::NilDate
-      expect(release.date_released).to eq MetalArchives::NilDate.new(2000, nil, nil)
+      expect(release.date_released).to eq MetalArchives::NilDate.new(2001)
     end
   end
 
@@ -129,10 +129,7 @@ RSpec.describe MetalArchives::Release do
       end
 
       it "searches by title" do
-        expect(described_class.search_by(title: "Rhapsody").count).to eq 17
-        # expect(MetalArchives::Release.search_by(:title => 'Lost Horizon').count).to eq 3
-        # expect(MetalArchives::Release.search_by(:title => 'Lost Horizon', :exact => true).count).to eq 2
-        # expect(MetalArchives::Release.search_by(:title => 'Alquimia', :genre => 'Melodic Power').count).to eq 2
+        expect(described_class.search_by(title: "Rhapsody").count).to eq 18
       end
     end
 
