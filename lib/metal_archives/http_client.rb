@@ -26,6 +26,9 @@ module MetalArchives
       response = http
         .get(url_for(path), params: params)
 
+      # Log cache status
+      MetalArchives.config.logger.info "Cache #{response.headers['x-cache-status'].downcase} for #{path}" if response.headers["x-cache-status"]
+
       raise MetalArchives::Errors::InvalidIDError, response if response.code == 404
       raise MetalArchives::Errors::APIError, response unless response.status.success?
 
