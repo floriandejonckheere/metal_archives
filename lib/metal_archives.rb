@@ -1,22 +1,22 @@
 # frozen_string_literal: true
 
-require "openssl"
-
 require "zeitwerk"
-loader = Zeitwerk::Loader.for_gem
-loader.enable_reloading if ENV["METAL_ARCHIVES_ENV"] == "development"
-loader.inflector.inflect(
-  "id" => "ID",
-  "http_client" => "HTTPClient",
-  "lru_cache" => "LRUCache",
-)
-loader.setup
 
 ##
 # Metal Archives Ruby API
 #
 module MetalArchives
   class << self
+    # Code loader instance
+    attr_reader :loader
+
+    ##
+    # Root path
+    #
+    def root
+      @root ||= Pathname.new(File.expand_path(File.join("..", ".."), __FILE__))
+    end
+
     ##
     # API configuration
     #
@@ -50,7 +50,29 @@ module MetalArchives
 
       raise MetalArchives::Errors::InvalidConfigurationError, "app_contact has not been configured"
     end
+
+    ##
+    # Set up application framework
+    #
+    def setup
+      @loader = Zeitwerk::Loader.for_gem
+
+      # Register inflections
+      require root.join("config/inflections.rb")
+
+      # Set up code loader
+      loader.enable_reloading if ENV["METAL_ARCHIVES_ENV"] == "development"
+      loader.setup
+      loader.eager_load
+
+      # Load initializers
+      Dir[root.join("config/initializers/*.rb")].sort.each { |f| require f }
+    end
   end
 end
 
-loader.eager_load
+def reload!
+  MetalArchives.loader.reload
+end
+
+MetalArchives.setup
