@@ -42,6 +42,10 @@ Metrics/PerceivedComplexity:
 RSpec/ExampleLength:
   Enabled: false
 
+RSpec/FilePath:
+  Exclude:
+    - spec/metal_archives/models/*
+
 RSpec/MultipleExpectations:
   Enabled: false
 
