@@ -225,27 +225,27 @@ module MetalArchives
     #
     def assemble # :nodoc:
       ## Base attributes
-      response = HTTPClient.get "/band/view/id/#{id}"
+      response = MetalArchives.http.get "/band/view/id/#{id}"
 
       properties = Parsers::Band.parse_html response.to_s
 
       ## Comment
-      response = HTTPClient.get "/band/read-more/id/#{id}"
+      response = MetalArchives.http.get "/band/read-more/id/#{id}"
 
       properties[:comment] = response.to_s
 
       ## Similar artists
-      response = HTTPClient.get "/band/ajax-recommendations/id/#{id}"
+      response = MetalArchives.http.get "/band/ajax-recommendations/id/#{id}"
 
       properties[:similar] = Parsers::Band.parse_similar_bands_html response.to_s
 
       ## Related links
-      response = HTTPClient.get "/link/ajax-list/type/band/id/#{id}"
+      response = MetalArchives.http.get "/link/ajax-list/type/band/id/#{id}"
 
       properties[:links] = Parsers::Band.parse_related_links_html response.to_s
 
       ## Releases
-      response = HTTPClient.get "/band/discography/id/#{id}/tab/all"
+      response = MetalArchives.http.get "/band/discography/id/#{id}/tab/all"
 
       properties[:releases] = Parsers::Band.parse_releases_html response.to_s
 
@@ -315,7 +315,7 @@ module MetalArchives
       def find_by(query)
         params = Parsers::Band.map_params query
 
-        response = HTTPClient.get "/search/ajax-advanced/searching/bands", params
+        response = MetalArchives.http.get "/search/ajax-advanced/searching/bands", params
         json = JSON.parse response.to_s
 
         return nil if json["aaData"].empty?
@@ -392,7 +392,7 @@ module MetalArchives
           if @max_items && @start >= @max_items
             []
           else
-            response = HTTPClient.get "/search/ajax-advanced/searching/bands", params.merge(iDisplayStart: @start)
+            response = MetalArchives.http.get "/search/ajax-advanced/searching/bands", params.merge(iDisplayStart: @start)
             json = JSON.parse response.to_s
 
             @max_items = json["iTotalRecords"]

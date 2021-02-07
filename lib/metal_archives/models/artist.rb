@@ -184,22 +184,22 @@ module MetalArchives
     #
     def assemble # :nodoc:
       ## Base attributes
-      response = HTTPClient.get "/artist/view/id/#{id}"
+      response = MetalArchives.http.get "/artist/view/id/#{id}"
 
       properties = Parsers::Artist.parse_html response.to_s
 
       ## Biography
-      response = HTTPClient.get "/artist/read-more/id/#{id}/field/biography"
+      response = MetalArchives.http.get "/artist/read-more/id/#{id}/field/biography"
 
       properties[:biography] = response.to_s
 
       ## Trivia
-      response = HTTPClient.get "/artist/read-more/id/#{id}/field/trivia"
+      response = MetalArchives.http.get "/artist/read-more/id/#{id}/field/trivia"
 
       properties[:trivia] = response.to_s
 
       ## Related links
-      response = HTTPClient.get "/link/ajax-list/type/person/id/#{id}"
+      response = MetalArchives.http.get "/link/ajax-list/type/person/id/#{id}"
 
       properties[:links] = Parsers::Artist.parse_links_html response.to_s
 
@@ -260,7 +260,7 @@ module MetalArchives
 
         params = Parsers::Artist.map_params query
 
-        response = HTTPClient.get "/search/ajax-artist-search/", params
+        response = MetalArchives.http.get "/search/ajax-artist-search/", params
         json = JSON.parse response.to_s
 
         return nil if json["aaData"].empty?
@@ -319,7 +319,7 @@ module MetalArchives
           if @max_items && @start >= @max_items
             []
           else
-            response = HTTPClient.get "/search/ajax-artist-search/", params.merge(iDisplayStart: @start)
+            response = MetalArchives.http.get "/search/ajax-artist-search/", params.merge(iDisplayStart: @start)
             json = JSON.parse response.to_s
 
             @max_items = json["iTotalRecords"]

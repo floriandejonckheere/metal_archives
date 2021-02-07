@@ -124,7 +124,7 @@ module MetalArchives
     #
     def assemble # :nodoc:
       ## Base attributes
-      response = HTTPClient.get "/albums/view/id/#{id}"
+      response = MetalArchives.http.get "/albums/view/id/#{id}"
 
       Parsers::Release.parse_html response.to_s
     end
@@ -199,7 +199,7 @@ module MetalArchives
       def find_by(query)
         params = Parsers::Release.map_params query
 
-        response = HTTPClient.get "/search/ajax-advanced/searching/albums", params
+        response = MetalArchives.http.get "/search/ajax-advanced/searching/albums", params
         json = JSON.parse response.to_s
 
         return nil if json["aaData"].empty?
@@ -290,7 +290,7 @@ module MetalArchives
           if @max_items && @start >= @max_items
             []
           else
-            response = HTTPClient.get "/search/ajax-advanced/searching/albums", params.merge(iDisplayStart: @start)
+            response = MetalArchives.http.get "/search/ajax-advanced/searching/albums", params.merge(iDisplayStart: @start)
             json = JSON.parse response.to_s
 
             @max_items = json["iTotalRecords"]

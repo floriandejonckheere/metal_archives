@@ -7,12 +7,6 @@ module MetalArchives
   # Generic HTTP client
   #
   class HTTPClient
-    include Singleton
-
-    class << self
-      delegate_missing_to :instance
-    end
-
     attr_reader :endpoint
 
     def initialize(endpoint = MetalArchives.config.endpoint)

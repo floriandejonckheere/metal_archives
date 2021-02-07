@@ -20,6 +20,13 @@ module MetalArchives
     end
 
     ##
+    # HTTP client
+    #
+    def http
+      @http ||= HTTPClient.new
+    end
+
+    ##
     # API configuration
     #
     # Instance of rdoc-ref:MetalArchives::Configuration
