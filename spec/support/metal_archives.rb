@@ -16,8 +16,6 @@ MetalArchives.configure do |c|
   c.endpoint_user = ENV["MA_ENDPOINT_USER"] if ENV["MA_ENDPOINT_USER"]
   c.endpoint_password = ENV["MA_ENDPOINT_PASSWORD"] if ENV["MA_ENDPOINT_PASSWORD"]
 
-  puts "Using #{c.endpoint} as MA endpoint"
-
   ## Custom logger (optional)
   c.logger = Logger.new $stdout
   c.logger.level = Logger::INFO

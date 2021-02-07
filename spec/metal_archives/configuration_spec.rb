@@ -32,11 +32,6 @@ RSpec.describe MetalArchives::Configuration do
   end
 
   describe "configuration" do
-    after do
-      # Reset configuration
-      load "support/metal_archives.rb"
-    end
-
     it "is invalid without app_name" do
       proc = lambda do
         MetalArchives.configure do |c|

@@ -107,4 +107,7 @@ RSpec.configure do |config|
   #   # test failures related to randomization by passing the same `--seed` value
   #   # as the one that triggered the failure.
   #   Kernel.srand config.seed
+
+  # Reset configuration
+  config.before { load "support/metal_archives.rb" }
 end

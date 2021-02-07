@@ -40,7 +40,7 @@ module MetalArchives
           # Photo
           unless doc.css(".member_img").empty?
             photo_uri = URI doc.css(".member_img img").first.attr("src")
-            props[:photo] = Middleware::RewriteEndpoint.rewrite photo_uri
+            props[:photo] = rewrite(photo_uri)
           end
 
           doc.css("#member_info dl").each do |dl|

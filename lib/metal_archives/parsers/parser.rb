@@ -32,6 +32,21 @@ module MetalArchives
         end
 
         ##
+        # Rewrite a URL
+        #
+        # Return +URI+
+        #
+        def rewrite(input)
+          return input unless MetalArchives.config.endpoint
+
+          endpoint = URI(MetalArchives.config.endpoint)
+
+          URI(input)
+            .tap { |u| u.host = endpoint.host }
+            .tap { |u| u.scheme = endpoint.scheme }
+        end
+
+        ##
         # Opinionated parsing of genres
         #
         # Returns an +Array+ of +String+

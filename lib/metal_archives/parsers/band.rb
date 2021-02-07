@@ -62,13 +62,13 @@ module MetalArchives
           # Logo
           unless doc.css(".band_name_img").empty?
             logo_uri = URI doc.css(".band_name_img img").first.attr("src")
-            props[:logo] = Middleware::RewriteEndpoint.rewrite logo_uri
+            props[:logo] = rewrite(logo_uri)
           end
 
           # Photo
           unless doc.css(".band_img").empty?
             photo_uri = URI doc.css(".band_img img").first.attr("src")
-            props[:photo] = Middleware::RewriteEndpoint.rewrite photo_uri
+            props[:photo] = rewrite(photo_uri)
           end
 
           doc.css("#band_stats dl").each do |dl|
