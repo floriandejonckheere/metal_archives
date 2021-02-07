@@ -8,7 +8,7 @@ module MetalArchives
   ##
   # Represents a single performer (but not a solo artist)
   #
-  class Artist < MetalArchives::BaseModel
+  class Artist < BaseModel
     ##
     # :attr_reader: id
     #

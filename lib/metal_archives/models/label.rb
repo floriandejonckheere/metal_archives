@@ -7,7 +7,7 @@ module MetalArchives
   ##
   # Represents a record label
   #
-  class Label < MetalArchives::BaseModel
+  class Label < BaseModel
     ##
     # :attr_reader: id
     #

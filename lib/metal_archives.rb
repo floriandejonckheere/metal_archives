@@ -62,6 +62,7 @@ module MetalArchives
 
       # Set up code loader
       loader.enable_reloading if ENV["METAL_ARCHIVES_ENV"] == "development"
+      loader.collapse(root.join("lib/metal_archives/models"))
       loader.setup
       loader.eager_load
 

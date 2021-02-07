@@ -8,7 +8,7 @@ module MetalArchives
   ##
   # Represents an band (person or group)
   #
-  class Band < MetalArchives::BaseModel
+  class Band < BaseModel
     ##
     # :attr_reader: id
     #
