@@ -174,7 +174,7 @@ RSpec.describe MetalArchives::Artist do
         expect(collection.first).to be_instance_of described_class
 
         expect(described_class.search("Alberto Rionda").count).to eq 1
-        expect(described_class.search("Name").count).to eq 10
+        expect(described_class.search("Name").count).to eq 12
         expect(described_class.search("SomeNonExistantName").count).to eq 0
         expect(described_class.search("SomeNonExistantName")).to be_empty
         expect(described_class.search("Filip").count).to be > 200

@@ -9,12 +9,12 @@ RSpec.describe MetalArchives::Band do
       expect(band.name).to eq "Pathfinder"
       expect(band.aliases).to be_empty
       expect(band.country).to eq ISO3166::Country["PL"]
-      expect(band.location).to eq "Poznań, Greater Poland"
+      expect(band.location).to eq "Poznań, Wielkopolskie"
       expect(band.date_formed).to eq MetalArchives::NilDate.new(2006)
       expect(band.date_active).to eq [MetalArchives::Range.new(MetalArchives::NilDate.new(2006), nil)]
       expect(band.status).to eq :active
       expect(band.genres).to eq ["Symphonic Power"]
-      expect(band.lyrical_themes.sort).to eq ["Fantasy", "Battles", "Glory", "The Four Elements", "Metal"].sort
+      expect(band.lyrical_themes).to match_array %w(Fantasy Sisu)
       expect(band.comment).to match "Pathfinder was founded by"
       expect(band.logo).to be_instance_of URI::HTTPS
       expect(band.logo.path).to eq "/images/1/2/2/3/122302_logo.jpg"
@@ -22,8 +22,8 @@ RSpec.describe MetalArchives::Band do
       expect(band.photo.path).to eq "/images/1/2/2/3/122302_photo.jpg"
       expect(band.independent).not_to be true
       expect(band.similar.length).to eq 21
-      expect(band.links.length).to eq 15
-      expect(band.links.count { |l| l[:type] == :official }).to eq 12
+      expect(band.links.length).to eq 12
+      expect(band.links.count { |l| l[:type] == :official }).to eq 9
       expect(band.links.count { |l| l[:type] == :merchandise }).to eq 3
       expect(band.links.find { |l| l[:type] == :merchandise }[:url]).to eq "https://www.amazon.com/Fifth-Element-Pathfinder/dp/B007MNNCVW"
       expect(band.links.find { |l| l[:type] == :merchandise }[:title]).to eq "Amazon"
@@ -37,7 +37,7 @@ RSpec.describe MetalArchives::Band do
       expect(band).to be_instance_of described_class
       expect(band.name).to eq "Rhapsody of Fire"
       expect(band.aliases).to match %w(Thundercross Rhapsody)
-      expect(band.releases.map(&:title)).to match ["Eternal Glory", "Legendary Tales", "Emerald Sword", "Symphony of Enchanted Lands", "Dawn of Victory/Primo CD", "Holy Thunderforce", "Dawn of Victory", "Rain of a Thousand Flames", "Power of the Dragonflame", "Tales from the Emerald Sword Saga", "The Dark Secret", "Symphony of Enchanted Lands II - The Dark Secret", "The Magic of the Wizard's Dream", "Live in Canada 2005 - The Dark Secret", "A New Saga Begins", "Triumph or Agony", "Demons, Dragons and Warriors", "Visions from the Enchanted Lands", "The Frozen Tears of Angels", "The Cold Embrace of Fear: A Dark Romantic Symphony", "Aeons of Raging Darkness", "From Chaos to Eternity", "Live: From Chaos to Eternity", "Dark Wings of Steel", "Live in Atlanta", "Shining Star", "Into the Legend", "When Demons Awake", "Land of Immortals", "Knightrider of Doom", "Legendary Years", "The Legend Goes On", "Rain of Fury", "Master of Peace", "The Eighth Mountain"]
+      expect(band.releases.map(&:title)).to match ["Eternal Glory", "Legendary Tales", "Emerald Sword", "Symphony of Enchanted Lands", "Holy Thunderforce", "Dawn of Victory", "Rain of a Thousand Flames", "Power of the Dragonflame", "Tales from the Emerald Sword Saga", "The Dark Secret", "Symphony of Enchanted Lands II: The Dark Secret", "The Magic of the Wizard's Dream", "Live in Canada 2005 - The Dark Secret", "A New Saga Begins", "Triumph or Agony", "Demons, Dragons and Warriors", "Visions from the Enchanted Lands", "The Frozen Tears of Angels", "The Cold Embrace of Fear: A Dark Romantic Symphony", "Aeons of Raging Darkness", "From Chaos to Eternity", "Live - From Chaos to Eternity", "Dark Wings of Steel", "Live in Atlanta", "Shining Star", "Into the Legend", "When Demons Awake", "Land of Immortals", "Knightrider of Doom", "Legendary Years", "The Legend Goes On", "Rain of Fury", "Master of Peace", "The Eighth Mountain"]
     end
 
     it "maps status" do

@@ -50,9 +50,9 @@ RSpec.describe MetalArchives::NilDate do
     expect(date.date.day).to eq date.day
   end
 
-  describe "parsing" do
+  describe ".parse" do
     it "parses empty dates" do
-      date = described_class.parse ""
+      date = described_class.parse "-"
 
       expect(date.year?).to be false
       expect(date.month?).to be false

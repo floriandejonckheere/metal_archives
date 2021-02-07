@@ -46,14 +46,14 @@ module MetalArchives
     def self.parse(value)
       split = value.split("-")
 
-      year = Integer(split[0], 10) if split.any? && split[0] && !split[0].empty?
-      year = nil if year.zero?
+      year = Integer(split[0]) if split.any?
+      year = nil if year&.zero?
 
-      month = Integer(split[1], 10) if split.length > 1 && split[1] && !split[1].empty?
-      month = nil if month.zero?
+      month = Integer(split[1]) if split.length > 1
+      month = nil if month&.zero?
 
-      day = Integer(split[2], 10) if split.length > 2 && split[2] && !split[2].empty?
-      day = nil if day.zero?
+      day = Integer(split[2]) if split.length > 2
+      day = nil if day&.zero?
 
       MetalArchives::NilDate.new year, month, day
     rescue StandardError => e
