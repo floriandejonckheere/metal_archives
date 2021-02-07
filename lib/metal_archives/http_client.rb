@@ -38,6 +38,7 @@ module MetalArchives
       @http ||= HTTP
         .headers(headers)
         .use(logging: { logger: MetalArchives.config.logger })
+        .encoding("utf-8")
 
       return @http unless MetalArchives.config.endpoint_user && MetalArchives.config.endpoint_password
 
