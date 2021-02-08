@@ -1,5 +1,9 @@
 # Metal Archives Ruby API
 
+![Continuous Integration](https://github.com/floriandejonckheere/metal_archives/workflows/Continuous%20Integration/badge.svg)
+![Release](https://img.shields.io/github/v/release/floriandejonckheere/metal_archives?label=Latest%20release)
+
+
 MetalArchives is a Ruby API that transparently wraps, caches and normalizes the [Metal Archives](https://www.metal-archives.com) website.
 
 ## Installation
