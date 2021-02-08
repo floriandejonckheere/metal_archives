@@ -110,4 +110,13 @@ RSpec.configure do |config|
 
   # Reset configuration
   config.before { load "support/metal_archives.rb" }
+
+  config.after(:all) do
+    total = MetalArchives.http.metrics.values.sum
+
+    next if total.zero?
+
+    hits = MetalArchives.http.metrics[:hit]
+    puts "\n\nHTTP metrics: #{hits} cache hits out of #{total} requests, hit rate #{100.0 * hits / total}%"
+  end
 end
