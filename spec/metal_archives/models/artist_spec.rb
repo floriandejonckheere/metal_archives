@@ -15,8 +15,7 @@ RSpec.describe MetalArchives::Artist do
       expect(artist.gender).to eq :male
       expect(artist.biography).to match "Avalanch"
       expect(artist.trivia).to match "Sanctuarium Estudios"
-      expect(artist.photo).to be_instance_of URI::HTTPS
-      expect(artist.photo.path).to eq "/images/6/0/9/0/60908_artist.jpg"
+      expect(URI(artist.photo).path).to eq "/images/6/0/9/0/60908_artist.jpg"
 
       expect(artist.bands[0]).to eq band: MetalArchives::Band.find(3_540_361_100),
                                     date_active: MetalArchives::Range.new(MetalArchives::NilDate.new(2013), nil),

@@ -44,6 +44,7 @@ module MetalArchives
           URI(input)
             .tap { |u| u.host = endpoint.host }
             .tap { |u| u.scheme = endpoint.scheme }
+            .to_s
         end
 
         ##

@@ -16,10 +16,8 @@ RSpec.describe MetalArchives::Band do
       expect(band.genres).to eq ["Symphonic Power"]
       expect(band.lyrical_themes).to match_array %w(Fantasy Sisu)
       expect(band.comment).to match "Pathfinder was founded by"
-      expect(band.logo).to be_instance_of URI::HTTPS
-      expect(band.logo.path).to eq "/images/1/2/2/3/122302_logo.jpg"
-      expect(band.photo).to be_instance_of URI::HTTPS
-      expect(band.photo.path).to eq "/images/1/2/2/3/122302_photo.jpg"
+      expect(URI(band.logo).path).to eq "/images/1/2/2/3/122302_logo.jpg"
+      expect(URI(band.photo).path).to eq "/images/1/2/2/3/122302_photo.jpg"
       expect(band.independent).not_to be true
       expect(band.similar.length).to eq 21
       expect(band.links.length).to eq 12
@@ -63,12 +61,8 @@ RSpec.describe MetalArchives::Band do
         expect(band.id).to eq 3_540_361_100
         expect(band.name).to eq "Alquimia"
         expect(band.country).to eq ISO3166::Country["ES"]
-
-        expect(band.logo).to be_instance_of URI::HTTPS
-        expect(band.logo.path).to eq "/images/3/5/4/0/3540361100_logo.gif"
-
-        expect(band.photo).to be_instance_of URI::HTTPS
-        expect(band.photo.path).to eq "/images/3/5/4/0/3540361100_photo.jpg"
+        expect(URI(band.logo).path).to eq "/images/3/5/4/0/3540361100_logo.gif"
+        expect(URI(band.photo).path).to eq "/images/3/5/4/0/3540361100_photo.jpg"
       end
 
       it "lazily loads" do
