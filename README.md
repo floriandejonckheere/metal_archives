@@ -89,17 +89,22 @@ This leads to instantiation of a model with an invalid ID not throwing any error
 Calling any attribute other than `id` will cause all data to be fetched and any errors to be thrown. 
 Refer to the respective methods to find out what errors are thrown in what circumstances.
 
-Models can be forced to load all data by calling the `:load!` method.  
+Models can be forced to load all data by calling the `load!` method.  
 
 ## Cache
 
 In order not to stress the Metal Archives server, you can quickly set up a local proxy that caches the requests.
 
 ```
+# Generate TLS client certificates for NGINX
+openssl req -nodes -new -x509  -keyout nginx/client.key -out nginx/client.pem
+
+
+# Start proxy server
 docker-compose up -d
 ```
 
-A caching proxy server is now available on `http://localhost/`.
+A caching proxy server is now available on `http://localhost:8080/`.
 
 ## Testing
 

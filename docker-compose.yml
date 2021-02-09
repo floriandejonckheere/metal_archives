@@ -4,7 +4,7 @@ services:
   nginx:
     image: nginx:alpine
     ports:
-      - "80:80"
+      - "0.0.0.0:8080:80"
     volumes:
       - ./nginx/:/etc/nginx/conf.d/
       - nginx:/cache/
