@@ -8,7 +8,7 @@ module MetalArchives
     class Base
       attr_accessor :options
 
-      def initialize(options)
+      def initialize(options = {})
         @options = options
 
         validate!
