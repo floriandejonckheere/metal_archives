@@ -39,11 +39,11 @@ module MetalArchives
       end
 
       def include?(key)
-        cache.include?(key)
+        cache.include? key
       end
 
       def delete(key)
-        cache.delete(key)
+        cache.delete key
       end
 
       private
