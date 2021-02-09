@@ -8,10 +8,10 @@ module MetalArchives
     ##
     # Generic shallow copy constructor
     #
-    def initialize(hash = {})
-      raise Errors::NotImplementedError, "no :id property in model" unless respond_to? :id?, true
+    def initialize(attributes = {})
+      raise Errors::NotImplementedError, "no :id property in model" unless respond_to? :id
 
-      hash.each do |property, value|
+      attributes.each do |property, value|
         instance_variable_set("@#{property}", value) if self.class.properties.include? property
       end
     end
