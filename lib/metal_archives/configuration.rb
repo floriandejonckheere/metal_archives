@@ -3,6 +3,8 @@
 require "logger"
 
 module MetalArchives
+  CACHE_STRATEGIES = %w(memory).freeze
+
   ##
   # Contains configuration options
   #
@@ -39,9 +41,14 @@ module MetalArchives
     attr_accessor :logger
 
     ##
-    # Cache size (per object class)
+    # Cache strategy
     #
-    attr_accessor :cache_size
+    attr_accessor :cache_strategy
+
+    ##
+    # Cache strategy options
+    #
+    attr_accessor :cache_options
 
     ##
     # Default configuration values
@@ -49,7 +56,23 @@ module MetalArchives
     def initialize
       @endpoint = "https://www.metal-archives.com/"
       @logger = Logger.new $stdout
-      @cache_size = 100
+
+      @cache_strategy = "memory"
+      @cache_options = { size: 100 }
+    end
+
+    ##
+    # Validate configuration
+    #
+    # [Raises]
+    # - rdoc-ref:MetalArchives::Errors::ConfigurationError when configuration is invalid
+    #
+    def validate!
+      raise Errors::InvalidConfigurationError, "app_name has not been configured" if app_name.blank?
+      raise Errors::InvalidConfigurationError, "app_version has not been configured" if app_version.blank?
+      raise Errors::InvalidConfigurationError, "app_contact has not been configured" if app_contact.blank?
+      raise Errors::InvalidConfigurationError, "cache_strategy has not been configured" if cache_strategy.blank?
+      raise Errors::InvalidConfigurationError, "cache_strategy must be one of: #{CACHE_STRATEGIES.join(', ')}" if CACHE_STRATEGIES.exclude?(cache_strategy.to_s)
     end
   end
 end

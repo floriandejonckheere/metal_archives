@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require "zeitwerk"
-
+require "byebug" if ENV["METAL_ARCHIVES_ENV"] == "development"
 require "active_support/all"
 
 ##
@@ -47,17 +47,12 @@ module MetalArchives
     # - rdoc-ref:InvalidConfigurationException
     #
     def configure
-      raise MetalArchives::Errors::InvalidConfigurationError, "No configuration block given" unless block_given?
+      raise Errors::InvalidConfigurationError, "no configuration block given" unless block_given?
 
-      @config = MetalArchives::Configuration.new
-      yield @config
+      @config = Configuration.new
+      yield config
 
-      raise MetalArchives::Errors::InvalidConfigurationError, "app_name has not been configured" unless MetalArchives.config.app_name && !MetalArchives.config.app_name.empty?
-      raise MetalArchives::Errors::InvalidConfigurationError, "app_version has not been configured" unless MetalArchives.config.app_version && !MetalArchives.config.app_version.empty?
-
-      return if MetalArchives.config.app_contact && !MetalArchives.config.app_contact.empty?
-
-      raise MetalArchives::Errors::InvalidConfigurationError, "app_contact has not been configured"
+      config.validate!
     end
 
     ##

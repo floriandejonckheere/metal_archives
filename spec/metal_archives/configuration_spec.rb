@@ -3,78 +3,71 @@
 RSpec.describe MetalArchives::Configuration do
   subject(:configuration) { described_class.new }
 
-  describe "properties" do
-    it { is_expected.to respond_to :app_name, :app_name= }
-    it { is_expected.to respond_to :app_version, :app_version= }
-    it { is_expected.to respond_to :app_contact, :app_contact= }
-    it { is_expected.to respond_to :endpoint, :endpoint= }
-    it { is_expected.to respond_to :endpoint_user, :endpoint_user= }
-    it { is_expected.to respond_to :endpoint_password, :endpoint_password= }
-    it { is_expected.to respond_to :logger, :logger= }
-    it { is_expected.to respond_to :cache_size, :cache_size= }
+  it { is_expected.to respond_to :app_name, :app_name= }
+  it { is_expected.to respond_to :app_version, :app_version= }
+  it { is_expected.to respond_to :app_contact, :app_contact= }
+  it { is_expected.to respond_to :endpoint, :endpoint= }
+  it { is_expected.to respond_to :endpoint_user, :endpoint_user= }
+  it { is_expected.to respond_to :endpoint_password, :endpoint_password= }
+  it { is_expected.to respond_to :logger, :logger= }
+  it { is_expected.to respond_to :cache_strategy, :cache_strategy= }
+  it { is_expected.to respond_to :cache_options, :cache_options= }
 
-    it "has default properties" do
-      expect(configuration.endpoint).to eq "https://www.metal-archives.com/"
-      expect(configuration.logger).not_to be_nil
-      expect(configuration.cache_size).to be_an Integer
-    end
-
-    it "overrides defaults" do
-      configuration.endpoint = "http://my-proxy.com/"
-      logger = Logger.new $stderr
-      configuration.logger = logger
-      configuration.cache_size = 0
-
-      expect(configuration.endpoint).to eq "http://my-proxy.com/"
-      expect(configuration.logger).to be logger
-      expect(configuration.cache_size).to eq 0
-    end
+  it "has default properties" do
+    expect(configuration.endpoint).to eq "https://www.metal-archives.com/"
+    expect(configuration.logger).not_to be_nil
   end
 
-  describe "configuration" do
-    it "is invalid without app_name" do
-      proc = lambda do
-        MetalArchives.configure do |c|
-          c.app_version = MetalArchives::VERSION
-          c.app_contact = "user@example.com"
-        end
-      end
+  it "overrides defaults" do
+    logger = Logger.new $stderr
 
-      expect(proc).to raise_error MetalArchives::Errors::InvalidConfigurationError
+    configuration.endpoint = "http://my-proxy.com/"
+    configuration.logger = logger
+
+    expect(configuration.endpoint).to eq "http://my-proxy.com/"
+    expect(configuration.logger).to be logger
+  end
+
+  describe "validate!" do
+    it "does not raise when valid" do
+      configuration.app_name = "MetalArchivesGemTestSuite"
+      configuration.app_version = MetalArchives::VERSION
+      configuration.app_contact = "user@example.com"
+
+      expect { configuration.validate! }.not_to raise_error
     end
 
-    it "is invalid without app_version" do
-      proc = lambda do
-        MetalArchives.configure do |c|
-          c.app_name = "MetalArchivesGemTestSuite"
-          c.app_contact = "user@example.com"
-        end
-      end
+    it "raises when app_name is blank" do
+      configuration.app_name = nil
+      configuration.app_version = MetalArchives::VERSION
+      configuration.app_contact = "user@example.com"
 
-      expect(proc).to raise_error MetalArchives::Errors::InvalidConfigurationError
+      expect { configuration.validate! }.to raise_error MetalArchives::Errors::InvalidConfigurationError
     end
 
-    it "is invalid without app_contact" do
-      proc = lambda do
-        MetalArchives.configure do |c|
-          c.app_name = "MetalArchivesGemTestSuite"
-          c.app_version = MetalArchives::VERSION
-        end
-      end
+    it "raises when app_version is blank" do
+      configuration.app_name = "MetalArchivesGemTestSuite"
+      configuration.app_version = nil
+      configuration.app_contact = "user@example.com"
 
-      expect(proc).to raise_error MetalArchives::Errors::InvalidConfigurationError
+      expect { configuration.validate! }.to raise_error MetalArchives::Errors::InvalidConfigurationError
     end
 
-    it "is valid" do
-      proc = lambda do
-        MetalArchives.configure do |c|
-          c.app_name = "MetalArchivesGemTestSuite"
-          c.app_version = MetalArchives::VERSION
-          c.app_contact = "user@example.com"
-        end
-      end
+    it "raises when app_contact is blank" do
+      configuration.app_name = "MetalArchivesGemTestSuite"
+      configuration.app_version = MetalArchives::VERSION
+      configuration.app_contact = nil
 
-      expect(proc).not_to raise_error
+      expect { configuration.validate! }.to raise_error MetalArchives::Errors::InvalidConfigurationError
+    end
+
+    it "raises when cache_strategy is blank" do
+      configuration.app_name = "MetalArchivesGemTestSuite"
+      configuration.app_version = MetalArchives::VERSION
+      configuration.app_contact = "user@example.com"
+      configuration.cache_strategy = nil
+
+      expect { configuration.validate! }.to raise_error MetalArchives::Errors::InvalidConfigurationError
     end
   end
 end
