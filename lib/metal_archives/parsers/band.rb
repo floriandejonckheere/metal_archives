@@ -52,12 +52,29 @@ module MetalArchives
         # - rdoc-ref:MetalArchives::Errors::ParserError when parsing failed. Please report this error.
         #
         def parse_html(response)
-          props = {}
+          # Set default props
+          props = {
+            name: nil,
+            aliases: [],
+
+            logo: nil,
+            photo: nil,
+
+            country: nil,
+            location: nil,
+
+            status: nil,
+            date_formed: nil,
+            date_active: [],
+            independent: nil,
+
+            genres: [],
+            lyrical_themes: [],
+          }
+
           doc = Nokogiri::HTML response
 
           props[:name] = sanitize doc.css("#band_info .band_name a").first.content
-
-          props[:aliases] = []
 
           # Logo
           unless doc.css(".band_name_img").empty?
@@ -94,7 +111,6 @@ module MetalArchives
               when "Genre:"
                 props[:genres] = parse_genre content
               when "Lyrical themes:"
-                props[:lyrical_themes] = []
                 content.split(",").each do |theme|
                   t = theme.split.map(&:capitalize)
                   t.delete "(early)"
@@ -105,7 +121,6 @@ module MetalArchives
                 props[:independent] = (content == "Unsigned/independent")
                 # TODO: label
               when "Years active:"
-                props[:date_active] = []
                 content.split(",").each do |range|
                   # Aliases
                   range.scan(/\(as ([^)]*)\)/).each { |name| props[:aliases] << name.first }

@@ -15,12 +15,24 @@ module MetalArchives
         end
 
         def parse(response)
-          props = {}
+          # Set default props
+          props = {
+            name: nil,
+            contact: [],
+            address: nil,
+            country: nil,
+            phone: nil,
+            status: nil,
+            specialization: [],
+            date_founded: nil,
+
+            online_shopping: nil,
+          }
+
           doc = Nokogiri::HTML(response)
 
           props[:name] = doc.css("#label_info .label_name").first.content
 
-          props[:contact] = []
           doc.css("#label_contact a").each do |contact|
             props[:contact] << {
               title: contact.content,

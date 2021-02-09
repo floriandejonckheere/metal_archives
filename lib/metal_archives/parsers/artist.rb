@@ -34,7 +34,24 @@ module MetalArchives
         # - rdoc-ref:MetalArchives::Errors::ParserError when parsing failed. Please report this error.
         #
         def parse_html(response)
-          props = {}
+          # Set default props
+          props = {
+            name: nil,
+            aliases: [],
+
+            date_of_birth: nil,
+            date_of_death: nil,
+            cause_of_death: nil,
+            gender: nil,
+
+            country: nil,
+            location: nil,
+
+            photo: nil,
+
+            bands: [],
+          }
+
           doc = Nokogiri::HTML response
 
           # Photo
@@ -89,13 +106,10 @@ module MetalArchives
           end
 
           # Aliases
-          props[:aliases] = []
           alt = sanitize doc.css(".band_member_name").first.content
           props[:aliases] << alt unless props[:name] == alt
 
           # Active bands
-          props[:bands] = []
-
           proc = proc do |row|
             link = row.css("h3 a")
             band = if link.any?

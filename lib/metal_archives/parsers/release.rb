@@ -101,7 +101,18 @@ module MetalArchives
         # - rdoc-ref:MetalArchives::Errors::ParserError when parsing failed. Please report this error.
         #
         def parse_html(response)
-          props = {}
+          # Set default props
+          props = {
+            title: nil,
+            type: nil,
+            date_released: nil,
+            catalog_id: nil,
+            identifier: nil,
+            version_description: nil,
+            format: nil,
+            limitation: nil,
+          }
+
           doc = Nokogiri::HTML response
 
           props[:title] = sanitize doc.css("#album_info .album_name a").first.content
