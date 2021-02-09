@@ -32,9 +32,7 @@ module MetalArchives
     # Instance of rdoc-ref:MetalArchives::Configuration
     #
     def config
-      raise MetalArchives::Errors::InvalidConfigurationError, "Gem has not been configured" unless @config
-
-      @config
+      @config ||= Configuration.new
     end
 
     ##
@@ -58,7 +56,6 @@ module MetalArchives
     def configure
       raise Errors::InvalidConfigurationError, "no configuration block given" unless block_given?
 
-      @config = Configuration.new
       yield config
 
       config.validate!
