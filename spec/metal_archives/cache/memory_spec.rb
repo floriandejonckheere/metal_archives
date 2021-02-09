@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe MetalArchives::Cache::Memory do
-  let(:cache) { described_class.new size: 3 }
+  subject(:cache) { described_class.new size: 3 }
 
   describe "#validate!" do
     it "raises when size is not set" do
