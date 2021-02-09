@@ -113,7 +113,7 @@ module MetalArchives
     # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :label, type: MetalArchives::Label
+    property :label, type: Label
 
     ##
     # :attr_reader: independent
@@ -157,7 +157,7 @@ module MetalArchives
     # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :releases, type: MetalArchives::Release, multiple: true
+    property :releases, type: Release, multiple: true
 
     # TODO: members
 

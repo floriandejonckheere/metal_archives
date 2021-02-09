@@ -86,7 +86,7 @@ module MetalArchives
     #
     # Returns +Array+ of rdoc-ref:Label
     #
-    property :sub_labels, type: MetalArchives::Label, multiple: true
+    property :sub_labels, type: Label, multiple: true
 
     ##
     # :attr_reader: online_shopping

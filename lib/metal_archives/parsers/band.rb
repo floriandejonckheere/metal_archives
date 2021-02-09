@@ -131,7 +131,7 @@ module MetalArchives
                   props[:date_active] << MetalArchives::Range.new(date_start, date_end)
                 end
               else
-                raise MetalArchives::Errors::ParserError, "Unknown token: #{dt.content}"
+                raise Errors::ParserError, "Unknown token: #{dt.content}"
               end
             end
           end
@@ -139,7 +139,7 @@ module MetalArchives
           props
         rescue StandardError => e
           e.backtrace.each { |b| MetalArchives.config.logger.error b }
-          raise MetalArchives::Errors::ParserError, e
+          raise Errors::ParserError, e
         end
 
         ##
@@ -164,7 +164,7 @@ module MetalArchives
           similar
         rescue StandardError => e
           e.backtrace.each { |b| MetalArchives.config.logger.error b }
-          raise MetalArchives::Errors::ParserError, e
+          raise Errors::ParserError, e
         end
 
         ##
@@ -197,7 +197,7 @@ module MetalArchives
           links
         rescue StandardError => e
           e.backtrace.each { |b| MetalArchives.config.logger.error b }
-          raise MetalArchives::Errors::ParserError, e
+          raise Errors::ParserError, e
         end
 
         ##
@@ -219,7 +219,7 @@ module MetalArchives
           releases
         rescue StandardError => e
           e.backtrace.each { |b| MetalArchives.config.logger.error b }
-          raise MetalArchives::Errors::ParserError, e
+          raise Errors::ParserError, e
         end
 
         private
@@ -243,7 +243,7 @@ module MetalArchives
             :disputed => "Disputed",
           }
 
-          raise MetalArchives::Errors::ParserError, "Unknown status: #{status}" unless s[status]
+          raise Errors::ParserError, "Unknown status: #{status}" unless s[status]
 
           s[status]
         end

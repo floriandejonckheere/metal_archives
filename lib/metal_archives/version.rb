@@ -15,5 +15,5 @@ module MetalArchives
     STRING = [VERSION, PRE].compact.join("-")
   end
 
-  VERSION = MetalArchives::Version::STRING
+  VERSION = Version::STRING
 end

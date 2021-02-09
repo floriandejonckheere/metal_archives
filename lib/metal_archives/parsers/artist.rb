@@ -73,7 +73,7 @@ module MetalArchives
                 date = content.strip.gsub(/[0-9]* *\(born ([^)]*)\)/, '\1')
                 begin
                   props[:date_of_birth] = NilDate.parse date
-                rescue MetalArchives::Errors::ArgumentError
+                rescue Errors::ArgumentError
                   dob = Date.parse date
                   props[:date_of_birth] = NilDate.new dob.year, dob.month, dob.day
                 end

@@ -129,7 +129,7 @@ module MetalArchives
               when "Release date:"
                 begin
                   props[:date_released] = NilDate.parse content
-                rescue MetalArchives::Errors::ArgumentError
+                rescue Errors::ArgumentError
                   dr = Date.parse content
                   props[:date_released] = NilDate.new dr.year, dr.month, dr.day
                 end
@@ -149,7 +149,7 @@ module MetalArchives
                 next if content == "None yet"
                 # TODO: reviews
               else
-                raise MetalArchives::Errors::ParserError, "Unknown token: #{dt.content}"
+                raise Errors::ParserError, "Unknown token: #{dt.content}"
               end
             end
           end
@@ -187,7 +187,7 @@ module MetalArchives
 
           types = []
           type_syms.each do |type|
-            raise MetalArchives::Errors::ParserError, "Unknown type: #{type}" unless TYPE_TO_QUERY[type]
+            raise Errors::ParserError, "Unknown type: #{type}" unless TYPE_TO_QUERY[type]
 
             types << TYPE_TO_QUERY[type]
           end
@@ -201,7 +201,7 @@ module MetalArchives
         # Returns +Symbol+, see rdoc-ref:Release.type
         #
         def map_type(type)
-          raise MetalArchives::Errors::ParserError, "Unknown type: #{type}" unless TYPE_TO_SYM[type]
+          raise Errors::ParserError, "Unknown type: #{type}" unless TYPE_TO_SYM[type]
 
           TYPE_TO_SYM[type]
         end
@@ -219,7 +219,7 @@ module MetalArchives
 
           formats = []
           format_syms.each do |format|
-            raise MetalArchives::Errors::ParserError, "Unknown format: #{format}" unless FORMAT_TO_QUERY[format]
+            raise Errors::ParserError, "Unknown format: #{format}" unless FORMAT_TO_QUERY[format]
 
             formats << FORMAT_TO_QUERY[format]
           end
@@ -237,7 +237,7 @@ module MetalArchives
           return :vinyl if /[Vv]inyl/.match?(format)
           return :blu_ray if /[Bb]lu.?[Rr]ay/.match?(format)
 
-          raise MetalArchives::Errors::ParserError, "Unknown format: #{format}" unless FORMAT_TO_SYM[format]
+          raise Errors::ParserError, "Unknown format: #{format}" unless FORMAT_TO_SYM[format]
 
           FORMAT_TO_SYM[format]
         end

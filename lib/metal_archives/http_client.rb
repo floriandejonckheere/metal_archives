@@ -26,8 +26,8 @@ module MetalArchives
         metrics[response.headers["x-cache-status"].downcase.to_sym] += 1
       end
 
-      raise MetalArchives::Errors::InvalidIDError, response if response.code == 404
-      raise MetalArchives::Errors::APIError, response unless response.status.success?
+      raise Errors::InvalidIDError, response if response.code == 404
+      raise Errors::APIError, response unless response.status.success?
 
       response
     end
