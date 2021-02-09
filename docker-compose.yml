@@ -10,5 +10,13 @@ services:
       - nginx:/cache/
     restart: always
 
+  redis:
+    image: redis:alpine
+    ports:
+      - "0.0.0.0:5379:5379"
+    volumes:
+      - redis:/data/
+    restart: always
+
 volumes:
   nginx:
