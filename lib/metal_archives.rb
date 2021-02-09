@@ -38,6 +38,15 @@ module MetalArchives
     end
 
     ##
+    # Cache instance
+    #
+    def cache
+      raise MetalArchives::Errors::InvalidConfigurationError, "cache has not been configured" unless config.cache_strategy
+
+      @cache ||= Cache.const_get(loader.inflector.camelize(config.cache_strategy, root))
+    end
+
+    ##
     # Configure API options.
     #
     # A block must be specified, to which a

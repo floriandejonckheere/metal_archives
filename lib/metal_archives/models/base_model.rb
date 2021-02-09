@@ -42,10 +42,10 @@ module MetalArchives
       end
 
       @loaded = true
-      self.class.cache[id] = self
+      MetalArchives.cache[id] = self
     rescue StandardError => e
       # Don't cache invalid requests
-      self.class.cache.delete id
+      MetalArchives.cache.delete id
       raise e
     end
 
@@ -60,7 +60,7 @@ module MetalArchives
     # Whether or not the object is currently cached
     #
     def cached?
-      loaded? && self.class.cache.include?(id)
+      loaded? && MetalArchives.cache.include?(id)
     end
 
     protected
@@ -83,13 +83,6 @@ module MetalArchives
       # +Array+ of declared properties
       #
       attr_accessor :properties
-
-      ##
-      # Get class-level object cache
-      #
-      def cache
-        @cache ||= LRUCache.new MetalArchives.config.cache_size
-      end
 
       protected
 
