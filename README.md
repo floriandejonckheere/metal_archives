@@ -117,7 +117,6 @@ Generate documentation:
 $ bundle exec rake rdoc
 ```
 
-## Copyright
+## License
 
-Copyright 2016-2020 Florian Dejonckheere.
-All content acquired through the usage of this API is copyrighted by the respective owner.
+See [LICENSE.md](LICENSE.md).
