@@ -3,6 +3,16 @@
 RSpec.describe MetalArchives::Cache::Memory do
   let(:cache) { described_class.new size: 3 }
 
+  describe "#validate!" do
+    it "raises when size is not set" do
+      expect { described_class.new size: nil }.to raise_error MetalArchives::Errors::InvalidConfigurationError
+    end
+
+    it "raises when size is not an integer" do
+      expect { described_class.new size: 3.5 }.to raise_error MetalArchives::Errors::InvalidConfigurationError
+    end
+  end
+
   describe "#[], #[]=" do
     it "stores and retrieves an object" do
       cache[:key] = "MyString"

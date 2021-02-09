@@ -10,6 +10,12 @@ module MetalArchives
 
       def initialize(options)
         @options = options
+
+        validate!
+      end
+
+      def validate!
+        raise NotImplementedError
       end
 
       def []

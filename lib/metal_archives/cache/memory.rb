@@ -6,6 +6,11 @@ module MetalArchives
     # Generic LRU memory cache
     #
     class Memory < Base
+      def validate!
+        raise Errors::InvalidConfigurationError, "size has not been configured" if options[:size].blank?
+        raise Errors::InvalidConfigurationError, "size must be a number" unless options[:size].is_a? Integer
+      end
+
       def [](key)
         if keys.include? key
           MetalArchives.config.logger.debug "Cache hit for #{key}"
