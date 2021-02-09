@@ -3,7 +3,7 @@
 require "logger"
 
 module MetalArchives
-  CACHE_STRATEGIES = %w(memory).freeze
+  CACHE_STRATEGIES = %w(memory redis).freeze
 
   ##
   # Contains configuration options
