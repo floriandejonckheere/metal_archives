@@ -40,6 +40,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "pronto"
   spec.add_development_dependency "rake"
   spec.add_development_dependency "rdoc"
+  spec.add_development_dependency "redis"
   spec.add_development_dependency "reek"
   spec.add_development_dependency "rspec"
   spec.add_development_dependency "rubocop"
