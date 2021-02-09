@@ -19,6 +19,10 @@ jobs:
     container:
       image: ruby:3.0-alpine
 
+    services:
+      redis:
+        image: redis:alpine
+
     steps:
       - uses: actions/checkout@v2
 
