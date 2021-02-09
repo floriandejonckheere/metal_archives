@@ -111,7 +111,7 @@ RSpec.configure do |config|
   # Reset configuration
   config.before { load "support/metal_archives.rb" }
 
-  config.after(:all) do
+  config.after(:suite) do
     total = MetalArchives.http.metrics.values.sum
 
     next if total.zero?
