@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe MetalArchives::Configuration do
-  subject(:configuration) { described_class.new }
+  subject(:configuration) { described_class.new app_name: "MetalArchivesGemTestSuite", app_version: MetalArchives::VERSION, app_contact: "user@example.com" }
 
   it { is_expected.to respond_to :app_name, :app_name= }
   it { is_expected.to respond_to :app_version, :app_version= }
@@ -16,55 +16,33 @@ RSpec.describe MetalArchives::Configuration do
   it "has default properties" do
     expect(configuration.endpoint).to eq "https://www.metal-archives.com/"
     expect(configuration.logger).not_to be_nil
-  end
-
-  it "overrides defaults" do
-    logger = Logger.new $stderr
-
-    configuration.endpoint = "http://my-proxy.com/"
-    configuration.logger = logger
-
-    expect(configuration.endpoint).to eq "http://my-proxy.com/"
-    expect(configuration.logger).to be logger
+    expect(configuration.cache_strategy).to eq "memory"
   end
 
   describe "validate!" do
     it "does not raise when valid" do
-      configuration.app_name = "MetalArchivesGemTestSuite"
-      configuration.app_version = MetalArchives::VERSION
-      configuration.app_contact = "user@example.com"
-
       expect { configuration.validate! }.not_to raise_error
     end
 
     it "raises when app_name is blank" do
       configuration.app_name = nil
-      configuration.app_version = MetalArchives::VERSION
-      configuration.app_contact = "user@example.com"
 
       expect { configuration.validate! }.to raise_error MetalArchives::Errors::InvalidConfigurationError
     end
 
     it "raises when app_version is blank" do
-      configuration.app_name = "MetalArchivesGemTestSuite"
       configuration.app_version = nil
-      configuration.app_contact = "user@example.com"
 
       expect { configuration.validate! }.to raise_error MetalArchives::Errors::InvalidConfigurationError
     end
 
     it "raises when app_contact is blank" do
-      configuration.app_name = "MetalArchivesGemTestSuite"
-      configuration.app_version = MetalArchives::VERSION
       configuration.app_contact = nil
 
       expect { configuration.validate! }.to raise_error MetalArchives::Errors::InvalidConfigurationError
     end
 
     it "raises when cache_strategy is blank" do
-      configuration.app_name = "MetalArchivesGemTestSuite"
-      configuration.app_version = MetalArchives::VERSION
-      configuration.app_contact = "user@example.com"
       configuration.cache_strategy = nil
 
       expect { configuration.validate! }.to raise_error MetalArchives::Errors::InvalidConfigurationError

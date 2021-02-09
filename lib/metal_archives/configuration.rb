@@ -53,12 +53,14 @@ module MetalArchives
     ##
     # Default configuration values
     #
-    def initialize
-      @endpoint = "https://www.metal-archives.com/"
-      @logger = Logger.new $stdout
+    def initialize(**attributes)
+      attributes.each { |key, value| send(:"#{key}=", value) }
 
-      @cache_strategy = "memory"
-      @cache_options = { size: 100 }
+      @endpoint ||= "https://www.metal-archives.com/"
+      @logger ||= Logger.new $stdout
+
+      @cache_strategy ||= "memory"
+      @cache_options ||= { size: 100 }
     end
 
     ##
