@@ -108,13 +108,8 @@ RSpec.configure do |config|
   #   # as the one that triggered the failure.
   #   Kernel.srand config.seed
 
-  config.before do
-    # Clear cache
-    MetalArchives.cache.clear
-
-    # Reset configuration
-    load "support/metal_archives.rb"
-  end
+  # Reset configuration
+  config.before { load "support/metal_archives.rb" }
 
   config.after(:suite) do
     total = MetalArchives.http.metrics.values.sum
