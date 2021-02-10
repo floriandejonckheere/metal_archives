@@ -51,6 +51,7 @@ jobs:
           MA_ENDPOINT_USER: ${{ secrets.MA_ENDPOINT_USER }}
           MA_ENDPOINT_PASSWORD: ${{ secrets.MA_ENDPOINT_PASSWORD }}
           WEBMOCK_ALLOW_HOST: ${{ secrets.WEBMOCK_ALLOW_HOST }}
+          REDIS_URL: "redis://redis:6379/"
         run: bundle exec rspec --profile 10 --format progress
 
       - name: Lint
