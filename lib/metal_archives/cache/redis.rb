@@ -18,11 +18,11 @@ module MetalArchives
       def validate!; end
 
       def [](key)
-        redis.get key
+        redis.get cache_key_for(key)
       end
 
       def []=(key, value)
-        redis.set key, value, ex: options[:ttl]
+        redis.set cache_key_for(key), value, ex: options[:ttl]
       end
 
       def clear
@@ -38,6 +38,10 @@ module MetalArchives
       end
 
       private
+
+      def cache_key_for(key)
+        "metal_archives.cache.#{key}"
+      end
 
       def redis
         @redis ||= ::Redis.new(**options.except(:ttl))
