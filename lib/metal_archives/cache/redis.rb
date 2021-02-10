@@ -26,7 +26,7 @@ module MetalArchives
       end
 
       def clear
-        redis.flushdb
+        redis.keys(cache_key_for("*")).each { |key| redis.del key }
       end
 
       def include?(key)
