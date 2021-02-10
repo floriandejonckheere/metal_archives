@@ -41,7 +41,9 @@ module MetalArchives
     def cache
       raise MetalArchives::Errors::InvalidConfigurationError, "cache has not been configured" unless config.cache_strategy
 
-      @cache ||= Cache.const_get(loader.inflector.camelize(config.cache_strategy, root))
+      @cache ||= Cache
+        .const_get(loader.inflector.camelize(config.cache_strategy, root))
+        .new(config.cache_options)
     end
 
     ##
