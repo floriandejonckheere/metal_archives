@@ -8,6 +8,13 @@ module MetalArchives
     # Redis-backed cache
     #
     class Redis < Base
+      def initialize(options = {})
+        super
+
+        # Default TTL is 1 month
+        options[:ttl] ||= (30 * 24 * 60 * 60)
+      end
+
       def validate!; end
 
       def [](key)
@@ -15,7 +22,7 @@ module MetalArchives
       end
 
       def []=(key, value)
-        redis.set key, value
+        redis.set key, value, ex: options[:ttl]
       end
 
       def clear
@@ -33,7 +40,7 @@ module MetalArchives
       private
 
       def redis
-        @redis ||= ::Redis.new(**options)
+        @redis ||= ::Redis.new(**options.except(:ttl))
       end
     end
   end

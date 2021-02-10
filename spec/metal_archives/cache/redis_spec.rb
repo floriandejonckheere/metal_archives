@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe MetalArchives::Cache::Redis do
-  subject(:cache) { described_class.new }
+  subject(:cache) { described_class.new ttl: 1 }
 
   before do
     MetalArchives.configure do |c|
@@ -13,4 +13,14 @@ RSpec.describe MetalArchives::Cache::Redis do
   end
 
   it_behaves_like "a cache strategy"
+
+  it "expires keys after a timeout" do
+    cache[:key] = "MyString"
+
+    expect(cache).to include :key
+
+    sleep 1
+
+    expect(cache).not_to include :key
+  end
 end

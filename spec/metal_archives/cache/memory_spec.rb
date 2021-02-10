@@ -15,7 +15,7 @@ RSpec.describe MetalArchives::Cache::Memory do
     end
   end
 
-  it "implements LRU caching" do
+  it "expires least recently used keys" do
     cache[:a] = "one"
     cache[:b] = "two"
     cache[:c] = "three"
