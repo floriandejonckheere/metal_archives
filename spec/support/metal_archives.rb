@@ -9,6 +9,7 @@ MetalArchives.configure do |c|
   c.app_contact = "user@example.com"
 
   ## Enable Redis as caching backend (optional, overrides default memory cache)
+  ## Available cache strategies: :memory, :redis or :null (disable caching)
   # c.cache_strategy = :redis
   # c.cache_options = { url: "redis://redis:6379", ttl: 1.month.to_i }
 
