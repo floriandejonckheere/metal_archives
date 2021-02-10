@@ -8,8 +8,9 @@ MetalArchives.configure do |c|
   c.app_version = MetalArchives::VERSION
   c.app_contact = "user@example.com"
 
-  ## Custom cache size per object class (optional, overrides defaults)
-  # c.cache_size = 100
+  ## Enable Redis as caching backend (optional, overrides default memory cache)
+  # c.cache_strategy = :redis
+  # c.cache_options = { url: "redis://redis:6379", ttl: 1.month.to_i }
 
   ## Metal Archives endpoint (optional, overrides default)
   c.endpoint = ENV["MA_ENDPOINT"] if ENV["MA_ENDPOINT"]

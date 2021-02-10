@@ -37,8 +37,9 @@ MetalArchives.configure do |c|
   c.app_version = "1.0"
   c.app_contact = "support@mymusicapp.com"
 
-  ## Custom cache size per object class (optional, overrides defaults)
-  # c.cache_size = 100
+  ## Enable Redis as caching backend (optional, overrides default memory cache)
+  # c.cache_strategy = :redis
+  # c.cache_options = { url: "redis://redis:6379", ttl: 1.month.to_i }
   
   ## Metal Archives endpoint (optional, overrides default)
   # c.endpoint = "https://www.metal-archives.com/"
@@ -93,7 +94,12 @@ Models can be forced to load all data by calling the `load!` method.
 
 ## Cache
 
-In order not to stress the Metal Archives server, you can quickly set up a local proxy that caches the requests.
+The gem has builtin caching functionality.
+By default, an in-memory cache is used that evicts cache entries using an LRU-based algorithm.
+However, it is also possible to use Redis as a caching backend.
+Don't forget to include the `redis` gem in your application bundle if you wish to use Redis caching.
+
+In order not to stress the Metal Archives server, you can quickly set up a local HTTP proxy that caches the requests.
 
 ```
 # Generate TLS client certificates for NGINX
