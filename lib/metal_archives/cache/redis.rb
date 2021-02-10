@@ -28,11 +28,11 @@ module MetalArchives
       end
 
       def include?(key)
-        redis.exists? key
+        redis.exists? cache_key_for(key)
       end
 
       def delete(key)
-        redis.del key
+        redis.del cache_key_for(key)
       end
 
       private
