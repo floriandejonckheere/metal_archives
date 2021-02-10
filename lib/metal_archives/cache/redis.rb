@@ -15,8 +15,6 @@ module MetalArchives
         options[:ttl] ||= (30 * 24 * 60 * 60)
       end
 
-      def validate!; end
-
       def [](key)
         redis.get cache_key_for(key)
       end

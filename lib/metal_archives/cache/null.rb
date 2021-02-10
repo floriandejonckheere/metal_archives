@@ -6,8 +6,6 @@ module MetalArchives
     # Null cache
     #
     class Null < Base
-      def validate!; end
-
       def [](_key); end
 
       def []=(_key, _value); end

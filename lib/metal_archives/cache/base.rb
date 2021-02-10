@@ -14,9 +14,7 @@ module MetalArchives
         validate!
       end
 
-      def validate!
-        raise NotImplementedError
-      end
+      def validate!; end
 
       def []
         raise NotImplementedError
