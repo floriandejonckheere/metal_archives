@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-20.04
     strategy:
       matrix:
-        ruby: [ "2.5", "2.6", "2.7", "3.0" ]
+        ruby: [ "2.6", "2.7", "3.0" ]
 
     container:
       image: ruby:3.0-alpine
