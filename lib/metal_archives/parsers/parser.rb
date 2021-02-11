@@ -129,15 +129,17 @@ module MetalArchives
         # Parse year range
         #
         def parse_year_range(input)
-          r = input.split("-")
-          date_start = (r.first == "?" ? nil : Date.new(r.first.to_i))
-          date_end = if r.length > 1
-                       (r.last == "?" || r.last == "present" ? nil : Date.new(r.last.to_i))
-                     else
-                       date_start.dup
-                     end
+          components = input
+            .split("-")
+            .map(&:to_i)
+            .map { |y| y.zero? ? nil : y }
 
-          MetalArchives::Range.new date_start, date_end
+          return if components.empty?
+
+          # Set end if only one year
+          components << components.first if components.count == 1
+
+          components[0]..components[1]
         end
       end
     end

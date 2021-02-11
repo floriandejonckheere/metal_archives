@@ -11,7 +11,7 @@ RSpec.describe MetalArchives::Band do
       expect(band.country).to eq ISO3166::Country["PL"]
       expect(band.location).to eq "Poznań, Wielkopolskie"
       expect(band.date_formed).to eq Date.new(2006)
-      expect(band.date_active).to eq [MetalArchives::Range.new(Date.new(2006), nil)]
+      expect(band.years_active).to eq [2006..]
       expect(band.status).to eq :active
       expect(band.genres).to eq ["Symphonic Power"]
       expect(band.lyrical_themes).to match_array %w(Fantasy Sisu)
@@ -137,11 +137,11 @@ RSpec.describe MetalArchives::Band do
       end
 
       it "searches by year" do
-        expect(described_class.search_by(name: "Alquimia", year: MetalArchives::Range.new(nil, nil)).count).to eq 6
-        expect(described_class.search_by(name: "Alquimia", year: MetalArchives::Range.new(Date.new(2013), nil)).count).to eq 1
-        expect(described_class.search_by(name: "Alquimia", year: MetalArchives::Range.new(Date.new(2008), Date.new(2008))).count).to eq 1
-        expect(described_class.search_by(name: "Alquimia", year: MetalArchives::Range.new(Date.new(2008), Date.new(2013))).count).to eq 2
-        expect(described_class.search_by(name: "Alquimia", year: MetalArchives::Range.new(nil, Date.new(2013))).count).to eq 6
+        expect(described_class.search_by(name: "Alquimia", year: nil..nil).count).to eq 6
+        expect(described_class.search_by(name: "Alquimia", year: 2013..).count).to eq 1
+        expect(described_class.search_by(name: "Alquimia", year: 2008..2008).count).to eq 1
+        expect(described_class.search_by(name: "Alquimia", year: 2008..2013).count).to eq 2
+        expect(described_class.search_by(name: "Alquimia", year: 0..2013).count).to eq 6
       end
 
       it "searches by country" do

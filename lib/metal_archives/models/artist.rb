@@ -165,7 +165,7 @@ module MetalArchives
     # [+bands+]
     #     - +:band+: rdoc-ref:Band
     #     - +:active+: Boolean
-    #     - +:date_active+: +Array+ of rdoc-ref:Range containing rdoc-ref:Date
+    #     - +:years_active+: +Array+ of rdoc-ref:Range containing +Integer+
     #     - +:role+: +String+
     #
     property :bands, type: Hash, multiple: true

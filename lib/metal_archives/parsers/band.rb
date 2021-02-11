@@ -24,8 +24,8 @@ module MetalArchives
             bandName: query[:name] || "",
             exactBandMatch: (query[:exact] ? 1 : 0),
             genre: query[:genre] || "",
-            yearCreationFrom: (query[:year]&.begin ? query[:year].begin.year : "") || "",
-            yearCreationTo: (query[:year]&.end ? query[:year].end.year : "") || "",
+            yearCreationFrom: query[:year]&.begin || "",
+            yearCreationTo: query[:year]&.end || "",
             bandNotes: query[:comment] || "",
             status: map_status(query[:status]),
             themes: query[:lyrical_themes] || "",
@@ -65,7 +65,7 @@ module MetalArchives
 
             status: nil,
             date_formed: nil,
-            date_active: [],
+            years_active: [],
             independent: nil,
 
             genres: [],
@@ -120,10 +120,7 @@ module MetalArchives
                   # Aliases
                   range.scan(/\(as ([^)]*)\)/).each { |name| props[:aliases] << name.first }
                   # Ranges
-                  r = range.gsub(/ *\(as ([^)]*)\) */, "").strip.split("-")
-                  date_start = (r.first == "?" ? nil : Date.new(r.first.to_i))
-                  date_end = (r.last == "?" || r.last == "present" ? nil : Date.new(r.first.to_i))
-                  props[:date_active] << MetalArchives::Range.new(date_start, date_end)
+                  props[:years_active] << parse_year_range(range.gsub(/ *\(as ([^)]*)\) */, ""))
                 end
               else
                 raise Errors::ParserError, "Unknown token: #{dt.content}"

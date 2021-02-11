@@ -116,7 +116,7 @@ module MetalArchives
 
             {
               band: band,
-              date_active: range,
+              years_active: range,
               role: role,
             }
           end

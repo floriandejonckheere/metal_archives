@@ -18,27 +18,27 @@ RSpec.describe MetalArchives::Artist do
       expect(URI(artist.photo).path).to eq "/images/6/0/9/0/60908_artist.jpg"
 
       expect(artist.bands[0]).to eq band: MetalArchives::Band.find(3_540_361_100),
-                                    date_active: MetalArchives::Range.new(Date.new(2013), nil),
+                                    years_active: 2013..,
                                     role: "Guitars",
                                     active: true
 
       expect(artist.bands[1]).to eq band: MetalArchives::Band.find(5795),
-                                    date_active: MetalArchives::Range.new(Date.new(1994), nil),
+                                    years_active: 1994..,
                                     role: "Guitars (lead), Vocals (backing)",
                                     active: true
 
       expect(artist.bands[2]).to eq band: "Geysser",
-                                    date_active: MetalArchives::Range.new(Date.new(2009), nil),
+                                    years_active: 2009..,
                                     role: "Guitars",
                                     active: false
 
       expect(artist.bands[3]).to eq band: "Speed Demons",
-                                    date_active: MetalArchives::Range.new(Date.new(1988), Date.new(1989)),
+                                    years_active: 1988..1989,
                                     role: "Guitars",
                                     active: false
 
       expect(artist.bands[4]).to eq band: "Stunned Parrots",
-                                    date_active: MetalArchives::Range.new(Date.new(2006), nil),
+                                    years_active: 2006..,
                                     role: "Guitars, Keyboards",
                                     active: false
     end
@@ -58,35 +58,35 @@ RSpec.describe MetalArchives::Artist do
       expect(artist.links.find { |l| l[:type] == :official }[:title]).to eq "Facebook"
 
       expect(artist.bands).to include hash_including(band: "Hawkwind",
-                                                     date_active: MetalArchives::Range.new(Date.new(1971), Date.new(1975)),
+                                                     years_active: 1971..1975,
                                                      role: "Bass, Vocals (additional)",
                                                      active: false,),
                                       hash_including(band: "Headcat",
-                                                     date_active: MetalArchives::Range.new(Date.new(2000), Date.new(2015)),
+                                                     years_active: 2000..2015,
                                                      role: "Bass, Guitars, Vocals",
                                                      active: false,),
                                       hash_including(band: MetalArchives::Band.find(203),
-                                                     date_active: MetalArchives::Range.new(Date.new(1975), Date.new(2015)),
+                                                     years_active: 1975..2015,
                                                      role: "Bass, Vocals",
                                                      active: false,),
                                       hash_including(band: "Opal Butterfly",
-                                                     date_active: MetalArchives::Range.new(Date.new(1970), Date.new(1970)),
+                                                     years_active: 1970..1970,
                                                      role: "Guitars",
                                                      active: false,),
                                       hash_including(band: "Sam Gopal",
-                                                     date_active: MetalArchives::Range.new(Date.new(1968), Date.new(1968)),
+                                                     years_active: 1968..1968,
                                                      role: "Guitars",
                                                      active: false,),
                                       hash_including(band: "The Motown Sect",
-                                                     date_active: MetalArchives::Range.new(Date.new(1966), Date.new(1966)),
+                                                     years_active: 1966..1966,
                                                      role: "Guitars, Vocals",
                                                      active: false,),
                                       hash_including(band: "The Rainmakers",
-                                                     date_active: MetalArchives::Range.new(Date.new(1963), Date.new(1966)),
+                                                     years_active: 1963..1966,
                                                      role: "Guitars",
                                                      active: false,),
                                       hash_including(band: "The Rockin' Vickers",
-                                                     date_active: MetalArchives::Range.new(Date.new(1965), Date.new(1967)),
+                                                     years_active: 1965..1967,
                                                      role: "Guitars",
                                                      active: false,)
     end

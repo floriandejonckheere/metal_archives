@@ -42,4 +42,13 @@ RSpec.describe MetalArchives::Parsers::Parser do
       expect(described_class.parse_date("foo")).to be_nil
     end
   end
+
+  describe "#parse_year_range" do
+    it "parses year ranges" do
+      expect(described_class.parse_year_range("2001")).to eq 2001..2001
+      expect(described_class.parse_year_range("?-2001")).to eq nil..2001
+      expect(described_class.parse_year_range("2001-?")).to eq 2001..nil
+      expect(described_class.parse_year_range("2001-present")).to eq 2001..nil
+    end
+  end
 end

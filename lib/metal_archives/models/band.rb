@@ -72,15 +72,15 @@ module MetalArchives
     property :date_formed, type: Date
 
     ##
-    # :attr_reader: date_active
+    # :attr_reader: years_active
     #
-    # Returns +Array+ of rdoc-ref:Range containing rdoc-ref:Date
+    # Returns +Array+ of rdoc-ref:Range containing +Integer+
     #
     # [Raises]
     # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :date_active, type: MetalArchives::Range, multiple: true
+    property :years_active, type: Range, multiple: true
 
     ##
     # :attr_reader: genres

@@ -12,7 +12,7 @@ FactoryBot.define do
     location { FFaker::Address.city }
 
     date_formed { FFaker::Time.date }
-    date_active { build_list :range }
+    years_active { [2000..2001, 2003..] }
 
     label { [build(:label), nil].sample }
     independent { label.nil? }
