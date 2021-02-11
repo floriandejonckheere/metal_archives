@@ -3,14 +3,14 @@
 ##
 # Sample model without :id property or :assemble method
 #
-class ModelOne < MetalArchives::BaseModel
+class ModelOne < MetalArchives::Base
   property :property_one
 end
 
 ##
 # Sample model without :assemble method
 #
-class ModelTwo < MetalArchives::BaseModel
+class ModelTwo < MetalArchives::Base
   property :id
   property :property_one
 end
@@ -18,7 +18,7 @@ end
 ##
 # Sample complete model
 #
-class ModelThree < MetalArchives::BaseModel
+class ModelThree < MetalArchives::Base
   property :id
   property :property_one
 
@@ -30,7 +30,7 @@ end
 ##
 # Sample complete model
 #
-class ModelFour < MetalArchives::BaseModel
+class ModelFour < MetalArchives::Base
   property :id
   property :property_one
 
@@ -42,7 +42,7 @@ end
 ##
 # Sample invalid model
 #
-class ModelFive < MetalArchives::BaseModel
+class ModelFive < MetalArchives::Base
   property :id
   property :property_one
 
@@ -51,7 +51,7 @@ class ModelFive < MetalArchives::BaseModel
   end
 end
 
-RSpec.describe MetalArchives::BaseModel do
+RSpec.describe MetalArchives::Base do
   it "requires an :id property" do
     expect(-> { ModelOne.new(property_one: "foo") }).to raise_error MetalArchives::Errors::NotImplementedError
   end

@@ -4,7 +4,7 @@ module MetalArchives
   ##
   # Abstract model class
   #
-  class BaseModel
+  class Base
     ##
     # Generic shallow copy constructor
     #

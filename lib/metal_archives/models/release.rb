@@ -7,7 +7,7 @@ module MetalArchives
   ##
   # Represents a release
   #
-  class Release < BaseModel
+  class Release < Base
     ##
     # :attr_reader: id
     #
