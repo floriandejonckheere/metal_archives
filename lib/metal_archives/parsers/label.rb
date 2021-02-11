@@ -50,7 +50,7 @@ module MetalArchives
               when "Address:"
                 props[:address] = content
               when "Country:"
-                props[:country] = ParserHelper.parse_country css("a").first.content
+                props[:country] = Country.parse(css("a").first.content)
               when "Phone number:"
                 props[:phone] = content
               when "Status:"

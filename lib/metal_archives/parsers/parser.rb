@@ -1,27 +1,14 @@
 # frozen_string_literal: true
 
 require "date"
-require "countries"
 
 module MetalArchives
-  ##
-  # Mapping layer from and to MA Web Service
-  #
-  module Parsers # :nodoc:
+  module Parsers
     ##
     # Parser base class
     #
     class Parser
       class << self
-        ##
-        # Parse a country
-        #
-        # Returns +ISO3166::Country+
-        #
-        def parse_country(input)
-          ISO3166::Country.find_country_by_name input
-        end
-
         ##
         # Parse a date
         #

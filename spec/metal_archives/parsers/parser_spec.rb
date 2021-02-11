@@ -9,14 +9,6 @@ RSpec.describe MetalArchives::Parsers::Parser do
     end
   end
 
-  describe "#parse_country" do
-    it "parses countries" do
-      expect(described_class.parse_country("United States")).to eq ISO3166::Country["US"]
-      expect(described_class.parse_country("Germany")).to eq ISO3166::Country["DE"]
-      expect(described_class.parse_country("Belgium")).to eq ISO3166::Country["BE"]
-    end
-  end
-
   describe "#parse_genre" do
     it "parses genres" do
       expect(described_class.parse_genre("Death, Power, Black")).to match_array %w(Black Death Power)

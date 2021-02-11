@@ -96,7 +96,7 @@ module MetalArchives
 
               case dt.content
               when "Country of origin:"
-                props[:country] = ISO3166::Country.find_country_by_name sanitize(dt.next_element.css("a").first.content)
+                props[:country] = Country.parse(sanitize(dt.next_element.css("a").first.content))
               when "Location:"
                 props[:location] = content
               when "Status:"

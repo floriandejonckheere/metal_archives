@@ -76,7 +76,7 @@ module MetalArchives
               when "Died of:"
                 props[:cause_of_death] = content
               when "Place of origin:"
-                props[:country] = ISO3166::Country.find_country_by_name(sanitize(dt.next_element.css("a").first.content))
+                props[:country] = Country.parse(sanitize(dt.next_element.css("a").first.content))
                 location = dt.next_element.xpath("text()").map(&:content).join.strip.gsub(/[()]/, "")
                 props[:location] = location unless location.empty?
               when "Gender:"
