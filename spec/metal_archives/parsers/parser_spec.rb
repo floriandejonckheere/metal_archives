@@ -27,4 +27,19 @@ RSpec.describe MetalArchives::Parsers::Parser do
       expect(described_class.parse_genre("Traditional/Classical Heavy/Power Metal")).to match_array ["Traditional Heavy", "Traditional Power", "Classical Heavy", "Classical Power"]
     end
   end
+
+  describe "#parse_date" do
+    it "parses dates" do
+      expect(described_class.parse_date("2001")).to eq Date.new(2001)
+      expect(described_class.parse_date("2001-02")).to eq Date.new(2001, 2)
+      expect(described_class.parse_date("2001-02-03")).to eq Date.new(2001, 2, 3)
+
+      expect(described_class.parse_date("February 3rd, 2001")).to eq Date.new(2001, 2, 3)
+    end
+
+    it "does not parse invalid dates" do
+      expect(described_class.parse_date("-")).to be_nil
+      expect(described_class.parse_date("foo")).to be_nil
+    end
+  end
 end

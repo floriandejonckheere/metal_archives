@@ -23,6 +23,27 @@ module MetalArchives
         end
 
         ##
+        # Parse a date
+        #
+        # Returns +Date+
+        #
+        def parse_date(input)
+          Date.parse(input)
+        rescue Date::Error
+          components = input
+            .split("-")
+            .map(&:to_i)
+            .reject(&:zero?)
+            .compact
+
+          return if components.empty?
+
+          Date.new(*components)
+        rescue TypeError
+          nil
+        end
+
+        ##
         # Sanitize a string
         #
         # Return +String+
