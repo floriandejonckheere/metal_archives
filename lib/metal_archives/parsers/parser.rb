@@ -33,23 +33,6 @@ module MetalArchives
             .tap { |u| u.scheme = endpoint.scheme }
             .to_s
         end
-
-        ##
-        # Parse year range
-        #
-        def parse_year_range(input)
-          components = input
-            .split("-")
-            .map(&:to_i)
-            .map { |y| y.zero? ? nil : y }
-
-          return if components.empty?
-
-          # Set end if only one year
-          components << components.first if components.count == 1
-
-          components[0]..components[1]
-        end
       end
     end
   end

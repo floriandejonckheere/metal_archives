@@ -120,7 +120,7 @@ module MetalArchives
                   # Aliases
                   range.scan(/\(as ([^)]*)\)/).each { |name| props[:aliases] << name.first }
                   # Ranges
-                  props[:years_active] << parse_year_range(range.gsub(/ *\(as ([^)]*)\) */, ""))
+                  props[:years_active] << Parsers::Year.parse(range.gsub(/ *\(as ([^)]*)\) */, ""))
                 end
               else
                 raise Errors::ParserError, "Unknown token: #{dt.content}"

@@ -111,7 +111,7 @@ module MetalArchives
 
             r = row.css(".member_in_band_role")
 
-            range = parse_year_range r.xpath("text()").map(&:content).join.strip.gsub(/[\n\r\t]/, "").gsub(/.*\((.*)\)/, '\1')
+            range = Parsers::Year.parse(r.xpath("text()").map(&:content).join.strip.gsub(/[\n\r\t]/, "").gsub(/.*\((.*)\)/, '\1'))
             role = sanitize r.css("strong").first.content
 
             {
