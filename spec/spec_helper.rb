@@ -124,6 +124,10 @@ RSpec.configure do |config|
     next if total.zero?
 
     hits = MetalArchives.http.metrics[:hit]
-    puts "\n\nHTTP metrics: #{hits} cache hits out of #{total} requests, hit rate #{100.0 * hits / total}%"
+    ratio = 100 * hits / total
+
+    next unless ratio < 100
+
+    puts "\n\nWarning: HTTP cache hit rate ratio was only #{ratio.truncate(2)}% (#{hits} / #{total})"
   end
 end
