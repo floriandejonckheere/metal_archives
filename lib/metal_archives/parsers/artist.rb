@@ -70,9 +70,9 @@ module MetalArchives
               when "Real/full name:"
                 props[:name] = content
               when "Age:"
-                props[:date_of_birth] = parse_date content.strip.gsub(/[0-9]* *\(born ([^)]*)\)/, '\1')
+                props[:date_of_birth] = Parsers::Date.parse(content.strip.gsub(/[0-9]* *\(born ([^)]*)\)/, '\1'))
               when "R.I.P.:"
-                props[:date_of_death] = parse_date content
+                props[:date_of_death] = Parsers::Date.parse(content)
               when "Died of:"
                 props[:cause_of_death] = content
               when "Place of origin:"

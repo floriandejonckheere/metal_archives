@@ -58,7 +58,7 @@ module MetalArchives
               when "Specialised in:"
                 props[:specializations] = ParserHelper.parse_genre content
               when "Founding date :"
-                props[:date_founded] = parse_date content
+                props[:date_founded] = Parsers::Date.parse(content)
               when "Sub-labels:"
                 # TODO
               when "Online shopping:"

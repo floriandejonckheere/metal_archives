@@ -21,21 +21,6 @@ RSpec.describe MetalArchives::Parsers::Parser do
     end
   end
 
-  describe "#parse_date" do
-    it "parses dates" do
-      expect(described_class.parse_date("2001")).to eq Date.new(2001)
-      expect(described_class.parse_date("2001-02")).to eq Date.new(2001, 2)
-      expect(described_class.parse_date("2001-02-03")).to eq Date.new(2001, 2, 3)
-
-      expect(described_class.parse_date("February 3rd, 2001")).to eq Date.new(2001, 2, 3)
-    end
-
-    it "does not parse invalid dates" do
-      expect(described_class.parse_date("-")).to be_nil
-      expect(described_class.parse_date("foo")).to be_nil
-    end
-  end
-
   describe "#parse_year_range" do
     it "parses year ranges" do
       expect(described_class.parse_year_range("2001")).to eq 2001..2001

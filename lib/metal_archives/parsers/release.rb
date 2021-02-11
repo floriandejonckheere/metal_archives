@@ -127,7 +127,7 @@ module MetalArchives
               when "Type:"
                 props[:type] = map_type content
               when "Release date:"
-                props[:date_released] = parse_date content
+                props[:date_released] = Parsers::Date.parse(content)
               when "Catalog ID:"
                 props[:catalog_id] = content
               when "Identifier:"

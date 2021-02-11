@@ -102,7 +102,7 @@ module MetalArchives
               when "Status:"
                 props[:status] = content.downcase.tr(" ", "_").to_sym
               when "Formed in:"
-                props[:date_formed] = parse_date content
+                props[:date_formed] = Parsers::Date.parse(content)
               when "Genre:"
                 props[:genres] = parse_genre content
               when "Lyrical themes:"
