@@ -9,7 +9,7 @@ RSpec.describe MetalArchives::Release do
       expect(release.id).to eq 416_934
       expect(release.title).to eq "Tales of Ancient Prophecies"
       expect(release.type).to eq :full_length
-      expect(release.date_released).to eq MetalArchives::NilDate.new(2014, 6, 4)
+      expect(release.date_released).to eq Date.new(2014, 6, 4)
       expect(release.catalog_id).to eq "BLOD091CD"
       expect(release.version_description).to be_nil
       expect(release.format).to eq :cd
@@ -24,7 +24,7 @@ RSpec.describe MetalArchives::Release do
       expect(release.id).to eq 123_563
       expect(release.title).to eq "...and Oceans"
       expect(release.type).to eq :compilation
-      expect(release.date_released).to eq MetalArchives::NilDate.new(2001)
+      expect(release.date_released).to eq Date.new(2001)
       expect(release.catalog_id).to eq "NMLP 025"
       expect(release.version_description).to be_nil
       expect(release.format).to eq :vinyl
@@ -42,14 +42,6 @@ RSpec.describe MetalArchives::Release do
       release = described_class.find 100_770
 
       expect(release.format).to eq :cd
-    end
-
-    it "uses NilDate" do
-      release = described_class.find 123_563
-
-      expect(release.title).to eq "...and Oceans"
-      expect(release.date_released).to be_instance_of MetalArchives::NilDate
-      expect(release.date_released).to eq MetalArchives::NilDate.new(2001)
     end
   end
 

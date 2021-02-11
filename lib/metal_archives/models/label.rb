@@ -73,13 +73,13 @@ module MetalArchives
     ##
     # :attr_reader: date_founded
     #
-    # Returns +NilDate+
+    # Returns +Date+
     #
     # [Raises]
     # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :date_founded, type: NilDate
+    property :date_founded, type: Date
 
     ##
     # :attr_reader: sub_labels

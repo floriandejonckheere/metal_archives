@@ -127,12 +127,7 @@ module MetalArchives
               when "Type:"
                 props[:type] = map_type content
               when "Release date:"
-                begin
-                  props[:date_released] = NilDate.parse content
-                rescue Errors::ArgumentError
-                  dr = Date.parse content
-                  props[:date_released] = NilDate.new dr.year, dr.month, dr.day
-                end
+                props[:date_released] = parse_date content
               when "Catalog ID:"
                 props[:catalog_id] = content
               when "Identifier:"

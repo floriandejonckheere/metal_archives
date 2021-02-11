@@ -130,9 +130,9 @@ module MetalArchives
         #
         def parse_year_range(input)
           r = input.split("-")
-          date_start = (r.first == "?" ? nil : NilDate.new(r.first.to_i))
+          date_start = (r.first == "?" ? nil : Date.new(r.first.to_i))
           date_end = if r.length > 1
-                       (r.last == "?" || r.last == "present" ? nil : NilDate.new(r.last.to_i))
+                       (r.last == "?" || r.last == "present" ? nil : Date.new(r.last.to_i))
                      else
                        date_start.dup
                      end

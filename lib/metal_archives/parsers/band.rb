@@ -102,12 +102,7 @@ module MetalArchives
               when "Status:"
                 props[:status] = content.downcase.tr(" ", "_").to_sym
               when "Formed in:"
-                begin
-                  dof = Date.parse content
-                  props[:date_formed] = NilDate.new dof.year, dof.month, dof.day
-                rescue ArgumentError
-                  props[:date_formed] = NilDate.parse content
-                end
+                props[:date_formed] = parse_date content
               when "Genre:"
                 props[:genres] = parse_genre content
               when "Lyrical themes:"
@@ -126,8 +121,8 @@ module MetalArchives
                   range.scan(/\(as ([^)]*)\)/).each { |name| props[:aliases] << name.first }
                   # Ranges
                   r = range.gsub(/ *\(as ([^)]*)\) */, "").strip.split("-")
-                  date_start = (r.first == "?" ? nil : NilDate.new(r.first.to_i))
-                  date_end = (r.last == "?" || r.last == "present" ? nil : NilDate.new(r.first.to_i))
+                  date_start = (r.first == "?" ? nil : Date.new(r.first.to_i))
+                  date_end = (r.last == "?" || r.last == "present" ? nil : Date.new(r.first.to_i))
                   props[:date_active] << MetalArchives::Range.new(date_start, date_end)
                 end
               else

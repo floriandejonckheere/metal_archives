@@ -63,24 +63,24 @@ module MetalArchives
     ##
     # :attr_reader: date_of_birth
     #
-    # Returns rdoc-ref:NilDate
+    # Returns rdoc-ref:Date
     #
     # [Raises]
     # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :date_of_birth, type: NilDate
+    property :date_of_birth, type: Date
 
     ##
     # :attr_reader: date_of_death
     #
-    # Returns rdoc-ref:NilDate
+    # Returns rdoc-ref:Date
     #
     # [Raises]
     # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :date_of_death, type: NilDate
+    property :date_of_death, type: Date
 
     ##
     # :attr_reader: cause_of_death
@@ -165,7 +165,7 @@ module MetalArchives
     # [+bands+]
     #     - +:band+: rdoc-ref:Band
     #     - +:active+: Boolean
-    #     - +:date_active+: +Array+ of rdoc-ref:Range containing rdoc-ref:NilDate
+    #     - +:date_active+: +Array+ of rdoc-ref:Range containing rdoc-ref:Date
     #     - +:role+: +String+
     #
     property :bands, type: Hash, multiple: true

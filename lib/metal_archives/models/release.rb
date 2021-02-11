@@ -42,13 +42,13 @@ module MetalArchives
     ##
     # :attr_reader: date_released
     #
-    # Returns rdoc-ref:NilDate
+    # Returns rdoc-ref:Date
     #
     # [Raises]
     # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :date_released, type: NilDate
+    property :date_released, type: Date
 
     ##
     # :attr_reader_: catalog_id

@@ -58,12 +58,7 @@ module MetalArchives
               when "Specialised in:"
                 props[:specializations] = ParserHelper.parse_genre content
               when "Founding date :"
-                begin
-                  dof = Date.parse content
-                  props[:date_founded] = NilDate.new dof.year, dof.month, dof.day
-                rescue ArgumentError
-                  props[:date_founded] = NilDate.parse content
-                end
+                props[:date_founded] = parse_date content
               when "Sub-labels:"
                 # TODO
               when "Online shopping:"
