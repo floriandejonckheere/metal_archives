@@ -7,8 +7,9 @@ RSpec.describe MetalArchives::Parsers::Parser do
     it "rewrites a URL" do
       expect(described_class.rewrite("https://www.metal-archives.com/band/view/id/32").to_s).to eq "http://my-http-proxy/band/view/id/32"
     end
+  end
 
-    describe "#parse_country"
+  describe "#parse_country" do
     it "parses countries" do
       expect(described_class.parse_country("United States")).to eq ISO3166::Country["US"]
       expect(described_class.parse_country("Germany")).to eq ISO3166::Country["DE"]
