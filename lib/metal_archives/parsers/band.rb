@@ -104,7 +104,7 @@ module MetalArchives
               when "Formed in:"
                 props[:date_formed] = Parsers::Date.parse(content)
               when "Genre:"
-                props[:genres] = parse_genre content
+                props[:genres] = Parsers::Genre.parse(content)
               when "Lyrical themes:"
                 content.split(",").each do |theme|
                   t = theme.split.map(&:capitalize)
