@@ -11,16 +11,22 @@ module MetalArchives
     def initialize(attributes = {})
       raise Errors::NotImplementedError, "no :id property in model" unless respond_to? :id
 
-      attributes.each do |property, value|
-        instance_variable_set("@#{property}", value) if self.class.properties.include? property
-      end
+      set(**attributes)
+    end
+
+    ##
+    # Set properties
+    #
+    def set(**attributes)
+      attributes.each { |key, value| instance_variable_set(:"@#{key}", value) }
     end
 
     ##
     # Returns true if two objects have the same type and id
     #
     def ==(other)
-      other.instance_of?(self.class) && id == other.id
+      other.is_a?(self.class) &&
+        id == other.id
     end
 
     ##
@@ -34,12 +40,7 @@ module MetalArchives
       raise Errors::InvalidIDError, "no id present" unless id
 
       # Use constructor to set attributes
-      initialize assemble
-
-      # Set empty properties to nil
-      self.class.properties.each do |prop|
-        instance_variable_set("@#{prop}", nil) unless instance_variable_defined? "@#{prop}"
-      end
+      set(**assemble)
 
       @loaded = true
       MetalArchives.cache[id] = self
@@ -53,7 +54,7 @@ module MetalArchives
     # Whether or not the object is currently loaded
     #
     def loaded?
-      !@loaded.nil?
+      @loaded ||= false
     end
 
     ##
@@ -80,9 +81,11 @@ module MetalArchives
 
     class << self
       ##
-      # +Array+ of declared properties
+      # Declared properties
       #
-      attr_accessor :properties
+      def properties
+        @properties ||= {}
+      end
 
       protected
 
@@ -103,28 +106,24 @@ module MetalArchives
       #       turns it into an +Array+ of +type+)
       #
       def property(name, opts = {})
-        (@properties ||= []) << name
+        properties[name] = opts
 
         # property
         define_method(name) do
-          load! unless loaded? && instance_variable_defined?("@#{name}") || name == :id
-          instance_variable_get("@#{name}")
+          # Load only when not loaded or id property
+          load! unless loaded? || name == :id
+
+          instance_variable_get(:"@#{name}")
         end
 
         # property?
         define_method("#{name}?") do
-          load! unless loaded? && instance_variable_defined?("@#{name}") || name == :id
-
-          property = instance_variable_get("@#{name}")
-          property.respond_to?(:empty?) ? !property.empty? : !property.nil?
+          send(name).present?
         end
 
         # property=
         define_method("#{name}=") do |value|
-          if value.nil?
-            instance_variable_set "@#{name}", value
-            return
-          end
+          return instance_variable_set(:"@#{name}", value) if value.nil?
 
           # Check value type
           type = opts[:type] || String
@@ -138,7 +137,7 @@ module MetalArchives
             raise Errors::TypeError, "invalid type #{value.class}, must be #{type} for #{name}" unless value.is_a? type
           end
 
-          instance_variable_set "@#{name}", value
+          instance_variable_set(:"@#{name}", value)
         end
       end
 
@@ -159,19 +158,20 @@ module MetalArchives
       def enum(name, opts)
         raise ArgumentError, "opts[:values] is required" unless opts && opts[:values]
 
-        (@properties ||= []) << name
+        properties[name] = opts
 
         # property
         define_method(name) do
-          load! unless loaded? && instance_variable_defined?("@#{name}")
-          instance_variable_get("@#{name}")
+          load! unless loaded?
+
+          instance_variable_get(:"@#{name}")
         end
 
         # property?
         define_method("#{name}?") do
           load! unless loaded? && instance_variable_defined?("@#{name}")
 
-          property = instance_variable_get("@#{name}")
+          property = instance_variable_get(:"@#{name}")
           property.respond_to?(:empty?) ? !property.empty? : !property.nil?
         end
 
@@ -188,7 +188,7 @@ module MetalArchives
             raise Errors::TypeError, "invalid enum value #{value} for #{name}" unless opts[:values].include? value
           end
 
-          instance_variable_set name, value
+          instance_variable_set(:"@#{name}", value)
         end
       end
 
