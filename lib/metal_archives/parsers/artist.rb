@@ -101,13 +101,16 @@ module MetalArchives
           # Active bands
           proc = proc do |row|
             link = row.css("h3 a")
-            band = if link.any?
-                     # Band name contains a link
-                     MetalArchives::Band.find Integer(link.attr("href").text.gsub(%r(^.*/([^/#]*)#.*$), '\1'))
-                   else
-                     # Band name does not contain a link
-                     sanitize row.css("h3").text
-                   end
+
+            name, id = nil
+
+            if link.any?
+              # Band name contains a link
+              id = Integer(link.attr("href").text.gsub(%r(^.*/([^/#]*)#.*$), '\1'))
+            else
+              # Band name does not contain a link
+              name = sanitize row.css("h3").text
+            end
 
             r = row.css(".member_in_band_role")
 
@@ -115,10 +118,11 @@ module MetalArchives
             role = sanitize r.css("strong").first.content
 
             {
-              band: band,
+              id: id,
+              name: name,
               years_active: range,
               role: role,
-            }
+            }.compact
           end
 
           doc.css("#artist_tab_active .member_in_band").each do |row|

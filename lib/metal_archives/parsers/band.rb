@@ -148,7 +148,7 @@ module MetalArchives
           doc = Nokogiri::HTML response
           doc.css("#artist_list tbody tr").each do |row|
             similar << {
-              band: MetalArchives::Band.new(id: row.css("td a").first["href"].split("/").last.to_i),
+              id: MetalArchives::Band.new(id: row.css("td a").first["href"].split("/").last.to_i),
               score: row.css("td").last.content.strip,
             }
           end
