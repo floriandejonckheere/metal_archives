@@ -79,6 +79,13 @@ module MetalArchives
       raise Errors::NotImplementedError, "method :assemble not implemented"
     end
 
+    ##
+    # String representation
+    #
+    def inspect
+      "#<#{self.class.name} @id=#{id}>"
+    end
+
     class << self
       ##
       # Declared properties
