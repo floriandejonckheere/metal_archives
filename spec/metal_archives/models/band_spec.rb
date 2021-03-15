@@ -26,7 +26,7 @@ RSpec.describe MetalArchives::Band do
       expect(band.links.find { |l| l[:type] == :merchandise }[:url]).to eq "https://www.amazon.com/Fifth-Element-Pathfinder/dp/B007MNNCVW"
       expect(band.links.find { |l| l[:type] == :merchandise }[:title]).to eq "Amazon"
 
-      expect(band.releases.map(&:title)).to match ["Pathfinder / Demo 2007", "The Beginning", "Moonlight Shadow", "Beyond the Space, Beyond the Time", "Fifth Element"]
+      expect(band.releases.map(&:title)).to include ["Pathfinder / Demo 2007", "The Beginning", "Moonlight Shadow", "Beyond the Space, Beyond the Time", "Fifth Element"]
     end
 
     it "Rhapsody of Fire has properties" do
@@ -35,7 +35,7 @@ RSpec.describe MetalArchives::Band do
       expect(band).to be_instance_of described_class
       expect(band.name).to eq "Rhapsody of Fire"
       expect(band.aliases).to match %w(Thundercross Rhapsody)
-      expect(band.releases.map(&:title)).to match ["Eternal Glory", "Legendary Tales", "Emerald Sword", "Symphony of Enchanted Lands", "Holy Thunderforce", "Dawn of Victory", "Rain of a Thousand Flames", "Power of the Dragonflame", "Tales from the Emerald Sword Saga", "The Dark Secret", "Symphony of Enchanted Lands II: The Dark Secret", "The Magic of the Wizard's Dream", "Live in Canada 2005 - The Dark Secret", "A New Saga Begins", "Triumph or Agony", "Demons, Dragons and Warriors", "Visions from the Enchanted Lands", "The Frozen Tears of Angels", "The Cold Embrace of Fear: A Dark Romantic Symphony", "Aeons of Raging Darkness", "From Chaos to Eternity", "Live - From Chaos to Eternity", "Dark Wings of Steel", "Live in Atlanta", "Shining Star", "Into the Legend", "When Demons Awake", "Land of Immortals", "Knightrider of Doom", "Legendary Years", "The Legend Goes On", "Rain of Fury", "Master of Peace", "The Eighth Mountain"]
+      expect(band.releases.map(&:title)).to include ["Eternal Glory", "Legendary Tales", "Emerald Sword", "Symphony of Enchanted Lands", "Holy Thunderforce", "Dawn of Victory", "Rain of a Thousand Flames", "Power of the Dragonflame", "Tales from the Emerald Sword Saga", "The Dark Secret", "Symphony of Enchanted Lands II: The Dark Secret", "The Magic of the Wizard's Dream", "Live in Canada 2005 - The Dark Secret", "A New Saga Begins", "Triumph or Agony", "Demons, Dragons and Warriors", "Visions from the Enchanted Lands", "The Frozen Tears of Angels", "The Cold Embrace of Fear: A Dark Romantic Symphony", "Aeons of Raging Darkness", "From Chaos to Eternity", "Live - From Chaos to Eternity", "Dark Wings of Steel", "Live in Atlanta", "Shining Star", "Into the Legend", "When Demons Awake", "Land of Immortals", "Knightrider of Doom", "Legendary Years", "The Legend Goes On", "Rain of Fury", "Master of Peace", "The Eighth Mountain"]
     end
 
     it "maps status" do
