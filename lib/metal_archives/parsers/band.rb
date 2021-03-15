@@ -100,7 +100,7 @@ module MetalArchives
               when "Location:"
                 props[:location] = content
               when "Status:"
-                props[:status] = content.downcase.tr(" ", "_").to_sym
+                props[:status] = content.downcase.tr(" -", "_").to_sym
               when "Formed in:"
                 props[:date_formed] = Parsers::Date.parse(content)
               when "Genre:"
@@ -148,7 +148,7 @@ module MetalArchives
           doc = Nokogiri::HTML response
           doc.css("#artist_list tbody tr").each do |row|
             similar << {
-              id: MetalArchives::Band.new(id: row.css("td a").first["href"].split("/").last.to_i),
+              id: row.css("td a").first["href"].split("/").last.to_i,
               score: row.css("td").last.content.strip,
             }
           end
