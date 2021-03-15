@@ -18,12 +18,15 @@ module MetalArchives
       response = http
         .get(url_for(path), params: params)
 
-      if response.headers["x-cache-status"]
-        # Log cache status
-        MetalArchives.config.logger.info "Cache #{response.headers['x-cache-status'].downcase} for #{path}"
+      # Log cache status
+      status = response.headers["x-cache-status"]&.downcase&.to_sym
+      MetalArchives.config.logger.info "Cache #{status} for #{path}" if status
 
-        # Increase hit/miss counter
-        metrics[response.headers["x-cache-status"].downcase.to_sym] += 1
+      case status
+      when :hit
+        metrics[:hit] += 1
+      when :miss, :bypass, :expired, :stale, :updating, :revalidated
+        metrics[:miss] += 1
       end
 
       raise Errors::InvalidIDError, response if response.code == 404
