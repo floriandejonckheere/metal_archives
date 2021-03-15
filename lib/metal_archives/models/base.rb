@@ -64,6 +64,13 @@ module MetalArchives
       loaded? && MetalArchives.cache.include?(id)
     end
 
+    ##
+    # String representation
+    #
+    def inspect
+      "#<#{self.class.name} @id=#{@id} @name=\"#{@name}\">"
+    end
+
     protected
 
     ##
@@ -77,13 +84,6 @@ module MetalArchives
     #
     def assemble
       raise Errors::NotImplementedError, "method :assemble not implemented"
-    end
-
-    ##
-    # String representation
-    #
-    def inspect
-      "#<#{self.class.name} @id=#{id}>"
     end
 
     class << self
