@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.1.0
+
+- Add members property on band
+
 ## 3.0.0
 
 - Dropped support for Ruby < 2.5
