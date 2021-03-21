@@ -158,4 +158,6 @@ RSpec.describe MetalArchives::Band do
       end
     end
   end
+
+  describe "serialization"
 end

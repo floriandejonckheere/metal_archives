@@ -252,6 +252,45 @@ module MetalArchives
       properties
     end
 
+    ##
+    # Serialize to hash
+    #
+    def to_h
+      {
+        id: id,
+        name: name,
+        aliases: aliases || [],
+        country: country&.alpha3,
+        location: location,
+        date_formed: date_formed&.iso8601,
+        years_active: years_active || [],
+        genres: genres || [],
+        lyrical_themes: lyrical_themes || [],
+        label_id: label&.id,
+        independent: independent,
+        comment: comment,
+        status: status,
+        release_ids: releases.map(&:id),
+        similar: similar,
+        logo: logo,
+        photo: photo,
+        links: links || [],
+      }
+    end
+
+    ##
+    # Deserialize from hash
+    #
+    def self.from_h(hash)
+      return unless hash.fetch(:type) == "band"
+
+      new(hash.slice(:id, :name, :aliases, :location, :years_active, :genres, :lyrical_themes, :independent, :comment, :status, :similar, :logo, :photo, :links))
+        .tap { |m| m.country = ISO3166::Country[hash[:country]] }
+        .tap { |m| m.date_formed = Date.parse(hash[:date_formed]) if hash[:date_formed] }
+        .tap { |m| m.label = Label.new(id: hash[:label_id]) if hash[:label_id] }
+        .tap { |m| m.releases = hash.fetch(:release_ids, []).map { |i| Release.new(id: id) } }
+    end
+
     class << self
       ##
       # Find by ID
