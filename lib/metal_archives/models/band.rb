@@ -159,7 +159,22 @@ module MetalArchives
     #
     property :releases, type: Release, multiple: true
 
-    # TODO: members
+    ##
+    # :attr_reader: members
+    #
+    # Returns +Array+ of +Hash+ containing the following keys
+    #
+    # [Raises]
+    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
+    # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
+    #
+    # [+members+]
+    #     - +:artist+: rdoc-ref:Artist
+    #     - +:current+: Boolean
+    #     - +:years_active+: +Array+ of rdoc-ref:Range containing +Integer+
+    #     - +:role+: +String+
+    #
+    property :members, type: Artist, multiple: true
 
     ##
     # :attr_reader: similar

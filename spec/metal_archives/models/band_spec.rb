@@ -26,7 +26,37 @@ RSpec.describe MetalArchives::Band do
       expect(band.links.find { |l| l[:type] == :merchandise }[:url]).to eq "https://www.amazon.com/Fifth-Element-Pathfinder/dp/B007MNNCVW"
       expect(band.links.find { |l| l[:type] == :merchandise }[:title]).to eq "Amazon"
 
-      expect(band.releases.map(&:title)).to include ["Pathfinder / Demo 2007", "The Beginning", "Moonlight Shadow", "Beyond the Space, Beyond the Time", "Fifth Element"]
+      expect(band.releases.map(&:title)).to include "Pathfinder / Demo 2007", "The Beginning", "Moonlight Shadow", "Beyond the Space, Beyond the Time", "Fifth Element"
+
+      expect(band.members[0]).to eq id: 18_607,
+                                    name: "Arkadiusz Ruth",
+                                    current: true,
+                                    years_active: 2006..,
+                                    role: "Bass, Orchestrations, Vocals (choirs)"
+
+      expect(band.members[1]).to eq id: 18_596,
+                                    name: "Karol Mania",
+                                    years_active: 2006..,
+                                    current: true,
+                                    role: "Guitars, Vocals (choirs)"
+
+      expect(band.members[2]).to eq id: 18_599,
+                                    name: "Gunsen",
+                                    years_active: 2006..,
+                                    current: true,
+                                    role: "Guitars, Vocals (choirs)"
+
+      expect(band.members[3]).to eq id: 124_538,
+                                    name: "Kacper Stachowiak",
+                                    years_active: 2011..,
+                                    current: true,
+                                    role: "Drums, Narration, Vocals (choirs)"
+
+      expect(band.members[6]).to eq id: 18_611,
+                                    name: "Kamil Ruth",
+                                    years_active: 2006..2011,
+                                    current: false,
+                                    role: "Drums"
     end
 
     it "Rhapsody of Fire has properties" do

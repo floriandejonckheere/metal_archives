@@ -15,7 +15,11 @@ module MetalArchives
         # Return +String+
         #
         def sanitize(input)
-          input.gsub(/^"/, "").gsub(/"$/, "").strip
+          input
+            .gsub(/^"/, "")
+            .gsub(/"$/, "")
+            .gsub(/[[:space:]]/, " ")
+            .strip
         end
 
         ##

@@ -70,6 +70,8 @@ module MetalArchives
 
             genres: [],
             lyrical_themes: [],
+
+            members: [],
           }
 
           doc = Nokogiri::HTML response
@@ -128,6 +130,40 @@ module MetalArchives
             end
           end
 
+          # Members
+          proc = proc do |row|
+            link = row.css("a")
+
+            if link.any?
+              # Artist name contains a link
+              id = Integer(link.attr("href").text.split("/").last)
+              name = sanitize link.text
+            else
+              # Artist name does not contain a link
+              name = sanitize row.css("h3").text
+            end
+
+            r = row.css("td").last.text
+            role, range = r.match(/(.*)\(([^(]*)\)/).captures
+
+            range = Parsers::Year.parse(range)
+
+            {
+              id: id,
+              name: name,
+              years_active: range,
+              role: sanitize(role),
+            }.compact
+          end
+
+          doc.css("#band_tab_members_current .lineupRow").each do |row|
+            props[:members] << proc.call(row).merge(current: true)
+          end
+
+          doc.css("#band_tab_members_past .lineupRow").each do |row|
+            props[:members] << proc.call(row).merge(current: false)
+          end
+
           props
         rescue StandardError => e
           e.backtrace.each { |b| MetalArchives.config.logger.error b }
@@ -155,6 +191,7 @@ module MetalArchives
 
           similar
         rescue StandardError => e
+          MetalArchives.config.logger e.message
           e.backtrace.each { |b| MetalArchives.config.logger.error b }
           raise Errors::ParserError, e
         end
