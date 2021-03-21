@@ -121,7 +121,7 @@ RSpec.describe MetalArchives::Release do
       end
 
       it "searches by title" do
-        expect(described_class.search_by(title: "Rhapsody").count).to eq 18
+        expect(described_class.search_by(title: "Rhapsody").count).to eq 19
       end
     end
 
