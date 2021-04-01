@@ -144,9 +144,9 @@ module MetalArchives
             end
 
             r = row.css("td").last.text
-            role, range = r.match(/(.*)\(([^(]*)\)/).captures
 
-            range = Parsers::Year.parse(range)
+            role, range = r.match(/([^(]*)\s+\(?([^)]+)?\)?/).captures
+            range = Parsers::Year.parse(range) if range
 
             {
               id: id,
