@@ -43,10 +43,10 @@ module MetalArchives
       set(**assemble)
 
       @loaded = true
-      MetalArchives.cache[id] = self
+      MetalArchives.cache[self.class.cache(id)] = self
     rescue StandardError => e
       # Don't cache invalid requests
-      MetalArchives.cache.delete id
+      MetalArchives.cache.delete self.class.cache(id)
       raise e
     end
 
@@ -61,7 +61,7 @@ module MetalArchives
     # Whether or not the object is currently cached
     #
     def cached?
-      loaded? && MetalArchives.cache.include?(id)
+      loaded? && MetalArchives.cache.include?(self.class.cache(id))
     end
 
     ##
@@ -92,6 +92,13 @@ module MetalArchives
       #
       def properties
         @properties ||= {}
+      end
+
+      ##
+      # Generate cache key for id
+      #
+      def cache(id)
+        "#{self.class.name}//#{id}"
       end
 
       protected
