@@ -12,6 +12,7 @@ RSpec.describe MetalArchives::Parsers::Genre do
       expect(parser.parse("Heavy/Speed Power Metal")).to match_array ["Heavy Power", "Speed Power"]
       expect(parser.parse("Traditional Heavy/Power Metal")).to match_array ["Traditional Heavy", "Traditional Power"]
       expect(parser.parse("Traditional/Classical Heavy/Power Metal")).to match_array ["Traditional Heavy", "Traditional Power", "Classical Heavy", "Classical Power"]
+      expect(parser.parse("Speed Metal (early); Power Metal (later)")).to match_array %w(Speed Power)
     end
   end
 end

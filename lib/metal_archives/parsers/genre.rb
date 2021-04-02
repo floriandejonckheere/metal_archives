@@ -25,7 +25,7 @@ module MetalArchives
       def self.parse(input)
         genres = []
         # Split fields
-        input.split(",").each do |genre|
+        input.split(/[,;]/).each do |genre|
           ##
           # Start with a single empty genre string. Split the genre by spaces
           # and process each component. If a component does not have a slash,
