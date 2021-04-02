@@ -5,6 +5,8 @@ RSpec.describe MetalArchives::Parsers::Year do
 
   describe ".parse" do
     it "parses year ranges" do
+      expect(parser.parse(nil)).to be_nil
+      expect(parser.parse("")).to be_nil
       expect(parser.parse("2001")).to eq 2001..2001
       expect(parser.parse("?-2001")).to eq nil..2001
       expect(parser.parse("2001-?")).to eq 2001..nil

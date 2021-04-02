@@ -12,6 +12,8 @@ module MetalArchives
       # Returns +Range+ of +Integer+
       #
       def self.parse(input)
+        return if input.blank?
+
         components = input
           .split("-")
           .map(&:to_i)

@@ -15,7 +15,7 @@ module MetalArchives
         # Return +String+
         #
         def sanitize(input)
-          return unless input
+          return if input.blank?
 
           input
             .gsub(/^"/, "")
