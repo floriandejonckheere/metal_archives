@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.1.1
+
+- Fix some invalid parsing
+
 ## 3.1.0
 
 - Add members property on band
