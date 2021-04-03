@@ -26,7 +26,16 @@ module MetalArchives
     #
     property :title
 
-    # TODO: band
+    ##
+    # :attr_reader: band
+    #
+    # Returns +rdoc-ref:MetalArchives::Band+
+    #
+    # [Raises]
+    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
+    # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
+    #
+    property :band, type: Band
 
     ##
     # :attr_reader: type

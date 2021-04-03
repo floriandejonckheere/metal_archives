@@ -104,6 +104,7 @@ module MetalArchives
           # Set default props
           props = {
             title: nil,
+            band: nil,
             type: nil,
             date_released: nil,
             catalog_id: nil,
@@ -116,6 +117,12 @@ module MetalArchives
           doc = Nokogiri::HTML response
 
           props[:title] = sanitize doc.css("#album_info .album_name a").first.content
+
+          # Band
+          band_doc = doc.css("#album_info .band_name a").first
+          id = Integer(band_doc.attr("href").split("/").last)
+
+          props[:band] = MetalArchives::Band.find(id)
 
           doc.css("#album_info dl").each do |dl|
             dl.search("dt").each do |dt|

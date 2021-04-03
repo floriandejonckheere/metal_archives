@@ -8,6 +8,7 @@ RSpec.describe MetalArchives::Release do
       expect(release).to be_instance_of described_class
       expect(release.id).to eq 416_934
       expect(release.title).to eq "Tales of Ancient Prophecies"
+      expect(release.band.id).to eq 3_540_382_043
       expect(release.type).to eq :full_length
       expect(release.date_released).to eq Date.new(2014, 6, 4)
       expect(release.catalog_id).to eq "BLOD091CD"
@@ -23,6 +24,7 @@ RSpec.describe MetalArchives::Release do
       expect(release).to be_instance_of described_class
       expect(release.id).to eq 123_563
       expect(release.title).to eq "...and Oceans"
+      expect(release.band.id).to eq 231
       expect(release.type).to eq :compilation
       expect(release.date_released).to eq Date.new(2001)
       expect(release.catalog_id).to eq "NMLP 025"
