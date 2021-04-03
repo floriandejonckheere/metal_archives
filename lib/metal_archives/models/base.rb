@@ -5,29 +5,7 @@ module MetalArchives
   # Abstract model class
   #
   class Base
-    ##
-    # Generic shallow copy constructor
-    #
-    def initialize(attributes = {})
-      raise Errors::NotImplementedError, "no :id property in model" unless respond_to? :id
-
-      set(**attributes)
-    end
-
-    ##
-    # Set properties
-    #
-    def set(**attributes)
-      attributes.each { |key, value| instance_variable_set(:"@#{key}", value) }
-    end
-
-    ##
-    # Returns true if two objects have the same type and id
-    #
-    def ==(other)
-      other.is_a?(self.class) &&
-        id == other.id
-    end
+    include Initializable
 
     ##
     # Fetch, parse and load the data
