@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.2.0
+
+- Add band property on release
+
 ## 3.1.1
 
 - Fix some invalid parsing
