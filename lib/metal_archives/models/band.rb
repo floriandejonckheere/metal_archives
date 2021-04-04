@@ -273,7 +273,7 @@ module MetalArchives
       #     +Integer+
       #
       def find(id)
-        return MetalArchives.cache[cache(id)] if MetalArchives.cache.include? cache(id)
+        return MetalArchives.cache[cache_key_for(id)] if MetalArchives.cache.include? cache_key_for(id)
 
         Band.new id: id
       end

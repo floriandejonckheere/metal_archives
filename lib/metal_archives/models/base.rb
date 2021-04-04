@@ -5,8 +5,9 @@ module MetalArchives
   # Abstract model class
   #
   class Base
-    include Initializable
     include Attributable
+    include Cacheable
+    include Initializable
 
     ##
     # Fetch, parse and load the data
@@ -22,10 +23,11 @@ module MetalArchives
       set(**assemble)
 
       @loaded = true
-      MetalArchives.cache[self.class.cache(id)] = self
+      cache!
     rescue StandardError => e
       # Don't cache invalid requests
-      MetalArchives.cache.delete self.class.cache(id)
+      evict!
+
       raise e
     end
 
@@ -34,13 +36,6 @@ module MetalArchives
     #
     def loaded?
       @loaded ||= false
-    end
-
-    ##
-    # Whether or not the object is currently cached
-    #
-    def cached?
-      loaded? && MetalArchives.cache.include?(self.class.cache(id))
     end
 
     ##
@@ -71,13 +66,6 @@ module MetalArchives
       #
       def properties
         @properties ||= {}
-      end
-
-      ##
-      # Generate cache key for id
-      #
-      def cache(id)
-        "#{self.class.name}//#{id}"
       end
 
       protected
