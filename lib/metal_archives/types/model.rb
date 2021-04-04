@@ -31,4 +31,5 @@ end
 
 MetalArchives::Types.register(:artist, MetalArchives::Types::Model.Type(MetalArchives::Artist))
 MetalArchives::Types.register(:band, MetalArchives::Types::Model.Type(MetalArchives::Band))
+MetalArchives::Types.register(:label, MetalArchives::Types::Model.Type(MetalArchives::Label))
 MetalArchives::Types.register(:release, MetalArchives::Types::Model.Type(MetalArchives::Release))

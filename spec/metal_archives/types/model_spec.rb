@@ -20,6 +20,7 @@ RSpec.describe MetalArchives::Types::Model do
   it "is registered" do
     expect { MetalArchives::Types.lookup(:artist) }.not_to raise_error
     expect { MetalArchives::Types.lookup(:band) }.not_to raise_error
+    expect { MetalArchives::Types.lookup(:label) }.not_to raise_error
     expect { MetalArchives::Types.lookup(:release) }.not_to raise_error
   end
 end
