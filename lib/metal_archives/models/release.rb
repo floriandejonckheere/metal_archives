@@ -85,12 +85,12 @@ module MetalArchives
     # :attr_reader: format
     #
     # [Returns]
-    # - +Symbol+, one of +:cd+, +:cassette+, +:vinyl+, +:vhs+, +:dvd+, +:digital+, +:blu_ray+, +:other+ or +:unknown+
+    # - +Symbol+, one of +:cd+, +:cassette+, +:vinyl+, +:vhs+, +:dvd+, +:2dvd+, +:digital+, +:blu_ray+, +:other+ or +:unknown+
     #
     # [Raises]
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    attribute :format, type: :symbol, enum: [:cd, :cassette, :vinyl, :vhs, :dvd, :digital, :blu_ray, :other, :unknown]
+    attribute :format, type: :symbol, enum: [:cd, :cassette, :vinyl, :vhs, :dvd, :"2dvd", :digital, :blu_ray, :other, :unknown]
 
     ##
     # :attr_reader: limitation
