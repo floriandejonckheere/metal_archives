@@ -9,21 +9,28 @@ module MetalArchives
 
     included do
       ##
-      # Generic shallow copy constructor
+      # Initialize object with attributes
+      #
+      # [Params]
+      # - +id+: +Integer+, Metal Archives identifier
+      # - +attributes+: +Hash+ of attribute key-values
       #
       def initialize(id:, **attributes)
         set(id: id, **attributes)
       end
 
       ##
-      # Set properties
+      # Set attributes
+      #
+      # [Params]
+      # - +attributes+: +Hash+ of attribute key-values
       #
       def set(**attributes)
         attributes.each { |key, value| send("#{key}=", value) }
       end
 
       ##
-      # Returns true if two objects have the same type and id
+      # Compare objects based on class and id
       #
       def ==(other)
         other.is_a?(self.class) &&
