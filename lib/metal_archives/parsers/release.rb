@@ -105,7 +105,6 @@ module MetalArchives
             type: nil,
             date_released: nil,
             catalog_id: nil,
-            identifier: nil,
             version_description: nil,
             format: nil,
             limitation: nil,
@@ -134,8 +133,6 @@ module MetalArchives
                 props[:date_released] = Parsers::Date.parse(content)
               when "Catalog ID:"
                 props[:catalog_id] = content
-              when "Identifier:"
-                props[:identifier] = content
               when "Version desc.:"
                 props[:version_description] = content
               when "Label:"
