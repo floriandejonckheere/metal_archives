@@ -5,7 +5,7 @@ RSpec.describe MetalArchives::Types::Country do
     expect(described_class.cast(ISO3166::Country["BE"])).to eq ISO3166::Country["BE"]
   end
 
-  it "casts to date" do
+  it "casts to country" do
     expect(described_class.cast("BE")).to eq ISO3166::Country["BE"]
   end
 
