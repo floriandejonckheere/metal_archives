@@ -8,99 +8,100 @@ module MetalArchives
     ##
     # :attr_reader: id
     #
-    # Returns +Integer+
+    # [Returns]
+    # - +Integer+
     #
-    property :id, type: Integer
+    attribute :id, type: :integer
 
     ##
     # :attr_reader: title
     #
-    # Returns +String+
+    # [Returns]
+    # - +String+
     #
     # [Raises]
-    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :title
+    attribute :title
 
     ##
     # :attr_reader: band
     #
-    # Returns +rdoc-ref:MetalArchives::Band+
+    # [Returns]
+    # - +rdoc-ref:MetalArchives::Band+
     #
     # [Raises]
-    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :band, type: Band
+    attribute :band, type: :band
 
     ##
     # :attr_reader: type
     #
-    # Returns +:full_length+, +:live+, +:demo+, +:single+, +:ep+, +:video+, +:boxed_set+, +:split+, +:compilation+, +:split_video+, +:collaboration+
+    # [Returns]
+    # - +Symbol+: one of +:full_length+, +:live+, +:demo+, +:single+, +:ep+, +:video+, +:boxed_set+, +:split+, +:compilation+, +:split_video+ or +:collaboration+
     #
     # [Raises]
-    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    enum :type, values: [:full_length, :live, :demo, :single, :ep, :video, :boxed_set, :split, :compilation, :split_video, :collaboration]
+    attribute :type, type: :symbol, enum: [:full_length, :live, :demo, :single, :ep, :video, :boxed_set, :split, :compilation, :split_video, :collaboration]
 
     ##
     # :attr_reader: date_released
     #
-    # Returns rdoc-ref:Date
+    # [Returns]
+    # - +Date+
     #
     # [Raises]
-    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :date_released, type: Date
+    attribute :date_released, type: :date
 
     ##
-    # :attr_reader_: catalog_id
+    # :attr_reader: catalog_id
     #
-    # Return +String+
+    # [Returns]
+    # - +String+
     #
     # [Raises]
-    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :catalog_id
+    attribute :catalog_id
 
     ##
-    # :attr_reader_: version_description
+    # :attr_reader: version_description
     #
-    # Return +String+
+    # [Returns]
+    # - +String+
     #
     # [Raises]
-    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :version_description
+    attribute :version_description
 
     # TODO: label
 
     ##
     # :attr_reader: format
     #
-    # Returns +:cd+, +:cassette+, +:vinyl+, +:vhs+, +:dvd+, +:digital+, +:blu_ray+, +:other+, +:unknown+
+    # [Returns]
+    # - +Symbol+, one of +:cd+, +:cassette+, +:vinyl+, +:vhs+, +:dvd+, +:digital+, +:blu_ray+, +:other+ or +:unknown+
     #
     # [Raises]
-    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :format
+    attribute :format, type: :symbol, enum: [:cd, :cassette, :vinyl, :vhs, :dvd, :digital, :blu_ray, :other, :unknown]
 
     ##
     # :attr_reader: limitation
     #
-    # Returns +Integer+
+    # [Returns]
+    # - +Integer+
     #
     # [Raises]
-    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :limitation
+    attribute :limitation, type: :integer
 
     # TODO: reviews
     # TODO: songs
@@ -111,13 +112,13 @@ module MetalArchives
     ##
     # :attr_reader: notes
     #
-    # Returns raw HTML +String+
+    # [Returns]
+    # - raw HTML +String+
     #
     # [Raises]
-    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :notes
+    attribute :notes
 
     protected
 

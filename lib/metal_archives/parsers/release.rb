@@ -118,7 +118,7 @@ module MetalArchives
           band_doc = doc.css("#album_info .band_name a").first
           id = Integer(band_doc.attr("href").split("/").last)
 
-          props[:band] = MetalArchives::Band.find(id)
+          props[:band] = id
 
           doc.css("#album_info dl").each do |dl|
             dl.search("dt").each do |dt|

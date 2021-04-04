@@ -6,6 +6,7 @@ module MetalArchives
   #
   class Base
     include Initializable
+    include Attributable
 
     ##
     # Fetch, parse and load the data
