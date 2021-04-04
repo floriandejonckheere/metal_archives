@@ -11,8 +11,8 @@ module MetalArchives
       ##
       # Generic shallow copy constructor
       #
-      def initialize(attributes = {})
-        set(**attributes)
+      def initialize(id:, **attributes)
+        set(id: id, **attributes)
       end
 
       ##

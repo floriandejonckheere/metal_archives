@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 RSpec.describe MetalArchives::Release do
+  it_behaves_like "it is initializable"
+
   describe "properties" do
     it "Tales of Ancient Prophecies has properties" do
       release = described_class.find 416_934
