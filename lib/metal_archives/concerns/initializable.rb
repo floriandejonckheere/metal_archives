@@ -19,7 +19,7 @@ module MetalArchives
       # Set properties
       #
       def set(**attributes)
-        attributes.each { |key, value| instance_variable_set(:"@#{key}", value) }
+        attributes.each { |key, value| send("#{key}=", value) }
       end
 
       ##
