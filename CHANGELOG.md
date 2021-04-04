@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.0.0
+
+- Remove `MetalArchives::Errors::InvalidIDError`
+
 ## 3.2.0
 
 - Add band property on release
