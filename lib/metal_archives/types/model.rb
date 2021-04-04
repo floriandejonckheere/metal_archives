@@ -9,6 +9,8 @@ module MetalArchives
       class_attribute :class_name
 
       def self.cast(value)
+        return value if value.is_a? class_name
+
         class_name.new(id: value)
       end
 

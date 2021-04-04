@@ -5,6 +5,10 @@ RSpec.describe MetalArchives::Types::Model do
 
   let(:band) { MetalArchives::Band.new(id: 1) }
 
+  it "does not cast model" do
+    expect(type_class.cast(band)).to eq band
+  end
+
   it "casts to model" do
     expect(type_class.cast(1)).to eq band
   end
