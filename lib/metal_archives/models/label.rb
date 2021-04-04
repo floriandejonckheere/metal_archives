@@ -107,8 +107,8 @@ module MetalArchives
     # :attr_reader: status
     #
     # [Returns]
-    # - +Symbol+, one of +:active+, +:closed+ or +:unknown+
+    # - +Symbol+, one of +:active+, +:closed+, +:on_hold+, +:unknown+, +:changed_name+ or +:split_up+
     #
-    attribute :status, type: :symbol, enum: [:active, :closed, :unknown]
+    attribute :status, type: :symbol, enum: [:active, :closed, :on_hold, :unknown, :changed_name, :split_up]
   end
 end
