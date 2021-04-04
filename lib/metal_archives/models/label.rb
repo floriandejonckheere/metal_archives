@@ -110,29 +110,5 @@ module MetalArchives
     # - +Symbol+, one of +:active+, +:closed+ or +:unknown+
     #
     attribute :status, type: :symbol, enum: [:active, :closed, :unknown]
-
-    class << self
-      ##
-      # Search by name.
-      #
-      # Returns +Array+ of rdoc-ref:Label
-      #
-      def search(_name)
-        []
-      end
-
-      ##
-      # Find by name and id.
-      #
-      # Returns rdoc-ref:Label
-      #
-      def find_by_name(name, id)
-        client.find_resource(
-          :band,
-          name: name,
-          id: id,
-        )
-      end
-    end
   end
 end
