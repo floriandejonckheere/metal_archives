@@ -20,8 +20,7 @@ module MetalArchives
       # [Params]
       # - +name+: +Symbol+, attribute name
       # - +type+: +Symbol+, attribute data type, see rdoc-ref:MetalArchives::Types (default: +:string+)
-      # - +multiple+: +Boolean+, whether this attribute represents a collection,
-      #               which turns it into an +Enumerable+ of +type+ (default: +false+)
+      # - +multiple+: +Boolean+, whether this attribute represents a collection, which turns it into an +Enumerable+ of +type+ (default: +false+)
       # - +enum+: +Array+ of +String+, restricts value(s) of attribute
       #
       def attribute(name, type: :string, multiple: false, enum: [])
