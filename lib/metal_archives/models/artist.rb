@@ -198,7 +198,7 @@ module MetalArchives
     def self.from_h(hash)
       return unless hash.fetch(:type) == "artist"
 
-      new(hash.slice(:id, :name, :aliases, :location, :cause_of_death, :gender, :biography, :trivial, :photo, :links, :bands))
+      new(**hash.slice(:id, :name, :aliases, :location, :cause_of_death, :gender, :biography, :trivial, :photo, :links, :bands))
         .tap { |m| m.country = ISO3166::Country[hash[:country]] }
         .tap { |m| m.date_of_birth = Date.parse(hash[:date_of_birth]) if hash[:date_of_birth] }
         .tap { |m| m.date_of_death = Date.parse(hash[:date_of_death]) if hash[:date_of_death] }
