@@ -8,103 +8,108 @@ module MetalArchives
     ##
     # :attr_reader: id
     #
-    # Returns +Integer+
+    # [Returns]
+    # - +Integer+
     #
-    property :id, type: Integer
+    attribute :id, type: :integer
 
     ##
     # :attr_reader: name
     #
-    # Returns +String+
+    # [Returns]
+    # - +String+
     #
     # [Raises]
-    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :name
+    attribute :name
 
     ##
     # :attr_reader: address
     #
-    # Returns multiline +String+
+    # [Returns]
+    # - raw HTML +String+
     #
     # [Raises]
-    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :address
+    attribute :address
 
     ##
     # :attr_reader: country
     #
-    # Returns +ISO316::Country+
+    # [Returns]
+    # - +ISO316::Country+
     #
     # [Raises]
-    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :country, type: ISO3166::Country
+    attribute :country, type: :country
 
     ##
     # :attr_reader: phone
     #
-    # Returns +String+
+    # [Returns]
+    # - +String+
     #
     # [Raises]
-    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :phone
+    attribute :phone
 
     ##
     # :attr_reader: specializations
     #
-    # Returns +Array+ of +String+
+    # [Returns]
+    # - +Array+ of +String+
     #
     # [Raises]
-    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :specializations, multiple: true
+    attribute :specializations, multiple: true
 
     ##
     # :attr_reader: date_founded
     #
-    # Returns +Date+
+    # [Returns]
+    # - +Date+
     #
     # [Raises]
-    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :date_founded, type: Date
+    attribute :date_founded, type: :date
 
     ##
     # :attr_reader: sub_labels
     #
-    # Returns +Array+ of rdoc-ref:Label
+    # [Returns]
+    # - +Array+ of rdoc-ref:Label
     #
-    property :sub_labels, type: Label, multiple: true
+    attribute :sub_labels, type: :label, multiple: true
 
     ##
     # :attr_reader: online_shopping
     #
-    # Returns +Boolean+
+    # [Returns]
+    # - +Boolean+
     #
-    boolean :online_shopping
+    attribute :online_shopping, type: :boolean
 
     ##
     # :attr_reader: contact
     #
-    # Returns +Hash+ with the following keys: +title+, +content+
+    # [Returns]
+    # - +Hash+ with the following keys: +title+, +content+
     #
-    property :contact, type: Hash, multiple: true
+    attribute :contact, type: :hash, multiple: true
 
     ##
     # :attr_reader: status
     #
-    # Returns +:active+, +:closed+ or +:unknown+
+    # [Returns]
+    # - +Symbol+, one of +:active+, +:closed+ or +:unknown+
     #
-    enum :status, values: [:active, :closed, :unknown]
+    attribute :status, type: :symbol, enum: [:active, :closed, :unknown]
 
     class << self
       ##
