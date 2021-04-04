@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require "countries"
-
 module MetalArchives
   module Parsers
     ##

@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require "date"
-require "countries"
-
 module MetalArchives
   ##
   # Represents a record label

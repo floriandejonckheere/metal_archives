@@ -1,9 +1,5 @@
 # frozen_string_literal: true
 
-require "date"
-require "countries"
-require "nokogiri"
-
 module MetalArchives
   ##
   # Represents a single performer (but not a solo artist)

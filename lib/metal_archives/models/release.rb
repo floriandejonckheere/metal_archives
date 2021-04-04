@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require "date"
-require "nokogiri"
-
 module MetalArchives
   ##
   # Represents a release

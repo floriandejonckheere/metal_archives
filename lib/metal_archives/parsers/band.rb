@@ -1,9 +1,5 @@
 # frozen_string_literal: true
 
-require "json"
-require "date"
-require "countries"
-
 module MetalArchives
   module Parsers
     ##

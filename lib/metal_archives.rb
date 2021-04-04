@@ -1,8 +1,16 @@
 # frozen_string_literal: true
 
+require "date"
+require "json"
+require "logger"
+
 require "zeitwerk"
 require "byebug" if ENV["METAL_ARCHIVES_ENV"] == "development"
 require "active_support/all"
+
+require "countries"
+require "http"
+require "nokogiri"
 
 ##
 # Metal Archives Ruby API

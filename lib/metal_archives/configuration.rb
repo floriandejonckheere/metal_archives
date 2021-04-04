@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require "logger"
-
 module MetalArchives
   CACHE_STRATEGIES = %w(memory redis).freeze
 
