@@ -7,7 +7,7 @@ module MetalArchives
     #
     class Base
       def self.parse(_input)
-        raise Errors::NotImplementedError, "method .parse not implemented"
+        raise NotImplementedError, "method .parse not implemented"
       end
     end
   end

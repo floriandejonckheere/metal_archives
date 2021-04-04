@@ -23,7 +23,7 @@ module MetalArchives
         return if components.empty?
 
         ::Date.new(*components)
-      rescue TypeError
+      rescue ArgumentError
         nil
       end
     end

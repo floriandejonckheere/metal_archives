@@ -122,8 +122,8 @@ RSpec.describe MetalArchives::Artist do
 
       it "raises on invalid id" do
         expect(-> { described_class.find!(-1) }).to raise_error MetalArchives::Errors::APIError
-        expect(-> { described_class.find! 0 }).to raise_error MetalArchives::Errors::InvalidIDError
-        expect(-> { described_class.find! nil }).to raise_error MetalArchives::Errors::InvalidIDError
+        expect(-> { described_class.find! 0 }).to raise_error MetalArchives::Errors::NotFoundError
+        expect(-> { described_class.find! nil }).to raise_error MetalArchives::Errors::NotFoundError
       end
     end
 

@@ -13,7 +13,7 @@ module MetalArchives
     ##
     # No or invalid ID
     #
-    class InvalidIDError < Error; end
+    class NotFoundError < Error; end
 
     ##
     # No or invalid configuration
@@ -24,10 +24,6 @@ module MetalArchives
     # Error parsing value
     #
     class ParserError < Error; end
-
-    ##
-    # Functionality not implemented (yet)
-    class NotImplementedError < Error; end
 
     ##
     # Error in backend response
@@ -41,15 +37,5 @@ module MetalArchives
         @code = response.code
       end
     end
-
-    ##
-    # Error in method argument
-    #
-    class ArgumentError < Error; end
-
-    ##
-    # Incorrect type
-    #
-    class TypeError < Error; end
   end
 end

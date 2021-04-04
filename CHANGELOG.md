@@ -2,8 +2,9 @@
 
 ## 4.0.0
 
-- Remove `MetalArchives::Errors::InvalidIDError`
-- Remove `MetalArchives::Errors::ParserError`
+- Replace `MetalArchives::Errors::InvalidIDError` with `MetalArchives::Errors::NotFoundError`
+- Replace `MetalArchives::Errors::ArgumentError` with `ArgumentError`
+- Replace `MetalArchives::Errors::NotImplementedError` with `NotImplementedError`
 
 ## 3.2.0
 

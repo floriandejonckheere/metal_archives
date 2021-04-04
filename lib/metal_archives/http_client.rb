@@ -26,7 +26,7 @@ module MetalArchives
       when :miss, :bypass, :expired, :stale, :updating, :revalidated
         metrics[:miss] += 1
       end
-      raise Errors::InvalidIDError, response if response.code == 404
+      raise Errors::NotFoundError, response if response.code == 404
       raise Errors::APIError, response unless response.status.success?
 
       response

@@ -20,7 +20,9 @@ module MetalArchives
     # - +String+
     #
     # [Raises]
-    # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
+    # - rdoc-ref:MetalArchives::Errors::ParserError when parsing failed. Please report this error.
+    # - rdoc-ref:MetalArchives::Errors::NotFoundError when receiving status code 404
+    # - rdoc-ref:MetalArchives::Errors::APIError when receiving status code >= 400
     #
     attribute :name
 
@@ -31,7 +33,9 @@ module MetalArchives
     # - +Array+ of +String+
     #
     # [Raises]
-    # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
+    # - rdoc-ref:MetalArchives::Errors::ParserError when parsing failed. Please report this error.
+    # - rdoc-ref:MetalArchives::Errors::NotFoundError when receiving status code 404
+    # - rdoc-ref:MetalArchives::Errors::APIError when receiving status code >= 400
     #
     attribute :aliases, multiple: true
 
@@ -42,7 +46,9 @@ module MetalArchives
     # - +ISO3166::Country+
     #
     # [Raises]
-    # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
+    # - rdoc-ref:MetalArchives::Errors::ParserError when parsing failed. Please report this error.
+    # - rdoc-ref:MetalArchives::Errors::NotFoundError when receiving status code 404
+    # - rdoc-ref:MetalArchives::Errors::APIError when receiving status code >= 400
     #
     attribute :country, type: :country
 
@@ -53,7 +59,9 @@ module MetalArchives
     # - +String+
     #
     # [Raises]
-    # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
+    # - rdoc-ref:MetalArchives::Errors::ParserError when parsing failed. Please report this error.
+    # - rdoc-ref:MetalArchives::Errors::NotFoundError when receiving status code 404
+    # - rdoc-ref:MetalArchives::Errors::APIError when receiving status code >= 400
     #
     attribute :location
 
@@ -64,7 +72,9 @@ module MetalArchives
     # - +Date+
     #
     # [Raises]
-    # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
+    # - rdoc-ref:MetalArchives::Errors::ParserError when parsing failed. Please report this error.
+    # - rdoc-ref:MetalArchives::Errors::NotFoundError when receiving status code 404
+    # - rdoc-ref:MetalArchives::Errors::APIError when receiving status code >= 400
     #
     attribute :date_of_birth, type: :date
 
@@ -75,7 +85,9 @@ module MetalArchives
     # - +Date+
     #
     # [Raises]
-    # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
+    # - rdoc-ref:MetalArchives::Errors::ParserError when parsing failed. Please report this error.
+    # - rdoc-ref:MetalArchives::Errors::NotFoundError when receiving status code 404
+    # - rdoc-ref:MetalArchives::Errors::APIError when receiving status code >= 400
     #
     attribute :date_of_death, type: :date
 
@@ -86,7 +98,9 @@ module MetalArchives
     # - +String+
     #
     # [Raises]
-    # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
+    # - rdoc-ref:MetalArchives::Errors::ParserError when parsing failed. Please report this error.
+    # - rdoc-ref:MetalArchives::Errors::NotFoundError when receiving status code 404
+    # - rdoc-ref:MetalArchives::Errors::APIError when receiving status code >= 400
     #
     attribute :cause_of_death
 
@@ -97,7 +111,9 @@ module MetalArchives
     # - +Symbol+, one of +:male+ or +:female+
     #
     # [Raises]
-    # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
+    # - rdoc-ref:MetalArchives::Errors::ParserError when parsing failed. Please report this error.
+    # - rdoc-ref:MetalArchives::Errors::NotFoundError when receiving status code 404
+    # - rdoc-ref:MetalArchives::Errors::APIError when receiving status code >= 400
     #
     attribute :gender, type: :symbol, enum: [:male, :female]
 
@@ -108,7 +124,9 @@ module MetalArchives
     # - raw HTML +String+
     #
     # [Raises]
-    # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
+    # - rdoc-ref:MetalArchives::Errors::ParserError when parsing failed. Please report this error.
+    # - rdoc-ref:MetalArchives::Errors::NotFoundError when receiving status code 404
+    # - rdoc-ref:MetalArchives::Errors::APIError when receiving status code >= 400
     #
     attribute :biography
 
@@ -119,7 +137,9 @@ module MetalArchives
     # - raw HTML +String+
     #
     # [Raises]
-    # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
+    # - rdoc-ref:MetalArchives::Errors::ParserError when parsing failed. Please report this error.
+    # - rdoc-ref:MetalArchives::Errors::NotFoundError when receiving status code 404
+    # - rdoc-ref:MetalArchives::Errors::APIError when receiving status code >= 400
     #
     attribute :trivia
 
@@ -130,7 +150,9 @@ module MetalArchives
     # - +URI+ (rewritten if config option was enabled)
     #
     # [Raises]
-    # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
+    # - rdoc-ref:MetalArchives::Errors::ParserError when parsing failed. Please report this error.
+    # - rdoc-ref:MetalArchives::Errors::NotFoundError when receiving status code 404
+    # - rdoc-ref:MetalArchives::Errors::APIError when receiving status code >= 400
     #
     attribute :photo, type: :uri
 
@@ -146,7 +168,9 @@ module MetalArchives
     #   - +:title+: +String+
     #
     # [Raises]
-    # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
+    # - rdoc-ref:MetalArchives::Errors::ParserError when parsing failed. Please report this error.
+    # - rdoc-ref:MetalArchives::Errors::NotFoundError when receiving status code 404
+    # - rdoc-ref:MetalArchives::Errors::APIError when receiving status code >= 400
     #
     attribute :links, type: :hash, multiple: true
 
@@ -163,7 +187,9 @@ module MetalArchives
     #   - +:role+: +String+
     #
     # [Raises]
-    # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
+    # - rdoc-ref:MetalArchives::Errors::ParserError when parsing failed. Please report this error.
+    # - rdoc-ref:MetalArchives::Errors::NotFoundError when receiving status code 404
+    # - rdoc-ref:MetalArchives::Errors::APIError when receiving status code >= 400
     #
     attribute :bands, type: :hash, multiple: true
 
@@ -176,8 +202,9 @@ module MetalArchives
     # Fetch the data and assemble the model
     #
     # [Raises]
-    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
-    # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
+    # - rdoc-ref:MetalArchives::Errors::ParserError when parsing failed. Please report this error.
+    # - rdoc-ref:MetalArchives::Errors::NotFoundError when receiving status code 404
+    # - rdoc-ref:MetalArchives::Errors::APIError when receiving status code >= 400
     #
     def assemble # :nodoc:
       ## Base attributes
@@ -210,16 +237,15 @@ module MetalArchives
       # Returns rdoc-ref:Artist or nil when no results
       #
       # [Raises]
-      # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400
       # - rdoc-ref:MetalArchives::Errors::ParserError when parsing failed. Please report this error.
-      # - rdoc-ref:MetalArchives::Errors::ArgumentError when query contains no :name key
+      # - rdoc-ref:MetalArchives::Errors::APIError when receiving status code >= 400
       #
       # [+query+]
       #     Hash containing one or more of the following keys:
       #     - +:name+: +String+
       #
-      def find_by(query)
-        raise MetalArchives::Errors::ArgumentError unless query.include? :name
+      def find_by(name:, **query)
+        query[:name] = name
 
         params = Parsers::Artist.map_params query
 
@@ -240,17 +266,16 @@ module MetalArchives
       # Returns rdoc-ref:Artist or nil when no results
       #
       # [Raises]
-      # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
-      # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400
       # - rdoc-ref:MetalArchives::Errors::ParserError when parsing failed. Please report this error.
-      # - rdoc-ref:MetalArchives::Errors::ArgumentError when query contains no :name key
+      # - rdoc-ref:MetalArchives::Errors::NotFoundError when receiving status code 404
+      # - rdoc-ref:MetalArchives::Errors::APIError when receiving status code >= 400
       #
       # [+query+]
       #     Hash containing one or more of the following keys:
       #     - +:name+: +String+
       #
-      def find_by!(query)
-        obj = find_by query
+      def find_by!(name:, **query)
+        obj = find_by(name: name, **query)
         obj.load! if obj && !obj.loaded?
 
         obj
@@ -262,17 +287,14 @@ module MetalArchives
       # Returns rdoc-ref:Collection of rdoc-ref:Artist
       #
       # [Raises]
-      # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400
       # - rdoc-ref:MetalArchives::Errors::ParserError when parsing failed. Please report this error.
-      # - rdoc-ref:MetalArchives::Errors::ArgumentError when +name+ isn't a +String+
+      # - rdoc-ref:MetalArchives::Errors::APIError when receiving status code >= 400
       #
       # [+name+]
       #     +String+
       #
       def search(name)
-        raise MetalArchives::Errors::ArgumentError unless name.is_a? String
-
-        query = { name: name }
+        query = { name: name.to_s }
 
         params = Parsers::Artist.map_params query
 
@@ -310,8 +332,8 @@ module MetalArchives
       # Returns rdoc-ref:Collection of rdoc-ref:Artist
       #
       # [Raises]
-      # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400
       # - rdoc-ref:MetalArchives::Errors::ParserError when parsing failed. Please report this error.
+      # - rdoc-ref:MetalArchives::Errors::APIError when receiving status code >= 400
       #
       def all
         search ""
