@@ -2,228 +2,230 @@
 
 module MetalArchives
   ##
-  # Represents an band (person or group)
+  # Represents a band (person or group)
   #
   class Band < Base
     ##
     # :attr_reader: id
     #
-    # Returns +Integer+
+    # [Returns]
+    # - +Integer+
     #
-    property :id, type: Integer
+    attribute :id, type: :integer
 
     ##
     # :attr_reader: name
     #
-    # Returns +String+
+    # [Returns]
+    # - +String+
     #
     # [Raises]
-    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :name
+    attribute :name
 
     ##
     # :attr_reader: aliases
     #
-    # Returns +Array+ of +String+
+    # [Returns]
+    # - +Array+ of +String+
     #
     # [Raises]
-    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :aliases, multiple: true
+    attribute :aliases, multiple: true
 
     ##
     # :attr_reader: country
     #
-    # Returns +ISO3166::Country+
+    # [Returns]
+    # - +ISO3166::Country+
     #
     # [Raises]
-    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :country, type: ISO3166::Country
+    attribute :country, type: :country
 
     ##
     # :attr_reader: location
     #
-    # Returns +String+
+    # [Returns]
+    # - +String+
     #
     # [Raises]
-    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :location
+    attribute :location
 
     ##
     # :attr_reader: date_formed
     #
-    # Returns rdoc-ref:Date
+    # [Returns]
+    # - +Date+
     #
     # [Raises]
-    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :date_formed, type: Date
+    attribute :date_formed, type: :date
 
     ##
     # :attr_reader: years_active
     #
-    # Returns +Array+ of rdoc-ref:Range containing +Integer+
+    # [Returns]
+    # - +Array+ of rdoc-ref:Range containing +Integer+
     #
     # [Raises]
-    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :years_active, type: Range, multiple: true
+    attribute :years_active, type: :range, multiple: true
 
     ##
     # :attr_reader: genres
     #
-    # Returns +Array+ of +String+
+    # [Returns]
+    # - +Array+ of +String+
     #
     # [Raises]
-    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :genres, multiple: true
+    attribute :genres, multiple: true
 
     ##
     # :attr_reader: lyrical_themes
     #
-    # Returns +Array+ of +String+
+    # [Returns]
+    # - +Array+ of +String+
     #
     # [Raises]
-    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :lyrical_themes, multiple: true
+    attribute :lyrical_themes, multiple: true
 
     ##
     # :attr_reader: label
     #
-    # Returns rdoc-ref:Label
+    # [Returns]
+    # - rdoc-ref:Label
     #
     # [Raises]
-    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :label, type: Label
+    attribute :label, type: :label
 
     ##
     # :attr_reader: independent
     #
-    # Returns boolean
+    # [Returns]
+    # - +Boolean+
     #
     # [Raises]
-    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    enum :independent, values: [true, false]
+    attribute :independent, type: :boolean
 
     ##
     # :attr_reader: comment
     #
-    # Returns raw HTML +String+
+    # [Returns]
+    # - raw HTML +String+
     #
     # [Raises]
-    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :comment
+    attribute :comment
 
     ##
     # :attr_reader: status
     #
-    # Returns +:active+, +:split_up+, +:on_hold+, +:unknown+, +:changed_name+ or +:disputed+
+    # [Returns]
+    # - +Symbol+, one of +:active+, +:split_up+, +:on_hold+, +:unknown+, +:changed_name+ or +:disputed+
     #
     # [Raises]
-    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    enum :status, values: [:active, :split_up, :on_hold, :unknown, :changed_name, :disputed]
+    attribute :status, type: :symbol, enum: [:active, :split_up, :on_hold, :unknown, :changed_name, :disputed]
 
     ##
     # :attr_reader: releases
     #
-    # Returns +Array+ of rdoc-ref:Release
+    # [Returns]
+    # - +Array+ of rdoc-ref:Release
     #
     # [Raises]
-    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :releases, type: Release, multiple: true
+    attribute :releases, type: :release, multiple: true
 
     ##
     # :attr_reader: members
     #
-    # Returns +Array+ of +Hash+ containing the following keys
-    #
-    # [Raises]
-    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
-    # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
+    # [Returns]
+    # - +Array+ of +Hash+ containing the following keys
     #
     # [+members+]
-    #     - +:artist+: rdoc-ref:Artist
-    #     - +:current+: Boolean
-    #     - +:years_active+: +Array+ of rdoc-ref:Range containing +Integer+
-    #     - +:role+: +String+
+    #   - +:artist+: rdoc-ref:Artist
+    #   - +:current+: Boolean
+    #   - +:years_active+: +Array+ of rdoc-ref:Range containing +Integer+
+    #   - +:role+: +String+
     #
-    property :members, type: Artist, multiple: true
+    # [Raises]
+    # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
+    #
+    attribute :members, type: :hash, multiple: true
 
     ##
     # :attr_reader: similar
     #
-    # Returns +Array+ of +Hash+ containing the following keys
-    #
-    # [Raises]
-    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
-    # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
+    # [Returns]
+    # - +Array+ of +Hash+ containing the following keys
     #
     # [+similar+]
-    #     - +:band+: rdoc-ref:Band
-    #     - +:score+: +Integer+
+    #   - +:band+: rdoc-ref:Band
+    #   - +:score+: +Integer+
     #
-    property :similar, type: Hash, multiple: true
+    # [Raises]
+    # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
+    #
+    attribute :similar, type: :hash, multiple: true
 
     ##
     # :attr_reader: logo
     #
-    # Returns +URI+ (rewritten if config option was enabled)
+    # [Returns]
+    # - +URI+ (rewritten if config option was enabled)
     #
     # [Raises]
-    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :logo
+    attribute :logo, type: :uri
 
     ##
     # :attr_reader: photo
     #
-    # Returns +URI+ (rewritten if config option was enabled)
+    # [Returns]
+    # - +URI+ (rewritten if config option was enabled)
     #
     # [Raises]
-    # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    property :photo
+    attribute :photo, type: :uri
 
     ##
     # :attr_reader: links
     #
-    # Returns +Array+ of +Hash+ containing the following keys
+    # [Returns]
+    # - +Array+ of +Hash+ containing the following keys
+    #
+    # [+links+]
+    #   - +:url+: +String+
+    #   - +:type+: +Symbol+, either +:official+ or +:merchandise+
+    #   - +:title+: +String+
     #
     # [Raises]
     # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    # [+links+]
-    #     - +:url+: +String+
-    #     - +:type+: +Symbol+, either +:official+ or +:merchandise+
-    #     - +:title+: +String+
-    #
-    property :links, multiple: true
+    attribute :links, type: :hash, multiple: true
 
     protected
 
