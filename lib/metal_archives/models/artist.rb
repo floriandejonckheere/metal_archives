@@ -205,40 +205,6 @@ module MetalArchives
 
     class << self
       ##
-      # Find by ID
-      #
-      # Returns rdoc-ref:Artist, even when ID is invalid (because the data is lazily fetched)
-      #
-      # [+id+]
-      #     +Integer+
-      #
-      def find(id)
-        return MetalArchives.cache[cache_key_for(id)] if MetalArchives.cache.include? cache_key_for(id)
-
-        Artist.new id: id
-      end
-
-      ##
-      # Find by ID (no lazy loading)
-      #
-      # Returns rdoc-ref:Artist
-      #
-      # [Raises]
-      # - rdoc-ref:MetalArchives::Errors::InvalidIDError when no or invalid id
-      # - rdoc-ref:MetalArchives::Errors::APIError when receiving a status code >= 400 (except 404)
-      # - rdoc-ref:MetalArchives::Errors::ParserError when parsing failed. Please report this error.
-      #
-      # [+id+]
-      #     +Integer+
-      #
-      def find!(id)
-        obj = find id
-        obj.load! if obj && !obj.loaded?
-
-        obj
-      end
-
-      ##
       # Find by attributes
       #
       # Returns rdoc-ref:Artist or nil when no results

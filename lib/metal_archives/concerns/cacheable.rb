@@ -46,6 +46,9 @@ module MetalArchives
       ##
       # Generate unique key to identify object in cache
       #
+      # [Params]
+      # - +id+: +Integer+
+      #
       # [Returns]
       # - +String+
       #

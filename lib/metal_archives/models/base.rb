@@ -9,6 +9,7 @@ module MetalArchives
     include Cacheable
     include Initializable
     include Loadable
+    include Queryable
 
     ##
     # String representation

@@ -3,6 +3,7 @@
 ## 4.0.0
 
 - Remove `MetalArchives::Errors::InvalidIDError`
+- Remove `MetalArchives::Errors::ParserError`
 
 ## 3.2.0
 

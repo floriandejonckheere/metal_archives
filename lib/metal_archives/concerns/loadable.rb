@@ -11,10 +11,15 @@ module MetalArchives
       ##
       # Fetch, parse and load the data
       #
+      # [Params]
+      # - +force+: load even when already loaded (default: false)
+      #
       # [Raises]
       # - rdoc-ref:Errors::APIError when receiving a status code >= 400 (except 404)
       #
-      def load!
+      def load!(force: false)
+        return if loaded? && !force
+
         set(**assemble)
 
         @loaded = true
