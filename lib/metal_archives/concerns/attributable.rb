@@ -58,6 +58,7 @@ module MetalArchives
       # - +name+: +Symbol+, attribute name
       #
       # [Raises]
+      # - +ArgumentError+ when attribute is typed and value cannot be cast
       # - +ArgumentError+ when attribute is an enum and value is not allowed
       #
       def define_setter(name)

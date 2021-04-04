@@ -30,16 +30,28 @@ RSpec.describe MetalArchives::Attributable do
     expect(model).to be_my_string
   end
 
-  it "casts typed attributes" do
-    model.my_integer = "3"
+  describe "types" do
+    it "casts value" do
+      model.my_integer = "3"
 
-    expect(model.my_integer).to eq 3
-  end
+      expect(model.my_integer).to eq 3
+    end
 
-  it "casts multiple attributes" do
-    model.my_strings = "My String"
+    it "raises when value cannot be cast" do
+      expect { model.my_integer = "My String" }.to raise_error ArgumentError
+    end
 
-    expect(model.my_strings).to eq ["My String"]
+    context "when attribute is multiple" do
+      it "casts value" do
+        model.my_strings = "My String"
+
+        expect(model.my_strings).to eq ["My String"]
+      end
+
+      it "raises when value cannot be cast" do
+        expect { model.my_integers = ["My String"] }.to raise_error ArgumentError
+      end
+    end
   end
 
   describe "enum" do
