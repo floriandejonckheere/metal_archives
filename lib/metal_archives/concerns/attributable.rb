@@ -22,11 +22,13 @@ module MetalArchives
       # - +type+: +Symbol+, attribute data type, see rdoc-ref:MetalArchives::Types (default: +:string+)
       # - +multiple+: +Boolean+, whether this attribute represents a collection,
       #               which turns it into an +Enumerable+ of +type+ (default: +false+)
+      # - +enum+: +Array+ of +String+, restricts value(s) of attribute
       #
-      def attribute(name, type: :string, multiple: false)
+      def attribute(name, type: :string, multiple: false, enum: [])
         attributes[name] = {
           type: type,
           multiple: multiple,
+          enum: enum,
         }
 
         define_getter(name)
@@ -55,16 +57,32 @@ module MetalArchives
       # [Params]
       # - +name+: +Symbol+, attribute name
       #
+      # [Raises]
+      # - +ArgumentError+ when attribute is an enum and value is not allowed
+      #
       def define_setter(name)
         define_method(:"#{name}=") do |value|
           type = Types
             .lookup(attributes[name][:type])
 
+          # Cast value
           value = if attributes[name][:multiple]
                     Array(value).map { |v| type.cast(v) }
                   else
                     type.cast(value)
                   end
+
+          # Restrict value
+          enum = attributes[name][:enum]
+          if enum.any?
+            if attributes[name][:multiple]
+              value.each do |v|
+                raise ArgumentError, "#{v} is not included in #{enum}" unless enum.include?(v)
+              end
+            else
+              raise ArgumentError, "#{value} is not included in #{enum}" unless enum.include?(value)
+            end
+          end
 
           instance_variable_set(:"@#{name}", value)
         end

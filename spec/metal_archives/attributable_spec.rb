@@ -9,7 +9,12 @@ RSpec.describe MetalArchives::Attributable do
 
       attribute :my_string
       attribute :my_strings, multiple: true
+
       attribute :my_integer, type: :integer
+      attribute :my_integers, type: :integer, multiple: true
+
+      attribute :my_enum, enum: ["My Enum One", "My Enum Two"]
+      attribute :my_enums, multiple: true, enum: ["My Enum One", "My Enum Two"]
 
       # Override load mechanism
       def loaded?
@@ -35,5 +40,29 @@ RSpec.describe MetalArchives::Attributable do
     model.my_strings = "My String"
 
     expect(model.my_strings).to eq ["My String"]
+  end
+
+  describe "enum" do
+    it "sets value" do
+      model.my_enum = "My Enum One"
+
+      expect(model.my_enum).to eq "My Enum One"
+    end
+
+    it "raises when value is not allowed" do
+      expect { model.my_enum = "My Enum Three" }.to raise_error ArgumentError
+    end
+
+    context "when attribute is multiple" do
+      it "sets value" do
+        model.my_enums = ["My Enum One", "My Enum Two"]
+
+        expect(model.my_enums).to eq ["My Enum One", "My Enum Two"]
+      end
+
+      it "raises when value is not allowed" do
+        expect { model.my_enums = ["My Enum One", "My Enum Three"] }.to raise_error ArgumentError
+      end
+    end
   end
 end
