@@ -44,9 +44,14 @@ module MetalArchives
       def define_getter(name)
         define_method(name) do
           # Load only when not loaded or id property
-          load! unless loaded? || name == :id
+          load! unless !respond_to?(:loaded?) || loaded? || name == :id
 
-          instance_variable_get(:"@#{name}")
+          value = instance_variable_get(:"@#{name}")
+
+          return value unless value.blank?
+
+          # Return empty array for empty attributes not set
+          attributes[name][:multiple] ? [] : nil
         end
       end
 

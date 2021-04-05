@@ -30,6 +30,19 @@ RSpec.describe MetalArchives::Attributable do
     expect(model).to be_my_string
   end
 
+  describe "multiple" do
+    it "defines a setter, getter and iffer" do
+      model.my_strings = "My String"
+
+      expect(model.my_strings).to eq ["My String"]
+      expect(model).to be_my_strings
+    end
+
+    it "returns empty array if attribute was not set" do
+      expect(model.my_strings).to eq []
+    end
+  end
+
   describe "types" do
     it "casts value" do
       model.my_integer = "3"
