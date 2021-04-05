@@ -26,4 +26,25 @@ RSpec.describe MetalArchives::Builders::Base do
       end
     end
   end
+
+  describe "#date" do
+    it "returns dates" do
+      expect(builder.date(Date.new(2000, 1, 1))).to eq Date.new(2000, 1, 1)
+    end
+
+    it "returns nil" do
+      expect(builder.date(nil)).to eq nil
+      expect(builder.date("")).to eq nil
+      expect(builder.date("-")).to be_nil
+      expect(builder.date("foo")).to be_nil
+    end
+
+    it "parses dates" do
+      expect(builder.date("2001")).to eq Date.new(2001)
+      expect(builder.date("2001-02")).to eq Date.new(2001, 2)
+      expect(builder.date("2001-02-03")).to eq Date.new(2001, 2, 3)
+
+      expect(builder.date("February 3rd, 2001")).to eq Date.new(2001, 2, 3)
+    end
+  end
 end
