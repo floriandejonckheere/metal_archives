@@ -20,7 +20,15 @@ module MetalArchives
       def load!(force: false)
         return if loaded? && !force
 
-        set(**assemble)
+        # TODO: remove when all models have migrated from `assemble` method
+        if respond_to?(:assemble)
+          set(**assemble)
+        else
+          Builders
+            .const_get(self.class.name.demodulize)
+            .new(self)
+            .build!
+        end
 
         @loaded = true
         cache!

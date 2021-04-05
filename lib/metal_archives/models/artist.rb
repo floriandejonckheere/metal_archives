@@ -196,40 +196,6 @@ module MetalArchives
     # TODO: guest/session bands
     # TODO: misc bands
 
-    protected
-
-    ##
-    # Fetch the data and assemble the model
-    #
-    # [Raises]
-    # - rdoc-ref:MetalArchives::Errors::ParserError when parsing failed. Please report this error.
-    # - rdoc-ref:MetalArchives::Errors::NotFoundError when receiving status code 404
-    # - rdoc-ref:MetalArchives::Errors::APIError when receiving status code >= 400
-    #
-    def assemble # :nodoc:
-      ## Base attributes
-      response = MetalArchives.http.get "/artist/view/id/#{id}"
-
-      properties = Parsers::Artist.parse_html response.to_s
-
-      ## Biography
-      response = MetalArchives.http.get "/artist/read-more/id/#{id}/field/biography"
-
-      properties[:biography] = response.to_s
-
-      ## Trivia
-      response = MetalArchives.http.get "/artist/read-more/id/#{id}/field/trivia"
-
-      properties[:trivia] = response.to_s
-
-      ## Related links
-      response = MetalArchives.http.get "/link/ajax-list/type/person/id/#{id}"
-
-      properties[:links] = Parsers::Artist.parse_links_html response.to_s
-
-      properties
-    end
-
     class << self
       ##
       # Find by attributes
@@ -244,10 +210,8 @@ module MetalArchives
       #     Hash containing one or more of the following keys:
       #     - +:name+: +String+
       #
-      def find_by(name:, **query)
-        query[:name] = name
-
-        params = Parsers::Artist.map_params query
+      def find_by(name:)
+        params = { query: name&.to_s }
 
         response = MetalArchives.http.get "/search/ajax-artist-search/", params
         json = JSON.parse response.to_s
@@ -274,8 +238,8 @@ module MetalArchives
       #     Hash containing one or more of the following keys:
       #     - +:name+: +String+
       #
-      def find_by!(name:, **query)
-        obj = find_by(name: name, **query)
+      def find_by!(name:)
+        obj = find_by(name: name)
         obj.load! if obj && !obj.loaded?
 
         obj
@@ -294,9 +258,7 @@ module MetalArchives
       #     +String+
       #
       def search(name)
-        query = { name: name.to_s }
-
-        params = Parsers::Artist.map_params query
+        params = { query: name.to_s }
 
         l = lambda do
           @start ||= 0

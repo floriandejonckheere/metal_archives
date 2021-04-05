@@ -1,98 +1,94 @@
 # frozen_string_literal: true
 
 RSpec.describe MetalArchives::Artist do
-  describe "properties" do
-    it "Alberto Rionda has properties" do
-      artist = described_class.find 60_908
+  subject(:artist) { described_class.new(id: id) }
 
-      expect(artist).to be_instance_of described_class
-      expect(artist.id).to eq 60_908
+  describe "Alberto Rionda" do
+    let(:id) { 60_908 }
+
+    it "has attributes" do
       expect(artist.name).to eq "Alberto Rionda"
-      expect(artist.aliases).to be_empty
+      expect(artist.aliases).to eq ["Alberto Rionda"] # FIXME: deduplicate aliases and name
       expect(artist.country).to eq ISO3166::Country["ES"]
       expect(artist.location).to eq "Oviedo, Asturias"
       expect(artist.date_of_birth).to eq Date.new(1972, 9, 2)
+      expect(artist.date_of_death).to be_nil
+      expect(artist.cause_of_death).to be_nil
       expect(artist.gender).to eq :male
       expect(artist.biography).to match "Avalanch"
       expect(artist.trivia).to match "Sanctuarium Estudios"
-      expect(URI(artist.photo).path).to eq "/images/6/0/9/0/60908_artist.jpg"
-
-      expect(artist.bands[0]).to eq id: 3_540_361_100,
-                                    years_active: 2013..,
-                                    role: "Guitars",
-                                    active: true
-
-      expect(artist.bands[1]).to eq id: 5795,
-                                    years_active: 1994..,
-                                    role: "Guitars (lead), Vocals (backing)",
-                                    active: true
-
-      expect(artist.bands[2]).to eq name: "Geysser",
-                                    years_active: 2009..,
-                                    role: "Guitars",
-                                    active: false
-
-      expect(artist.bands[3]).to eq name: "Speed Demons",
-                                    years_active: 1988..1989,
-                                    role: "Guitars",
-                                    active: false
-
-      expect(artist.bands[4]).to eq name: "Stunned Parrots",
-                                    years_active: 2006..,
-                                    role: "Guitars, Keyboards",
-                                    active: false
+      expect(artist.photo.path).to eq "/images/6/0/9/0/60908_artist.jpg"
     end
 
-    it "Lemmy Kilmister has properties" do
-      artist = described_class.find 260
+    it "has bands" do
+      expect(artist.bands).to include(
+        { name: "Alquimia", id: 3_540_361_100, years_active: 2013.., role: "Guitars", active: true },
+        { name: "Avalanch", id: 5795, years_active: 1994.., role: "Guitars (lead), Vocals (backing)", active: true },
+        { name: "Geysser", years_active: 2009.., role: "Guitars", active: false },
+        { name: "Speed Demons", years_active: 1988..1989, role: "Guitars", active: false },
+        { name: "Stunned Parrots", years_active: 2006.., role: "Guitars, Keyboards", active: false },
+      )
+    end
 
-      expect(artist).to be_instance_of described_class
+    it "has links" do
+      expect(artist.links).to include(
+        { type: :official, title: "Facebook", url: /facebook/ },
+        { type: :official, title: /Bunker Estudios/, url: /bunker_estudios/ },
+      )
+    end
+  end
+
+  describe "Mayhem" do
+    let(:id) { 4752 }
+
+    it "has attributes" do
+      expect(artist.name).to eq "Marco Apostolo"
+      expect(artist.aliases).to eq ["Mayhem"]
+      expect(artist.country).to eq ISO3166::Country["IT"]
+      expect(artist.location).to be_nil
+      expect(artist.date_of_birth).to be_nil
+      expect(artist.date_of_death).to be_nil
+      expect(artist.cause_of_death).to be_nil
+      expect(artist.gender).to eq :male
+      expect(artist.photo).to be_nil
+    end
+  end
+
+  describe "Lemmy Kilmister" do
+    let(:id) { 260 }
+
+    it "has attributes" do
       expect(artist.name).to eq "Ian Fraser Kilmister"
-      expect(artist.aliases).to include "Lemmy Kilmister"
+      expect(artist.aliases).to eq ["Lemmy Kilmister"]
+      expect(artist.country).to eq ISO3166::Country["GB"]
+      expect(artist.location).to eq "Stoke-on-Trent, England"
+      expect(artist.date_of_birth).to eq Date.new(1945, 12, 24)
       expect(artist.date_of_death).to eq Date.new(2015, 12, 28)
-      expect(artist.links.length).to eq 6
-      expect(artist.links.count { |l| l[:type] == :official }).to eq 1
-      expect(artist.links.count { |l| l[:type] == :unofficial }).to eq 2
-      expect(artist.links.count { |l| l[:type] == :unlisted_bands }).to eq 2
-      expect(artist.links.find { |l| l[:type] == :official }[:url]).to eq "https://www.facebook.com/OfficialLemmy"
-      expect(artist.links.find { |l| l[:type] == :official }[:title]).to eq "Facebook"
-
-      expect(artist.bands).to include hash_including(name: "Hawkwind",
-                                                     years_active: 1971..1975,
-                                                     role: "Bass, Vocals (additional)",
-                                                     active: false,),
-                                      hash_including(name: "Headcat",
-                                                     years_active: 2000..2015,
-                                                     role: "Bass, Guitars, Vocals",
-                                                     active: false,),
-                                      hash_including(id: 203,
-                                                     years_active: 1975..2015,
-                                                     role: "Bass, Vocals",
-                                                     active: false,),
-                                      hash_including(name: "Opal Butterfly",
-                                                     years_active: 1970..1970,
-                                                     role: "Guitars",
-                                                     active: false,),
-                                      hash_including(name: "Sam Gopal",
-                                                     years_active: 1968..1968,
-                                                     role: "Guitars",
-                                                     active: false,),
-                                      hash_including(name: "The Motown Sect",
-                                                     years_active: 1966..1966,
-                                                     role: "Guitars, Vocals",
-                                                     active: false,),
-                                      hash_including(name: "The Rainmakers",
-                                                     years_active: 1963..1966,
-                                                     role: "Guitars",
-                                                     active: false,),
-                                      hash_including(name: "The Rockin' Vickers",
-                                                     years_active: 1965..1967,
-                                                     role: "Guitars",
-                                                     active: false,)
+      expect(artist.cause_of_death).to include "cancer"
+      expect(artist.gender).to eq :male
     end
 
-    it "maps query parameters" do
-      expect(MetalArchives::Parsers::Artist.map_params(name: "name")[:query]).to eq "name"
+    it "has links" do
+      expect(artist.links).to include(
+        { type: :official, title: "Facebook", url: /facebook/ },
+        { type: :official_merchandise, title: "Rock Off", url: /rockofftrade/ },
+        { type: :unofficial, title: "Wikipedia", url: /wikipedia/ },
+        { type: :unofficial, title: "IMDb", url: /imdb/ },
+      )
+    end
+
+    it "has bands" do
+      expect(artist.bands).to include(
+        { name: "Hawkwind", years_active: 1971..1975, role: "Bass, Vocals (additional)", active: false },
+        { name: "Headcat", years_active: 2000..2015, role: "Bass, Guitars, Vocals", active: false },
+        { name: "Motörhead", id: 203, years_active: 1975..2015, role: "Bass, Vocals", active: false },
+        { name: "Opal Butterfly", years_active: 1970..1970, role: "Guitars", active: false },
+        { name: "Sam Gopal", years_active: 1968..1968, role: "Guitars", active: false },
+        { name: "The Damned", years_active: 1978..1979, role: "Bass", active: false },
+        { name: "The Motown Sect", years_active: 1966..1966, role: "Guitars, Vocals", active: false },
+        { name: "The Rainmakers", years_active: 1963..1966, role: "Guitars", active: false },
+        { name: "The Rockin' Vickers", years_active: 1965..1967, role: "Guitars", active: false },
+      )
     end
   end
 

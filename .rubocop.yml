@@ -18,6 +18,9 @@ Layout/ParameterAlignment:
 Lint/AssignmentInCondition:
   AllowSafeAssignment: true
 
+Lint/MixedRegexpCaptureTypes:
+  Enabled: false
+
 Lint/SafeNavigationWithEmpty:
   Enabled: false
 
