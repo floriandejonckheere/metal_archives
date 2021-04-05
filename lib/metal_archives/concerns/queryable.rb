@@ -7,7 +7,7 @@ module MetalArchives
   module Queryable
     extend ActiveSupport::Concern
 
-    included do
+    class_methods do
       ##
       # Find by ID
       #
@@ -18,11 +18,11 @@ module MetalArchives
       #     +Integer+
       #
       def find(id)
-        return self.class.new(id: id) unless respond_to?(:cached?)
+        return new(id: id) unless respond_to?(:cache_key_for)
 
         return MetalArchives.cache[cache_key_for(id)] if MetalArchives.cache.include?(cache_key_for(id))
 
-        self.class.new(id: id)
+        new(id: id)
       end
 
       ##
