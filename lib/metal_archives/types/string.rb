@@ -7,7 +7,15 @@ module MetalArchives
     #
     class String
       def self.cast(value)
-        value&.to_s
+        return if value.blank?
+
+        value
+          .to_s
+          .gsub(/^"/, "")
+          .gsub(/"$/, "")
+          .gsub(/[[:space:]]/, " ")
+          .gsub(%r(</?[^>]*>), "") # Parsing HTML with regex is generally a Very Bad Idea
+          .strip
       end
 
       def self.serialize(value)
