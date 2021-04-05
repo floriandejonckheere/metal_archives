@@ -8,7 +8,7 @@ RSpec.describe MetalArchives::Artist do
 
     it "has attributes" do
       expect(artist.name).to eq "Alberto Rionda"
-      expect(artist.aliases).to eq ["Alberto Rionda"] # FIXME: deduplicate aliases and name
+      expect(artist.aliases).to eq []
       expect(artist.country).to eq ISO3166::Country["ES"]
       expect(artist.location).to eq "Oviedo, Asturias"
       expect(artist.date_of_birth).to eq Date.new(1972, 9, 2)

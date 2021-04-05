@@ -40,18 +40,20 @@ module MetalArchives
 
         info = doc.at("#member_info")
 
+        name = info.at("dl dt:contains('Real/full name') ~ dd")&.content&.strip
+
         country, location = info.at("dl dt:contains('Place of origin') ~ dd")&.content&.match(/(?<country>[^(]*)(\((?<location>[^)]*)\))?/)&.captures
 
-        # TODO: remove "N/A", deduplicate aliases
+        # TODO: remove "N/A"
         {
-          name: info.at("dl dt:contains('Real/full name') ~ dd")&.content,
+          name: name,
           date_of_birth: date(info.at("dl dt:contains('Age') ~ dd")&.content&.gsub(/[0-9]* *\(born ([^)]*)\)/, '\1')),
           date_of_death: date(info.at("dl dt:contains('R.I.P.') ~ dd")&.content),
           cause_of_death: info.at("dl dt:contains('Died of') ~ dd")&.content,
           gender: info.at("dl dt:contains('Gender') ~ dd")&.content&.downcase&.to_sym,
           country: ISO3166::Country.find_country_by_name(country&.strip),
           location: location&.strip,
-          aliases: info.at(".band_member_name")&.content,
+          aliases: [info.at(".band_member_name")&.content] - [name],
           photo: uri(doc.at(".member_img img")&.attr("src")),
           bands: bands(doc),
         }
