@@ -68,6 +68,32 @@ module MetalArchives
       rescue ArgumentError
         nil
       end
+
+      ##
+      # Parse a year range
+      #
+      # [Params]
+      # - +string+: Year range +String+
+      #
+      # [Returns]
+      # - +Range+ of +Integer+
+      #
+      def year(string)
+        return if string.blank?
+        return string if string.is_a?(Range)
+
+        components = string
+          .split("-")
+          .map(&:to_i)
+          .map { |y| y.zero? ? nil : y }
+
+        return if components.empty?
+
+        # Set end if only one year
+        components << components.first if components.count == 1
+
+        components[0]..components[1]
+      end
     end
   end
 end

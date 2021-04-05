@@ -47,4 +47,22 @@ RSpec.describe MetalArchives::Builders::Base do
       expect(builder.date("February 3rd, 2001")).to eq Date.new(2001, 2, 3)
     end
   end
+
+  describe "year" do
+    it "returns ranges" do
+      expect(builder.year(2000..2003)).to eq 2000..2003
+    end
+
+    it "returns nil" do
+      expect(builder.year(nil)).to be_nil
+      expect(builder.year("")).to be_nil
+    end
+
+    it "parses years" do
+      expect(builder.year("2001")).to eq 2001..2001
+      expect(builder.year("?-2001")).to eq nil..2001
+      expect(builder.year("2001-?")).to eq 2001..nil
+      expect(builder.year("2001-present")).to eq 2001..nil
+    end
+  end
 end
