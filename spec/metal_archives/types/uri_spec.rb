@@ -1,6 +1,11 @@
 # frozen_string_literal: true
 
 RSpec.describe MetalArchives::Types::URI do
+  it "does not cast nil" do
+    expect(described_class.cast(nil)).to eq nil
+    expect(described_class.cast("")).to eq nil
+  end
+
   it "does not cast URIs" do
     expect(described_class.cast(URI("https://www.metal-archives.com"))).to eq URI("https://www.metal-archives.com")
   end
