@@ -1,0 +1,553 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://ma.cache.headbang.re/artist/view/id/4752
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - MetalArchivesGemTestSuite/3.2.0 (user@example.com)
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - ma.cache.headbang.re
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+      Cache-Control:
+      - max-age=2592000
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Ray:
+      - 63b23cecdcbf4102-LHR
+      Cf-Request-Id:
+      - '094344680400004102cab59000000001'
+      Content-Security-Policy:
+      - frame-ancestors 'self'
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Sat, 10 Apr 2021 12:23:58 GMT
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Expires:
+      - Mon, 10 May 2021 12:23:58 GMT
+      Nel:
+      - '{"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=0ciULYfXBKNl7ky12xAR7Pr7ZSYXfLUk9JPGBpAKQvqK9dNJFmzTWv66nKeuew4Tg2jV6XY1hJPK9b3u4gMQW5lIwHP94MwFI9IeXO9fl1Yj0xNZJYmM"}],"max_age":604800,"group":"cf-nel"}'
+      Server:
+      - nginx
+      Vary:
+      - Accept-Encoding,User-Agent
+      X-Cache-Status:
+      - HIT
+      X-Frame-Options:
+      - SAMEORIGIN
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n<html
+        xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n<title>Mayhem - Encyclopaedia
+        Metallum: The Metal Archives</title>\n<meta http-equiv=\"Content-Type\" content=\"text/html;
+        charset=UTF-8\" />\n<meta content=\"width=device-width, initial-scale=1\"
+        name=\"viewport\" />\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/min/index.php?g=css\"
+        />\n<script type=\"3cf383cff11fcd415ee3bb40-text/javascript\" src=\"/min/index.php?g=js\"></script>\n<script
+        type=\"3cf383cff11fcd415ee3bb40-text/javascript\">\r\n\t\t\tvar URL_SITE\t=
+        'https://www.metal-archives.com/';\r\n\t\t\tvar URL_IMAGES\t= 'https://www.metal-archives.com/images/';\r\n\t\t\tvar
+        URL_CSS\t\t= 'https://www.metal-archives.com/css/';\r\n\t\t\tvar csrfToken\t=
+        '';\r\n\r\n\t\t\t$(document).ready(function() {\r\n\t\t\t\ttoggleFixedPositioning(1280,
+        600);\r\n\t\t\t\texecuteOnAllPages();\r\n\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t});\r\n\r\n\r\n\t\t</script>\n<noscript>\r\n\t\t\t<style
+        type=\"text/css\">\r\n\t\t\t\t.no-js { display: block !important; }\r\n\t\t\t</style>\r\n\t\t</noscript>\n<!--[if
+        lt IE 8]>\r\n\t\t\t<script src=\"http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js\"></script>\r\n\t\t\t
+        <link rel=\"stylesheet\" type=\"text/css\" href=\"https://www.metal-archives.com/css/default/oldie.css\"
+        />\r\n\t\t<![endif]-->\n<script type=\"3cf383cff11fcd415ee3bb40-text/javascript\">\r\n\t\t\t
+        \ var _gaq = _gaq || [];\r\n\t\t\t  _gaq.push(['_setAccount', 'UA-4046749-4']);\r\n\t\t\t
+        \ _gaq.push(['_trackPageview']);\r\n\r\n\t\t\t  (function() {\r\n\t\t\t    var
+        ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async
+        = true;\r\n\t\t\t    ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+        : 'http://www') + '.google-analytics.com/ga.js';\r\n\t\t\t    var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);\r\n\t\t\t  })();\r\n\t\t</script>\n</head>\n<body>\n<div
+        id=\"wrapper\">\n<div id=\"header\">\n<a href=\"https://www.metal-archives.com/\"
+        id=\"MA_logo\">Metal Archives</a>\n<div class=\"clear loading\"><img src=\"https://www.metal-archives.com/images/loading.gif\"
+        alt=\"loading\" width=\"12\" height=\"12\" /> loading...</div>\n<div id=\"search_box\">\n<form
+        id=\"search_form\" action=\"https://www.metal-archives.com/search\" method=\"get\">\n<div>\n<label>Search:</label><br
+        />\n<input name=\"searchString\" type=\"text\" id=\"searchQueryBox\" size=\"25\"
+        value=\"\" tabindex=\"1\" />\n<select name=\"type\" tabindex=\"2\">\n<option
+        value=\"band_name\">Band name</option>\n<option value=\"band_genre\">Music
+        genre</option>\n<option value=\"band_themes\">Lyrical themes</option>\n<option
+        value=\"album_title\">Album title</option>\n<option value=\"song_title\">Song
+        title</option>\n<option value=\"label_name\">Label</option>\n<option value=\"artist_alias\">Artist</option>\n<option
+        value=\"user_name\">User profile</option>\n<option value=\"google\">Google</option>\n</select>\n<br
+        />\n<a href=\"https://www.metal-archives.com/search/advanced/?searchString=&type=\"
+        class=\"float_left\" tabindex=\"4\">Advanced search</a>\n<button type=\"submit\"
+        class=\"btn_submit float_right\" tabindex=\"3\">Submit</button>\n</div>\n</form>\n</div>\n<div
+        id=\"top_menu_box\">\n<ul class=\"menu_style_1\">\n<li><a href=\"https://www.metal-archives.com/content/help\">Help</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/content/rules\">Rules</a></li>\n<li><a
+        href=\"https://forum.metal-archives.com\" target=\"_top\">Forum</a></li>\n</ul>\n<ul
+        class=\"menu_style_2\">\n<li><a href=\"https://www.metal-archives.com/content/faq\">FAQ</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/content/support\">Support Us</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/content/tools\">Add-ons</a></li>\n</ul>\n</div>\n</div>\n<div
+        id=\"left_col\">\n<div id=\"member_box\">\n <form name=\"login_form\" id=\"login_form\"
+        action=\"https://www.metal-archives.com/authentication/login\" method=\"post\">\n<div>\n<label>Username</label><br
+        />\n<input type=\"text\" name=\"loginUsername\" />\n<label>Password</label><br
+        />\n<input type=\"password\" name=\"loginPassword\" />\n<input type=\"hidden\"
+        name=\"origin\" value=\"/artist/view/id/4752\" />\n<button type=\"submit\"
+        class=\"btn_login float_right\">Login</button>\n</div>\n</form>\n<a href=\"https://www.metal-archives.com/user/signup\"
+        class=\"float-left writeAction\">Register</a>\n<span class=\"float_right\"><a
+        href=\"https://www.metal-archives.com/user/forgot-password\" class=\"float-left
+        writeAction\">Forgot login?</a> </span>\n<div class=\"clear\"> </div>\n</div>\n<div
+        id=\"left_menu_box\">\n<ul class=\"menu_style_3 block_spacer_20\">\n<li>\nBands\n<ul>\n<li><a
+        href=\"https://www.metal-archives.com/browse/letter\">alphabetical</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/browse/country\">country</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/browse/genre\">genre</a></li>\n</ul>\n</li>\n<li>\nLabels\n<ul>\n<li><a
+        href=\"https://www.metal-archives.com/label\">alphabetical</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/label/country\">country</a></li>\n</ul>\n</li>\n<li><a
+        href=\"https://www.metal-archives.com/review/browse\">Reviews</a></li>\n</ul>\n<ul
+        class=\"menu_style_3 block_spacer_20\">\n<li><a href=\"https://www.metal-archives.com/artist/rip\">R.I.P.</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/band/random\">Random Band</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/user/list\">User rankings</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/news\">News archive</a></li>\n</ul>\n<ul
+        class=\"menu_style_3 ornement_30\">\n<li><a href=\"https://www.metal-archives.com/report/list\">Reports</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/todo\">Contribute / To do</a></li>\n</ul>\n</div>\n<div
+        id=\"left_text_box\">\n<p class=\"small_text center\"> &copy; 2002-2021<br
+        />Encyclopaedia Metallum </p>\n<p class=\"small_text center\">Best viewed<br
+        /> <a href=\"http://www.getfirefox.com\" target=\"_blank\">without</a> Internet
+        Explorer, <br />in 1280 x 960 resolution<br /> or higher.</p>\n</div>\n<div>\n<p
+        class=\"small_text center\"><a href=\"https://www.metal-archives.com/content/pp\">Privacy
+        Policy</a></p>\n</div>\n</div>\n<div id=\"content_wrapper\">\n<script type=\"3cf383cff11fcd415ee3bb40-text/javascript\"
+        src=\"https://www.metal-archives.com/js/jquery/jquery.dataTables.min.js\"></script>\n<script
+        type=\"3cf383cff11fcd415ee3bb40-text/javascript\" src=\"https://www.metal-archives.com/js/jquery/jquery.form.js\"></script>\n<script
+        type=\"3cf383cff11fcd415ee3bb40-text/javascript\">\n\tvar artistId = 4752;\n\t\n\n\t$(document).ready(function()
+        {\n\t\t$(\".no-js\").removeClass(\"no-js\");\n\t\t$('#member_tabs').tabs({
+        beforeLoad: cacheTab }).show();\n\t\t$('#album_members').tabs({ beforeLoad:
+        cacheTab });\n\t\t$('.albumMenu').click(toggleAlbumMenu);\n\t\t$('.toggleAlbums').click(toggleAlbums);\n\t\t$('#bandSearchPopup').dialog({
+        autoOpen: false, width: 600, height: 500, position: 'top' });\n\t\t$('#bandSearch').ajaxForm({
+        target: '#bandSearchResults', beforeSubmit: function() { if (!$('#searchBandName').val())
+        { outputErrors({ searchBandName: 'Please enter a band name to search for.'},
+        '#bandLink'); return false; } toggleLoading(); }, success: toggleLoading});\n\t\t\t});\n\t\n\tfunction
+        toggleAlbums() {\n\t\tvar link = $(this);\n\t\tvar posTabDelim = link.attr('id').indexOf('_')
+        + 1;\n\t\tvar posIdDelim  = link.attr('id').indexOf('-') + 1;\n\t\tvar tab
+        = link.attr('id').substring(posTabDelim, posIdDelim - 1); \n\t\tvar bandId
+        = link.attr('id').substring(posIdDelim);\n\t\t$('.hiddenRelease_' + tab +
+        '-' + bandId).toggle();\n\t\tlink.html( link.html() == 'show all' ? 'hide'
+        : 'show all' );\n\t}\n\t\n\t\t\n\t</script>\n<div id=\"member_sidebar\">\n</div>\n<div
+        id=\"member_content\">\n<div class=\"tool_strip right writeAction\">\n<ul>\n<li><a
+        title=\"Report a mistake or additional information for this page\" href=\"javascript:popupReportDialog(3,
+        4752);\" class=\"btn_report_error\"> </a></li>\n\n</ul>\n</div>\n<div id=\"member_info\">\n<h1
+        class=\"band_member_name\">Mayhem</h1>\n<div id=\"tool_strip_01\" class=\"tool_strip
+        writeAction\">\n<ul>\n</ul>\n</div>\n<div class=\"clear block_spacer_20\"></div>\n<dl
+        class=\"float_left\">\n<dt>Real/full name:</dt>\n<dd>\nMarco Apostolo\n</dd>\n<dt>Age:</dt>\n<dd>
+        N/A </dd>\n</dl>\n<dl class=\"float_right\">\n<dt>Place of origin:</dt>\n<dd>
+        <a href=\"https://www.metal-archives.com/lists/IT\">Italy</a> </dd>\n<dt>Gender:</dt>\n<dd>Male</dd>\n</dl>\n<div
+        class=\"clear band_comment\">\n</div>\n</div>\n<div id=\"message\"> </div>\n<div
+        id=\"member_tabs\" class=\"tabs no-js\">\n<ul>\n<li><a href=\"#artist_tab_past\">Past
+        Bands</a></li> <li><a href=\"#artist_tab_guest\">Guest/Session</a></li> <li><a
+        href=\"#artist_tab_misc\">Misc. staff</a></li> </ul>\n\n<div id=\"artist_tab_past\">\n<div
+        id=\"member_past\" class=\"tabs2lvl\">\n</div>\n<div class=\"ui-tabs-panel-content
+        block_spacer_top_36\">\n<div class=\"member_in_band\" id=\"memberInBand_8591\">\n<h3
+        class=\"member_in_band_name\"><a href=\"https://www.metal-archives.com/bands/A_Forest/8591#band_tab_members\"
+        title=\"A Forest\">A Forest</a></h3>\n<p class=\"member_in_band_role\" id=\"roleInBand_8591\">\n<strong>Drums</strong>,
+        <strong>Vocals</strong> </p>\n<table class=\"display no_borders\" cellpadding=\"0\"
+        cellspacing=\"0\">\n<tr id=\"memberInAlbum_68104\" class=\"even\">\n<td width=\"28\">2000</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/A_Forest/The_Abyss_in_Northland/68104\"
+        title=\"The Abyss in Northland\">The Abyss in Northland</a> (Demo) </td>\n<td>\nDrums
+        </td>\n</tr>\n<tr id=\"memberInAlbum_19105\" class=\" odd\">\n<td width=\"28\">2000</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/A_Forest/Fury_of_the_Elements/19105\"
+        title=\"Fury of the Elements\">Fury of the Elements</a> (Demo) </td>\n<td>\nDrums
+        </td>\n</tr>\n<tr id=\"memberInAlbum_19106\" class=\"even\">\n<td width=\"28\">2002</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/A_Forest/Tales_of_Winter_Frost/19106\"
+        title=\"Tales of Winter Frost\">Tales of Winter Frost</a> (Demo) </td>\n<td>\nDrums
+        </td>\n</tr>\n<tr id=\"memberInAlbum_27333\" class=\" odd\">\n<td width=\"28\">2002</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/A_Forest/Vinterriket_-_A_Forest/27333\"
+        title=\"Vinterriket / A Forest\">Vinterriket / A Forest</a> (Split) </td>\n<td>\nDrums,
+        Vocals (as \"Marco\") </td>\n</tr>\n<tr id=\"memberInAlbum_34691\" class=\"even\">\n<td
+        width=\"28\">2003</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/A_Forest/The_Spirit_of_the_Forest_%28To_Bleed_Northern_Spirit%29/34691\"
+        title=\"The Spirit of the Forest (To Bleed Northern Spirit)\">The Spirit of
+        the Forest (To Bleed Northern Spirit)</a> </td>\n<td>\nDrums, Vocals </td>\n</tr>\n<tr
+        id=\"memberInAlbum_36194\" class=\" odd\">\n<td width=\"28\">2003</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/A_Forest/Black_Clouds/36194\"
+        title=\"Black Clouds\">Black Clouds</a> (EP) </td>\n<td>\nDrums </td>\n</tr>\n<tr
+        id=\"memberInAlbum_341992\" class=\"even\">\n<td width=\"28\">2006</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/A_Forest/Worn_Out/341992\"
+        title=\"Worn Out\">Worn Out</a> (Demo) </td>\n<td>\nDrums, Vocals </td>\n</tr>\n<tr
+        id=\"memberInAlbum_259680\" class=\" odd\">\n<td width=\"28\">2009</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/A_Forest/Externsteine/259680\"
+        title=\"Externsteine\">Externsteine</a> (Split) </td>\n<td>\nDrums </td>\n</tr>\n</table>\n</div>\n<div
+        class=\"member_in_band\" id=\"memberInBand_16313\">\n<h3 class=\"member_in_band_name\"><a
+        href=\"https://www.metal-archives.com/bands/Darkness/16313#band_tab_members\"
+        title=\"Darkness\">Darkness</a></h3>\n<p class=\"member_in_band_role\" id=\"roleInBand_16313\">\n<strong>Drums</strong>
+        </p>\n<table class=\"display no_borders\" cellpadding=\"0\" cellspacing=\"0\">\n<tr
+        id=\"memberInAlbum_47562\" class=\"even\">\n<td width=\"28\">2001</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Darkness/Let_the_Napalm_Rain/47562\"
+        title=\"Let the Napalm Rain\">Let the Napalm Rain</a> (Demo) </td>\n<td>\nDrums
+        </td>\n</tr>\n<tr id=\"memberInAlbum_46886\" class=\" odd\">\n<td width=\"28\">2002</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Darkness/Pure_Necrodarkness/46886\"
+        title=\"Pure Necrodarkness\">Pure Necrodarkness</a> (Split) </td>\n<td>\nDrums
+        </td>\n</tr>\n<tr id=\"memberInAlbum_37139\" class=\"even\">\n<td width=\"28\">2003</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Darkness/Flag_of_Monotheistic_Destruction/37139\"
+        title=\"Flag of Monotheistic Destruction\">Flag of Monotheistic Destruction</a>
+        (Compilation) </td>\n<td>\nDrums </td>\n</tr>\n<tr id=\"memberInAlbum_143868\"
+        class=\" odd\">\n<td width=\"28\">2006</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Darkness/Archdukes_of_Hell_Vol._1/143868\"
+        title=\"Archdukes of Hell Vol. 1\">Archdukes of Hell Vol. 1</a> (Split) </td>\n<td>\nDrums
+        </td>\n</tr>\n<tr id=\"memberInAlbum_734538\" class=\"even\">\n<td width=\"28\">2007</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Darkness/United_in_Blasphemy/734538\"
+        title=\"United in Blasphemy\">United in Blasphemy</a> (Split) </td>\n<td>\nDrums
+        </td>\n</tr>\n<tr id=\"memberInAlbum_177993\" class=\" odd\">\n<td width=\"28\">2007</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Darkness/Unholy_Sacrifice/177993\"
+        title=\"Unholy Sacrifice\">Unholy Sacrifice</a> (Split) </td>\n<td>\nDrums
+        </td>\n</tr>\n<tr id=\"memberInAlbum_366742\" class=\"even\">\n<td width=\"28\">2013</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Darkness/Anti_Human_Life/366742\"
+        title=\"Anti Human Life\">Anti Human Life</a> </td>\n<td>\nDrums </td>\n</tr>\n<tr
+        id=\"memberInAlbum_565015\" class=\" odd\">\n<td width=\"28\">2016</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Darkness/Demonic_Blessings/565015\"
+        title=\"Demonic Blessings\">Demonic Blessings</a> (Split) </td>\n<td>\nDrums
+        </td>\n</tr>\n<tr id=\"memberInAlbum_573299\" class=\"even\">\n<td width=\"28\">2016</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Darkness/The_Last_Rehearsal_16-03-2016/573299\"
+        title=\"The Last Rehearsal 16-03-2016\">The Last Rehearsal 16-03-2016</a>
+        (Compilation) </td>\n<td>\nDrums </td>\n</tr>\n</table>\n</div>\n<div class=\"member_in_band\"
+        id=\"memberInBand_13718\">\n<h3 class=\"member_in_band_name\"><a href=\"https://www.metal-archives.com/bands/Hiems/13718#band_tab_members\"
+        title=\"Hiems\">Hiems</a></h3>\n<p class=\"member_in_band_role\" id=\"roleInBand_13718\">\n<strong>Drums</strong>
+        </p>\n<table class=\"display no_borders\" cellpadding=\"0\" cellspacing=\"0\">\n<tr
+        id=\"memberInAlbum_46884\" class=\" odd\">\n<td width=\"28\">2000</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Hiems/The_Reaper/46884\"
+        title=\"The Reaper\">The Reaper</a> (Demo) </td>\n<td>\n Drums </td>\n</tr>\n</table>\n</div>\n<div
+        class=\"member_in_band\" id=\"memberInBand_7823\">\n<h3 class=\"member_in_band_name\"><a
+        href=\"https://www.metal-archives.com/bands/Skoll/7823#band_tab_members\"
+        title=\"Skoll\">Skoll</a></h3>\n<p class=\"member_in_band_role\" id=\"roleInBand_7823\">\n<strong>Drums</strong>\n(2000,
+        2013-?) </p>\n<table class=\"display no_borders\" cellpadding=\"0\" cellspacing=\"0\">\n<tr
+        id=\"memberInAlbum_565089\" class=\"even\">\n<td width=\"28\">2016</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Skoll/Of_Misty_Fire_We_Are/565089\"
+        title=\"Of Misty Fire We Are\">Of Misty Fire We Are</a> </td>\n<td>\nDrums
+        </td>\n</tr>\n</table>\n</div>\n<div class=\"member_in_band\" id=\"memberInBand_24392\">\n<h3
+        class=\"member_in_band_name\"><a href=\"https://www.metal-archives.com/bands/Teuta/24392#band_tab_members\"
+        title=\"Teuta\">Teuta</a></h3>\n<p class=\"member_in_band_role\" id=\"roleInBand_24392\">\n<strong>Drums</strong>
+        </p>\n</div>\n<div class=\"member_in_band\" id=\"memberInBand_3540263504\">\n<h3
+        class=\"member_in_band_name\"><a href=\"https://www.metal-archives.com/bands/The_Blessed_Hellbrigade/3540263504#band_tab_members\"
+        title=\"The Blessed Hellbrigade\">The Blessed Hellbrigade</a></h3>\n<p class=\"member_in_band_role\"
+        id=\"roleInBand_3540263504\">\n<strong>Drums</strong> </p>\n<table class=\"display
+        no_borders\" cellpadding=\"0\" cellspacing=\"0\">\n<tr id=\"memberInAlbum_211689\"
+        class=\" odd\">\n<td width=\"28\">2008</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/The_Blessed_Hellbrigade/Two_Steps_to_Aim_Annihilation_-_Metastasi/211689\"
+        title=\"Two Steps to Aim Annihilation - Metastasi\">Two Steps to Aim Annihilation
+        - Metastasi</a> (Demo) </td>\n<td>\nDrums </td>\n</tr>\n<tr id=\"memberInAlbum_485756\"
+        class=\"even\">\n<td width=\"28\">2015</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/The_Blessed_Hellbrigade/Of_Poison_and_Grief_%28Four_Litanies_for_the_Deceased%29/485756\"
+        title=\"Of Poison and Grief (Four Litanies for the Deceased)\">Of Poison and
+        Grief (Four Litanies for the Deceased)</a> (Split) </td>\n<td>\nDrums </td>\n</tr>\n</table>\n</div>\n<div
+        class=\"member_in_band\" id=\"memberInBand_12900\">\n<h3 class=\"member_in_band_name\"><a
+        href=\"https://www.metal-archives.com/bands/The_True_Endless/12900#band_tab_members\"
+        title=\"The True Endless\">The True Endless</a></h3>\n<p class=\"member_in_band_role\"
+        id=\"roleInBand_12900\">\n<strong>Drums</strong>\n(?-2012) </p>\n<table class=\"display
+        no_borders\" cellpadding=\"0\" cellspacing=\"0\">\n<tr id=\"memberInAlbum_47596\"
+        class=\" odd hiddenRelease_past-12900 displayNone\">\n<td width=\"28\">1999</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/The_True_Endless/The_Trendkiller_E.P./47596\"
+        title=\"The Trendkiller E.P.\">The Trendkiller E.P.</a> (EP) </td>\n<td>\n
+        Drums </td>\n</tr>\n<tr id=\"memberInAlbum_30807\" class=\"even hiddenRelease_past-12900
+        displayNone\">\n<td width=\"28\">2001</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/The_True_Endless/Unholy_Art/30807\"
+        title=\"Unholy Art\">Unholy Art</a> (Demo) </td>\n<td>\nDrums </td>\n</tr>\n<tr
+        id=\"memberInAlbum_47591\" class=\" odd hiddenRelease_past-12900 displayNone\">\n<td
+        width=\"28\">2001</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/The_True_Endless/The_Trendkiller_E.P._%2B_Live_in_the_Castle/47591\"
+        title=\"The Trendkiller E.P. + Live in the Castle\">The Trendkiller E.P. +
+        Live in the Castle</a> (Compilation) </td>\n<td>\nDrums </td>\n</tr>\n<tr
+        id=\"memberInAlbum_30806\" class=\"even hiddenRelease_past-12900 displayNone\">\n<td
+        width=\"28\">2002</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/The_True_Endless/Live_and_Raw/30806\"
+        title=\"Live and Raw\">Live and Raw</a> (Live album) </td>\n<td>\nDrums </td>\n</tr>\n<tr
+        id=\"memberInAlbum_148987\" class=\" odd hiddenRelease_past-12900 displayNone\">\n<td
+        width=\"28\">2002</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/The_True_Endless/The_Early_Days_of_Armageddon/148987\"
+        title=\"The Early Days of Armageddon\">The Early Days of Armageddon</a> (Split)
+        </td>\n<td>\nDrums (tracks 9-11) </td>\n</tr>\n<tr id=\"memberInAlbum_35012\"
+        class=\"even hiddenRelease_past-12900 displayNone\">\n<td width=\"28\">2002</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/The_True_Endless/The_Forest_like_Us_-_On_the_Path_in_the_Night/35012\"
+        title=\"The Forest like Us / On the Path in the Night\">The Forest like Us
+        / On the Path in the Night</a> (Split) </td>\n<td>\nDrums </td>\n</tr>\n<tr
+        id=\"memberInAlbum_30805\" class=\" odd\">\n<td width=\"28\">2003</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/The_True_Endless/Wings_of_Wrath/30805\"
+        title=\"Wings of Wrath\">Wings of Wrath</a> </td>\n<td>\nDrums </td>\n</tr>\n<tr
+        id=\"memberInAlbum_224398\" class=\"even\">\n<td width=\"28\">2005</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/The_True_Endless/A_Climb_to_Eternity/224398\"
+        title=\"A Climb to Eternity\">A Climb to Eternity</a> </td>\n<td>\nDrums </td>\n</tr>\n<tr
+        id=\"memberInAlbum_108456\" class=\" odd hiddenRelease_past-12900 displayNone\">\n<td
+        width=\"28\">2005</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/The_True_Endless/De_Vermiis_Mysteriis/108456\"
+        title=\"De Vermiis Mysteriis\">De Vermiis Mysteriis</a> (Split) </td>\n<td>\nDrums
+        </td>\n</tr>\n<tr id=\"memberInAlbum_131302\" class=\"even\">\n<td width=\"28\">2006</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/The_True_Endless/Buried_by_Time_and_Dust/131302\"
+        title=\"Buried by Time and Dust\">Buried by Time and Dust</a> </td>\n<td>\nDrums,
+        Vocals (tracks 2, 3) </td>\n</tr>\n<tr id=\"memberInAlbum_131307\" class=\"
+        odd hiddenRelease_past-12900 displayNone\">\n<td width=\"28\">2006</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/The_True_Endless/Unholy_Virtues_-_The_Dirty_Raw_Experience/131307\"
+        title=\"Unholy Virtues / The Dirty Raw Experience\">Unholy Virtues / The Dirty
+        Raw Experience</a> (Split) </td>\n<td>\nDrums </td>\n</tr>\n<tr id=\"memberInAlbum_153775\"
+        class=\"even hiddenRelease_past-12900 displayNone\">\n<td width=\"28\">2007</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/The_True_Endless/...Too_Evil_and_Sick/153775\"
+        title=\"...Too Evil and Sick\">...Too Evil and Sick</a> (Split) </td>\n<td>\nDrums
+        </td>\n</tr>\n<tr id=\"memberInAlbum_202185\" class=\" odd\">\n<td width=\"28\">2008</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/The_True_Endless/1888_from_Hell/202185\"
+        title=\"1888 from Hell\">1888 from Hell</a> </td>\n<td>\nDrums, Vocals </td>\n</tr>\n<tr
+        id=\"memberInAlbum_238206\" class=\"even hiddenRelease_past-12900 displayNone\">\n<td
+        width=\"28\">2009</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/The_True_Endless/United_in_Hell/238206\"
+        title=\"United in Hell\">United in Hell</a> (Split) </td>\n<td>\nDrums </td>\n</tr>\n<tr
+        id=\"memberInAlbum_242567\" class=\" odd\">\n<td width=\"28\">2009</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/The_True_Endless/An_Year_in_Black/242567\"
+        title=\"An Year in Black\">An Year in Black</a> </td>\n<td>\nDrums </td>\n</tr>\n<tr
+        id=\"memberInAlbum_277058\" class=\"even hiddenRelease_past-12900 displayNone\">\n<td
+        width=\"28\">2010</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/The_True_Endless/Taurus_Live_Ritual/277058\"
+        title=\"Taurus Live Ritual\">Taurus Live Ritual</a> (Live album) </td>\n<td>\nDrums
+        </td>\n</tr>\n<tr id=\"memberInAlbum_277871\" class=\" odd hiddenRelease_past-12900
+        displayNone\">\n<td width=\"28\">2010</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/The_True_Endless/La_Chiesaccia/277871\"
+        title=\"La Chiesaccia\">La Chiesaccia</a> (EP) </td>\n<td>\nDrums </td>\n</tr>\n<tr
+        id=\"memberInAlbum_279635\" class=\"even hiddenRelease_past-12900 displayNone\">\n<td
+        width=\"28\">2010</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/The_True_Endless/In_the_Swamp/279635\"
+        title=\"In the Swamp\">In the Swamp</a> (EP) </td>\n<td>\nDrums </td>\n</tr>\n<tr
+        id=\"memberInAlbum_287596\" class=\" odd hiddenRelease_past-12900 displayNone\">\n<td
+        width=\"28\">2010</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/The_True_Endless/Too_Heavy_for_Hell/287596\"
+        title=\"Too Heavy for Hell\">Too Heavy for Hell</a> (Split) </td>\n<td>\nDrums
+        </td>\n</tr>\n<tr id=\"memberInAlbum_318660\" class=\"even hiddenRelease_past-12900
+        displayNone\">\n<td width=\"28\">2011</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/The_True_Endless/The_Dirty_Raw_Experience/318660\"
+        title=\"The Dirty Raw Experience\">The Dirty Raw Experience</a> (EP) </td>\n<td>\nDrums
+        </td>\n</tr>\n<tr id=\"memberInAlbum_315376\" class=\" odd hiddenRelease_past-12900
+        displayNone\">\n<td width=\"28\">2011</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/The_True_Endless/Rape_Their_Souls_with_Black_Metal_Wrath/315376\"
+        title=\"Rape Their Souls with Black Metal Wrath\">Rape Their Souls with Black
+        Metal Wrath</a> (Split) </td>\n<td>\nDrums </td>\n</tr>\n<tr id=\"memberInAlbum_358361\"
+        class=\"even hiddenRelease_past-12900 displayNone\">\n<td width=\"28\">2012</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/The_True_Endless/Slow_Decay/358361\"
+        title=\"Slow Decay\">Slow Decay</a> (Split) </td>\n<td>\nDrums </td>\n</tr>\n<tr
+        id=\"memberInAlbum_378360\" class=\" odd\">\n<td width=\"28\">2013</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/The_True_Endless/Legacy_of_Hate/378360\"
+        title=\"Legacy of Hate\">Legacy of Hate</a> </td>\n<td>\nDrums </td>\n</tr>\n<tr
+        class=\"showAll\">\n<td colspan=\"3\">\n(<a href=\"javascript:;\" id=\"toggle_past-12900\"
+        class=\"toggleAlbums\">show all</a>)\n</td>\n</tr>\n</table>\n</div>\n</div>\n</div>\n\n\n<div
+        id=\"artist_tab_guest\">\n <div id=\"member_guest\" class=\"tabs2lvl\"> </div>\n<div
+        class=\"ui-tabs-panel-content block_spacer_top_36\">\n<div class=\"member_in_band\"
+        id=\"memberInBand_7823\">\n<h3 class=\"member_in_band_name\"><a href=\"https://www.metal-archives.com/bands/Skoll/7823#band_tab_members\"
+        title=\"Skoll\">Skoll</a></h3>\n<p class=\"member_in_band_role\" id=\"roleInBand_7823\">\n</p>\n<table
+        class=\"display no_borders\" cellpadding=\"0\" cellspacing=\"0\">\n<tr id=\"memberInAlbum_34767\"
+        class=\"even\">\n<td width=\"28\">2001</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Skoll/Through_the_Mists_of_Time/34767\"
+        title=\"Through the Mists of Time\">Through the Mists of Time</a> (Compilation)
+        </td>\n<td>\nDrums </td>\n</tr>\n<tr id=\"memberInAlbum_17271\" class=\" odd\">\n<td
+        width=\"28\">2002</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Skoll/Warriors_of_the_Misty_Fields/17271\"
+        title=\"Warriors of the Misty Fields\">Warriors of the Misty Fields</a> (EP)
+        </td>\n<td>\nDrums </td>\n</tr>\n<tr id=\"memberInAlbum_381442\" class=\"even\">\n<td
+        width=\"28\">2013</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Skoll/Grisera/381442\"
+        title=\"Grisera\">Grisera</a> </td>\n<td>\nDrums </td>\n</tr>\n</table>\n</div>\n</div>\n</div>\n\n\n<div
+        id=\"artist_tab_misc\">\n<div id=\"member_guest\" class=\"tabs2lvl\"> </div>\n<div
+        class=\"ui-tabs-panel-content block_spacer_top_36\">\n<div class=\"member_in_band\"
+        id=\"memberInBand_7823\">\n<h3 class=\"member_in_band_name\"><a href=\"https://www.metal-archives.com/bands/Skoll/7823#band_tab_members\"
+        title=\"Skoll\">Skoll</a></h3>\n<p class=\"member_in_band_role\" id=\"roleInBand_7823\">\n</p>\n<table
+        class=\"display no_borders\" cellpadding=\"0\" cellspacing=\"0\">\n<tr id=\"memberInAlbum_565089\"
+        class=\" odd\">\n<td width=\"28\">2016</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Skoll/Of_Misty_Fire_We_Are/565089\"
+        title=\"Of Misty Fire We Are\">Of Misty Fire We Are</a> </td>\n<td>\nRecording
+        (all instruments) </td>\n</tr>\n</table>\n</div>\n</div>\n</div>\n\n</div>\n<div
+        id=\"readMoreDialogBio\" title=\"Biography\" class=\"displayNone\"> </div>\n<div
+        id=\"readMoreDialogTrivia\" title=\"Trivia\" class=\"displayNone\"> </div>\n\n<div
+        id=\"auditTrail\">\n<table>\n<tr>\n<td>Added by: <a href=\"https://www.metal-archives.com/users/QuidEstVerum\"
+        class=\"profileMenu\">QuidEstVerum</a></td>\n<td align=\"right\">Modified
+        by: <a href=\"https://www.metal-archives.com/users/five_pointed_star141\"
+        class=\"profileMenu\">five_pointed_star141</a></td>\n</tr>\n<tr>\n<td>Added
+        on: 2011-04-09 17:17:50</td>\n<td align=\"right\">Last modified on: 2020-07-23
+        12:57:01</td>\n</tr>\n<tr>\n<td valign=\"top\">\n&nbsp;\n</td>\n<td align=\"right\"
+        valign=\"top\">\n </td>\n</tr>\n<td class=\"writeAction\" colspan=\"2\">Duplicate?
+        Please <a href=\"javascript:popupReportDialog(3, 4752);\">file a report</a>
+        for merging.</td>\n</table>\n</div>\n</div>\n</div>\n</div>\n</div>\n<script
+        src=\"https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js\"
+        data-cf-settings=\"3cf383cff11fcd415ee3bb40-|49\" defer=\"\"></script></body>\n</html>\n"
+  recorded_at: Sat, 10 Apr 2021 12:27:19 GMT
+- request:
+    method: get
+    uri: https://ma.cache.headbang.re/artist/read-more/id/4752/field/biography
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - MetalArchivesGemTestSuite/3.2.0 (user@example.com)
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - ma.cache.headbang.re
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+      Cache-Control:
+      - max-age=2592000
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Ray:
+      - 63b23f7f2f844c3d-AMS
+      Cf-Request-Id:
+      - '094346037400004c3d868f8000000001'
+      Content-Security-Policy:
+      - frame-ancestors 'self'
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Sat, 10 Apr 2021 12:23:59 GMT
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Expires:
+      - Mon, 10 May 2021 12:23:59 GMT
+      Nel:
+      - '{"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"group":"cf-nel","endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=eBH%2Ft6Tz2HnouwZyKpRVi73f8lOYvqYaNSzQxlJQruINqjwtPtvNnH%2FEMdvmBvD7dXbzxR5Pu1OAt4kfXXiAxzJ1X0VdB72da7RWQrCQr5XdUgA9LwPe"}],"max_age":604800}'
+      Server:
+      - nginx
+      Vary:
+      - User-Agent
+      X-Cache-Status:
+      - HIT
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '0'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Sat, 10 Apr 2021 12:27:19 GMT
+- request:
+    method: get
+    uri: https://ma.cache.headbang.re/artist/read-more/id/4752/field/trivia
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - MetalArchivesGemTestSuite/3.2.0 (user@example.com)
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - ma.cache.headbang.re
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+      Cache-Control:
+      - max-age=2592000
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Ray:
+      - 63b23f8498d953bb-LHR
+      Cf-Request-Id:
+      - '09434606e3000053bb4d294000000001'
+      Content-Security-Policy:
+      - frame-ancestors 'self'
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Sat, 10 Apr 2021 12:23:59 GMT
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Expires:
+      - Mon, 10 May 2021 12:23:59 GMT
+      Nel:
+      - '{"max_age":604800,"report_to":"cf-nel"}'
+      Report-To:
+      - '{"max_age":604800,"group":"cf-nel","endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=Jkgz5vMJr%2FdlvIHPrlHmNJyXFuyHP6SvC%2B10jhP8c3ozvIHYcMtfuIQie8HeQib5a4CI4P7CLk8QGjxQo3owYlzzK%2FVgGsqiPeWyVNccTjw9LEDglX%2F1"}]}'
+      Server:
+      - nginx
+      Vary:
+      - User-Agent
+      X-Cache-Status:
+      - HIT
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '0'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Sat, 10 Apr 2021 12:27:19 GMT
+- request:
+    method: get
+    uri: https://ma.cache.headbang.re/link/ajax-list/type/person/id/4752
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - MetalArchivesGemTestSuite/3.2.0 (user@example.com)
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - ma.cache.headbang.re
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+      Cache-Control:
+      - max-age=2592000
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Ray:
+      - 63b23f890a6d0c65-AMS
+      Cf-Request-Id:
+      - '09434609a000000c6530275000000001'
+      Content-Security-Policy:
+      - frame-ancestors 'self'
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Sat, 10 Apr 2021 12:23:59 GMT
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Expires:
+      - Mon, 10 May 2021 12:23:59 GMT
+      Nel:
+      - '{"max_age":604800,"report_to":"cf-nel"}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=zVYYUtn0iReZskQNz2R9QxhCn2fsCYi2ADA792zxqajpiB4NSsmG0b%2BSgZLn2I1q%2FgeGV1YhoQawmMlcqnxO8vLUyqM39InS8CSn%2Fa63uNBxlM6yEM4x"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - nginx
+      Vary:
+      - Accept-Encoding,User-Agent
+      X-Cache-Status:
+      - HIT
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '862'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "<script type=\"c06e1ad6013776ec898ee60d-text/javascript\">\n$(document).ready(function()
+        {\n\t// Prepare the sub-tabs\n\t\t// Prepare the form popup\n\t$('#editLink').dialog({
+        autoOpen: false, width: 400, height: 250, modal: true, overlay: { opacity:
+        0.5, background: 'white'}, buttons: { 'Save link': function(){ $('#linkForm').submit();},
+        'Cancel': function() { $('#editLink').dialog('close');} } });\n});\n\n\n</script>\n<div
+        id=\"band_links\" class=\"tabs2lvl\">\n</div>\n<div class=\"ui-tabs-panel-content
+        block_spacer_top_36\">\n<table id=\"linksTablemain\" class=\"display\" width=\"50%\"
+        cellpadding=\"0\" cellspacing=\"0\">\n<tr id=\"noLinks\">\n<td colspan=\"2\">No
+        links have been added yet.</td>\n</tr>\n</table>\n</div>\n<script src=\"https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js\"
+        data-cf-settings=\"c06e1ad6013776ec898ee60d-|49\" defer=\"\"></script>"
+  recorded_at: Sat, 10 Apr 2021 12:27:19 GMT
+recorded_with: VCR 6.0.0

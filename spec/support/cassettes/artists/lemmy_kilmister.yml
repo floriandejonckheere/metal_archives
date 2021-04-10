@@ -1,0 +1,1021 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://ma.cache.headbang.re/artist/view/id/260
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - MetalArchivesGemTestSuite/3.2.0 (user@example.com)
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - ma.cache.headbang.re
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+      Cache-Control:
+      - max-age=2592000
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Ray:
+      - 63a39bdc0a6c0bed-AMS
+      Cf-Request-Id:
+      - '093a1fbd8200000bed559f9000000001'
+      Content-Security-Policy:
+      - frame-ancestors 'self'
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Sat, 10 Apr 2021 12:24:00 GMT
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Expires:
+      - Mon, 10 May 2021 12:24:00 GMT
+      Nel:
+      - '{"max_age":604800,"report_to":"cf-nel"}'
+      Report-To:
+      - '{"max_age":604800,"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=EATgB%2BqXmOn0sg5qfOHJ3kS43GEGKTJDxbbxaFwzX7XGsrfjaBLnC1sjr1Q3luKi992E50b4fHwoC15Bln72XwxL3T1HwgDq3O%2BCSfqlW0HbvEv5opZ5"}],"group":"cf-nel"}'
+      Server:
+      - nginx
+      Vary:
+      - Accept-Encoding,User-Agent
+      X-Cache-Status:
+      - HIT
+      X-Frame-Options:
+      - SAMEORIGIN
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n<html
+        xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n<title>Lemmy Kilmister -
+        Encyclopaedia Metallum: The Metal Archives</title>\n<meta http-equiv=\"Content-Type\"
+        content=\"text/html; charset=UTF-8\" />\n<meta content=\"width=device-width,
+        initial-scale=1\" name=\"viewport\" />\n<link rel=\"stylesheet\" type=\"text/css\"
+        href=\"/min/index.php?g=css\" />\n<script type=\"30e27351ad38bd9eff6a5142-text/javascript\"
+        src=\"/min/index.php?g=js\"></script>\n<script type=\"30e27351ad38bd9eff6a5142-text/javascript\">\r\n\t\t\tvar
+        URL_SITE\t= 'https://www.metal-archives.com/';\r\n\t\t\tvar URL_IMAGES\t=
+        'https://www.metal-archives.com/images/';\r\n\t\t\tvar URL_CSS\t\t= 'https://www.metal-archives.com/css/';\r\n\t\t\tvar
+        csrfToken\t= '';\r\n\r\n\t\t\t$(document).ready(function() {\r\n\t\t\t\ttoggleFixedPositioning(1280,
+        600);\r\n\t\t\t\texecuteOnAllPages();\r\n\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t});\r\n\r\n\r\n\t\t</script>\n<noscript>\r\n\t\t\t<style
+        type=\"text/css\">\r\n\t\t\t\t.no-js { display: block !important; }\r\n\t\t\t</style>\r\n\t\t</noscript>\n<!--[if
+        lt IE 8]>\r\n\t\t\t<script src=\"http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js\"></script>\r\n\t\t\t
+        <link rel=\"stylesheet\" type=\"text/css\" href=\"https://www.metal-archives.com/css/default/oldie.css\"
+        />\r\n\t\t<![endif]-->\n<script type=\"30e27351ad38bd9eff6a5142-text/javascript\">\r\n\t\t\t
+        \ var _gaq = _gaq || [];\r\n\t\t\t  _gaq.push(['_setAccount', 'UA-4046749-4']);\r\n\t\t\t
+        \ _gaq.push(['_trackPageview']);\r\n\r\n\t\t\t  (function() {\r\n\t\t\t    var
+        ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async
+        = true;\r\n\t\t\t    ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+        : 'http://www') + '.google-analytics.com/ga.js';\r\n\t\t\t    var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);\r\n\t\t\t  })();\r\n\t\t</script>\n</head>\n<body>\n<div
+        id=\"wrapper\">\n<div id=\"header\">\n<a href=\"https://www.metal-archives.com/\"
+        id=\"MA_logo\">Metal Archives</a>\n<div class=\"clear loading\"><img src=\"https://www.metal-archives.com/images/loading.gif\"
+        alt=\"loading\" width=\"12\" height=\"12\" /> loading...</div>\n<div id=\"search_box\">\n<form
+        id=\"search_form\" action=\"https://www.metal-archives.com/search\" method=\"get\">\n<div>\n<label>Search:</label><br
+        />\n<input name=\"searchString\" type=\"text\" id=\"searchQueryBox\" size=\"25\"
+        value=\"\" tabindex=\"1\" />\n<select name=\"type\" tabindex=\"2\">\n<option
+        value=\"band_name\">Band name</option>\n<option value=\"band_genre\">Music
+        genre</option>\n<option value=\"band_themes\">Lyrical themes</option>\n<option
+        value=\"album_title\">Album title</option>\n<option value=\"song_title\">Song
+        title</option>\n<option value=\"label_name\">Label</option>\n<option value=\"artist_alias\">Artist</option>\n<option
+        value=\"user_name\">User profile</option>\n<option value=\"google\">Google</option>\n</select>\n<br
+        />\n<a href=\"https://www.metal-archives.com/search/advanced/?searchString=&type=\"
+        class=\"float_left\" tabindex=\"4\">Advanced search</a>\n<button type=\"submit\"
+        class=\"btn_submit float_right\" tabindex=\"3\">Submit</button>\n</div>\n</form>\n</div>\n<div
+        id=\"top_menu_box\">\n<ul class=\"menu_style_1\">\n<li><a href=\"https://www.metal-archives.com/content/help\">Help</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/content/rules\">Rules</a></li>\n<li><a
+        href=\"https://forum.metal-archives.com\" target=\"_top\">Forum</a></li>\n</ul>\n<ul
+        class=\"menu_style_2\">\n<li><a href=\"https://www.metal-archives.com/content/faq\">FAQ</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/content/support\">Support Us</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/content/tools\">Add-ons</a></li>\n</ul>\n</div>\n</div>\n<div
+        id=\"left_col\">\n<div id=\"member_box\">\n <form name=\"login_form\" id=\"login_form\"
+        action=\"https://www.metal-archives.com/authentication/login\" method=\"post\">\n<div>\n<label>Username</label><br
+        />\n<input type=\"text\" name=\"loginUsername\" />\n<label>Password</label><br
+        />\n<input type=\"password\" name=\"loginPassword\" />\n<input type=\"hidden\"
+        name=\"origin\" value=\"/artist/view/id/260\" />\n<button type=\"submit\"
+        class=\"btn_login float_right\">Login</button>\n</div>\n</form>\n<a href=\"https://www.metal-archives.com/user/signup\"
+        class=\"float-left writeAction\">Register</a>\n<span class=\"float_right\"><a
+        href=\"https://www.metal-archives.com/user/forgot-password\" class=\"float-left
+        writeAction\">Forgot login?</a> </span>\n<div class=\"clear\"> </div>\n</div>\n<div
+        id=\"left_menu_box\">\n<ul class=\"menu_style_3 block_spacer_20\">\n<li>\nBands\n<ul>\n<li><a
+        href=\"https://www.metal-archives.com/browse/letter\">alphabetical</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/browse/country\">country</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/browse/genre\">genre</a></li>\n</ul>\n</li>\n<li>\nLabels\n<ul>\n<li><a
+        href=\"https://www.metal-archives.com/label\">alphabetical</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/label/country\">country</a></li>\n</ul>\n</li>\n<li><a
+        href=\"https://www.metal-archives.com/review/browse\">Reviews</a></li>\n</ul>\n<ul
+        class=\"menu_style_3 block_spacer_20\">\n<li><a href=\"https://www.metal-archives.com/artist/rip\">R.I.P.</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/band/random\">Random Band</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/user/list\">User rankings</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/news\">News archive</a></li>\n</ul>\n<ul
+        class=\"menu_style_3 ornement_30\">\n<li><a href=\"https://www.metal-archives.com/report/list\">Reports</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/todo\">Contribute / To do</a></li>\n</ul>\n</div>\n<div
+        id=\"left_text_box\">\n<p class=\"small_text center\"> &copy; 2002-2021<br
+        />Encyclopaedia Metallum </p>\n<p class=\"small_text center\">Best viewed<br
+        /> <a href=\"http://www.getfirefox.com\" target=\"_blank\">without</a> Internet
+        Explorer, <br />in 1280 x 960 resolution<br /> or higher.</p>\n</div>\n<div>\n<p
+        class=\"small_text center\"><a href=\"https://www.metal-archives.com/content/pp\">Privacy
+        Policy</a></p>\n</div>\n</div>\n<div id=\"content_wrapper\">\n<script type=\"30e27351ad38bd9eff6a5142-text/javascript\"
+        src=\"https://www.metal-archives.com/js/jquery/jquery.dataTables.min.js\"></script>\n<script
+        type=\"30e27351ad38bd9eff6a5142-text/javascript\" src=\"https://www.metal-archives.com/js/jquery/jquery.form.js\"></script>\n<script
+        type=\"30e27351ad38bd9eff6a5142-text/javascript\">\n\tvar artistId = 260;\n\t\n\n\t$(document).ready(function()
+        {\n\t\t$(\".no-js\").removeClass(\"no-js\");\n\t\t$('#member_tabs').tabs({
+        beforeLoad: cacheTab }).show();\n\t\t$('#album_members').tabs({ beforeLoad:
+        cacheTab });\n\t\t$('.albumMenu').click(toggleAlbumMenu);\n\t\t$('.toggleAlbums').click(toggleAlbums);\n\t\t$('#bandSearchPopup').dialog({
+        autoOpen: false, width: 600, height: 500, position: 'top' });\n\t\t$('#bandSearch').ajaxForm({
+        target: '#bandSearchResults', beforeSubmit: function() { if (!$('#searchBandName').val())
+        { outputErrors({ searchBandName: 'Please enter a band name to search for.'},
+        '#bandLink'); return false; } toggleLoading(); }, success: toggleLoading});\n\t\t\t});\n\t\n\tfunction
+        toggleAlbums() {\n\t\tvar link = $(this);\n\t\tvar posTabDelim = link.attr('id').indexOf('_')
+        + 1;\n\t\tvar posIdDelim  = link.attr('id').indexOf('-') + 1;\n\t\tvar tab
+        = link.attr('id').substring(posTabDelim, posIdDelim - 1); \n\t\tvar bandId
+        = link.attr('id').substring(posIdDelim);\n\t\t$('.hiddenRelease_' + tab +
+        '-' + bandId).toggle();\n\t\tlink.html( link.html() == 'show all' ? 'hide'
+        : 'show all' );\n\t}\n\t\n\t\t\n\t</script>\n<div id=\"member_sidebar\">\n\n<div
+        class=\"member_img\"><a class=\"image\" id=\"artist\" title=\"Lemmy Kilmister\"
+        href=\"https://www.metal-archives.com/images/2/6/0/260_artist.jpg?3344\"><img
+        src=\"https://www.metal-archives.com/images/2/6/0/260_artist.jpg?3344\" title=\"Click
+        to zoom\" alt=\"Lemmy Kilmister\" border=\"0\" /></a></div>\n</div>\n<div
+        id=\"member_content\">\n<div class=\"tool_strip right writeAction\">\n<ul>\n<li><a
+        title=\"Report a mistake or additional information for this page\" href=\"javascript:popupReportDialog(3,
+        260);\" class=\"btn_report_error\"> </a></li>\n\n</ul>\n</div>\n<div id=\"member_info\">\n<h1
+        class=\"band_member_name\">Lemmy Kilmister</h1>\n<div id=\"tool_strip_01\"
+        class=\"tool_strip writeAction\">\n<ul>\n</ul>\n</div>\n<div class=\"clear
+        block_spacer_20\"></div>\n<dl class=\"float_left\">\n<dt>Real/full name:</dt>\n<dd>\nIan
+        Fraser Kilmister\n</dd>\n<dt>Age:</dt>\n<dd> 70 (born Dec 24th, 1945) </dd>\n<dt>R.I.P.:
+        </dt>\n<dd>Dec 28th, 2015</dd>\n<dt>Died of:</dt>\n<dd>Prostate cancer & cardiac
+        arrhythmia</dd>\n</dl>\n<dl class=\"float_right\">\n<dt>Place of origin:</dt>\n<dd>
+        <a href=\"https://www.metal-archives.com/lists/GB\">United Kingdom</a> (Stoke-on-Trent,
+        England) </dd>\n<dt>Gender:</dt>\n<dd>Male</dd>\n</dl>\n<div class=\"clear
+        band_comment\">\n<h2 class=\"title_comment\">Biography</h2>\nLemmy was born
+        on Christmas Eve in 1945 in Burslem, Stoke on Trent, England. When Lemmy was
+        three months old, his father, an ex-Royal Air Force chaplain, separated from
+        his mother. His mother and grandmother settled in Newcastle-under-Lyme, then
+        moved on to Madeley, Staffordshire.<br />\n<br />\nWhen he was 10, his mother
+        married George Willis, who had two older children from a previous marriage,
+        Patricia ... \n<div class=\"tool_strip bottom right\"><a href=\"#\" onclick=\"if
+        (!window.__cfRLUnblockHandlers) return false; readMore('artist/read-more/id/260',
+        'Bio'); return false;\" class=\"btn_read_more\" data-cf-modified-30e27351ad38bd9eff6a5142-=\"\">Read
+        more</a></div>\n<h2 class=\"title_comment\">Trivia</h2>\nHe was the second
+        member of Motörhead to die in 2015, following <a href=\"https://www.metal-archives.com/artists/Philthy_Animal/2388\">Philthy
+        Animal</a>, who died a month earlier. <a href=\"https://www.metal-archives.com/artists/W%C3%BCrzel/2333\">Würzel</a>
+        preceded the two in death by approximately 4 1/2 years, dying in 2011. <br
+        /> <br /> In a Channel 4 documentary called \"Motörhead: Live Fast, Die Old\",
+        broadcast on August 22nd, 2005, it was claimed that Lemmy had \"bedded\" in
+        excess of 2,000 women. Maxim magazine has Lemmy at number 8 on its top ...
+        \n<div class=\"tool_strip bottom right\"><a href=\"#\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; readMore('artist/read-more/id/260/field/trivia', 'Trivia');
+        return false;\" class=\"btn_read_more\" data-cf-modified-30e27351ad38bd9eff6a5142-=\"\">Read
+        more</a></div>\n</div>\n</div>\n<div id=\"message\"> </div>\n<div id=\"member_tabs\"
+        class=\"tabs no-js\">\n<ul>\n<li><a href=\"#artist_tab_past\">Past Bands</a></li>
+        <li><a href=\"#artist_tab_guest\">Guest/Session</a></li> <li><a href=\"#artist_tab_misc\">Misc.
+        staff</a></li> <li><a href=\"https://www.metal-archives.com/link/ajax-list/type/person/id/260\"
+        title=\"Related links\"><span>Links</span></a></li> </ul>\n\n<div id=\"artist_tab_past\">\n<div
+        id=\"member_past\" class=\"tabs2lvl\">\n</div>\n<div class=\"ui-tabs-panel-content
+        block_spacer_top_36\">\n<div class=\"member_in_band\" id=\"memberInBand_l_2548553\">\n<h3
+        class=\"member_in_band_name\">Bastard</h3>\n<p class=\"member_in_band_role\"
+        id=\"roleInBand_Bastard\">\n<strong>Bass, Vocals</strong>\n(1975) </p>\n</div>\n<div
+        class=\"member_in_band\" id=\"memberInBand_l_969109\">\n<h3 class=\"member_in_band_name\">Hawkwind</h3>\n<p
+        class=\"member_in_band_role\" id=\"roleInBand_Hawkwind\">\n<strong>Bass, Vocals
+        (additional)</strong>\n(1971-1975) </p>\n</div>\n<div class=\"member_in_band\"
+        id=\"memberInBand_l_1849421\">\n<h3 class=\"member_in_band_name\">Headcat</h3>\n<p
+        class=\"member_in_band_role\" id=\"roleInBand_Headcat\">\n<strong>Bass, Guitars,
+        Vocals</strong>\n(2000-2015) </p>\n</div>\n<div class=\"member_in_band\" id=\"memberInBand_203\">\n<h3
+        class=\"member_in_band_name\"><a href=\"https://www.metal-archives.com/bands/Mot%C3%B6rhead/203#band_tab_members\"
+        title=\"Motörhead\">Motörhead</a></h3>\n<p class=\"member_in_band_role\" id=\"roleInBand_203\">\n<strong>Bass,
+        Vocals</strong>\n(1975-2015) </p>\n<table class=\"display no_borders\" cellpadding=\"0\"
+        cellspacing=\"0\">\n<tr id=\"memberInAlbum_511012\" class=\"even hiddenRelease_past-203
+        displayNone\">\n<td width=\"28\">1977</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/England/511012\"
+        title=\"England\">England</a> (Single) </td>\n<td>\nVocals, Bass </td>\n</tr>\n<tr
+        id=\"memberInAlbum_13464\" class=\" odd hiddenRelease_past-203 displayNone\">\n<td
+        width=\"28\">1977</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Mot%C3%B6rhead/13464\"
+        title=\"Motörhead\">Motörhead</a> (Single) </td>\n<td>\nVocals, Bass </td>\n</tr>\n<tr
+        id=\"memberInAlbum_928\" class=\"even\">\n<td width=\"28\">1977</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Mot%C3%B6rhead/928\"
+        title=\"Motörhead\">Motörhead</a> </td>\n<td>\nBass, Vocals </td>\n</tr>\n<tr
+        id=\"memberInAlbum_9980\" class=\" odd hiddenRelease_past-203 displayNone\">\n<td
+        width=\"28\">1978</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Louie_Louie_-_Tear_Ya_Down/9980\"
+        title=\"Louie Louie / Tear Ya Down\">Louie Louie / Tear Ya Down</a> (Single)
+        </td>\n<td>\nBass, Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_9981\" class=\"even
+        hiddenRelease_past-203 displayNone\">\n<td width=\"28\">1979</td>\n<td width=\"280\">\n<a
+        href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Overkill_-_Too_Late%2C_Too_Late/9981\"
+        title=\"Overkill / Too Late, Too Late\">Overkill / Too Late, Too Late</a>
+        (Single) </td>\n<td>\n\nBass, Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_936\"
+        class=\" odd\">\n<td width=\"28\">1979</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Overkill/936\"
+        title=\"Overkill\">Overkill</a> </td>\n<td>\nBass, Vocals, Guitars (lead)
+        (second lead, track 10) </td>\n</tr>\n<tr id=\"memberInAlbum_9982\" class=\"even
+        hiddenRelease_past-203 displayNone\">\n<td width=\"28\">1979</td>\n<td width=\"280\">\n<a
+        href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/No_Class_c-w_Like_a_Nightmare/9982\"
+        title=\"No Class c/w Like a Nightmare\">No Class c/w Like a Nightmare</a>
+        (Single) </td>\n<td>\nBass, Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_937\"
+        class=\" odd\">\n<td width=\"28\">1979</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Bomber/937\"
+        title=\"Bomber\">Bomber</a> </td>\n<td>\nBass, Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_9983\"
+        class=\"even hiddenRelease_past-203 displayNone\">\n<td width=\"28\">1979</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Bomber_c-w_Over_the_Top/9983\"
+        title=\"Bomber c/w Over the Top\">Bomber c/w Over the Top</a> (Single) </td>\n<td>\nBass,
+        Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_2789\" class=\" odd\">\n<td width=\"28\">1979</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/On_Parole/2789\"
+        title=\"On Parole\">On Parole</a> </td>\n<td>\nBass, Vocals </td>\n</tr>\n<tr
+        id=\"memberInAlbum_7947\" class=\"even hiddenRelease_past-203 displayNone\">\n<td
+        width=\"28\">1980</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/%27The_Golden_Years%27_Live_EP/7947\"
+        title=\"&#039;The Golden Years&#039; Live EP\">'The Golden Years' Live EP</a>
+        (EP) </td>\n<td>\nBass, Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_17923\"
+        class=\" odd hiddenRelease_past-203 displayNone\">\n<td width=\"28\">1980</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Ace_of_Spades_c-w_Dirty_Love/17923\"
+        title=\"Ace of Spades c/w Dirty Love\">Ace of Spades c/w Dirty Love</a> (Single)
+        </td>\n<td>\nBass, Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_939\" class=\"even\">\n<td
+        width=\"28\">1980</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Ace_of_Spades/939\"
+        title=\"Ace of Spades\">Ace of Spades</a>  </td>\n<td>\nBass, Vocals </td>\n</tr>\n<tr
+        id=\"memberInAlbum_17926\" class=\" odd hiddenRelease_past-203 displayNone\">\n<td
+        width=\"28\">1980</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Beer_Drinkers_%26_Hell_Raisers/17926\"
+        title=\"Beer Drinkers &amp; Hell Raisers\">Beer Drinkers & Hell Raisers</a>
+        (EP) </td>\n<td>\nVocals, Bass </td>\n</tr>\n<tr id=\"memberInAlbum_342419\"
+        class=\"even hiddenRelease_past-203 displayNone\">\n<td width=\"28\">1981</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Motorhead_-_The_Train_Kept_A-Rollin%27/342419\"
+        title=\"Motorhead / The Train Kept A-Rollin&#039;\">Motorhead / The Train
+        Kept A-Rollin'</a> (Single) </td>\n<td>\nBass, Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_186947\"
+        class=\" odd hiddenRelease_past-203 displayNone\">\n<td width=\"28\">1981</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Stay_Clean/186947\"
+        title=\"Stay Clean\">Stay Clean</a> (Split) </td>\n<td>\nBass, Vocals (tracks
+        1, 2) </td>\n</tr>\n<tr id=\"memberInAlbum_453208\" class=\"even hiddenRelease_past-203
+        displayNone\">\n<td width=\"28\">1981</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Motorschool/453208\"
+        title=\"Motorschool\">Motorschool</a> (Split) </td>\n<td>\nBass, Vocals </td>\n</tr>\n<tr
+        id=\"memberInAlbum_214480\" class=\" odd hiddenRelease_past-203 displayNone\">\n<td
+        width=\"28\">1981</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Great_Pleasure/214480\"
+        title=\"Great Pleasure\">Great Pleasure</a> (Split) </td>\n<td>\nBass, Vocals
+        </td>\n</tr>\n<tr id=\"memberInAlbum_297335\" class=\"even hiddenRelease_past-203
+        displayNone\">\n<td width=\"28\">1981</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/St._Valentine%27s_Day_Massacre/297335\"
+        title=\"St. Valentine&#039;s Day Massacre\">St. Valentine's Day Massacre</a>
+        (Split) </td>\n<td>\nBass (tracks 1, 2), Vocals (lead) (track 1), Vocals (backing)
+        (track 2) </td>\n</tr>\n<tr id=\"memberInAlbum_15149\" class=\" odd hiddenRelease_past-203
+        displayNone\">\n<td width=\"28\">1981</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/The_Train_Kept_A-Rollin%27/15149\"
+        title=\"The Train Kept A-Rollin&#039;\">The Train Kept A-Rollin'</a> (Single)
+        </td>\n<td>\nBass, Vocals  </td>\n</tr>\n<tr id=\"memberInAlbum_940\" class=\"even
+        hiddenRelease_past-203 displayNone\">\n<td width=\"28\">1981</td>\n<td width=\"280\">\n<a
+        href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/No_Sleep_%27til_Hammersmith/940\"
+        title=\"No Sleep &#039;til Hammersmith\">No Sleep 'til Hammersmith</a> (Live
+        album) </td>\n<td>\nBass, Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_42488\"
+        class=\" odd hiddenRelease_past-203 displayNone\">\n<td width=\"28\">1981</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Motorhead_c-w_Over_the_Top/42488\"
+        title=\"Motorhead c/w Over the Top\">Motorhead c/w Over the Top</a> (Single)
+        </td>\n<td>\nBass, Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_10859\" class=\"even
+        hiddenRelease_past-203 displayNone\">\n<td width=\"28\">1982</td>\n<td width=\"280\">\n<a
+        href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Live_in_Toronto/10859\"
+        title=\"Live in Toronto\">Live in Toronto</a> (Video) </td>\n<td>\nBass, Vocals
+        </td>\n</tr>\n<tr id=\"memberInAlbum_516160\" class=\" odd hiddenRelease_past-203
+        displayNone\">\n<td width=\"28\">1982</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Heavy_Metal_%2782/516160\"
+        title=\"Heavy Metal &#039;82\">Heavy Metal '82</a> (Split) </td>\n<td>\nBass,
+        Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_43028\" class=\"even hiddenRelease_past-203
+        displayNone\">\n<td width=\"28\">1982</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Go_to_Hell/43028\"
+        title=\"Go to Hell\">Go to Hell</a> (Single) </td>\n<td>\nBass, Vocals </td>\n</tr>\n<tr
+        id=\"memberInAlbum_42487\" class=\" odd hiddenRelease_past-203 displayNone\">\n<td
+        width=\"28\">1982</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Iron_Fist_c-w_Remember_Me_I%27m_Gone/42487\"
+        title=\"Iron Fist c/w Remember Me I&#039;m Gone\">Iron Fist c/w Remember Me
+        I'm Gone</a> (Single) </td>\n<td>\nBass, Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_942\"
+        class=\"even\">\n<td width=\"28\">1982</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Iron_Fist/942\"
+        title=\"Iron Fist\">Iron Fist</a> </td>\n<td>\nBass, Vocals </td>\n</tr>\n<tr
+        id=\"memberInAlbum_45249\" class=\" odd hiddenRelease_past-203 displayNone\">\n<td
+        width=\"28\">1982</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Stand_by_Your_Man/45249\"
+        title=\"Stand by Your Man\">Stand by Your Man</a> (Split) </td>\n<td>\nBass,
+        Vocals (as \"Lemmy\") </td>\n</tr>\n<tr id=\"memberInAlbum_15147\" class=\"even
+        hiddenRelease_past-203 displayNone\">\n<td width=\"28\">1983</td>\n<td width=\"280\">\n<a
+        href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Beer_Drinkers/15147\"
+        title=\"Beer Drinkers\">Beer Drinkers</a> (Compilation) </td>\n<td>\nBass,
+        Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_41473\" class=\" odd hiddenRelease_past-203
+        displayNone\">\n<td width=\"28\">1983</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/What%27s_Words_Worth/41473\"
+        title=\"What&#039;s Words Worth\">What's Words Worth</a> (Live album) </td>\n<td>\nBass,
+        Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_15150\" class=\"even hiddenRelease_past-203
+        displayNone\">\n<td width=\"28\">1983</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/I_Got_Mine_c-w_Turn_You_Round_Again/15150\"
+        title=\"I Got Mine c/w Turn You Round Again\">I Got Mine c/w Turn You Round
+        Again</a> (Single) </td>\n<td>\nBass, Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_943\"
+        class=\" odd\">\n<td width=\"28\">1983</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Another_Perfect_Day/943\"
+        title=\"Another Perfect Day\">Another Perfect Day</a> </td>\n<td>\nBass, Vocals
+        </td>\n</tr>\n<tr id=\"memberInAlbum_17927\" class=\"even hiddenRelease_past-203
+        displayNone\">\n<td width=\"28\">1983</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Shine/17927\"
+        title=\"Shine\">Shine</a> (Single) </td>\n<td>\nBass, Vocals </td>\n</tr>\n<tr
+        id=\"memberInAlbum_89678\" class=\" odd hiddenRelease_past-203 displayNone\">\n<td
+        width=\"28\">1984</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Deaf_Not_Blind/89678\"
+        title=\"Deaf Not Blind\">Deaf Not Blind</a> (Video) </td>\n<td>\nBass, Vocals
+        </td>\n</tr>\n<tr id=\"memberInAlbum_7866\" class=\"even hiddenRelease_past-203
+        displayNone\">\n<td width=\"28\">1984</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Killed_by_Death/7866\"
+        title=\"Killed by Death\">Killed by Death</a> (Single) </td>\n<td>\nBass,
+        Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_944\" class=\" odd hiddenRelease_past-203
+        displayNone\">\n <td width=\"28\">1984</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/No_Remorse/944\"
+        title=\"No Remorse\">No Remorse</a> (Compilation) </td>\n<td>\nBass, Vocals
+        </td>\n</tr>\n<tr id=\"memberInAlbum_15154\" class=\"even hiddenRelease_past-203
+        displayNone\">\n<td width=\"28\">1986</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Deaf_Forever/15154\"
+        title=\"Deaf Forever\">Deaf Forever</a> (Single) </td>\n<td>\nBass, Vocals
+        </td>\n</tr>\n<tr id=\"memberInAlbum_245506\" class=\" odd hiddenRelease_past-203
+        displayNone\">\n<td width=\"28\">1986</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/The_Birthday_Party/245506\"
+        title=\"The Birthday Party\">The Birthday Party</a> (Video) </td>\n<td>\nBass,
+        Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_945\" class=\"even\">\n<td width=\"28\">1986</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Orgasmatron/945\"
+        title=\"Orgasmatron\">Orgasmatron</a> </td>\n<td>\nBass, Vocals </td>\n</tr>\n<tr
+        id=\"memberInAlbum_17928\" class=\" odd hiddenRelease_past-203 displayNone\">\n<td
+        width=\"28\">1987</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Eat_the_Rich/17928\"
+        title=\"Eat the Rich\">Eat the Rich</a> (Single) </td>\n<td>\nVocals, Bass
+        </td>\n</tr>\n<tr id=\"memberInAlbum_43027\" class=\"even hiddenRelease_past-203
+        displayNone\">\n<td width=\"28\">1987</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Rock_%27n%27_Roll/43027\"
+        title=\"Rock &#039;n&#039; Roll\">Rock 'n' Roll</a> (Single) </td>\n<td>\nVocals,
+        Bass </td>\n</tr>\n<tr id=\"memberInAlbum_946\" class=\" odd\">\n<td width=\"28\">1987</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Rock_%27n%27_Roll/946\"
+        title=\"Rock &#039;n&#039; Roll\">Rock 'n' Roll</a> </td>\n<td>\nBass, Vocals
+        </td>\n</tr>\n<tr id=\"memberInAlbum_43088\" class=\"even hiddenRelease_past-203
+        displayNone\">\n<td width=\"28\">1988</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Live_in_Athens/43088\"
+        title=\"Live in Athens\">Live in Athens</a> (Single) </td>\n<td>\nBass, Vocals
+        </td>\n</tr>\n<tr id=\"memberInAlbum_336887\" class=\" odd hiddenRelease_past-203
+        displayNone\">\n<td width=\"28\">1988</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Sounds_Waves_1/336887\"
+        title=\"Sounds Waves 1\">Sounds Waves 1</a> (Split) </td>\n<td>\nBass, Vocals
+        </td>\n</tr>\n<tr id=\"memberInAlbum_947\" class=\"even hiddenRelease_past-203
+        displayNone\">\n<td width=\"28\">1988</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/N%C3%B6_Sleep_at_All/947\"
+        title=\"Nö Sleep at All\">Nö Sleep at All</a> (Live album) </td>\n<td>\nBass,
+        Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_453242\" class=\" odd hiddenRelease_past-203
+        displayNone\">\n<td width=\"28\">1989</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Mot%C3%B6rhead_vs_Girlschool/453242\"
+        title=\"Motörhead vs Girlschool\">Motörhead vs Girlschool</a> (Split) </td>\n<td>\nBass,
+        Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_59479\" class=\"even hiddenRelease_past-203
+        displayNone\">\n<td width=\"28\">1989</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Blitzkreig_on_Birmingham_%2777/59479\"
+        title=\"Blitzkreig on Birmingham &#039;77\">Blitzkreig on Birmingham '77</a>
+        (Live album) </td>\n<td>\nBass, Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_245504\"
+        class=\" odd hiddenRelease_past-203 displayNone\">\n<td width=\"28\">1990</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/The_Birthday_Party/245504\"
+        title=\"The Birthday Party\">The Birthday Party</a> (Live album) </td>\n<td>\nBass,
+        Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_488592\" class=\"even hiddenRelease_past-203
+        displayNone\">\n<td width=\"28\">1990</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Bomber_-_Ace_of_Spades/488592\"
+        title=\"Bomber / Ace of Spades\">Bomber / Ace of Spades</a> (Compilation)
+        </td>\n<td>\nBass, Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_12847\" class=\"
+        odd hiddenRelease_past-203 displayNone\">\n<td width=\"28\">1990</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Lock_Up_Your_Daughters/12847\"
+        title=\"Lock Up Your Daughters\">Lock Up Your Daughters</a> (Live album) </td>\n<td>\nBass,
+        Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_17929\" class=\"even hiddenRelease_past-203
+        displayNone\">\n<td width=\"28\">1990</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/The_One_to_Sing_the_Blues/17929\"
+        title=\"The One to Sing the Blues\">The One to Sing the Blues</a> (Single)
+        </td>\n<td>\nBass, Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_86864\" class=\"
+        odd hiddenRelease_past-203 displayNone\">\n<td width=\"28\">1991</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/The_One_to_Sing_the_Blues_%22No_Sleep_%27til_Spain%22_Tour_1991/86864\"
+        title=\"The One to Sing the Blues &quot;No Sleep &#039;til Spain&quot; Tour
+        1991\">The One to Sing the Blues \"No Sleep 'til Spain\" Tour 1991</a> (Single)
+        </td>\n<td>\nBass, Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_45940\" class=\"even
+        hiddenRelease_past-203 displayNone\">\n<td width=\"28\">1991</td>\n<td width=\"280\">\n<a
+        href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Everything_Louder_than_Everything_Else/45940\"
+        title=\"Everything Louder than Everything Else\">Everything Louder than Everything
+        Else</a> (Video) </td>\n<td>\nBass, Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_283858\"
+        class=\" odd hiddenRelease_past-203 displayNone\">\n<td width=\"28\">1991</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Operation_Rock_%26_Roll/283858\"
+        title=\"Operation Rock &amp; Roll\">Operation Rock & Roll</a> (Split video)
+        </td>\n<td>\nBass, Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_948\" class=\"even\">\n<td
+        width=\"28\">1991</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/1916/948\"
+        title=\"1916\">1916</a> </td>\n<td>\nBass, Vocals (as \"Lemmy\") </td>\n</tr>\n<tr
+        id=\"memberInAlbum_59999\" class=\" odd hiddenRelease_past-203 displayNone\">\n<td
+        width=\"28\">1991</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Live_1983/59999\"
+        title=\"Live 1983\">Live 1983</a> (Live album) </td>\n<td>\nBass, Vocals </td>\n</tr>\n<tr
+        id=\"memberInAlbum_171963\" class=\"even hiddenRelease_past-203 displayNone\">\n<td
+        width=\"28\">1991</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/The_Better_Late_than_Never_Fan_Club_Flexi/171963\"
+        title=\"The Better Late than Never Fan Club Flexi\">The Better Late than Never
+        Fan Club Flexi</a> (Single) </td>\n<td>\nInterview </td>\n</tr>\n<tr id=\"memberInAlbum_42220\"
+        class=\" odd hiddenRelease_past-203 displayNone\">\n<td width=\"28\">1992</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Hellraiser/42220\"
+        title=\"Hellraiser\">Hellraiser</a> (Single) </td>\n<td>\n\nBass, Vocals </td>\n</tr>\n<tr
+        id=\"memberInAlbum_59476\" class=\"even hiddenRelease_past-203 displayNone\">\n<td
+        width=\"28\">1992</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Jailbait/59476\"
+        title=\"Jailbait\">Jailbait</a> (Live album) </td>\n<td>\nBass, Vocals </td>\n</tr>\n<tr
+        id=\"memberInAlbum_950\" class=\" odd\">\n<td width=\"28\">1992</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/March_%C3%B6r_Die/950\"
+        title=\"March ör Die\">March ör Die</a> </td>\n<td>\nBass, Vocals </td>\n</tr>\n<tr
+        id=\"memberInAlbum_61526\" class=\"even hiddenRelease_past-203 displayNone\">\n<td
+        width=\"28\">1992</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/%2792_Tour_EP/61526\"
+        title=\"&#039;92 Tour EP\">'92 Tour EP</a> (EP) </td>\n<td>\nBass, Vocals
+        </td>\n</tr>\n<tr id=\"memberInAlbum_42486\" class=\" odd hiddenRelease_past-203
+        displayNone\">\n<td width=\"28\">1993</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Don%27t_Let_Daddy_Kiss_Me/42486\"
+        title=\"Don&#039;t Let Daddy Kiss Me\">Don't Let Daddy Kiss Me</a> (Single)
+        </td>\n<td>\nBass, Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_42973\" class=\"even
+        hiddenRelease_past-203 displayNone\">\n<td width=\"28\">1993</td>\n<td width=\"280\">\n<a
+        href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Ace_of_Spades_-_The_CCN_Remix_1993/42973\"
+        title=\"Ace of Spades - The CCN Remix 1993\">Ace of Spades - The CCN Remix
+        1993</a> (Single) </td>\n<td>\nBass, Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_442295\"
+        class=\" odd\">\n<td width=\"28\">1993</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Bastards/442295\"
+        title=\"Bastards\">Bastards</a> </td>\n<td>\nBass, Vocals, Guitars (acoustic)
+        </td>\n</tr>\n<tr id=\"memberInAlbum_42442\" class=\"even hiddenRelease_past-203
+        displayNone\">\n<td width=\"28\">1994</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Born_to_Raise_Hell/42442\"
+        title=\"Born to Raise Hell\">Born to Raise Hell</a> (Single) </td>\n<td>\nBass,
+        Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_12849\" class=\" odd hiddenRelease_past-203
+        displayNone\">\n<td width=\"28\">1994</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Live_at_Brixton/12849\"
+        title=\"Live at Brixton\">Live at Brixton</a> (Live album) </td>\n<td>\nBass,
+        Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_442296\" class=\"even\">\n<td
+        width=\"28\">1995</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Sacrifice/442296\"
+        title=\"Sacrifice\">Sacrifice</a> </td>\n<td>\nBass, Vocals </td>\n</tr>\n<tr
+        id=\"memberInAlbum_62319\" class=\" odd hiddenRelease_past-203 displayNone\">\n<td
+        width=\"28\">1996</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Hump_on_Your_Back_-_Snakebite/62319\"
+        title=\"Hump on Your Back / Snakebite\">Hump on Your Back / Snakebite</a>
+        (Split) </td>\n<td>\nBass, Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_949\"
+        class=\"even\">\n<td width=\"28\">1996</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Overnight_Sensation/949\"
+        title=\"Overnight Sensation\">Overnight Sensation</a> </td>\n<td>\nHarmonica
+        (track 2), Bass, Vocals, Guitars (acoustic) (tracks 5, 11) </td>\n</tr>\n<tr
+        id=\"memberInAlbum_59484\" class=\" odd hiddenRelease_past-203 displayNone\">\n<td
+        width=\"28\">1997</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/King_Biscuit_Flower_Hour/59484\"
+        title=\"King Biscuit Flower Hour\">King Biscuit Flower Hour</a> (Live album)
+        </td>\n<td>\nBass, Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_953\" class=\"even\">\n<td
+        width=\"28\">1998</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Snake_Bite_Love/953\"
+        title=\"Snake Bite Love\">Snake Bite Love</a> </td>\n<td>\nBass, Vocals </td>\n</tr>\n<tr
+        id=\"memberInAlbum_2038\" class=\" odd hiddenRelease_past-203 displayNone\">\n<td
+        width=\"28\">1999</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Everything_Louder_than_Everyone_Else/2038\"
+        title=\"Everything Louder than Everyone Else\">Everything Louder than Everyone
+        Else</a> (Live album) </td>\n<td>\nBass, Vocals (as \"Lemmy\") </td>\n</tr>\n<tr
+        id=\"memberInAlbum_442304\" class=\"even\">\n<td width=\"28\">2000</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/We_Are_Mot%C3%B6rhead/442304\"
+        title=\"We Are Motörhead\">We Are Motörhead</a> </td>\n<td>\nVocals, Songwriting,
+        Bass  </td>\n</tr>\n<tr id=\"memberInAlbum_45606\" class=\" odd hiddenRelease_past-203
+        displayNone\">\n<td width=\"28\">2000</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/God_Save_the_Queen/45606\"
+        title=\"God Save the Queen\">God Save the Queen</a> (Single) </td>\n<td>\nBass,
+        Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_7492\" class=\"even hiddenRelease_past-203
+        displayNone\">\n<td width=\"28\">2001</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/25_%26_Alive_%22Boneshaker%22/7492\"
+        title=\"25 &amp; Alive &quot;Boneshaker&quot;\">25 & Alive \"Boneshaker\"</a>
+        (Live album) </td>\n<td>\nBass, Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_273021\"
+        class=\" odd hiddenRelease_past-203 displayNone\">\n<td width=\"28\">2002</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Shut_Your_Mouth/273021\"
+        title=\"Shut Your Mouth\">Shut Your Mouth</a> (Single) </td>\n<td>\nBass,
+        Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_466584\" class=\"even\">\n<td
+        width=\"28\">2002</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Hammered/466584\"
+        title=\"Hammered\">Hammered</a> </td>\n<td>\nBass, Songwriting, Vocals (as
+        \"Lemmy\") </td>\n</tr>\n<tr id=\"memberInAlbum_32289\" class=\" odd hiddenRelease_past-203
+        displayNone\">\n<td width=\"28\">2003</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Live_at_Brixton_Academy/32289\"
+        title=\"Live at Brixton Academy\">Live at Brixton Academy</a> (Live album)
+        </td>\n<td>\nBass, Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_442318\" class=\"even\">\n<td
+        width=\"28\">2004</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Inferno/442318\"
+        title=\"Inferno\">Inferno</a> </td>\n<td>\nSongwriting, Bass, Vocals, Harmonica
+        (track 12), Guitars (acoustic) (track 12) </td>\n</tr>\n<tr id=\"memberInAlbum_857767\"
+        class=\" odd hiddenRelease_past-203 displayNone\">\n<td width=\"28\">2005</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Whorehouse_Blues/857767\"
+        title=\"Whorehouse Blues\">Whorehouse Blues</a> (Video) </td>\n<td>\nBass,
+        Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_81560\" class=\"even hiddenRelease_past-203
+        displayNone\">\n<td width=\"28\">2005</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Stage_Fright/81560\"
+        title=\"Stage Fright\">Stage Fright</a> (Video) </td>\n<td>\nBass, Vocals
+        </td>\n</tr>\n<tr id=\"memberInAlbum_100217\" class=\" odd hiddenRelease_past-203
+        displayNone\">\n<td width=\"28\">2005</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Whorehouse_Blues/100217\"
+        title=\"Whorehouse Blues\">Whorehouse Blues</a> (Single) </td>\n<td>\nBass,
+        Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_104067\" class=\"even hiddenRelease_past-203
+        displayNone\">\n<td width=\"28\">2005</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/BBC_Live_%26_In-Session/104067\"
+        title=\"BBC Live &amp; In-Session\">BBC Live & In-Session</a> (Live album)
+        </td>\n<td>\nBass, Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_161373\" class=\"
+        odd hiddenRelease_past-203 displayNone\">\n<td width=\"28\">2006</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/R.A.M.O.N.E.S._-_Devil_I_Know/161373\"
+        title=\"R.A.M.O.N.E.S. / Devil I Know\">R.A.M.O.N.E.S. / Devil I Know</a>
+        (Single) </td>\n<td>\nBass, Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_460470\"
+        class=\"even\">\n<td width=\"28\">2006</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Kiss_of_Death/460470\"
+        title=\"Kiss of Death\">Kiss of Death</a> </td>\n<td>\nSongwriting, Bass,
+        Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_207998\" class=\" odd hiddenRelease_past-203
+        displayNone\">\n<td width=\"28\">2006</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/God_Was_Never_on_Your_Side/207998\"
+        title=\"God Was Never on Your Side\">God Was Never on Your Side</a> (Single)
+        </td>\n<td>\nBass, Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_169597\" class=\"even
+        hiddenRelease_past-203 displayNone\">\n<td width=\"28\">2007</td>\n<td width=\"280\">\n<a
+        href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Overkill_-_Tie_Your_Mother_Down/169597\"
+        title=\"Overkill / Tie Your Mother Down\">Overkill / Tie Your Mother Down</a>
+        (Single) </td>\n<td>\nBass, Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_157928\"
+        class=\" odd hiddenRelease_past-203 displayNone\">\n<td width=\"28\">2007</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Better_Mot%C3%B6rhead_than_Dead%3A_Live_at_Hammersmith/157928\"
+        title=\"Better Motörhead than Dead: Live at Hammersmith\">Better Motörhead
+        than Dead: Live at Hammersmith</a> (Live album) </td>\n<td>\nBass, Vocals
+        </td>\n</tr>\n<tr id=\"memberInAlbum_449394\" class=\"even\">\n<td width=\"28\">2008</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Mot%C3%B6rizer/449394\"
+        title=\"Motörizer\">Motörizer</a> </td>\n<td>\nBass, Vocals </td>\n</tr>\n<tr
+        id=\"memberInAlbum_857764\" class=\" odd hiddenRelease_past-203 displayNone\">\n<td
+        width=\"28\">2010</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Get_Back_In_Line_-_Ace_of_Spades_%28acoustic_version%29/857764\"
+        title=\"Get Back In Line / Ace of Spades (acoustic version)\">Get Back In
+        Line / Ace of Spades (acoustic version)</a> (Single) </td>\n<td>\nBass, Vocals
+        </td>\n</tr>\n<tr id=\"memberInAlbum_287773\" class=\"even\">\n<td width=\"28\">2010</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/The_W%C3%B6rld_Is_Yours/287773\"
+        title=\"The Wörld Is Yours\">The Wörld Is Yours</a> </td>\n<td>\nBass, Vocals,
+        Lyrics </td>\n</tr>\n<tr id=\"memberInAlbum_315021\" class=\" odd hiddenRelease_past-203
+        displayNone\">\n<td width=\"28\">2011</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/The_Game/315021\"
+        title=\"The Game\">The Game</a> (Single) </td>\n<td>\nBass, Vocals </td>\n</tr>\n<tr
+        id=\"memberInAlbum_604129\" class=\"even hiddenRelease_past-203 displayNone\">\n<td
+        width=\"28\">2011</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/The_W%C3%B6rld_Is_Ours_-_Vol._1%3A_Everywhere_Further_than_Everyplace_Else/604129\"
+        title=\"The Wörld Is Ours - Vol. 1: Everywhere Further than Everyplace Else\">The
+        Wörld Is Ours - Vol. 1: Everywhere Further than Everyplace Else</a> (Live
+        album) </td>\n<td>\nBass, Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_352843\"
+        class=\" odd hiddenRelease_past-203 displayNone\">\n<td width=\"28\">2012</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/The_W%C3%B6rld_Is_Ours_-_Vol._2%3A_Anyplace_Crazy_as_Anywhere_Else/352843\"
+        title=\"The Wörld Is Ours - Vol. 2: Anyplace Crazy as Anywhere Else\">The
+        Wörld Is Ours - Vol. 2: Anyplace Crazy as Anywhere Else</a> (Live album) </td>\n<td>\nBass,
+        Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_386569\" class=\"even\">\n<td
+        width=\"28\">2013</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Aftershock/386569\"
+        title=\"Aftershock\">Aftershock</a> </td>\n<td>\n\nBass, Vocals </td>\n</tr>\n<tr
+        id=\"memberInAlbum_857561\" class=\" odd hiddenRelease_past-203 displayNone\">\n<td
+        width=\"28\">2015</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Electricity/857561\"
+        title=\"Electricity\">Electricity</a> (Single) </td>\n<td>\nBass, Vocals </td>\n</tr>\n<tr
+        id=\"memberInAlbum_857543\" class=\"even hiddenRelease_past-203 displayNone\">\n<td
+        width=\"28\">2015</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Thunder_%26_Lightning_Electricity/857543\"
+        title=\"Thunder &amp; Lightning Electricity\">Thunder & Lightning Electricity</a>
+        (Single) </td>\n<td>\nBass, Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_515163\"
+        class=\" odd\">\n<td width=\"28\">2015</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Bad_Magic/515163\"
+        title=\"Bad Magic\">Bad Magic</a> </td>\n<td>\nBass, Vocals (as \"Ian \"Lemmy\"
+        Kilmister\") </td>\n</tr>\n<tr id=\"memberInAlbum_579804\" class=\"even hiddenRelease_past-203
+        displayNone\">\n<td width=\"28\">2016</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Overkill_%28Exclusive_Version%29/579804\"
+        title=\"Overkill (Exclusive Version)\">Overkill (Exclusive Version)</a> (Single)
+        </td>\n<td>\nBass, Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_573767\" class=\"
+        odd hiddenRelease_past-203 displayNone\">\n<td width=\"28\">2016</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Clean_Your_Clock/573767\"
+        title=\"Clean Your Clock\">Clean Your Clock</a> (Live album) </td>\n<td>\nBass,
+        Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_662570\" class=\"even hiddenRelease_past-203
+        displayNone\">\n<td width=\"28\">2017</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Under_C%C3%B6ver/662570\"
+        title=\"Under Cöver\">Under Cöver</a> (Compilation) </td>\n<td>\nBass, Vocals
+        </td>\n</tr>\n<tr id=\"memberInAlbum_735914\" class=\" odd hiddenRelease_past-203
+        displayNone\">\n<td width=\"28\">2018</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Get_Back_in_Line/735914\"
+        title=\"Get Back in Line\">Get Back in Line</a> (Single) </td>\n<td>\nBass,
+        Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_700990\" class=\"even hiddenRelease_past-203
+        displayNone\">\n<td width=\"28\">2018</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Heroes/700990\"
+        title=\"Heroes\">Heroes</a> (Single) </td>\n<td>\nBass, Vocals </td>\n</tr>\n<tr
+        id=\"memberInAlbum_765066\" class=\" odd hiddenRelease_past-203 displayNone\">\n<td
+        width=\"28\">2019</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Overkill_-_Bomber/765066\"
+        title=\"Overkill / Bomber\">Overkill / Bomber</a> (Single) </td>\n<td>\nBass,
+        Vocals </td>\n</tr>\n<tr id=\"memberInAlbum_765073\" class=\"even hiddenRelease_past-203
+        displayNone\">\n<td width=\"28\">2019</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Rockaway_Beach/765073\"
+        title=\"Rockaway Beach\">Rockaway Beach</a> (Single) </td>\n<td>\nBass, Vocals
+        </td>\n</tr>\n<tr id=\"memberInAlbum_924929\" class=\" odd hiddenRelease_past-203
+        displayNone\">\n<td width=\"28\">2021</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Louder_than_Noise%E2%80%A6_Live_in_Berlin/924929\"
+        title=\"Louder than Noise… Live in Berlin\">Louder than Noise… Live in Berlin</a>
+        (Live album) </td>\n<td>\nBass, Vocals </td>\n</tr>\n<tr class=\"showAll\">\n<td
+        colspan=\"3\">\n(<a href=\"javascript:;\" id=\"toggle_past-203\" class=\"toggleAlbums\">show
+        all</a>)\n</td>\n</tr>\n</table>\n</div>\n<div class=\"member_in_band\" id=\"memberInBand_l_977267\">\n<h3
+        class=\"member_in_band_name\">Opal Butterfly</h3>\n<p class=\"member_in_band_role\"
+        id=\"roleInBand_Opal Butterfly\">\n<strong>Guitars</strong>\n(1970) </p>\n</div>\n<div
+        class=\"member_in_band\" id=\"memberInBand_l_977266\">\n<h3 class=\"member_in_band_name\">Sam
+        Gopal</h3>\n<p class=\"member_in_band_role\" id=\"roleInBand_Sam Gopal\">\nAs
+        Ian Willis:<br /> <strong>Guitars</strong>\n(1968) </p>\n</div>\n<div class=\"member_in_band\"
+        id=\"memberInBand_l_2479953\">\n<h3 class=\"member_in_band_name\">The Damned</h3>\n<p
+        class=\"member_in_band_role\" id=\"roleInBand_The Damned\">\n<strong>Bass</strong>\n(1978-1979)
+        </p>\n</div>\n<div class=\"member_in_band\" id=\"memberInBand_l_977262\">\n<h3
+        class=\"member_in_band_name\">The Motown Sect</h3>\n<p class=\"member_in_band_role\"
+        id=\"roleInBand_The Motown Sect\">\n<strong>Guitars, Vocals</strong>\n(1966)
+        </p>\n</div>\n<div class=\"member_in_band\" id=\"memberInBand_l_977273\">\n<h3
+        class=\"member_in_band_name\">The Rainmakers</h3>\n<p class=\"member_in_band_role\"
+        id=\"roleInBand_The Rainmakers\">\n<strong>Guitars</strong>\n(1963-1966) </p>\n</div>\n<div
+        class=\"member_in_band\" id=\"memberInBand_l_977255\">\n<h3 class=\"member_in_band_name\">The
+        Rockin' Vickers</h3>\n<p class=\"member_in_band_role\" id=\"roleInBand_The
+        Rockin&#039; Vickers\">\n<strong>Guitars</strong>\n(1965-1967) </p>\n</div>\n</div>\n</div>\n\n\n<div
+        id=\"artist_tab_guest\">\n<div id=\"member_guest\" class=\"tabs2lvl\"> </div>\n<div
+        class=\"ui-tabs-panel-content block_spacer_top_36\">\n<div class=\"member_in_band\"
+        id=\"memberInBand_13899\">\n<h3 class=\"member_in_band_name\"><a href=\"https://www.metal-archives.com/bands/A.N.I.M.A.L./13899#band_tab_members\"
+        title=\"A.N.I.M.A.L.\">A.N.I.M.A.L.</a></h3>\n<p class=\"member_in_band_role\"
+        id=\"roleInBand_13899\">\n</p>\n<table class=\"display no_borders\" cellpadding=\"0\"
+        cellspacing=\"0\">\n<tr id=\"memberInAlbum_32761\" class=\"even\">\n<td width=\"28\">1999</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/A.N.I.M.A.L./Usa_toda_tu_fuerza/32761\"
+        title=\"Usa toda tu fuerza\">Usa toda tu fuerza</a> </td>\n<td>\nVocals (track
+        12) </td>\n</tr>\n</table>\n</div>\n<div class=\"member_in_band\" id=\"memberInBand_19943\">\n<h3
+        class=\"member_in_band_name\"><a href=\"https://www.metal-archives.com/bands/Boetz/19943#band_tab_members\"
+        title=\"Boetz\">Boetz</a></h3>\n<p class=\"member_in_band_role\" id=\"roleInBand_19943\">\n</p>\n<table
+        class=\"display no_borders\" cellpadding=\"0\" cellspacing=\"0\">\n<tr id=\"memberInAlbum_46474\"
+        class=\" odd\">\n<td width=\"28\">2001</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Boetz/Call_to_Arms/46474\"
+        title=\"Call to Arms\">Call to Arms</a> </td>\n<td>\nVocals (additional) (track
+        1) </td>\n</tr>\n</table>\n</div>\n<div class=\"member_in_band\" id=\"memberInBand_4220\">\n<h3
+        class=\"member_in_band_name\"><a href=\"https://www.metal-archives.com/bands/Doro/4220#band_tab_members\"
+        title=\"Doro\">Doro</a></h3>\n<p class=\"member_in_band_role\" id=\"roleInBand_4220\">\n</p>\n<table
+        class=\"display no_borders\" cellpadding=\"0\" cellspacing=\"0\">\n<tr id=\"memberInAlbum_42884\"
+        class=\"even\">\n<td width=\"28\">2000</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Doro/Calling_the_Wild/42884\"
+        title=\"Calling the Wild\">Calling the Wild</a> </td>\n<td>\nBass, Guitars
+        (acoustic) (tracks 10, 16) (as \"Lemmy\") </td>\n</tr>\n<tr id=\"memberInAlbum_746895\"
+        class=\" odd\">\n<td width=\"28\">2006</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Doro/20_Years_-_A_Warrior_Soul/746895\"
+        title=\"20 Years - A Warrior Soul\">20 Years - A Warrior Soul</a> (Video)
+        </td>\n<td>\nVocals (DVD1 tracks 38, 41; DVD2 tracks 25, 34) </td>\n</tr>\n<tr
+        id=\"memberInAlbum_350440\" class=\"even\">\n<td width=\"28\">2012</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Doro/Raise_Your_Fist/350440\"
+        title=\"Raise Your Fist\">Raise Your Fist</a> </td>\n<td>\nVocals (track 4)
+        </td>\n</tr>\n<tr id=\"memberInAlbum_409739\" class=\" odd\">\n<td width=\"28\">2014</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Doro/Powerful_Passionate_Favorites/409739\"
+        title=\"Powerful Passionate Favorites\">Powerful Passionate Favorites</a>
+        (Compilation) </td>\n<td>\nVocals (backing) </td>\n</tr>\n<tr id=\"memberInAlbum_564450\"
+        class=\"even\">\n<td width=\"28\">2016</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Doro/Love%27s_Gone_to_Hell/564450\"
+        title=\"Love&#039;s Gone to Hell\">Love's Gone to Hell</a> (EP) </td>\n<td>\nVocals
+        (track 3) </td>\n</tr>\n</table>\n</div>\n<div class=\"member_in_band\" id=\"memberInBand_52475\">\n<h3
+        class=\"member_in_band_name\"><a href=\"https://www.metal-archives.com/bands/Fast_Eddie_Clarke/52475#band_tab_members\"
+        title=\"Fast Eddie Clarke\">Fast Eddie Clarke</a></h3>\n<p class=\"member_in_band_role\"
+        id=\"roleInBand_52475\">\n</p>\n<table class=\"display no_borders\" cellpadding=\"0\"
+        cellspacing=\"0\">\n<tr id=\"memberInAlbum_99765\" class=\" odd\">\n<td width=\"28\">1993</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Fast_Eddie_Clarke/It_Ain%27t_Over_%27till_It%27s_Over/99765\"
+        title=\"It Ain&#039;t Over &#039;till It&#039;s Over\">It Ain't Over 'till
+        It's Over</a> </td>\n<td>\nVocals (track 7) </td>\n</tr>\n</table>\n</div>\n<div
+        class=\"member_in_band\" id=\"memberInBand_1506\">\n<h3 class=\"member_in_band_name\"><a
+        href=\"https://www.metal-archives.com/bands/Girlschool/1506#band_tab_members\"
+        title=\"Girlschool\">Girlschool</a></h3>\n<p class=\"member_in_band_role\"
+        id=\"roleInBand_1506\">\n</p>\n<table class=\"display no_borders\" cellpadding=\"0\"
+        cellspacing=\"0\">\n<tr id=\"memberInAlbum_209366\" class=\"even\">\n<td width=\"28\">2008</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Girlschool/Legacy/209366\"
+        title=\"Legacy\">Legacy</a> </td>\n<td>\nVocals (track 12), Triangle (track
+        12), Bass (track 12) </td>\n</tr>\n</table>\n</div>\n<div class=\"member_in_band\"
+        id=\"memberInBand_3540386323\">\n<h3 class=\"member_in_band_name\"><a href=\"https://www.metal-archives.com/bands/Integrity/3540386323#band_tab_members\"
+        title=\"Integrity\">Integrity</a></h3>\n<p class=\"member_in_band_role\" id=\"roleInBand_3540386323\">\n</p>\n<table
+        class=\"display no_borders\" cellpadding=\"0\" cellspacing=\"0\">\n<tr id=\"memberInAlbum_456361\"
+        class=\" odd\">\n<td width=\"28\">1997</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Integrity/The_Kids_of_Widney_High_-_Integrity/456361\"
+        title=\"The Kids of Widney High / Integrity\">The Kids of Widney High / Integrity</a>
+        (Split) </td>\n<td>\nSpoken word introduction (track 3) </td>\n</tr>\n\n<tr
+        id=\"memberInAlbum_456391\" class=\"even\">\n<td width=\"28\">1997</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Integrity/Taste_of_Every_Sin/456391\"
+        title=\"Taste of Every Sin\">Taste of Every Sin</a> (Compilation) </td>\n<td>\nIntroduction
+        (Track 1) </td>\n</tr>\n</table>\n</div>\n<div class=\"member_in_band\" id=\"memberInBand_97749\">\n<h3
+        class=\"member_in_band_name\"><a href=\"https://www.metal-archives.com/bands/Meldrum/97749#band_tab_members\"
+        title=\"Meldrum\">Meldrum</a></h3>\n<p class=\"member_in_band_role\" id=\"roleInBand_97749\">\nAs
+        Lemmy:<br /> </p>\n<table class=\"display no_borders\" cellpadding=\"0\" cellspacing=\"0\">\n<tr
+        id=\"memberInAlbum_159807\" class=\" odd\">\n<td width=\"28\">2007</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Meldrum/Blowin%27_Up_the_Machine/159807\"
+        title=\"Blowin&#039; Up the Machine\">Blowin' Up the Machine</a> </td>\n<td>\nVocals
+        (track 6) </td>\n</tr>\n</table>\n</div>\n<div class=\"member_in_band\" id=\"memberInBand_19654\">\n<h3
+        class=\"member_in_band_name\"><a href=\"https://www.metal-archives.com/bands/Plasmatics/19654#band_tab_members\"
+        title=\"Plasmatics\">Plasmatics</a></h3>\n<p class=\"member_in_band_role\"
+        id=\"roleInBand_19654\">\nAs Lemmy:<br /> </p>\n<table class=\"display no_borders\"
+        cellpadding=\"0\" cellspacing=\"0\">\n<tr id=\"memberInAlbum_45249\" class=\"even\">\n<td
+        width=\"28\">1982</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Plasmatics/Stand_by_Your_Man/45249\"
+        title=\"Stand by Your Man\">Stand by Your Man</a> (Split) </td>\n<td>\nBass
+        </td>\n</tr>\n</table>\n</div>\n<div class=\"member_in_band\" id=\"memberInBand_14957\">\n<h3
+        class=\"member_in_band_name\"><a href=\"https://www.metal-archives.com/bands/Probot/14957#band_tab_members\"
+        title=\"Probot\">Probot</a></h3>\n<p class=\"member_in_band_role\" id=\"roleInBand_14957\">\n</p>\n<table
+        class=\"display no_borders\" cellpadding=\"0\" cellspacing=\"0\">\n<tr id=\"memberInAlbum_554721\"
+        class=\" odd\">\n<td width=\"28\">2003</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Probot/Probot/554721\"
+        title=\"Probot\">Probot</a> (Demo) </td>\n<td>\nBass (track 3), Vocals (track
+        3) </td>\n</tr>\n<tr id=\"memberInAlbum_36235\" class=\"even\">\n<td width=\"28\">2004</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Probot/Probot/36235\"
+        title=\"Probot\">Probot</a> </td>\n<td>\nVocals (lead), Bass (track 3) (as
+        \"Lemmy\") </td>\n</tr>\n</table>\n</div>\n<div class=\"member_in_band\" id=\"memberInBand_626\">\n<h3
+        class=\"member_in_band_name\"><a href=\"https://www.metal-archives.com/bands/Saxon/626#band_tab_members\"
+        title=\"Saxon\">Saxon</a></h3>\n<p class=\"member_in_band_role\" id=\"roleInBand_626\">\n</p>\n<table
+        class=\"display no_borders\" cellpadding=\"0\" cellspacing=\"0\">\n<tr id=\"memberInAlbum_142232\"
+        class=\" odd\">\n<td width=\"28\">2007</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Saxon/The_Inner_Sanctum/142232\"
+        title=\"The Inner Sanctum\">The Inner Sanctum</a> </td>\n<td>\nVocals (backing)
+        (track 5) </td>\n</tr>\n<tr id=\"memberInAlbum_443047\" class=\"even\">\n<td
+        width=\"28\">2007</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Saxon/The_Inner_Sanctum/443047\"
+        title=\"The Inner Sanctum\">The Inner Sanctum</a> </td>\n<td>\nVocals (track
+        11) </td>\n</tr>\n<tr id=\"memberInAlbum_175668\" class=\" odd\">\n<td width=\"28\">2007</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Saxon/I%27ve_Got_to_Rock_%28to_Stay_Alive%29/175668\"
+        title=\"I&#039;ve Got to Rock (to Stay Alive)\">I've Got to Rock (to Stay
+        Alive)</a> (Single) </td>\n<td>\nVocals (track 1) </td>\n</tr>\n</table>\n</div>\n<div
+        class=\"member_in_band\" id=\"memberInBand_4975\">\n<h3 class=\"member_in_band_name\"><a
+        href=\"https://www.metal-archives.com/bands/Twisted_Sister/4975#band_tab_members\"
+        title=\"Twisted Sister\">Twisted Sister</a></h3>\n<p class=\"member_in_band_role\"
+        id=\"roleInBand_4975\">\n</p>\n<table class=\"display no_borders\" cellpadding=\"0\"
+        cellspacing=\"0\">\n<tr id=\"memberInAlbum_154820\" class=\"even\">\n<td width=\"28\">2007</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Twisted_Sister/The_Video_Years/154820\"
+        title=\"The Video Years\">The Video Years</a> (Video) </td>\n<td>\nVocals
+        (additional) (track 1) </td>\n</tr>\n</table>\n</div>\n<div class=\"member_in_band\"
+        id=\"memberInBand_3540482506\">\n<h3 class=\"member_in_band_name\"><a href=\"https://www.metal-archives.com/bands/Wendy_O._Williams/3540482506#band_tab_members\"
+        title=\"Wendy O. Williams\">Wendy O. Williams</a></h3>\n<p class=\"member_in_band_role\"
+        id=\"roleInBand_3540482506\">\n</p>\n<table class=\"display no_borders\" cellpadding=\"0\"
+        cellspacing=\"0\">\n<tr id=\"memberInAlbum_110281\" class=\" odd\">\n<td width=\"28\">1985</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Wendy_O._Williams/Live%21_Terror_Unleashed_-_Bump_%27n_Grind/110281\"
+        title=\"Live! Terror Unleashed / Bump &#039;n Grind\">Live! Terror Unleashed
+        / Bump 'n Grind</a> (Video) </td>\n<td>\nBass, Vocals (track 8) </td>\n</tr>\n</table>\n</div>\n</div>\n</div>\n\n\n<div
+        id=\"artist_tab_misc\">\n<div id=\"member_guest\" class=\"tabs2lvl\"> </div>\n<div
+        class=\"ui-tabs-panel-content block_spacer_top_36\">\n<div class=\"member_in_band\"
+        id=\"memberInBand_542\">\n<h3 class=\"member_in_band_name\"><a href=\"https://www.metal-archives.com/bands/Anvil/542#band_tab_members\"
+        title=\"Anvil\">Anvil</a></h3>\n<p class=\"member_in_band_role\" id=\"roleInBand_542\">\n</p>\n<table
+        class=\"display no_borders\" cellpadding=\"0\" cellspacing=\"0\">\n<tr id=\"memberInAlbum_252816\"
+        class=\"even\">\n<td width=\"28\">2009</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Anvil/The_Story_of_Anvil/252816\"
+        title=\"The Story of Anvil\">The Story of Anvil</a> (Video) </td>\n<td>\nInterviewee
+        </td>\n</tr>\n</table>\n</div>\n<div class=\"member_in_band\" id=\"memberInBand_17682\">\n<h3
+        class=\"member_in_band_name\"><a href=\"https://www.metal-archives.com/bands/Dee_Snider/17682#band_tab_members\"
+        title=\"Dee Snider\">Dee Snider</a></h3>\n<p class=\"member_in_band_role\"
+        id=\"roleInBand_17682\">\n</p>\n<table class=\"display no_borders\" cellpadding=\"0\"
+        cellspacing=\"0\">\n<tr id=\"memberInAlbum_837254\" class=\" odd\">\n<td width=\"28\">1997</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Dee_Snider/DeeVision/837254\"
+        title=\"DeeVision\">DeeVision</a> (Video) </td>\n<td>\nInterviewee </td>\n</tr>\n</table>\n</div>\n<div
+        class=\"member_in_band\" id=\"memberInBand_4220\">\n<h3 class=\"member_in_band_name\"><a
+        href=\"https://www.metal-archives.com/bands/Doro/4220#band_tab_members\" title=\"Doro\">Doro</a></h3>\n<p
+        class=\"member_in_band_role\" id=\"roleInBand_4220\">\n</p>\n<table class=\"display
+        no_borders\" cellpadding=\"0\" cellspacing=\"0\">\n<tr id=\"memberInAlbum_42884\"
+        class=\"even\">\n<td width=\"28\">2000</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Doro/Calling_the_Wild/42884\"
+        title=\"Calling the Wild\">Calling the Wild</a> </td>\n<td>\nProducer, Mixing
+        (track 10) (as \"Lemmy\") </td>\n</tr>\n</table>\n</div>\n<div class=\"member_in_band\"
+        id=\"memberInBand_114837\">\n<h3 class=\"member_in_band_name\"><a href=\"https://www.metal-archives.com/bands/Huntress/114837#band_tab_members\"
+        title=\"Huntress\">Huntress</a></h3>\n<p class=\"member_in_band_role\" id=\"roleInBand_114837\">\n</p>\n<table
+        class=\"display no_borders\" cellpadding=\"0\" cellspacing=\"0\">\n<tr id=\"memberInAlbum_378558\"
+        class=\" odd\">\n<td width=\"28\">2013</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Huntress/Starbound_Beast/378558\"
+        title=\"Starbound Beast\">Starbound Beast</a> </td>\n<td>\nLyrics (track 3)
+        </td>\n</tr>\n</table>\n</div>\n<div class=\"member_in_band\" id=\"memberInBand_203\">\n<h3
+        class=\"member_in_band_name\"><a href=\"https://www.metal-archives.com/bands/Mot%C3%B6rhead/203#band_tab_members\"
+        title=\"Motörhead\">Motörhead</a></h3>\n<p class=\"member_in_band_role\" id=\"roleInBand_203\">\n</p>\n<table
+        class=\"display no_borders\" cellpadding=\"0\" cellspacing=\"0\">\n<tr id=\"memberInAlbum_442304\"
+        class=\"even\">\n<td width=\"28\">2000</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/We_Are_Mot%C3%B6rhead/442304\"
+        title=\"We Are Motörhead\">We Are Motörhead</a> </td>\n<td>\nCover concept
+        </td>\n</tr>\n<tr id=\"memberInAlbum_466584\" class=\" odd\">\n<td width=\"28\">2002</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Hammered/466584\"
+        title=\"Hammered\">Hammered</a> </td>\n<td>\nProducer (track 11) </td>\n</tr>\n<tr
+        id=\"memberInAlbum_32289\" class=\"even\">\n<td width=\"28\">2003</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Live_at_Brixton_Academy/32289\"
+        title=\"Live at Brixton Academy\">Live at Brixton Academy</a> (Live album)
+        </td>\n<td>\nProducer </td>\n</tr>\n<tr id=\"memberInAlbum_77161\" class=\"
+        odd\">\n<td width=\"28\">2005</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Classic_Albums%3A_Ace_of_Spades/77161\"
+        title=\"Classic Albums: Ace of Spades\">Classic Albums: Ace of Spades</a>
+        (Video) </td>\n<td>\nInterviewee </td>\n</tr>\n<tr id=\"memberInAlbum_287773\"
+        class=\"even\">\n<td width=\"28\">2010</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/The_W%C3%B6rld_Is_Yours/287773\"
+        title=\"The Wörld Is Yours\">The Wörld Is Yours</a> </td>\n<td>\nCover concept,
+        Inside sketch art </td>\n</tr>\n<tr id=\"memberInAlbum_323095\" class=\" odd\">\n<td
+        width=\"28\">2012</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Complete_Early_Years/323095\"
+        title=\"Complete Early Years\">Complete Early Years</a> (Boxed set) </td>\n<td>\nLiner
+        notes, Producer </td>\n</tr>\n<tr id=\"memberInAlbum_386569\" class=\"even\">\n<td
+        width=\"28\">2013</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Aftershock/386569\"
+        title=\"Aftershock\">Aftershock</a> </td>\n<td>\nArtwork (inside sketch) </td>\n</tr>\n<tr
+        id=\"memberInAlbum_515163\" class=\" odd\">\n<td width=\"28\">2015</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Mot%C3%B6rhead/Bad_Magic/515163\"
+        title=\"Bad Magic\">Bad Magic</a> </td>\n<td>\nDesign concept, Artwork (doodles)
+        </td>\n </tr>\n</table>\n</div>\n<div class=\"member_in_band\" id=\"memberInBand_195\">\n<h3
+        class=\"member_in_band_name\"><a href=\"https://www.metal-archives.com/bands/Ozzy_Osbourne/195#band_tab_members\"
+        title=\"Ozzy Osbourne\">Ozzy Osbourne</a></h3>\n<p class=\"member_in_band_role\"
+        id=\"roleInBand_195\">\n</p>\n<table class=\"display no_borders\" cellpadding=\"0\"
+        cellspacing=\"0\">\n<tr id=\"memberInAlbum_32232\" class=\"even\">\n<td width=\"28\">1991</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Ozzy_Osbourne/Don%27t_Blame_Me%3A_The_Tales_of_Ozzy_Osbourne/32232\"
+        title=\"Don&#039;t Blame Me: The Tales of Ozzy Osbourne\">Don't Blame Me:
+        The Tales of Ozzy Osbourne</a> (Video) </td>\n<td>\nInterviewee (as \"Lemmy\")
+        </td>\n</tr>\n<tr id=\"memberInAlbum_997\" class=\" odd\">\n<td width=\"28\">1991</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Ozzy_Osbourne/No_More_Tears/997\"
+        title=\"No More Tears\">No More Tears</a> </td>\n<td>\nLyrics (tracks 2-4,
+        7) </td>\n</tr>\n<tr id=\"memberInAlbum_1001\" class=\"even\">\n<td width=\"28\">1995</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Ozzy_Osbourne/Ozzmosis/1001\"
+        title=\"Ozzmosis\">Ozzmosis</a> </td>\n<td>\nSongwriting (tracks 5, 8) </td>\n</tr>\n</table>\n</div>\n<div
+        class=\"member_in_band\" id=\"memberInBand_626\">\n<h3 class=\"member_in_band_name\"><a
+        href=\"https://www.metal-archives.com/bands/Saxon/626#band_tab_members\" title=\"Saxon\">Saxon</a></h3>\n<p
+        class=\"member_in_band_role\" id=\"roleInBand_626\">\n</p>\n<table class=\"display
+        no_borders\" cellpadding=\"0\" cellspacing=\"0\">\n<tr id=\"memberInAlbum_304462\"
+        class=\" odd\">\n<td width=\"28\">2010</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Saxon/Heavy_Metal_Thunder_-_The_Movie/304462\"
+        title=\"Heavy Metal Thunder - The Movie\">Heavy Metal Thunder - The Movie</a>
+        (Video) </td>\n<td>\nInterviewee (DVD1) </td>\n</tr>\n</table>\n</div>\n<div
+        class=\"member_in_band\" id=\"memberInBand_419\">\n<h3 class=\"member_in_band_name\"><a
+        href=\"https://www.metal-archives.com/bands/Sodom/419#band_tab_members\" title=\"Sodom\">Sodom</a></h3>\n<p
+        class=\"member_in_band_role\" id=\"roleInBand_419\">\n</p>\n<table class=\"display
+        no_borders\" cellpadding=\"0\" cellspacing=\"0\">\n<tr id=\"memberInAlbum_104336\"
+        class=\"even\">\n<td width=\"28\">2005</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Sodom/Lords_of_Depravity_Part_I/104336\"
+        title=\"Lords of Depravity Part I\">Lords of Depravity Part I</a> (Video)
+        </td>\n<td>\nInterviewee (DVD1) </td>\n</tr>\n</table>\n</div>\n<div class=\"member_in_band\"
+        id=\"memberInBand_6372\">\n<h3 class=\"member_in_band_name\"><a href=\"https://www.metal-archives.com/bands/Warfare/6372#band_tab_members\"
+        title=\"Warfare\">Warfare</a></h3>\n<p class=\"member_in_band_role\" id=\"roleInBand_6372\">\n</p>\n<table
+        class=\"display no_borders\" cellpadding=\"0\" cellspacing=\"0\">\n<tr id=\"memberInAlbum_16395\"
+        class=\" odd\">\n<td width=\"28\">1985</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Warfare/Metal_Anarchy/16395\"
+        title=\"Metal Anarchy\">Metal Anarchy</a> </td>\n<td>\nProducer </td>\n</tr>\n</table>\n</div>\n</div>\n</div>\n\n</div>\n<div
+        id=\"readMoreDialogBio\" title=\"Biography\" class=\"displayNone\"> </div>\n<div
+        id=\"readMoreDialogTrivia\" title=\"Trivia\" class=\"displayNone\"> </div>\n\n<div
+        id=\"auditTrail\">\n<table>\n<tr>\n<td>Added by: <a href=\"https://www.metal-archives.com/users/blackblood666\"
+        class=\"profileMenu\">blackblood666</a></td>\n<td align=\"right\">Modified
+        by: <a href=\"https://www.metal-archives.com/users/Cyrdarxes\" class=\"profileMenu\">Cyrdarxes</a></td>\n</tr>\n<tr>\n<td>Added
+        on: 2011-04-09 03:33:27</td>\n<td align=\"right\">Last modified on: 2021-02-16
+        12:11:16</td>\n</tr>\n<tr>\n<td valign=\"top\">\n&nbsp;\n</td>\n<td align=\"right\"
+        valign=\"top\">\n</td>\n</tr>\n<td class=\"writeAction\" colspan=\"2\">Duplicate?
+        Please <a href=\"javascript:popupReportDialog(3, 260);\">file a report</a>
+        for merging.</td>\n</table>\n</div>\n</div>\n</div>\n</div>\n</div>\n<script
+        src=\"https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js\"
+        data-cf-settings=\"30e27351ad38bd9eff6a5142-|49\" defer=\"\"></script></body>\n</html>\n"
+  recorded_at: Sat, 10 Apr 2021 12:27:20 GMT
+- request:
+    method: get
+    uri: https://ma.cache.headbang.re/artist/read-more/id/260/field/biography
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - MetalArchivesGemTestSuite/3.2.0 (user@example.com)
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - ma.cache.headbang.re
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+      Cache-Control:
+      - max-age=2592000
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Ray:
+      - 63a39be85d51e620-LHR
+      Cf-Request-Id:
+      - '093a1fc5380000e62076268000000001'
+      Content-Security-Policy:
+      - frame-ancestors 'self'
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Sat, 10 Apr 2021 12:24:00 GMT
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Expires:
+      - Mon, 10 May 2021 12:24:00 GMT
+      Nel:
+      - '{"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=8lSXr27%2BBGWdAcrHDhKXPXw3R5cQ9JNQY%2BGwl6et51orXLXaGg6J%2F2I3%2FwoPlIAZ21NJa5jbnKjvxUihMMD3CfubLIn4YUW0lJR%2FudhzGbhD1DpMJqgG"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - nginx
+      Vary:
+      - Accept-Encoding,User-Agent
+      X-Cache-Status:
+      - HIT
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '1872'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "Lemmy was born on Christmas Eve in 1945 in Burslem, Stoke on Trent,
+        England. When Lemmy was three months old, his father, an ex-Royal Air Force
+        chaplain, separated from his mother. His mother and grandmother settled in
+        Newcastle-under-Lyme, then moved on to Madeley, Staffordshire.<br />\r\n<br
+        />\r\nWhen he was 10, his mother married George Willis, who had two older
+        children from a previous marriage, Patricia and Tony, with whom he did not
+        get along. They moved to a farm in Benllech, Anglesey, North Wales and it
+        was during this time that he started to show an interest in rock and roll,
+        girls, and horses. He attended Ysgol Syr Thomas Jones school in Amlwch, where
+        he was nicknamed Lemmy, although he is unsure why, and it would later be claimed
+        that it originated from the phrase \"lemmy a quid till Friday\" because of
+        his habit of borrowing money from people to feed his addiction to fruit machines
+        (slot machines).<br />\r\n<br />\r\nHe saw The Beatles perform at the Cavern
+        Club when he was 16, then played guitar along to their first album, <i>Please
+        Please Me</i>, learning the chords. He also admired the sarcastic attitude
+        of the group, particularly that of John Lennon. Upon leaving school and with
+        his family relocated in Conwy, Lemmy undertook menial jobs including working
+        at the local Hotpoint factory while also playing guitar for local bands, such
+        as The Sundowners, and spending time at a horse-riding school. At the age
+        of 17, he met a holidaying girl named Cathy. Lemmy followed her to Stockport,
+        Cheshire, where she had his son, Sean. <br />\r\n<br />\r\nAfter a year of
+        well-documented health scares, Lemmy was diagnosed with cancer on Boxing Day
+        2015, and died in his home two days later.<br />\r\n <br />\r\nAccording to
+        Lemmy's death certificate from January 19th, 2016, his cause of death was
+        prostate cancer, cardiac arrhythmia, and congestive heart failure."
+  recorded_at: Sat, 10 Apr 2021 12:27:21 GMT
+- request:
+    method: get
+    uri: https://ma.cache.headbang.re/artist/read-more/id/260/field/trivia
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - MetalArchivesGemTestSuite/3.2.0 (user@example.com)
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - ma.cache.headbang.re
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+      Cache-Control:
+      - max-age=2592000
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Ray:
+      - 63a39bf0af27d8b5-AMS
+      Cf-Request-Id:
+      - '093a1fca6d0000d8b50e8c4000000001'
+      Content-Security-Policy:
+      - frame-ancestors 'self'
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Sat, 10 Apr 2021 12:24:01 GMT
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Expires:
+      - Mon, 10 May 2021 12:24:01 GMT
+      Nel:
+      - '{"max_age":604800,"report_to":"cf-nel"}'
+      Report-To:
+      - '{"group":"cf-nel","endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=MvzuJP%2Bl1Yf9UTDeIx1Bv6%2FnwnU8dJgOeFl7wXaYLjABa3yl6cPHuo4%2B0X0KaowGui3VPnu3PSsDUqPhVv5cJ49bnLXEHUozUDAdK1xW3Y3DXYQD95Ey"}],"max_age":604800}'
+      Server:
+      - nginx
+      Vary:
+      - Accept-Encoding,User-Agent
+      X-Cache-Status:
+      - HIT
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '1623'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "He was the second member of Motörhead to die in 2015, following <a
+        href=\"https://www.metal-archives.com/artists/Philthy_Animal/2388\">Philthy
+        Animal</a>, who died a month earlier. <a href=\"https://www.metal-archives.com/artists/W%C3%BCrzel/2333\">Würzel</a>
+        preceded the two in death by approximately 4 1/2 years, dying in 2011. <br
+        />\r\n<br />\r\nIn a Channel 4 documentary called \"Motörhead: Live Fast,
+        Die Old\", broadcast on August 22nd, 2005, it was claimed that Lemmy had \"bedded\"
+        in excess of 2,000 women. Maxim magazine has Lemmy at number 8 on its top
+        ten \"Living Sex Legends\" list, as they claim that he has slept with around
+        1,200 women.<br />\r\n<br />\r\nIn the documentary, he explained that while
+        in school he noticed a pupil who had brought a guitar to school and had been
+        \"surrounded by chicks\". His mother had a guitar, which he then took to school,
+        even though he could not play, and was himself surrounded by girls: \"In those
+        days just having a guitar was enough... that was it.\" <br />\r\n<br />\r\nIn
+        2002, he published his autobiography, \"White Line Fever\". <br />\r\n<br
+        />\r\nRecorded a cover of Ben E. King's \"Stand by Me\", with <a href=\"https://www.metal-archives.com/artists/Dave_Lombardo/270\">Dave
+        Lombardo</a>.<br />\r\n<br />\r\nProduced an Albert Järvinen Band single,
+        \"Countdown,\" in 1984, and did vocals on the title track.<br />\r\n<br />\r\nOn
+        August 9th, 2017, Natural History Museum of London curator and Motörhead fan
+        Lorna Steel was given the opportunity to rename a Jurassic crocodile fossil
+        after the singer. The fossil, at first wrongly classified, is now singularly
+        known as \"Lemmysuchus obtusidens\"."
+  recorded_at: Sat, 10 Apr 2021 12:27:21 GMT
+- request:
+    method: get
+    uri: https://ma.cache.headbang.re/link/ajax-list/type/person/id/260
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - MetalArchivesGemTestSuite/3.2.0 (user@example.com)
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - ma.cache.headbang.re
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+      Cache-Control:
+      - max-age=2592000
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Ray:
+      - 63a39bf87b7107a2-LHR
+      Cf-Request-Id:
+      - '093a1fcf4a000007a276090000000001'
+      Content-Security-Policy:
+      - frame-ancestors 'self'
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Sat, 10 Apr 2021 12:24:01 GMT
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Expires:
+      - Mon, 10 May 2021 12:24:01 GMT
+      Nel:
+      - '{"max_age":604800,"report_to":"cf-nel"}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=OTX%2F%2FkzD4o6nhsciIa3VjbCAG5T%2Fi3ynMgk0EGK9o6CHjsyhq5vKBSM4tpcOIFr516YZ%2BjhQ4aCnyaLj5E0mNe2wScRVUecsLA7otJKuM8ZoAivdt%2Br%2F"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - nginx
+      Vary:
+      - Accept-Encoding,User-Agent
+      X-Cache-Status:
+      - HIT
+      X-Frame-Options:
+      - SAMEORIGIN
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "<script type=\"19bd64a46398e2b8a489c8b3-text/javascript\">\n$(document).ready(function()
+        {\n\t// Prepare the sub-tabs\n\t\t// Prepare the form popup\n\t$('#editLink').dialog({
+        autoOpen: false, width: 400, height: 250, modal: true, overlay: { opacity:
+        0.5, background: 'white'}, buttons: { 'Save link': function(){ $('#linkForm').submit();},
+        'Cancel': function() { $('#editLink').dialog('close');} } });\n});\n\n\n</script>\n<div
+        id=\"band_links\" class=\"tabs2lvl\">\n</div>\n<div class=\"ui-tabs-panel-content
+        block_spacer_top_36\">\n<table id=\"linksTablemain\" class=\"display\" width=\"50%\"
+        cellpadding=\"0\" cellspacing=\"0\">\n<tr id=\"header_Official\">\n<td colspan=\"2\">Official</td>\n</tr>\n<tr
+        class=\"even\" id=\"linkRow641731\">\n<td><a id=\"link641731\" href=\"https://www.facebook.com/OfficialLemmy\"
+        title=\"Go to: Facebook\" target=\"_blank\">Facebook</a></td>\n</tr>\n<tr
+        id=\"header_Official_merchandise\">\n<td colspan=\"2\">Official merchandise</td>\n</tr>\n<tr
+        class=\"odd\" id=\"linkRow813825\">\n<td><a id=\"link813825\" href=\"https://www.rockofftrade.com/category/177/Lemmy.html\"
+        title=\"Go to: Rock Off\" target=\"_blank\">Rock Off</a></td>\n</tr>\n<tr
+        id=\"header_Unofficial\">\n<td colspan=\"2\">Unofficial</td>\n</tr>\n<tr class=\"even\"
+        id=\"linkRow595339\">\n<td><a id=\"link595339\" href=\"https://en.wikipedia.org/wiki/Lemmy\"
+        title=\"Go to: Wikipedia\" target=\"_blank\">Wikipedia</a></td>\n</tr>\n<tr
+        class=\"odd\" id=\"linkRow618311\">\n<td><a id=\"link618311\" href=\"https://www.imdb.com/name/nm0501437/\"
+        title=\"Go to: IMDb\" target=\"_blank\">IMDb</a></td>\n</tr>\n<tr id=\"header_Unlisted_bands\">\n<td
+        colspan=\"2\">Unlisted bands</td>\n</tr>\n<tr class=\"even\" id=\"linkRow714671\">\n<td><a
+        id=\"link714671\" href=\"http://www.hawkwind.com/\" title=\"Go to: Hawkwind\"
+        target=\"_blank\">Hawkwind</a></td>\n</tr>\n<tr class=\"odd\" id=\"linkRow638680\">\n<td><a
+        id=\"link638680\" href=\"http://www.headcat.net/\" title=\"Go to: HeadCat\"
+        target=\"_blank\">HeadCat</a></td>\n</tr>\n</table>\n</div>\n<script src=\"https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js\"
+        data-cf-settings=\"19bd64a46398e2b8a489c8b3-|49\" defer=\"\"></script>"
+  recorded_at: Sat, 10 Apr 2021 12:27:21 GMT
+recorded_with: VCR 6.0.0

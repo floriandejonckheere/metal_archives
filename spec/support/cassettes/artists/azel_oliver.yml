@@ -1,0 +1,403 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://ma.cache.headbang.re/artist/view/id/613096
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - MetalArchivesGemTestSuite/3.2.0 (user@example.com)
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - ma.cache.headbang.re
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+      Cache-Control:
+      - max-age=2592000
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Ray:
+      - 63b381adcaaa0b53-AMS
+      Cf-Request-Id:
+      - '09440f609b00000b536b90e000000001'
+      Content-Security-Policy:
+      - frame-ancestors 'self'
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Sat, 10 Apr 2021 12:23:59 GMT
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Expires:
+      - Mon, 10 May 2021 12:23:59 GMT
+      Nel:
+      - '{"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=llDagxshovW2S%2FYi46lVoFWDuZYc2w2ECAoKtxBC4GVqz5zxtzAhdfS7SKLZTvXW%2BYzCvU7lfgimh8pIPNUZG9wgSvRBChxMqyyoIU%2FNOMC1nuSdXHxX"}],"max_age":604800,"group":"cf-nel"}'
+      Server:
+      - nginx
+      Vary:
+      - Accept-Encoding,User-Agent
+      X-Cache-Status:
+      - HIT
+      X-Frame-Options:
+      - SAMEORIGIN
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n<html
+        xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n<title>Azel Oliver - Encyclopaedia
+        Metallum: The Metal Archives</title>\n<meta http-equiv=\"Content-Type\" content=\"text/html;
+        charset=UTF-8\" />\n<meta content=\"width=device-width, initial-scale=1\"
+        name=\"viewport\" />\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/min/index.php?g=css\"
+        />\n<script type=\"567bb2f09a8e51764c5850ec-text/javascript\" src=\"/min/index.php?g=js\"></script>\n<script
+        type=\"567bb2f09a8e51764c5850ec-text/javascript\">\r\n\t\t\tvar URL_SITE\t=
+        'https://www.metal-archives.com/';\r\n\t\t\tvar URL_IMAGES\t= 'https://www.metal-archives.com/images/';\r\n\t\t\tvar
+        URL_CSS\t\t= 'https://www.metal-archives.com/css/';\r\n\t\t\tvar csrfToken\t=
+        '';\r\n\r\n\t\t\t$(document).ready(function() {\r\n\t\t\t\ttoggleFixedPositioning(1280,
+        600);\r\n\t\t\t\texecuteOnAllPages();\r\n\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t});\r\n\r\n\r\n\t\t</script>\n<noscript>\r\n\t\t\t<style
+        type=\"text/css\">\r\n\t\t\t\t.no-js { display: block !important; }\r\n\t\t\t</style>\r\n\t\t</noscript>\n<!--[if
+        lt IE 8]>\r\n\t\t\t<script src=\"http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js\"></script>\r\n\t\t\t
+        <link rel=\"stylesheet\" type=\"text/css\" href=\"https://www.metal-archives.com/css/default/oldie.css\"
+        />\r\n\t\t<![endif]-->\n<script type=\"567bb2f09a8e51764c5850ec-text/javascript\">\r\n\t\t\t
+        \ var _gaq = _gaq || [];\r\n\t\t\t  _gaq.push(['_setAccount', 'UA-4046749-4']);\r\n\t\t\t
+        \ _gaq.push(['_trackPageview']);\r\n\r\n\t\t\t  (function() {\r\n\t\t\t    var
+        ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async
+        = true;\r\n\t\t\t    ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+        : 'http://www') + '.google-analytics.com/ga.js';\r\n\t\t\t    var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);\r\n\t\t\t  })();\r\n\t\t</script>\n</head>\n<body>\n<div
+        id=\"wrapper\">\n<div id=\"header\">\n<a href=\"https://www.metal-archives.com/\"
+        id=\"MA_logo\">Metal Archives</a>\n<div class=\"clear loading\"><img src=\"https://www.metal-archives.com/images/loading.gif\"
+        alt=\"loading\" width=\"12\" height=\"12\" /> loading...</div>\n<div id=\"search_box\">\n<form
+        id=\"search_form\" action=\"https://www.metal-archives.com/search\" method=\"get\">\n<div>\n<label>Search:</label><br
+        />\n<input name=\"searchString\" type=\"text\" id=\"searchQueryBox\" size=\"25\"
+        value=\"\" tabindex=\"1\" />\n<select name=\"type\" tabindex=\"2\">\n<option
+        value=\"band_name\">Band name</option>\n<option value=\"band_genre\">Music
+        genre</option>\n<option value=\"band_themes\">Lyrical themes</option>\n<option
+        value=\"album_title\">Album title</option>\n<option value=\"song_title\">Song
+        title</option>\n<option value=\"label_name\">Label</option>\n<option value=\"artist_alias\">Artist</option>\n<option
+        value=\"user_name\">User profile</option>\n<option value=\"google\">Google</option>\n</select>\n<br
+        />\n<a href=\"https://www.metal-archives.com/search/advanced/?searchString=&type=\"
+        class=\"float_left\" tabindex=\"4\">Advanced search</a>\n<button type=\"submit\"
+        class=\"btn_submit float_right\" tabindex=\"3\">Submit</button>\n</div>\n</form>\n</div>\n<div
+        id=\"top_menu_box\">\n<ul class=\"menu_style_1\">\n<li><a href=\"https://www.metal-archives.com/content/help\">Help</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/content/rules\">Rules</a></li>\n<li><a
+        href=\"https://forum.metal-archives.com\" target=\"_top\">Forum</a></li>\n</ul>\n<ul
+        class=\"menu_style_2\">\n<li><a href=\"https://www.metal-archives.com/content/faq\">FAQ</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/content/support\">Support Us</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/content/tools\">Add-ons</a></li>\n</ul>\n</div>\n</div>\n<div
+        id=\"left_col\">\n<div id=\"member_box\">\n <form name=\"login_form\" id=\"login_form\"
+        action=\"https://www.metal-archives.com/authentication/login\" method=\"post\">\n<div>\n<label>Username</label><br
+        />\n<input type=\"text\" name=\"loginUsername\" />\n<label>Password</label><br
+        />\n<input type=\"password\" name=\"loginPassword\" />\n<input type=\"hidden\"
+        name=\"origin\" value=\"/artist/view/id/613096\" />\n<button type=\"submit\"
+        class=\"btn_login float_right\">Login</button>\n</div>\n</form>\n<a href=\"https://www.metal-archives.com/user/signup\"
+        class=\"float-left writeAction\">Register</a>\n<span class=\"float_right\"><a
+        href=\"https://www.metal-archives.com/user/forgot-password\" class=\"float-left
+        writeAction\">Forgot login?</a> </span>\n<div class=\"clear\"> </div>\n</div>\n<div
+        id=\"left_menu_box\">\n<ul class=\"menu_style_3 block_spacer_20\">\n<li>\nBands\n<ul>\n<li><a
+        href=\"https://www.metal-archives.com/browse/letter\">alphabetical</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/browse/country\">country</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/browse/genre\">genre</a></li>\n</ul>\n</li>\n<li>\nLabels\n<ul>\n<li><a
+        href=\"https://www.metal-archives.com/label\">alphabetical</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/label/country\">country</a></li>\n</ul>\n</li>\n<li><a
+        href=\"https://www.metal-archives.com/review/browse\">Reviews</a></li>\n</ul>\n<ul
+        class=\"menu_style_3 block_spacer_20\">\n<li><a href=\"https://www.metal-archives.com/artist/rip\">R.I.P.</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/band/random\">Random Band</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/user/list\">User rankings</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/news\">News archive</a></li>\n</ul>\n<ul
+        class=\"menu_style_3 ornement_30\">\n<li><a href=\"https://www.metal-archives.com/report/list\">Reports</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/todo\">Contribute / To do</a></li>\n</ul>\n</div>\n<div
+        id=\"left_text_box\">\n<p class=\"small_text center\"> &copy; 2002-2021<br
+        />Encyclopaedia Metallum </p>\n<p class=\"small_text center\">Best viewed<br
+        /> <a href=\"http://www.getfirefox.com\" target=\"_blank\">without</a> Internet
+        Explorer, <br />in 1280 x 960 resolution<br /> or higher.</p>\n</div>\n<div>\n<p
+        class=\"small_text center\"><a href=\"https://www.metal-archives.com/content/pp\">Privacy
+        Policy</a></p>\n</div>\n</div>\n<div id=\"content_wrapper\">\n<script type=\"567bb2f09a8e51764c5850ec-text/javascript\"
+        src=\"https://www.metal-archives.com/js/jquery/jquery.dataTables.min.js\"></script>\n<script
+        type=\"567bb2f09a8e51764c5850ec-text/javascript\" src=\"https://www.metal-archives.com/js/jquery/jquery.form.js\"></script>\n<script
+        type=\"567bb2f09a8e51764c5850ec-text/javascript\">\n\tvar artistId = 613096;\n\t\n\n\t$(document).ready(function()
+        {\n\t\t$(\".no-js\").removeClass(\"no-js\");\n\t\t$('#member_tabs').tabs({
+        beforeLoad: cacheTab }).show();\n\t\t$('#album_members').tabs({ beforeLoad:
+        cacheTab });\n\t\t$('.albumMenu').click(toggleAlbumMenu);\n\t\t$('.toggleAlbums').click(toggleAlbums);\n\t\t$('#bandSearchPopup').dialog({
+        autoOpen: false, width: 600, height: 500, position: 'top' });\n\t\t$('#bandSearch').ajaxForm({
+        target: '#bandSearchResults', beforeSubmit: function() { if (!$('#searchBandName').val())
+        { outputErrors({ searchBandName: 'Please enter a band name to search for.'},
+        '#bandLink'); return false; } toggleLoading(); }, success: toggleLoading});\n\t\t\t});\n\t\n\tfunction
+        toggleAlbums() {\n\t\tvar link = $(this);\n\t\tvar posTabDelim = link.attr('id').indexOf('_')
+        + 1;\n\t\tvar posIdDelim  = link.attr('id').indexOf('-') + 1;\n\t\tvar tab
+        = link.attr('id').substring(posTabDelim, posIdDelim - 1); \n\t\tvar bandId
+        = link.attr('id').substring(posIdDelim);\n\t\t$('.hiddenRelease_' + tab +
+        '-' + bandId).toggle();\n\t\tlink.html( link.html() == 'show all' ? 'hide'
+        : 'show all' );\n\t}\n\t\n\t\t\n\t</script>\n<div id=\"member_sidebar\">\n\n<div
+        class=\"member_img\"><a class=\"image\" id=\"artist\" title=\"Azel Oliver\"
+        href=\"https://www.metal-archives.com/images/6/1/3/0/613096_artist.jpg?0352\"><img
+        src=\"https://www.metal-archives.com/images/6/1/3/0/613096_artist.jpg?0352\"
+        title=\"Click to zoom\" alt=\"Azel Oliver\" border=\"0\" /></a></div>\n</div>\n<div
+        id=\"member_content\">\n<div class=\"tool_strip right writeAction\">\n<ul>\n<li><a
+        title=\"Report a mistake or additional information for this page\" href=\"javascript:popupReportDialog(3,
+        613096);\" class=\"btn_report_error\"> </a></li>\n\n</ul>\n</div>\n<div id=\"member_info\">\n<h1
+        class=\"band_member_name\">Azel Oliver</h1>\n<div id=\"tool_strip_01\" class=\"tool_strip
+        writeAction\">\n<ul>\n</ul>\n</div>\n<div class=\"clear block_spacer_20\"></div>\n<dl
+        class=\"float_left\">\n<dt>Real/full name:</dt>\n<dd>\nAzel Oliver\n</dd>\n<dt>Age:</dt>\n<dd>
+        N/A </dd>\n</dl>\n<dl class=\"float_right\">\n<dt>Place of origin:</dt>\n<dd>
+        <a href=\"https://www.metal-archives.com/lists/HN\">Honduras</a> </dd>\n<dt>Gender:</dt>\n<dd>Male</dd>\n</dl>\n<div
+        class=\"clear band_comment\">\n<h2 class=\"title_comment\">Biography</h2>\nOwner
+        of <a href=\"https://www.metal-archives.com/labels/No_Life_Records/44055\">No
+        Life Records</a>\n</div>\n</div>\n<div id=\"message\"> </div>\n<div id=\"member_tabs\"
+        class=\"tabs no-js\">\n<ul>\n<li><a href=\"#artist_tab_active\">Active Bands</a></li>
+        <li><a href=\"#artist_tab_misc\">Misc. staff</a></li> </ul>\n\n<div id=\"artist_tab_active\">\n<div
+        id=\"member_active\" class=\"tabs2lvl\">\n</div>\n<div class=\"ui-tabs-panel-content
+        block_spacer_top_36\">\n<div class=\"member_in_band\" id=\"memberInBand_3540396020\">\n<h3
+        class=\"member_in_band_name\"><a href=\"https://www.metal-archives.com/bands/All_for_Blood/3540396020#band_tab_members\"
+        title=\"All for Blood\">All for Blood</a></h3>\n<p class=\"member_in_band_role\"
+        id=\"roleInBand_3540396020\">\n<strong>Guitars (rhythm), Vocals (backing)</strong>\n(2007-2015),
+        <strong>Songwriting</strong>\n(2015-present) </p>\n<table class=\"display
+        no_borders\" cellpadding=\"0\" cellspacing=\"0\">\n<tr id=\"memberInAlbum_846294\"
+        class=\"even\">\n<td width=\"28\">2014</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/All_for_Blood/Red_Scum/846294\"
+        title=\"Red Scum\">Red Scum</a> (Single) </td>\n<td>\nGuitars (rhythm) </td>\n</tr>\n<tr
+        id=\"memberInAlbum_508681\" class=\" odd\">\n<td width=\"28\">2014</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/All_for_Blood/Hatred_Is_a_Way_of_Life_%28Infamous_%26_Raw%29/508681\"
+        title=\"Hatred Is a Way of Life (Infamous &amp; Raw)\">Hatred Is a Way of
+        Life (Infamous & Raw)</a> </td>\n<td>\nGuitars, Vocals (backing)  </td>\n</tr>\n<tr
+        id=\"memberInAlbum_846309\" class=\"even\">\n<td width=\"28\">2015</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/All_for_Blood/Dead_in_the_Third_World/846309\"
+        title=\"Dead in the Third World\">Dead in the Third World</a> (Single) </td>\n<td>\nGuitars
+        (rhythm), Vocals (backing) </td>\n</tr>\n<tr id=\"memberInAlbum_588236\" class=\"
+        odd\">\n<td width=\"28\">2016</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/All_for_Blood/Dead_in_the_Third_World/588236\"
+        title=\"Dead in the Third World\">Dead in the Third World</a> (EP) </td>\n<td>\nGuitars
+        (rhythm), Vocals (backing) </td>\n</tr>\n</table>\n</div>\n<div class=\"member_in_band\"
+        id=\"memberInBand_3540345387\">\n<h3 class=\"member_in_band_name\"><a href=\"https://www.metal-archives.com/bands/Tanatos_Mundi/3540345387#band_tab_members\"
+        title=\"Tanatos Mundi\">Tanatos Mundi</a></h3>\n<p class=\"member_in_band_role\"
+        id=\"roleInBand_3540345387\">\nAs The Cursed Jew:<br /> <strong>Guitars (lead)</strong>\n(2020-present)
+        </p>\n</div>\n<div class=\"member_in_band\" id=\"memberInBand_3540457599\">\n<h3
+        class=\"member_in_band_name\"><a href=\"https://www.metal-archives.com/bands/The_Occult_Project/3540457599#band_tab_members\"
+        title=\"The Occult Project\">The Occult Project</a></h3>\n<p class=\"member_in_band_role\"
+        id=\"roleInBand_3540457599\">\n<strong>Vocals, Song writing, Guitar</strong>
+        </p>\n</div>\n</div>\n</div>\n\n\n<div id=\"artist_tab_misc\">\n<div id=\"member_guest\"
+        class=\"tabs2lvl\"> </div>\n<div class=\"ui-tabs-panel-content block_spacer_top_36\">\n<div
+        class=\"member_in_band\" id=\"memberInBand_3540396020\">\n<h3 class=\"member_in_band_name\"><a
+        href=\"https://www.metal-archives.com/bands/All_for_Blood/3540396020#band_tab_members\"
+        title=\"All for Blood\">All for Blood</a></h3>\n<p class=\"member_in_band_role\"
+        id=\"roleInBand_3540396020\">\n</p>\n<table class=\"display no_borders\" cellpadding=\"0\"
+        cellspacing=\"0\">\n<tr id=\"memberInAlbum_508681\" class=\"even\">\n<td width=\"28\">2014</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/All_for_Blood/Hatred_Is_a_Way_of_Life_%28Infamous_%26_Raw%29/508681\"
+        title=\"Hatred Is a Way of Life (Infamous &amp; Raw)\">Hatred Is a Way of
+        Life (Infamous & Raw)</a> </td>\n<td>\nProducer, Mixing </td>\n</tr>\n</table>\n</div>\n</div>\n</div>\n\n</div>\n<div
+        id=\"readMoreDialogBio\" title=\"Biography\" class=\"displayNone\"> </div>\n<div
+        id=\"readMoreDialogTrivia\" title=\"Trivia\" class=\"displayNone\"> </div>\n\n<div
+        id=\"auditTrail\">\n<table>\n<tr>\n<td>Added by: <a href=\"https://www.metal-archives.com/users/artery\"
+        class=\"profileMenu\">artery</a></td>\n<td align=\"right\">Modified by: <a
+        href=\"https://www.metal-archives.com/users/Lemiau\" class=\"profileMenu\">Lemiau</a></td>\n</tr>\n<tr>\n<td>Added
+        on: 2015-05-03 16:03:31</td>\n<td align=\"right\">Last modified on: 2020-11-09
+        05:26:52</td>\n</tr>\n<tr>\n<td valign=\"top\">\n&nbsp;\n</td>\n<td align=\"right\"
+        valign=\"top\">\n</td>\n</tr>\n<td class=\"writeAction\" colspan=\"2\">Duplicate?
+        Please <a href=\"javascript:popupReportDialog(3, 613096);\">file a report</a>
+        for merging.</td>\n</table>\n</div>\n</div>\n</div>\n</div>\n</div>\n<script
+        src=\"https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js\"
+        data-cf-settings=\"567bb2f09a8e51764c5850ec-|49\" defer=\"\"></script></body>\n</html>\n"
+  recorded_at: Sat, 10 Apr 2021 12:27:20 GMT
+- request:
+    method: get
+    uri: https://ma.cache.headbang.re/artist/read-more/id/613096/field/biography
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - MetalArchivesGemTestSuite/3.2.0 (user@example.com)
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - ma.cache.headbang.re
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+      Cache-Control:
+      - max-age=2592000
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Ray:
+      - 63b381b428c205f5-FRA
+      Cf-Request-Id:
+      - '09440f6496000005f57806b000000001'
+      Content-Security-Policy:
+      - frame-ancestors 'self'
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Sat, 10 Apr 2021 12:23:59 GMT
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Expires:
+      - Mon, 10 May 2021 12:23:59 GMT
+      Nel:
+      - '{"max_age":604800,"report_to":"cf-nel"}'
+      Report-To:
+      - '{"group":"cf-nel","endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=Up%2FAAGgmTDNzlWcPuwwZ8eptctqp9SCUjCNfQIog6Z6GBh0x7kskwnIGnM%2FGLELakY9wWFsTv0yTu%2FmeJ43f%2BzSYP5f2GjgMybNY95RRhxf18MoiQ1Q3"}],"max_age":604800}'
+      Server:
+      - nginx
+      Vary:
+      - Accept-Encoding,User-Agent
+      X-Cache-Status:
+      - HIT
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '98'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: Owner of <a href="https://www.metal-archives.com/labels/No_Life_Records/44055">No
+        Life Records</a>
+  recorded_at: Sat, 10 Apr 2021 12:27:20 GMT
+- request:
+    method: get
+    uri: https://ma.cache.headbang.re/artist/read-more/id/613096/field/trivia
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - MetalArchivesGemTestSuite/3.2.0 (user@example.com)
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - ma.cache.headbang.re
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+      Cache-Control:
+      - max-age=2592000
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Ray:
+      - 63b381b8ad934bf5-AMS
+      Cf-Request-Id:
+      - '09440f676700004bf545884000000001'
+      Content-Security-Policy:
+      - frame-ancestors 'self'
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Sat, 10 Apr 2021 12:24:00 GMT
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Expires:
+      - Mon, 10 May 2021 12:24:00 GMT
+      Nel:
+      - '{"max_age":604800,"report_to":"cf-nel"}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=dRPpPw46NI5nl24sjUh3dRvEiDx4GVdbBNA7dYCqjw3eX2JU8WKA1uibprxKTqfwHvcCLRAKFshOSveTbhUQgiHKaP5pzNIrSB0TNXgSbTJTHLxbuYD2"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - nginx
+      Vary:
+      - User-Agent
+      X-Cache-Status:
+      - HIT
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '0'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Sat, 10 Apr 2021 12:27:20 GMT
+- request:
+    method: get
+    uri: https://ma.cache.headbang.re/link/ajax-list/type/person/id/613096
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - MetalArchivesGemTestSuite/3.2.0 (user@example.com)
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - ma.cache.headbang.re
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+      Cache-Control:
+      - max-age=2592000
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Ray:
+      - 63b381bd59cb97d8-FRA
+      Cf-Request-Id:
+      - '09440f6a5d000097d829132000000001'
+      Content-Security-Policy:
+      - frame-ancestors 'self'
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Sat, 10 Apr 2021 12:24:00 GMT
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Expires:
+      - Mon, 10 May 2021 12:24:00 GMT
+      Nel:
+      - '{"max_age":604800,"report_to":"cf-nel"}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=k5N8XCZ5UJ6gpwxOtFXJ0eQKzlbb1QTPZNBVp5XevBBTrNKkKma4s%2FXrd%2BTPBL6ItqCu%2FpsVHn3kTPbHKf%2FwwPxxr0ONxEi7IUZ8l5OXc3wiJrYcC%2FPE"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - nginx
+      Vary:
+      - Accept-Encoding,User-Agent
+      X-Cache-Status:
+      - HIT
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '862'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "<script type=\"05b6cd4d87825773ea17b979-text/javascript\">\n$(document).ready(function()
+        {\n\t// Prepare the sub-tabs\n\t\t// Prepare the form popup\n\t$('#editLink').dialog({
+        autoOpen: false, width: 400, height: 250, modal: true, overlay: { opacity:
+        0.5, background: 'white'}, buttons: { 'Save link': function(){ $('#linkForm').submit();},
+        'Cancel': function() { $('#editLink').dialog('close');} } });\n});\n\n\n</script>\n<div
+        id=\"band_links\" class=\"tabs2lvl\">\n</div>\n<div class=\"ui-tabs-panel-content
+        block_spacer_top_36\">\n<table id=\"linksTablemain\" class=\"display\" width=\"50%\"
+        cellpadding=\"0\" cellspacing=\"0\">\n<tr id=\"noLinks\">\n<td colspan=\"2\">No
+        links have been added yet.</td>\n</tr>\n</table>\n</div>\n<script src=\"https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js\"
+        data-cf-settings=\"05b6cd4d87825773ea17b979-|49\" defer=\"\"></script>"
+  recorded_at: Sat, 10 Apr 2021 12:27:20 GMT
+recorded_with: VCR 6.0.0

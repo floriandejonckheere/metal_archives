@@ -1,0 +1,823 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://ma.cache.headbang.re/artist/view/id/60908
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - MetalArchivesGemTestSuite/3.2.0 (user@example.com)
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - ma.cache.headbang.re
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+      Cache-Control:
+      - max-age=2592000
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Ray:
+      - 63a39bb5dfe3fa80-AMS
+      Cf-Request-Id:
+      - '093a1fa5a40000fa8007a59000000001'
+      Content-Security-Policy:
+      - frame-ancestors 'self'
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Sat, 10 Apr 2021 12:23:57 GMT
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Expires:
+      - Mon, 10 May 2021 12:23:57 GMT
+      Nel:
+      - '{"max_age":604800,"report_to":"cf-nel"}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=AlqW9VVvAKS0fzS5DrPBp%2F9mpFk56r28MfH%2BJeuCwpvqXjt9LE0Jf%2FktDRcKOVxERLbC1hMcymdqN%2F8WuPqCRwqPEgHdvJwf%2BQGNFbp2FT5ItZkeSW9r"}],"max_age":604800,"group":"cf-nel"}'
+      Server:
+      - nginx
+      Vary:
+      - Accept-Encoding,User-Agent
+      X-Cache-Status:
+      - HIT
+      X-Frame-Options:
+      - SAMEORIGIN
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n<html
+        xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n<title>Alberto Rionda - Encyclopaedia
+        Metallum: The Metal Archives</title>\n<meta http-equiv=\"Content-Type\" content=\"text/html;
+        charset=UTF-8\" />\n<meta content=\"width=device-width, initial-scale=1\"
+        name=\"viewport\" />\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/min/index.php?g=css\"
+        />\n<script type=\"93dd3ab310bc2aad9a4a9924-text/javascript\" src=\"/min/index.php?g=js\"></script>\n<script
+        type=\"93dd3ab310bc2aad9a4a9924-text/javascript\">\r\n\t\t\tvar URL_SITE\t=
+        'https://www.metal-archives.com/';\r\n\t\t\tvar URL_IMAGES\t= 'https://www.metal-archives.com/images/';\r\n\t\t\tvar
+        URL_CSS\t\t= 'https://www.metal-archives.com/css/';\r\n\t\t\tvar csrfToken\t=
+        '';\r\n\r\n\t\t\t$(document).ready(function() {\r\n\t\t\t\ttoggleFixedPositioning(1280,
+        600);\r\n\t\t\t\texecuteOnAllPages();\r\n\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t});\r\n\r\n\r\n\t\t</script>\n<noscript>\r\n\t\t\t<style
+        type=\"text/css\">\r\n\t\t\t\t.no-js { display: block !important; }\r\n\t\t\t</style>\r\n\t\t</noscript>\n<!--[if
+        lt IE 8]>\r\n\t\t\t<script src=\"http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js\"></script>\r\n\t\t\t
+        <link rel=\"stylesheet\" type=\"text/css\" href=\"https://www.metal-archives.com/css/default/oldie.css\"
+        />\r\n\t\t<![endif]-->\n<script type=\"93dd3ab310bc2aad9a4a9924-text/javascript\">\r\n\t\t\t
+        \ var _gaq = _gaq || [];\r\n\t\t\t  _gaq.push(['_setAccount', 'UA-4046749-4']);\r\n\t\t\t
+        \ _gaq.push(['_trackPageview']);\r\n\r\n\t\t\t  (function() {\r\n\t\t\t    var
+        ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async
+        = true;\r\n\t\t\t    ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+        : 'http://www') + '.google-analytics.com/ga.js';\r\n\t\t\t    var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);\r\n\t\t\t  })();\r\n\t\t</script>\n</head>\n<body>\n<div
+        id=\"wrapper\">\n<div id=\"header\">\n<a href=\"https://www.metal-archives.com/\"
+        id=\"MA_logo\">Metal Archives</a>\n<div class=\"clear loading\"><img src=\"https://www.metal-archives.com/images/loading.gif\"
+        alt=\"loading\" width=\"12\" height=\"12\" /> loading...</div>\n<div id=\"search_box\">\n<form
+        id=\"search_form\" action=\"https://www.metal-archives.com/search\" method=\"get\">\n<div>\n<label>Search:</label><br
+        />\n<input name=\"searchString\" type=\"text\" id=\"searchQueryBox\" size=\"25\"
+        value=\"\" tabindex=\"1\" />\n<select name=\"type\" tabindex=\"2\">\n<option
+        value=\"band_name\">Band name</option>\n<option value=\"band_genre\">Music
+        genre</option>\n<option value=\"band_themes\">Lyrical themes</option>\n<option
+        value=\"album_title\">Album title</option>\n<option value=\"song_title\">Song
+        title</option>\n<option value=\"label_name\">Label</option>\n<option value=\"artist_alias\">Artist</option>\n<option
+        value=\"user_name\">User profile</option>\n<option value=\"google\">Google</option>\n</select>\n<br
+        />\n<a href=\"https://www.metal-archives.com/search/advanced/?searchString=&type=\"
+        class=\"float_left\" tabindex=\"4\">Advanced search</a>\n<button type=\"submit\"
+        class=\"btn_submit float_right\" tabindex=\"3\">Submit</button>\n</div>\n</form>\n</div>\n<div
+        id=\"top_menu_box\">\n<ul class=\"menu_style_1\">\n<li><a href=\"https://www.metal-archives.com/content/help\">Help</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/content/rules\">Rules</a></li>\n<li><a
+        href=\"https://forum.metal-archives.com\" target=\"_top\">Forum</a></li>\n</ul>\n<ul
+        class=\"menu_style_2\">\n<li><a href=\"https://www.metal-archives.com/content/faq\">FAQ</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/content/support\">Support Us</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/content/tools\">Add-ons</a></li>\n</ul>\n</div>\n</div>\n<div
+        id=\"left_col\">\n<div id=\"member_box\">\n <form name=\"login_form\" id=\"login_form\"
+        action=\"https://www.metal-archives.com/authentication/login\" method=\"post\">\n<div>\n<label>Username</label><br
+        />\n<input type=\"text\" name=\"loginUsername\" />\n<label>Password</label><br
+        />\n<input type=\"password\" name=\"loginPassword\" />\n<input type=\"hidden\"
+        name=\"origin\" value=\"/artist/view/id/60908\" />\n<button type=\"submit\"
+        class=\"btn_login float_right\">Login</button>\n</div>\n</form>\n<a href=\"https://www.metal-archives.com/user/signup\"
+        class=\"float-left writeAction\">Register</a>\n<span class=\"float_right\"><a
+        href=\"https://www.metal-archives.com/user/forgot-password\" class=\"float-left
+        writeAction\">Forgot login?</a> </span>\n<div class=\"clear\"> </div>\n</div>\n<div
+        id=\"left_menu_box\">\n<ul class=\"menu_style_3 block_spacer_20\">\n<li>\nBands\n<ul>\n<li><a
+        href=\"https://www.metal-archives.com/browse/letter\">alphabetical</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/browse/country\">country</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/browse/genre\">genre</a></li>\n</ul>\n</li>\n<li>\nLabels\n<ul>\n<li><a
+        href=\"https://www.metal-archives.com/label\">alphabetical</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/label/country\">country</a></li>\n</ul>\n</li>\n<li><a
+        href=\"https://www.metal-archives.com/review/browse\">Reviews</a></li>\n</ul>\n<ul
+        class=\"menu_style_3 block_spacer_20\">\n<li><a href=\"https://www.metal-archives.com/artist/rip\">R.I.P.</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/band/random\">Random Band</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/user/list\">User rankings</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/news\">News archive</a></li>\n</ul>\n<ul
+        class=\"menu_style_3 ornement_30\">\n<li><a href=\"https://www.metal-archives.com/report/list\">Reports</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/todo\">Contribute / To do</a></li>\n</ul>\n</div>\n<div
+        id=\"left_text_box\">\n<p class=\"small_text center\"> &copy; 2002-2021<br
+        />Encyclopaedia Metallum </p>\n<p class=\"small_text center\">Best viewed<br
+        /> <a href=\"http://www.getfirefox.com\" target=\"_blank\">without</a> Internet
+        Explorer, <br />in 1280 x 960 resolution<br /> or higher.</p>\n</div>\n<div>\n<p
+        class=\"small_text center\"><a href=\"https://www.metal-archives.com/content/pp\">Privacy
+        Policy</a></p>\n</div>\n</div>\n<div id=\"content_wrapper\">\n<script type=\"93dd3ab310bc2aad9a4a9924-text/javascript\"
+        src=\"https://www.metal-archives.com/js/jquery/jquery.dataTables.min.js\"></script>\n<script
+        type=\"93dd3ab310bc2aad9a4a9924-text/javascript\" src=\"https://www.metal-archives.com/js/jquery/jquery.form.js\"></script>\n<script
+        type=\"93dd3ab310bc2aad9a4a9924-text/javascript\">\n\tvar artistId = 60908;\n\t\n\n\t$(document).ready(function()
+        {\n\t\t$(\".no-js\").removeClass(\"no-js\");\n\t\t$('#member_tabs').tabs({
+        beforeLoad: cacheTab }).show();\n\t\t$('#album_members').tabs({ beforeLoad:
+        cacheTab });\n\t\t$('.albumMenu').click(toggleAlbumMenu);\n\t\t$('.toggleAlbums').click(toggleAlbums);\n\t\t$('#bandSearchPopup').dialog({
+        autoOpen: false, width: 600, height: 500, position: 'top' });\n\t\t$('#bandSearch').ajaxForm({
+        target: '#bandSearchResults', beforeSubmit: function() { if (!$('#searchBandName').val())
+        { outputErrors({ searchBandName: 'Please enter a band name to search for.'},
+        '#bandLink'); return false; } toggleLoading(); }, success: toggleLoading});\n\t\t\t});\n\t\n\tfunction
+        toggleAlbums() {\n\t\tvar link = $(this);\n\t\tvar posTabDelim = link.attr('id').indexOf('_')
+        + 1;\n\t\tvar posIdDelim  = link.attr('id').indexOf('-') + 1;\n\t\tvar tab
+        = link.attr('id').substring(posTabDelim, posIdDelim - 1); \n\t\tvar bandId
+        = link.attr('id').substring(posIdDelim);\n\t\t$('.hiddenRelease_' + tab +
+        '-' + bandId).toggle();\n\t\tlink.html( link.html() == 'show all' ? 'hide'
+        : 'show all' );\n\t}\n\t\n\t\t\n\t</script>\n<div id=\"member_sidebar\">\n\n<div
+        class=\"member_img\"><a class=\"image\" id=\"artist\" title=\"Alberto Rionda\"
+        href=\"https://www.metal-archives.com/images/6/0/9/0/60908_artist.jpg?5002\"><img
+        src=\"https://www.metal-archives.com/images/6/0/9/0/60908_artist.jpg?5002\"
+        title=\"Click to zoom\" alt=\"Alberto Rionda\" border=\"0\" /></a></div>\n</div>\n<div
+        id=\"member_content\">\n<div class=\"tool_strip right writeAction\">\n<ul>\n<li><a
+        title=\"Report a mistake or additional information for this page\" href=\"javascript:popupReportDialog(3,
+        60908);\" class=\"btn_report_error\"> </a></li>\n\n</ul>\n</div>\n<div id=\"member_info\">\n<h1
+        class=\"band_member_name\">Alberto Rionda</h1>\n<div id=\"tool_strip_01\"
+        class=\"tool_strip writeAction\">\n<ul>\n</ul>\n</div>\n<div class=\"clear
+        block_spacer_20\"></div>\n<dl class=\"float_left\">\n<dt>Real/full name:</dt>\n<dd>\nAlberto
+        Rionda\n</dd>\n<dt>Age:</dt>\n<dd> 48 (born Sep 2nd, 1972) </dd>\n</dl>\n<dl
+        class=\"float_right\">\n<dt>Place of origin:</dt>\n<dd> <a href=\"https://www.metal-archives.com/lists/ES\">Spain</a>
+        (Oviedo, Asturias) </dd>\n<dt>Gender:</dt>\n<dd>Male</dd>\n</dl>\n<div class=\"clear
+        band_comment\">\n<h2 class=\"title_comment\">Biography</h2>\nAvalanch's guitarist,
+        composer and producer since 1997 as well as a lyricist, arranger, keyboardist
+        and sound engineer in his recording studio.<br />\nHe studied five years of
+        classical guitar at \"Escuela de Música de Llanera\".<br />\nAlso has several
+        national and regional awards in these facets (Amas, Radial, Ventolines, Heavy
+        Rock, etc ...) <br />\nIs a famous sound engineer, producer and composer in
+        many ... \n<div class=\"tool_strip bottom right\"><a href=\"#\" onclick=\"if
+        (!window.__cfRLUnblockHandlers) return false; readMore('artist/read-more/id/60908',
+        'Bio'); return false;\" class=\"btn_read_more\" data-cf-modified-93dd3ab310bc2aad9a4a9924-=\"\">Read
+        more</a></div>\n<h2 class=\"title_comment\">Trivia</h2>\nProducer, was owner
+        of \"Bunker Estudios\" and head chief of <a href=\"https://www.metal-archives.com/labels/Xana_Records/2038\">Xana
+        Records</a> since 1997 to 2012 and since 2013 is the owner of <b>Sanctuarium
+        Estudios</b>.<br />\nHe is the headmaster of DerrameRock School.<br />\nMany
+        of the most famous jingles in Asturias (Spain) were created by him. Composer
+        of the complete original music for a cultural outreach program of the 2nd
+        TVE's television company, also issued weekly by the ... \n<div class=\"tool_strip
+        bottom right\"><a href=\"#\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; readMore('artist/read-more/id/60908/field/trivia', 'Trivia');
+        return false;\" class=\"btn_read_more\" data-cf-modified-93dd3ab310bc2aad9a4a9924-=\"\">Read
+        more</a></div>\n</div>\n</div>\n<div id=\"message\"> </div>\n<div id=\"member_tabs\"
+        class=\"tabs no-js\">\n<ul>\n<li><a href=\"#artist_tab_active\">Active Bands</a></li>
+        <li><a href=\"#artist_tab_past\">Past Bands</a></li> <li><a href=\"#artist_tab_live\">Live</a></li>
+        <li><a href=\"#artist_tab_guest\">Guest/Session</a></li> <li><a href=\"#artist_tab_misc\">Misc.
+        staff</a></li> <li><a href=\"https://www.metal-archives.com/link/ajax-list/type/person/id/60908\"
+        title=\"Related links\"><span>Links</span></a></li> </ul>\n\n<div id=\"artist_tab_active\">\n<div
+        id=\"member_active\" class=\"tabs2lvl\">\n</div>\n<div class=\"ui-tabs-panel-content
+        block_spacer_top_36\">\n<div class=\"member_in_band\" id=\"memberInBand_3540361100\">\n<h3
+        class=\"member_in_band_name\"><a href=\"https://www.metal-archives.com/bands/Alquimia/3540361100#band_tab_members\"
+        title=\"Alquimia\">Alquimia</a></h3>\n<p class=\"member_in_band_role\" id=\"roleInBand_3540361100\">\n<strong>Guitars</strong>\n(2013-present)
+        </p>\n<table class=\"display no_borders\" cellpadding=\"0\" cellspacing=\"0\">\n<tr
+        id=\"memberInAlbum_391528\" class=\"even\">\n<td width=\"28\">2013</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Alquimia/Alquimia/391528\"
+        title=\"Alquimia\">Alquimia</a> </td>\n<td>\nGuitars </td>\n</tr>\n<tr id=\"memberInAlbum_409114\"
+        class=\" odd\">\n<td width=\"28\">2014</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Alquimia/La_llama_eterna/409114\"
+        title=\"La llama eterna\">La llama eterna</a> (Single) </td>\n<td>\nGuitars
+        </td>\n</tr>\n<tr id=\"memberInAlbum_548366\" class=\"even\">\n<td width=\"28\">2015</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Alquimia/Espiritual/548366\"
+        title=\"Espiritual\">Espiritual</a> </td>\n<td>\nGuitars </td>\n</tr>\n</table>\n</div>\n<div
+        class=\"member_in_band\" id=\"memberInBand_5795\">\n<h3 class=\"member_in_band_name\"><a
+        href=\"https://www.metal-archives.com/bands/Avalanch/5795#band_tab_members\"
+        title=\"Avalanch\">Avalanch</a></h3>\n<p class=\"member_in_band_role\" id=\"roleInBand_5795\">\n<strong>Guitars
+        (lead), Vocals (backing)</strong>\n(1994-present) </p>\n<table class=\"display
+        no_borders\" cellpadding=\"0\" cellspacing=\"0\">\n<tr id=\"memberInAlbum_14311\"
+        class=\" odd\">\n<td width=\"28\">1997</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Avalanch/La_llama_eterna/14311\"
+        title=\"La llama eterna\">La llama eterna</a> </td>\n<td>\nKeyboards, Guitars
+        </td>\n</tr>\n<tr id=\"memberInAlbum_123128\" class=\"even\">\n<td width=\"28\">1998</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Avalanch/Eternal_Flame/123128\"
+        title=\"Eternal Flame\">Eternal Flame</a> </td>\n<td>\nGuitar, Keyboards,
+        Orchestral arrangements </td>\n</tr>\n<tr id=\"memberInAlbum_552753\" class=\"
+        odd hiddenRelease_active-5795 displayNone\">\n<td width=\"28\">1998</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Avalanch/Eternal_Flame_-_La_llama_eterna/552753\"
+        title=\"Eternal Flame / La llama eterna\">Eternal Flame / La llama eterna</a>
+        (Compilation) </td>\n<td>\nGuitars (lead), Vocals (backing) </td>\n</tr>\n<tr
+        id=\"memberInAlbum_14310\" class=\"even\">\n<td width=\"28\">1999</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Avalanch/Llanto_de_un_h%C3%A9roe/14310\"
+        title=\"Llanto de un héroe\">Llanto de un héroe</a> </td>\n<td>\nGuitars,
+        Keyboards </td>\n</tr>\n<tr id=\"memberInAlbum_14303\" class=\" odd hiddenRelease_active-5795
+        displayNone\">\n<td width=\"28\">2000</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Avalanch/D%C3%ADas_de_gloria/14303\"
+        title=\"Días de gloria\">Días de gloria</a> (Live album) </td>\n<td>\nGuitars,
+        Keyboards (track 11) </td>\n</tr>\n<tr id=\"memberInAlbum_30426\" class=\"even
+        hiddenRelease_active-5795 displayNone\">\n<td width=\"28\">2000</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Avalanch/Save_Me/30426\"
+        title=\"Save Me\">Save Me</a> (Single) </td>\n<td>\nKeyboards (track 1), Guitars
+        </td>\n</tr>\n<tr id=\"memberInAlbum_14300\" class=\" odd\">\n<td width=\"28\">2001</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Avalanch/El_%C3%A1ngel_ca%C3%ADdo/14300\"
+        title=\"El ángel caído\">El ángel caído</a> </td>\n<td>\nKeyboards, Songwriting,
+        Bass, Guitars, Drum programming </td>\n</tr>\n<tr id=\"memberInAlbum_30427\"
+        class=\"even hiddenRelease_active-5795 displayNone\">\n<td width=\"28\">2001</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Avalanch/Delirios_de_grandeza/30427\"
+        title=\"Delirios de grandeza\">Delirios de grandeza</a> (Single) </td>\n<td>\nVocals
+        (backing), Guitars </td>\n</tr>\n<tr id=\"memberInAlbum_67719\" class=\" odd
+        hiddenRelease_active-5795 displayNone\">\n<td width=\"28\">2003</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Avalanch/Los_poetas_han_muerto/67719\"
+        title=\"Los poetas han muerto\">Los poetas han muerto</a> (Single) </td>\n<td>\nGuitars
+        (lead) </td>\n</tr>\n<tr id=\"memberInAlbum_20340\" class=\"even\">\n<td width=\"28\">2003</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Avalanch/Los_poetas_han_muerto/20340\"
+        title=\"Los poetas han muerto\">Los poetas han muerto</a> </td>\n<td>\nGuitars
+        </td>\n</tr>\n<tr id=\"memberInAlbum_58845\" class=\" odd\">\n<td width=\"28\">2004</td>\n<td
+        width=\"280\">\n <a href=\"https://www.metal-archives.com/albums/Avalanch/Las_ruinas_del_Ed%C3%A9n/58845\"
+        title=\"Las ruinas del Edén\">Las ruinas del Edén</a> </td>\n<td>\nGuitars,
+        Guitars (acoustic), Vocals (backing) </td>\n</tr>\n<tr id=\"memberInAlbum_330553\"
+        class=\"even hiddenRelease_active-5795 displayNone\">\n<td width=\"28\">2005</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Avalanch/Where_the_Streets_Have_No_Name/330553\"
+        title=\"Where the Streets Have No Name\">Where the Streets Have No Name</a>
+        (Single) </td>\n<td>\nGuitars (lead) </td>\n</tr>\n<tr id=\"memberInAlbum_70252\"
+        class=\" odd\">\n<td width=\"28\">2005</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Avalanch/Mother_Earth/70252\"
+        title=\"Mother Earth\">Mother Earth</a> </td>\n<td>\nGuitars (lead) </td>\n</tr>\n<tr
+        id=\"memberInAlbum_72354\" class=\"even hiddenRelease_active-5795 displayNone\">\n<td
+        width=\"28\">2005</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Avalanch/Cien_veces/72354\"
+        title=\"Cien veces\">Cien veces</a> (Video) </td>\n<td>\nGuitars (lead) </td>\n</tr>\n<tr
+        id=\"memberInAlbum_80293\" class=\" odd\">\n<td width=\"28\">2005</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Avalanch/El_hijo_pr%C3%B3digo/80293\"
+        title=\"El hijo pródigo\">El hijo pródigo</a> </td>\n<td>\nGuitars (lead)
+        </td>\n</tr>\n<tr id=\"memberInAlbum_134756\" class=\"even hiddenRelease_active-5795
+        displayNone\">\n<td width=\"28\">2006</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Avalanch/L%C3%A1grimas_negras_-_El_hijo_pr%C3%B3digo_tour/134756\"
+        title=\"Lágrimas negras - El hijo pródigo tour\">Lágrimas negras - El hijo
+        pródigo tour</a> (Video) </td>\n<td>\nGuitars (lead) </td>\n</tr>\n<tr id=\"memberInAlbum_172497\"
+        class=\" odd\">\n<td width=\"28\">2007</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Avalanch/Muerte_y_vida/172497\"
+        title=\"Muerte y vida\">Muerte y vida</a> </td>\n<td>\nGuitars (lead) </td>\n</tr>\n<tr
+        id=\"memberInAlbum_218215\" class=\"even hiddenRelease_active-5795 displayNone\">\n<td
+        width=\"28\">2008</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Avalanch/Caminar_sobre_el_agua/218215\"
+        title=\"Caminar sobre el agua\">Caminar sobre el agua</a> (Live album) </td>\n<td>\nGuitars
+        (lead) </td>\n</tr>\n<tr id=\"memberInAlbum_270169\" class=\" odd\">\n<td
+        width=\"28\">2010</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Avalanch/El_ladr%C3%B3n_de_sue%C3%B1os/270169\"
+        title=\"El ladrón de sueños\">El ladrón de sueños</a> </td>\n<td>\nGuitars
+        (lead) </td>\n</tr>\n<tr id=\"memberInAlbum_322088\" class=\"even\">\n<td
+        width=\"28\">2011</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Avalanch/Malefic_Time%3A_Apocalypse/322088\"
+        title=\"Malefic Time: Apocalypse\">Malefic Time: Apocalypse</a> </td>\n<td>\nGuitars
+        (lead) </td>\n</tr>\n<tr id=\"memberInAlbum_353633\" class=\" odd hiddenRelease_active-5795
+        displayNone\">\n<td width=\"28\">2012</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Avalanch/Del_cielo_a_la_tierra/353633\"
+        title=\"Del cielo a la tierra\">Del cielo a la tierra</a> (Compilation) </td>\n<td>\nGuitars
+        (lead), Vocals (backing) </td>\n</tr>\n<tr id=\"memberInAlbum_650796\" class=\"even\">\n<td
+        width=\"28\">2017</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Avalanch/El_%C3%A1ngel_ca%C3%ADdo_-_XV_aniversario/650796\"
+        title=\"El ángel caído - XV aniversario\">El ángel caído - XV aniversario</a>
+        </td>\n<td>\nGuitars </td>\n</tr>\n<tr id=\"memberInAlbum_719593\" class=\"
+        odd hiddenRelease_active-5795 displayNone\">\n<td width=\"28\">2018</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Avalanch/Hacia_la_luz_-_Directo_desde_Madrid/719593\"
+        title=\"Hacia la luz - Directo desde Madrid\">Hacia la luz - Directo desde
+        Madrid</a> (Video) </td>\n<td>\nGuitars (lead) </td>\n</tr>\n<tr id=\"memberInAlbum_927828\"
+        class=\"even hiddenRelease_active-5795 displayNone\">\n<td width=\"28\">2019</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Avalanch/El_or%C3%A1culo/927828\"
+        title=\"El oráculo\">El oráculo</a> (Single) </td>\n<td>\nGuitars (lead),
+        Vocals (backing) </td>\n</tr>\n<tr id=\"memberInAlbum_927829\" class=\" odd
+        hiddenRelease_active-5795 displayNone\">\n<td width=\"28\">2019</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Avalanch/The_Oracle/927829\"
+        title=\"The Oracle\">The Oracle</a> (Single) </td>\n<td>\nGuitars (lead),
+        Vocals (backing) </td>\n</tr>\n<tr id=\"memberInAlbum_762014\" class=\"even\">\n<td
+        width=\"28\">2019</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Avalanch/El_secreto/762014\"
+        title=\"El secreto\">El secreto</a> </td>\n<td>\n Guitars, Vocals (backing)
+        </td>\n</tr>\n<tr class=\"showAll\">\n<td colspan=\"3\">\n(<a href=\"javascript:;\"
+        id=\"toggle_active-5795\" class=\"toggleAlbums\">show all</a>)\n</td>\n</tr>\n</table>\n</div>\n</div>\n</div>\n\n\n<div
+        id=\"artist_tab_past\">\n<div id=\"member_past\" class=\"tabs2lvl\">\n</div>\n<div
+        class=\"ui-tabs-panel-content block_spacer_top_36\">\n<div class=\"member_in_band\"
+        id=\"memberInBand_l_1128978\">\n<h3 class=\"member_in_band_name\">Geysser</h3>\n<p
+        class=\"member_in_band_role\" id=\"roleInBand_Geysser\">\n<strong>Guitars</strong>\n(2009-?)
+        </p>\n</div>\n<div class=\"member_in_band\" id=\"memberInBand_l_1134972\">\n<h3
+        class=\"member_in_band_name\">Speed Demons</h3>\n<p class=\"member_in_band_role\"
+        id=\"roleInBand_Speed Demons\">\n<strong>Guitars</strong>\n(1988-1989) </p>\n</div>\n<div
+        class=\"member_in_band\" id=\"memberInBand_l_1128974\">\n<h3 class=\"member_in_band_name\">Stunned
+        Parrots</h3>\n<p class=\"member_in_band_role\" id=\"roleInBand_Stunned Parrots\">\n<strong>Guitars,
+        Keyboards</strong>\n(2006-?) </p>\n</div>\n</div>\n</div>\n\n\n<div id=\"artist_tab_live\">\n<div
+        id=\"member_past\" class=\"tabs2lvl\">\n</div>\n<div class=\"ui-tabs-panel-content
+        block_spacer_top_36\">\n<div class=\"member_in_band\" id=\"memberInBand_466\">\n<h3
+        class=\"member_in_band_name\"><a href=\"https://www.metal-archives.com/bands/Saratoga/466#band_tab_members\"
+        title=\"Saratoga\">Saratoga</a></h3>\n<p class=\"member_in_band_role\" id=\"roleInBand_466\">\n<strong>Guitars</strong>\n(2018)
+        </p>\n</div>\n</div>\n</div>\n\n\n<div id=\"artist_tab_guest\">\n<div id=\"member_guest\"
+        class=\"tabs2lvl\"> </div>\n<div class=\"ui-tabs-panel-content block_spacer_top_36\">\n<div
+        class=\"member_in_band\" id=\"memberInBand_5812\">\n<h3 class=\"member_in_band_name\"><a
+        href=\"https://www.metal-archives.com/bands/Abyss/5812#band_tab_members\"
+        title=\"Abyss\">Abyss</a></h3>\n<p class=\"member_in_band_role\" id=\"roleInBand_5812\">\n</p>\n<table
+        class=\"display no_borders\" cellpadding=\"0\" cellspacing=\"0\">\n<tr id=\"memberInAlbum_44024\"
+        class=\" odd\">\n<td width=\"28\">2004</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Abyss/Sin_%C3%A1ngeles/44024\"
+        title=\"Sin ángeles\">Sin ángeles</a> </td>\n<td>\nGuitars (track 8) </td>\n</tr>\n</table>\n</div>\n<div
+        class=\"member_in_band\" id=\"memberInBand_23234\">\n<h3 class=\"member_in_band_name\"><a
+        href=\"https://www.metal-archives.com/bands/Adgar/23234#band_tab_members\"
+        title=\"Adgar\">Adgar</a></h3>\n<p class=\"member_in_band_role\" id=\"roleInBand_23234\">\n</p>\n<table
+        class=\"display no_borders\" cellpadding=\"0\" cellspacing=\"0\">\n<tr id=\"memberInAlbum_138813\"
+        class=\"even\">\n<td width=\"28\">2006</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Adgar/Seguimos_en_pie/138813\"
+        title=\"Seguimos en pie\">Seguimos en pie</a> </td>\n<td>\nGuitar solo (track
+        14) </td>\n</tr>\n<tr id=\"memberInAlbum_196448\" class=\" odd\">\n<td width=\"28\">2008</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Adgar/Tiempos_de_cambio/196448\"
+        title=\"Tiempos de cambio\">Tiempos de cambio</a> </td>\n<td>\nKeyboards </td>\n</tr>\n</table>\n</div>\n<div
+        class=\"member_in_band\" id=\"memberInBand_107775\">\n<h3 class=\"member_in_band_name\"><a
+        href=\"https://www.metal-archives.com/bands/Amade%C3%BCs/107775#band_tab_members\"
+        title=\"Amadeüs\">Amadeüs</a></h3>\n<p class=\"member_in_band_role\" id=\"roleInBand_107775\">\n</p>\n<table
+        class=\"display no_borders\" cellpadding=\"0\" cellspacing=\"0\">\n<tr id=\"memberInAlbum_227426\"
+        class=\"even\">\n<td width=\"28\">2009</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Amade%C3%BCs/Caminos_del_alma/227426\"
+        title=\"Caminos del alma\">Caminos del alma</a> </td>\n<td>\nGuitars (acoustic)
+        (track 6) </td>\n</tr>\n</table>\n</div>\n<div class=\"member_in_band\" id=\"memberInBand_102055\">\n<h3
+        class=\"member_in_band_name\"><a href=\"https://www.metal-archives.com/bands/Andre_Matos/102055#band_tab_members\"
+        title=\"Andre Matos\">Andre Matos</a></h3>\n<p class=\"member_in_band_role\"
+        id=\"roleInBand_102055\">\n</p>\n<table class=\"display no_borders\" cellpadding=\"0\"
+        cellspacing=\"0\">\n<tr id=\"memberInAlbum_414764\" class=\" odd\">\n<td width=\"28\">2007</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Andre_Matos/Time_to_Be_Free/414764\"
+        title=\"Time to Be Free\">Time to Be Free</a> </td>\n<td>\nGuitars (solo)
+        (track 7) </td>\n</tr>\n</table>\n</div>\n<div class=\"member_in_band\" id=\"memberInBand_3540359758\">\n<h3
+        class=\"member_in_band_name\"><a href=\"https://www.metal-archives.com/bands/Angel_Rubin/3540359758#band_tab_members\"
+        title=\"Angel Rubin\">Angel Rubin</a></h3>\n<p class=\"member_in_band_role\"
+        id=\"roleInBand_3540359758\">\n</p>\n<table class=\"display no_borders\" cellpadding=\"0\"
+        cellspacing=\"0\">\n<tr id=\"memberInAlbum_370383\" class=\"even\">\n<td width=\"28\">2013</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Angel_Rubin/Mi_oculta_soledad/370383\"
+        title=\"Mi oculta soledad\">Mi oculta soledad</a> </td>\n<td>\nGuitars (lead)
+        (tracks 2, 4, 6, 7, 8), Guitars (tracks 1-8) </td>\n</tr>\n</table>\n</div>\n<div
+        class=\"member_in_band\" id=\"memberInBand_3540478771\">\n<h3 class=\"member_in_band_name\"><a
+        href=\"https://www.metal-archives.com/bands/Epicurea/3540478771#band_tab_members\"
+        title=\"Epicurea\">Epicurea</a></h3>\n<p class=\"member_in_band_role\" id=\"roleInBand_3540478771\">\n</p>\n<table
+        class=\"display no_borders\" cellpadding=\"0\" cellspacing=\"0\">\n<tr id=\"memberInAlbum_907348\"
+        class=\" odd\">\n<td width=\"28\">2020</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Epicurea/El_elegido/907348\"
+        title=\"El elegido\">El elegido</a> </td>\n<td>\nGuitar Solo (6) </td>\n</tr>\n</table>\n</div>\n<div
+        class=\"member_in_band\" id=\"memberInBand_6209\">\n<h3 class=\"member_in_band_name\"><a
+        href=\"https://www.metal-archives.com/bands/Eternal_Night/6209#band_tab_members\"
+        title=\"Eternal Night\">Eternal Night</a></h3>\n<p class=\"member_in_band_role\"
+        id=\"roleInBand_6209\">\n</p>\n<table class=\"display no_borders\" cellpadding=\"0\"
+        cellspacing=\"0\">\n<tr id=\"memberInAlbum_150389\" class=\"even\">\n<td width=\"28\">1998</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Eternal_Night/Heavens%27_Kingdom_Will_Be_Yours/150389\"
+        title=\"Heavens&#039; Kingdom Will Be Yours\">Heavens' Kingdom Will Be Yours</a>
+        </td>\n<td>\nKeyboards </td>\n</tr>\n</table>\n</div>\n<div class=\"member_in_band\"
+        id=\"memberInBand_3540306560\">\n<h3 class=\"member_in_band_name\"><a href=\"https://www.metal-archives.com/bands/Jivaro/3540306560#band_tab_members\"
+        title=\"Jivaro\">Jivaro</a></h3>\n<p class=\"member_in_band_role\" id=\"roleInBand_3540306560\">\n</p>\n<table
+        class=\"display no_borders\" cellpadding=\"0\" cellspacing=\"0\">\n<tr id=\"memberInAlbum_273201\"
+        class=\" odd\">\n<td width=\"28\">2010</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Jivaro/Finos_licores/273201\"
+        title=\"Finos licores\">Finos licores</a> </td>\n<td>\nGuitars (lead) (track
+        1) </td>\n</tr>\n</table>\n</div>\n<div class=\"member_in_band\" id=\"memberInBand_3540419601\">\n<h3
+        class=\"member_in_band_name\"><a href=\"https://www.metal-archives.com/bands/Legado_de_una_Tragedia/3540419601#band_tab_members\"
+        title=\"Legado de una Tragedia\">Legado de una Tragedia</a></h3>\n<p class=\"member_in_band_role\"
+        id=\"roleInBand_3540419601\">\n</p>\n<table class=\"display no_borders\" cellpadding=\"0\"
+        cellspacing=\"0\">\n<tr id=\"memberInAlbum_763847\" class=\"even\">\n<td width=\"28\">2019</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Legado_de_una_Tragedia/El_secreto_de_los_templarios/763847\"
+        title=\"El secreto de los templarios\">El secreto de los templarios</a> </td>\n<td>\nGuitars
+        (lead) </td>\n</tr>\n</table>\n</div>\n<div class=\"member_in_band\" id=\"memberInBand_3540458650\">\n<h3
+        class=\"member_in_band_name\"><a href=\"https://www.metal-archives.com/bands/Oscura_Tentaci%C3%B3n/3540458650#band_tab_members\"
+        title=\"Oscura Tentación\">Oscura Tentación</a></h3>\n<p class=\"member_in_band_role\"
+        id=\"roleInBand_3540458650\">\n</p>\n<table class=\"display no_borders\" cellpadding=\"0\"
+        cellspacing=\"0\">\n<tr id=\"memberInAlbum_799874\" class=\" odd\">\n<td width=\"28\">2015</td>\n
+        <td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Oscura_Tentaci%C3%B3n/Cronovisor/799874\"
+        title=\"Cronovisor\">Cronovisor</a> </td>\n<td>\nGuitar solo (track 5) </td>\n</tr>\n</table>\n</div>\n<div
+        class=\"member_in_band\" id=\"memberInBand_5164\">\n<h3 class=\"member_in_band_name\"><a
+        href=\"https://www.metal-archives.com/bands/Vh%C3%A4ldemar/5164#band_tab_members\"
+        title=\"Vhäldemar\">Vhäldemar</a></h3>\n<p class=\"member_in_band_role\" id=\"roleInBand_5164\">\n</p>\n<table
+        class=\"display no_borders\" cellpadding=\"0\" cellspacing=\"0\">\n<tr id=\"memberInAlbum_667425\"
+        class=\"even\">\n<td width=\"28\">2017</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Vh%C3%A4ldemar/Against_All_Kings/667425\"
+        title=\"Against All Kings\">Against All Kings</a> </td>\n<td>\nGuitar solo
+        (track 3) </td>\n</tr>\n</table>\n</div>\n</div>\n</div>\n\n\n<div id=\"artist_tab_misc\">\n<div
+        id=\"member_guest\" class=\"tabs2lvl\"> </div>\n<div class=\"ui-tabs-panel-content
+        block_spacer_top_36\">\n<div class=\"member_in_band\" id=\"memberInBand_23234\">\n<h3
+        class=\"member_in_band_name\"><a href=\"https://www.metal-archives.com/bands/Adgar/23234#band_tab_members\"
+        title=\"Adgar\">Adgar</a></h3>\n<p class=\"member_in_band_role\" id=\"roleInBand_23234\">\n</p>\n<table
+        class=\"display no_borders\" cellpadding=\"0\" cellspacing=\"0\">\n<tr id=\"memberInAlbum_138813\"
+        class=\" odd\">\n<td width=\"28\">2006</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Adgar/Seguimos_en_pie/138813\"
+        title=\"Seguimos en pie\">Seguimos en pie</a> </td>\n<td>\nMastering, Mixing
+        </td>\n</tr>\n<tr id=\"memberInAlbum_196448\" class=\"even\">\n<td width=\"28\">2008</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Adgar/Tiempos_de_cambio/196448\"
+        title=\"Tiempos de cambio\">Tiempos de cambio</a> </td>\n<td>\nMixing, Mastering
+        </td>\n</tr>\n<tr id=\"memberInAlbum_261709\" class=\" odd\">\n<td width=\"28\">2009</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Adgar/Directo_al_tiempo/261709\"
+        title=\"Directo al tiempo\">Directo al tiempo</a> (Video) </td>\n<td>\nMastering
+        </td>\n</tr>\n</table>\n</div>\n<div class=\"member_in_band\" id=\"memberInBand_68852\">\n<h3
+        class=\"member_in_band_name\"><a href=\"https://www.metal-archives.com/bands/Almas_Militares/68852#band_tab_members\"
+        title=\"Almas Militares\">Almas Militares</a></h3>\n<p class=\"member_in_band_role\"
+        id=\"roleInBand_68852\">\n</p>\n<table class=\"display no_borders\" cellpadding=\"0\"
+        cellspacing=\"0\">\n<tr id=\"memberInAlbum_142562\" class=\"even\">\n<td width=\"28\">2006</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Almas_Militares/Almas_Militares/142562\"
+        title=\"Almas Militares\">Almas Militares</a> </td>\n<td>\nMastering </td>\n</tr>\n</table>\n</div>\n<div
+        class=\"member_in_band\" id=\"memberInBand_3540361100\">\n<h3 class=\"member_in_band_name\"><a
+        href=\"https://www.metal-archives.com/bands/Alquimia/3540361100#band_tab_members\"
+        title=\"Alquimia\">Alquimia</a></h3>\n<p class=\"member_in_band_role\" id=\"roleInBand_3540361100\">\n</p>\n<table
+        class=\"display no_borders\" cellpadding=\"0\" cellspacing=\"0\">\n<tr id=\"memberInAlbum_391528\"
+        class=\" odd\">\n<td width=\"28\">2013</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Alquimia/Alquimia/391528\"
+        title=\"Alquimia\">Alquimia</a> </td>\n<td>\nProducer, Lyrics </td>\n</tr>\n<tr
+        id=\"memberInAlbum_548366\" class=\"even\">\n<td width=\"28\">2015</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Alquimia/Espiritual/548366\"
+        title=\"Espiritual\">Espiritual</a> </td>\n<td>\nProducer </td>\n</tr>\n</table>\n</div>\n<div
+        class=\"member_in_band\" id=\"memberInBand_107775\">\n<h3 class=\"member_in_band_name\"><a
+        href=\"https://www.metal-archives.com/bands/Amade%C3%BCs/107775#band_tab_members\"
+        title=\"Amadeüs\">Amadeüs</a></h3>\n<p class=\"member_in_band_role\" id=\"roleInBand_107775\">\n</p>\n<table
+        class=\"display no_borders\" cellpadding=\"0\" cellspacing=\"0\">\n<tr id=\"memberInAlbum_227426\"
+        class=\" odd\">\n<td width=\"28\">2009</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Amade%C3%BCs/Caminos_del_alma/227426\"
+        title=\"Caminos del alma\">Caminos del alma</a> </td>\n<td>\nMastering, Mixing,
+        Producer </td>\n</tr>\n<tr id=\"memberInAlbum_313482\" class=\"even\">\n<td
+        width=\"28\">2012</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Amade%C3%BCs/Black_Jack/313482\"
+        title=\"Black Jack\">Black Jack</a> </td>\n<td>\nMixing, Mastering </td>\n</tr>\n</table>\n</div>\n<div
+        class=\"member_in_band\" id=\"memberInBand_3540460173\">\n<h3 class=\"member_in_band_name\"><a
+        href=\"https://www.metal-archives.com/bands/Amenti/3540460173#band_tab_members\"
+        title=\"Amenti\">Amenti</a></h3>\n<p class=\"member_in_band_role\" id=\"roleInBand_3540460173\">\n</p>\n<table
+        class=\"display no_borders\" cellpadding=\"0\" cellspacing=\"0\">\n<tr id=\"memberInAlbum_807374\"
+        class=\" odd\">\n<td width=\"28\">2019</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Amenti/Fuerza_vital/807374\"
+        title=\"Fuerza vital\">Fuerza vital</a> </td>\n<td>\nRecording, Mixing </td>\n</tr>\n</table>\n</div>\n<div
+        class=\"member_in_band\" id=\"memberInBand_3540359758\">\n<h3 class=\"member_in_band_name\"><a
+        href=\"https://www.metal-archives.com/bands/Angel_Rubin/3540359758#band_tab_members\"
+        title=\"Angel Rubin\">Angel Rubin</a></h3>\n<p class=\"member_in_band_role\"
+        id=\"roleInBand_3540359758\">\n</p>\n<table class=\"display no_borders\" cellpadding=\"0\"
+        cellspacing=\"0\">\n<tr id=\"memberInAlbum_370383\" class=\"even\">\n<td width=\"28\">2013</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Angel_Rubin/Mi_oculta_soledad/370383\"
+        title=\"Mi oculta soledad\">Mi oculta soledad</a> </td>\n<td>\nRecording (tracks
+        1-8), Mastering, Mixing </td>\n</tr>\n</table>\n</div>\n<div class=\"member_in_band\"
+        id=\"memberInBand_3540263963\">\n<h3 class=\"member_in_band_name\"><a href=\"https://www.metal-archives.com/bands/Angeldark/3540263963#band_tab_members\"
+        title=\"Angeldark\">Angeldark</a></h3>\n<p class=\"member_in_band_role\" id=\"roleInBand_3540263963\">\n</p>\n<table
+        class=\"display no_borders\" cellpadding=\"0\" cellspacing=\"0\">\n<tr id=\"memberInAlbum_212059\"
+        class=\" odd\">\n<td width=\"28\">2008</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Angeldark/Ang%C3%A9lique/212059\"
+        title=\"Angélique\">Angélique</a> </td>\n<td>\nEngineering (assistant) </td>\n</tr>\n</table>\n</div>\n<div
+        class=\"member_in_band\" id=\"memberInBand_43677\">\n<h3 class=\"member_in_band_name\"><a
+        href=\"https://www.metal-archives.com/bands/Atalaya/43677#band_tab_members\"
+        title=\"Atalaya\">Atalaya</a></h3>\n<p class=\"member_in_band_role\" id=\"roleInBand_43677\">\n</p>\n<table
+        class=\"display no_borders\" cellpadding=\"0\" cellspacing=\"0\">\n<tr id=\"memberInAlbum_300345\"
+        class=\"even\">\n<td width=\"28\">2011</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Atalaya/Tierra_infernal/300345\"
+        title=\"Tierra infernal\">Tierra infernal</a> </td>\n<td>\nMastering </td>\n</tr>\n</table>\n</div>\n<div
+        class=\"member_in_band\" id=\"memberInBand_5795\">\n<h3 class=\"member_in_band_name\"><a
+        href=\"https://www.metal-archives.com/bands/Avalanch/5795#band_tab_members\"
+        title=\"Avalanch\">Avalanch</a></h3>\n<p class=\"member_in_band_role\" id=\"roleInBand_5795\">\n</p>\n<table
+        class=\"display no_borders\" cellpadding=\"0\" cellspacing=\"0\">\n<tr id=\"memberInAlbum_14311\"
+        class=\" odd\">\n<td width=\"28\">1997</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Avalanch/La_llama_eterna/14311\"
+        title=\"La llama eterna\">La llama eterna</a> </td>\n<td>\nProducer </td>\n</tr>\n<tr
+        id=\"memberInAlbum_123128\" class=\"even\">\n<td width=\"28\">1998</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Avalanch/Eternal_Flame/123128\"
+        title=\"Eternal Flame\">Eternal Flame</a> </td>\n<td>\nProducer, Engineering
+        </td>\n</tr>\n<tr id=\"memberInAlbum_552753\" class=\" odd hiddenRelease_misc-5795
+        displayNone\">\n<td width=\"28\">1998</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Avalanch/Eternal_Flame_-_La_llama_eterna/552753\"
+        title=\"Eternal Flame / La llama eterna\">Eternal Flame / La llama eterna</a>
+        (Compilation) </td>\n<td>\nProducer, Engineering </td>\n</tr>\n<tr id=\"memberInAlbum_14310\"
+        class=\"even\">\n<td width=\"28\">1999</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Avalanch/Llanto_de_un_h%C3%A9roe/14310\"
+        title=\"Llanto de un héroe\">Llanto de un héroe</a> </td>\n<td>\nLyrics, Engineering
+        </td>\n</tr>\n<tr id=\"memberInAlbum_14303\" class=\" odd hiddenRelease_misc-5795
+        displayNone\">\n<td width=\"28\">2000</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Avalanch/D%C3%ADas_de_gloria/14303\"
+        title=\"Días de gloria\">Días de gloria</a> (Live album) </td>\n<td>\nProducer,
+        Engineering </td>\n</tr>\n<tr id=\"memberInAlbum_30426\" class=\"even hiddenRelease_misc-5795
+        displayNone\">\n<td width=\"28\">2000</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Avalanch/Save_Me/30426\"
+        title=\"Save Me\">Save Me</a> (Single) </td>\n<td>\nEngineering, Producer
+        </td>\n</tr>\n<tr id=\"memberInAlbum_14300\" class=\" odd\">\n<td width=\"28\">2001</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Avalanch/El_%C3%A1ngel_ca%C3%ADdo/14300\"
+        title=\"El ángel caído\">El ángel caído</a> </td>\n<td>\nProducer, Engineering
+        </td>\n</tr>\n<tr id=\"memberInAlbum_30427\" class=\"even hiddenRelease_misc-5795
+        displayNone\">\n<td width=\"28\">2001</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Avalanch/Delirios_de_grandeza/30427\"
+        title=\"Delirios de grandeza\">Delirios de grandeza</a> (Single) </td>\n<td>\nEngineering,
+        Producer </td>\n</tr>\n<tr id=\"memberInAlbum_20340\" class=\" odd\">\n<td
+        width=\"28\">2003</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Avalanch/Los_poetas_han_muerto/20340\"
+        title=\"Los poetas han muerto\">Los poetas han muerto</a>  </td>\n<td>\nEngineering,
+        Producer </td>\n</tr>\n<tr id=\"memberInAlbum_58845\" class=\"even\">\n<td
+        width=\"28\">2004</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Avalanch/Las_ruinas_del_Ed%C3%A9n/58845\"
+        title=\"Las ruinas del Edén\">Las ruinas del Edén</a> </td>\n<td>\nRecording,
+        Mixing, Mastering, Producer </td>\n</tr>\n<tr id=\"memberInAlbum_70252\" class=\"
+        odd\">\n<td width=\"28\">2005</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Avalanch/Mother_Earth/70252\"
+        title=\"Mother Earth\">Mother Earth</a> </td>\n<td>\nProducer </td>\n</tr>\n<tr
+        id=\"memberInAlbum_80293\" class=\"even\">\n<td width=\"28\">2005</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Avalanch/El_hijo_pr%C3%B3digo/80293\"
+        title=\"El hijo pródigo\">El hijo pródigo</a> </td>\n<td>\nRecording, Mixing,
+        Producer </td>\n</tr>\n<tr id=\"memberInAlbum_99154\" class=\" odd hiddenRelease_misc-5795
+        displayNone\">\n<td width=\"28\">2005</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Avalanch/Un_paso_m%C3%A1s_%28Grandes_%C3%A9xitos%29/99154\"
+        title=\"Un paso más (Grandes éxitos)\">Un paso más (Grandes éxitos)</a> (Compilation)
+        </td>\n<td>\nProducer </td>\n</tr>\n<tr id=\"memberInAlbum_172497\" class=\"even\">\n<td
+        width=\"28\">2007</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Avalanch/Muerte_y_vida/172497\"
+        title=\"Muerte y vida\">Muerte y vida</a> </td>\n<td>\nProducer </td>\n</tr>\n<tr
+        id=\"memberInAlbum_218215\" class=\" odd hiddenRelease_misc-5795 displayNone\">\n<td
+        width=\"28\">2008</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Avalanch/Caminar_sobre_el_agua/218215\"
+        title=\"Caminar sobre el agua\">Caminar sobre el agua</a> (Live album) </td>\n<td>\nProducer
+        </td>\n</tr>\n<tr id=\"memberInAlbum_270169\" class=\"even\">\n<td width=\"28\">2010</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Avalanch/El_ladr%C3%B3n_de_sue%C3%B1os/270169\"
+        title=\"El ladrón de sueños\">El ladrón de sueños</a> </td>\n<td>\nRecording,
+        Mixing, Mastering, Producer </td>\n</tr>\n<tr id=\"memberInAlbum_322088\"
+        class=\" odd\">\n<td width=\"28\">2011</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Avalanch/Malefic_Time%3A_Apocalypse/322088\"
+        title=\"Malefic Time: Apocalypse\">Malefic Time: Apocalypse</a> </td>\n<td>\nMixing,
+        Recording, Producer, Lyrics </td>\n</tr>\n<tr id=\"memberInAlbum_353633\"
+        class=\"even hiddenRelease_misc-5795 displayNone\">\n<td width=\"28\">2012</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Avalanch/Del_cielo_a_la_tierra/353633\"
+        title=\"Del cielo a la tierra\">Del cielo a la tierra</a> (Compilation) </td>\n<td>\nProducer
+        </td>\n</tr>\n<tr id=\"memberInAlbum_650796\" class=\" odd\">\n<td width=\"28\">2017</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Avalanch/El_%C3%A1ngel_ca%C3%ADdo_-_XV_aniversario/650796\"
+        title=\"El ángel caído - XV aniversario\">El ángel caído - XV aniversario</a>
+        </td>\n<td>\nRecording, Mixing </td>\n</tr>\n<tr id=\"memberInAlbum_719593\"
+        class=\"even hiddenRelease_misc-5795 displayNone\">\n<td width=\"28\">2018</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Avalanch/Hacia_la_luz_-_Directo_desde_Madrid/719593\"
+        title=\"Hacia la luz - Directo desde Madrid\">Hacia la luz - Directo desde
+        Madrid</a> (Video) </td>\n<td>\nMixing </td>\n</tr>\n<tr id=\"memberInAlbum_927829\"
+        class=\" odd hiddenRelease_misc-5795 displayNone\">\n<td width=\"28\">2019</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Avalanch/The_Oracle/927829\"
+        title=\"The Oracle\">The Oracle</a> (Single) </td>\n<td>\nRecording, Producer
+        </td>\n</tr>\n<tr id=\"memberInAlbum_927828\" class=\"even hiddenRelease_misc-5795
+        displayNone\">\n<td width=\"28\">2019</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Avalanch/El_or%C3%A1culo/927828\"
+        title=\"El oráculo\">El oráculo</a> (Single) </td>\n<td>\nRecording, Producer
+        </td>\n</tr>\n<tr id=\"memberInAlbum_762014\" class=\" odd\">\n<td width=\"28\">2019</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Avalanch/El_secreto/762014\"
+        title=\"El secreto\">El secreto</a> </td>\n<td>\nProducer, Recording, Lyrics
+        </td>\n</tr>\n<tr class=\"showAll\">\n<td colspan=\"3\">\n(<a href=\"javascript:;\"
+        id=\"toggle_misc-5795\" class=\"toggleAlbums\">show all</a>)\n</td>\n</tr>\n</table>\n</div>\n<div
+        class=\"member_in_band\" id=\"memberInBand_108384\">\n<h3 class=\"member_in_band_name\"><a
+        href=\"https://www.metal-archives.com/bands/Darkkam/108384#band_tab_members\"
+        title=\"Darkkam\">Darkkam</a></h3>\n<p class=\"member_in_band_role\" id=\"roleInBand_108384\">\n</p>\n<table
+        class=\"display no_borders\" cellpadding=\"0\" cellspacing=\"0\">\n<tr id=\"memberInAlbum_288194\"
+        class=\"even\">\n<td width=\"28\">2010</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Darkkam/Despierta/288194\"
+        title=\"Despierta\">Despierta</a> </td>\n<td>\nMastering </td>\n</tr>\n</table>\n</div>\n<div
+        class=\"member_in_band\" id=\"memberInBand_3540409725\">\n<h3 class=\"member_in_band_name\"><a
+        href=\"https://www.metal-archives.com/bands/Dru%C3%ADdas/3540409725#band_tab_members\"
+        title=\"Druídas\">Druídas</a></h3>\n<p class=\"member_in_band_role\" id=\"roleInBand_3540409725\">\n</p>\n<table
+        class=\"display no_borders\" cellpadding=\"0\" cellspacing=\"0\">\n<tr id=\"memberInAlbum_576775\"
+        class=\" odd\">\n<td width=\"28\">2016</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Dru%C3%ADdas/Ecos_del_norte/576775\"
+        title=\"Ecos del norte\">Ecos del norte</a> </td>\n<td>\nMixing, Mastering,
+        Producer </td>\n</tr>\n</table>\n</div>\n<div class=\"member_in_band\" id=\"memberInBand_52964\">\n<h3
+        class=\"member_in_band_name\"><a href=\"https://www.metal-archives.com/bands/Ed%C3%A9n/52964#band_tab_members\"
+        title=\"Edén\">Edén</a></h3>\n<p class=\"member_in_band_role\" id=\"roleInBand_52964\">\n</p>\n<table
+        class=\"display no_borders\" cellpadding=\"0\" cellspacing=\"0\">\n<tr id=\"memberInAlbum_769249\"
+        class=\"even\">\n<td width=\"28\">2019</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Ed%C3%A9n/El_despertar_de_los_sue%C3%B1os/769249\"
+        title=\"El despertar de los sueños\">El despertar de los sueños</a> </td>\n<td>\nMixing,
+        Mastering </td>\n</tr>\n</table>\n</div>\n<div class=\"member_in_band\" id=\"memberInBand_6209\">\n<h3
+        class=\"member_in_band_name\"><a href=\"https://www.metal-archives.com/bands/Eternal_Night/6209#band_tab_members\"
+        title=\"Eternal Night\">Eternal Night</a></h3>\n<p class=\"member_in_band_role\"
+        id=\"roleInBand_6209\">\n</p>\n<table class=\"display no_borders\" cellpadding=\"0\"
+        cellspacing=\"0\">\n<tr id=\"memberInAlbum_150389\" class=\" odd\">\n<td width=\"28\">1998</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Eternal_Night/Heavens%27_Kingdom_Will_Be_Yours/150389\"
+        title=\"Heavens&#039; Kingdom Will Be Yours\">Heavens' Kingdom Will Be Yours</a>
+        </td>\n<td>\nMixing </td>\n</tr>\n</table>\n</div>\n<div class=\"member_in_band\"
+        id=\"memberInBand_3069\">\n<h3 class=\"member_in_band_name\"><a href=\"https://www.metal-archives.com/bands/Gruesome_Stuff_Relish/3069#band_tab_members\"
+        title=\"Gruesome Stuff Relish\">Gruesome Stuff Relish</a></h3>\n<p class=\"member_in_band_role\"
+        id=\"roleInBand_3069\">\n</p>\n<table class=\"display no_borders\" cellpadding=\"0\"
+        cellspacing=\"0\">\n<tr id=\"memberInAlbum_7549\" class=\"even\">\n<td width=\"28\">2002</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Gruesome_Stuff_Relish/Teenage_Giallo_Grind/7549\"
+        title=\"Teenage Giallo Grind\">Teenage Giallo Grind</a> </td>\n<td>\nMastering
+        (as \"A. Rionda\") </td>\n</tr>\n<tr id=\"memberInAlbum_186831\" class=\"
+        odd\">\n<td width=\"28\">2008</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Gruesome_Stuff_Relish/Horror_Rises_from_the_Tomb/186831\"
+        title=\"Horror Rises from the Tomb\">Horror Rises from the Tomb</a> </td>\n<td>\nMastering
+        </td>\n</tr>\n</table>\n</div>\n<div class=\"member_in_band\" id=\"memberInBand_11369\">\n<h3
+        class=\"member_in_band_name\"><a href=\"https://www.metal-archives.com/bands/Heldar/11369#band_tab_members\"
+        title=\"Heldar\">Heldar</a></h3>\n<p class=\"member_in_band_role\" id=\"roleInBand_11369\">\n</p>\n<table
+        class=\"display no_borders\" cellpadding=\"0\" cellspacing=\"0\">\n<tr id=\"memberInAlbum_144855\"
+        class=\"even\">\n<td width=\"28\">2006</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Heldar/Inmune/144855\"
+        title=\"Inmune\">Inmune</a> </td>\n<td>\nMastering </td>\n</tr>\n</table>\n</div>\n<div
+        class=\"member_in_band\" id=\"memberInBand_77816\">\n<h3 class=\"member_in_band_name\"><a
+        href=\"https://www.metal-archives.com/bands/Nocturnia/77816#band_tab_members\"
+        title=\"Nocturnia\">Nocturnia</a></h3>\n<p class=\"member_in_band_role\" id=\"roleInBand_77816\">\n</p>\n<table
+        class=\"display no_borders\" cellpadding=\"0\" cellspacing=\"0\">\n<tr id=\"memberInAlbum_799108\"
+        class=\" odd\">\n<td width=\"28\">2019</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Nocturnia/La_tempestad/799108\"
+        title=\"La tempestad\">La tempestad</a> </td>\n<td>\nProducer </td>\n</tr>\n</table>\n</div>\n<div
+        class=\"member_in_band\" id=\"memberInBand_4579\">\n<h3 class=\"member_in_band_name\"><a
+        href=\"https://www.metal-archives.com/bands/N%C3%B6rthwind/4579#band_tab_members\"
+        title=\"Nörthwind\">Nörthwind</a></h3>\n<p class=\"member_in_band_role\" id=\"roleInBand_4579\">\n</p>\n<table
+        class=\"display no_borders\" cellpadding=\"0\" cellspacing=\"0\">\n<tr id=\"memberInAlbum_25420\"
+        class=\"even\">\n<td width=\"28\">2001</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/N%C3%B6rthwind/Viento_del_norte/25420\"
+        title=\"Viento del norte\">Viento del norte</a> </td>\n<td>\nMastering </td>\n</tr>\n</table>\n</div>\n<div
+        class=\"member_in_band\" id=\"memberInBand_3540458650\">\n<h3 class=\"member_in_band_name\"><a
+        href=\"https://www.metal-archives.com/bands/Oscura_Tentaci%C3%B3n/3540458650#band_tab_members\"
+        title=\"Oscura Tentación\">Oscura Tentación</a></h3>\n<p class=\"member_in_band_role\"
+        id=\"roleInBand_3540458650\">\n</p>\n<table class=\"display no_borders\" cellpadding=\"0\"
+        cellspacing=\"0\">\n<tr id=\"memberInAlbum_799874\" class=\" odd\">\n<td width=\"28\">2015</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Oscura_Tentaci%C3%B3n/Cronovisor/799874\"
+        title=\"Cronovisor\">Cronovisor</a> </td>\n<td>\nMixing, Mastering </td>\n</tr>\n</table>\n</div>\n<div
+        class=\"member_in_band\" id=\"memberInBand_36624\">\n<h3 class=\"member_in_band_name\"><a
+        href=\"https://www.metal-archives.com/bands/Repugnance/36624#band_tab_members\"
+        title=\"Repugnance\">Repugnance</a></h3>\n<p class=\"member_in_band_role\"
+        id=\"roleInBand_36624\">\n</p>\n<table class=\"display no_borders\" cellpadding=\"0\"
+        cellspacing=\"0\">\n<tr id=\"memberInAlbum_99309\" class=\"even\">\n<td width=\"28\">1996</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/Repugnance/Ghoulish/99309\"
+        title=\"Ghoulish\">Ghoulish</a> (EP) </td>\n<td>\nEngineering (assistant)
+        </td>\n</tr>\n</table>\n</div>\n<div class=\"member_in_band\" id=\"memberInBand_53971\">\n<h3
+        class=\"member_in_band_name\"><a href=\"https://www.metal-archives.com/bands/T%C3%A1lesien/53971#band_tab_members\"
+        title=\"Tálesien\">Tálesien</a></h3>\n<p class=\"member_in_band_role\" id=\"roleInBand_53971\">\n</p>\n<table
+        class=\"display no_borders\" cellpadding=\"0\" cellspacing=\"0\">\n<tr id=\"memberInAlbum_102295\"
+        class=\" odd\">\n<td width=\"28\">2005</td>\n<td width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/T%C3%A1lesien/The_Blind_Carpenter/102295\"
+        title=\"The Blind Carpenter\">The Blind Carpenter</a> </td>\n<td>\nMastering
+        </td>\n</tr>\n</table>\n</div>\n<div class=\"member_in_band\" id=\"memberInBand_8478\">\n<h3
+        class=\"member_in_band_name\"><a href=\"https://www.metal-archives.com/bands/The_Stormrider/8478#band_tab_members\"
+        title=\"The Stormrider\">The Stormrider</a></h3>\n<p class=\"member_in_band_role\"
+        id=\"roleInBand_8478\">\n</p>\n<table class=\"display no_borders\" cellpadding=\"0\"
+        cellspacing=\"0\">\n<tr id=\"memberInAlbum_18869\" class=\"even\">\n<td width=\"28\">2003</td>\n<td
+        width=\"280\">\n<a href=\"https://www.metal-archives.com/albums/The_Stormrider/Criseida/18869\"
+        title=\"Criseida\">Criseida</a> </td>\n<td>\nProducer </td>\n</tr>\n</table>\n</div>\n</div>\n</div>\n\n</div>\n<div
+        id=\"readMoreDialogBio\" title=\"Biography\" class=\"displayNone\"> </div>\n<div
+        id=\"readMoreDialogTrivia\" title=\"Trivia\" class=\"displayNone\"> </div>\n\n<div
+        id=\"auditTrail\">\n<table>\n<tr>\n<td>Added by: <a href=\"https://www.metal-archives.com/users/San_Sebastian\"
+        class=\"profileMenu\">San_Sebastian</a></td>\n<td align=\"right\">Modified
+        by: <a href=\"https://www.metal-archives.com/users/Eternal_sunset\" class=\"profileMenu\">Eternal_sunset</a></td>\n</tr>\n<tr>\n<td>Added
+        on: 2011-04-19 18:26:20</td>\n<td align=\"right\">Last modified on: 2021-03-18
+        11:52:57</td>\n</tr>\n<tr>\n<td valign=\"top\">\n&nbsp;\n</td>\n<td align=\"right\"
+        valign=\"top\">\n</td>\n</tr>\n<td class=\"writeAction\" colspan=\"2\">Duplicate?
+        Please <a href=\"javascript:popupReportDialog(3, 60908);\">file a report</a>
+        for merging.</td>\n</table>\n</div>\n</div>\n</div>\n</div>\n</div>\n<script
+        src=\"https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js\"
+        data-cf-settings=\"93dd3ab310bc2aad9a4a9924-|49\" defer=\"\"></script></body>\n</html>\n"
+  recorded_at: Sat, 10 Apr 2021 12:27:18 GMT
+- request:
+    method: get
+    uri: https://ma.cache.headbang.re/artist/read-more/id/60908/field/biography
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - MetalArchivesGemTestSuite/3.2.0 (user@example.com)
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - ma.cache.headbang.re
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+      Cache-Control:
+      - max-age=2592000
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Ray:
+      - 63a39bc24fe95433-LHR
+      Cf-Request-Id:
+      - '093a1fad6a00005433c2a27000000001'
+      Content-Security-Policy:
+      - frame-ancestors 'self'
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Sat, 10 Apr 2021 12:23:58 GMT
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Expires:
+      - Mon, 10 May 2021 12:23:58 GMT
+      Nel:
+      - '{"max_age":604800,"report_to":"cf-nel"}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=W%2Fi%2F28ADALReK2l1f8L0PGcYBaU4mk18FpyEfPiVh9C1rNM14ioxfpIxUI8gAlRFh%2Fyk6zImxFxV4LndDYtxSqP%2BQ8xuGlEGj6NQMcmkTqvWyc3IE6Ek"}],"max_age":604800,"group":"cf-nel"}'
+      Server:
+      - nginx
+      Vary:
+      - Accept-Encoding,User-Agent
+      X-Cache-Status:
+      - HIT
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '489'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "Avalanch's guitarist, composer and producer since 1997 as well as a
+        \ lyricist, arranger, keyboardist and sound engineer in his recording studio.<br
+        />\r\nHe studied five years of classical guitar at \"Escuela de Música de
+        Llanera\".<br />\r\nAlso has several national and regional awards in these
+        facets (Amas, Radial, Ventolines, Heavy Rock, etc ...) <br />\r\nIs a famous
+        sound engineer, producer and composer in many national projects (Avalanch,
+        Stunned Parrots, Geysser, Amadeus, Trend, etc.)"
+  recorded_at: Sat, 10 Apr 2021 12:27:18 GMT
+- request:
+    method: get
+    uri: https://ma.cache.headbang.re/artist/read-more/id/60908/field/trivia
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - MetalArchivesGemTestSuite/3.2.0 (user@example.com)
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - ma.cache.headbang.re
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+      Cache-Control:
+      - max-age=2592000
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Ray:
+      - 63a39bc9dcf00b88-AMS
+      Cf-Request-Id:
+      - '093a1fb22800000b88588a1000000001'
+      Content-Security-Policy:
+      - frame-ancestors 'self'
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Sat, 10 Apr 2021 12:23:58 GMT
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Expires:
+      - Mon, 10 May 2021 12:23:58 GMT
+      Nel:
+      - '{"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"max_age":604800,"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=vkkBLSbeED7TYkVvkGFKuL5HLyyr0AKCeDrV8LWbLqmE0oQLhLfTTslLr0vdCpLBJuDhVJeZfuvkVrsC36D8PXkj5TVO0LLvfb%2Bje65tguwQGN0SkPlP"}],"group":"cf-nel"}'
+      Server:
+      - nginx
+      Vary:
+      - Accept-Encoding,User-Agent
+      X-Cache-Status:
+      - HIT
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '514'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "Producer, was owner of \"Bunker Estudios\" and head chief of <a href=\"https://www.metal-archives.com/labels/Xana_Records/2038\">Xana
+        Records</a>  since 1997 to 2012 and since 2013 is the owner of <b>Sanctuarium
+        Estudios</b>.<br />\r\nHe is the headmaster of DerrameRock School.<br />\r\nMany
+        of the most famous jingles in Asturias (Spain) were created by him. Composer
+        of the complete original music for a cultural outreach program of the 2nd
+        TVE's television company, also issued weekly by the international channel
+        TVE."
+  recorded_at: Sat, 10 Apr 2021 12:27:18 GMT
+- request:
+    method: get
+    uri: https://ma.cache.headbang.re/link/ajax-list/type/person/id/60908
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - MetalArchivesGemTestSuite/3.2.0 (user@example.com)
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - ma.cache.headbang.re
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+      Cache-Control:
+      - max-age=2592000
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Ray:
+      - 63a39bd29bf36b89-LHR
+      Cf-Request-Id:
+      - '093a1fb79b00006b89341f8000000001'
+      Content-Security-Policy:
+      - frame-ancestors 'self'
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Sat, 10 Apr 2021 12:23:58 GMT
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Expires:
+      - Mon, 10 May 2021 12:23:58 GMT
+      Nel:
+      - '{"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"max_age":604800,"group":"cf-nel","endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=wgfkrNK%2FmEajm6SywYEDLkSSlXAqH%2FRxhmBaANSKVQDtav5xImVvm92QBdO8d5n2vIKUXGlkvOnt1jzSLX%2BqHoMh%2BMWulkXWt0tDf7TNgnMBsxyr0h6B"}]}'
+      Server:
+      - nginx
+      Vary:
+      - Accept-Encoding,User-Agent
+      X-Cache-Status:
+      - HIT
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '1448'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "<script type=\"931ce986af2e05d5225ae0f5-text/javascript\">\n$(document).ready(function()
+        {\n\t// Prepare the sub-tabs\n\t\t// Prepare the form popup\n\t$('#editLink').dialog({
+        autoOpen: false, width: 400, height: 250, modal: true, overlay: { opacity:
+        0.5, background: 'white'}, buttons: { 'Save link': function(){ $('#linkForm').submit();},
+        'Cancel': function() { $('#editLink').dialog('close');} } });\n});\n\n\n</script>\n<div
+        id=\"band_links\" class=\"tabs2lvl\">\n</div>\n<div class=\"ui-tabs-panel-content
+        block_spacer_top_36\">\n<table id=\"linksTablemain\" class=\"display\" width=\"50%\"
+        cellpadding=\"0\" cellspacing=\"0\">\n<tr id=\"header_Official\">\n<td colspan=\"2\">Official</td>\n</tr>\n<tr
+        class=\"even\" id=\"linkRow436350\">\n<td><a id=\"link436350\" href=\"https://www.facebook.com/albertoriondaoficial\"
+        title=\"Go to: Facebook\" target=\"_blank\">Facebook</a></td>\n</tr>\n<tr
+        class=\"odd\" id=\"linkRow436761\">\n<td><a id=\"link436761\" href=\"http://www.xanarecords.com/bunker_estudios/\"
+        title=\"Go to: Xana Records (Bunker Estudios)\" target=\"_blank\">Xana Records
+        (Bunker Estudios)</a></td>\n</tr>\n<tr class=\"even\" id=\"linkRow436759\">\n<td><a
+        id=\"link436759\" href=\"http://www.derramerockschool.com/web/?menu=1&pagina=\"
+        title=\"Go to: DerrameRock School\" target=\"_blank\">DerrameRock School</a></td>\n</tr>\n</table>\n</div>\n<script
+        src=\"https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js\"
+        data-cf-settings=\"931ce986af2e05d5225ae0f5-|49\" defer=\"\"></script>"
+  recorded_at: Sat, 10 Apr 2021 12:27:19 GMT
+recorded_with: VCR 6.0.0
