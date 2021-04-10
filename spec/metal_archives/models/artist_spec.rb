@@ -54,6 +54,21 @@ RSpec.describe MetalArchives::Artist do
     end
   end
 
+  describe "Azel Oliver" do
+    let(:id) { 613_096 }
+
+    it "has attributes" do
+      expect(artist.name).to eq "Azel Oliver"
+      expect(artist.aliases).to be_empty
+      expect(artist.country).to eq ISO3166::Country["HN"]
+      expect(artist.location).to be_nil
+      expect(artist.date_of_birth).to be_nil
+      expect(artist.date_of_death).to be_nil
+      expect(artist.cause_of_death).to be_nil
+      expect(artist.gender).to eq :male
+    end
+  end
+
   describe "Lemmy Kilmister" do
     let(:id) { 260 }
 
