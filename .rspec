@@ -1,3 +1,4 @@
 --color
 --fail-fast
 --require spec_helper
+--profile 5
