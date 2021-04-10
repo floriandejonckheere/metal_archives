@@ -21,13 +21,13 @@ module MetalArchives
         return if loaded? && !force
 
         # TODO: remove when all models have migrated from `assemble` method
-        if respond_to?(:assemble)
-          set(**assemble)
-        else
+        begin
           Builders
             .const_get(self.class.name.demodulize)
             .new(self)
             .build!
+        rescue NameError
+          set(**assemble)
         end
 
         @loaded = true

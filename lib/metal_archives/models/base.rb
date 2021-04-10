@@ -28,8 +28,6 @@ module MetalArchives
     # [Raises]
     # - rdoc-ref:Errors::APIError when receiving a status code >= 400 (except 404)
     #
-    def assemble
-      raise NotImplementedError, "method :assemble not implemented"
-    end
+    def assemble; end
   end
 end
