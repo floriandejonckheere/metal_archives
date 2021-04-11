@@ -16,6 +16,9 @@ RSpec.describe MetalArchives::Attributable do
       attribute :my_enum, enum: ["My Enum One", "My Enum Two"]
       attribute :my_enums, multiple: true, enum: ["My Enum One", "My Enum Two"]
 
+      attribute :my_boolean, type: :boolean
+      attribute :my_booleans, type: :boolean, multiple: true
+
       # Override load mechanism
       def loaded?
         true
@@ -46,8 +49,10 @@ RSpec.describe MetalArchives::Attributable do
   describe "types" do
     it "casts value" do
       model.my_integer = "3"
+      model.my_boolean = false
 
       expect(model.my_integer).to eq 3
+      expect(model.my_boolean).to eq false
     end
 
     it "raises when value cannot be cast" do

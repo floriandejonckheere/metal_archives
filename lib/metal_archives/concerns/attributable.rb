@@ -48,10 +48,8 @@ module MetalArchives
 
           value = instance_variable_get(:"@#{name}")
 
-          return value unless value.blank?
-
           # Return empty array for empty attributes not set
-          attributes[name][:multiple] ? [] : nil
+          value.blank? && attributes[name][:multiple] ? [] : value
         end
       end
 
