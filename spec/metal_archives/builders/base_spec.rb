@@ -71,7 +71,7 @@ RSpec.describe MetalArchives::Builders::Base do
 
     it "parses years" do
       expect(builder.year("2001")).to eq 2001..2001
-      expect(builder.year("?-2001")).to be_nil..2001
+      expect(builder.year("?-2001")).to eq nil..2001
       expect(builder.year("2001-?")).to eq 2001..nil
       expect(builder.year("2001-present")).to eq 2001..nil
     end

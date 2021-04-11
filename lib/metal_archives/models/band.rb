@@ -454,6 +454,30 @@ module MetalArchives
 
         params
       end
+
+      ##
+      # Map MA band status
+      #
+      # Returns +Symbol+
+      #
+      # [Raises]
+      # - rdoc-ref:MetalArchives::Errors::ParserError when parsing failed. Please report this error.
+      #
+      def map_status(status)
+        s = {
+          nil => "",
+          :active => "Active",
+          :split_up => "Split-up",
+          :on_hold => "On hold",
+          :unknown => "Unknown",
+          :changed_name => "Changed name",
+          :disputed => "Disputed",
+        }
+
+        raise Errors::ParserError, "Unknown status: #{status}" unless s[status]
+
+        s[status]
+      end
     end
   end
 end

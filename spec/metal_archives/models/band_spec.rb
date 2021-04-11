@@ -1,11 +1,14 @@
 # frozen_string_literal: true
 
 RSpec.describe MetalArchives::Band do
-  describe "properties" do
-    it "Pathfinder has properties" do
-      band = described_class.find 122_302
+  subject(:band) { described_class.new(id: id) }
 
-      expect(band).to be_instance_of described_class
+  describe "Pathfinder" do
+    let(:id) { 122_302 }
+
+    around { |example| VCR.use_cassette("bands/pathfinder", &example) }
+
+    it "has properties" do
       expect(band.name).to eq "Pathfinder"
       expect(band.aliases).to be_empty
       expect(band.country).to eq ISO3166::Country["PL"]
@@ -16,69 +19,104 @@ RSpec.describe MetalArchives::Band do
       expect(band.genres).to eq ["Symphonic Power"]
       expect(band.lyrical_themes).to match_array %w(Fantasy Sisu)
       expect(band.comment).to match "Pathfinder was founded by"
-      expect(URI(band.logo).path).to eq "/images/1/2/2/3/122302_logo.jpg"
-      expect(URI(band.photo).path).to eq "/images/1/2/2/3/122302_photo.jpg"
-      expect(band.independent).not_to be true
-      expect(band.similar.length).to eq 21
-      expect(band.links.length).to eq 12
-      expect(band.links.count { |l| l[:type] == :official }).to eq 9
-      expect(band.links.count { |l| l[:type] == :merchandise }).to eq 3
-      expect(band.links.find { |l| l[:type] == :merchandise }[:url]).to eq "https://www.amazon.com/Fifth-Element-Pathfinder/dp/B007MNNCVW"
-      expect(band.links.find { |l| l[:type] == :merchandise }[:title]).to eq "Amazon"
-
-      expect(band.releases.map(&:title)).to include "Pathfinder / Demo 2007", "The Beginning", "Moonlight Shadow", "Beyond the Space, Beyond the Time", "Fifth Element"
-
-      expect(band.members[0]).to eq id: 18_607,
-                                    name: "Arkadiusz Ruth",
-                                    current: true,
-                                    years_active: 2006..,
-                                    role: "Bass, Orchestrations, Vocals (choirs)"
-
-      expect(band.members[1]).to eq id: 18_596,
-                                    name: "Karol Mania",
-                                    years_active: 2006..,
-                                    current: true,
-                                    role: "Guitars, Vocals (choirs)"
-
-      expect(band.members[2]).to eq id: 18_599,
-                                    name: "Gunsen",
-                                    years_active: 2006..,
-                                    current: true,
-                                    role: "Guitars, Vocals (choirs)"
-
-      expect(band.members[3]).to eq id: 124_538,
-                                    name: "Kacper Stachowiak",
-                                    years_active: 2011..,
-                                    current: true,
-                                    role: "Drums, Narration, Vocals (choirs)"
-
-      expect(band.members[6]).to eq id: 18_611,
-                                    name: "Kamil Ruth",
-                                    years_active: 2006..2011,
-                                    current: false,
-                                    role: "Drums"
+      expect(band.logo.path).to eq "/images/1/2/2/3/122302_logo.jpg"
+      expect(band.photo.path).to eq "/images/1/2/2/3/122302_photo.jpg"
+      expect(band.independent).to eq false
     end
 
-    it "Rhapsody of Fire has properties" do
-      band = described_class.find 32
+    it "has releases" do
+      expect(band.releases.map(&:id)).to include(
+        190_714, # Pathfinder / Demo 2007
+        201_587, # The Beginning
+        283_512, # Moonlight Shadow
+        280_057, # Beyond the Space, Beyond the Time
+        336_125, # Fifth Element
+      )
+    end
 
-      expect(band).to be_instance_of described_class
+    it "has members" do
+      expect(band.members).to include(
+        { name: "Arkadiusz Ruth", id: 18_607, current: true, years_active: 2006.., role: "Bass, Orchestrations, Vocals (choirs)" },
+        { name: "Karol Mania", id: 18_596, years_active: 2006.., current: true, role: "Guitars, Vocals (choirs)" },
+        { name: "Gunsen", id: 18_599, years_active: 2006.., current: true, role: "Guitars, Vocals (choirs)" },
+        { name: "Kacper Stachowiak", id: 124_538, years_active: 2011.., current: true, role: "Drums, Narration, Vocals (choirs)" },
+        { name: "Kamil Ruth", id: 18_611, years_active: 2006..2011, current: false, role: "Drums" },
+      )
+    end
+
+    it "has similar bands" do
+      expect(band.similar).to include(
+        { band: have_attributes(id: 32), score: 79 },
+        { band: have_attributes(id: 2_289), score: 55 },
+        { band: have_attributes(id: 3_540_382_043), score: 45 },
+        { band: have_attributes(id: 8051), score: 32 },
+      )
+    end
+
+    it "has links" do
+      expect(band.links).to include(
+        { type: :official, title: /Arkadiusz/, url: /www.arkadiusz-e-ruth.com/ },
+        { type: :official, title: "Facebook", url: /facebook/ },
+        { type: :official, title: "Homepage", url: /www.pathfinderband.com/ },
+        { type: :official_merchandise, title: "Amazon", url: /amazon/ },
+        { type: :official_merchandise, title: "Google Play", url: /play.google.com/ },
+      )
+    end
+  end
+
+  describe "Rhapsody of Fire" do
+    let(:id) { 32 }
+
+    around { |example| VCR.use_cassette("bands/rhapsody_of_fire", &example) }
+
+    it "has properties" do
       expect(band.name).to eq "Rhapsody of Fire"
-      expect(band.aliases).to match %w(Thundercross Rhapsody)
-
-      expect(band.releases.map(&:title)).to match_array ["Eternal Glory", "Hard Rock", "Legendary Tales", "Manowar / Vanden Plas / Symphony X / Rhapsody", "Emerald Sword", "Symphony of Enchanted Lands", "Holy Thunderforce", "Dawn of Victory", "Rain of a Thousand Flames", "Power of the Dragonflame", "Tales from the Emerald Sword Saga", "The Dark Secret", "Symphony of Enchanted Lands II: The Dark Secret", "The Magic of the Wizard's Dream", "Live in Canada 2005 - The Dark Secret", "A New Saga Begins", "Triumph or Agony", "Demons, Dragons and Warriors", "Visions from the Enchanted Lands", "The Frozen Tears of Angels", "The Cold Embrace of Fear: A Dark Romantic Symphony", "Aeons of Raging Darkness", "From Chaos to Eternity", "Live - From Chaos to Eternity", "Dark Wings of Steel", "Live in Atlanta", "Shining Star", "Into the Legend", "When Demons Awake", "Land of Immortals", "Knightrider of Doom", "Legendary Years", "The Legend Goes On", "Rain of Fury", "Master of Peace", "The Eighth Mountain"]
+      expect(band.aliases).to match_array %w(Thundercross Rhapsody)
+      expect(band.country).to eq ISO3166::Country["IT"]
+      expect(band.location).to eq "Trieste, Friuli-Venezia Giulia"
+      expect(band.date_formed).to eq Date.new(1995)
+      expect(band.years_active).to eq [1993..1995, 1995..2006, 2006..]
+      expect(band.status).to eq :active
+      expect(band.genres).to eq ["Symphonic Power"]
+      expect(band.lyrical_themes).to match_array ["Fantasy", "Epic battles", "Tales"]
+      expect(band.comment).to match(/Luca Turilli/)
+      expect(band.logo.path).to eq "/images/3/2/32_logo.jpg"
+      expect(band.photo.path).to eq "/images/3/2/32_photo.jpg"
+      expect(band.independent).to eq false
     end
 
-    it "maps status" do
-      expect(MetalArchives::Parsers::Band.send(:map_status, nil)).to eq ""
-      expect(MetalArchives::Parsers::Band.send(:map_status, :active)).to eq "Active"
-      expect(MetalArchives::Parsers::Band.send(:map_status, :split_up)).to eq "Split-up"
-      expect(MetalArchives::Parsers::Band.send(:map_status, :on_hold)).to eq "On hold"
-      expect(MetalArchives::Parsers::Band.send(:map_status, :unknown)).to eq "Unknown"
-      expect(MetalArchives::Parsers::Band.send(:map_status, :changed_name)).to eq "Changed name"
-      expect(MetalArchives::Parsers::Band.send(:map_status, :disputed)).to eq "Disputed"
+    it "has releases" do
+      expect(band.releases.map(&:id)).to include(
+        107, # Legendary Tales
+        109, # Symphony of Enchanted Lands
+        110, # Dawn of Victory
+        451, # Rain of a Thousand Flames
+      )
+    end
 
-      expect(-> { MetalArchives::Parsers::Band.send(:map_status, :invalid_status) }).to raise_error MetalArchives::Errors::ParserError
+    it "has members" do
+      expect(band.members).to include(
+        { name: "Alex Staropoli", id: 2003, current: true, years_active: 1995.., role: "Keyboards, Piano, Harpsichord, Orchestrations, Vocals (choirs)" },
+        { name: "Giacomo Voli", id: 311_086, current: true, years_active: 2016.., role: "Vocals" },
+        { name: "Luca Turilli", id: 2001, current: false, years_active: 1995..2011, role: "Guitars" },
+      )
+    end
+
+    it "has similar bands" do
+      expect(band.similar).to include(
+        { band: have_attributes(id: 3_540_348_143), score: 162 },
+        { band: have_attributes(id: 388), score: 155 },
+        { band: have_attributes(id: 568), score: 90 },
+      )
+    end
+
+    it "has links" do
+      expect(band.links).to include(
+        { type: :official, title: "Facebook", url: /facebook/ },
+        { type: :official, title: "Homepage", url: /www.rhapsodyoffire.com/ },
+        { type: :official_merchandise, title: "Amazon", url: /amazon/ },
+        { type: :tablatures, title: "911Tabs", url: /911tabs.com/ },
+      )
     end
   end
 

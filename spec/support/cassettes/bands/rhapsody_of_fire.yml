@@ -1,0 +1,1384 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://ma.cache.headbang.re/band/view/id/32
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - MetalArchivesGemTestSuite/3.2.0 (user@example.com)
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - ma.cache.headbang.re
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+      Cache-Control:
+      - max-age=2592000
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Ray:
+      - 63a39d29fc99d8cd-AMS
+      Cf-Request-Id:
+      - '093a208e390000d8cd693f6000000001'
+      Content-Security-Policy:
+      - frame-ancestors 'self'
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Sun, 11 Apr 2021 12:50:51 GMT
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Expires:
+      - Tue, 11 May 2021 12:50:51 GMT
+      Nel:
+      - '{"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"group":"cf-nel","endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=qjpjP5B0%2FdnzggNIMKlhKkN4%2F4KC9uDSr6YqNLxgIls0yR7IeChYUbCCXXRbCk0AT%2FfL8lEyLkJd8WPqr3pGO82SNUq4KmIHh4XLYk88r989Ikqes%2Byx"}],"max_age":604800}'
+      Server:
+      - nginx
+      Vary:
+      - Accept-Encoding,User-Agent
+      X-Cache-Status:
+      - HIT
+      X-Frame-Options:
+      - SAMEORIGIN
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n<html
+        xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n<title>Rhapsody of Fire -
+        Encyclopaedia Metallum: The Metal Archives</title>\n<meta http-equiv=\"Content-Type\"
+        content=\"text/html; charset=UTF-8\" />\n<meta content=\"width=device-width,
+        initial-scale=1\" name=\"viewport\" />\n<link rel=\"stylesheet\" type=\"text/css\"
+        href=\"/min/index.php?g=css\" />\n<script type=\"7ae180ae15b15d09fac35fe6-text/javascript\"
+        src=\"/min/index.php?g=js\"></script>\n<script type=\"7ae180ae15b15d09fac35fe6-text/javascript\">\r\n\t\t\tvar
+        URL_SITE\t= 'https://www.metal-archives.com/';\r\n\t\t\tvar URL_IMAGES\t=
+        'https://www.metal-archives.com/images/';\r\n\t\t\tvar URL_CSS\t\t= 'https://www.metal-archives.com/css/';\r\n\t\t\tvar
+        csrfToken\t= '';\r\n\r\n\t\t\t$(document).ready(function() {\r\n\t\t\t\ttoggleFixedPositioning(1280,
+        600);\r\n\t\t\t\texecuteOnAllPages();\r\n\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t});\r\n\r\n\r\n\t\t</script>\n<noscript>\r\n\t\t\t<style
+        type=\"text/css\">\r\n\t\t\t\t.no-js { display: block !important; }\r\n\t\t\t</style>\r\n\t\t</noscript>\n<!--[if
+        lt IE 8]>\r\n\t\t\t<script src=\"http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js\"></script>\r\n\t\t\t
+        <link rel=\"stylesheet\" type=\"text/css\" href=\"https://www.metal-archives.com/css/default/oldie.css\"
+        />\r\n\t\t<![endif]-->\n<script type=\"7ae180ae15b15d09fac35fe6-text/javascript\">\r\n\t\t\t
+        \ var _gaq = _gaq || [];\r\n\t\t\t  _gaq.push(['_setAccount', 'UA-4046749-4']);\r\n\t\t\t
+        \ _gaq.push(['_trackPageview']);\r\n\r\n\t\t\t  (function() {\r\n\t\t\t    var
+        ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async
+        = true;\r\n\t\t\t    ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+        : 'http://www') + '.google-analytics.com/ga.js';\r\n\t\t\t    var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);\r\n\t\t\t  })();\r\n\t\t</script>\n</head>\n<body>\n<div
+        id=\"wrapper\">\n<div id=\"header\">\n<a href=\"https://www.metal-archives.com/\"
+        id=\"MA_logo\">Metal Archives</a>\n<div class=\"clear loading\"><img src=\"https://www.metal-archives.com/images/loading.gif\"
+        alt=\"loading\" width=\"12\" height=\"12\" /> loading...</div>\n<div id=\"search_box\">\n<form
+        id=\"search_form\" action=\"https://www.metal-archives.com/search\" method=\"get\">\n<div>\n<label>Search:</label><br
+        />\n<input name=\"searchString\" type=\"text\" id=\"searchQueryBox\" size=\"25\"
+        value=\"\" tabindex=\"1\" />\n<select name=\"type\" tabindex=\"2\">\n<option
+        value=\"band_name\">Band name</option>\n<option value=\"band_genre\">Music
+        genre</option>\n<option value=\"band_themes\">Lyrical themes</option>\n<option
+        value=\"album_title\">Album title</option>\n<option value=\"song_title\">Song
+        title</option>\n<option value=\"label_name\">Label</option>\n<option value=\"artist_alias\">Artist</option>\n<option
+        value=\"user_name\">User profile</option>\n<option value=\"google\">Google</option>\n</select>\n<br
+        />\n<a href=\"https://www.metal-archives.com/search/advanced/?searchString=&type=\"
+        class=\"float_left\" tabindex=\"4\">Advanced search</a>\n<button type=\"submit\"
+        class=\"btn_submit float_right\" tabindex=\"3\">Submit</button>\n</div>\n</form>\n</div>\n<div
+        id=\"top_menu_box\">\n<ul class=\"menu_style_1\">\n<li><a href=\"https://www.metal-archives.com/content/help\">Help</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/content/rules\">Rules</a></li>\n<li><a
+        href=\"https://forum.metal-archives.com\" target=\"_top\">Forum</a></li>\n</ul>\n<ul
+        class=\"menu_style_2\">\n<li><a href=\"https://www.metal-archives.com/content/faq\">FAQ</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/content/support\">Support Us</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/content/tools\">Add-ons</a></li>\n</ul>\n</div>\n</div>\n<div
+        id=\"left_col\">\n<div id=\"member_box\">\n <form name=\"login_form\" id=\"login_form\"
+        action=\"https://www.metal-archives.com/authentication/login\" method=\"post\">\n<div>\n<label>Username</label><br
+        />\n<input type=\"text\" name=\"loginUsername\" />\n<label>Password</label><br
+        />\n<input type=\"password\" name=\"loginPassword\" />\n<input type=\"hidden\"
+        name=\"origin\" value=\"/band/view/id/32\" />\n<button type=\"submit\" class=\"btn_login
+        float_right\">Login</button>\n</div>\n</form>\n<a href=\"https://www.metal-archives.com/user/signup\"
+        class=\"float-left writeAction\">Register</a>\n<span class=\"float_right\"><a
+        href=\"https://www.metal-archives.com/user/forgot-password\" class=\"float-left
+        writeAction\">Forgot login?</a> </span>\n<div class=\"clear\"> </div>\n</div>\n<div
+        id=\"left_menu_box\">\n<ul class=\"menu_style_3 block_spacer_20\">\n<li>\nBands\n<ul>\n<li><a
+        href=\"https://www.metal-archives.com/browse/letter\">alphabetical</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/browse/country\">country</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/browse/genre\">genre</a></li>\n</ul>\n</li>\n<li>\nLabels\n<ul>\n<li><a
+        href=\"https://www.metal-archives.com/label\">alphabetical</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/label/country\">country</a></li>\n</ul>\n</li>\n<li><a
+        href=\"https://www.metal-archives.com/review/browse\">Reviews</a></li>\n</ul>\n<ul
+        class=\"menu_style_3 block_spacer_20\">\n<li><a href=\"https://www.metal-archives.com/artist/rip\">R.I.P.</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/band/random\">Random Band</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/user/list\">User rankings</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/news\">News archive</a></li>\n</ul>\n<ul
+        class=\"menu_style_3 ornement_30\">\n<li><a href=\"https://www.metal-archives.com/report/list\">Reports</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/todo\">Contribute / To do</a></li>\n</ul>\n</div>\n<div
+        id=\"left_text_box\">\n<p class=\"small_text center\"> &copy; 2002-2021<br
+        />Encyclopaedia Metallum </p>\n<p class=\"small_text center\">Best viewed<br
+        /> <a href=\"http://www.getfirefox.com\" target=\"_blank\">without</a> Internet
+        Explorer, <br />in 1280 x 960 resolution<br /> or higher.</p>\n</div>\n<div>\n<p
+        class=\"small_text center\"><a href=\"https://www.metal-archives.com/content/pp\">Privacy
+        Policy</a></p>\n</div>\n</div>\n<div id=\"content_wrapper\">\n<script type=\"7ae180ae15b15d09fac35fe6-text/javascript\"
+        src=\"https://www.metal-archives.com/js/jquery/jquery.form.js\"></script>\n<script
+        type=\"7ae180ae15b15d09fac35fe6-text/javascript\">\n\tvar bandId = 32;\n\tvar
+        bandName = \"Rhapsody of Fire\";\n\tvar minRecScore = 3;\n\t\t\n\t\t\n\t\t\n\t$(document).ready(function()
+        {\n\t\t$('.tabs, .tabs2lvl').tabs({ beforeLoad: cacheTab });\n\t\t$(\".no-js\").removeClass(\"no-js\");\n\t\t\t\t
+        $('#band_members').tabs( { active : 1 } );\t\t$(document).on('click', '.albumMenu',
+        toggleAlbumMenu);\n\t\t\t\tvar browser = detectBrowser();\n\t\tif(browser.name
+        == \"webkit\" && parseFloat(browser.version) < 536) {\n\t\t\t$('head').append(
+        $('<style type=\"text/css\">.releaseCol { width: 26%; }</style>'));\n\t\t}\n\t});\n\n</script>\n<div
+        id=\"band_sidebar\">\n<div class=\"band_name_img\">\n<a class=\"image\" id=\"logo\"
+        title=\"Rhapsody of Fire\" href=\"https://www.metal-archives.com/images/3/2/32_logo.jpg?1943\"><img
+        src=\"https://www.metal-archives.com/images/3/2/32_logo.jpg?1943\" title=\"Click
+        to zoom\" alt=\"Rhapsody of Fire - Logo\" border=\"0\" /></a>\n</div>\n<div
+        class=\"band_img\">\n<a class=\"image\" id=\"photo\" title=\"Rhapsody of Fire\"
+        href=\"https://www.metal-archives.com/images/3/2/32_photo.jpg?1607\"><img
+        src=\"https://www.metal-archives.com/images/3/2/32_photo.jpg?1607\" title=\"Click
+        to zoom\" alt=\"Rhapsody of Fire - Photo\" border=\"0\" /></a>\n</div>\n<div
+        id=\"affiliation-links\">\n<span class=\"title\">Buy their stuff</span>\n<br
+        />\n<ul id=\"buyLinks\" class=\"menu_style_5\">\n<li>\n<a target=\"_blank\"
+        href=\"https://www.metal-archives.com/affiliate/?pid=3&bid=32\">Search on
+        eBay</a>\nmore... <a href=\"#more\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; $('#sub3').toggle(); return false;\" data-cf-modified-7ae180ae15b15d09fac35fe6-=\"\">>></a><br
+        />\n<ul id=\"sub3\" style=\"display: none; margin-top: 0px; margin-bottom:
+        0px;\">\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=17&bid=32\">eBay
+        Canada</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=19&bid=32\">eBay
+        UK</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=57&bid=32\">eBay
+        Germany</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=18&bid=32\">eBay
+        France</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=36&bid=32\">eBay
+        Spain</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=34&bid=32\">eBay
+        Belgium</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=20&bid=32\">eBay
+        Netherlands</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=21&bid=32\">eBay
+        Italy</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=22&bid=32\">eBay
+        Australia</a></li>\n</ul>\n</li>\n<li>\n<a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=54&id=425547&bid=32\">Buy
+        from No Remorse</a>\n</li>\n<li>\n<a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=59&id=664889&bid=32\">Buy
+        from Music Megastore</a>\n</li>\n</ul>\n</div>\n</div>\n<div id=\"band_content\">\n<div
+        class=\"tool_strip right writeAction\">\n<ul>\n<li><a title=\"Report a mistake
+        or additional information for this page\" href=\"javascript:popupReportDialog(1,
+        32);\" class=\"btn_report_error\"> </a></li>\n</ul>\n</div>\n<div id=\"band_info\">\n<h1
+        class=\"band_name\"><a href=\"https://www.metal-archives.com/bands/Rhapsody_of_Fire/32\">Rhapsody
+        of Fire</a></h1>\n<div class=\"clear block_spacer_5\"></div>\n<div id=\"band_stats\">\n<dl
+        class=\"float_left\">\n<dt>Country of origin:</dt>\n<dd><a href=\"https://www.metal-archives.com/lists/IT\">Italy</a></dd>\n<dt>Location:</dt>\n<dd>Trieste,
+        Friuli-Venezia Giulia</dd>\n<dt>Status:</dt>\n<dd class=\"active\">Active</dd>\n<dt>Formed
+        in:</dt>\n<dd>1995</dd>\n</dl>\n<dl class=\"float_right\">\n<dt>Genre:</dt>\n<dd>Symphonic
+        Power Metal</dd>\n<dt>Lyrical themes:</dt>\n<dd>Fantasy, Epic battles, Tales</dd>\n<dt>Current
+        label:</dt>\n<dd><a href=\"https://www.metal-archives.com/labels/AFM_Records/17\">AFM
+        Records</a></dd>\n</dl>\n<dl style=\"width: 100%;\" class=\"clear\">\n<dt>Years
+        active:</dt>\n<dd>\n1993-1995 (as <a href=\"https://www.metal-archives.com/bands/Thundercross/36427\">Thundercross</a>),\n1995-2006
+        (as <strong>Rhapsody</strong>),\n2006-present </dd>\n</dl>\n</div>\n<div class=\"band_comment
+        clear\">\n\nNot to be confused with the Genova band <b>Rhapsody</b>, who released
+        a demo tape in 1987.<br /> <br /> Formed in 1993 as <a href=\"https://www.metal-archives.com/bands/Thundercross/36427\">Thundercross</a>,
+        then changed the name to Rhapsody in 1995. They were forced to change their
+        name again, this time to Rhapsody of Fire, due to copyright problems on July
+        14th, 2006.<br /> <br /> Before <a href=\"https://www.metal-archives.com/artists/Cristiano_Adacher/2006\">Cristiano
+        Adacher</a>'s arrival, <a href=\"https://www.metal-archives.com/artists/Luca_Turilli/2001\">Luca
+        Turilli</a> was also the singer of the band. <br /> <br /> <a href=\"https://www.metal-archives.com/artists/Thunderforce/3883\">Thunderforce</a>
+        played drums from <i< i>\n... \n<div class=\"tool_strip bottom right\"><a
+        href=\"#\" onclick=\"if (!window.__cfRLUnblockHandlers) return false; readMore('band/read-more/id/32');
+        return false;\" class=\"btn_read_more\" data-cf-modified-7ae180ae15b15d09fac35fe6-=\"\">Read
+        more</a></div>\n</div>\n</div>\n\n<div id=\"message\"> </div>\n<div class=\"clear
+        block_spacer_5\"> </div>\n<div id=\"band_tabs\" class=\"tabs no-js\">\n<ul>\n<li><a
+        href=\"#band_tab_discography\">Discography</a></li>\n<li><a href=\"#band_tab_members\">Members</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/band/ajax-reviews/id/32\" title=\"Reviews\"><span>Reviews</span></a></li>\n<li><a
+        href=\"https://www.metal-archives.com/band/ajax-recommendations/id/32\" title=\"Similar
+        artists\"><span>Similar Artists</span></a></li>\n<li><a href=\"https://www.metal-archives.com/link/ajax-list/type/band/id/32\"
+        title=\"Related links\"><span>Related Links</span></a></li>\n<li><a href=\"https://www.metal-archives.com/report/by-object/type/1/id/32\"
+        title=\"Reports\"><span>Reports</span></a></li>\n</ul>\n<div id=\"band_tab_discography\">\n<div
+        id=\"band_disco\" class=\"tabs2lvl\">\n<ul>\n<li><a href=\"https://www.metal-archives.com/band/discography/id/32/tab/all\"><span>Complete
+        discography</span></a></li>\n<li><a href=\"https://www.metal-archives.com/band/discography/id/32/tab/main\"><span>Main</span></a></li>\n<li><a
+        href=\"https://www.metal-archives.com/band/discography/id/32/tab/lives\"><span>Lives</span></a></li>\n<li><a
+        href=\"https://www.metal-archives.com/band/discography/id/32/tab/demos\"><span>Demos</span></a></li>\n<li><a
+        href=\"https://www.metal-archives.com/band/discography/id/32/tab/misc\"><span>Misc.</span></a></li>\n</ul>\n</div>\n</div>\n<div
+        id=\"band_tab_members\">\n<div id=\"band_members\" class=\"tabs2lvl\">\n<ul>\n<li><a
+        href=\"#band_tab_members_all\">Complete lineup</a></li> <li><a href=\"#band_tab_members_current\">Current
+        lineup</a></li>\n<li><a href=\"#band_tab_members_past\">Past members</a></li>
+        <li><a href=\"#band_tab_members_live\">Live musicians</a></li> </ul>\n\n<div
+        id=\"band_tab_members_all\">\n<div class=\"ui-tabs-panel-content\">\n<table
+        class=\"display lineupTable\" cellpadding=\"0\" cellspacing=\"0\">\n<tr class=\"lineupHeaders\">\n<td
+        colspan=\"2\" align=\"right\">\nCurrent </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"200\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Alex_Staropoli/2003\"
+        class=\"bold\">Alex Staropoli</a>\n</td>\n<td>\nKeyboards, Piano, Harpsichord,
+        Orchestrations, Vocals (choirs)&nbsp;(1995-present) </td>\n</tr>\n<tr class=\"lineupBandsRow\">\n<td
+        colspan=\"2\">\nSee also:\nex-<a href=\"https://www.metal-archives.com/bands/Thundercross/36427\">Thundercross</a>
+        </td>\n</tr>\n\n<tr class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Roberto_De_Micheli/250619\"
+        class=\"bold\">Roberto De Micheli</a>\n</td>\n<td>\nGuitars&nbsp;(2011-present)
+        </td>\n</tr>\n<tr class=\"lineupBandsRow\">\n<td colspan=\"2\">\nSee also:\n<a
+        href=\"https://www.metal-archives.com/bands/Sinestesia/76209\">Sinestesia</a>,
+        ex-<a href=\"https://www.metal-archives.com/bands/Steel_Crown/6428\">Steel
+        Crown</a>, ex-<a href=\"https://www.metal-archives.com/bands/Thundercross/36427\">Thundercross</a>
+        </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Alessandro_Sala/250620\" class=\"bold\">Alessandro
+        Sala</a>\n</td>\n<td>\nBass&nbsp;(2015-present) </td>\n</tr>\n<tr class=\"lineupBandsRow\">\n<td
+        colspan=\"2\">\nSee also:\n<a href=\"https://www.metal-archives.com/bands/Saeko/26766\">Saeko</a>,
+        <a href=\"https://www.metal-archives.com/bands/Sinestesia/76209\">Sinestesia</a>
+        </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Giacomo_Voli/311086\" class=\"bold\">Giacomo
+        Voli</a>\n</td>\n<td>\nVocals&nbsp;(2016-present) </td>\n</tr>\n<tr class=\"lineupBandsRow\">\n<td
+        colspan=\"2\">\nSee also:\n<a href=\"https://www.metal-archives.com/bands/Embrace_of_Souls/3540480008\">Embrace
+        of Souls</a>, ex-<a href=\"https://www.metal-archives.com/bands/Sour_Whine/3540271799\">Sour
+        Whine</a>, Giacomo Voli, ex-<a href=\"https://www.metal-archives.com/bands/Teodasia/3540304967\">Teodasia</a>
+        </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Paolo_Marchesich/250621\" class=\"bold\">Paolo
+        Marchesich</a>\n</td>\n<td>\nDrums&nbsp;(2020-present) </td>\n</tr>\n<tr class=\"lineupBandsRow\">\n<td
+        colspan=\"2\">\nSee also:\n<a href=\"https://www.metal-archives.com/bands/Sinestesia/76209\">Sinestesia</a>,
+        <a href=\"https://www.metal-archives.com/bands/A_Day_in_Venice/3540385977\">A
+        Day in Venice</a> (live), ex-<a href=\"https://www.metal-archives.com/bands/Aisling/413\">Aisling</a>
+        </td>\n</tr>\n<tr class=\"lineupHeaders\">\n<td colspan=\"2\" align=\"right\">\nPast
+        </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Andrea_Furlan/2018\" class=\"bold\">Andrea
+        Furlan</a>\n</td>\n<td>\nBass&nbsp;(1995) </td>\n</tr>\n<tr class=\"lineupBandsRow\">\n<td
+        colspan=\"2\">\nSee also:\nex-<a href=\"https://www.metal-archives.com/bands/Thundercross/36427\">Thundercross</a>
+        </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Daniele_Carbonera/2024\" class=\"bold\">Daniele
+        Carbonera</a>\n</td>\n<td>\nDrums&nbsp;(1995-2000) </td>\n</tr>\n<tr class=\"lineupBandsRow\">\n<td
+        colspan=\"2\">\nSee also:\nex-<a href=\"https://www.metal-archives.com/bands/Thundercross/36427\">Thundercross</a>,
+        ex-<a href=\"https://www.metal-archives.com/bands/Nanowar_of_Steel/3540261755\">Nanowar
+        of Steel</a> (live) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"200\"
+        valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Luca_Turilli/2001\"
+        class=\"bold\">Luca Turilli</a>\n</td>\n<td>\nGuitars&nbsp;(1995-2011) </td>\n</tr>\n<tr
+        class=\"lineupBandsRow\">\n<td colspan=\"2\">\nSee also:\n<a href=\"https://www.metal-archives.com/bands/Turilli_-_Lione_Rhapsody/3540455673\">Turilli
+        / Lione Rhapsody</a>, ex-<a href=\"https://www.metal-archives.com/bands/Luca_Turilli/388\">Luca
+        Turilli</a>, ex-<a href=\"https://www.metal-archives.com/bands/Luca_Turilli%27s_Dreamquest/69098\">Luca
+        Turilli's Dreamquest</a>, ex-<a href=\"https://www.metal-archives.com/bands/Luca_Turilli%27s_Rhapsody/3540348143\">Luca
+        Turilli's Rhapsody</a>, ex-<a href=\"https://www.metal-archives.com/bands/Thundercross/36427\">Thundercross</a>
+        </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Fabio_Lione/1999\" class=\"bold\">Fabio
+        Lione</a>\n</td>\n<td>\nVocals&nbsp;(1995-2016) </td>\n</tr>\n<tr class=\"lineupBandsRow\">\n<td
+        colspan=\"2\">\nSee also:\n<a href=\"https://www.metal-archives.com/bands/Angra/538\">Angra</a>,
+        <a href=\"https://www.metal-archives.com/bands/Eternal_Idol/3540420046\">Eternal
+        Idol</a>, <a href=\"https://www.metal-archives.com/bands/Lione_-_Conti/3540436593\">Lione
+        / Conti</a>, <a href=\"https://www.metal-archives.com/bands/Turilli_-_Lione_Rhapsody/3540455673\">Turilli
+        / Lione Rhapsody</a>, ex-<a href=\"https://www.metal-archives.com/bands/Salvator/3540407218\">Salvator</a>,
+        ex-<a href=\"https://www.metal-archives.com/bands/Symmetry/53587\">Symmetry</a>,
+        ex-<a href=\"https://www.metal-archives.com/bands/Athena/707\">Athena</a>,
+        ex-<a href=\"https://www.metal-archives.com/bands/Hollow_Haze/74936\">Hollow
+        Haze</a>, ex-<a href=\"https://www.metal-archives.com/bands/Lab%C3%BFrinth/1068\">Labÿrinth</a>,
+        ex-<a href=\"https://www.metal-archives.com/bands/Magic_Kingdom/14327\">Magic
+        Kingdom</a>, ex-<a href=\"https://www.metal-archives.com/bands/Vision_Divine/1394\">Vision
+        Divine</a>, ex-<a href=\"https://www.metal-archives.com/bands/Kamelot/166\">Kamelot</a>
+        (live), ex-J. Storm </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"200\"
+        valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Cristiano_Adacher/2006\"
+        class=\"bold\">Cristiano Adacher</a>\n</td>\n<td>\nVocals&nbsp;(1995) </td>\n</tr>\n<tr
+        class=\"lineupBandsRow\">\n<td colspan=\"2\">\nSee also:\nex-<a href=\"https://www.metal-archives.com/bands/Thundercross/36427\">Thundercross</a>
+        </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Alessandro_Lotta/2019\" class=\"bold\">Alessandro
+        Lotta</a>\n</td>\n<td>\nBass&nbsp;(1998-2002) </td>\n</tr>\n<tr class=\"lineupBandsRow\">\n<td
+        colspan=\"2\">\nSee also:\nex-<a href=\"https://www.metal-archives.com/bands/Wingdom/27729\">Wingdom</a>
+        </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Alex_Holzwarth/2005\" class=\"bold\">Alex
+        Holzwarth</a>\n</td>\n<td>\nDrums, Percussion&nbsp;(2000-2016) </td>\n</tr>\n<tr
+        class=\"lineupBandsRow\">\n<td colspan=\"2\">\nSee also:\n<a href=\"https://www.metal-archives.com/bands/Abracadabra/3540419905\">Abracadabra</a>,
+        <a href=\"https://www.metal-archives.com/bands/Dol_Ammad/6287\">Dol Ammad</a>,
+        <a href=\"https://www.metal-archives.com/bands/Turilli_-_Lione_Rhapsody/3540455673\">Turilli
+        / Lione Rhapsody</a>, ex-<a href=\"https://www.metal-archives.com/bands/Sieges_Even/1443\">Sieges
+        Even</a>, Brutal Godz, ex-<a href=\"https://www.metal-archives.com/bands/Avantasia/331\">Avantasia</a>,
+        ex-<a href=\"https://www.metal-archives.com/bands/Paradox/271\">Paradox</a>,
+        ex-<a href=\"https://www.metal-archives.com/bands/Pergana/3540321680\">Pergana</a>,
+        ex-<a href=\"https://www.metal-archives.com/bands/Serious_Black/3540391171\">Serious
+        Black</a>, ex-<a href=\"https://www.metal-archives.com/bands/Tragul/3540453114\">Tragul</a>,
+        ex-<a href=\"https://www.metal-archives.com/bands/Blind_Guardian/3\">Blind
+        Guardian</a> (live), ex-<a href=\"https://www.metal-archives.com/bands/Kamelot/166\">Kamelot</a>
+        (live), ex-<a href=\"https://www.metal-archives.com/bands/Leaves%27_Eyes/26706\">Leaves'
+        Eyes</a> (live), ex-<a href=\"https://www.metal-archives.com/bands/Luca_Turilli%27s_Rhapsody/3540348143\">Luca
+        Turilli's Rhapsody</a>, ex-Looking-Glass-Self, ex-Val'Paraiso </td>\n</tr>\n<tr
+        class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Patrice_Guers/2004\"
+        class=\"bold\">Patrice Guers</a>\n</td>\n<td>\nBass&nbsp;(2002-2011) </td>\n</tr>\n<tr
+        class=\"lineupBandsRow\">\n<td colspan=\"2\">\nSee also:\n<a href=\"https://www.metal-archives.com/bands/Patrick_Rondat/5953\">Patrick
+        Rondat</a>, <a href=\"https://www.metal-archives.com/bands/Turilli_-_Lione_Rhapsody/3540455673\">Turilli
+        / Lione Rhapsody</a>, ex-<a href=\"https://www.metal-archives.com/bands/Luca_Turilli%27s_Rhapsody/3540348143\">Luca
+        Turilli's Rhapsody</a>, ex-<a href=\"https://www.metal-archives.com/bands/Further_Dimension/107854\">Further
+        Dimension</a>, ex-<a href=\"https://www.metal-archives.com/bands/Consortium_Project/3540318090\">Consortium
+        Project</a> (live), ex-<a href=\"https://www.metal-archives.com/bands/Inner_Visions/30754\">Inner
+        Visions</a> </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Oliver_Holzwarth/10624\" class=\"bold\">Oliver
+        Holzwarth</a>\n</td>\n<td>\nBass&nbsp;(2011-2014) </td>\n</tr>\n<tr class=\"lineupBandsRow\">\n<td
+        colspan=\"2\">\nSee also:\n<a href=\"https://www.metal-archives.com/bands/Abracadabra/3540419905\">Abracadabra</a>,
+        <a href=\"https://www.metal-archives.com/bands/Coldseed/70791\">Coldseed</a>,
+        <a href=\"https://www.metal-archives.com/bands/Tragul/3540453114\">Tragul</a>,
+        ex-<a href=\"https://www.metal-archives.com/bands/Sieges_Even/1443\">Sieges
+        Even</a>, ex-<a href=\"https://www.metal-archives.com/bands/Sodom/97753\">Sodom</a>,
+        Brutal Godz, ex-<a href=\"https://www.metal-archives.com/bands/Paradox/271\">Paradox</a>,
+        ex-<a href=\"https://www.metal-archives.com/bands/Pergana/3540321680\">Pergana</a>,
+        ex-<a href=\"https://www.metal-archives.com/bands/Power_Quest/3111\">Power
+        Quest</a>, ex-<a href=\"https://www.metal-archives.com/bands/Blind_Guardian/3\">Blind
+        Guardian</a> (live), ex-<a href=\"https://www.metal-archives.com/bands/Leaves%27_Eyes/26706\">Leaves'
+        Eyes</a> (live), ex-<a href=\"https://www.metal-archives.com/bands/Tarja/110710\">Tarja</a>
+        (live), ex-<a href=\"https://www.metal-archives.com/bands/Chinchilla/2274\">Chinchilla</a>
+        (live), ex-<a href=\"https://www.metal-archives.com/bands/Demons_%26_Wizards/158\">Demons
+        & Wizards</a> (live), ex-Looking-Glass-Self, ex-Val'Paraiso </td>\n</tr>\n<tr
+        class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Tom_Hess/13595\"
+        class=\"bold\">Tom Hess</a>\n</td>\n<td>\nGuitars&nbsp;(2011-2013) </td>\n</tr>\n<tr
+        class=\"lineupBandsRow\">\n<td colspan=\"2\">\nSee also:\n<a href=\"https://www.metal-archives.com/bands/Hess/2951\">Hess</a>,
+        ex-<a href=\"https://www.metal-archives.com/bands/HolyHell/89870\">HolyHell</a>,
+        ex-Anodized </td>\n</tr>\n\n<tr class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Manuel_Lotter/362651\" class=\"bold\">Manuel
+        Lotter</a>\n</td>\n<td>\nDrums&nbsp;(2016-2020) </td>\n</tr>\n<tr class=\"lineupBandsRow\">\n<td
+        colspan=\"2\">\nSee also:\nex-<a href=\"https://www.metal-archives.com/bands/Farewell_to_Arms/3540319418\">Farewell
+        to Arms</a>, The Bellerophon Project, ex-Emil Bulls </td>\n</tr>\n<tr class=\"lineupHeaders\">\n<td
+        colspan=\"2\" align=\"right\">\nCurrent (Live) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"200\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Leone_Villani_Conti/79884\"
+        class=\"bold\">Leone Villani Conti</a>\n</td>\n<td>\nBass&nbsp;(2020-present)
+        </td>\n</tr>\n<tr class=\"lineupBandsRow\">\n<td colspan=\"2\">\nSee also:\n<a
+        href=\"https://www.metal-archives.com/bands/Earthcry/3540354129\">Earthcry</a>,
+        <a href=\"https://www.metal-archives.com/bands/Trick_or_Treat/44015\">Trick
+        or Treat</a>, ex-<a href=\"https://www.metal-archives.com/bands/Black_Fabula/24831\">Black
+        Fabula</a>, Electric Frankenstein </td>\n</tr>\n<tr class=\"lineupHeaders\">\n<td
+        colspan=\"2\" align=\"right\">\nPast (Live) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"200\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Dominique_Leurquin/3021\"
+        class=\"bold\">Dominique Leurquin</a>\n</td>\n<td>\nGuitars&nbsp;(2000-2010)
+        </td>\n</tr>\n<tr class=\"lineupBandsRow\">\n<td colspan=\"2\">\nSee also:\n<a
+        href=\"https://www.metal-archives.com/bands/Turilli_-_Lione_Rhapsody/3540455673\">Turilli
+        / Lione Rhapsody</a>, ex-<a href=\"https://www.metal-archives.com/bands/Luca_Turilli%27s_Dreamquest/69098\">Luca
+        Turilli's Dreamquest</a>, ex-<a href=\"https://www.metal-archives.com/bands/Luca_Turilli%27s_Rhapsody/3540348143\">Luca
+        Turilli's Rhapsody</a>, ex-<a href=\"https://www.metal-archives.com/bands/Inner_Visions/30754\">Inner
+        Visions</a>, ex-<a href=\"https://www.metal-archives.com/bands/Dream_Child/5326\">Dream
+        Child</a> </td>\n</tr>\n</table>\n</div>\n</div>\n\n<div id=\"band_tab_members_current\">\n<div
+        class=\"ui-tabs-panel-content\">\n<table class=\"display lineupTable\" cellpadding=\"0\"
+        cellspacing=\"0\">\n<tr class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Alex_Staropoli/2003\" class=\"bold\">Alex
+        Staropoli</a>\n</td>\n<td>\nKeyboards, Piano, Harpsichord, Orchestrations,
+        Vocals (choirs)&nbsp;(1995-present) </td>\n</tr>\n<tr class=\"lineupBandsRow\">\n<td
+        colspan=\"2\">\nSee also:\nex-<a href=\"https://www.metal-archives.com/bands/Thundercross/36427\">Thundercross</a>
+        </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Roberto_De_Micheli/250619\"
+        class=\"bold\">Roberto De Micheli</a>\n</td>\n<td>\nGuitars&nbsp;(2011-present)
+        </td>\n</tr>\n<tr class=\"lineupBandsRow\">\n<td colspan=\"2\">\nSee also:\n<a
+        href=\"https://www.metal-archives.com/bands/Sinestesia/76209\">Sinestesia</a>,
+        ex-<a href=\"https://www.metal-archives.com/bands/Steel_Crown/6428\">Steel
+        Crown</a>, ex-<a href=\"https://www.metal-archives.com/bands/Thundercross/36427\">Thundercross</a>
+        </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Alessandro_Sala/250620\" class=\"bold\">Alessandro
+        Sala</a>\n</td>\n<td>\nBass&nbsp;(2015-present) </td>\n</tr>\n<tr class=\"lineupBandsRow\">\n<td
+        colspan=\"2\">\nSee also:\n<a href=\"https://www.metal-archives.com/bands/Saeko/26766\">Saeko</a>,
+        <a href=\"https://www.metal-archives.com/bands/Sinestesia/76209\">Sinestesia</a>
+        </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Giacomo_Voli/311086\" class=\"bold\">Giacomo
+        Voli</a>\n</td>\n<td>\nVocals&nbsp;(2016-present) </td>\n</tr>\n<tr class=\"lineupBandsRow\">\n<td
+        colspan=\"2\">\nSee also:\n<a href=\"https://www.metal-archives.com/bands/Embrace_of_Souls/3540480008\">Embrace
+        of Souls</a>, ex-<a href=\"https://www.metal-archives.com/bands/Sour_Whine/3540271799\">Sour
+        Whine</a>, Giacomo Voli, ex-<a href=\"https://www.metal-archives.com/bands/Teodasia/3540304967\">Teodasia</a>
+        </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Paolo_Marchesich/250621\" class=\"bold\">Paolo
+        Marchesich</a>\n</td>\n<td>\nDrums&nbsp;(2020-present) </td>\n</tr>\n<tr class=\"lineupBandsRow\">\n<td
+        colspan=\"2\">\nSee also:\n<a href=\"https://www.metal-archives.com/bands/Sinestesia/76209\">Sinestesia</a>,
+        <a href=\"https://www.metal-archives.com/bands/A_Day_in_Venice/3540385977\">A
+        Day in Venice</a> (live), ex-<a href=\"https://www.metal-archives.com/bands/Aisling/413\">Aisling</a>
+        </td>\n</tr>\n</table>\n</div>\n</div>\n\n<div id=\"band_tab_members_past\">\n<div
+        class=\"ui-tabs-panel-content\">\n<table class=\"display lineupTable\" cellpadding=\"0\"
+        cellspacing=\"0\">\n<tr class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Andrea_Furlan/2018\" class=\"bold\">Andrea
+        Furlan</a>\n</td>\n<td>\nBass&nbsp;(1995) </td>\n</tr>\n<tr class=\"lineupBandsRow\">\n<td
+        colspan=\"2\">\nSee also:\nex-<a href=\"https://www.metal-archives.com/bands/Thundercross/36427\">Thundercross</a>
+        </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Daniele_Carbonera/2024\" class=\"bold\">Daniele
+        Carbonera</a>\n</td>\n<td>\nDrums&nbsp;(1995-2000) </td>\n</tr>\n<tr class=\"lineupBandsRow\">\n<td
+        colspan=\"2\">\nSee also:\nex-<a href=\"https://www.metal-archives.com/bands/Thundercross/36427\">Thundercross</a>,
+        ex-<a href=\"https://www.metal-archives.com/bands/Nanowar_of_Steel/3540261755\">Nanowar
+        of Steel</a> (live) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"200\"
+        valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Luca_Turilli/2001\"
+        class=\"bold\">Luca Turilli</a>\n</td>\n<td>\nGuitars&nbsp;(1995-2011) </td>\n</tr>\n<tr
+        class=\"lineupBandsRow\">\n<td colspan=\"2\">\nSee also:\n<a href=\"https://www.metal-archives.com/bands/Turilli_-_Lione_Rhapsody/3540455673\">Turilli
+        / Lione Rhapsody</a>, ex-<a href=\"https://www.metal-archives.com/bands/Luca_Turilli/388\">Luca
+        Turilli</a>, ex-<a href=\"https://www.metal-archives.com/bands/Luca_Turilli%27s_Dreamquest/69098\">Luca
+        Turilli's Dreamquest</a>, ex-<a href=\"https://www.metal-archives.com/bands/Luca_Turilli%27s_Rhapsody/3540348143\">Luca
+        Turilli's Rhapsody</a>, ex-<a href=\"https://www.metal-archives.com/bands/Thundercross/36427\">Thundercross</a>
+        </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Fabio_Lione/1999\" class=\"bold\">Fabio
+        Lione</a>\n</td>\n<td>\nVocals&nbsp;(1995-2016) </td>\n</tr>\n<tr class=\"lineupBandsRow\">\n<td
+        colspan=\"2\">\nSee also:\n<a href=\"https://www.metal-archives.com/bands/Angra/538\">Angra</a>,
+        <a href=\"https://www.metal-archives.com/bands/Eternal_Idol/3540420046\">Eternal
+        Idol</a>, <a href=\"https://www.metal-archives.com/bands/Lione_-_Conti/3540436593\">Lione
+        / Conti</a>, <a href=\"https://www.metal-archives.com/bands/Turilli_-_Lione_Rhapsody/3540455673\">Turilli
+        / Lione Rhapsody</a>, ex-<a href=\"https://www.metal-archives.com/bands/Salvator/3540407218\">Salvator</a>,
+        ex-<a href=\"https://www.metal-archives.com/bands/Symmetry/53587\">Symmetry</a>,
+        ex-<a href=\"https://www.metal-archives.com/bands/Athena/707\">Athena</a>,
+        ex-<a href=\"https://www.metal-archives.com/bands/Hollow_Haze/74936\">Hollow
+        Haze</a>, ex-<a href=\"https://www.metal-archives.com/bands/Lab%C3%BFrinth/1068\">Labÿrinth</a>,
+        ex-<a href=\"https://www.metal-archives.com/bands/Magic_Kingdom/14327\">Magic
+        Kingdom</a>, ex-<a href=\"https://www.metal-archives.com/bands/Vision_Divine/1394\">Vision
+        Divine</a>, ex-<a href=\"https://www.metal-archives.com/bands/Kamelot/166\">Kamelot</a>
+        (live), ex-J. Storm </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"200\"
+        valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Cristiano_Adacher/2006\"
+        class=\"bold\">Cristiano Adacher</a>\n</td>\n<td>\nVocals&nbsp;(1995) </td>\n</tr>\n<tr
+        class=\"lineupBandsRow\">\n<td colspan=\"2\">\nSee also:\nex-<a href=\"https://www.metal-archives.com/bands/Thundercross/36427\">Thundercross</a>
+        </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Alessandro_Lotta/2019\" class=\"bold\">Alessandro
+        Lotta</a>\n</td>\n<td>\nBass&nbsp;(1998-2002) </td>\n</tr>\n<tr class=\"lineupBandsRow\">\n<td
+        colspan=\"2\">\nSee also:\nex-<a href=\"https://www.metal-archives.com/bands/Wingdom/27729\">Wingdom</a>
+        </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Alex_Holzwarth/2005\" class=\"bold\">Alex
+        Holzwarth</a>\n</td>\n<td>\nDrums, Percussion&nbsp;(2000-2016) </td>\n</tr>\n<tr
+        class=\"lineupBandsRow\">\n<td colspan=\"2\">\nSee also:\n<a href=\"https://www.metal-archives.com/bands/Abracadabra/3540419905\">Abracadabra</a>,
+        <a href=\"https://www.metal-archives.com/bands/Dol_Ammad/6287\">Dol Ammad</a>,
+        <a href=\"https://www.metal-archives.com/bands/Turilli_-_Lione_Rhapsody/3540455673\">Turilli
+        / Lione Rhapsody</a>, ex-<a href=\"https://www.metal-archives.com/bands/Sieges_Even/1443\">Sieges
+        Even</a>, Brutal Godz, ex-<a href=\"https://www.metal-archives.com/bands/Avantasia/331\">Avantasia</a>,
+        ex-<a href=\"https://www.metal-archives.com/bands/Paradox/271\">Paradox</a>,
+        ex-<a href=\"https://www.metal-archives.com/bands/Pergana/3540321680\">Pergana</a>,
+        ex-<a href=\"https://www.metal-archives.com/bands/Serious_Black/3540391171\">Serious
+        Black</a>, ex-<a href=\"https://www.metal-archives.com/bands/Tragul/3540453114\">Tragul</a>,
+        ex-<a href=\"https://www.metal-archives.com/bands/Blind_Guardian/3\">Blind
+        Guardian</a> (live), ex-<a href=\"https://www.metal-archives.com/bands/Kamelot/166\">Kamelot</a>
+        (live), ex-<a href=\"https://www.metal-archives.com/bands/Leaves%27_Eyes/26706\">Leaves'
+        Eyes</a> (live), ex-<a href=\"https://www.metal-archives.com/bands/Luca_Turilli%27s_Rhapsody/3540348143\">Luca
+        Turilli's Rhapsody</a>, ex-Looking-Glass-Self, ex-Val'Paraiso </td>\n</tr>\n<tr
+        class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Patrice_Guers/2004\"
+        class=\"bold\">Patrice Guers</a>\n</td>\n<td>\nBass&nbsp;(2002-2011) </td>\n</tr>\n<tr
+        class=\"lineupBandsRow\">\n<td colspan=\"2\">\nSee also:\n<a href=\"https://www.metal-archives.com/bands/Patrick_Rondat/5953\">Patrick
+        Rondat</a>, <a href=\"https://www.metal-archives.com/bands/Turilli_-_Lione_Rhapsody/3540455673\">Turilli
+        / Lione Rhapsody</a>, ex-<a href=\"https://www.metal-archives.com/bands/Luca_Turilli%27s_Rhapsody/3540348143\">Luca
+        Turilli's Rhapsody</a>, ex-<a href=\"https://www.metal-archives.com/bands/Further_Dimension/107854\">Further
+        Dimension</a>, ex-<a href=\"https://www.metal-archives.com/bands/Consortium_Project/3540318090\">Consortium
+        Project</a> (live), ex-<a href=\"https://www.metal-archives.com/bands/Inner_Visions/30754\">Inner
+        Visions</a> </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Oliver_Holzwarth/10624\" class=\"bold\">Oliver
+        Holzwarth</a>\n</td>\n<td>\nBass&nbsp;(2011-2014) </td>\n</tr>\n<tr class=\"lineupBandsRow\">\n<td
+        colspan=\"2\">\nSee also:\n<a href=\"https://www.metal-archives.com/bands/Abracadabra/3540419905\">Abracadabra</a>,
+        <a href=\"https://www.metal-archives.com/bands/Coldseed/70791\">Coldseed</a>,
+        <a href=\"https://www.metal-archives.com/bands/Tragul/3540453114\">Tragul</a>,
+        ex-<a href=\"https://www.metal-archives.com/bands/Sieges_Even/1443\">Sieges
+        Even</a>, ex-<a href=\"https://www.metal-archives.com/bands/Sodom/97753\">Sodom</a>,
+        Brutal Godz, ex-<a href=\"https://www.metal-archives.com/bands/Paradox/271\">Paradox</a>,
+        ex-<a href=\"https://www.metal-archives.com/bands/Pergana/3540321680\">Pergana</a>,
+        ex-<a href=\"https://www.metal-archives.com/bands/Power_Quest/3111\">Power
+        Quest</a>, ex-<a href=\"https://www.metal-archives.com/bands/Blind_Guardian/3\">Blind
+        Guardian</a> (live), ex-<a href=\"https://www.metal-archives.com/bands/Leaves%27_Eyes/26706\">Leaves'
+        Eyes</a> (live), ex-<a href=\"https://www.metal-archives.com/bands/Tarja/110710\">Tarja</a>
+        (live), ex-<a href=\"https://www.metal-archives.com/bands/Chinchilla/2274\">Chinchilla</a>
+        (live), ex-<a href=\"https://www.metal-archives.com/bands/Demons_%26_Wizards/158\">Demons
+        & Wizards</a> (live), ex-Looking-Glass-Self, ex-Val'Paraiso </td>\n</tr>\n<tr
+        class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Tom_Hess/13595\"
+        class=\"bold\">Tom Hess</a>\n</td>\n<td>\nGuitars&nbsp;(2011-2013) </td>\n</tr>\n<tr
+        class=\"lineupBandsRow\">\n<td colspan=\"2\">\nSee also:\n<a href=\"https://www.metal-archives.com/bands/Hess/2951\">Hess</a>,
+        ex-<a href=\"https://www.metal-archives.com/bands/HolyHell/89870\">HolyHell</a>,
+        ex-Anodized </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Manuel_Lotter/362651\" class=\"bold\">Manuel
+        Lotter</a>\n</td>\n<td>\nDrums&nbsp;(2016-2020) </td>\n</tr>\n<tr class=\"lineupBandsRow\">\n<td
+        colspan=\"2\">\nSee also:\nex-<a href=\"https://www.metal-archives.com/bands/Farewell_to_Arms/3540319418\">Farewell
+        to Arms</a>, The Bellerophon Project, ex-Emil Bulls </td>\n</tr>\n</table>\n</div>\n</div>\n\n<div
+        id=\"band_tab_members_live\">\n<div class=\"ui-tabs-panel-content\">\n<table
+        class=\"display lineupTable\" cellpadding=\"0\" cellspacing=\"0\">\n<tr class=\"lineupHeaders\">\n<td
+        colspan=\"2\" align=\"right\">\nCurrent </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"200\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Leone_Villani_Conti/79884\"
+        class=\"bold\">Leone Villani Conti</a>\n</td>\n<td>\nBass&nbsp;(2020-present)
+        </td>\n</tr>\n<tr class=\"lineupBandsRow\">\n<td colspan=\"2\">\nSee also:\n<a
+        href=\"https://www.metal-archives.com/bands/Earthcry/3540354129\">Earthcry</a>,
+        <a href=\"https://www.metal-archives.com/bands/Trick_or_Treat/44015\">Trick
+        or Treat</a>, ex-<a href=\"https://www.metal-archives.com/bands/Black_Fabula/24831\">Black
+        Fabula</a>, Electric Frankenstein </td>\n</tr>\n<tr class=\"lineupHeaders\">\n<td
+        colspan=\"2\" align=\"right\">\nPast </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"200\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Dominique_Leurquin/3021\"
+        class=\"bold\">Dominique Leurquin</a>\n</td>\n<td>\nGuitars&nbsp;(2000-2010)
+        </td>\n</tr>\n<tr class=\"lineupBandsRow\">\n<td colspan=\"2\">\nSee also:\n<a
+        href=\"https://www.metal-archives.com/bands/Turilli_-_Lione_Rhapsody/3540455673\">Turilli
+        / Lione Rhapsody</a>, ex-<a href=\"https://www.metal-archives.com/bands/Luca_Turilli%27s_Dreamquest/69098\">Luca
+        Turilli's Dreamquest</a>, ex-<a href=\"https://www.metal-archives.com/bands/Luca_Turilli%27s_Rhapsody/3540348143\">Luca
+        Turilli's Rhapsody</a>, ex-<a href=\"https://www.metal-archives.com/bands/Inner_Visions/30754\">Inner
+        Visions</a>, ex-<a href=\"https://www.metal-archives.com/bands/Dream_Child/5326\">Dream
+        Child</a> </td>\n</tr>\n</table>\n</div>\n</div>\n</div>\n</div>\n</div>\n\n<div
+        id=\"auditTrail\">\n<table>\n<tr>\n<td>Added by: <a href=\"https://www.metal-archives.com/users/Morrigan\"
+        class=\"profileMenu\">Morrigan</a></td>\n<td align=\"right\">Modified by:
+        <a href=\"https://www.metal-archives.com/users/Andrago_Kilmet\" class=\"profileMenu\">Andrago_Kilmet</a></td>\n</tr>\n<tr>\n<td>Added
+        on: 2002-07-12 01:29:26</td>\n<td align=\"right\">Last modified on: 2021-04-01
+        11:59:08</td>\n</tr>\n<tr>\n<td valign=\"top\">\n&nbsp;\n</td>\n<td align=\"right\"
+        valign=\"top\">\n</td>\n</tr>\n</table>\n</div>\n</div>\n<div id=\"readMoreDialog\"
+        title=\"Additional notes\" class=\"displayNone\"> </div>\n</div>\n</div>\n<script
+        src=\"https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js\"
+        data-cf-settings=\"7ae180ae15b15d09fac35fe6-|49\" defer=\"\"></script></body>\n</html>\n"
+  recorded_at: Sun, 11 Apr 2021 12:54:13 GMT
+- request:
+    method: get
+    uri: https://ma.cache.headbang.re/band/read-more/id/32
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - MetalArchivesGemTestSuite/3.2.0 (user@example.com)
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - ma.cache.headbang.re
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+      Cache-Control:
+      - max-age=2592000
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Ray:
+      - 63a39d343b0006fd-LHR
+      Cf-Request-Id:
+      - '093a20949f000006fdc70ba000000001'
+      Content-Security-Policy:
+      - frame-ancestors 'self'
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Sun, 11 Apr 2021 12:50:51 GMT
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Expires:
+      - Tue, 11 May 2021 12:50:51 GMT
+      Nel:
+      - '{"max_age":604800,"report_to":"cf-nel"}'
+      Report-To:
+      - '{"group":"cf-nel","endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=A0DpaKbaUw6gOZJ%2BAyBGhQOgQbUMNeyhWS9lKIUBh7Pa1CB7KaHysM4t9ea3GiWTgagkHl10h%2FBCk0EKwKcPUj5cy8w%2FGzzgv0nVrNuBVy5AHHUhc0Oq"}],"max_age":604800}'
+      Server:
+      - nginx
+      Vary:
+      - Accept-Encoding,User-Agent
+      X-Cache-Status:
+      - HIT
+      X-Frame-Options:
+      - SAMEORIGIN
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "Not to be confused with the Genova band <b>Rhapsody</b>, who released
+        a demo tape in 1987.<br />\r\n<br />\r\nFormed in 1993 as <a href=\"https://www.metal-archives.com/bands/Thundercross/36427\">Thundercross</a>,
+        then changed the name to Rhapsody in 1995. They were forced to change their
+        name again, this time to Rhapsody of Fire, due to copyright problems on July
+        14th, 2006.<br />\r\n<br />\r\nBefore <a href=\"https://www.metal-archives.com/artists/Cristiano_Adacher/2006\">Cristiano
+        Adacher</a>'s arrival, <a href=\"https://www.metal-archives.com/artists/Luca_Turilli/2001\">Luca
+        Turilli</a> was also the singer of the band. <br />\r\n<br />\r\n<a href=\"https://www.metal-archives.com/artists/Thunderforce/3883\">Thunderforce</a>
+        played drums from <i>Dawn of Victory</i> to <i>Power of the Dragonflame</i>,
+        but for contractual obligations his real identity could not be revealed. There
+        was also speculation that <a href=\"https://www.metal-archives.com/artists/Thunderforce/3883\">Thunderforce</a>
+        did not actually exist and that the drums on these albums were programmed,
+        but the band always denied this. <br />\r\n<br />\r\n<a href=\"https://www.metal-archives.com/artists/Alex_Holzwarth/2005\">Alex
+        Holzwarth</a>, who played drums in live shows, figured in the official line-up
+        on the CDs. Holzwarth played all drums from <i>The Dark Secret</i> EP until
+        his departure after <i>Into the Legend</i>.<br />\r\n<br />\r\n<a href=\"https://www.metal-archives.com/artists/Dominique_Leurquin/3021\">Dominique
+        Leurquin</a> played live with Rhapsody from February 2000 until 2011 and later
+        performed the rhythm guitar parts on albums, but was only ever considered
+        a 'special guest' of the band.<br />\r\n<br />\r\nRhapsody's baroque recorder
+        parts have always been played by Alex Staropoli's brother, <a href=\"https://www.metal-archives.com/artists/Manuel_Staropoli/2099\">Manuel
+        Staropoli</a>. On Rhapsody's earlier releases, songs often contained narration
+        by <a href=\"https://www.metal-archives.com/artists/Jay_Lansford/2090\">Jay
+        Lansford</a>. Starting with <i>The Dark Secret</i> EP, professional actors,
+        notably including film veteran <a href=\"https://www.metal-archives.com/artists/Christopher_Lee/3706\">Christopher
+        Lee</a>, have been used instead. Lee has also performed as co-vocalist on
+        a few b-sides.<br />\r\n<br />\r\nRhapsody's management team included <a href=\"https://www.metal-archives.com/bands/Manowar/83\">Manowar</a>'s
+        <a href=\"https://www.metal-archives.com/artists/Joey_DeMaio/8434\">Joey DeMaio</a>
+        after they signed to his <a href=\"https://www.metal-archives.com/labels/Magic_Circle_Music/450\">Magic
+        Circle Music</a> label, but they were later involved in a long-running legal
+        dispute that brought all band activity to a halt between 2007 and 2009.<br
+        />\r\n<br />\r\n<a href=\"https://www.metal-archives.com/artists/Luca_Turilli/2001\">Luca
+        Turilli</a> and <a href=\"https://www.metal-archives.com/artists/Patrice_Guers/2004\">Patrice
+        Guers</a> left Rhapsody of Fire on good terms in 2011 and announced in November
+        2011 that they would continue as <a href=\"https://www.metal-archives.com/bands/Luca_Turilli%27s_Rhapsody/3540348143\">Luca
+        Turilli's Rhapsody</a> along with <a href=\"https://www.metal-archives.com/artists/Dominique_Leurquin/3021\">Dominique
+        Leurquin</a>. Both versions claim the entire band history up until the split
+        as their own. <a href=\"https://www.metal-archives.com/artists/Alex_Holzwarth/2005\">Alex
+        Holzwarth</a> was initially a member of both bands, but left Luca Turilli's
+        Rhapsody after the recording of their first album.<br />\r\n<br />\r\n<a href=\"https://www.metal-archives.com/labels/Nuclear_Blast/2\">Nuclear
+        Blast</a> dropped Rhapsody of Fire after the split and continued with Luca
+        Turilli's Rhapsody only. After one year, in December 2012, the band then signed
+        to the German label <a href=\"https://www.metal-archives.com/labels/AFM_Records/17\">AFM
+        Records</a>.<br />\r\n<br />\r\nIn 2016, <a href=\"https://www.metal-archives.com/artists/Fabio_Lione/1999\">Fabio
+        Lione</a>, <a href=\"https://www.metal-archives.com/artists/Luca_Turilli/2001\">Luca
+        Turilli</a>, <a href=\"https://www.metal-archives.com/artists/Dominique_Leurquin/3021\">Dominique
+        Leurquin</a>, <a href=\"https://www.metal-archives.com/artists/Patrice_Guers/2004\">Patrice
+        Guers</a> and <a href=\"https://www.metal-archives.com/artists/Alex_Holzwarth/2005\">Alex
+        Holzwarth</a> announced the reunion of the <i>Symphony of Enchanted Lands
+        II - The Dark Secret</i> line-up of Rhapsody and the relevant farewell tour
+        of the band in 2017. <a href=\"https://www.metal-archives.com/artists/Alex_Staropoli/2003\">Alex
+        Staropoli</a> decided to not take part in this reunion/tour.<br />\r\n<br
+        />\r\n<b>Compilation appearances:</b><br />\r\n- \"The Magic of the Wizard's
+        Dream\" on <i>Metal Hammer - Battle Metal VII</i> (Metal Hammer, 2008)<br
+        />\r\n- \"Guardians\" on <i>The Keepers of Jericho - A Tribute to <a href=\"https://www.metal-archives.com/bands/Helloween/159\">Helloween</a></i>
+        (<a href=\"https://www.metal-archives.com/labels/Arise_Records/237\">Arise
+        Records</a>)"
+  recorded_at: Sun, 11 Apr 2021 12:54:13 GMT
+- request:
+    method: get
+    uri: https://ma.cache.headbang.re/band/ajax-recommendations/id/32?showMoreSimilar=1
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - MetalArchivesGemTestSuite/3.2.0 (user@example.com)
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - ma.cache.headbang.re
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+      Cache-Control:
+      - max-age=2592000
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Ray:
+      - 63e43a6aecf0fa8c-AMS
+      Cf-Request-Id:
+      - '096282d6d60000fa8cb10d3000000001'
+      Content-Security-Policy:
+      - frame-ancestors 'self'
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Sun, 11 Apr 2021 12:50:52 GMT
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Expires:
+      - Tue, 11 May 2021 12:50:52 GMT
+      Nel:
+      - '{"max_age":604800,"report_to":"cf-nel"}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=CvySnn1EVAo83wtAUwTpN3zvRQ1mp3WUuwpaU5IfQD%2BATHLydaTwjAIyZTfUXRCViZG5V3SyrpYSGnK5s2rMTw4PKNf7lbrtMwfvotXwBQGGPmyOAmUJ"}],"max_age":604800,"group":"cf-nel"}'
+      Server:
+      - nginx
+      Vary:
+      - Accept-Encoding,User-Agent
+      X-Cache-Status:
+      - HIT
+      X-Frame-Options:
+      - SAMEORIGIN
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "<script type=\"df2dd18f69d183532463f7d6-text/javascript\" src=\"https://www.metal-archives.com/js/jquery/jquery.dataTables.min.js\"></script>\n<script
+        type=\"df2dd18f69d183532463f7d6-text/javascript\">\n\n// Prepare band recommendation
+        dialog\n$(document).ready(function() {\n\t$(\".no-js\").removeClass(\"no-js\");\n\t$('#similarBandSelection').dialog({
+        autoOpen: false, width: 600, height: 500, modal: true, overlay: { opacity:
+        0.5, background: 'white'} });\n\t$('#bandSearch').ajaxForm({ target: '#bandSearchResults',
+        beforeSubmit: toggleLoading, success: toggleLoading});\n});\n\n</script>\n<div
+        id=\"band_simartists\">\n<div class=\"tool_strip top right writeAction\">\n</div>\n</div>\n<div
+        class=\"ui-tabs-panel-content block_spacer_top_36\">\n<table id=\"artist_list\"
+        class=\"display\" cellpadding=\"0\" cellspacing=\"0\">\n<thead>\n<tr>\n<th>Name</th>\n<th
+        width=\"82\">Country</th>\n<th>Genre</th>\n<th>Score</th>\n</tr>\n</thead>\n<tbody>\n<tr
+        id=\"recRow_3540348143\">\n<td><a href=\"https://www.metal-archives.com/bands/Luca_Turilli%27s_Rhapsody/3540348143\">Luca
+        Turilli's Rhapsody</a></td>\n<td>Italy</td>\n<td>Symphonic Power Metal</td>\n<td><span
+        id=\"score_3540348143\">162 </span></td>\n</tr>\n<tr id=\"recRow_388\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Luca_Turilli/388\">Luca Turilli</a></td>\n<td>Italy</td>\n<td>Symphonic
+        Power Metal</td>\n<td><span id=\"score_388\">155 </span></td>\n</tr>\n<tr
+        id=\"recRow_568\">\n<td><a href=\"https://www.metal-archives.com/bands/Dark_Moor/568\">Dark
+        Moor</a></td>\n<td>Spain</td>\n<td>Power Metal</td>\n<td><span id=\"score_568\">90
+        </span></td>\n</tr>\n<tr id=\"recRow_3540257762\">\n<td><a href=\"https://www.metal-archives.com/bands/Ancient_Bards/3540257762\">Ancient
+        Bards</a></td>\n<td>Italy</td>\n<td>Symphonic Power Metal</td>\n<td><span
+        id=\"score_3540257762\">88 </span></td>\n</tr>\n<tr id=\"recRow_3\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Blind_Guardian/3\">Blind Guardian</a></td>\n<td>Germany</td>\n<td>Speed
+        Metal (early); Power Metal (later)</td>\n<td><span id=\"score_3\">86 </span></td>\n</tr>\n<tr
+        id=\"recRow_3540361647\">\n<td><a href=\"https://www.metal-archives.com/bands/Gloryhammer/3540361647\">Gloryhammer</a></td>\n<td>United
+        Kingdom</td>\n<td>Symphonic Power Metal</td>\n<td><span id=\"score_3540361647\">85
+        </span></td>\n</tr>\n<tr id=\"recRow_122302\">\n<td><a href=\"https://www.metal-archives.com/bands/Pathfinder/122302\">Pathfinder</a></td>\n<td>Poland</td>\n<td>Symphonic
+        Power Metal</td>\n<td><span id=\"score_122302\">79 </span></td>\n</tr>\n<tr
+        id=\"recRow_3540382043\">\n<td><a href=\"https://www.metal-archives.com/bands/Twilight_Force/3540382043\">Twilight
+        Force</a></td>\n<td>Sweden</td>\n<td>Symphonic Power Metal</td>\n<td><span
+        id=\"score_3540382043\">77 </span></td>\n</tr>\n<tr id=\"recRow_8051\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Fairyland/8051\">Fairyland</a></td>\n<td>France</td>\n<td>Symphonic
+        Power Metal</td>\n<td><span id=\"score_8051\">70 </span></td>\n</tr>\n<tr
+        id=\"recRow_331\">\n<td><a href=\"https://www.metal-archives.com/bands/Avantasia/331\">Avantasia</a></td>\n<td>Germany</td>\n<td>Symphonic
+        Power Metal</td>\n<td><span id=\"score_331\">61 </span></td>\n</tr>\n<tr id=\"recRow_538\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Angra/538\">Angra</a></td>\n<td>Brazil</td>\n<td>Power/Progressive
+        Metal</td>\n<td><span id=\"score_538\">58 </span></td>\n</tr>\n<tr id=\"recRow_3540365280\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Christopher_Lee/3540365280\">Christopher
+        Lee</a></td>\n<td>United Kingdom</td>\n<td>Symphonic Heavy/Power Metal, Symphonic
+        Rock, Various</td>\n<td><span id=\"score_3540365280\">57 </span></td>\n</tr>\n<tr
+        id=\"recRow_2000\">\n<td><a href=\"https://www.metal-archives.com/bands/Dragonland/2000\">Dragonland</a></td>\n<td>Sweden</td>\n<td>Symphonic
+        Power Metal</td>\n<td><span id=\"score_2000\">38 </span></td>\n</tr>\n<tr
+        id=\"recRow_3540455673\">\n<td><a href=\"https://www.metal-archives.com/bands/Turilli_-_Lione_Rhapsody/3540455673\">Turilli
+        / Lione Rhapsody</a></td>\n<td>Italy</td>\n<td>Symphonic Power Metal</td>\n<td><span
+        id=\"score_3540455673\">38 </span></td>\n</tr>\n<tr id=\"recRow_2037\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Thy_Majestie/2037\">Thy Majestie</a></td>\n<td>Italy</td>\n<td>Symphonic
+        Power Metal</td>\n<td><span id=\"score_2037\">35 </span></td>\n</tr>\n<tr
+        id=\"recRow_35916\">\n<td><a href=\"https://www.metal-archives.com/bands/Derdian/35916\">Derdian</a></td>\n<td>Italy</td>\n<td>Power
+        Metal</td>\n<td><span id=\"score_35916\">34 </span></td>\n</tr>\n<tr id=\"recRow_39\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Nightwish/39\">Nightwish</a></td>\n<td>Finland</td>\n<td>Symphonic
+        Power Metal (early); Symphonic Metal (later)</td>\n<td><span id=\"score_39\">30
+        </span></td>\n</tr>\n<tr id=\"recRow_1394\">\n<td><a href=\"https://www.metal-archives.com/bands/Vision_Divine/1394\">Vision
+        Divine</a></td>\n<td>Italy</td>\n<td>Power/Progressive Metal</td>\n<td><span
+        id=\"score_1394\">30 </span></td>\n</tr>\n<tr id=\"recRow_628\">\n<td><a href=\"https://www.metal-archives.com/bands/Holy_Knights/628\">Holy
+        Knights</a></td>\n<td>Italy</td>\n<td>Power Metal</td>\n<td><span id=\"score_628\">29
+        </span></td>\n</tr>\n<tr id=\"recRow_14327\">\n<td><a href=\"https://www.metal-archives.com/bands/Magic_Kingdom/14327\">Magic
+        Kingdom</a></td>\n<td>Belgium</td>\n<td>Power Metal</td>\n<td><span id=\"score_14327\">29
+        </span></td>\n</tr>\n<tr id=\"recRow_61553\">\n<td><a href=\"https://www.metal-archives.com/bands/Opera_Magna/61553\">Opera
+        Magna</a></td>\n<td>Spain</td>\n<td>Power Metal</td>\n<td><span id=\"score_61553\">26
+        </span></td>\n</tr>\n<tr id=\"recRow_3540290774\">\n<td><a href=\"https://www.metal-archives.com/bands/N%C3%BAmenor/3540290774\">Númenor</a></td>\n<td>Serbia</td>\n<td>Epic
+        Black Metal (early); Symphonic Black/Power Metal (later)</td>\n<td><span id=\"score_3540290774\">25
+        </span></td>\n</tr>\n<tr id=\"recRow_603\">\n<td><a href=\"https://www.metal-archives.com/bands/Freedom_Call/603\">Freedom
+        Call</a></td>\n<td>Germany</td>\n<td>Power Metal</td>\n<td><span id=\"score_603\">22
+        </span></td>\n</tr>\n<tr id=\"recRow_2289\">\n<td><a href=\"https://www.metal-archives.com/bands/DragonForce/2289\">DragonForce</a></td>\n<td>United
+        Kingdom</td>\n<td>Power Metal</td>\n<td><span id=\"score_2289\">21 </span></td>\n</tr>\n<tr
+        id=\"recRow_2697\">\n<td><a href=\"https://www.metal-archives.com/bands/Celesty/2697\">Celesty</a></td>\n<td>Finland</td>\n<td>Epic
+        Power Metal</td>\n<td><span id=\"score_2697\">18 </span></td>\n</tr>\n<tr
+        id=\"recRow_19417\">\n<td><a href=\"https://www.metal-archives.com/bands/Galneryus/19417\">Galneryus</a></td>\n<td>Japan</td>\n<td>Neoclassical
+        Power Metal</td>\n<td><span id=\"score_19417\">18 </span></td>\n</tr>\n<tr
+        id=\"recRow_20997\">\n<td><a href=\"https://www.metal-archives.com/bands/Wisdom/20997\">Wisdom</a></td>\n<td>Hungary</td>\n<td>Power
+        Metal</td>\n<td><span id=\"score_20997\">18 </span></td>\n</tr>\n<tr id=\"recRow_172\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Symphony_X/172\">Symphony X</a></td>\n<td>United
+        States</td>\n<td>Progressive Power Metal</td>\n<td><span id=\"score_172\">17
+        </span></td>\n</tr>\n<tr id=\"recRow_3540420984\">\n<td><a href=\"https://www.metal-archives.com/bands/Peter_Crowley%27s_Fantasy_Dream/3540420984\">Peter
+        Crowley's Fantasy Dream</a></td>\n<td>France</td>\n<td>Symphonic Power Metal,
+        Classical/Film Score</td>\n<td><span id=\"score_3540420984\">17 </span></td>\n</tr>\n<tr
+        id=\"recRow_166\">\n<td><a href=\"https://www.metal-archives.com/bands/Kamelot/166\">Kamelot</a></td>\n<td>United
+        States</td>\n<td>Progressive/Melodic Power Metal</td>\n<td><span id=\"score_166\">16
+        </span></td>\n</tr>\n<tr id=\"recRow_216\">\n<td><a href=\"https://www.metal-archives.com/bands/Stratovarius/216\">Stratovarius</a></td>\n<td>Finland</td>\n<td>Melodic
+        Power Metal</td>\n<td><span id=\"score_216\">15 </span></td>\n</tr>\n<tr id=\"recRow_3540334638\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Bane_of_Winterstorm/3540334638\">Bane
+        of Winterstorm</a></td>\n<td>Australia</td>\n<td>Symphonic Power Metal</td>\n<td><span
+        id=\"score_3540334638\">14 </span></td>\n</tr>\n<tr id=\"recRow_25032\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Aethra/25032\">Aethra</a></td>\n<td>Mexico</td>\n<td>Symphonic
+        Power Metal</td>\n<td><span id=\"score_25032\">14 </span></td>\n</tr>\n<tr
+        id=\"recRow_3540270698\">\n<td><a href=\"https://www.metal-archives.com/bands/Dragon_Guardian/3540270698\">Dragon
+        Guardian</a></td>\n<td>Japan</td>\n<td>Symphonic Power Metal</td>\n<td><span
+        id=\"score_3540270698\">13 </span></td>\n</tr>\n<tr id=\"recRow_3540352830\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Fogalord/3540352830\">Fogalord</a></td>\n<td>Italy</td>\n<td>Epic
+        Symphonic Power Metal</td>\n<td><span id=\"score_3540352830\">13 </span></td>\n</tr>\n<tr
+        id=\"recRow_3540315383\">\n<td><a href=\"https://www.metal-archives.com/bands/Wind_Rose/3540315383\">Wind
+        Rose</a></td>\n<td>Italy</td>\n<td>Progressive/Power Metal (early); Folk/Power
+        Metal (later)</td>\n<td><span id=\"score_3540315383\">11 </span></td>\n</tr>\n<tr
+        id=\"recRow_25764\">\n<td><a href=\"https://www.metal-archives.com/bands/DivineFire/25764\">DivineFire</a></td>\n<td>Sweden</td>\n<td>Power
+        Metal</td>\n<td><span id=\"score_25764\">11 </span></td>\n</tr>\n<tr id=\"recRow_36427\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Thundercross/36427\">Thundercross</a></td>\n<td>Italy</td>\n<td>Symphonic
+        Power Metal</td>\n<td><span id=\"score_36427\">11 </span></td>\n</tr>\n<tr
+        id=\"recRow_3540288737\">\n<td><a href=\"https://www.metal-archives.com/bands/Operadyse/3540288737\">Operadyse</a></td>\n<td>France</td>\n<td>Symphonic
+        Power Metal</td>\n<td><span id=\"score_3540288737\">11 </span></td>\n</tr>\n<tr
+        id=\"recRow_221\">\n<td><a href=\"https://www.metal-archives.com/bands/Gamma_Ray/221\">Gamma
+        Ray</a></td>\n<td>Germany</td>\n<td>Power/Speed Metal</td>\n<td><span id=\"score_221\">10
+        </span></td>\n</tr>\n<tr id=\"recRow_3103\">\n<td><a href=\"https://www.metal-archives.com/bands/Insania/3103\">Insania</a></td>\n<td>Sweden</td>\n<td>Power
+        Metal</td>\n<td><span id=\"score_3103\">10 </span></td>\n</tr>\n<tr id=\"recRow_192\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Sonata_Arctica/192\">Sonata Arctica</a></td>\n<td>Finland</td>\n<td>Power
+        Metal</td>\n<td><span id=\"score_192\">9 </span></td>\n</tr>\n<tr id=\"recRow_69098\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Luca_Turilli%27s_Dreamquest/69098\">Luca
+        Turilli's Dreamquest</a></td>\n<td>Italy</td>\n<td>Symphonic Electronic Metal</td>\n<td><span
+        id=\"score_69098\">9 </span></td>\n</tr>\n<tr id=\"recRow_97986\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Versailles/97986\">Versailles</a></td>\n<td>Japan</td>\n<td>Symphonic/Neoclassical
+        Power Metal</td>\n<td><span id=\"score_97986\">9 </span></td>\n</tr>\n<tr
+        id=\"recRow_3111\">\n<td><a href=\"https://www.metal-archives.com/bands/Power_Quest/3111\">Power
+        Quest</a></td>\n<td>United Kingdom</td>\n<td>Melodic Power Metal</td>\n<td><span
+        id=\"score_3111\">9 </span></td>\n</tr>\n<tr id=\"recRow_3540330371\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Winterage/3540330371\">Winterage</a></td>\n<td>Italy</td>\n<td>Symphonic
+        Power Metal</td>\n<td><span id=\"score_3540330371\">9 </span></td>\n</tr>\n<tr
+        id=\"recRow_41634\">\n<td><a href=\"https://www.metal-archives.com/bands/Aquaria/41634\">Aquaria</a></td>\n<td>Brazil</td>\n<td>Symphonic
+        Power Metal</td>\n<td><span id=\"score_41634\">8 </span></td>\n</tr>\n<tr
+        id=\"recRow_3540452613\">\n<td><a href=\"https://www.metal-archives.com/bands/Majestica/3540452613\">Majestica</a></td>\n<td>Sweden</td>\n<td>Symphonic
+        Power Metal</td>\n<td><span id=\"score_3540452613\">8 </span></td>\n</tr>\n<tr
+        id=\"recRow_3031\">\n<td><a href=\"https://www.metal-archives.com/bands/Dionysus/3031\">Dionysus</a></td>\n<td>Sweden</td>\n<td>Power
+        Metal</td>\n<td><span id=\"score_3031\">7 </span></td>\n</tr>\n<tr id=\"recRow_3540350226\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/5150/3540350226\">5150</a></td>\n<td>Japan</td>\n<td>Symphonic
+        Power/Black Metal</td>\n<td><span id=\"score_3540350226\">7 </span></td>\n</tr>\n<tr
+        id=\"recRow_7566\">\n<td><a href=\"https://www.metal-archives.com/bands/Iron_Mask/7566\">Iron
+        Mask</a></td>\n<td>Belgium</td>\n<td>Power Metal</td>\n<td><span id=\"score_7566\">7
+        </span></td>\n</tr>\n<tr id=\"recRow_3540414407\">\n<td><a href=\"https://www.metal-archives.com/bands/Time_Shadow/3540414407\">Time
+        Shadow</a></td>\n<td>Ukraine</td>\n<td>Power Metal</td>\n<td><span id=\"score_3540414407\">7
+        </span></td>\n</tr>\n<tr id=\"recRow_49558\">\n<td><a href=\"https://www.metal-archives.com/bands/Masterpiece/49558\">Masterpiece</a></td>\n<td>Japan</td>\n<td>Symphonic
+        Power Metal</td>\n<td><span id=\"score_49558\">7 </span></td>\n</tr>\n<tr
+        id=\"recRow_39186\">\n<td><a href=\"https://www.metal-archives.com/bands/Lorenguard/39186\">Lorenguard</a></td>\n<td>United
+        States</td>\n<td>Symphonic Power Metal</td>\n<td><span id=\"score_39186\">6
+        </span></td>\n</tr>\n<tr id=\"recRow_755\">\n<td><a href=\"https://www.metal-archives.com/bands/Domine/755\">Domine</a></td>\n<td>Italy</td>\n<td>Power
+        Metal</td>\n<td><span id=\"score_755\">6 </span></td>\n</tr>\n<tr id=\"recRow_1618\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Skylark/1618\">Skylark</a></td>\n<td>Italy</td>\n<td>Melodic/Symphonic
+        Power Metal</td>\n<td><span id=\"score_1618\">6 </span></td>\n</tr>\n<tr id=\"recRow_1752\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Apocalyptica/1752\">Apocalyptica</a></td>\n<td>Finland</td>\n<td>Symphonic
+        Heavy Metal/Rock</td>\n<td><span id=\"score_1752\">6 </span></td>\n</tr>\n<tr
+        id=\"recRow_1068\">\n<td><a href=\"https://www.metal-archives.com/bands/Lab%C3%BFrinth/1068\">Labÿrinth</a></td>\n<td>Italy</td>\n<td>Progressive
+        Power Metal</td>\n<td><span id=\"score_1068\">6 </span></td>\n</tr>\n<tr id=\"recRow_377\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Lost_Horizon/377\">Lost Horizon</a></td>\n<td>Sweden</td>\n<td>Power
+        Metal</td>\n<td><span id=\"score_377\">6 </span></td>\n</tr>\n<tr id=\"recRow_2282\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Thunderstone/2282\">Thunderstone</a></td>\n<td>Finland</td>\n<td>Power
+        Metal</td>\n<td><span id=\"score_2282\">5 </span></td>\n</tr>\n<tr id=\"recRow_3540364667\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Timo_Tolkki%27s_Avalon/3540364667\">Timo
+        Tolkki's Avalon</a></td>\n<td>Finland</td>\n<td>Symphonic Power Metal</td>\n<td><span
+        id=\"score_3540364667\">5 </span></td>\n</tr>\n<tr id=\"recRow_1073\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Forgotten_Tales/1073\">Forgotten
+        Tales</a></td>\n<td>Canada</td>\n<td>Power Metal</td>\n<td><span id=\"score_1073\">5
+        </span></td>\n</tr>\n<tr id=\"recRow_3540436490\">\n<td><a href=\"https://www.metal-archives.com/bands/Frozen_Crown/3540436490\">Frozen
+        Crown</a></td>\n<td>Italy</td>\n<td>Power Metal</td>\n<td><span id=\"score_3540436490\">5
+        </span></td>\n</tr>\n<tr id=\"recRow_3540436593\">\n<td><a href=\"https://www.metal-archives.com/bands/Lione_-_Conti/3540436593\">Lione
+        / Conti</a></td>\n<td>Italy</td>\n<td>Power Metal</td>\n<td><span id=\"score_3540436593\">5
+        </span></td>\n</tr>\n<tr id=\"recRow_65481\">\n<td><a href=\"https://www.metal-archives.com/bands/Sound_Storm/65481\">Sound
+        Storm</a></td>\n<td>Italy</td>\n<td>Symphonic Power Metal</td>\n<td><span
+        id=\"score_65481\">5 </span></td>\n</tr>\n<tr id=\"recRow_3540375998\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Astral_Domine/3540375998\">Astral
+        Domine</a></td>\n<td>Italy</td>\n<td>Symphonic Power Metal</td>\n<td><span
+        id=\"score_3540375998\">5 </span></td>\n</tr>\n<tr id=\"recRow_3540420046\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Eternal_Idol/3540420046\">Eternal
+        Idol</a></td>\n<td>Italy</td>\n<td>Symphonic Power Metal</td>\n<td><span id=\"score_3540420046\">5
+        </span></td>\n</tr>\n<tr id=\"recRow_3540465789\">\n<td><a href=\"https://www.metal-archives.com/bands/Fellowship/3540465789\">Fellowship</a></td>\n<td>United
+        Kingdom</td>\n<td>Power Metal</td>\n<td><span id=\"score_3540465789\">5 </span></td>\n</tr>\n<tr
+        id=\"recRow_2779\">\n<td><a href=\"https://www.metal-archives.com/bands/Kaledon/2779\">Kaledon</a></td>\n<td>Italy</td>\n<td>Power
+        Metal</td>\n<td><span id=\"score_2779\">5 </span></td>\n</tr>\n<tr id=\"recRow_3540481050\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Marco_Garau%27s_Magic_Opera/3540481050\">Marco
+        Garau's Magic Opera</a></td>\n<td>Italy</td>\n<td>Symphonic Power Metal</td>\n<td><span
+        id=\"score_3540481050\">5 </span></td>\n</tr>\n<tr id=\"recRow_74\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Falconer/74\">Falconer</a></td>\n<td>Sweden</td>\n<td>Folk/Power
+        Metal</td>\n<td><span id=\"score_74\">4 </span></td>\n</tr>\n<tr id=\"recRow_159\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Helloween/159\">Helloween</a></td>\n<td>Germany</td>\n<td>Power/Speed
+        Metal</td>\n<td><span id=\"score_159\">4 </span></td>\n</tr>\n<tr id=\"recRow_37615\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Andromeda/37615\">Andromeda</a></td>\n<td>Guatemala</td>\n<td>Power
+        Metal</td>\n<td><span id=\"score_37615\">4 </span></td>\n</tr>\n<tr id=\"recRow_3540386662\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Eunomia/3540386662\">Eunomia</a></td>\n<td>Norway</td>\n<td>Symphonic
+        Power Metal</td>\n<td><span id=\"score_3540386662\">4 </span></td>\n</tr>\n<tr
+        id=\"recRow_3540328348\">\n<td><a href=\"https://www.metal-archives.com/bands/Mayan/3540328348\">Mayan</a></td>\n<td>Netherlands</td>\n<td>Symphonic
+        Death Metal</td>\n<td><span id=\"score_3540328348\">4 </span></td>\n</tr>\n<tr
+        id=\"recRow_3540430938\">\n<td><a href=\"https://www.metal-archives.com/bands/Palant%C3%ADr/3540430938\">Palantír</a></td>\n<td>Sweden</td>\n<td>Power
+        Metal</td>\n<td><span id=\"score_3540430938\">4 </span></td>\n</tr>\n<tr id=\"recRow_3540341226\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Phoenix_Rising_-_Fire_%26_Ashes/3540341226\">Phoenix
+        Rising / Fire & Ashes</a></td>\n<td>Spain</td>\n<td>Symphonic Power Metal</td>\n<td><span
+        id=\"score_3540341226\">4 </span></td>\n</tr>\n<tr id=\"recRow_3540455737\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Blind_Desire/3540455737\">Blind
+        Desire</a></td>\n<td>Spain</td>\n<td>Power Metal</td>\n<td><span id=\"score_3540455737\">4
+        </span></td>\n</tr>\n<tr id=\"recRow_3540378381\">\n<td><a href=\"https://www.metal-archives.com/bands/ShadowStrike/3540378381\">ShadowStrike</a></td>\n<td>United
+        States</td>\n<td>Symphonic Power Metal</td>\n<td><span id=\"score_3540378381\">4
+        </span></td>\n</tr>\n<tr id=\"recRow_3540325167\">\n<td><a href=\"https://www.metal-archives.com/bands/4th_Dimension/3540325167\">4th
+        Dimension</a></td>\n<td>Italy</td>\n<td>Symphonic Power Metal</td>\n<td><span
+        id=\"score_3540325167\">3 </span></td>\n</tr>\n<tr id=\"recRow_170\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Edguy/170\">Edguy</a></td>\n<td>Germany</td>\n<td>Power
+        Metal</td>\n<td><span id=\"score_170\">3 </span></td>\n</tr>\n<tr id=\"recRow_3540286624\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Cain%27s_Offering/3540286624\">Cain's
+        Offering</a></td>\n<td>Finland</td>\n<td>Melodic Power Metal</td>\n<td><span
+        id=\"score_3540286624\">3 </span></td>\n</tr>\n<tr id=\"recRow_3540377429\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/The_L-Train/3540377429\">The L-Train</a></td>\n<td>Australia</td>\n<td>Symphonic
+        Power Metal</td>\n<td><span id=\"score_3540377429\">3 </span></td>\n</tr>\n<tr
+        id=\"recRow_28991\">\n<td><a href=\"https://www.metal-archives.com/bands/Guarnerius/28991\">Guarnerius</a></td>\n<td>Mexico</td>\n<td>Power/Speed
+        Metal</td>\n<td><span id=\"score_28991\">3 </span></td>\n</tr>\n<tr id=\"recRow_25478\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Krusader/25478\">Krusader</a></td>\n<td>Brazil</td>\n<td>Heavy/Power
+        Metal</td>\n<td><span id=\"score_25478\">3 </span></td>\n</tr>\n<tr id=\"recRow_114384\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Lord_Symphony/114384\">Lord Symphony</a></td>\n<td>Indonesia</td>\n<td>Epic
+        Power Metal</td>\n<td><span id=\"score_114384\">3 </span></td>\n</tr>\n<tr
+        id=\"recRow_3540331813\">\n<td><a href=\"https://www.metal-archives.com/bands/Nova_Era/3540331813\">Nova
+        Era</a></td>\n<td>Mexico</td>\n<td>Power Metal</td>\n<td><span id=\"score_3540331813\">3
+        </span></td>\n</tr>\n<tr id=\"recRow_3540403725\">\n<td><a href=\"https://www.metal-archives.com/bands/Operus/3540403725\">Operus</a></td>\n<td>Canada</td>\n<td>Epic
+        Symphonic Metal</td>\n<td><span id=\"score_3540403725\">3 </span></td>\n</tr>\n<tr
+        id=\"recRow_2888\">\n<td><a href=\"https://www.metal-archives.com/bands/Pand%C3%A6monium/2888\">Pandæmonium</a></td>\n<td>Italy</td>\n<td>Power
+        Metal</td>\n<td><span id=\"score_2888\">3 </span></td>\n</tr>\n<tr id=\"recRow_4212\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Dies_Ire/4212\">Dies Ire</a></td>\n<td>Italy</td>\n<td>Symphonic
+        Power Metal</td>\n<td><span id=\"score_4212\">3 </span></td>\n</tr>\n<tr id=\"recRow_3540356856\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Imperial_Age/3540356856\">Imperial
+        Age</a></td>\n<td>Russia</td>\n<td>Symphonic Metal</td>\n<td><span id=\"score_3540356856\">3
+        </span></td>\n</tr>\n<tr id=\"recRow_3540320520\">\n<td><a href=\"https://www.metal-archives.com/bands/Pellek/3540320520\">Pellek</a></td>\n<td>Norway</td>\n<td>Symphonic/Progressive
+        Power Metal</td>\n<td><span id=\"score_3540320520\">3 </span></td>\n</tr>\n<tr
+        id=\"recRow_3540392250\">\n<td><a href=\"https://www.metal-archives.com/bands/Unlucky_Morpheus/3540392250\">Unlucky
+        Morpheus</a></td>\n<td>Japan</td>\n<td>Power Metal</td>\n<td><span id=\"score_3540392250\">3
+        </span></td>\n</tr>\n<tr><td colspan=\"5\" id=\"show_more\">(<a href=\"https://www.metal-archives.com/bands/Rhapsody_of_Fire/32#Similar_artists\">show
+        top 20 only</a>)</td></tr>\n</tbody>\n</table>\n</div>\n<script src=\"https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js\"
+        data-cf-settings=\"df2dd18f69d183532463f7d6-|49\" defer=\"\"></script>"
+  recorded_at: Sun, 11 Apr 2021 12:54:13 GMT
+- request:
+    method: get
+    uri: https://ma.cache.headbang.re/link/ajax-list/type/band/id/32
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - MetalArchivesGemTestSuite/3.2.0 (user@example.com)
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - ma.cache.headbang.re
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+      Cache-Control:
+      - max-age=2592000
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Ray:
+      - 63a39d4198385445-LHR
+      Cf-Request-Id:
+      - '093a209d000000544522815000000001'
+      Content-Security-Policy:
+      - frame-ancestors 'self'
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Sun, 11 Apr 2021 12:50:52 GMT
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Expires:
+      - Tue, 11 May 2021 12:50:52 GMT
+      Nel:
+      - '{"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=IkslzlYFhfZC%2B4ZN3EF6Edai%2Brv33O0LdCpK1V9SmCBOSoLZ%2B2JW3oxdtbWpJ4EKf4Q3j6Za10kw5wYedM6giH9CEb%2FHWhLKn9xgNtsPvWOLDDDtKhLx"}],"max_age":604800,"group":"cf-nel"}'
+      Server:
+      - nginx
+      Vary:
+      - Accept-Encoding,User-Agent
+      X-Cache-Status:
+      - HIT
+      X-Frame-Options:
+      - SAMEORIGIN
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "<script type=\"236cdec278fd0d55f9671b3c-text/javascript\">\n$(document).ready(function()
+        {\n\t// Prepare the sub-tabs\n\t $('.tabs2lvl').tabs(); \t// Prepare the form
+        popup\n\t$('#editLink').dialog({ autoOpen: false, width: 400, height: 250,
+        modal: true, overlay: { opacity: 0.5, background: 'white'}, buttons: { 'Save
+        link': function(){ $('#linkForm').submit();}, 'Cancel': function() { $('#editLink').dialog('close');}
+        } });\n});\n\n\n</script>\n<div id=\"band_links\" class=\"tabs2lvl\">\n<ul>\n<li><a
+        href=\"#band_links_Official\">Official</a></li>\n<li><a href=\"#band_links_Official_merchandise\">Official
+        merchandise</a></li>\n<li><a href=\"#band_links_Unofficial\">Unofficial</a></li>\n<li><a
+        href=\"#band_links_Labels\">Labels</a></li>\n<li><a href=\"#band_links_Tablatures\">Tablatures</a></li>\n</ul>\n\n<div
+        id=\"band_links_Official\">\n<div class=\"ui-tabs-panel-content\">\n<table
+        id=\"linksTableOfficial\" class=\"display\" width=\"50%\" cellpadding=\"0\"
+        cellspacing=\"0\">\n<tr class=\"even\" id=\"linkRow837697\">\n<td><a id=\"link837697\"
+        href=\"https://rhapsody.bandcamp.com\" title=\"Go to: Bandcamp\" target=\"_blank\">Bandcamp</a></td>\n</tr>\n<tr
+        class=\"odd\" id=\"linkRow315260\">\n<td><a id=\"link315260\" href=\"https://www.facebook.com/rhapsodyoffire\"
+        title=\"Go to: Facebook\" target=\"_blank\">Facebook</a></td>\n</tr>\n<tr
+        class=\"even\" id=\"linkRow91140\">\n<td><a id=\"link91140\" href=\"http://www.rhapsodyoffire.com\"
+        title=\"Go to: Homepage\" target=\"_blank\">Homepage</a></td>\n</tr>\n<tr
+        class=\"odd\" id=\"linkRow773091\">\n<td><a id=\"link773091\" href=\"https://www.instagram.com/rhapsodyoffireofficial/\"
+        title=\"Go to: Instagram\" target=\"_blank\">Instagram</a></td>\n</tr>\n<tr
+        class=\"even\" id=\"linkRow719246\">\n<td><a id=\"link719246\" href=\"https://myspace.com/rhapsodyoffireband\"
+        title=\"Go to: Myspace\" target=\"_blank\">Myspace</a></td>\n</tr>\n<tr class=\"odd\"
+        id=\"linkRow822064\">\n<td><a id=\"link822064\" href=\"https://open.spotify.com/artist/2GnCQNJbs4xqFulqAdAg2U\"
+        title=\"Go to: Spotify\" target=\"_blank\">Spotify</a></td>\n</tr>\n<tr class=\"even\"
+        id=\"linkRow822065\">\n<td><a id=\"link822065\" href=\"https://open.spotify.com/artist/0zQfrabOFYf36Ikb6PXcCY?si=ihgFCjmnTAiQ_EPtpUooMg\"
+        title=\"Go to: Spotify (Rhapsody)\" target=\"_blank\">Spotify (Rhapsody)</a></td>\n</tr>\n<tr
+        class=\"odd\" id=\"linkRow364269\">\n<td><a id=\"link364269\" href=\"https://twitter.com/_rhapsodyoffire\"
+        title=\"Go to: Twitter\" target=\"_blank\">Twitter</a></td>\n</tr>\n<tr class=\"even\"
+        id=\"linkRow597464\">\n<td><a id=\"link597464\" href=\"https://www.youtube.com/user/rhapsodyoffire\"
+        title=\"Go to: YouTube\" target=\"_blank\">YouTube</a></td>\n</tr>\n</table>\n</div>\n</div>\n\n<div
+        id=\"band_links_Official_merchandise\">\n<div class=\"ui-tabs-panel-content\">\n<table
+        id=\"linksTableOfficial_merchandise\" class=\"display\" width=\"50%\" cellpadding=\"0\"
+        cellspacing=\"0\">\n<tr class=\"odd\" id=\"linkRow471369\">\n<td><a id=\"link471369\"
+        href=\"http://ie.7digital.com/artist/rhapsody-of-fire\" title=\"Go to: 7digital\"
+        target=\"_blank\">7digital</a></td>\n</tr>\n<tr class=\"even\" id=\"linkRow652090\">\n<td><a
+        id=\"link652090\" href=\"http://shop.afm-records.de/en/rhapsody-of-fire-en\"
+        title=\"Go to: AFM Records\" target=\"_blank\">AFM Records</a></td>\n</tr>\n<tr
+        class=\"odd\" id=\"linkRow471366\">\n<td><a id=\"link471366\" href=\"https://www.amazon.com/Rhapsody-of-Fire/e/B00197I5QY\"
+        title=\"Go to: Amazon\" target=\"_blank\">Amazon</a></td>\n</tr>\n<tr class=\"even\"
+        id=\"linkRow471367\">\n<td><a id=\"link471367\" href=\"http://cdon.eu/music/rhapsody_of_fire/\"
+        title=\"Go to: CDON\" target=\"_blank\">CDON</a></td>\n</tr>\n<tr class=\"odd\"
+        id=\"linkRow471365\">\n<td><a id=\"link471365\" href=\"https://itunes.apple.com/us/artist/rhapsody-of-fire/id188144698\"
+        title=\"Go to: iTunes\" target=\"_blank\">iTunes</a></td>\n</tr>\n<tr class=\"even\"
+        id=\"linkRow949483\">\n<td><a id=\"link949483\" href=\"https://rhapsodyoffire.merchcowboy.com/\"
+        title=\"Go to: Merchcowboy\" target=\"_blank\">Merchcowboy</a></td>\n</tr>\n</table>\n</div>\n</div>\n\n<div
+        id=\"band_links_Unofficial\">\n<div class=\"ui-tabs-panel-content\">\n<table
+        id=\"linksTableUnofficial\" class=\"display\" width=\"50%\" cellpadding=\"0\"
+        cellspacing=\"0\">\n<tr class=\"odd\" id=\"linkRow309579\">\n<td><a id=\"link309579\"
+        href=\"http://rhapsodymetal.free.fr/\" title=\"Go to: French Fan Site\" target=\"_blank\">French
+        Fan Site</a></td>\n</tr>\n<tr class=\"even\" id=\"linkRow302241\">\n<td><a
+        id=\"link302241\" href=\"http://gimlee.de/\" title=\"Go to: German fan page
+        with lot of discography images and memorabilia\" target=\"_blank\">German
+        fan page with lot of discography images and memorabilia</a></td>\n</tr>\n<tr
+        class=\"odd\" id=\"linkRow752977\">\n<td><a id=\"link752977\" href=\"http://www.progarchives.com/artist.asp?id=1268\"
+        title=\"Go to: Prog Archives\" target=\"_blank\">Prog Archives</a></td>\n</tr>\n</table>\n</div>\n</div>\n\n<div
+        id=\"band_links_Labels\">\n<div class=\"ui-tabs-panel-content\">\n<table id=\"linksTableLabels\"
+        class=\"display\" width=\"50%\" cellpadding=\"0\" cellspacing=\"0\">\n<tr
+        class=\"even\" id=\"linkRow597471\">\n<td><a id=\"link597471\" href=\"https://www.afm-records.de/en/r/172-rhapsody-of-fire-2.html\"
+        title=\"Go to: AFM Records\" target=\"_blank\">AFM Records</a></td>\n</tr>\n<tr
+        class=\"odd\" id=\"linkRow310176\">\n<td><a id=\"link310176\" href=\"http://www.nuclearblast.de/showDynamicPage.php?ident=artistdetail&aid=783\"
+        title=\"Go to: Nuclear Blast\" target=\"_blank\">Nuclear Blast</a></td>\n</tr>\n</table>\n</div>\n</div>\n\n<div
+        id=\"band_links_Tablatures\">\n<div class=\"ui-tabs-panel-content\">\n<table
+        id=\"linksTableTablatures\" class=\"display\" width=\"50%\" cellpadding=\"0\"
+        cellspacing=\"0\">\n<tr class=\"even\" id=\"linkRow110607\">\n<td><a id=\"link110607\"
+        href=\"http://www.911tabs.com/tabs/r/rhapsody/\" title=\"Go to: 911Tabs\"
+        target=\"_blank\">911Tabs</a></td>\n</tr>\n<tr class=\"odd\" id=\"linkRow23547\">\n<td><a
+        id=\"link23547\" href=\"http://www.all-good-tabs.com/guitar-tabs-bands-rhapsody-5750.html\"
+        title=\"Go to: All Good Tabs\" target=\"_blank\">All Good Tabs</a></td>\n</tr>\n<tr
+        class=\"even\" id=\"linkRow600813\">\n<td><a id=\"link600813\" href=\"https://www.jellynote.com/en/artist/rhapsody-of-fire/373812\"
+        title=\"Go to: Jellynote\" target=\"_blank\">Jellynote</a></td>\n</tr>\n<tr
+        class=\"odd\" id=\"linkRow337503\">\n<td><a id=\"link337503\" href=\"https://www.songsterr.com/a/wa/search?pattern=rhapsody\"
+        title=\"Go to: Songsterr\" target=\"_blank\">Songsterr</a></td>\n</tr>\n<tr
+        class=\"even\" id=\"linkRow107476\">\n<td><a id=\"link107476\" href=\"http://www.tabit.net/tabs/list.php?f=813\"
+        title=\"Go to: TabIt\" target=\"_blank\">TabIt</a></td>\n</tr>\n<tr class=\"odd\"
+        id=\"linkRow23545\">\n<td><a id=\"link23545\" href=\"https://www.ultimate-guitar.com/tabs/rhapsody_tabs.htm\"
+        title=\"Go to: Ultimate-Guitar\" target=\"_blank\">Ultimate-Guitar</a></td>\n</tr>\n</table>\n</div>\n</div>\n</div>\n<script
+        src=\"https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js\"
+        data-cf-settings=\"236cdec278fd0d55f9671b3c-|49\" defer=\"\"></script>"
+  recorded_at: Sun, 11 Apr 2021 12:54:13 GMT
+- request:
+    method: get
+    uri: https://ma.cache.headbang.re/band/discography/id/32/tab/all
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - MetalArchivesGemTestSuite/3.2.0 (user@example.com)
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - ma.cache.headbang.re
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+      Cache-Control:
+      - max-age=2592000
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Ray:
+      - 63a39d48eea14bf4-AMS
+      Cf-Request-Id:
+      - '093a20a19c00004bf469918000000001'
+      Content-Security-Policy:
+      - frame-ancestors 'self'
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Sun, 11 Apr 2021 12:50:52 GMT
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Expires:
+      - Tue, 11 May 2021 12:50:52 GMT
+      Nel:
+      - '{"max_age":604800,"report_to":"cf-nel"}'
+      Report-To:
+      - '{"max_age":604800,"group":"cf-nel","endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=zq%2FvAX2nlrbOsHhYb3Dq5Qh7kgu5YxOWqBXuh%2Bta%2BlsJi8GeTw80iQfmVSKHag02I5gW4Dw%2FkKMfGeuRjdjm5G1A%2Bq2UqoKd6ttX1lWTIM3GMtepY%2F5K"}]}'
+      Server:
+      - nginx
+      Vary:
+      - Accept-Encoding,User-Agent
+      X-Cache-Status:
+      - HIT
+      X-Frame-Options:
+      - SAMEORIGIN
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |2-
+         <table width="100%" cellpadding="0" cellspacing="0" class="display discog">
+        <thead>
+        <tr>
+        <th class="releaseCol">Name</th>
+        <th class="typeCol">Type</th>
+        <th class="yearCol">Year</th>
+        <th class="reviewsCol">Reviews</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td><a href="https://www.metal-archives.com/albums/Rhapsody_of_Fire/Eternal_Glory/4394" class="demo">Eternal Glory</a></td>
+        <td class="demo">Demo</td>
+        <td class="demo">1995</td>
+        <td>
+        <a href="https://www.metal-archives.com/reviews/Rhapsody_of_Fire/Eternal_Glory/4394/">1 (78%)</a>
+        </td>
+        </tr>
+        <tr>
+        <td><a href="https://www.metal-archives.com/albums/Rhapsody_of_Fire/Hard_Rock/926223" class="other">Hard Rock</a></td>
+        <td class="other">Split</td>
+        <td class="other">1997</td>
+        <td>
+        &nbsp;
+        </td>
+        </tr>
+        <tr>
+        <td><a href="https://www.metal-archives.com/albums/Rhapsody_of_Fire/Legendary_Tales/107" class="album">Legendary Tales</a></td>
+        <td class="album">Full-length</td>
+        <td class="album">1997</td>
+        <td>
+        <a href="https://www.metal-archives.com/reviews/Rhapsody_of_Fire/Legendary_Tales/107/">9 (79%)</a>
+        </td>
+        </tr>
+        <tr>
+        <td><a href="https://www.metal-archives.com/albums/Rhapsody_of_Fire/Manowar_-_Vanden_Plas_-_Symphony_X_-_Rhapsody/926222" class="other">Manowar / Vanden Plas / Symphony X / Rhapsody</a></td>
+        <td class="other">Split</td>
+        <td class="other">1998</td>
+        <td>
+        &nbsp;
+        </td>
+        </tr>
+        <tr>
+        <td><a href="https://www.metal-archives.com/albums/Rhapsody_of_Fire/Emerald_Sword/108" class="single">Emerald Sword</a></td>
+        <td class="single">Single</td>
+        <td class="single">1998</td>
+        <td>
+        <a href="https://www.metal-archives.com/reviews/Rhapsody_of_Fire/Emerald_Sword/108/">2 (93%)</a>
+        </td>
+        </tr>
+        <tr>
+        <td><a href="https://www.metal-archives.com/albums/Rhapsody_of_Fire/Symphony_of_Enchanted_Lands/109" class="album">Symphony of Enchanted Lands</a></td>
+        <td class="album">Full-length</td>
+        <td class="album">1998</td>
+        <td>
+        <a href="https://www.metal-archives.com/reviews/Rhapsody_of_Fire/Symphony_of_Enchanted_Lands/109/">14 (78%)</a>
+        </td>
+        </tr>
+        <tr>
+        <td><a href="https://www.metal-archives.com/albums/Rhapsody_of_Fire/Holy_Thunderforce/3281" class="single">Holy Thunderforce</a></td>
+        <td class="single">Single</td>
+        <td class="single">2000</td>
+        <td>
+        <a href="https://www.metal-archives.com/reviews/Rhapsody_of_Fire/Holy_Thunderforce/3281/">3 (92%)</a>
+        </td>
+        </tr>
+        <tr>
+        <td><a href="https://www.metal-archives.com/albums/Rhapsody_of_Fire/Dawn_of_Victory/110" class="album">Dawn of Victory</a></td>
+        <td class="album">Full-length</td>
+        <td class="album">2000</td>
+        <td>
+        <a href="https://www.metal-archives.com/reviews/Rhapsody_of_Fire/Dawn_of_Victory/110/">10 (72%)</a>
+        </td>
+        </tr>
+        <tr>
+        <td><a href="https://www.metal-archives.com/albums/Rhapsody_of_Fire/Rain_of_a_Thousand_Flames/451" class="album">Rain of a Thousand Flames</a></td>
+        <td class="album">Full-length</td>
+        <td class="album">2001</td>
+        <td>
+        <a href="https://www.metal-archives.com/reviews/Rhapsody_of_Fire/Rain_of_a_Thousand_Flames/451/">7 (81%)</a>
+        </td>
+        </tr>
+        <tr>
+        <td><a href="https://www.metal-archives.com/albums/Rhapsody_of_Fire/Power_of_the_Dragonflame/453" class="album">Power of the Dragonflame</a></td>
+        <td class="album">Full-length</td>
+        <td class="album">2002</td>
+        <td>
+        <a href="https://www.metal-archives.com/reviews/Rhapsody_of_Fire/Power_of_the_Dragonflame/453/">10 (84%)</a>
+        </td>
+        </tr>
+        <tr>
+        <td><a href="https://www.metal-archives.com/albums/Rhapsody_of_Fire/Tales_from_the_Emerald_Sword_Saga/37374" class="other">Tales from the Emerald Sword Saga</a></td>
+        <td class="other">Compilation</td>
+        <td class="other">2004</td>
+        <td>
+        <a href="https://www.metal-archives.com/reviews/Rhapsody_of_Fire/Tales_from_the_Emerald_Sword_Saga/37374/">2 (88%)</a>
+        </td>
+        </tr>
+        <tr>
+        <td><a href="https://www.metal-archives.com/albums/Rhapsody_of_Fire/The_Dark_Secret/41911" class="other">The Dark Secret</a></td>
+        <td class="other">EP</td>
+        <td class="other">2004</td>
+        <td>
+        <a href="https://www.metal-archives.com/reviews/Rhapsody_of_Fire/The_Dark_Secret/41911/">3 (87%)</a>
+        </td>
+        </tr>
+        <tr>
+        <td><a href="https://www.metal-archives.com/albums/Rhapsody_of_Fire/Symphony_of_Enchanted_Lands_II%3A_The_Dark_Secret/52233" class="album">Symphony of Enchanted Lands II: The Dark Secret</a></td>
+        <td class="album">Full-length</td>
+        <td class="album">2004</td>
+        <td>
+        <a href="https://www.metal-archives.com/reviews/Rhapsody_of_Fire/Symphony_of_Enchanted_Lands_II%3A_The_Dark_Secret/52233/">11 (71%)</a>
+        </td>
+        </tr>
+        <tr>
+        <td><a href="https://www.metal-archives.com/albums/Rhapsody_of_Fire/The_Magic_of_the_Wizard%27s_Dream/72934" class="single">The Magic of the Wizard's Dream</a></td>
+        <td class="single">Single</td>
+        <td class="single">2005</td>
+        <td>
+        <a href="https://www.metal-archives.com/reviews/Rhapsody_of_Fire/The_Magic_of_the_Wizard%27s_Dream/72934/">6 (57%)</a>
+        </td>
+        </tr>
+        <tr>
+        <td><a href="https://www.metal-archives.com/albums/Rhapsody_of_Fire/Live_in_Canada_2005_-_The_Dark_Secret/100770" class="other">Live in Canada 2005 - The Dark Secret</a></td>
+        <td class="other">Live album</td>
+        <td class="other">2006</td>
+        <td>
+        &nbsp;
+        </td>
+        </tr>
+        <tr>
+        <td><a href="https://www.metal-archives.com/albums/Rhapsody_of_Fire/A_New_Saga_Begins/354002" class="single">A New Saga Begins</a></td>
+        <td class="single">Single</td>
+        <td class="single">2006</td>
+        <td>
+        &nbsp;
+        </td>
+        </tr>
+        <tr>
+        <td><a href="https://www.metal-archives.com/albums/Rhapsody_of_Fire/Triumph_or_Agony/129176" class="album">Triumph or Agony</a></td>
+        <td class="album">Full-length</td>
+        <td class="album">2006</td>
+        <td>
+        <a href="https://www.metal-archives.com/reviews/Rhapsody_of_Fire/Triumph_or_Agony/129176/">6 (71%)</a>
+        </td>
+        </tr>
+        <tr>
+        <td><a href="https://www.metal-archives.com/albums/Rhapsody_of_Fire/Demons%2C_Dragons_and_Warriors/345690" class="other">Demons, Dragons and Warriors</a></td>
+        <td class="other">Split</td>
+        <td class="other">2007</td>
+        <td>
+        &nbsp;
+        </td>
+        </tr>
+        <tr>
+        <td><a href="https://www.metal-archives.com/albums/Rhapsody_of_Fire/Visions_from_the_Enchanted_Lands/156105" class="other">Visions from the Enchanted Lands</a></td>
+        <td class="other">Video</td>
+        <td class="other">2007</td>
+        <td>
+        <a href="https://www.metal-archives.com/reviews/Rhapsody_of_Fire/Visions_from_the_Enchanted_Lands/156105/">1 (97%)</a>
+        </td>
+        </tr>
+        <tr>
+        <td><a href="https://www.metal-archives.com/albums/Rhapsody_of_Fire/The_Frozen_Tears_of_Angels/266842" class="album">The Frozen Tears of Angels</a></td>
+        <td class="album">Full-length</td>
+        <td class="album">2010</td>
+        <td>
+        <a href="https://www.metal-archives.com/reviews/Rhapsody_of_Fire/The_Frozen_Tears_of_Angels/266842/">7 (83%)</a>
+        </td>
+        </tr>
+        <tr>
+        <td><a href="https://www.metal-archives.com/albums/Rhapsody_of_Fire/The_Cold_Embrace_of_Fear%3A_A_Dark_Romantic_Symphony/286413" class="other">The Cold Embrace of Fear: A Dark Romantic Symphony</a></td>
+        <td class="other">EP</td>
+        <td class="other">2010</td>
+        <td>
+        <a href="https://www.metal-archives.com/reviews/Rhapsody_of_Fire/The_Cold_Embrace_of_Fear%3A_A_Dark_Romantic_Symphony/286413/">4 (79%)</a>
+        </td>
+        </tr>
+        <tr>
+        <td><a href="https://www.metal-archives.com/albums/Rhapsody_of_Fire/Aeons_of_Raging_Darkness/308994" class="single">Aeons of Raging Darkness</a></td>
+        <td class="single">Single</td>
+        <td class="single">2011</td>
+        <td>
+        &nbsp;
+        </td>
+        </tr>
+        <tr>
+        <td><a href="https://www.metal-archives.com/albums/Rhapsody_of_Fire/From_Chaos_to_Eternity/301446" class="album">From Chaos to Eternity</a></td>
+        <td class="album">Full-length</td>
+        <td class="album">2011</td>
+        <td>
+        <a href="https://www.metal-archives.com/reviews/Rhapsody_of_Fire/From_Chaos_to_Eternity/301446/">7 (76%)</a>
+        </td>
+        </tr>
+        <tr>
+        <td><a href="https://www.metal-archives.com/albums/Rhapsody_of_Fire/Live_-_From_Chaos_to_Eternity/371275" class="other">Live - From Chaos to Eternity</a></td>
+        <td class="other">Live album</td>
+        <td class="other">2013</td>
+        <td>
+        &nbsp;
+        </td>
+        </tr>
+        <tr>
+        <td><a href="https://www.metal-archives.com/albums/Rhapsody_of_Fire/Dark_Wings_of_Steel/387908" class="album">Dark Wings of Steel</a></td>
+        <td class="album">Full-length</td>
+        <td class="album">2013</td>
+        <td>
+        <a href="https://www.metal-archives.com/reviews/Rhapsody_of_Fire/Dark_Wings_of_Steel/387908/">10 (68%)</a>
+        </td>
+        </tr>
+        <tr>
+        <td><a href="https://www.metal-archives.com/albums/Rhapsody_of_Fire/Live_in_Atlanta/411076" class="other">Live in Atlanta</a></td>
+        <td class="other">Live album</td>
+        <td class="other">2014</td>
+        <td>
+        &nbsp;
+        </td>
+        </tr>
+        <tr>
+        <td><a href="https://www.metal-archives.com/albums/Rhapsody_of_Fire/Shining_Star/554557" class="single">Shining Star</a></td>
+        <td class="single">Single</td>
+        <td class="single">2015</td>
+        <td>
+        &nbsp;
+        </td>
+        </tr>
+        <tr>
+        <td><a href="https://www.metal-archives.com/albums/Rhapsody_of_Fire/Into_the_Legend/549462" class="album">Into the Legend</a></td>
+        <td class="album">Full-length</td>
+        <td class="album">2016</td>
+        <td>
+        <a href="https://www.metal-archives.com/reviews/Rhapsody_of_Fire/Into_the_Legend/549462/">5 (88%)</a>
+        </td>
+        </tr>
+        <tr>
+        <td><a href="https://www.metal-archives.com/albums/Rhapsody_of_Fire/When_Demons_Awake/647216" class="single">When Demons Awake</a></td>
+        <td class="single">Single</td>
+        <td class="single">2017</td>
+        <td>
+        &nbsp;
+        </td>
+        </tr>
+        <tr>
+        <td><a href="https://www.metal-archives.com/albums/Rhapsody_of_Fire/Land_of_Immortals/761985" class="single">Land of Immortals</a></td>
+        <td class="single">Single</td>
+        <td class="single">2017</td>
+        <td>
+        &nbsp;
+        </td>
+        </tr>
+        <tr>
+        <td><a href="https://www.metal-archives.com/albums/Rhapsody_of_Fire/Knightrider_of_Doom/761987" class="single">Knightrider of Doom</a></td>
+        <td class="single">Single</td>
+        <td class="single">2017</td>
+        <td>
+        &nbsp;
+        </td>
+        </tr>
+        <tr>
+        <td><a href="https://www.metal-archives.com/albums/Rhapsody_of_Fire/Legendary_Years/638761" class="album">Legendary Years</a></td>
+        <td class="album">Full-length</td>
+        <td class="album">2017</td>
+        <td>
+        <a href="https://www.metal-archives.com/reviews/Rhapsody_of_Fire/Legendary_Years/638761/">4 (38%)</a>
+        </td>
+        </tr>
+        <tr>
+        <td><a href="https://www.metal-archives.com/albums/Rhapsody_of_Fire/The_Legend_Goes_On/748428" class="single">The Legend Goes On</a></td>
+        <td class="single">Single</td>
+        <td class="single">2018</td>
+        <td>
+        &nbsp;
+        </td>
+        </tr>
+        <tr>
+        <td><a href="https://www.metal-archives.com/albums/Rhapsody_of_Fire/Rain_of_Fury/755606" class="single">Rain of Fury</a></td>
+        <td class="single">Single</td>
+        <td class="single">2019</td>
+        <td>
+        &nbsp;
+        </td>
+        </tr>
+        <tr>
+        <td><a href="https://www.metal-archives.com/albums/Rhapsody_of_Fire/Master_of_Peace/761984" class="single">Master of Peace</a></td>
+        <td class="single">Single</td>
+        <td class="single">2019</td>
+        <td>
+        &nbsp;
+        </td>
+        </tr>
+        <tr>
+        <td><a href="https://www.metal-archives.com/albums/Rhapsody_of_Fire/The_Eighth_Mountain/746929" class="album">The Eighth Mountain</a></td>
+        <td class="album">Full-length</td>
+        <td class="album">2019</td>
+        <td>
+        <a href="https://www.metal-archives.com/reviews/Rhapsody_of_Fire/The_Eighth_Mountain/746929/">3 (86%)</a>
+        </td>
+        </tr>
+        </tbody>
+        </table>
+  recorded_at: Sun, 11 Apr 2021 12:54:14 GMT
+recorded_with: VCR 6.0.0

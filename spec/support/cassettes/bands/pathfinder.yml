@@ -1,0 +1,775 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://ma.cache.headbang.re/band/view/id/122302
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - MetalArchivesGemTestSuite/3.2.0 (user@example.com)
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - ma.cache.headbang.re
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+      Cache-Control:
+      - max-age=2592000
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Ray:
+      - 63a39cd71dc44be9-AMS
+      Cf-Request-Id:
+      - '093a205a7400004be97e050000000001'
+      Content-Security-Policy:
+      - frame-ancestors 'self'
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Sun, 11 Apr 2021 09:50:09 GMT
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Expires:
+      - Tue, 11 May 2021 09:50:09 GMT
+      Nel:
+      - '{"max_age":604800,"report_to":"cf-nel"}'
+      Report-To:
+      - '{"group":"cf-nel","endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=8uqs1h4X1GfTd0Ato2zOGjdbFpTUhpslFjo22ZKxzcQDlKUIUtwRMNcTzfTYVb3XksTi90Uzqk1YKP0S%2BeptCYh2RfBHEkuHXDNpqlRf3%2FPLn%2FZm6V0K"}],"max_age":604800}'
+      Server:
+      - nginx
+      Vary:
+      - Accept-Encoding,User-Agent
+      X-Cache-Status:
+      - HIT
+      X-Frame-Options:
+      - SAMEORIGIN
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n<html
+        xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n<title>Pathfinder - Encyclopaedia
+        Metallum: The Metal Archives</title>\n<meta http-equiv=\"Content-Type\" content=\"text/html;
+        charset=UTF-8\" />\n<meta content=\"width=device-width, initial-scale=1\"
+        name=\"viewport\" />\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/min/index.php?g=css\"
+        />\n<script type=\"d173db0202b6093f51b40719-text/javascript\" src=\"/min/index.php?g=js\"></script>\n<script
+        type=\"d173db0202b6093f51b40719-text/javascript\">\r\n\t\t\tvar URL_SITE\t=
+        'https://www.metal-archives.com/';\r\n\t\t\tvar URL_IMAGES\t= 'https://www.metal-archives.com/images/';\r\n\t\t\tvar
+        URL_CSS\t\t= 'https://www.metal-archives.com/css/';\r\n\t\t\tvar csrfToken\t=
+        '';\r\n\r\n\t\t\t$(document).ready(function() {\r\n\t\t\t\ttoggleFixedPositioning(1280,
+        600);\r\n\t\t\t\texecuteOnAllPages();\r\n\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t});\r\n\r\n\r\n\t\t</script>\n<noscript>\r\n\t\t\t<style
+        type=\"text/css\">\r\n\t\t\t\t.no-js { display: block !important; }\r\n\t\t\t</style>\r\n\t\t</noscript>\n<!--[if
+        lt IE 8]>\r\n\t\t\t<script src=\"http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js\"></script>\r\n\t\t\t
+        <link rel=\"stylesheet\" type=\"text/css\" href=\"https://www.metal-archives.com/css/default/oldie.css\"
+        />\r\n\t\t<![endif]-->\n<script type=\"d173db0202b6093f51b40719-text/javascript\">\r\n\t\t\t
+        \ var _gaq = _gaq || [];\r\n\t\t\t  _gaq.push(['_setAccount', 'UA-4046749-4']);\r\n\t\t\t
+        \ _gaq.push(['_trackPageview']);\r\n\r\n\t\t\t  (function() {\r\n\t\t\t    var
+        ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async
+        = true;\r\n\t\t\t    ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+        : 'http://www') + '.google-analytics.com/ga.js';\r\n\t\t\t    var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);\r\n\t\t\t  })();\r\n\t\t</script>\n</head>\n<body>\n<div
+        id=\"wrapper\">\n<div id=\"header\">\n<a href=\"https://www.metal-archives.com/\"
+        id=\"MA_logo\">Metal Archives</a>\n<div class=\"clear loading\"><img src=\"https://www.metal-archives.com/images/loading.gif\"
+        alt=\"loading\" width=\"12\" height=\"12\" /> loading...</div>\n<div id=\"search_box\">\n<form
+        id=\"search_form\" action=\"https://www.metal-archives.com/search\" method=\"get\">\n<div>\n<label>Search:</label><br
+        />\n<input name=\"searchString\" type=\"text\" id=\"searchQueryBox\" size=\"25\"
+        value=\"\" tabindex=\"1\" />\n<select name=\"type\" tabindex=\"2\">\n<option
+        value=\"band_name\">Band name</option>\n<option value=\"band_genre\">Music
+        genre</option>\n<option value=\"band_themes\">Lyrical themes</option>\n<option
+        value=\"album_title\">Album title</option>\n<option value=\"song_title\">Song
+        title</option>\n<option value=\"label_name\">Label</option>\n<option value=\"artist_alias\">Artist</option>\n<option
+        value=\"user_name\">User profile</option>\n<option value=\"google\">Google</option>\n</select>\n<br
+        />\n<a href=\"https://www.metal-archives.com/search/advanced/?searchString=&type=\"
+        class=\"float_left\" tabindex=\"4\">Advanced search</a>\n<button type=\"submit\"
+        class=\"btn_submit float_right\" tabindex=\"3\">Submit</button>\n</div>\n</form>\n</div>\n<div
+        id=\"top_menu_box\">\n<ul class=\"menu_style_1\">\n<li><a href=\"https://www.metal-archives.com/content/help\">Help</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/content/rules\">Rules</a></li>\n<li><a
+        href=\"https://forum.metal-archives.com\" target=\"_top\">Forum</a></li>\n</ul>\n<ul
+        class=\"menu_style_2\">\n<li><a href=\"https://www.metal-archives.com/content/faq\">FAQ</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/content/support\">Support Us</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/content/tools\">Add-ons</a></li>\n</ul>\n</div>\n</div>\n<div
+        id=\"left_col\">\n<div id=\"member_box\">\n <form name=\"login_form\" id=\"login_form\"
+        action=\"https://www.metal-archives.com/authentication/login\" method=\"post\">\n<div>\n<label>Username</label><br
+        />\n<input type=\"text\" name=\"loginUsername\" />\n<label>Password</label><br
+        />\n<input type=\"password\" name=\"loginPassword\" />\n<input type=\"hidden\"
+        name=\"origin\" value=\"/band/view/id/122302\" />\n<button type=\"submit\"
+        class=\"btn_login float_right\">Login</button>\n</div>\n</form>\n<a href=\"https://www.metal-archives.com/user/signup\"
+        class=\"float-left writeAction\">Register</a>\n<span class=\"float_right\"><a
+        href=\"https://www.metal-archives.com/user/forgot-password\" class=\"float-left
+        writeAction\">Forgot login?</a> </span>\n<div class=\"clear\"> </div>\n</div>\n<div
+        id=\"left_menu_box\">\n<ul class=\"menu_style_3 block_spacer_20\">\n<li>\nBands\n<ul>\n<li><a
+        href=\"https://www.metal-archives.com/browse/letter\">alphabetical</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/browse/country\">country</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/browse/genre\">genre</a></li>\n</ul>\n</li>\n<li>\nLabels\n<ul>\n<li><a
+        href=\"https://www.metal-archives.com/label\">alphabetical</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/label/country\">country</a></li>\n</ul>\n</li>\n<li><a
+        href=\"https://www.metal-archives.com/review/browse\">Reviews</a></li>\n</ul>\n<ul
+        class=\"menu_style_3 block_spacer_20\">\n<li><a href=\"https://www.metal-archives.com/artist/rip\">R.I.P.</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/band/random\">Random Band</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/user/list\">User rankings</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/news\">News archive</a></li>\n</ul>\n<ul
+        class=\"menu_style_3 ornement_30\">\n<li><a href=\"https://www.metal-archives.com/report/list\">Reports</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/todo\">Contribute / To do</a></li>\n</ul>\n</div>\n<div
+        id=\"left_text_box\">\n<p class=\"small_text center\"> &copy; 2002-2021<br
+        />Encyclopaedia Metallum </p>\n<p class=\"small_text center\">Best viewed<br
+        /> <a href=\"http://www.getfirefox.com\" target=\"_blank\">without</a> Internet
+        Explorer, <br />in 1280 x 960 resolution<br /> or higher.</p>\n</div>\n<div>\n<p
+        class=\"small_text center\"><a href=\"https://www.metal-archives.com/content/pp\">Privacy
+        Policy</a></p>\n</div>\n</div>\n<div id=\"content_wrapper\">\n<script type=\"d173db0202b6093f51b40719-text/javascript\"
+        src=\"https://www.metal-archives.com/js/jquery/jquery.form.js\"></script>\n<script
+        type=\"d173db0202b6093f51b40719-text/javascript\">\n\tvar bandId = 122302;\n\tvar
+        bandName = \"Pathfinder\";\n\tvar minRecScore = 3;\n\t\t\n\t\t\n\t\t\n\t$(document).ready(function()
+        {\n\t\t$('.tabs, .tabs2lvl').tabs({ beforeLoad: cacheTab });\n\t\t$(\".no-js\").removeClass(\"no-js\");\n\t\t\t\t
+        $('#band_members').tabs( { active : 1 } );\t\t$(document).on('click', '.albumMenu',
+        toggleAlbumMenu);\n\t\t\t\tvar browser = detectBrowser();\n\t\tif(browser.name
+        == \"webkit\" && parseFloat(browser.version) < 536) {\n\t\t\t$('head').append(
+        $('<style type=\"text/css\">.releaseCol { width: 26%; }</style>'));\n\t\t}\n\t});\n\n</script>\n<div
+        id=\"band_sidebar\">\n<div class=\"band_name_img\">\n<a class=\"image\" id=\"logo\"
+        title=\"Pathfinder\" href=\"https://www.metal-archives.com/images/1/2/2/3/122302_logo.jpg\"><img
+        src=\"https://www.metal-archives.com/images/1/2/2/3/122302_logo.jpg\" title=\"Click
+        to zoom\" alt=\"Pathfinder - Logo\" border=\"0\" /></a>\n</div>\n<div class=\"band_img\">\n<a
+        class=\"image\" id=\"photo\" title=\"Pathfinder\" href=\"https://www.metal-archives.com/images/1/2/2/3/122302_photo.jpg?4247\"><img
+        src=\"https://www.metal-archives.com/images/1/2/2/3/122302_photo.jpg?4247\"
+        title=\"Click to zoom\" alt=\"Pathfinder - Photo\" border=\"0\" /></a>\n</div>\n<div
+        id=\"affiliation-links\">\n<span class=\"title\">Buy their stuff</span>\n<br
+        />\n<ul id=\"buyLinks\" class=\"menu_style_5\">\n<li>\n<a target=\"_blank\"
+        href=\"https://www.metal-archives.com/affiliate/?pid=3&bid=122302\">Search
+        on eBay</a>\nmore... <a href=\"#more\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; $('#sub3').toggle(); return false;\" data-cf-modified-d173db0202b6093f51b40719-=\"\">>></a><br
+        />\n<ul id=\"sub3\" style=\"display: none; margin-top: 0px; margin-bottom:
+        0px;\">\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=17&bid=122302\">eBay
+        Canada</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=19&bid=122302\">eBay
+        UK</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=57&bid=122302\">eBay
+        Germany</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=18&bid=122302\">eBay
+        France</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=36&bid=122302\">eBay
+        Spain</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=34&bid=122302\">eBay
+        Belgium</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=20&bid=122302\">eBay
+        Netherlands</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=21&bid=122302\">eBay
+        Italy</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=22&bid=122302\">eBay
+        Australia</a></li>\n</ul>\n</li>\n</ul>\n</div>\n</div>\n<div id=\"band_content\">\n<div
+        class=\"tool_strip right writeAction\">\n<ul>\n<li><a title=\"Report a mistake
+        or additional information for this page\" href=\"javascript:popupReportDialog(1,
+        122302);\" class=\"btn_report_error\"> </a></li>\n</ul>\n</div>\n<div id=\"band_info\">\n<h1
+        class=\"band_name\"><a href=\"https://www.metal-archives.com/bands/Pathfinder/122302\">Pathfinder</a></h1>\n<div
+        class=\"clear block_spacer_5\"></div>\n<div id=\"band_stats\">\n<dl class=\"float_left\">\n<dt>Country
+        of origin:</dt>\n<dd><a href=\"https://www.metal-archives.com/lists/PL\">Poland</a></dd>\n<dt>Location:</dt>\n<dd>Poznań,
+        Wielkopolskie</dd>\n<dt>Status:</dt>\n<dd class=\"active\">Active</dd>\n<dt>Formed
+        in:</dt>\n<dd>2006</dd>\n</dl>\n<dl class=\"float_right\">\n<dt>Genre:</dt>\n<dd>Symphonic
+        Power Metal</dd>\n<dt>Lyrical themes:</dt>\n<dd>Fantasy, Sisu</dd>\n<dt>Current
+        label:</dt>\n<dd><a href=\"https://www.metal-archives.com/labels/Sonic_Attack_Records/23789\">Sonic
+        Attack Records</a></dd>\n</dl>\n<dl style=\"width: 100%;\" class=\"clear\">\n<dt>Years
+        active:</dt>\n<dd>\n2006-present </dd>\n</dl>\n</div>\n<div class=\"band_comment
+        clear\">\n\nPathfinder was founded by <a href=\"https://www.metal-archives.com/artists/Arkadiusz_Ruth/18607\">Arkadiusz
+        Ruth</a> and <a href=\"https://www.metal-archives.com/artists/Karol_Mania/18596\">Karol
+        Mania</a>.\n</div>\n</div>\n\n<div id=\"message\"> </div>\n<div class=\"clear
+        block_spacer_5\"> </div>\n<div id=\"band_tabs\" class=\"tabs no-js\">\n<ul>\n<li><a
+        href=\"#band_tab_discography\">Discography</a></li>\n<li><a href=\"#band_tab_members\">Members</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/band/ajax-reviews/id/122302\" title=\"Reviews\"><span>Reviews</span></a></li>\n<li><a
+        href=\"https://www.metal-archives.com/band/ajax-recommendations/id/122302\"
+        title=\"Similar artists\"><span>Similar Artists</span></a></li>\n<li><a href=\"https://www.metal-archives.com/link/ajax-list/type/band/id/122302\"
+        title=\"Related links\"><span>Related Links</span></a></li>\n</ul>\n<div id=\"band_tab_discography\">\n<div
+        id=\"band_disco\" class=\"tabs2lvl\">\n<ul>\n<li><a href=\"https://www.metal-archives.com/band/discography/id/122302/tab/all\"><span>Complete
+        discography</span></a></li>\n<li><a href=\"https://www.metal-archives.com/band/discography/id/122302/tab/main\"><span>Main</span></a></li>\n<li><a
+        href=\"https://www.metal-archives.com/band/discography/id/122302/tab/lives\"><span>Lives</span></a></li>\n<li><a
+        href=\"https://www.metal-archives.com/band/discography/id/122302/tab/demos\"><span>Demos</span></a></li>\n<li><a
+        href=\"https://www.metal-archives.com/band/discography/id/122302/tab/misc\"><span>Misc.</span></a></li>\n</ul>\n</div>\n</div>\n<div
+        id=\"band_tab_members\">\n<div id=\"band_members\" class=\"tabs2lvl\">\n<ul>\n<li><a
+        href=\"#band_tab_members_all\">Complete lineup</a></li> <li><a href=\"#band_tab_members_current\">Current
+        lineup</a></li>\n<li><a href=\"#band_tab_members_past\">Past members</a></li>
+        <li><a href=\"#band_tab_members_live\">Live musicians</a></li> </ul>\n\n<div
+        id=\"band_tab_members_all\">\n<div class=\"ui-tabs-panel-content\">\n<table
+        class=\"display lineupTable\" cellpadding=\"0\" cellspacing=\"0\">\n<tr class=\"lineupHeaders\">\n<td
+        colspan=\"2\" align=\"right\">\nCurrent </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"200\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Arkadiusz_Ruth/18607\"
+        class=\"bold\">Arkadiusz Ruth</a>\n</td>\n<td>\nBass, Orchestrations, Vocals
+        (choirs)&nbsp;(2006-present) </td>\n</tr>\n<tr class=\"lineupBandsRow\">\n<td
+        colspan=\"2\">\nSee also:\nex-<a href=\"https://www.metal-archives.com/bands/Deliverance/3540417216\">Deliverance</a>
+        </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Karol_Mania/18596\" class=\"bold\">Karol
+        Mania</a>\n</td>\n<td>\nGuitars, Vocals (choirs)&nbsp;(2006-present) </td>\n</tr>\n<tr
+        class=\"lineupBandsRow\">\n<td colspan=\"2\">\nSee also:\n<a href=\"https://www.metal-archives.com/bands/Titanium/3540356382\">Titanium</a>,
+        ex-<a href=\"https://www.metal-archives.com/bands/Abigail/18084\">Abigail</a>,
+        ex-<a href=\"https://www.metal-archives.com/bands/Warbell/3540296063\">Warbell</a>
+        (live) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Gunsen/18599\" class=\"bold\">Gunsen</a>\n</td>\n<td>\nGuitars,
+        Vocals (choirs)&nbsp;(2006-present) </td>\n</tr>\n<tr class=\"lineupBandsRow\">\n<td
+        colspan=\"2\">\nSee also:\n<a href=\"https://www.metal-archives.com/bands/Gunsen/3540326863\">Gunsen</a>,
+        ex-<a href=\"https://www.metal-archives.com/bands/Pryzmath/32718\">Pryzmath</a>
+        </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Kacper_Stachowiak/124538\" class=\"bold\">Kacper
+        Stachowiak</a>\n</td>\n<td>\nDrums, Narration, Vocals (choirs)&nbsp;(2011-present)
+        </td>\n</tr>\n<tr class=\"lineupBandsRow\">\n<td colspan=\"2\">\nSee also:\n<a
+        href=\"https://www.metal-archives.com/bands/Amaryllis/3540274871\">Amaryllis</a>,
+        ex-<a href=\"https://www.metal-archives.com/bands/Grimlord/106046\">Grimlord</a>
+        </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Bartosz_Ogrodowicz/479332\"
+        class=\"bold\">Bartosz Ogrodowicz</a>\n</td>\n<td>\nKeyboards&nbsp;(2012-present)
+        </td>\n</tr>\n<tr class=\"lineupBandsRow\">\n<td colspan=\"2\">\nSee also:\nBartosz
+        Ogrodowicz </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Przemyslaw_Uliczka/272573\"
+        class=\"bold\">Przemyslaw Uliczka</a>\n</td>\n<td>\nVocals&nbsp;(2014-present)
+        </td>\n</tr>\n<tr class=\"lineupBandsRow\">\n<td colspan=\"2\">\nSee also:\n<a
+        href=\"https://www.metal-archives.com/bands/Another_World/3540313386\">Another
+        World</a>, <a href=\"https://www.metal-archives.com/bands/Hamer/13192\">Hamer</a>
+        </td>\n</tr>\n<tr class=\"lineupHeaders\">\n<td colspan=\"2\" align=\"right\">\nPast
+        </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Kamil_Ruth/18611\" class=\"bold\">Kamil
+        Ruth</a>\n</td>\n<td>\nDrums&nbsp;(2006-2011) </td>\n</tr>\n<tr class=\"lineupBandsRow\">\n<td
+        colspan=\"2\">\nSee also:\nex-<a href=\"https://www.metal-archives.com/bands/Kingdom_Waves/3540351788\">Kingdom
+        Waves</a> </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Slawek_Belak/18602\" class=\"bold\">Slawek
+        Belak</a>\n</td>\n<td>\nKeyboards, Piano, Orchestrations, Vocals (choirs)&nbsp;(2006-2012)
+        </td>\n</tr>\n<tr class=\"lineupBandsRow\">\n<td colspan=\"2\">\nSee also:\n<a
+        href=\"https://www.metal-archives.com/bands/Wojciech_Hoffmann/105645\">Wojciech
+        Hoffmann</a> </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Szymon_Kostro/18593\" class=\"bold\">Szymon
+        Kostro</a>\n</td>\n<td>\nVocals&nbsp;(2006-2013) </td>\n</tr>\n<tr class=\"lineupBandsRow\">\n
+        <td colspan=\"2\">\nSee also:\nex-<a href=\"https://www.metal-archives.com/bands/Scrat/40440\">Scrat</a>,
+        ex-<a href=\"https://www.metal-archives.com/bands/Privateer/55070\">Privateer</a>
+        </td>\n</tr>\n<tr class=\"lineupHeaders\">\n<td colspan=\"2\" align=\"right\">\nPast
+        (Live) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Kacper_Stachowiak/124538\" class=\"bold\">Kacper
+        Stachowiak</a>\n</td>\n<td>\nDrums&nbsp;(2011) </td>\n</tr>\n<tr class=\"lineupBandsRow\">\n<td
+        colspan=\"2\">\nSee also:\n<a href=\"https://www.metal-archives.com/bands/Amaryllis/3540274871\">Amaryllis</a>,
+        ex-<a href=\"https://www.metal-archives.com/bands/Grimlord/106046\">Grimlord</a>
+        </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Dianne_van_Giersbergen/104102\"
+        class=\"bold\">Dianne van Giersbergen</a>\n</td>\n<td>\nVocals&nbsp;(2011)
+        </td>\n</tr>\n<tr class=\"lineupBandsRow\">\n<td colspan=\"2\">\nSee also:\n<a
+        href=\"https://www.metal-archives.com/bands/Ex_Libris/58967\">Ex Libris</a>,
+        ex-<a href=\"https://www.metal-archives.com/bands/Karmaflow/3540395253\">Karmaflow</a>
+        (live), ex-<a href=\"https://www.metal-archives.com/bands/Xandria/3718\">Xandria</a>,
+        ex-Countermove </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Bartosz_Ogrodowicz/479332\"
+        class=\"bold\">Bartosz Ogrodowicz</a>\n</td>\n<td>\nKeyboards&nbsp;(2012)
+        </td>\n</tr>\n<tr class=\"lineupBandsRow\">\n<td colspan=\"2\">\nSee also:\nBartosz
+        Ogrodowicz </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/%C5%81ukasz_Frankowski/339066\"
+        class=\"bold\">Łukasz Frankowski</a>\n</td>\n<td>\nVocals&nbsp;(2013) </td>\n</tr>\n<tr
+        class=\"lineupBandsRow\">\n<td colspan=\"2\">\nSee also:\nex-<a href=\"https://www.metal-archives.com/bands/Infinity/109502\">Infinity</a>
+        </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Maciej_%22Rocker%22_Wr%C3%B3blewski/113588\"
+        class=\"bold\">Maciej &quot;Rocker&quot; Wr&oacute;blewski</a>\n</td>\n<td>\nVocals&nbsp;(2013)
+        </td>\n</tr>\n<tr class=\"lineupBandsRow\">\n<td colspan=\"2\">\nSee also:\n<a
+        href=\"https://www.metal-archives.com/bands/Internal_Quiet/3540415631\">Internal
+        Quiet</a>, ex-<a href=\"https://www.metal-archives.com/bands/Hopeless/62662\">Hopeless</a>,
+        ex-<a href=\"https://www.metal-archives.com/bands/Titanium/3540356382\">Titanium</a>,
+        ex-<a href=\"https://www.metal-archives.com/bands/Wolf_Spider/2624\">Wolf
+        Spider</a>, ex-<a href=\"https://www.metal-archives.com/bands/Divine_Weep/79155\">Divine
+        Weep</a> (live) </td>\n</tr>\n</table>\n</div>\n</div>\n\n<div id=\"band_tab_members_current\">\n<div
+        class=\"ui-tabs-panel-content\">\n<table class=\"display lineupTable\" cellpadding=\"0\"
+        cellspacing=\"0\">\n<tr class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Arkadiusz_Ruth/18607\" class=\"bold\">Arkadiusz
+        Ruth</a>\n</td>\n<td>\nBass, Orchestrations, Vocals (choirs)&nbsp;(2006-present)
+        </td>\n</tr>\n<tr class=\"lineupBandsRow\">\n<td colspan=\"2\">\nSee also:\nex-<a
+        href=\"https://www.metal-archives.com/bands/Deliverance/3540417216\">Deliverance</a>
+        </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Karol_Mania/18596\" class=\"bold\">Karol
+        Mania</a>\n</td>\n<td>\nGuitars, Vocals (choirs)&nbsp;(2006-present) </td>\n</tr>\n<tr
+        class=\"lineupBandsRow\">\n<td colspan=\"2\">\nSee also:\n<a href=\"https://www.metal-archives.com/bands/Titanium/3540356382\">Titanium</a>,
+        ex-<a href=\"https://www.metal-archives.com/bands/Abigail/18084\">Abigail</a>,
+        ex-<a href=\"https://www.metal-archives.com/bands/Warbell/3540296063\">Warbell</a>
+        (live) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Gunsen/18599\" class=\"bold\">Gunsen</a>\n</td>\n<td>\nGuitars,
+        Vocals (choirs)&nbsp;(2006-present) </td>\n</tr>\n<tr class=\"lineupBandsRow\">\n<td
+        colspan=\"2\">\nSee also:\n<a href=\"https://www.metal-archives.com/bands/Gunsen/3540326863\">Gunsen</a>,
+        ex-<a href=\"https://www.metal-archives.com/bands/Pryzmath/32718\">Pryzmath</a>
+        </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Kacper_Stachowiak/124538\" class=\"bold\">Kacper
+        Stachowiak</a>\n</td>\n<td>\nDrums, Narration, Vocals (choirs)&nbsp;(2011-present)
+        </td>\n</tr>\n<tr class=\"lineupBandsRow\">\n<td colspan=\"2\">\nSee also:\n<a
+        href=\"https://www.metal-archives.com/bands/Amaryllis/3540274871\">Amaryllis</a>,
+        ex-<a href=\"https://www.metal-archives.com/bands/Grimlord/106046\">Grimlord</a>
+        </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Bartosz_Ogrodowicz/479332\"
+        class=\"bold\">Bartosz Ogrodowicz</a>\n</td>\n<td>\nKeyboards&nbsp;(2012-present)
+        </td>\n</tr>\n<tr class=\"lineupBandsRow\">\n<td colspan=\"2\">\nSee also:\nBartosz
+        Ogrodowicz </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Przemyslaw_Uliczka/272573\"
+        class=\"bold\">Przemyslaw Uliczka</a>\n</td>\n<td>\nVocals&nbsp;(2014-present)
+        </td>\n</tr>\n<tr class=\"lineupBandsRow\">\n<td colspan=\"2\">\nSee also:\n<a
+        href=\"https://www.metal-archives.com/bands/Another_World/3540313386\">Another
+        World</a>, <a href=\"https://www.metal-archives.com/bands/Hamer/13192\">Hamer</a>
+        </td>\n</tr>\n</table>\n</div>\n</div>\n\n<div id=\"band_tab_members_past\">\n<div
+        class=\"ui-tabs-panel-content\">\n<table class=\"display lineupTable\" cellpadding=\"0\"
+        cellspacing=\"0\">\n<tr class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Kamil_Ruth/18611\" class=\"bold\">Kamil
+        Ruth</a>\n</td>\n<td>\nDrums&nbsp;(2006-2011) </td>\n</tr>\n<tr class=\"lineupBandsRow\">\n<td
+        colspan=\"2\">\nSee also:\nex-<a href=\"https://www.metal-archives.com/bands/Kingdom_Waves/3540351788\">Kingdom
+        Waves</a> </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Slawek_Belak/18602\" class=\"bold\">Slawek
+        Belak</a>\n </td>\n<td>\nKeyboards, Piano, Orchestrations, Vocals (choirs)&nbsp;(2006-2012)
+        </td>\n</tr>\n<tr class=\"lineupBandsRow\">\n<td colspan=\"2\">\nSee also:\n<a
+        href=\"https://www.metal-archives.com/bands/Wojciech_Hoffmann/105645\">Wojciech
+        Hoffmann</a> </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Szymon_Kostro/18593\" class=\"bold\">Szymon
+        Kostro</a>\n</td>\n<td>\nVocals&nbsp;(2006-2013) </td>\n</tr>\n<tr class=\"lineupBandsRow\">\n<td
+        colspan=\"2\">\nSee also:\nex-<a href=\"https://www.metal-archives.com/bands/Scrat/40440\">Scrat</a>,
+        ex-<a href=\"https://www.metal-archives.com/bands/Privateer/55070\">Privateer</a>
+        </td>\n</tr>\n</table>\n</div>\n</div>\n\n<div id=\"band_tab_members_live\">\n<div
+        class=\"ui-tabs-panel-content\">\n<table class=\"display lineupTable\" cellpadding=\"0\"
+        cellspacing=\"0\">\n<tr class=\"lineupHeaders\">\n<td colspan=\"2\" align=\"right\">\nPast
+        </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Kacper_Stachowiak/124538\" class=\"bold\">Kacper
+        Stachowiak</a>\n</td>\n<td>\nDrums&nbsp;(2011) </td>\n</tr>\n<tr class=\"lineupBandsRow\">\n<td
+        colspan=\"2\">\nSee also:\n<a href=\"https://www.metal-archives.com/bands/Amaryllis/3540274871\">Amaryllis</a>,
+        ex-<a href=\"https://www.metal-archives.com/bands/Grimlord/106046\">Grimlord</a>
+        </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Dianne_van_Giersbergen/104102\"
+        class=\"bold\">Dianne van Giersbergen</a>\n</td>\n<td>\nVocals&nbsp;(2011)
+        </td>\n</tr>\n<tr class=\"lineupBandsRow\">\n<td colspan=\"2\">\nSee also:\n<a
+        href=\"https://www.metal-archives.com/bands/Ex_Libris/58967\">Ex Libris</a>,
+        ex-<a href=\"https://www.metal-archives.com/bands/Karmaflow/3540395253\">Karmaflow</a>
+        (live), ex-<a href=\"https://www.metal-archives.com/bands/Xandria/3718\">Xandria</a>,
+        ex-Countermove </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Bartosz_Ogrodowicz/479332\"
+        class=\"bold\">Bartosz Ogrodowicz</a>\n</td>\n<td>\nKeyboards&nbsp;(2012)
+        </td>\n</tr>\n<tr class=\"lineupBandsRow\">\n<td colspan=\"2\">\nSee also:\nBartosz
+        Ogrodowicz </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/%C5%81ukasz_Frankowski/339066\"
+        class=\"bold\">Łukasz Frankowski</a>\n</td>\n<td>\nVocals&nbsp;(2013) </td>\n</tr>\n<tr
+        class=\"lineupBandsRow\">\n<td colspan=\"2\">\nSee also:\nex-<a href=\"https://www.metal-archives.com/bands/Infinity/109502\">Infinity</a>
+        </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"200\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Maciej_%22Rocker%22_Wr%C3%B3blewski/113588\"
+        class=\"bold\">Maciej &quot;Rocker&quot; Wr&oacute;blewski</a>\n</td>\n<td>\nVocals&nbsp;(2013)
+        </td>\n</tr>\n<tr class=\"lineupBandsRow\">\n<td colspan=\"2\">\nSee also:\n<a
+        href=\"https://www.metal-archives.com/bands/Internal_Quiet/3540415631\">Internal
+        Quiet</a>, ex-<a href=\"https://www.metal-archives.com/bands/Hopeless/62662\">Hopeless</a>,
+        ex-<a href=\"https://www.metal-archives.com/bands/Titanium/3540356382\">Titanium</a>,
+        ex-<a href=\"https://www.metal-archives.com/bands/Wolf_Spider/2624\">Wolf
+        Spider</a>, ex-<a href=\"https://www.metal-archives.com/bands/Divine_Weep/79155\">Divine
+        Weep</a> (live) </td>\n</tr>\n</table>\n</div>\n</div>\n</div>\n</div>\n</div>\n\n<div
+        id=\"auditTrail\">\n<table>\n<tr>\n<td>Added by: <a href=\"https://www.metal-archives.com/users/wojty666\"
+        class=\"profileMenu\">wojty666</a></td>\n<td align=\"right\">Modified by:
+        <a href=\"https://www.metal-archives.com/users/memorius\" class=\"profileMenu\">memorius</a></td>\n</tr>\n<tr>\n<td>Added
+        on: 2008-03-21 04:38:22</td>\n<td align=\"right\">Last modified on: 2021-01-31
+        13:45:38</td>\n</tr>\n<tr>\n<td valign=\"top\">\n&nbsp;\n</td>\n<td align=\"right\"
+        valign=\"top\">\n</td>\n</tr>\n</table>\n</div>\n</div>\n<div id=\"readMoreDialog\"
+        title=\"Additional notes\" class=\"displayNone\"> </div>\n</div>\n</div>\n<script
+        src=\"https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js\"
+        data-cf-settings=\"d173db0202b6093f51b40719-|49\" defer=\"\"></script></body>\n</html>\n"
+  recorded_at: Sun, 11 Apr 2021 09:53:30 GMT
+- request:
+    method: get
+    uri: https://ma.cache.headbang.re/band/read-more/id/122302
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - MetalArchivesGemTestSuite/3.2.0 (user@example.com)
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - ma.cache.headbang.re
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+      Cache-Control:
+      - max-age=2592000
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Ray:
+      - 63a39cde1e1f075a-LHR
+      Cf-Request-Id:
+      - '093a205ed20000075ab6823000000001'
+      Content-Security-Policy:
+      - frame-ancestors 'self'
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Sun, 11 Apr 2021 09:50:09 GMT
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Expires:
+      - Tue, 11 May 2021 09:50:09 GMT
+      Nel:
+      - '{"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"group":"cf-nel","endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=yG09vebiJzSdcs3mHq6XP24JHMdpo4Z6FTdGSnnXQ%2FyqNemdnIS8qysC7K1Ud7oi11yACU0YMeW061fBlqkBlhB676PxIAp1td4fCRQCDl7SYLySX0yD"}],"max_age":604800}'
+      Server:
+      - nginx
+      Vary:
+      - Accept-Encoding,User-Agent
+      X-Cache-Status:
+      - HIT
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '202'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: Pathfinder was founded by <a href="https://www.metal-archives.com/artists/Arkadiusz_Ruth/18607">Arkadiusz
+        Ruth</a> and <a href="https://www.metal-archives.com/artists/Karol_Mania/18596">Karol
+        Mania</a>.
+  recorded_at: Sun, 11 Apr 2021 09:53:30 GMT
+- request:
+    method: get
+    uri: https://ma.cache.headbang.re/band/ajax-recommendations/id/122302?showMoreSimilar=1
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - MetalArchivesGemTestSuite/3.2.0 (user@example.com)
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - ma.cache.headbang.re
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+      Cache-Control:
+      - max-age=2592000
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Ray:
+      - 63e346ed9a164c4a-AMS
+      Cf-Request-Id:
+      - '0961eaa88300004c4a42aa2000000001'
+      Content-Security-Policy:
+      - frame-ancestors 'self'
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Sun, 11 Apr 2021 09:50:09 GMT
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Expires:
+      - Tue, 11 May 2021 09:50:09 GMT
+      Nel:
+      - '{"max_age":604800,"report_to":"cf-nel"}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=hiHVR7k3fE7vaSoiaYoId1X9Uzq2TQ5UKz7YVRrznwctY8omTdvJVtnhU83Gk8o%2FCgxi527TmdpCs0gO2CilY%2FePOAxuM9BLdoK3iGZgUSPpWGXwi%2FIb"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - nginx
+      Vary:
+      - Accept-Encoding,User-Agent
+      X-Cache-Status:
+      - HIT
+      X-Frame-Options:
+      - SAMEORIGIN
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "<script type=\"33752b9d692a34a2712eb5e9-text/javascript\" src=\"https://www.metal-archives.com/js/jquery/jquery.dataTables.min.js\"></script>\n<script
+        type=\"33752b9d692a34a2712eb5e9-text/javascript\">\n\n// Prepare band recommendation
+        dialog\n$(document).ready(function() {\n\t$(\".no-js\").removeClass(\"no-js\");\n\t$('#similarBandSelection').dialog({
+        autoOpen: false, width: 600, height: 500, modal: true, overlay: { opacity:
+        0.5, background: 'white'} });\n\t$('#bandSearch').ajaxForm({ target: '#bandSearchResults',
+        beforeSubmit: toggleLoading, success: toggleLoading});\n});\n\n</script>\n<div
+        id=\"band_simartists\">\n<div class=\"tool_strip top right writeAction\">\n</div>\n</div>\n<div
+        class=\"ui-tabs-panel-content block_spacer_top_36\">\n<table id=\"artist_list\"
+        class=\"display\" cellpadding=\"0\" cellspacing=\"0\">\n<thead>\n<tr>\n<th>Name</th>\n<th
+        width=\"82\">Country</th>\n<th>Genre</th>\n<th>Score</th>\n</tr>\n</thead>\n<tbody>\n<tr
+        id=\"recRow_32\">\n<td><a href=\"https://www.metal-archives.com/bands/Rhapsody_of_Fire/32\">Rhapsody
+        of Fire</a></td>\n<td>Italy</td>\n<td>Symphonic Power Metal</td>\n<td><span
+        id=\"score_32\">79 </span></td>\n</tr>\n<tr id=\"recRow_2289\">\n<td><a href=\"https://www.metal-archives.com/bands/DragonForce/2289\">DragonForce</a></td>\n<td>United
+        Kingdom</td>\n<td>Power Metal</td>\n<td><span id=\"score_2289\">55 </span></td>\n</tr>\n<tr
+        id=\"recRow_3540382043\">\n<td><a href=\"https://www.metal-archives.com/bands/Twilight_Force/3540382043\">Twilight
+        Force</a></td>\n<td>Sweden</td>\n<td>Symphonic Power Metal</td>\n<td><span
+        id=\"score_3540382043\">45 </span></td>\n</tr>\n<tr id=\"recRow_8051\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Fairyland/8051\">Fairyland</a></td>\n<td>France</td>\n<td>Symphonic
+        Power Metal</td>\n<td><span id=\"score_8051\">32 </span></td>\n</tr>\n<tr
+        id=\"recRow_2000\">\n<td><a href=\"https://www.metal-archives.com/bands/Dragonland/2000\">Dragonland</a></td>\n<td>Sweden</td>\n<td>Symphonic
+        Power Metal</td>\n<td><span id=\"score_2000\">28 </span></td>\n</tr>\n<tr
+        id=\"recRow_3540348143\">\n<td><a href=\"https://www.metal-archives.com/bands/Luca_Turilli%27s_Rhapsody/3540348143\">Luca
+        Turilli's Rhapsody</a></td>\n<td>Italy</td>\n<td>Symphonic Power Metal</td>\n<td><span
+        id=\"score_3540348143\">26 </span></td>\n</tr>\n<tr id=\"recRow_377\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Lost_Horizon/377\">Lost Horizon</a></td>\n<td>Sweden</td>\n<td>Power
+        Metal</td>\n<td><span id=\"score_377\">25 </span></td>\n</tr>\n<tr id=\"recRow_3540257762\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Ancient_Bards/3540257762\">Ancient
+        Bards</a></td>\n<td>Italy</td>\n<td>Symphonic Power Metal</td>\n<td><span
+        id=\"score_3540257762\">22 </span></td>\n</tr>\n<tr id=\"recRow_216\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Stratovarius/216\">Stratovarius</a></td>\n<td>Finland</td>\n<td>Melodic
+        Power Metal</td>\n<td><span id=\"score_216\">17 </span></td>\n</tr>\n<tr id=\"recRow_568\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Dark_Moor/568\">Dark Moor</a></td>\n<td>Spain</td>\n<td>Power
+        Metal</td>\n<td><span id=\"score_568\">17 </span></td>\n</tr>\n<tr id=\"recRow_20997\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Wisdom/20997\">Wisdom</a></td>\n<td>Hungary</td>\n<td>Power
+        Metal</td>\n<td><span id=\"score_20997\">11 </span></td>\n</tr>\n<tr id=\"recRow_388\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Luca_Turilli/388\">Luca Turilli</a></td>\n<td>Italy</td>\n<td>Symphonic
+        Power Metal</td>\n<td><span id=\"score_388\">11 </span></td>\n</tr>\n<tr id=\"recRow_19417\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Galneryus/19417\">Galneryus</a></td>\n<td>Japan</td>\n<td>Neoclassical
+        Power Metal</td>\n<td><span id=\"score_19417\">11 </span></td>\n</tr>\n<tr
+        id=\"recRow_122050\">\n<td><a href=\"https://www.metal-archives.com/bands/Evertale/122050\">Evertale</a></td>\n<td>Germany</td>\n<td>Power
+        Metal</td>\n<td><span id=\"score_122050\">10 </span></td>\n</tr>\n<tr id=\"recRow_192\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Sonata_Arctica/192\">Sonata Arctica</a></td>\n<td>Finland</td>\n<td>Power
+        Metal</td>\n<td><span id=\"score_192\">9 </span></td>\n</tr>\n<tr id=\"recRow_118731\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Sunrise/118731\">Sunrise</a></td>\n<td>Ukraine</td>\n<td>Melodic
+        Power/Speed Metal</td>\n<td><span id=\"score_118731\">9 </span></td>\n</tr>\n<tr
+        id=\"recRow_3540334638\">\n<td><a href=\"https://www.metal-archives.com/bands/Bane_of_Winterstorm/3540334638\">Bane
+        of Winterstorm</a></td>\n<td>Australia</td>\n<td>Symphonic Power Metal</td>\n<td><span
+        id=\"score_3540334638\">8 </span></td>\n</tr>\n<tr id=\"recRow_3540378381\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/ShadowStrike/3540378381\">ShadowStrike</a></td>\n<td>United
+        States</td>\n<td>Symphonic Power Metal</td>\n<td><span id=\"score_3540378381\">7
+        </span></td>\n</tr>\n<tr id=\"recRow_3540356382\">\n<td><a href=\"https://www.metal-archives.com/bands/Titanium/3540356382\">Titanium</a></td>\n<td>Poland</td>\n<td>Heavy/Power
+        Metal</td>\n<td><span id=\"score_3540356382\">7 </span></td>\n</tr>\n<tr id=\"recRow_41634\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Aquaria/41634\">Aquaria</a></td>\n<td>Brazil</td>\n<td>Symphonic
+        Power Metal</td>\n<td><span id=\"score_41634\">5 </span></td>\n</tr>\n<tr
+        id=\"recRow_3540419113\">\n<td><a href=\"https://www.metal-archives.com/bands/Noamuthen/3540419113\">Noamuthen</a></td>\n<td>Hungary</td>\n<td>Symphonic
+        Power Metal</td>\n<td><span id=\"score_3540419113\">5 </span></td>\n</tr>\n<tr
+        id=\"recRow_3540315383\">\n<td><a href=\"https://www.metal-archives.com/bands/Wind_Rose/3540315383\">Wind
+        Rose</a></td>\n<td>Italy</td>\n<td>Progressive/Power Metal (early); Folk/Power
+        Metal (later)</td>\n<td><span id=\"score_3540315383\">4 </span></td>\n</tr>\n<tr
+        id=\"recRow_3540386662\">\n<td><a href=\"https://www.metal-archives.com/bands/Eunomia/3540386662\">Eunomia</a></td>\n<td>Norway</td>\n<td>Symphonic
+        Power Metal</td>\n<td><span id=\"score_3540386662\">4 </span></td>\n</tr>\n<tr
+        id=\"recRow_3540260700\">\n<td><a href=\"https://www.metal-archives.com/bands/Symphonity/3540260700\">Symphonity</a></td>\n<td>Czechia</td>\n<td>Power
+        Metal</td>\n<td><span id=\"score_3540260700\">4 </span></td>\n</tr>\n<tr id=\"recRow_3540273882\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Victorius/3540273882\">Victorius</a></td>\n<td>Germany</td>\n<td>Power
+        Metal</td>\n<td><span id=\"score_3540273882\">4 </span></td>\n</tr>\n<tr id=\"recRow_3\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Blind_Guardian/3\">Blind Guardian</a></td>\n<td>Germany</td>\n<td>Speed
+        Metal (early); Power Metal (later)</td>\n<td><span id=\"score_3\">3 </span></td>\n</tr>\n<tr
+        id=\"recRow_3540270698\">\n<td><a href=\"https://www.metal-archives.com/bands/Dragon_Guardian/3540270698\">Dragon
+        Guardian</a></td>\n<td>Japan</td>\n<td>Symphonic Power Metal</td>\n<td><span
+        id=\"score_3540270698\">3 </span></td>\n</tr>\n<tr id=\"recRow_3540326863\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Gunsen/3540326863\">Gunsen</a></td>\n<td>Poland</td>\n<td>Melodic
+        Death/Power Metal</td>\n<td><span id=\"score_3540326863\">3 </span></td>\n</tr>\n<tr
+        id=\"recRow_3540316287\">\n<td><a href=\"https://www.metal-archives.com/bands/Immortal_Guardian/3540316287\">Immortal
+        Guardian</a></td>\n<td>United States</td>\n<td>Progressive/Power Metal</td>\n<td><span
+        id=\"score_3540316287\">3 </span></td>\n</tr>\n<tr id=\"recRow_3540446531\">\n<td><a
+        href=\"https://www.metal-archives.com/bands/Memories_of_Old/3540446531\">Memories
+        of Old</a></td>\n<td>United Kingdom</td>\n<td>Symphonic Power Metal</td>\n<td><span
+        id=\"score_3540446531\">3 </span></td>\n</tr>\n<tr><td colspan=\"5\" id=\"show_more\">(<a
+        href=\"https://www.metal-archives.com/bands/Pathfinder/122302#Similar_artists\">show
+        top 20 only</a>)</td></tr>\n</tbody>\n</table>\n</div>\n<script src=\"https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js\"
+        data-cf-settings=\"33752b9d692a34a2712eb5e9-|49\" defer=\"\"></script>"
+  recorded_at: Sun, 11 Apr 2021 09:53:31 GMT
+- request:
+    method: get
+    uri: https://ma.cache.headbang.re/link/ajax-list/type/band/id/122302
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - MetalArchivesGemTestSuite/3.2.0 (user@example.com)
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - ma.cache.headbang.re
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+      Cache-Control:
+      - max-age=2592000
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Ray:
+      - 63a39ced7ea640d1-LHR
+      Cf-Request-Id:
+      - '093a206868000040d1a4af0000000001'
+      Content-Security-Policy:
+      - frame-ancestors 'self'
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Sun, 11 Apr 2021 09:50:09 GMT
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Expires:
+      - Tue, 11 May 2021 09:50:09 GMT
+      Nel:
+      - '{"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"max_age":604800,"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=himyteXY3Oril3UL%2F4eCsmbbPAy5VQsv9gWb9jN42058o0Yxyx3p3f6bk5FiJAI8iOk1bWJNFcllnOXz7Vd9NOw3BeDUocFSJRwykxmcA63yGCDh72mF"}],"group":"cf-nel"}'
+      Server:
+      - nginx
+      Vary:
+      - Accept-Encoding,User-Agent
+      X-Cache-Status:
+      - HIT
+      X-Frame-Options:
+      - SAMEORIGIN
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "<script type=\"7e72c18f53198401ce409add-text/javascript\">\n$(document).ready(function()
+        {\n\t// Prepare the sub-tabs\n\t $('.tabs2lvl').tabs(); \t// Prepare the form
+        popup\n\t$('#editLink').dialog({ autoOpen: false, width: 400, height: 250,
+        modal: true, overlay: { opacity: 0.5, background: 'white'}, buttons: { 'Save
+        link': function(){ $('#linkForm').submit();}, 'Cancel': function() { $('#editLink').dialog('close');}
+        } });\n});\n\n\n</script>\n<div id=\"band_links\" class=\"tabs2lvl\">\n<ul>\n<li><a
+        href=\"#band_links_Official\">Official</a></li>\n<li><a href=\"#band_links_Official_merchandise\">Official
+        merchandise</a></li>\n</ul>\n\n<div id=\"band_links_Official\">\n<div class=\"ui-tabs-panel-content\">\n<table
+        id=\"linksTableOfficial\" class=\"display\" width=\"50%\" cellpadding=\"0\"
+        cellspacing=\"0\">\n<tr class=\"even\" id=\"linkRow527175\">\n<td><a id=\"link527175\"
+        href=\"http://www.arkadiusz-e-ruth.com\" title=\"Go to: Arkadiusz E. Ruth's
+        Official Website\" target=\"_blank\">Arkadiusz E. Ruth's Official Website</a></td>\n</tr>\n<tr
+        class=\"odd\" id=\"linkRow364224\">\n<td><a id=\"link364224\" href=\"https://www.facebook.com/PathfinderBand\"
+        title=\"Go to: Facebook\" target=\"_blank\">Facebook</a></td>\n</tr>\n<tr
+        class=\"even\" id=\"linkRow201230\">\n<td><a id=\"link201230\" href=\"http://www.pathfinderband.com\"
+        title=\"Go to: Homepage\" target=\"_blank\">Homepage</a></td>\n</tr>\n<tr
+        class=\"odd\" id=\"linkRow201229\">\n<td><a id=\"link201229\" href=\"https://myspace.com/pathfinderband\"
+        title=\"Go to: Myspace\" target=\"_blank\">Myspace</a></td>\n</tr>\n<tr class=\"even\"
+        id=\"linkRow404943\">\n<td><a id=\"link404943\" href=\"https://www.reverbnation.com/pathfinder\"
+        title=\"Go to: ReverbNation\" target=\"_blank\">ReverbNation</a></td>\n</tr>\n<tr
+        class=\"odd\" id=\"linkRow582039\">\n<td><a id=\"link582039\" href=\"https://open.spotify.com/artist/4teMSBnvZUn588FGFbu3qE\"
+        title=\"Go to: Spotify\" target=\"_blank\">Spotify</a></td>\n</tr>\n<tr class=\"even\"
+        id=\"linkRow364225\">\n<td><a id=\"link364225\" href=\"https://twitter.com/PathfinderMusic\"
+        title=\"Go to: Twitter\" target=\"_blank\">Twitter</a></td>\n</tr>\n<tr class=\"odd\"
+        id=\"linkRow582032\">\n<td><a id=\"link582032\" href=\"https://vk.com/pathfinderofficial\"
+        title=\"Go to: VKontakte\" target=\"_blank\">VKontakte</a></td>\n</tr>\n<tr
+        class=\"even\" id=\"linkRow364226\">\n<td><a id=\"link364226\" href=\"https://www.youtube.com/user/PathfinderPoland\"
+        title=\"Go to: YouTube\" target=\"_blank\">YouTube</a></td>\n</tr>\n</table>\n</div>\n</div>\n\n<div
+        id=\"band_links_Official_merchandise\">\n<div class=\"ui-tabs-panel-content\">\n<table
+        id=\"linksTableOfficial_merchandise\" class=\"display\" width=\"50%\" cellpadding=\"0\"
+        cellspacing=\"0\">\n<tr class=\"odd\" id=\"linkRow469805\">\n<td><a id=\"link469805\"
+        href=\"https://www.amazon.com/Fifth-Element-Pathfinder/dp/B007MNNCVW\" title=\"Go
+        to: Amazon\" target=\"_blank\">Amazon</a></td>\n</tr>\n<tr class=\"even\"
+        id=\"linkRow582037\">\n<td><a id=\"link582037\" href=\"https://play.google.com/store/music/artist/Pathfinder?id=Anie7zabdofxutr4upq42evh5lu&hl=pl\"
+        title=\"Go to: Google Play\" target=\"_blank\">Google Play</a></td>\n</tr>\n<tr
+        class=\"odd\" id=\"linkRow469803\">\n<td><a id=\"link469803\" href=\"https://itunes.apple.com/pl/artist/pathfinder/id49403223\"
+        title=\"Go to: iTunes\" target=\"_blank\">iTunes</a></td>\n</tr>\n</table>\n</div>\n</div>\n</div>\n<script
+        src=\"https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js\"
+        data-cf-settings=\"7e72c18f53198401ce409add-|49\" defer=\"\"></script>"
+  recorded_at: Sun, 11 Apr 2021 09:53:31 GMT
+- request:
+    method: get
+    uri: https://ma.cache.headbang.re/band/discography/id/122302/tab/all
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - MetalArchivesGemTestSuite/3.2.0 (user@example.com)
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - ma.cache.headbang.re
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+      Cache-Control:
+      - max-age=2592000
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Ray:
+      - 63a39cf4cce2d91d-AMS
+      Cf-Request-Id:
+      - '093a206cfe0000d91d300f3000000001'
+      Content-Security-Policy:
+      - frame-ancestors 'self'
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Sun, 11 Apr 2021 09:50:09 GMT
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Expires:
+      - Tue, 11 May 2021 09:50:09 GMT
+      Nel:
+      - '{"max_age":604800,"report_to":"cf-nel"}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=nh2zUXygcGxYBoUqF7K75DROXMngRCaI1ZSAoJLxW66g3CWQNyhKnomTSPT1vZ8ESYlishysK4SsTFxCkS%2FKsU7%2BSTAlSYjiY54iBprxivaWTBMnpBq6"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - nginx
+      Vary:
+      - Accept-Encoding,User-Agent
+      X-Cache-Status:
+      - HIT
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '1652'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |2-
+         <table width="100%" cellpadding="0" cellspacing="0" class="display discog">
+        <thead>
+        <tr>
+        <th class="releaseCol">Name</th>
+        <th class="typeCol">Type</th>
+        <th class="yearCol">Year</th>
+        <th class="reviewsCol">Reviews</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td><a href="https://www.metal-archives.com/albums/Pathfinder/Pathfinder_-_Demo_2007/190714" class="demo">Pathfinder / Demo 2007</a></td>
+        <td class="demo">Demo</td>
+        <td class="demo">2007</td>
+        <td>
+        &nbsp;
+        </td>
+        </tr>
+        <tr>
+        <td><a href="https://www.metal-archives.com/albums/Pathfinder/The_Beginning/201587" class="demo">The Beginning</a></td>
+        <td class="demo">Demo</td>
+        <td class="demo">2008</td>
+        <td>
+        <a href="https://www.metal-archives.com/reviews/Pathfinder/The_Beginning/201587/">1 (91%)</a>
+        </td>
+        </tr>
+        <tr>
+        <td><a href="https://www.metal-archives.com/albums/Pathfinder/Moonlight_Shadow/283512" class="single">Moonlight Shadow</a></td>
+        <td class="single">Single</td>
+        <td class="single">2010</td>
+        <td>
+        &nbsp;
+        </td>
+        </tr>
+        <tr>
+        <td><a href="https://www.metal-archives.com/albums/Pathfinder/Beyond_the_Space%2C_Beyond_the_Time/280057" class="album">Beyond the Space, Beyond the Time</a></td>
+        <td class="album">Full-length</td>
+        <td class="album">2010</td>
+        <td>
+        <a href="https://www.metal-archives.com/reviews/Pathfinder/Beyond_the_Space%2C_Beyond_the_Time/280057/">10 (69%)</a>
+        </td>
+        </tr>
+        <tr>
+        <td><a href="https://www.metal-archives.com/albums/Pathfinder/Fifth_Element/336125" class="album">Fifth Element</a></td>
+        <td class="album">Full-length</td>
+        <td class="album">2012</td>
+        <td>
+        <a href="https://www.metal-archives.com/reviews/Pathfinder/Fifth_Element/336125/">4 (91%)</a>
+        </td>
+        </tr>
+        </tbody>
+        </table>
+  recorded_at: Sun, 11 Apr 2021 09:53:31 GMT
+recorded_with: VCR 6.0.0
