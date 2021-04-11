@@ -53,7 +53,7 @@ module MetalArchives
               when "Status:"
                 props[:status] = content.downcase.tr(" ", "_").to_sym
               when "Specialised in:"
-                props[:specializations] = Parsers::Genre.parse(content)
+                props[:specializations] = Builders::Base.new.genres(content)
               when "Founding date :"
                 props[:date_founded] = Parsers::Date.parse(content)
               when "Sub-labels:"
