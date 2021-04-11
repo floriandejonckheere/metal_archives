@@ -98,6 +98,30 @@ module MetalArchives
       end
 
       ##
+      # Parse a years active string
+      #
+      # [Params]
+      # +string+: Years active +String+
+      #
+      # [Returns]
+      # +Array+ of +Range+ (years active), +Array+ of +String+ (aliases)
+      #
+      def years(string)
+        return nil if string.blank?
+
+        # Split by comma and then extract aliases
+        years, aliases = string
+          .split(",")
+          .map { |s| s.match(/ *(?<years>[^(]*)(\(as (?<aliases>[^)]*)\))?/).captures }
+          .transpose
+
+        years = years.map { |y| year(y) }
+        aliases = aliases.compact
+
+        [years, aliases]
+      end
+
+      ##
       # Parse a genre string
       #
       # The following components are omitted:
@@ -161,7 +185,7 @@ module MetalArchives
       # Parse a lyrical themes string
       #
       # [Params]
-      # +string+: Genre +String+
+      # +string+: Lyrical themes +String+
       #
       # [Returns]
       # +Array+ of +String+

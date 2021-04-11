@@ -66,6 +66,18 @@ RSpec.describe MetalArchives::Builders::Base do
     end
   end
 
+  describe "#years" do
+    it "returns nil" do
+      expect(builder.years(nil)).to be_nil
+      expect(builder.years("")).to be_nil
+    end
+
+    it "returns year ranges and aliases" do
+      expect(builder.years("1993-1995 (as Thundercross), 1995-2006 (as Rhapsody), 2006-present"))
+        .to eq [[1993..1995, 1995..2006, 2006..], %w(Thundercross Rhapsody)]
+    end
+  end
+
   describe "#genres" do
     it "returns empty array" do
       expect(builder.genres(nil)).to be_empty
