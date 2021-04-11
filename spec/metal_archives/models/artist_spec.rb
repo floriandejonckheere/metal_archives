@@ -3,6 +3,8 @@
 RSpec.describe MetalArchives::Artist do
   subject(:artist) { described_class.new(id: id) }
 
+  it_behaves_like "it is initializable"
+
   describe "Alberto Rionda" do
     let(:id) { 60_908 }
 

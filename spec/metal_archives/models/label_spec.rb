@@ -3,6 +3,8 @@
 RSpec.describe MetalArchives::Label do
   subject(:label) { described_class.new(id: id) }
 
+  it_behaves_like "it is initializable"
+
   describe "AFM Records" do
     let(:id) { 17 }
 

@@ -3,6 +3,8 @@
 RSpec.describe MetalArchives::Band do
   subject(:band) { described_class.new(id: id) }
 
+  it_behaves_like "it is initializable"
+
   describe "Pathfinder" do
     let(:id) { 122_302 }
 
