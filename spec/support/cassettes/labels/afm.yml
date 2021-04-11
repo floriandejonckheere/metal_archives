@@ -1,0 +1,199 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://ma.cache.headbang.re/labels/id/17
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - MetalArchivesGemTestSuite/3.2.0 (user@example.com)
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - ma.cache.headbang.re
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+      Cache-Control:
+      - max-age=2592000
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Ray:
+      - 63e4b7ce3b44ce7f-LHR
+      Cf-Request-Id:
+      - '0962d134e80000ce7f44b06000000001'
+      Content-Security-Policy:
+      - frame-ancestors 'self'
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Sun, 11 Apr 2021 13:53:02 GMT
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Expires:
+      - Tue, 11 May 2021 13:53:02 GMT
+      Nel:
+      - '{"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=QmRj97aots3qFCILM6M%2FAyDe7vU9RzSWhQxgAa8t0pxTqOwpPvCAbudS2nyii%2FXx6sTNpk5ejP%2BDIaH%2Fh%2BWgT3LC211Fog0Xp6%2Faz%2FmPBvzPyHqvymvu"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - nginx
+      Vary:
+      - Accept-Encoding,User-Agent
+      X-Cache-Status:
+      - MISS
+      X-Frame-Options:
+      - SAMEORIGIN
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n<html
+        xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n<title>AFM Records - Encyclopaedia
+        Metallum: The Metal Archives</title>\n<meta http-equiv=\"Content-Type\" content=\"text/html;
+        charset=UTF-8\" />\n<meta content=\"width=device-width, initial-scale=1\"
+        name=\"viewport\" />\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/min/index.php?g=css\"
+        />\n<script type=\"e68df2cb44c00fb6c84d5820-text/javascript\" src=\"/min/index.php?g=js\"></script>\n<script
+        type=\"e68df2cb44c00fb6c84d5820-text/javascript\">\r\n\t\t\tvar URL_SITE\t=
+        'https://www.metal-archives.com/';\r\n\t\t\tvar URL_IMAGES\t= 'https://www.metal-archives.com/images/';\r\n\t\t\tvar
+        URL_CSS\t\t= 'https://www.metal-archives.com/css/';\r\n\t\t\tvar csrfToken\t=
+        '';\r\n\r\n\t\t\t$(document).ready(function() {\r\n\t\t\t\ttoggleFixedPositioning(1280,
+        600);\r\n\t\t\t\texecuteOnAllPages();\r\n\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t});\r\n\r\n\r\n\t\t</script>\n<noscript>\r\n\t\t\t<style
+        type=\"text/css\">\r\n\t\t\t\t.no-js { display: block !important; }\r\n\t\t\t</style>\r\n\t\t</noscript>\n<!--[if
+        lt IE 8]>\r\n\t\t\t<script src=\"http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js\"></script>\r\n\t\t\t
+        <link rel=\"stylesheet\" type=\"text/css\" href=\"https://www.metal-archives.com/css/default/oldie.css\"
+        />\r\n\t\t<![endif]-->\n<script type=\"e68df2cb44c00fb6c84d5820-text/javascript\">\r\n\t\t\t
+        \ var _gaq = _gaq || [];\r\n\t\t\t  _gaq.push(['_setAccount', 'UA-4046749-4']);\r\n\t\t\t
+        \ _gaq.push(['_trackPageview']);\r\n\r\n\t\t\t  (function() {\r\n\t\t\t    var
+        ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async
+        = true;\r\n\t\t\t    ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+        : 'http://www') + '.google-analytics.com/ga.js';\r\n\t\t\t    var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);\r\n\t\t\t  })();\r\n\t\t</script>\n</head>\n<body>\n<div
+        id=\"wrapper\">\n<div id=\"header\">\n<a href=\"https://www.metal-archives.com/\"
+        id=\"MA_logo\">Metal Archives</a>\n<div class=\"clear loading\"><img src=\"https://www.metal-archives.com/images/loading.gif\"
+        alt=\"loading\" width=\"12\" height=\"12\" /> loading...</div>\n<div id=\"search_box\">\n<form
+        id=\"search_form\" action=\"https://www.metal-archives.com/search\" method=\"get\">\n<div>\n<label>Search:</label><br
+        />\n<input name=\"searchString\" type=\"text\" id=\"searchQueryBox\" size=\"25\"
+        value=\"\" tabindex=\"1\" />\n<select name=\"type\" tabindex=\"2\">\n<option
+        value=\"band_name\">Band name</option>\n<option value=\"band_genre\">Music
+        genre</option>\n<option value=\"band_themes\">Lyrical themes</option>\n<option
+        value=\"album_title\">Album title</option>\n<option value=\"song_title\">Song
+        title</option>\n<option value=\"label_name\">Label</option>\n<option value=\"artist_alias\">Artist</option>\n<option
+        value=\"user_name\">User profile</option>\n<option value=\"google\">Google</option>\n</select>\n<br
+        />\n<a href=\"https://www.metal-archives.com/search/advanced/?searchString=&type=\"
+        class=\"float_left\" tabindex=\"4\">Advanced search</a>\n<button type=\"submit\"
+        class=\"btn_submit float_right\" tabindex=\"3\">Submit</button>\n</div>\n</form>\n</div>\n<div
+        id=\"top_menu_box\">\n<ul class=\"menu_style_1\">\n<li><a href=\"https://www.metal-archives.com/content/help\">Help</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/content/rules\">Rules</a></li>\n<li><a
+        href=\"https://forum.metal-archives.com\" target=\"_top\">Forum</a></li>\n</ul>\n<ul
+        class=\"menu_style_2\">\n<li><a href=\"https://www.metal-archives.com/content/faq\">FAQ</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/content/support\">Support Us</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/content/tools\">Add-ons</a></li>\n</ul>\n</div>\n</div>\n<div
+        id=\"left_col\">\n<div id=\"member_box\">\n <form name=\"login_form\" id=\"login_form\"
+        action=\"https://www.metal-archives.com/authentication/login\" method=\"post\">\n<div>\n<label>Username</label><br
+        />\n<input type=\"text\" name=\"loginUsername\" />\n<label>Password</label><br
+        />\n<input type=\"password\" name=\"loginPassword\" />\n<input type=\"hidden\"
+        name=\"origin\" value=\"/labels/id/17\" />\n<button type=\"submit\" class=\"btn_login
+        float_right\">Login</button>\n</div>\n</form>\n<a href=\"https://www.metal-archives.com/user/signup\"
+        class=\"float-left writeAction\">Register</a>\n<span class=\"float_right\"><a
+        href=\"https://www.metal-archives.com/user/forgot-password\" class=\"float-left
+        writeAction\">Forgot login?</a> </span>\n<div class=\"clear\"> </div>\n</div>\n<div
+        id=\"left_menu_box\">\n<ul class=\"menu_style_3 block_spacer_20\">\n<li>\nBands\n<ul>\n<li><a
+        href=\"https://www.metal-archives.com/browse/letter\">alphabetical</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/browse/country\">country</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/browse/genre\">genre</a></li>\n</ul>\n</li>\n<li>\nLabels\n<ul>\n<li><a
+        href=\"https://www.metal-archives.com/label\">alphabetical</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/label/country\">country</a></li>\n</ul>\n</li>\n<li><a
+        href=\"https://www.metal-archives.com/review/browse\">Reviews</a></li>\n</ul>\n<ul
+        class=\"menu_style_3 block_spacer_20\">\n<li><a href=\"https://www.metal-archives.com/artist/rip\">R.I.P.</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/band/random\">Random Band</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/user/list\">User rankings</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/news\">News archive</a></li>\n</ul>\n<ul
+        class=\"menu_style_3 ornement_30\">\n<li><a href=\"https://www.metal-archives.com/report/list\">Reports</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/todo\">Contribute / To do</a></li>\n</ul>\n</div>\n<div
+        id=\"left_text_box\">\n<p class=\"small_text center\"> &copy; 2002-2021<br
+        />Encyclopaedia Metallum </p>\n<p class=\"small_text center\">Best viewed<br
+        /> <a href=\"http://www.getfirefox.com\" target=\"_blank\">without</a> Internet
+        Explorer, <br />in 1280 x 960 resolution<br /> or higher.</p>\n</div>\n<div>\n<p
+        class=\"small_text center\"><a href=\"https://www.metal-archives.com/content/pp\">Privacy
+        Policy</a></p>\n</div>\n</div>\n<div id=\"content_wrapper\">\n<script type=\"e68df2cb44c00fb6c84d5820-text/javascript\"
+        src=\"https://www.metal-archives.com/js/jquery/jquery.dataTables.min.js\"></script>\n<script
+        type=\"e68df2cb44c00fb6c84d5820-text/javascript\" src=\"https://www.metal-archives.com/js/jquery/jquery.nospam.js\"></script>\n<script
+        type=\"e68df2cb44c00fb6c84d5820-text/javascript\" src=\"https://www.metal-archives.com/js/jquery/jquery.form.js\"></script>\n<script
+        type=\"e68df2cb44c00fb6c84d5820-text/javascript\">\n\t$(document).ready(function(){\n\t\t$(\".no-js\").removeClass(\"no-js\");\n\t
+        \   $('.nospam').nospam({ replaceText: true, filterLevel: 'normal'});\n\t
+        \   $('#label_tabs').tabs({ beforeLoad: cacheTab });\n\t    \t});\n\t  \n\t\n\tfunction
+        toggleLegacy(link, id)\n\t{\n\t\t$('#' + id).toggle();\n\t\tif ($('#' + id).css('display')
+        == 'block') {\n\t\t\t$(link).html('hide legacy data');\n\t\t} else {\n\t\t\t$(link).html('show
+        legacy data');\n\t\t}\n\t}\n\t  \n</script>\n<div id=\"label_sidebar\">\n\n<div
+        class=\"label_img\"><a class=\"image\" id=\"label_logo\" title=\"AFM Records\"
+        href=\"https://www.metal-archives.com/images/1/7/17_label.jpg?3054\"><img
+        src=\"https://www.metal-archives.com/images/1/7/17_label.jpg?3054\" title=\"Click
+        to zoom\" alt=\"AFM Records\" border=\"0\" /></a></div>\n</div>\n<div id=\"label_content\">\n<div
+        class=\"tool_strip rightFromSidebar writeAction\">\n<ul>\n<li><a title=\"Report
+        a mistake or additional information for this page\" href=\"javascript:popupReportDialog(2,
+        17);\" class=\"btn_report_error\"> </a></li>\n</ul>\n</div>\n<div id=\"label_info\">\n<h1
+        class=\"label_name\">AFM Records</h1>\n<div id=\"tool_strip_01\" class=\"tool_strip
+        writeAction\">\n<ul>\n</ul>\n</div>\n<div class=\"clear block_spacer_20\"></div>\n<dl
+        class=\"float_left\">\n<dt>Address:</dt>\n<dd> Agathe-Lasch-Weg 2<br />\n22605
+        Hamburg </dd>\n<dt>Country:</dt>\n<dd><a href=\"https://www.metal-archives.com/label/country/c/DE\">Germany</a></dd>\n<dt>Phone
+        number:</dt>\n<dd> +49 (0)40 675 09 788 - 0 </dd>\n</dl>\n<dl class=\"float_right\">\n<dt>Status:</dt>\n<dd><span
+        class=\"active\">active</span></dd>\n<dt>Styles/specialties:</dt>\n<dd> Heavy
+        Metal, Power Metal, Gothic Metal, Thrash Metal </dd>\n<dt>Founding date :</dt>\n<dd>
+        1995 </dd>\n<dt>Parent label:</dt>\n<dd><a href=\"https://www.metal-archives.com/labels/Soulfood/487\">Soulfood</a></dd>\n<dt>Online
+        shopping:</dt>\n<dd>Yes</dd>\n</dl>\n</div>\n<p id=\"label_contact\">\n<a
+        href=\"http://www.afm-records.de\" target=\"_blank\" title=\"Go to AFM Records's
+        website\" class=\"external\">AFM Records Website</a>\n&nbsp;&nbsp;\n<a class=\"nospam\"
+        title=\"Email\" rel=\"ed/sdrocer-mfa//ofni\">ed/sdrocer-mfa//ofni</a><span
+        class=\"ui-icon ui-icon-mail-closed\"> </span>\n</p>\n\n<div id=\"message\">
+        </div>\n<div class=\"clear block_spacer_5\"> </div>\n<div id=\"label_tabs\"
+        class=\"clear tabs no-js\">\n<ul>\n<li><a href=\"#label_tabs_bands\">Current
+        roster</a></li>\n<li><a href=\"#label_tabs_past\">Past roster</a></li> <li><a
+        href=\"#label_tabs_albums\">Releases</a></li>\n<li><a href=\"https://www.metal-archives.com/link/ajax-list/type/label/id/17\"
+        title=\"Related links\"><span>Links</span></a></li>\n<li><a href=\"#label_tabs_notes\">Additional
+        notes</a></li> </ul>\n\n<div id=\"label_tabs_bands\">\n<div id=\"label_signed_bands\"
+        class=\"tabs2lvl\"></div>\n<div class=\"ui-tabs-panel-content block_spacer_top_20\">\n<table
+        id=\"bandList\" class=\"display\" cellpadding=\"0\" cellspacing=\"0\">\n<thead>\n<tr>\n<th>Band</th>\n<th>Genre</th>\n<th
+        width=\"85\">Country</th>\n</tr>\n</thead>\n<tbody>\n</tbody>\n</table>\n<script
+        type=\"e68df2cb44c00fb6c84d5820-text/javascript\">\r\n\tcreateGrid('#bandList',
+        \ 100,  'label/ajax-bands/nbrPerPage/100/id/17', { aaSorting: [[0, 'asc']]
+        });\r\n</script>\n</div>\n</div>\n\n\n<div id=\"label_tabs_past\">\n<div id=\"label_past_roster\"
+        class=\"tabs2lvl\"></div>\n<div class=\"ui-tabs-panel-content block_spacer_top_20\">\n<table
+        id=\"bandListPast\" class=\"display\" cellpadding=\"0\" cellspacing=\"0\">\n<thead>\n<tr>\n<th>Band</th>\n<th>Genre</th>\n<th
+        width=\"85\">Country</th>\n<th title=\"Number of albums released\">#</th>\n</tr>\n</thead>\n<tbody>\n</tbody>\n</table>\n<script
+        type=\"e68df2cb44c00fb6c84d5820-text/javascript\">\r\n\tcreateGrid('#bandListPast',
+        \ 100,  'label/ajax-bands-past/nbrPerPage/100/id/17', { aaSorting: [[0, 'asc']]
+        });\r\n</script>\n</div>\n</div>\n\n\n<div id=\"label_tabs_albums\">\n<div
+        id=\"label_album_relased\" class=\"tabs2lvl\"></div>\n<div class=\"ui-tabs-panel-content
+        block_spacer_top_20\">\n<table id=\"albumList\" class=\"display\" cellpadding=\"0\"
+        cellspacing=\"0\">\n<thead>\n<tr>\n<th>Band</th>\n<th>Album</th>\n<th>Type</th>\n<th>Year</th>\n<th>Catalog</th>\n<th>Format</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody>\n</tbody>\n</table>\n<script
+        type=\"e68df2cb44c00fb6c84d5820-text/javascript\">\r\n\tcreateGrid('#albumList',
+        200, 'label/ajax-albums/nbrPerPage/200/id/17', { aaSorting: [[0, 'asc']],
+        aoColumns: [\r\n\t\tnull, // 0, Band\r\n\t\t{ bSortable: false}, // 1, Album\r\n\t\tnull,
+        // 2, Type\r\n \t\tnull, // 3, Date\r\n\t\tnull, // 4, Catalog number\r\n\t\tnull,
+        // 5, Format\r\n\t\t{ bSortable: false} // 6, Description\r\n \t  ] \r\n\t
+        }\r\n\t\t);\r\n</script>\n</div>\n</div>\n\n\n<div id=\"label_tabs_notes\">\n<div
+        id=\"label_notes\" class=\"tabs2lvl\"></div>\n<div class=\"ui-tabs-panel-content
+        block_spacer_top_20\">\n<h2 class=\"title_comment\">Description</h2>\n<p>AFM
+        stands for \"All for Metal\".</p>\n<h2 class=\"title_comment\">Trivia</h2>\n<p><b>Label
+        code</b>: LC 5204</p>\n</div>\n</div>\n\n</div>\n\n<div id=\"auditTrail\">\n<table>\n<tr>\n<td>Added
+        by: (Unknown user)</td>\n<td align=\"right\">Modified by: <a href=\"https://www.metal-archives.com/users/Krister%20Jensen\"
+        class=\"profileMenu\">Krister Jensen</a></td>\n</tr>\n<tr>\n<td>Added on:
+        N/A</td>\n<td align=\"right\">Last modified on: 2019-04-24 15:24:24</td>\n</tr>\n<tr>\n<td
+        valign=\"top\">\n&nbsp;\n</td>\n<td align=\"right\" valign=\"top\">\n</td>\n</tr>\n<td
+        class=\"writeAction\" colspan=\"2\">Duplicate? Please <a href=\"javascript:popupReportDialog(2,
+        17);\">file a report</a> for merging.</td>\n</table>\n</div>\n</div>\n</div>\n</div>\n<script
+        src=\"https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js\"
+        data-cf-settings=\"e68df2cb44c00fb6c84d5820-|49\" defer=\"\"></script></body>\n</html>\n"
+  recorded_at: Sun, 11 Apr 2021 13:56:23 GMT
+recorded_with: VCR 6.0.0
