@@ -8,38 +8,6 @@ module MetalArchives
     class Band < Parser # :nodoc:
       class << self
         ##
-        # Map attributes to MA attributes
-        #
-        # Returns +Hash+
-        #
-        # [+params+]
-        #     +Hash+
-        #
-        def map_params(query)
-          params = {
-            bandName: query[:name] || "",
-            exactBandMatch: (query[:exact] ? 1 : 0),
-            genre: query[:genre] || "",
-            yearCreationFrom: query[:year]&.begin || "",
-            yearCreationTo: query[:year]&.end || "",
-            bandNotes: query[:comment] || "",
-            status: map_status(query[:status]),
-            themes: query[:lyrical_themes] || "",
-            location: query[:location] || "",
-            bandLabelName: query[:label] || "",
-            indieLabelBand: (query[:independent] ? 1 : 0),
-          }
-
-          params[:country] = []
-          Array(query[:country]).each do |country|
-            params[:country] << (country.is_a?(ISO3166::Country) ? country.alpha2 : (country || ""))
-          end
-          params[:country] = params[:country].first if params[:country].size == 1
-
-          params
-        end
-
-        ##
         # Parse main HTML page
         #
         # Returns +Hash+

@@ -262,45 +262,6 @@ module MetalArchives
     #
     attribute :links, type: :hash, multiple: true
 
-    protected
-
-    ##
-    # Fetch the data and assemble the model
-    #
-    # [Raises]
-    # - rdoc-ref:MetalArchives::Errors::ParserError when parsing failed. Please report this error.
-    # - rdoc-ref:MetalArchives::Errors::NotFoundError when receiving status code 404
-    # - rdoc-ref:MetalArchives::Errors::APIError when receiving status code >= 400
-    #
-    def assemble # :nodoc:
-      ## Base attributes
-      response = MetalArchives.http.get "/band/view/id/#{id}"
-
-      properties = Parsers::Band.parse_html response.to_s
-
-      ## Comment
-      response = MetalArchives.http.get "/band/read-more/id/#{id}"
-
-      properties[:comment] = response.to_s
-
-      ## Similar artists
-      response = MetalArchives.http.get "/band/ajax-recommendations/id/#{id}"
-
-      properties[:similar] = Parsers::Band.parse_similar_bands_html response.to_s
-
-      ## Related links
-      response = MetalArchives.http.get "/link/ajax-list/type/band/id/#{id}"
-
-      properties[:links] = Parsers::Band.parse_related_links_html response.to_s
-
-      ## Releases
-      response = MetalArchives.http.get "/band/discography/id/#{id}/tab/all"
-
-      properties[:releases] = Parsers::Band.parse_releases_html response.to_s
-
-      properties
-    end
-
     class << self
       ##
       # Find by attributes
@@ -329,7 +290,7 @@ module MetalArchives
       #     - +:independent+: boolean
       #
       def find_by(query)
-        params = Parsers::Band.map_params query
+        params = map_params query
 
         response = MetalArchives.http.get "/search/ajax-advanced/searching/bands", params
         json = JSON.parse response.to_s
@@ -401,7 +362,7 @@ module MetalArchives
       #     - +:independent+: boolean
       #
       def search_by(query)
-        params = Parsers::Band.map_params query
+        params = map_params query
 
         l = lambda do
           @start ||= 0
@@ -460,6 +421,38 @@ module MetalArchives
       #
       def all
         search_by({})
+      end
+
+      ##
+      # Map attributes to MA attributes
+      #
+      # Returns +Hash+
+      #
+      # [+params+]
+      #     +Hash+
+      #
+      def map_params(query)
+        params = {
+          bandName: query[:name] || "",
+          exactBandMatch: (query[:exact] ? 1 : 0),
+          genre: query[:genre] || "",
+          yearCreationFrom: query[:year]&.begin || "",
+          yearCreationTo: query[:year]&.end || "",
+          bandNotes: query[:comment] || "",
+          status: map_status(query[:status]),
+          themes: query[:lyrical_themes] || "",
+          location: query[:location] || "",
+          bandLabelName: query[:label] || "",
+          indieLabelBand: (query[:independent] ? 1 : 0),
+        }
+
+        params[:country] = []
+        Array(query[:country]).each do |country|
+          params[:country] << (country.is_a?(ISO3166::Country) ? country.alpha2 : (country || ""))
+        end
+        params[:country] = params[:country].first if params[:country].size == 1
+
+        params
       end
     end
   end
