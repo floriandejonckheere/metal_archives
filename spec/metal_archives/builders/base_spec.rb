@@ -83,4 +83,15 @@ RSpec.describe MetalArchives::Builders::Base do
       expect(builder.genres("Speed Metal (early); Power Metal (later)")).to match_array %w(Speed Power)
     end
   end
+
+  describe "#lyrical_themes" do
+    it "returns nil" do
+      expect(builder.lyrical_themes(nil)).to be_nil
+      expect(builder.lyrical_themes("")).to be_nil
+    end
+
+    it "parses lyrical themes" do
+      expect(builder.lyrical_themes("Fantasy, Sisu")).to match_array %w(Fantasy Sisu)
+    end
+  end
 end

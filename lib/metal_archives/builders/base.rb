@@ -156,6 +156,23 @@ module MetalArchives
         end
         genres.uniq
       end
+
+      ##
+      # Parse a lyrical themes string
+      #
+      # [Params]
+      # +string+: Genre +String+
+      #
+      # [Returns]
+      # +Array+ of +String+
+      #
+      def lyrical_themes(string)
+        return nil if string.blank?
+
+        string
+          .split(",")
+          .map(&:strip)
+      end
     end
   end
 end
