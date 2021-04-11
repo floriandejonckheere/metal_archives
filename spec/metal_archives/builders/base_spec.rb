@@ -5,13 +5,24 @@ RSpec.describe MetalArchives::Builders::Base do
 
   before { MetalArchives.config.endpoint = nil }
 
+  describe "#string" do
+    it "returns nil" do
+      expect(builder.string(nil)).to be_nil
+      expect(builder.string("")).to be_nil
+    end
+
+    it "returns a string" do
+      expect(builder.string("  string  \n")).to eq "string"
+    end
+  end
+
   describe "#uri" do
     it "returns URIs" do
       expect(builder.uri(URI("https://www.metal-archives.com/band/view/id/32")).to_s).to eq "https://www.metal-archives.com/band/view/id/32"
     end
 
     it "returns nil" do
-      expect(builder.uri(nil)).to eq nil
+      expect(builder.uri(nil)).to be_nil
     end
 
     it "parses a URI string" do
@@ -33,8 +44,8 @@ RSpec.describe MetalArchives::Builders::Base do
     end
 
     it "returns nil" do
-      expect(builder.date(nil)).to eq nil
-      expect(builder.date("")).to eq nil
+      expect(builder.date(nil)).to be_nil
+      expect(builder.date("")).to be_nil
       expect(builder.date("-")).to be_nil
       expect(builder.date("foo")).to be_nil
     end
@@ -60,7 +71,7 @@ RSpec.describe MetalArchives::Builders::Base do
 
     it "parses years" do
       expect(builder.year("2001")).to eq 2001..2001
-      expect(builder.year("?-2001")).to eq nil..2001
+      expect(builder.year("?-2001")).to be_nil..2001
       expect(builder.year("2001-?")).to eq 2001..nil
       expect(builder.year("2001-present")).to eq 2001..nil
     end

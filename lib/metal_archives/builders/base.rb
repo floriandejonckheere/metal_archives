@@ -17,6 +17,20 @@ module MetalArchives
       end
 
       ##
+      # Parse a string
+      #
+      # [Params]
+      #
+      # - +string+: +String+
+      #
+      # [Returns]
+      # - +string+
+      #
+      def string(string)
+        Types::String.cast(string)
+      end
+
+      ##
       # Parse a URI and rewrite host if necessary
       #
       # [Params]
