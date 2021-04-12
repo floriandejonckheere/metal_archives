@@ -7,7 +7,15 @@ module MetalArchives
     #
     class Symbol
       def self.cast(value)
-        value&.to_sym
+        return if value.blank?
+
+        value
+          .gsub(/^"/, "")
+          .gsub(/"$/, "")
+          .gsub(/[[:space:]]/, " ")
+          .strip
+          .parameterize(separator: "_")
+          .to_sym
       end
 
       def self.serialize(value)
