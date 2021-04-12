@@ -16,6 +16,17 @@ RSpec.describe MetalArchives::Builders::Base do
     end
   end
 
+  describe "#symbol" do
+    it "returns nil" do
+      expect(builder.symbol(nil)).to be_nil
+      expect(builder.symbol("")).to be_nil
+    end
+
+    it "returns a symbol" do
+      expect(builder.symbol("  string  \n")).to eq :string
+    end
+  end
+
   describe "#uri" do
     it "returns URIs" do
       expect(builder.uri(URI("https://www.metal-archives.com/band/view/id/32")).to_s).to eq "https://www.metal-archives.com/band/view/id/32"

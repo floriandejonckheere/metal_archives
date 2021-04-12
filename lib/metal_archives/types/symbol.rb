@@ -10,9 +10,11 @@ module MetalArchives
         return if value.blank?
 
         value
+          .to_s
           .gsub(/^"/, "")
           .gsub(/"$/, "")
           .gsub(/[[:space:]]/, " ")
+          .tr("-", "_")
           .strip
           .parameterize(separator: "_")
           .to_sym

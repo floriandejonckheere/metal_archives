@@ -20,7 +20,6 @@ module MetalArchives
       # Parse a string
       #
       # [Params]
-      #
       # - +string+: +String+
       #
       # [Returns]
@@ -28,6 +27,19 @@ module MetalArchives
       #
       def string(string)
         Types::String.cast(string)
+      end
+
+      ##
+      # Parse a symbol
+      #
+      # [Params]
+      #- +string+: +String+
+      #
+      # [Returns]
+      # - +string+
+      #
+      def symbol(string)
+        Types::Symbol.cast(string)
       end
 
       ##
