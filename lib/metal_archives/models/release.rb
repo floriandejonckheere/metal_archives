@@ -149,23 +149,6 @@ module MetalArchives
     #
     attribute :notes
 
-    protected
-
-    ##
-    # Fetch the data and assemble the model
-    #
-    # [Raises]
-    # - rdoc-ref:MetalArchives::Errors::ParserError when parsing failed. Please report this error.
-    # - rdoc-ref:MetalArchives::Errors::NotFoundError when receiving status code 404
-    # - rdoc-ref:MetalArchives::Errors::APIError when receiving status code >= 400
-    #
-    def assemble # :nodoc:
-      ## Base attributes
-      response = MetalArchives.http.get "/albums/view/id/#{id}"
-
-      Parsers::Release.parse_html response.to_s
-    end
-
     class << self
       ##
       # Find by attributes

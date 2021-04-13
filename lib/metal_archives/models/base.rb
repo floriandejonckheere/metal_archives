@@ -17,17 +17,5 @@ module MetalArchives
     def inspect
       "#<#{self.class.name} @id=#{@id} @name=\"#{@name}\">"
     end
-
-    protected
-
-    ##
-    # Fetch the data and assemble the model
-    #
-    # Override this method
-    #
-    # [Raises]
-    # - rdoc-ref:Errors::APIError when receiving a status code >= 400 (except 404)
-    #
-    def assemble; end
   end
 end
