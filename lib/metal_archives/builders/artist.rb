@@ -50,7 +50,7 @@ module MetalArchives
           date_of_birth: date(info.at("dl dt:contains('Age') ~ dd")&.content&.gsub(/[0-9]* *\(born ([^)]*)\)/, '\1')),
           date_of_death: date(info.at("dl dt:contains('R.I.P.') ~ dd")&.content),
           cause_of_death: info.at("dl dt:contains('Died of') ~ dd")&.content,
-          gender: info.at("dl dt:contains('Gender') ~ dd")&.content&.downcase&.to_sym,
+          gender: symbol(info.at("dl dt:contains('Gender') ~ dd")&.content),
           country: ISO3166::Country.find_country_by_name(country&.strip),
           location: location&.strip,
           aliases: [info.at(".band_member_name")&.content] - [name],
@@ -87,7 +87,7 @@ module MetalArchives
 
           # Set type on "header_unofficial" row
           if row["id"].start_with?("header_")
-            type = row["id"].delete_prefix("header_").downcase.to_sym
+            type = symbol(row["id"].delete_prefix("header_"))
 
             next
           end

@@ -41,7 +41,7 @@ module MetalArchives
           address: info.at("dl dt:contains('Address') ~ dd")&.content,
           country: ISO3166::Country.find_country_by_name(info.at("dl dt:contains('Country') ~ dd")&.content),
           phone: info.at("dl dt:contains('Phone') ~ dd")&.content,
-          status: info.at("dl dt:contains('Status') ~ dd")&.content&.parameterize(separator: "_")&.to_sym,
+          status: symbol(info.at("dl dt:contains('Status') ~ dd")&.content),
           specializations: genres(info.at("dl dt:contains('Styles') ~ dd")&.content),
           date_founded: date(info.at("dl dt:contains('Founding date') ~ dd")&.content),
           online_shopping: info.at("dl dt:contains('Online shopping') ~ dd")&.content&.include?("Yes"),

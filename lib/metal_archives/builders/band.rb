@@ -54,7 +54,7 @@ module MetalArchives
           aliases: aliases,
           country: ISO3166::Country.find_country_by_name(doc.at("dl dt:contains('Country') ~ dd")&.content&.strip),
           location: doc.at("dl dt:contains('Location') ~ dd")&.content,
-          status: doc.at("dl dt:contains('Status') ~ dd")&.content&.downcase&.tr("-", "_")&.to_sym,
+          status: symbol(doc.at("dl dt:contains('Status') ~ dd")&.content),
           date_formed: date(doc.at("dl dt:contains('Formed in') ~ dd")&.content),
           genres: genres(doc.at("dl dt:contains('Genre') ~ dd")&.content),
           lyrical_themes: lyrical_themes(doc.at("dl dt:contains('Lyrical themes') ~ dd")&.content),
@@ -114,7 +114,7 @@ module MetalArchives
         doc = Nokogiri::HTML(response.body.to_s)
 
         doc.css("#band_links ul li a").flat_map do |link_a|
-          type = link_a.content.parameterize(separator: "_").to_sym
+          type = symbol(link_a.content)
 
           doc.css("#{link_a['href']} table tr a").map do |band_a|
             {
