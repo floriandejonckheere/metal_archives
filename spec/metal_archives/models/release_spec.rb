@@ -24,6 +24,10 @@ RSpec.describe MetalArchives::Release do
     it "has a band" do
       expect(release.band.id).to eq 3_540_382_043
     end
+
+    it "has a label" do
+      expect(release.label.id).to eq 27_402
+    end
   end
 
   describe "...And Oceans" do
@@ -45,6 +49,10 @@ RSpec.describe MetalArchives::Release do
     it "has a band" do
       expect(release.band.id).to eq 231
     end
+
+    it "has a label" do
+      expect(release.label.id).to eq 209
+    end
   end
 
   describe "MMXII" do
@@ -62,6 +70,10 @@ RSpec.describe MetalArchives::Release do
 
     it "has a band" do
       expect(release.band.id).to eq 3_540_341_226
+    end
+
+    it "has a label" do
+      expect(release.label.id).to eq 23_789
     end
   end
 

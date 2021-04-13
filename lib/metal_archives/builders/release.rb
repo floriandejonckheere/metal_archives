@@ -34,7 +34,8 @@ module MetalArchives
 
         info = doc.at("#album_info")
 
-        band_id = info.at(".band_name a")&.attr("href")&.split("/")&.last&.to_i
+        band_id = id(info.at(".band_name a")&.attr("href"))
+        label_id = id(info.at("dl dt:contains('Label') ~ dd a")&.attr("href"))
 
         # TODO: remove "N/A"
         {
@@ -45,7 +46,8 @@ module MetalArchives
           version_description: info.at("dl dt:contains('Version desc') ~ dd")&.content,
           format: symbol(format(info.at("dl dt:contains('Format') ~ dd")&.content)),
           limitation: info.at("dl dt:contains('Limitation') ~ dd")&.contents&.to_i,
-          band: MetalArchives::Band.new(id: band_id),
+          band: band_id,
+          label: label_id,
         }
       end
 

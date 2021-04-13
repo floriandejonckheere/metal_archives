@@ -40,6 +40,19 @@ module MetalArchives
     attribute :band, type: :band
 
     ##
+    # :attr_reader: label
+    #
+    # [Returns]
+    # - +rdoc-ref:MetalArchives::Label+
+    #
+    # [Raises]
+    # - rdoc-ref:MetalArchives::Errors::ParserError when parsing failed. Please report this error.
+    # - rdoc-ref:MetalArchives::Errors::NotFoundError when receiving status code 404
+    # - rdoc-ref:MetalArchives::Errors::APIError when receiving status code >= 400
+    #
+    attribute :label, type: :label
+
+    ##
     # :attr_reader: type
     #
     # [Returns]
@@ -90,8 +103,6 @@ module MetalArchives
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving status code >= 400
     #
     attribute :version_description
-
-    # TODO: label
 
     ##
     # :attr_reader: format
