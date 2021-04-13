@@ -1,0 +1,721 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://ma.cache.headbang.re/albums/artist/id/123563
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - MetalArchivesGemTestSuite/3.2.0 (user@example.com)
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - ma.cache.headbang.re
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+      Cache-Control:
+      - max-age=2592000
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Ray:
+      - 63f6265be8d8d705-FRA
+      Cf-Request-Id:
+      - '096db64d740000d7058c3f4000000001'
+      Content-Security-Policy:
+      - frame-ancestors 'self'
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Tue, 13 Apr 2021 16:39:27 GMT
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Expires:
+      - Thu, 13 May 2021 16:39:27 GMT
+      Nel:
+      - '{"max_age":604800,"report_to":"cf-nel"}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=%2FTZIMgwXgj23CvR5jLQ%2BWSN1dhWNUO7SG5ro2JPO7xOuBuiSTUJsLzVXNhC3SohmENng2A1iwrYirwsovlP4rd21bI85aJdW7AAN3xU2a8yOTS9HMBG1"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - nginx
+      Vary:
+      - Accept-Encoding,User-Agent
+      X-Cache-Status:
+      - MISS
+      X-Frame-Options:
+      - SAMEORIGIN
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n<html
+        xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n<title>...and Oceans - ...and
+        Oceans - Encyclopaedia Metallum: The Metal Archives</title>\n<meta http-equiv=\"Content-Type\"
+        content=\"text/html; charset=UTF-8\" />\n<meta content=\"width=device-width,
+        initial-scale=1\" name=\"viewport\" />\n<link rel=\"stylesheet\" type=\"text/css\"
+        href=\"/min/index.php?g=css\" />\n<script type=\"3c6600f643c38b48a2a3187a-text/javascript\"
+        src=\"/min/index.php?g=js\"></script>\n<script type=\"3c6600f643c38b48a2a3187a-text/javascript\">\r\n\t\t\tvar
+        URL_SITE\t= 'https://www.metal-archives.com/';\r\n\t\t\tvar URL_IMAGES\t=
+        'https://www.metal-archives.com/images/';\r\n\t\t\tvar URL_CSS\t\t= 'https://www.metal-archives.com/css/';\r\n\t\t\tvar
+        csrfToken\t= '';\r\n\r\n\t\t\t$(document).ready(function() {\r\n\t\t\t\ttoggleFixedPositioning(1280,
+        600);\r\n\t\t\t\texecuteOnAllPages();\r\n\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t});\r\n\r\n\r\n\t\t</script>\n<noscript>\r\n\t\t\t<style
+        type=\"text/css\">\r\n\t\t\t\t.no-js { display: block !important; }\r\n\t\t\t</style>\r\n\t\t</noscript>\n<!--[if
+        lt IE 8]>\r\n\t\t\t<script src=\"http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js\"></script>\r\n\t\t\t
+        <link rel=\"stylesheet\" type=\"text/css\" href=\"https://www.metal-archives.com/css/default/oldie.css\"
+        />\r\n\t\t<![endif]-->\n<script type=\"3c6600f643c38b48a2a3187a-text/javascript\">\r\n\t\t\t
+        \ var _gaq = _gaq || [];\r\n\t\t\t  _gaq.push(['_setAccount', 'UA-4046749-4']);\r\n\t\t\t
+        \ _gaq.push(['_trackPageview']);\r\n\r\n\t\t\t  (function() {\r\n\t\t\t    var
+        ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async
+        = true;\r\n\t\t\t    ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+        : 'http://www') + '.google-analytics.com/ga.js';\r\n\t\t\t    var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);\r\n\t\t\t  })();\r\n\t\t</script>\n</head>\n<body>\n<div
+        id=\"wrapper\">\n<div id=\"header\">\n<a href=\"https://www.metal-archives.com/\"
+        id=\"MA_logo\">Metal Archives</a>\n<div class=\"clear loading\"><img src=\"https://www.metal-archives.com/images/loading.gif\"
+        alt=\"loading\" width=\"12\" height=\"12\" /> loading...</div>\n<div id=\"search_box\">\n<form
+        id=\"search_form\" action=\"https://www.metal-archives.com/search\" method=\"get\">\n<div>\n<label>Search:</label><br
+        />\n<input name=\"searchString\" type=\"text\" id=\"searchQueryBox\" size=\"25\"
+        value=\"\" tabindex=\"1\" />\n<select name=\"type\" tabindex=\"2\">\n<option
+        value=\"band_name\">Band name</option>\n<option value=\"band_genre\">Music
+        genre</option>\n<option value=\"band_themes\">Lyrical themes</option>\n<option
+        value=\"album_title\">Album title</option>\n<option value=\"song_title\">Song
+        title</option>\n<option value=\"label_name\">Label</option>\n<option value=\"artist_alias\">Artist</option>\n<option
+        value=\"user_name\">User profile</option>\n<option value=\"google\">Google</option>\n</select>\n<br
+        />\n<a href=\"https://www.metal-archives.com/search/advanced/?searchString=&type=\"
+        class=\"float_left\" tabindex=\"4\">Advanced search</a>\n<button type=\"submit\"
+        class=\"btn_submit float_right\" tabindex=\"3\">Submit</button>\n</div>\n</form>\n</div>\n<div
+        id=\"top_menu_box\">\n<ul class=\"menu_style_1\">\n<li><a href=\"https://www.metal-archives.com/content/help\">Help</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/content/rules\">Rules</a></li>\n<li><a
+        href=\"https://forum.metal-archives.com\" target=\"_top\">Forum</a></li>\n</ul>\n<ul
+        class=\"menu_style_2\">\n<li><a href=\"https://www.metal-archives.com/content/faq\">FAQ</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/content/support\">Support Us</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/content/tools\">Add-ons</a></li>\n</ul>\n</div>\n</div>\n<div
+        id=\"left_col\">\n<div id=\"member_box\">\n <form name=\"login_form\" id=\"login_form\"
+        action=\"https://www.metal-archives.com/authentication/login\" method=\"post\">\n<div>\n<label>Username</label><br
+        />\n<input type=\"text\" name=\"loginUsername\" />\n<label>Password</label><br
+        />\n<input type=\"password\" name=\"loginPassword\" />\n<input type=\"hidden\"
+        name=\"origin\" value=\"/albums/artist/id/123563\" />\n<button type=\"submit\"
+        class=\"btn_login float_right\">Login</button>\n</div>\n</form>\n<a href=\"https://www.metal-archives.com/user/signup\"
+        class=\"float-left writeAction\">Register</a>\n<span class=\"float_right\"><a
+        href=\"https://www.metal-archives.com/user/forgot-password\" class=\"float-left
+        writeAction\">Forgot login?</a> </span>\n<div class=\"clear\"> </div>\n</div>\n<div
+        id=\"left_menu_box\">\n<ul class=\"menu_style_3 block_spacer_20\">\n<li>\nBands\n<ul>\n<li><a
+        href=\"https://www.metal-archives.com/browse/letter\">alphabetical</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/browse/country\">country</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/browse/genre\">genre</a></li>\n</ul>\n</li>\n<li>\nLabels\n<ul>\n<li><a
+        href=\"https://www.metal-archives.com/label\">alphabetical</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/label/country\">country</a></li>\n</ul>\n</li>\n<li><a
+        href=\"https://www.metal-archives.com/review/browse\">Reviews</a></li>\n</ul>\n<ul
+        class=\"menu_style_3 block_spacer_20\">\n<li><a href=\"https://www.metal-archives.com/artist/rip\">R.I.P.</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/band/random\">Random Band</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/user/list\">User rankings</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/news\">News archive</a></li>\n</ul>\n<ul
+        class=\"menu_style_3 ornement_30\">\n<li><a href=\"https://www.metal-archives.com/report/list\">Reports</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/todo\">Contribute / To do</a></li>\n</ul>\n</div>\n<div
+        id=\"left_text_box\">\n<p class=\"small_text center\"> &copy; 2002-2021<br
+        />Encyclopaedia Metallum </p>\n<p class=\"small_text center\">Best viewed<br
+        /> <a href=\"http://www.getfirefox.com\" target=\"_blank\">without</a> Internet
+        Explorer, <br />in 1280 x 960 resolution<br /> or higher.</p>\n</div>\n<div>\n<p
+        class=\"small_text center\"><a href=\"https://www.metal-archives.com/content/pp\">Privacy
+        Policy</a></p>\n</div>\n</div>\n<div id=\"content_wrapper\">\n<script type=\"3c6600f643c38b48a2a3187a-text/javascript\"
+        src=\"https://www.metal-archives.com/js/jquery/jquery.form.js\"></script>\n<script
+        type=\"3c6600f643c38b48a2a3187a-text/javascript\">\n\n\t$(document).ready(function()
+        {\n\t\t$(\".no-js\").removeClass(\"no-js\");\n\t\t$('#album_tabs').tabs({
+        beforeLoad: cacheTab }).show();\n\t\t$('#album_members').tabs();\n\t\t$('.albumMenu').click(toggleAlbumMenu);\n\t\t\t\t\t\t\t\t\ttoggleLyrics(0);\n\t\t\t});\n\t\n\tfunction
+        hideToolMenu(event) {\n\t\t $('.toolMenu-content').hide();\n\t}\n\t\n\tfunction
+        makeChildVersion() {\n\t\tvar releaseId = 123563;\n\t\tvar newParentId = prompt(\"Make
+        a child of which album ID?\");\n\t\t\n\t\tif(newParentId != null) {\n\t\t\n\t\t\t$('.loading').show();\n\t\t\t$.post(URL_SITE
+        + 'review/ajax-validate-move/json/1', { 'releaseId' : newParentId, \"oldReleaseId\":
+        releaseId }, function(result) {\n\t\t\t\t$('.loading').hide();\n\t\t\t\tif(result.reviewConflict)
+        {\n\t\t\t\t\talert(\"This action would cause at least two reviews by the same
+        user to be listed for one album. This is not allowed. One of the reviews will
+        need to be deleted first.\");\n\t\t\t\t}\n\t\t\t\telse if(result.success)
+        {\n\t\t\t\t\tvar confirmMove = confirm(\"Make this album (and all its own
+        versions, if any) a version of \" + result.band + \" - \" + result.release
+        + \"?\");\n\t\t\t\t\t\n\t\t\t\t\tif(confirmMove) {\n\t\t\t\t\t\tvar params
+        = { 'releaseId' : releaseId, \"newParentId\" : newParentId, 'csrfToken': window.csrfToken};\n\t\t\t\t\t\t$('.loading').show();\n\t\t\t\t\t\t$.post(URL_SITE
+        + 'release/ajax-make-child/json/1', params, function(result) {\n\t\t\t\t\t\t\t$('.loading').hide();\n\t\t\t\t\t\t\tif(result.success)
+        {\n\t\t\t\t\t\t\t\tlocation.href = \"https://www.metal-archives.com/albums/...and_Oceans/...and_Oceans/123563\";\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\telse
+        {\n\t\t\t\t\t\t\t\talert(\"An error occurred: \" + result.error);\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t},
+        'json');\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t\telse {\n\t\t\t\t\talert(\"An error
+        occurred: \" + result.error);\n\t\t\t\t}\n\t\t\t}, 'json');\t\t\t\n\t\t}\n\t}\n
+        \   \n    \n</script>\n<div id=\"album_sidebar\">\n<a href=\"https://www.metal-archives.com/bands/...and_Oceans/231#band_tab_discography\">...and
+        Oceans</a>\n> ...and Oceans\n\n<div class=\"album_img\">\n<a class=\"image\"
+        id=\"cover\" title=\"...and Oceans - ...and Oceans\" href=\"https://www.metal-archives.com/images/1/2/3/5/123563.jpg?2804\"><img
+        src=\"https://www.metal-archives.com/images/1/2/3/5/123563.jpg?2804\" title=\"Click
+        to zoom\" alt=\"...and Oceans - ...and Oceans\" border=\"0\" /></a>\n</div>\n\n<div
+        id=\"affiliation-links\">\n<span class=\"title\">Buy from...</span>\n<br />\n<ul
+        id=\"buyLinks\" class=\"menu_style_5\">\n<li>\n<a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=29&rid=123563\">eBay</a>\nmore...
+        <a href=\"#more\" onclick=\"if (!window.__cfRLUnblockHandlers) return false;
+        $('#sub29').toggle(); return false;\" data-cf-modified-3c6600f643c38b48a2a3187a-=\"\">>></a><br
+        />\n<ul id=\"sub29\" style=\"display: none; margin-top: 0px; margin-bottom:
+        0px;\">\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=23&rid=123563\">eBay
+        Canada</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=25&rid=123563\">eBay
+        UK</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=58&rid=123563\">eBay
+        Germany</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=24&rid=123563\">eBay
+        France</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=37&rid=123563\">eBay
+        Spain</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=35&rid=123563\">eBay
+        Belgium</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=26&rid=123563\">eBay
+        Netherlands</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=27&rid=123563\">eBay
+        Italy</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=28&rid=123563\">eBay
+        Australia</a></li>\n</ul>\n</li>\n</ul>\n</div>\n\n<table cellspacing=\"1\"
+        cellpadding=\"1\" width=\"262\" class=\"chronology\">\n<tr class=\"hidden\">\n<th
+        class=\"spacer\"></th>\n<th colspan=\"2\"></th>\n<th class=\"spacer\"></th>\n</tr>\n<tr>\n<th
+        colspan=\"4\"><span>...and Oceans</span> discography (misc)</th>\n</tr>\n<tr
+        class=\"prevNext\">\n<td class=\"arrows\"><a href=\"https://www.metal-archives.com/albums/...and_Oceans/War_Vol._I/7962\"
+        title=\"War Vol. I (Split)\"><</a> </td>\n<td class=\"prev\">\n<a href=\"https://www.metal-archives.com/albums/...and_Oceans/War_Vol._I/7962\"
+        title=\"War Vol. I (Split)\">War Vol. I</a><br />(1998)\n</td>\n<td class=\"next\">\n<a
+        href=\"https://www.metal-archives.com/albums/...and_Oceans/mOrphogenesis/7958\"
+        title=\"mOrphogenesis (Compilation)\">mOrphogenesis</a><br />(2001)\n</td>\n<td
+        class=\"arrows\"><a href=\"https://www.metal-archives.com/albums/...and_Oceans/mOrphogenesis/7958\"
+        title=\"mOrphogenesis (Compilation)\">></a> </td>\n</tr>\n<tr>\n<th colspan=\"4\"><span>...and
+        Oceans</span> discography (all)</th>\n</tr>\n<tr class=\"prevNext\">\n<td
+        class=\"arrows\"><a href=\"https://www.metal-archives.com/albums/...and_Oceans/The_Symmetry_of_I%2C_the_Circle_of_O/3097\"
+        title=\"The Symmetry of I, the Circle of O (Full-length)\"><</a> </td>\n<td
+        class=\"prev\">\n<a href=\"https://www.metal-archives.com/albums/...and_Oceans/The_Symmetry_of_I%2C_the_Circle_of_O/3097\"
+        title=\"The Symmetry of I, the Circle of O (Full-length)\">The Symmetry of
+        I, the Circle of O</a><br />(1999)\n</td>\n<td class=\"next\">\n<a href=\"https://www.metal-archives.com/albums/...and_Oceans/mOrphogenesis/7958\"
+        title=\"mOrphogenesis (Compilation)\">mOrphogenesis</a><br />(2001)\n</td>\n<td
+        class=\"arrows\"><a href=\"https://www.metal-archives.com/albums/...and_Oceans/mOrphogenesis/7958\"
+        title=\"mOrphogenesis (Compilation)\">></a> </td>\n</tr>\n</table>\n</div>\n<div
+        id=\"album_content\">\n<div class=\"tool_strip right\">\n<ul>\n<li><a title=\"Report
+        a mistake or additional information for this page\" href=\"javascript:popupReportDialog(4,
+        123563);\" class=\"btn_report_error writeAction\"> </a></li>\n<li>\n<a href=\"https://www.metal-archives.com/bands/...and_Oceans/231\"
+        title=\"Back to ...and Oceans\" class=\"btn_back\"> </a>\n</li>\n</ul>\n</div>\n\n<div
+        id=\"album_info\">\n\n<h1 class=\"album_name\"><a href=\"https://www.metal-archives.com/albums/...and_Oceans/...and_Oceans/123563\">...and
+        Oceans</a></h1>\n<h2 class=\"band_name\">\n<a href=\"https://www.metal-archives.com/bands/...and_Oceans/231\">...and
+        Oceans</a>\n</h2>\n\n<div class=\"clear block_spacer_5\"></div>\n<div id=\"message\">
+        </div>\n\n<div class=\"clear block_spacer_20\"></div>\n<dl class=\"float_left\">\n<dt>Type:</dt>\n<dd>Compilation</dd>\n<dt>Release
+        date:</dt>\n<dd>2001</dd>\n<dt>Catalog ID:</dt>\n<dd>NMLP 025</dd>\n</dl>\n<dl
+        class=\"float_right\">\n<dt>Label:</dt>\n<dd><a href=\"https://www.metal-archives.com/labels/Nocturnal_Music/209#label_tabs_albums\">Nocturnal
+        Music</a></dd>\n<dt>Format:</dt>\n<dd>3 12\" vinyls</dd>\n<dt>Reviews:</dt>\n<dd>\nNone
+        yet\n</dd>\n</dl>\n</div>\n<div id=\"album_tabs\" class=\"clear tabs block_spacer_top_20
+        ui-tabs no-js\">\n<ul class=\"ui-tabs-nav\">\n<li><a href=\"#album_tabs_tracklist\">Songs</a></li>\n<li><a
+        href=\"#album_tabs_lineup\">Lineup</a></li>\n<li><a href=\"#album_tabs_reviews\">Reviews</a></li>
+        <li><a href=\"#album_tabs_notes\">Additional notes</a></li> </ul>\n\n<div
+        id=\"album_tabs_tracklist\" class=\"ui-tabs-hide\">\n<div id=\"album_songs\"
+        class=\"tabs2lvl\">\n\n</div>\n<div class=\"ui-tabs-panel-content block_spacer_top_20\">\n<script
+        type=\"3c6600f643c38b48a2a3187a-text/javascript\">\nfunction toggleLyrics(songId)
+        {\n    var lyricsRow = $('#song' + songId);\n    lyricsRow.toggle();\n    var
+        lyrics = $('#lyrics_' + songId);\n\tif (lyrics.html() == '(loading lyrics...)')
+        {\n    \tvar realId = songId;\n\t\tif(!$.isNumeric(songId.substring(songId.length
+        -1, songId.length))) {\n\t\t\trealId = songId.substring(0, songId.length -1);\n\t\t}\n\t\tlyrics.load(URL_SITE
+        + \"release/ajax-view-lyrics/id/\" + realId);\n    }\n    // toggle link\n
+        \   var linkLabel = \"lyrics\";\n    $(\"#lyricsButton\" + songId).text(lyricsRow.css(\"display\")
+        == \"none\" ? \"Show \" + linkLabel : \"Hide \" + linkLabel);\n    return
+        false;\n}\n\n</script>\n<table class=\"display table_lyrics\" cellpadding=\"0\"
+        cellspacing=\"0\">\n<tbody>\n<tr class=\"discRow\">\n<td colspan=\"4\">\nDisc\n1\n</td>\n</tr>\n<tr
+        class=\"sideRow\">\n<td colspan=\"4\">\nSide A </td>\n</tr>\n<tr class=\"even\">\n<td
+        width=\"20\"><a name=\"887325A\" class=\"anchor\"> </a>1.</td>\n<td class=\"wrapWords\">\nTrollfan\n</td>\n<td
+        align=\"right\">04:49</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a id=\"lyricsButton887325A\"
+        href=\"#887325A\" onclick=\"if (!window.__cfRLUnblockHandlers) return false;
+        toggleLyrics('887325A'); return false;\" data-cf-modified-3c6600f643c38b48a2a3187a-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song887325A\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_887325A\">(loading lyrics...)</td>\n</tr>\n<tr class=\"odd\">\n<td
+        width=\"20\"><a name=\"887326A\" class=\"anchor\"> </a>2.</td>\n<td class=\"wrapWords\">\nThe
+        Room of Thousand Arts\n</td>\n<td align=\"right\">05:04</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton887326A\" href=\"#887326A\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('887326A'); return false;\" data-cf-modified-3c6600f643c38b48a2a3187a-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song887326A\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_887326A\">(loading lyrics...)</td>\n</tr>\n<tr class=\"even\">\n<td
+        width=\"20\"><a name=\"887327A\" class=\"anchor\"> </a>3.</td>\n<td class=\"wrapWords\">\nSom
+        öppna böcker\n</td>\n<td align=\"right\">04:52</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton887327A\" href=\"#887327A\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('887327A'); return false;\" data-cf-modified-3c6600f643c38b48a2a3187a-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song887327A\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_887327A\">(loading lyrics...)</td>\n</tr>\n<tr class=\"sideRow\">\n<td
+        colspan=\"4\">\nSide B </td>\n</tr>\n<tr class=\"odd\">\n<td width=\"20\"><a
+        name=\"887328B\" class=\"anchor\"> </a>4.</td>\n<td class=\"wrapWords\">\nJe
+        te connais beau masque\n</td>\n<td align=\"right\">08:02</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton887328B\" href=\"#887328B\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('887328B'); return false;\" data-cf-modified-3c6600f643c38b48a2a3187a-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song887328B\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_887328B\">(loading lyrics...)</td>\n</tr>\n<tr class=\"even\">\n<td
+        width=\"20\"><a name=\"887329B\" class=\"anchor\"> </a>5.</td>\n<td class=\"wrapWords\">\nMikrobotik
+        Fields / Ur åldrig saga och sång\n</td>\n<td align=\"right\">08:01</td>\n<td
+        nowrap=\"nowrap\">&nbsp;\n<a id=\"lyricsButton887329B\" href=\"#887329B\"
+        onclick=\"if (!window.__cfRLUnblockHandlers) return false; toggleLyrics('887329B');
+        return false;\" data-cf-modified-3c6600f643c38b48a2a3187a-=\"\">Show lyrics</a>\n</td>\n</tr>\n<tr
+        id=\"song887329B\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_887329B\">(loading lyrics...)</td>\n</tr>\n<tr class=\"odd\">\n<td
+        width=\"20\"><a name=\"887330B\" class=\"anchor\"> </a>6.</td>\n<td class=\"wrapWords\">\nSamtal
+        med tankar - Halo of Words\n</td>\n<td align=\"right\">05:16</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton887330B\" href=\"#887330B\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('887330B'); return false;\" data-cf-modified-3c6600f643c38b48a2a3187a-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song887330B\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_887330B\">(loading lyrics...)</td>\n</tr>\n<tr>\n<td
+        colspan=\"2\">&nbsp;</td>\n<td align=\"right\"><strong>36:04</strong></td>\n<td>&nbsp;</td>\n</tr>\n<tr
+        class=\"discRow\">\n<td colspan=\"4\">\nDisc\n2\n</td>\n</tr>\n<tr class=\"sideRow\">\n<td
+        colspan=\"4\">\nSide A </td>\n</tr>\n<tr class=\"even\">\n<td width=\"20\"><a
+        name=\"887331A\" class=\"anchor\"> </a>1.</td>\n<td class=\"wrapWords\">\nSeptember
+        (När hjärtat blöder)\n</td>\n<td align=\"right\">06:57</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton887331A\" href=\"#887331A\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('887331A'); return false;\" data-cf-modified-3c6600f643c38b48a2a3187a-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song887331A\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_887331A\">(loading lyrics...)</td>\n</tr>\n<tr class=\"odd\">\n<td
+        width=\"20\"><a name=\"887332A\" class=\"anchor\"> </a>2.</td>\n<td class=\"wrapWords\">\nKärsimyksien
+        vaaleat kädet\n</td>\n<td align=\"right\">05:30</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton887332A\" href=\"#887332A\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('887332A'); return false;\" data-cf-modified-3c6600f643c38b48a2a3187a-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song887332A\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_887332A\">(loading lyrics...)</td>\n</tr>\n<tr class=\"even\">\n<td
+        width=\"20\"><a name=\"887333A\" class=\"anchor\"> </a>3.</td>\n<td class=\"wrapWords\">\n...ja
+        kylmä vesi nuolee oksaa\n</td>\n<td align=\"right\">05:13</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton887333A\" href=\"#887333A\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('887333A'); return false;\" data-cf-modified-3c6600f643c38b48a2a3187a-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song887333A\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_887333A\">(loading lyrics...)</td>\n</tr>\n<tr class=\"sideRow\">\n<td
+        colspan=\"4\">\nSide B </td>\n</tr>\n<tr class=\"odd\">\n<td width=\"20\"><a
+        name=\"887334B\" class=\"anchor\"> </a>4.</td>\n<td class=\"wrapWords\">\n100
+        Meters Final (Accelerate)\n</td>\n<td align=\"right\">04:48</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton887334B\" href=\"#887334B\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('887334B'); return false;\" data-cf-modified-3c6600f643c38b48a2a3187a-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song887334B\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_887334B\">(loading lyrics...)</td>\n</tr>\n<tr class=\"even\">\n<td
+        width=\"20\"><a name=\"887335B\" class=\"anchor\"> </a>5.</td>\n<td class=\"wrapWords\">\nMechanic
+        Hippie\n</td>\n<td align=\"right\">06:21</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton887335B\" href=\"#887335B\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('887335B'); return false;\" data-cf-modified-3c6600f643c38b48a2a3187a-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song887335B\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_887335B\">(loading lyrics...)</td>\n</tr>\n<tr class=\"odd\">\n<td
+        width=\"20\"><a name=\"887336B\" class=\"anchor\"> </a>6.</td>\n<td class=\"wrapWords\">\nAquarium
+        of Children - Ajatusten merenpinta\n</td>\n<td align=\"right\">04:39</td>\n<td
+        nowrap=\"nowrap\">&nbsp;\n<a id=\"lyricsButton887336B\" href=\"#887336B\"
+        onclick=\"if (!window.__cfRLUnblockHandlers) return false; toggleLyrics('887336B');
+        return false;\" data-cf-modified-3c6600f643c38b48a2a3187a-=\"\">Show lyrics</a>\n</td>\n</tr>\n<tr
+        id=\"song887336B\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_887336B\">(loading lyrics...)</td>\n</tr>\n<tr>\n<td
+        colspan=\"2\">&nbsp;</td>\n<td align=\"right\"><strong>33:28</strong></td>\n<td>&nbsp;</td>\n</tr>\n<tr
+        class=\"discRow\">\n<td colspan=\"4\">\nDisc\n3\n</td>\n</tr>\n<tr class=\"sideRow\">\n<td
+        colspan=\"4\">\nSide A </td>\n</tr>\n<tr class=\"even\">\n<td width=\"20\"><a
+        name=\"887337A\" class=\"anchor\"> </a>1.</td>\n<td class=\"wrapWords\">\nThe
+        Black Vagabond and the Swan of Two Heads\n</td>\n<td align=\"right\">05:17</td>\n<td
+        nowrap=\"nowrap\">&nbsp;\n<a id=\"lyricsButton887337A\" href=\"#887337A\"
+        onclick=\"if (!window.__cfRLUnblockHandlers) return false; toggleLyrics('887337A');
+        return false;\" data-cf-modified-3c6600f643c38b48a2a3187a-=\"\">Show lyrics</a>\n</td>\n</tr>\n<tr
+        id=\"song887337A\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_887337A\">(loading lyrics...)</td>\n</tr>\n<tr class=\"odd\">\n<td
+        width=\"20\"><a name=\"887338A\" class=\"anchor\"> </a>2.</td>\n<td class=\"wrapWords\">\nSålipsism\n</td>\n<td
+        align=\"right\">05:11</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a id=\"lyricsButton887338A\"
+        href=\"#887338A\" onclick=\"if (!window.__cfRLUnblockHandlers) return false;
+        toggleLyrics('887338A'); return false;\" data-cf-modified-3c6600f643c38b48a2a3187a-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song887338A\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_887338A\">(loading lyrics...)</td>\n</tr>\n<tr class=\"even\">\n<td
+        width=\"20\"><a name=\"887339A\" class=\"anchor\"> </a>3.</td>\n<td class=\"wrapWords\">\nBaby
+        Blue Doll - Merry Go Mind\n</td>\n<td align=\"right\">04:25</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton887339A\" href=\"#887339A\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('887339A'); return false;\" data-cf-modified-3c6600f643c38b48a2a3187a-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song887339A\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_887339A\">(loading lyrics...)</td>\n</tr>\n<tr class=\"sideRow\">\n<td
+        colspan=\"4\">\nSide B </td>\n</tr>\n<tr class=\"odd\">\n<td width=\"20\"><a
+        name=\"887340B\" class=\"anchor\"> </a>4.</td>\n<td class=\"wrapWords\">\nÄcid
+        Sex and Marble Teeth (You-phoria)\n</td>\n<td align=\"right\">04:52</td>\n<td
+        nowrap=\"nowrap\">&nbsp;\n<a id=\"lyricsButton887340B\" href=\"#887340B\"
+        onclick=\"if (!window.__cfRLUnblockHandlers) return false; toggleLyrics('887340B');
+        return false;\" data-cf-modified-3c6600f643c38b48a2a3187a-=\"\">Show lyrics</a>\n</td>\n</tr>\n<tr
+        id=\"song887340B\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_887340B\">(loading lyrics...)</td>\n</tr>\n<tr class=\"even\">\n<td
+        width=\"20\"><a name=\"887341B\" class=\"anchor\"> </a>5.</td>\n<td class=\"wrapWords\">\nI
+        Wish I Was Pregnant\n</td>\n<td align=\"right\">05:29</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton887341B\" href=\"#887341B\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('887341B'); return false;\" data-cf-modified-3c6600f643c38b48a2a3187a-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song887341B\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_887341B\">(loading lyrics...)</td>\n</tr>\n<tr class=\"odd\">\n<td
+        width=\"20\"><a name=\"887342B\" class=\"anchor\"> </a>6.</td>\n<td class=\"wrapWords\">\nStained
+        (Puissance cover)\n</td>\n<td align=\"right\">04:35</td>\n<td nowrap=\"nowrap\">&nbsp;\n</td>\n</tr>\n<tr
+        id=\"song887342B\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_887342B\">(loading lyrics...)</td>\n</tr>\n<tr>\n<td
+        colspan=\"2\">&nbsp;</td>\n<td align=\"right\"><strong>29:49</strong></td>\n<td>&nbsp;</td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>\n\n\n<div
+        id=\"album_tabs_lineup\">\n<div id=\"album_members\" class=\"tabs2lvl\">\n<ul>\n<li><a
+        href=\"#album_members_lineup\">Band members</a></li> </ul>\n\n<div id=\"album_members_lineup\">\n<div
+        class=\"ui-tabs-panel-content\">\n<em>(None)</em>\n</div>\n</div>\n</div>\n</div>\n\n\n\n\n\n<div
+        id=\"album_tabs_reviews\" class=\"ui-tabs-hide\">\n<div id=\"album_reviews\"
+        class=\"tabs2lvl\">\n<div class=\"tool_strip top right writeAction\">\n<ul>\n<li><a
+        href=\"https://www.metal-archives.com/review/write/releaseId/123563\" class=\"btn_add\">Add</a></li>\n</ul>\n</div>\n</div>\n<div
+        class=\"ui-tabs-panel-content block_spacer_top_36\">\nThere are no reviews
+        for ...and Oceans yet.\n<span class=\"writeAction\">You can <a href=\"https://www.metal-archives.com/review/write/releaseId/123563\">write</a>
+        one.</span>\n</div>\n</div>\n\n\n<div id=\"album_tabs_notes\" class=\"ui-tabs-hide\">\n<div
+        id=\"album_notes\" class=\"tabs2lvl\"></div>\n<div class=\"ui-tabs-panel-content
+        \ block_spacer_top_20\">\n<p class=\"block_spacer_20\">3xLP set, with first
+        full-length albums and tracks from the split with Bloodthorn.</p>\n<p class=\"title_comment\">Identifiers:</p>\n<p>Matrix
+        / Runout: (Side A) NOCT 12/1 A<br />\nMatrix / Runout: (Side B) NOCT 12/1
+        B<br />\nMatrix / Runout: (Side C) NOCT 12/2 A<br />\nMatrix / Runout: (Side
+        D) NOCT 12/2 B<br />\nMatrix / Runout: (Side E) NOCT 12/3 A<br />\nMatrix
+        / Runout: (Side F) NOCT 12/3 B</p>\n</div>\n</div>\n\n</div>\n\n<div id=\"auditTrail\">\n<table>\n<tr>\n<td>Added
+        by: <a href=\"https://www.metal-archives.com/users/mgibson\" class=\"profileMenu\">mgibson</a></td>\n<td
+        align=\"right\">Modified by: <a href=\"https://www.metal-archives.com/users/Mosurg\"
+        class=\"profileMenu\">Mosurg</a></td>\n</tr>\n<tr>\n<td>Added on: 2006-07-02
+        05:31:03</td>\n<td align=\"right\">Last modified on: 2020-05-06 17:28:21</td>\n</tr>\n<tr>\n<td
+        valign=\"top\">\n&nbsp;\n</td>\n<td align=\"right\" valign=\"top\">\n</td>\n</tr>\n</table>\n</div>\n\n</div>\n</div>\n</div>\n<script
+        src=\"https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js\"
+        data-cf-settings=\"3c6600f643c38b48a2a3187a-|49\" defer=\"\"></script></body>\n</html>\n"
+  recorded_at: Tue, 13 Apr 2021 16:42:50 GMT
+- request:
+    method: get
+    uri: https://ma.cache.headbang.re/albums/view/id/123563
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - MetalArchivesGemTestSuite/3.2.0 (user@example.com)
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - ma.cache.headbang.re
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+      Cache-Control:
+      - max-age=2592000
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Ray:
+      - 63a39fc23d120b84-AMS
+      Cf-Request-Id:
+      - '093a222d5f00000b840da70000000001'
+      Content-Security-Policy:
+      - frame-ancestors 'self'
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Tue, 13 Apr 2021 16:39:27 GMT
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Expires:
+      - Thu, 13 May 2021 16:39:27 GMT
+      Nel:
+      - '{"max_age":604800,"report_to":"cf-nel"}'
+      Report-To:
+      - '{"group":"cf-nel","endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=aEqWy1DM%2B6%2FygZUkGBxoMc6Fg6AzkDrrQeieKF7ZhojA15IDf%2FENA%2FG2PFMvQ5SQnfj91zwbxLVJyM%2BeG72Pt%2BsozOIwM7e3ZDWF799QRByJnCY70DqF"}],"max_age":604800}'
+      Server:
+      - nginx
+      Vary:
+      - Accept-Encoding,User-Agent
+      X-Cache-Status:
+      - HIT
+      X-Frame-Options:
+      - SAMEORIGIN
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n<html
+        xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n<title>...and Oceans - ...and
+        Oceans - Encyclopaedia Metallum: The Metal Archives</title>\n<meta http-equiv=\"Content-Type\"
+        content=\"text/html; charset=UTF-8\" />\n<meta content=\"width=device-width,
+        initial-scale=1\" name=\"viewport\" />\n<link rel=\"stylesheet\" type=\"text/css\"
+        href=\"/min/index.php?g=css\" />\n<script type=\"0a7f1b4d459bd343e3f51512-text/javascript\"
+        src=\"/min/index.php?g=js\"></script>\n<script type=\"0a7f1b4d459bd343e3f51512-text/javascript\">\r\n\t\t\tvar
+        URL_SITE\t= 'https://www.metal-archives.com/';\r\n\t\t\tvar URL_IMAGES\t=
+        'https://www.metal-archives.com/images/';\r\n\t\t\tvar URL_CSS\t\t= 'https://www.metal-archives.com/css/';\r\n\t\t\tvar
+        csrfToken\t= '';\r\n\r\n\t\t\t$(document).ready(function() {\r\n\t\t\t\ttoggleFixedPositioning(1280,
+        600);\r\n\t\t\t\texecuteOnAllPages();\r\n\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t});\r\n\r\n\r\n\t\t</script>\n<noscript>\r\n\t\t\t<style
+        type=\"text/css\">\r\n\t\t\t\t.no-js { display: block !important; }\r\n\t\t\t</style>\r\n\t\t</noscript>\n<!--[if
+        lt IE 8]>\r\n\t\t\t<script src=\"http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js\"></script>\r\n\t\t\t
+        <link rel=\"stylesheet\" type=\"text/css\" href=\"https://www.metal-archives.com/css/default/oldie.css\"
+        />\r\n\t\t<![endif]-->\n<script type=\"0a7f1b4d459bd343e3f51512-text/javascript\">\r\n\t\t\t
+        \ var _gaq = _gaq || [];\r\n\t\t\t  _gaq.push(['_setAccount', 'UA-4046749-4']);\r\n\t\t\t
+        \ _gaq.push(['_trackPageview']);\r\n\r\n\t\t\t  (function() {\r\n\t\t\t    var
+        ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async
+        = true;\r\n\t\t\t    ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+        : 'http://www') + '.google-analytics.com/ga.js';\r\n\t\t\t    var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);\r\n\t\t\t  })();\r\n\t\t</script>\n</head>\n<body>\n<div
+        id=\"wrapper\">\n<div id=\"header\">\n<a href=\"https://www.metal-archives.com/\"
+        id=\"MA_logo\">Metal Archives</a>\n<div class=\"clear loading\"><img src=\"https://www.metal-archives.com/images/loading.gif\"
+        alt=\"loading\" width=\"12\" height=\"12\" /> loading...</div>\n<div id=\"search_box\">\n<form
+        id=\"search_form\" action=\"https://www.metal-archives.com/search\" method=\"get\">\n<div>\n<label>Search:</label><br
+        />\n<input name=\"searchString\" type=\"text\" id=\"searchQueryBox\" size=\"25\"
+        value=\"\" tabindex=\"1\" />\n<select name=\"type\" tabindex=\"2\">\n<option
+        value=\"band_name\">Band name</option>\n<option value=\"band_genre\">Music
+        genre</option>\n<option value=\"band_themes\">Lyrical themes</option>\n<option
+        value=\"album_title\">Album title</option>\n<option value=\"song_title\">Song
+        title</option>\n<option value=\"label_name\">Label</option>\n<option value=\"artist_alias\">Artist</option>\n<option
+        value=\"user_name\">User profile</option>\n<option value=\"google\">Google</option>\n</select>\n<br
+        />\n<a href=\"https://www.metal-archives.com/search/advanced/?searchString=&type=\"
+        class=\"float_left\" tabindex=\"4\">Advanced search</a>\n<button type=\"submit\"
+        class=\"btn_submit float_right\" tabindex=\"3\">Submit</button>\n</div>\n</form>\n</div>\n<div
+        id=\"top_menu_box\">\n<ul class=\"menu_style_1\">\n<li><a href=\"https://www.metal-archives.com/content/help\">Help</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/content/rules\">Rules</a></li>\n<li><a
+        href=\"https://forum.metal-archives.com\" target=\"_top\">Forum</a></li>\n</ul>\n<ul
+        class=\"menu_style_2\">\n<li><a href=\"https://www.metal-archives.com/content/faq\">FAQ</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/content/support\">Support Us</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/content/tools\">Add-ons</a></li>\n</ul>\n</div>\n</div>\n<div
+        id=\"left_col\">\n<div id=\"member_box\">\n <form name=\"login_form\" id=\"login_form\"
+        action=\"https://www.metal-archives.com/authentication/login\" method=\"post\">\n<div>\n<label>Username</label><br
+        />\n<input type=\"text\" name=\"loginUsername\" />\n<label>Password</label><br
+        />\n<input type=\"password\" name=\"loginPassword\" />\n<input type=\"hidden\"
+        name=\"origin\" value=\"/albums/view/id/123563\" />\n<button type=\"submit\"
+        class=\"btn_login float_right\">Login</button>\n</div>\n</form>\n<a href=\"https://www.metal-archives.com/user/signup\"
+        class=\"float-left writeAction\">Register</a>\n<span class=\"float_right\"><a
+        href=\"https://www.metal-archives.com/user/forgot-password\" class=\"float-left
+        writeAction\">Forgot login?</a> </span>\n<div class=\"clear\"> </div>\n</div>\n<div
+        id=\"left_menu_box\">\n<ul class=\"menu_style_3 block_spacer_20\">\n<li>\nBands\n<ul>\n<li><a
+        href=\"https://www.metal-archives.com/browse/letter\">alphabetical</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/browse/country\">country</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/browse/genre\">genre</a></li>\n</ul>\n</li>\n<li>\nLabels\n<ul>\n<li><a
+        href=\"https://www.metal-archives.com/label\">alphabetical</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/label/country\">country</a></li>\n</ul>\n</li>\n<li><a
+        href=\"https://www.metal-archives.com/review/browse\">Reviews</a></li>\n</ul>\n<ul
+        class=\"menu_style_3 block_spacer_20\">\n<li><a href=\"https://www.metal-archives.com/artist/rip\">R.I.P.</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/band/random\">Random Band</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/user/list\">User rankings</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/news\">News archive</a></li>\n</ul>\n<ul
+        class=\"menu_style_3 ornement_30\">\n<li><a href=\"https://www.metal-archives.com/report/list\">Reports</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/todo\">Contribute / To do</a></li>\n</ul>\n</div>\n<div
+        id=\"left_text_box\">\n<p class=\"small_text center\"> &copy; 2002-2021<br
+        />Encyclopaedia Metallum </p>\n<p class=\"small_text center\">Best viewed<br
+        /> <a href=\"http://www.getfirefox.com\" target=\"_blank\">without</a> Internet
+        Explorer, <br />in 1280 x 960 resolution<br /> or higher.</p>\n</div>\n<div>\n<p
+        class=\"small_text center\"><a href=\"https://www.metal-archives.com/content/pp\">Privacy
+        Policy</a></p>\n</div>\n</div>\n<div id=\"content_wrapper\">\n<script type=\"0a7f1b4d459bd343e3f51512-text/javascript\"
+        src=\"https://www.metal-archives.com/js/jquery/jquery.form.js\"></script>\n<script
+        type=\"0a7f1b4d459bd343e3f51512-text/javascript\">\n\n\t$(document).ready(function()
+        {\n\t\t$(\".no-js\").removeClass(\"no-js\");\n\t\t$('#album_tabs').tabs({
+        beforeLoad: cacheTab }).show();\n\t\t$('#album_members').tabs();\n\t\t$('.albumMenu').click(toggleAlbumMenu);\n\t\t\t\t\t\t\t\t\ttoggleLyrics(0);\n\t\t\t});\n\t\n\tfunction
+        hideToolMenu(event) {\n\t\t $('.toolMenu-content').hide();\n\t}\n\t\n\tfunction
+        makeChildVersion() {\n\t\tvar releaseId = 123563;\n\t\tvar newParentId = prompt(\"Make
+        a child of which album ID?\");\n\t\t\n\t\tif(newParentId != null) {\n\t\t\n\t\t\t$('.loading').show();\n\t\t\t$.post(URL_SITE
+        + 'review/ajax-validate-move/json/1', { 'releaseId' : newParentId, \"oldReleaseId\":
+        releaseId }, function(result) {\n\t\t\t\t$('.loading').hide();\n\t\t\t\tif(result.reviewConflict)
+        {\n\t\t\t\t\talert(\"This action would cause at least two reviews by the same
+        user to be listed for one album. This is not allowed. One of the reviews will
+        need to be deleted first.\");\n\t\t\t\t}\n\t\t\t\telse if(result.success)
+        {\n\t\t\t\t\tvar confirmMove = confirm(\"Make this album (and all its own
+        versions, if any) a version of \" + result.band + \" - \" + result.release
+        + \"?\");\n\t\t\t\t\t\n\t\t\t\t\tif(confirmMove) {\n\t\t\t\t\t\tvar params
+        = { 'releaseId' : releaseId, \"newParentId\" : newParentId, 'csrfToken': window.csrfToken};\n\t\t\t\t\t\t$('.loading').show();\n\t\t\t\t\t\t$.post(URL_SITE
+        + 'release/ajax-make-child/json/1', params, function(result) {\n\t\t\t\t\t\t\t$('.loading').hide();\n\t\t\t\t\t\t\tif(result.success)
+        {\n\t\t\t\t\t\t\t\tlocation.href = \"https://www.metal-archives.com/albums/...and_Oceans/...and_Oceans/123563\";\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\telse
+        {\n\t\t\t\t\t\t\t\talert(\"An error occurred: \" + result.error);\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t},
+        'json');\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t\telse {\n\t\t\t\t\talert(\"An error
+        occurred: \" + result.error);\n\t\t\t\t}\n\t\t\t}, 'json');\t\t\t\n\t\t}\n\t}\n
+        \   \n    \n</script>\n<div id=\"album_sidebar\">\n<a href=\"https://www.metal-archives.com/bands/...and_Oceans/231#band_tab_discography\">...and
+        Oceans</a>\n> ...and Oceans\n\n<div class=\"album_img\">\n<a class=\"image\"
+        id=\"cover\" title=\"...and Oceans - ...and Oceans\" href=\"https://www.metal-archives.com/images/1/2/3/5/123563.jpg?2804\"><img
+        src=\"https://www.metal-archives.com/images/1/2/3/5/123563.jpg?2804\" title=\"Click
+        to zoom\" alt=\"...and Oceans - ...and Oceans\" border=\"0\" /></a>\n</div>\n\n<div
+        id=\"affiliation-links\">\n<span class=\"title\">Buy from...</span>\n<br />\n<ul
+        id=\"buyLinks\" class=\"menu_style_5\">\n<li>\n<a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=29&rid=123563\">eBay</a>\nmore...
+        <a href=\"#more\" onclick=\"if (!window.__cfRLUnblockHandlers) return false;
+        $('#sub29').toggle(); return false;\" data-cf-modified-0a7f1b4d459bd343e3f51512-=\"\">>></a><br
+        />\n<ul id=\"sub29\" style=\"display: none; margin-top: 0px; margin-bottom:
+        0px;\">\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=23&rid=123563\">eBay
+        Canada</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=25&rid=123563\">eBay
+        UK</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=58&rid=123563\">eBay
+        Germany</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=24&rid=123563\">eBay
+        France</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=37&rid=123563\">eBay
+        Spain</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=35&rid=123563\">eBay
+        Belgium</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=26&rid=123563\">eBay
+        Netherlands</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=27&rid=123563\">eBay
+        Italy</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=28&rid=123563\">eBay
+        Australia</a></li>\n</ul>\n</li>\n</ul>\n</div>\n\n<table cellspacing=\"1\"
+        cellpadding=\"1\" width=\"262\" class=\"chronology\">\n<tr class=\"hidden\">\n<th
+        class=\"spacer\"></th>\n<th colspan=\"2\"></th>\n<th class=\"spacer\"></th>\n</tr>\n<tr>\n<th
+        colspan=\"4\"><span>...and Oceans</span> discography (misc)</th>\n</tr>\n<tr
+        class=\"prevNext\">\n<td class=\"arrows\"><a href=\"https://www.metal-archives.com/albums/...and_Oceans/War_Vol._I/7962\"
+        title=\"War Vol. I (Split)\"><</a> </td>\n<td class=\"prev\">\n<a href=\"https://www.metal-archives.com/albums/...and_Oceans/War_Vol._I/7962\"
+        title=\"War Vol. I (Split)\">War Vol. I</a><br />(1998)\n</td>\n<td class=\"next\">\n<a
+        href=\"https://www.metal-archives.com/albums/...and_Oceans/mOrphogenesis/7958\"
+        title=\"mOrphogenesis (Compilation)\">mOrphogenesis</a><br />(2001)\n</td>\n<td
+        class=\"arrows\"><a href=\"https://www.metal-archives.com/albums/...and_Oceans/mOrphogenesis/7958\"
+        title=\"mOrphogenesis (Compilation)\">></a> </td>\n</tr>\n<tr>\n<th colspan=\"4\"><span>...and
+        Oceans</span> discography (all)</th>\n</tr>\n<tr class=\"prevNext\">\n<td
+        class=\"arrows\"><a href=\"https://www.metal-archives.com/albums/...and_Oceans/The_Symmetry_of_I%2C_the_Circle_of_O/3097\"
+        title=\"The Symmetry of I, the Circle of O (Full-length)\"><</a> </td>\n<td
+        class=\"prev\">\n<a href=\"https://www.metal-archives.com/albums/...and_Oceans/The_Symmetry_of_I%2C_the_Circle_of_O/3097\"
+        title=\"The Symmetry of I, the Circle of O (Full-length)\">The Symmetry of
+        I, the Circle of O</a><br />(1999)\n</td>\n<td class=\"next\">\n<a href=\"https://www.metal-archives.com/albums/...and_Oceans/mOrphogenesis/7958\"
+        title=\"mOrphogenesis (Compilation)\">mOrphogenesis</a><br />(2001)\n</td>\n<td
+        class=\"arrows\"><a href=\"https://www.metal-archives.com/albums/...and_Oceans/mOrphogenesis/7958\"
+        title=\"mOrphogenesis (Compilation)\">></a> </td>\n</tr>\n</table>\n</div>\n<div
+        id=\"album_content\">\n<div class=\"tool_strip right\">\n<ul>\n<li><a title=\"Report
+        a mistake or additional information for this page\" href=\"javascript:popupReportDialog(4,
+        123563);\" class=\"btn_report_error writeAction\"> </a></li>\n<li>\n<a href=\"https://www.metal-archives.com/bands/...and_Oceans/231\"
+        title=\"Back to ...and Oceans\" class=\"btn_back\"> </a>\n</li>\n</ul>\n</div>\n\n<div
+        id=\"album_info\">\n\n<h1 class=\"album_name\"><a href=\"https://www.metal-archives.com/albums/...and_Oceans/...and_Oceans/123563\">...and
+        Oceans</a></h1>\n<h2 class=\"band_name\">\n<a href=\"https://www.metal-archives.com/bands/...and_Oceans/231\">...and
+        Oceans</a>\n</h2>\n\n<div class=\"clear block_spacer_5\"></div>\n<div id=\"message\">
+        </div>\n\n<div class=\"clear block_spacer_20\"></div>\n<dl class=\"float_left\">\n<dt>Type:</dt>\n<dd>Compilation</dd>\n<dt>Release
+        date:</dt>\n<dd>2001</dd>\n<dt>Catalog ID:</dt>\n<dd>NMLP 025</dd>\n</dl>\n<dl
+        class=\"float_right\">\n<dt>Label:</dt>\n<dd><a href=\"https://www.metal-archives.com/labels/Nocturnal_Music/209#label_tabs_albums\">Nocturnal
+        Music</a></dd>\n<dt>Format:</dt>\n<dd>3 12\" vinyls</dd>\n<dt>Reviews:</dt>\n<dd>\nNone
+        yet\n</dd>\n</dl>\n</div>\n<div id=\"album_tabs\" class=\"clear tabs block_spacer_top_20
+        ui-tabs no-js\">\n<ul class=\"ui-tabs-nav\">\n<li><a href=\"#album_tabs_tracklist\">Songs</a></li>\n<li><a
+        href=\"#album_tabs_lineup\">Lineup</a></li>\n<li><a href=\"#album_tabs_reviews\">Reviews</a></li>
+        <li><a href=\"#album_tabs_notes\">Additional notes</a></li> </ul>\n\n<div
+        id=\"album_tabs_tracklist\" class=\"ui-tabs-hide\">\n<div id=\"album_songs\"
+        class=\"tabs2lvl\">\n\n</div>\n<div class=\"ui-tabs-panel-content block_spacer_top_20\">\n<script
+        type=\"0a7f1b4d459bd343e3f51512-text/javascript\">\nfunction toggleLyrics(songId)
+        {\n    var lyricsRow = $('#song' + songId);\n    lyricsRow.toggle();\n    var
+        lyrics = $('#lyrics_' + songId);\n\tif (lyrics.html() == '(loading lyrics...)')
+        {\n    \tvar realId = songId;\n\t\tif(!$.isNumeric(songId.substring(songId.length
+        -1, songId.length))) {\n\t\t\trealId = songId.substring(0, songId.length -1);\n\t\t}\n\t\tlyrics.load(URL_SITE
+        + \"release/ajax-view-lyrics/id/\" + realId);\n    }\n    // toggle link\n
+        \   var linkLabel = \"lyrics\";\n    $(\"#lyricsButton\" + songId).text(lyricsRow.css(\"display\")
+        == \"none\" ? \"Show \" + linkLabel : \"Hide \" + linkLabel);\n    return
+        false;\n}\n\n</script>\n<table class=\"display table_lyrics\" cellpadding=\"0\"
+        cellspacing=\"0\">\n<tbody>\n<tr class=\"discRow\">\n<td colspan=\"4\">\nDisc\n1\n</td>\n</tr>\n<tr
+        class=\"sideRow\">\n<td colspan=\"4\">\nSide A </td>\n</tr>\n<tr class=\"even\">\n<td
+        width=\"20\"><a name=\"887325A\" class=\"anchor\"> </a>1.</td>\n<td class=\"wrapWords\">\nTrollfan\n</td>\n<td
+        align=\"right\">04:49</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a id=\"lyricsButton887325A\"
+        href=\"#887325A\" onclick=\"if (!window.__cfRLUnblockHandlers) return false;
+        toggleLyrics('887325A'); return false;\" data-cf-modified-0a7f1b4d459bd343e3f51512-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song887325A\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_887325A\">(loading lyrics...)</td>\n</tr>\n<tr class=\"odd\">\n<td
+        width=\"20\"><a name=\"887326A\" class=\"anchor\"> </a>2.</td>\n<td class=\"wrapWords\">\nThe
+        Room of Thousand Arts\n</td>\n<td align=\"right\">05:04</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton887326A\" href=\"#887326A\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('887326A'); return false;\" data-cf-modified-0a7f1b4d459bd343e3f51512-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song887326A\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_887326A\">(loading lyrics...)</td>\n</tr>\n<tr class=\"even\">\n<td
+        width=\"20\"><a name=\"887327A\" class=\"anchor\"> </a>3.</td>\n<td class=\"wrapWords\">\nSom
+        öppna böcker\n</td>\n<td align=\"right\">04:52</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton887327A\" href=\"#887327A\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('887327A'); return false;\" data-cf-modified-0a7f1b4d459bd343e3f51512-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song887327A\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_887327A\">(loading lyrics...)</td>\n</tr>\n<tr class=\"sideRow\">\n<td
+        colspan=\"4\">\nSide B </td>\n</tr>\n<tr class=\"odd\">\n<td width=\"20\"><a
+        name=\"887328B\" class=\"anchor\"> </a>4.</td>\n<td class=\"wrapWords\">\nJe
+        te connais beau masque\n</td>\n<td align=\"right\">08:02</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton887328B\" href=\"#887328B\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('887328B'); return false;\" data-cf-modified-0a7f1b4d459bd343e3f51512-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song887328B\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_887328B\">(loading lyrics...)</td>\n</tr>\n<tr class=\"even\">\n<td
+        width=\"20\"><a name=\"887329B\" class=\"anchor\"> </a>5.</td>\n<td class=\"wrapWords\">\nMikrobotik
+        Fields / Ur åldrig saga och sång\n</td>\n<td align=\"right\">08:01</td>\n<td
+        nowrap=\"nowrap\">&nbsp;\n<a id=\"lyricsButton887329B\" href=\"#887329B\"
+        onclick=\"if (!window.__cfRLUnblockHandlers) return false; toggleLyrics('887329B');
+        return false;\" data-cf-modified-0a7f1b4d459bd343e3f51512-=\"\">Show lyrics</a>\n</td>\n</tr>\n<tr
+        id=\"song887329B\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_887329B\">(loading lyrics...)</td>\n</tr>\n<tr class=\"odd\">\n<td
+        width=\"20\"><a name=\"887330B\" class=\"anchor\"> </a>6.</td>\n<td class=\"wrapWords\">\nSamtal
+        med tankar - Halo of Words\n</td>\n<td align=\"right\">05:16</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton887330B\" href=\"#887330B\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('887330B'); return false;\" data-cf-modified-0a7f1b4d459bd343e3f51512-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song887330B\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_887330B\">(loading lyrics...)</td>\n</tr>\n<tr>\n<td
+        colspan=\"2\">&nbsp;</td>\n<td align=\"right\"><strong>36:04</strong></td>\n<td>&nbsp;</td>\n</tr>\n<tr
+        class=\"discRow\">\n<td colspan=\"4\">\nDisc\n2\n</td>\n</tr>\n<tr class=\"sideRow\">\n<td
+        colspan=\"4\">\nSide A </td>\n</tr>\n<tr class=\"even\">\n<td width=\"20\"><a
+        name=\"887331A\" class=\"anchor\"> </a>1.</td>\n<td class=\"wrapWords\">\nSeptember
+        (När hjärtat blöder)\n</td>\n<td align=\"right\">06:57</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton887331A\" href=\"#887331A\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('887331A'); return false;\" data-cf-modified-0a7f1b4d459bd343e3f51512-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song887331A\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_887331A\">(loading lyrics...)</td>\n</tr>\n<tr class=\"odd\">\n<td
+        width=\"20\"><a name=\"887332A\" class=\"anchor\"> </a>2.</td>\n<td class=\"wrapWords\">\nKärsimyksien
+        vaaleat kädet\n</td>\n<td align=\"right\">05:30</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton887332A\" href=\"#887332A\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('887332A'); return false;\" data-cf-modified-0a7f1b4d459bd343e3f51512-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song887332A\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_887332A\">(loading lyrics...)</td>\n</tr>\n<tr class=\"even\">\n<td
+        width=\"20\"><a name=\"887333A\" class=\"anchor\"> </a>3.</td>\n<td class=\"wrapWords\">\n...ja
+        kylmä vesi nuolee oksaa\n</td>\n<td align=\"right\">05:13</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton887333A\" href=\"#887333A\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('887333A'); return false;\" data-cf-modified-0a7f1b4d459bd343e3f51512-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song887333A\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_887333A\">(loading lyrics...)</td>\n</tr>\n<tr class=\"sideRow\">\n<td
+        colspan=\"4\">\nSide B </td>\n</tr>\n<tr class=\"odd\">\n<td width=\"20\"><a
+        name=\"887334B\" class=\"anchor\"> </a>4.</td>\n<td class=\"wrapWords\">\n100
+        Meters Final (Accelerate)\n</td>\n<td align=\"right\">04:48</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton887334B\" href=\"#887334B\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('887334B'); return false;\" data-cf-modified-0a7f1b4d459bd343e3f51512-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song887334B\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_887334B\">(loading lyrics...)</td>\n</tr>\n<tr class=\"even\">\n<td
+        width=\"20\"><a name=\"887335B\" class=\"anchor\"> </a>5.</td>\n<td class=\"wrapWords\">\nMechanic
+        Hippie\n</td>\n<td align=\"right\">06:21</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton887335B\" href=\"#887335B\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('887335B'); return false;\" data-cf-modified-0a7f1b4d459bd343e3f51512-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song887335B\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_887335B\">(loading lyrics...)</td>\n</tr>\n<tr class=\"odd\">\n<td
+        width=\"20\"><a name=\"887336B\" class=\"anchor\"> </a>6.</td>\n<td class=\"wrapWords\">\nAquarium
+        of Children - Ajatusten merenpinta\n</td>\n<td align=\"right\">04:39</td>\n<td
+        nowrap=\"nowrap\">&nbsp;\n<a id=\"lyricsButton887336B\" href=\"#887336B\"
+        onclick=\"if (!window.__cfRLUnblockHandlers) return false; toggleLyrics('887336B');
+        return false;\" data-cf-modified-0a7f1b4d459bd343e3f51512-=\"\">Show lyrics</a>\n</td>\n</tr>\n<tr
+        id=\"song887336B\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_887336B\">(loading lyrics...)</td>\n</tr>\n<tr>\n<td
+        colspan=\"2\">&nbsp;</td>\n<td align=\"right\"><strong>33:28</strong></td>\n<td>&nbsp;</td>\n</tr>\n<tr
+        class=\"discRow\">\n<td colspan=\"4\">\nDisc\n3\n</td>\n</tr>\n<tr class=\"sideRow\">\n<td
+        colspan=\"4\">\nSide A </td>\n</tr>\n<tr class=\"even\">\n<td width=\"20\"><a
+        name=\"887337A\" class=\"anchor\"> </a>1.</td>\n<td class=\"wrapWords\">\nThe
+        Black Vagabond and the Swan of Two Heads\n</td>\n<td align=\"right\">05:17</td>\n<td
+        nowrap=\"nowrap\">&nbsp;\n<a id=\"lyricsButton887337A\" href=\"#887337A\"
+        onclick=\"if (!window.__cfRLUnblockHandlers) return false; toggleLyrics('887337A');
+        return false;\" data-cf-modified-0a7f1b4d459bd343e3f51512-=\"\">Show lyrics</a>\n</td>\n</tr>\n<tr
+        id=\"song887337A\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_887337A\">(loading lyrics...)</td>\n</tr>\n<tr class=\"odd\">\n<td
+        width=\"20\"><a name=\"887338A\" class=\"anchor\"> </a>2.</td>\n<td class=\"wrapWords\">\nSålipsism\n</td>\n<td
+        align=\"right\">05:11</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a id=\"lyricsButton887338A\"
+        href=\"#887338A\" onclick=\"if (!window.__cfRLUnblockHandlers) return false;
+        toggleLyrics('887338A'); return false;\" data-cf-modified-0a7f1b4d459bd343e3f51512-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song887338A\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_887338A\">(loading lyrics...)</td>\n</tr>\n<tr class=\"even\">\n<td
+        width=\"20\"><a name=\"887339A\" class=\"anchor\"> </a>3.</td>\n<td class=\"wrapWords\">\nBaby
+        Blue Doll - Merry Go Mind\n</td>\n<td align=\"right\">04:25</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton887339A\" href=\"#887339A\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('887339A'); return false;\" data-cf-modified-0a7f1b4d459bd343e3f51512-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song887339A\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_887339A\">(loading lyrics...)</td>\n</tr>\n<tr class=\"sideRow\">\n<td
+        colspan=\"4\">\nSide B </td>\n</tr>\n<tr class=\"odd\">\n<td width=\"20\"><a
+        name=\"887340B\" class=\"anchor\"> </a>4.</td>\n<td class=\"wrapWords\">\nÄcid
+        Sex and Marble Teeth (You-phoria)\n</td>\n<td align=\"right\">04:52</td>\n<td
+        nowrap=\"nowrap\">&nbsp;\n<a id=\"lyricsButton887340B\" href=\"#887340B\"
+        onclick=\"if (!window.__cfRLUnblockHandlers) return false; toggleLyrics('887340B');
+        return false;\" data-cf-modified-0a7f1b4d459bd343e3f51512-=\"\">Show lyrics</a>\n</td>\n</tr>\n<tr
+        id=\"song887340B\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_887340B\">(loading lyrics...)</td>\n</tr>\n<tr class=\"even\">\n<td
+        width=\"20\"><a name=\"887341B\" class=\"anchor\"> </a>5.</td>\n<td class=\"wrapWords\">\nI
+        Wish I Was Pregnant\n</td>\n<td align=\"right\">05:29</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton887341B\" href=\"#887341B\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('887341B'); return false;\" data-cf-modified-0a7f1b4d459bd343e3f51512-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song887341B\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_887341B\">(loading lyrics...)</td>\n</tr>\n<tr class=\"odd\">\n<td
+        width=\"20\"><a name=\"887342B\" class=\"anchor\"> </a>6.</td>\n<td class=\"wrapWords\">\nStained
+        (Puissance cover)\n</td>\n<td align=\"right\">04:35</td>\n<td nowrap=\"nowrap\">&nbsp;\n</td>\n</tr>\n<tr
+        id=\"song887342B\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_887342B\">(loading lyrics...)</td>\n</tr>\n<tr>\n<td
+        colspan=\"2\">&nbsp;</td>\n<td align=\"right\"><strong>29:49</strong></td>\n<td>&nbsp;</td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>\n\n\n<div
+        id=\"album_tabs_lineup\">\n<div id=\"album_members\" class=\"tabs2lvl\">\n<ul>\n<li><a
+        href=\"#album_members_lineup\">Band members</a></li> </ul>\n\n<div id=\"album_members_lineup\">\n<div
+        class=\"ui-tabs-panel-content\">\n<em>(None)</em>\n</div>\n</div>\n</div>\n</div>\n\n\n\n\n\n<div
+        id=\"album_tabs_reviews\" class=\"ui-tabs-hide\">\n<div id=\"album_reviews\"
+        class=\"tabs2lvl\">\n<div class=\"tool_strip top right writeAction\">\n<ul>\n<li><a
+        href=\"https://www.metal-archives.com/review/write/releaseId/123563\" class=\"btn_add\">Add</a></li>\n</ul>\n</div>\n</div>\n<div
+        class=\"ui-tabs-panel-content block_spacer_top_36\">\nThere are no reviews
+        for ...and Oceans yet.\n<span class=\"writeAction\">You can <a href=\"https://www.metal-archives.com/review/write/releaseId/123563\">write</a>
+        one.</span>\n</div>\n</div>\n\n\n<div id=\"album_tabs_notes\" class=\"ui-tabs-hide\">\n<div
+        id=\"album_notes\" class=\"tabs2lvl\"></div>\n<div class=\"ui-tabs-panel-content
+        \ block_spacer_top_20\">\n<p class=\"block_spacer_20\">3xLP set, with first
+        full-length albums and tracks from the split with Bloodthorn.</p>\n<p class=\"title_comment\">Identifiers:</p>\n<p>Matrix
+        / Runout: (Side A) NOCT 12/1 A<br />\nMatrix / Runout: (Side B) NOCT 12/1
+        B<br />\nMatrix / Runout: (Side C) NOCT 12/2 A<br />\nMatrix / Runout: (Side
+        D) NOCT 12/2 B<br />\nMatrix / Runout: (Side E) NOCT 12/3 A<br />\nMatrix
+        / Runout: (Side F) NOCT 12/3 B</p>\n</div>\n</div>\n\n</div>\n\n<div id=\"auditTrail\">\n<table>\n<tr>\n<td>Added
+        by: <a href=\"https://www.metal-archives.com/users/mgibson\" class=\"profileMenu\">mgibson</a></td>\n<td
+        align=\"right\">Modified by: <a href=\"https://www.metal-archives.com/users/Mosurg\"
+        class=\"profileMenu\">Mosurg</a></td>\n</tr>\n<tr>\n<td>Added on: 2006-07-02
+        05:31:03</td>\n<td align=\"right\">Last modified on: 2020-05-06 17:28:21</td>\n</tr>\n<tr>\n<td
+        valign=\"top\">\n&nbsp;\n</td>\n<td align=\"right\" valign=\"top\">\n</td>\n</tr>\n</table>\n</div>\n\n</div>\n</div>\n</div>\n<script
+        src=\"https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js\"
+        data-cf-settings=\"0a7f1b4d459bd343e3f51512-|49\" defer=\"\"></script></body>\n</html>\n"
+  recorded_at: Tue, 13 Apr 2021 16:42:50 GMT
+recorded_with: VCR 6.0.0

@@ -1,0 +1,909 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://ma.cache.headbang.re/albums/artist/id/329691
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - MetalArchivesGemTestSuite/3.2.0 (user@example.com)
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - ma.cache.headbang.re
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+      Cache-Control:
+      - max-age=2592000
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Ray:
+      - 63f62662aa8f0bf1-AMS
+      Cf-Request-Id:
+      - '096db651aa00000bf14430c000000001'
+      Content-Security-Policy:
+      - frame-ancestors 'self'
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Tue, 13 Apr 2021 16:39:28 GMT
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Expires:
+      - Thu, 13 May 2021 16:39:28 GMT
+      Nel:
+      - '{"max_age":604800,"report_to":"cf-nel"}'
+      Report-To:
+      - '{"group":"cf-nel","endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=0axrm%2FAd7EBIWbLDKcHI6DlWq4ykDoopAaztOWwRgkNX5Sc2NOB%2FUJZefCAtMx7Aewy2oTA01kmHD%2Fub6FLVna4zndJFDV1K7Va09VFQy5I8kTsJm60a"}],"max_age":604800}'
+      Server:
+      - nginx
+      Vary:
+      - Accept-Encoding,User-Agent
+      X-Cache-Status:
+      - MISS
+      X-Frame-Options:
+      - SAMEORIGIN
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n<html
+        xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n<title>Phoenix Rising / Fire
+        & Ashes - MMXII - Encyclopaedia Metallum: The Metal Archives</title>\n<meta
+        http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n<meta
+        content=\"width=device-width, initial-scale=1\" name=\"viewport\" />\n<link
+        rel=\"stylesheet\" type=\"text/css\" href=\"/min/index.php?g=css\" />\n<script
+        type=\"61e6fa03e3c4dfd983d5c94f-text/javascript\" src=\"/min/index.php?g=js\"></script>\n<script
+        type=\"61e6fa03e3c4dfd983d5c94f-text/javascript\">\r\n\t\t\tvar URL_SITE\t=
+        'https://www.metal-archives.com/';\r\n\t\t\tvar URL_IMAGES\t= 'https://www.metal-archives.com/images/';\r\n\t\t\tvar
+        URL_CSS\t\t= 'https://www.metal-archives.com/css/';\r\n\t\t\tvar csrfToken\t=
+        '';\r\n\r\n\t\t\t$(document).ready(function() {\r\n\t\t\t\ttoggleFixedPositioning(1280,
+        600);\r\n\t\t\t\texecuteOnAllPages();\r\n\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t});\r\n\r\n\r\n\t\t</script>\n<noscript>\r\n\t\t\t<style
+        type=\"text/css\">\r\n\t\t\t\t.no-js { display: block !important; }\r\n\t\t\t</style>\r\n\t\t</noscript>\n<!--[if
+        lt IE 8]>\r\n\t\t\t<script src=\"http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js\"></script>\r\n\t\t\t
+        <link rel=\"stylesheet\" type=\"text/css\" href=\"https://www.metal-archives.com/css/default/oldie.css\"
+        />\r\n\t\t<![endif]-->\n<script type=\"61e6fa03e3c4dfd983d5c94f-text/javascript\">\r\n\t\t\t
+        \ var _gaq = _gaq || [];\r\n\t\t\t  _gaq.push(['_setAccount', 'UA-4046749-4']);\r\n\t\t\t
+        \ _gaq.push(['_trackPageview']);\r\n\r\n\t\t\t  (function() {\r\n\t\t\t    var
+        ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async
+        = true;\r\n\t\t\t    ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+        : 'http://www') + '.google-analytics.com/ga.js';\r\n\t\t\t    var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);\r\n\t\t\t  })();\r\n\t\t</script>\n</head>\n<body>\n<div
+        id=\"wrapper\">\n<div id=\"header\">\n<a href=\"https://www.metal-archives.com/\"
+        id=\"MA_logo\">Metal Archives</a>\n<div class=\"clear loading\"><img src=\"https://www.metal-archives.com/images/loading.gif\"
+        alt=\"loading\" width=\"12\" height=\"12\" /> loading...</div>\n<div id=\"search_box\">\n<form
+        id=\"search_form\" action=\"https://www.metal-archives.com/search\" method=\"get\">\n<div>\n<label>Search:</label><br
+        />\n<input name=\"searchString\" type=\"text\" id=\"searchQueryBox\" size=\"25\"
+        value=\"\" tabindex=\"1\" />\n<select name=\"type\" tabindex=\"2\">\n<option
+        value=\"band_name\">Band name</option>\n<option value=\"band_genre\">Music
+        genre</option>\n<option value=\"band_themes\">Lyrical themes</option>\n<option
+        value=\"album_title\">Album title</option>\n<option value=\"song_title\">Song
+        title</option>\n<option value=\"label_name\">Label</option>\n<option value=\"artist_alias\">Artist</option>\n<option
+        value=\"user_name\">User profile</option>\n<option value=\"google\">Google</option>\n</select>\n<br
+        />\n<a href=\"https://www.metal-archives.com/search/advanced/?searchString=&type=\"
+        class=\"float_left\" tabindex=\"4\">Advanced search</a>\n<button type=\"submit\"
+        class=\"btn_submit float_right\" tabindex=\"3\">Submit</button>\n</div>\n</form>\n</div>\n<div
+        id=\"top_menu_box\">\n<ul class=\"menu_style_1\">\n<li><a href=\"https://www.metal-archives.com/content/help\">Help</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/content/rules\">Rules</a></li>\n<li><a
+        href=\"https://forum.metal-archives.com\" target=\"_top\">Forum</a></li>\n</ul>\n<ul
+        class=\"menu_style_2\">\n<li><a href=\"https://www.metal-archives.com/content/faq\">FAQ</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/content/support\">Support Us</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/content/tools\">Add-ons</a></li>\n</ul>\n</div>\n</div>\n<div
+        id=\"left_col\">\n<div id=\"member_box\">\n <form name=\"login_form\" id=\"login_form\"
+        action=\"https://www.metal-archives.com/authentication/login\" method=\"post\">\n<div>\n<label>Username</label><br
+        />\n<input type=\"text\" name=\"loginUsername\" />\n<label>Password</label><br
+        />\n<input type=\"password\" name=\"loginPassword\" />\n<input type=\"hidden\"
+        name=\"origin\" value=\"/albums/artist/id/329691\" />\n<button type=\"submit\"
+        class=\"btn_login float_right\">Login</button>\n</div>\n</form>\n<a href=\"https://www.metal-archives.com/user/signup\"
+        class=\"float-left writeAction\">Register</a>\n<span class=\"float_right\"><a
+        href=\"https://www.metal-archives.com/user/forgot-password\" class=\"float-left
+        writeAction\">Forgot login?</a> </span>\n<div class=\"clear\"> </div>\n</div>\n<div
+        id=\"left_menu_box\">\n<ul class=\"menu_style_3 block_spacer_20\">\n<li>\nBands\n<ul>\n<li><a
+        href=\"https://www.metal-archives.com/browse/letter\">alphabetical</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/browse/country\">country</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/browse/genre\">genre</a></li>\n</ul>\n</li>\n<li>\nLabels\n<ul>\n<li><a
+        href=\"https://www.metal-archives.com/label\">alphabetical</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/label/country\">country</a></li>\n</ul>\n</li>\n<li><a
+        href=\"https://www.metal-archives.com/review/browse\">Reviews</a></li>\n</ul>\n<ul
+        class=\"menu_style_3 block_spacer_20\">\n<li><a href=\"https://www.metal-archives.com/artist/rip\">R.I.P.</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/band/random\">Random Band</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/user/list\">User rankings</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/news\">News archive</a></li>\n</ul>\n<ul
+        class=\"menu_style_3 ornement_30\">\n<li><a href=\"https://www.metal-archives.com/report/list\">Reports</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/todo\">Contribute / To do</a></li>\n</ul>\n</div>\n<div
+        id=\"left_text_box\">\n<p class=\"small_text center\"> &copy; 2002-2021<br
+        />Encyclopaedia Metallum </p>\n<p class=\"small_text center\">Best viewed<br
+        /> <a href=\"http://www.getfirefox.com\" target=\"_blank\">without</a> Internet
+        Explorer, <br />in 1280 x 960 resolution<br /> or higher.</p>\n</div>\n<div>\n<p
+        class=\"small_text center\"><a href=\"https://www.metal-archives.com/content/pp\">Privacy
+        Policy</a></p>\n</div>\n</div>\n<div id=\"content_wrapper\">\n<script type=\"61e6fa03e3c4dfd983d5c94f-text/javascript\"
+        src=\"https://www.metal-archives.com/js/jquery/jquery.form.js\"></script>\n<script
+        type=\"61e6fa03e3c4dfd983d5c94f-text/javascript\">\n\n\t$(document).ready(function()
+        {\n\t\t$(\".no-js\").removeClass(\"no-js\");\n\t\t$('#album_tabs').tabs({
+        beforeLoad: cacheTab }).show();\n\t\t$('#album_members').tabs();\n\t\t$('.albumMenu').click(toggleAlbumMenu);\n\t\t
+        $('#album_members').tabs( { active : 1 } );\t\t\t\t\t\t\ttoggleLyrics(0);\n\t\t\t});\n\t\n\tfunction
+        hideToolMenu(event) {\n\t\t $('.toolMenu-content').hide();\n\t}\n\t\n\tfunction
+        makeChildVersion() {\n\t\tvar releaseId = 329691;\n\t\tvar newParentId = prompt(\"Make
+        a child of which album ID?\");\n\t\t\n\t\tif(newParentId != null) {\n\t\t\n\t\t\t$('.loading').show();\n\t\t\t$.post(URL_SITE
+        + 'review/ajax-validate-move/json/1', { 'releaseId' : newParentId, \"oldReleaseId\":
+        releaseId }, function(result) {\n\t\t\t\t$('.loading').hide();\n\t\t\t\tif(result.reviewConflict)
+        {\n\t\t\t\t\talert(\"This action would cause at least two reviews by the same
+        user to be listed for one album. This is not allowed. One of the reviews will
+        need to be deleted first.\");\n\t\t\t\t}\n\t\t\t\telse if(result.success)
+        {\n\t\t\t\t\tvar confirmMove = confirm(\"Make this album (and all its own
+        versions, if any) a version of \" + result.band + \" - \" + result.release
+        + \"?\");\n\t\t\t\t\t\n\t\t\t\t\tif(confirmMove) {\n\t\t\t\t\t\tvar params
+        = { 'releaseId' : releaseId, \"newParentId\" : newParentId, 'csrfToken': window.csrfToken};\n\t\t\t\t\t\t$('.loading').show();\n\t\t\t\t\t\t$.post(URL_SITE
+        + 'release/ajax-make-child/json/1', params, function(result) {\n\t\t\t\t\t\t\t$('.loading').hide();\n\t\t\t\t\t\t\tif(result.success)
+        {\n\t\t\t\t\t\t\t\tlocation.href = \"https://www.metal-archives.com/albums/Phoenix_Rising_-_Fire_%26_Ashes/MMXII/329691\";\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\telse
+        {\n\t\t\t\t\t\t\t\talert(\"An error occurred: \" + result.error);\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t},
+        'json');\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t\telse {\n\t\t\t\t\talert(\"An error
+        occurred: \" + result.error);\n\t\t\t\t}\n\t\t\t}, 'json');\t\t\t\n\t\t}\n\t}\n
+        \   \n    \n</script>\n<div id=\"album_sidebar\">\n<a href=\"https://www.metal-archives.com/bands/Phoenix_Rising_-_Fire_%26_Ashes/3540341226#band_tab_discography\">Phoenix
+        Rising / Fire & Ashes</a>\n> MMXII\n\n<div class=\"album_img\">\n<a class=\"image\"
+        id=\"cover\" title=\"Phoenix Rising / Fire & Ashes - MMXII\" href=\"https://www.metal-archives.com/images/3/2/9/6/329691.jpg?2251\"><img
+        src=\"https://www.metal-archives.com/images/3/2/9/6/329691.jpg?2251\" title=\"Click
+        to zoom\" alt=\"Phoenix Rising / Fire & Ashes - MMXII\" border=\"0\" /></a>\n</div>\n\n<div
+        id=\"affiliation-links\">\n<span class=\"title\">Buy from...</span>\n<br />\n<ul
+        id=\"buyLinks\" class=\"menu_style_5\">\n<li>\n<a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=29&rid=329691\">eBay</a>\nmore...
+        <a href=\"#more\" onclick=\"if (!window.__cfRLUnblockHandlers) return false;
+        $('#sub29').toggle(); return false;\" data-cf-modified-61e6fa03e3c4dfd983d5c94f-=\"\">>></a><br
+        />\n<ul id=\"sub29\" style=\"display: none; margin-top: 0px; margin-bottom:
+        0px;\">\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=23&rid=329691\">eBay
+        Canada</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=25&rid=329691\">eBay
+        UK</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=58&rid=329691\">eBay
+        Germany</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=24&rid=329691\">eBay
+        France</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=37&rid=329691\">eBay
+        Spain</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=35&rid=329691\">eBay
+        Belgium</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=26&rid=329691\">eBay
+        Netherlands</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=27&rid=329691\">eBay
+        Italy</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=28&rid=329691\">eBay
+        Australia</a></li>\n</ul>\n</li>\n</ul>\n</div>\n\n<table cellspacing=\"1\"
+        cellpadding=\"1\" width=\"262\" class=\"chronology\">\n<tr class=\"hidden\">\n<th
+        class=\"spacer\"></th>\n<th colspan=\"2\"></th>\n<th class=\"spacer\"></th>\n</tr>\n<tr>\n<th
+        colspan=\"4\"><span>Phoenix Rising / Fire & Ashes</span> discography (main)</th>\n</tr>\n<tr
+        class=\"prevNext\">\n<td class=\"arrows\"> </td>\n<td class=\"prev\">\n</td>\n<td
+        class=\"next\">\n<a href=\"https://www.metal-archives.com/albums/Phoenix_Rising_-_Fire_%26_Ashes/Versus/410990\"
+        title=\"Versus (Full-length)\">Versus</a><br />(2014)\n</td>\n<td class=\"arrows\"><a
+        href=\"https://www.metal-archives.com/albums/Phoenix_Rising_-_Fire_%26_Ashes/Versus/410990\"
+        title=\"Versus (Full-length)\">></a> </td>\n</tr>\n<tr>\n<th colspan=\"4\"><span>Phoenix
+        Rising / Fire & Ashes</span> discography (all)</th>\n</tr>\n<tr class=\"prevNext\">\n<td
+        class=\"arrows\"> </td>\n<td class=\"prev\">\n</td>\n<td class=\"next\">\n<a
+        href=\"https://www.metal-archives.com/albums/Phoenix_Rising_-_Fire_%26_Ashes/Versus/410990\"
+        title=\"Versus (Full-length)\">Versus</a><br />(2014)\n</td>\n<td class=\"arrows\"><a
+        href=\"https://www.metal-archives.com/albums/Phoenix_Rising_-_Fire_%26_Ashes/Versus/410990\"
+        title=\"Versus (Full-length)\">></a> </td>\n</tr>\n</table>\n</div>\n<div
+        id=\"album_content\">\n<div class=\"tool_strip right\">\n<ul>\n<li><a title=\"Report
+        a mistake or additional information for this page\" href=\"javascript:popupReportDialog(4,
+        329691);\" class=\"btn_report_error writeAction\"> </a></li>\n<li>\n<a href=\"https://www.metal-archives.com/bands/Phoenix_Rising_-_Fire_%26_Ashes/3540341226\"
+        title=\"Back to Phoenix Rising / Fire & Ashes\" class=\"btn_back\"> </a>\n</li>\n</ul>\n</div>\n\n<div
+        id=\"album_info\">\n\n<h1 class=\"album_name\"><a href=\"https://www.metal-archives.com/albums/Phoenix_Rising_-_Fire_%26_Ashes/MMXII/329691\">MMXII</a></h1>\n<h2
+        class=\"band_name\">\n<a href=\"https://www.metal-archives.com/bands/Phoenix_Rising_-_Fire_%26_Ashes/3540341226\">Phoenix
+        Rising / Fire & Ashes</a>\n</h2>\n\n<div class=\"clear block_spacer_5\"></div>\n<div
+        id=\"message\"> </div>\n\n<div class=\"clear block_spacer_20\"></div>\n<dl
+        class=\"float_left\">\n<dt>Type:</dt>\n<dd>Full-length</dd>\n<dt>Release date:</dt>\n<dd>March
+        23rd, 2012</dd>\n<dt>Catalog ID:</dt>\n<dd>SAR010-2 SP</dd>\n</dl>\n<dl class=\"float_right\">\n<dt>Label:</dt>\n<dd><a
+        href=\"https://www.metal-archives.com/labels/Sonic_Attack_Records/23789#label_tabs_albums\">Sonic
+        Attack Records</a></dd>\n<dt>Format:</dt>\n<dd>2CD</dd>\n<dt>Reviews:</dt>\n<dd>\n1
+        <a href=\"https://www.metal-archives.com/reviews/Phoenix_Rising_-_Fire_%26_Ashes/MMXII/329691/\">review</a>
+        (avg. 100%)\n</dd>\n</dl>\n</div>\n<div id=\"album_tabs\" class=\"clear tabs
+        block_spacer_top_20 ui-tabs no-js\">\n<ul class=\"ui-tabs-nav\">\n<li><a href=\"#album_tabs_tracklist\">Songs</a></li>\n<li><a
+        href=\"#album_tabs_lineup\">Lineup</a></li>\n<li><a href=\"https://www.metal-archives.com/release/ajax-versions/current/329691/parent/329691\">Other
+        versions</a></li> <li><a href=\"#album_tabs_reviews\">Reviews</a></li> <li><a
+        href=\"#album_tabs_notes\">Additional notes</a></li> </ul>\n\n<div id=\"album_tabs_tracklist\"
+        class=\"ui-tabs-hide\">\n<div id=\"album_songs\" class=\"tabs2lvl\">\n\n</div>\n<div
+        class=\"ui-tabs-panel-content block_spacer_top_20\">\n<script type=\"61e6fa03e3c4dfd983d5c94f-text/javascript\">\nfunction
+        toggleLyrics(songId) {\n    var lyricsRow = $('#song' + songId);\n    lyricsRow.toggle();\n
+        \   var lyrics = $('#lyrics_' + songId);\n\tif (lyrics.html() == '(loading
+        lyrics...)') {\n    \tvar realId = songId;\n\t\tif(!$.isNumeric(songId.substring(songId.length
+        -1, songId.length))) {\n\t\t\trealId = songId.substring(0, songId.length -1);\n\t\t}\n\t\tlyrics.load(URL_SITE
+        + \"release/ajax-view-lyrics/id/\" + realId);\n    }\n    // toggle link\n
+        \   var linkLabel = \"lyrics\";\n    $(\"#lyricsButton\" + songId).text(lyricsRow.css(\"display\")
+        == \"none\" ? \"Show \" + linkLabel : \"Hide \" + linkLabel);\n    return
+        false;\n}\n\n</script>\n<table class=\"display table_lyrics\" cellpadding=\"0\"
+        cellspacing=\"0\">\n<tbody>\n\n<tr class=\"discRow\">\n<td colspan=\"4\">\nDisc\n1\n</td>\n</tr>\n<tr
+        class=\"even\">\n<td width=\"20\"><a name=\"2308753\" class=\"anchor\"> </a>1.</td>\n<td
+        class=\"wrapWords\">\nTenebris Revelantur\n</td>\n<td align=\"right\">02:17</td>\n<td
+        nowrap=\"nowrap\">&nbsp;\n<a id=\"lyricsButton2308753\" href=\"#2308753\"
+        onclick=\"if (!window.__cfRLUnblockHandlers) return false; toggleLyrics('2308753');
+        return false;\" data-cf-modified-61e6fa03e3c4dfd983d5c94f-=\"\">Instrumental</a>\n</td>\n</tr>\n<tr
+        id=\"song2308753\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2308753\">(loading lyrics...)</td>\n</tr>\n<tr class=\"odd\">\n<td
+        width=\"20\"><a name=\"2308754\" class=\"anchor\"> </a>2.</td>\n<td class=\"wrapWords\">\nAgoraphobia\n</td>\n<td
+        align=\"right\">05:19</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a id=\"lyricsButton2308754\"
+        href=\"#2308754\" onclick=\"if (!window.__cfRLUnblockHandlers) return false;
+        toggleLyrics('2308754'); return false;\" data-cf-modified-61e6fa03e3c4dfd983d5c94f-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song2308754\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2308754\">(loading lyrics...)</td>\n</tr>\n<tr class=\"even\">\n<td
+        width=\"20\"><a name=\"2308755\" class=\"anchor\"> </a>3.</td>\n<td class=\"wrapWords\">\nThe
+        Chosen One\n</td>\n<td align=\"right\">06:05</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton2308755\" href=\"#2308755\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('2308755'); return false;\" data-cf-modified-61e6fa03e3c4dfd983d5c94f-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song2308755\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2308755\">(loading lyrics...)</td>\n</tr>\n<tr class=\"odd\">\n<td
+        width=\"20\"><a name=\"2308756\" class=\"anchor\"> </a>4.</td>\n<td class=\"wrapWords\">\nLast
+        Eternal Night\n</td>\n<td align=\"right\">05:49</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton2308756\" href=\"#2308756\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('2308756'); return false;\" data-cf-modified-61e6fa03e3c4dfd983d5c94f-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song2308756\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2308756\">(loading lyrics...)</td>\n</tr>\n<tr class=\"even\">\n<td
+        width=\"20\"><a name=\"2308757\" class=\"anchor\"> </a>5.</td>\n<td class=\"wrapWords\">\nFury
+        and Rage\n</td>\n<td align=\"right\">04:08</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton2308757\" href=\"#2308757\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('2308757'); return false;\" data-cf-modified-61e6fa03e3c4dfd983d5c94f-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song2308757\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2308757\">(loading lyrics...)</td>\n</tr>\n<tr class=\"odd\">\n<td
+        width=\"20\"><a name=\"2308758\" class=\"anchor\"> </a>6.</td>\n<td class=\"wrapWords\">\nMy
+        Love Still Remains\n</td>\n<td align=\"right\">04:54</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton2308758\" href=\"#2308758\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('2308758'); return false;\" data-cf-modified-61e6fa03e3c4dfd983d5c94f-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song2308758\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2308758\">(loading lyrics...)</td>\n</tr>\n<tr class=\"even\">\n<td
+        width=\"20\"><a name=\"2308759\" class=\"anchor\"> </a>7.</td>\n<td class=\"wrapWords\">\nAbaddon\n</td>\n<td
+        align=\"right\">06:26</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a id=\"lyricsButton2308759\"
+        href=\"#2308759\" onclick=\"if (!window.__cfRLUnblockHandlers) return false;
+        toggleLyrics('2308759'); return false;\" data-cf-modified-61e6fa03e3c4dfd983d5c94f-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song2308759\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2308759\">(loading lyrics...)</td>\n</tr>\n<tr class=\"odd\">\n<td
+        width=\"20\"><a name=\"2308760\" class=\"anchor\"> </a>8.</td>\n<td class=\"wrapWords\">\nExodus\n</td>\n<td
+        align=\"right\">01:27</td>\n<td nowrap=\"nowrap\">&nbsp;\n<em>instrumental</em>\n</td>\n</tr>\n<tr
+        id=\"song2308760\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2308760\">(loading lyrics...)</td>\n</tr>\n<tr class=\"even\">\n<td
+        width=\"20\"><a name=\"2308761\" class=\"anchor\"> </a>9.</td>\n<td class=\"wrapWords\">\nLost
+        Souls\n</td>\n<td align=\"right\">05:32</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton2308761\" href=\"#2308761\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('2308761'); return false;\" data-cf-modified-61e6fa03e3c4dfd983d5c94f-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song2308761\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2308761\">(loading lyrics...)</td>\n</tr>\n<tr class=\"odd\">\n<td
+        width=\"20\"><a name=\"2308762\" class=\"anchor\"> </a>10.</td>\n<td class=\"wrapWords\">\nNova
+        Era\n</td>\n<td align=\"right\">11:21</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton2308762\" href=\"#2308762\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('2308762'); return false;\" data-cf-modified-61e6fa03e3c4dfd983d5c94f-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song2308762\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2308762\">(loading lyrics...)</td>\n</tr>\n<tr>\n<td
+        colspan=\"2\">&nbsp;</td>\n<td align=\"right\"><strong>53:18</strong></td>\n<td>&nbsp;</td>\n</tr>\n<tr
+        class=\"discRow\">\n<td colspan=\"4\">\nDisc\n2\n</td>\n</tr>\n<tr class=\"even\">\n<td
+        width=\"20\"><a name=\"2341311\" class=\"anchor\"> </a>1.</td>\n<td class=\"wrapWords\">\nTenebris
+        Revelantur\n</td>\n<td align=\"right\">02:17</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton2341311\" href=\"#2341311\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('2341311'); return false;\" data-cf-modified-61e6fa03e3c4dfd983d5c94f-=\"\">Instrumental</a>\n</td>\n</tr>\n<tr
+        id=\"song2341311\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2341311\">(loading lyrics...)</td>\n</tr>\n<tr class=\"odd\">\n<td
+        width=\"20\"><a name=\"2341312\" class=\"anchor\"> </a>2.</td>\n<td class=\"wrapWords\">\nAgoraphobia\n</td>\n<td
+        align=\"right\">05:19</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a id=\"lyricsButton2341312\"
+        href=\"#2341312\" onclick=\"if (!window.__cfRLUnblockHandlers) return false;
+        toggleLyrics('2341312'); return false;\" data-cf-modified-61e6fa03e3c4dfd983d5c94f-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song2341312\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2341312\">(loading lyrics...)</td>\n</tr>\n<tr class=\"even\">\n<td
+        width=\"20\"><a name=\"2341313\" class=\"anchor\"> </a>3.</td>\n<td class=\"wrapWords\">\nLa
+        profecía\n</td>\n<td align=\"right\">06:05</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton2341313\" href=\"#2341313\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('2341313'); return false;\" data-cf-modified-61e6fa03e3c4dfd983d5c94f-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song2341313\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2341313\">(loading lyrics...)</td>\n</tr>\n<tr class=\"odd\">\n<td
+        width=\"20\"><a name=\"2341314\" class=\"anchor\"> </a>4.</td>\n<td class=\"wrapWords\">\nNoche
+        eterna\n</td>\n<td align=\"right\">05:49</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton2341314\" href=\"#2341314\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('2341314'); return false;\" data-cf-modified-61e6fa03e3c4dfd983d5c94f-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song2341314\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2341314\">(loading lyrics...)</td>\n</tr>\n<tr class=\"even\">\n<td
+        width=\"20\"><a name=\"2341315\" class=\"anchor\"> </a>5.</td>\n<td class=\"wrapWords\">\nRabia
+        y dolor\n</td>\n<td align=\"right\">04:08</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton2341315\" href=\"#2341315\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('2341315'); return false;\" data-cf-modified-61e6fa03e3c4dfd983d5c94f-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song2341315\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2341315\">(loading lyrics...)</td>\n</tr>\n<tr class=\"odd\">\n<td
+        width=\"20\"><a name=\"2341316\" class=\"anchor\"> </a>6.</td>\n<td class=\"wrapWords\">\nEl
+        cielo y la tierra\n</td>\n<td align=\"right\">04:54</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton2341316\" href=\"#2341316\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('2341316'); return false;\" data-cf-modified-61e6fa03e3c4dfd983d5c94f-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song2341316\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2341316\">(loading lyrics...)</td>\n</tr>\n<tr class=\"even\">\n<td
+        width=\"20\"><a name=\"2341317\" class=\"anchor\"> </a>7.</td>\n<td class=\"wrapWords\">\nAbaddon\n</td>\n<td
+        align=\"right\">06:26</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a id=\"lyricsButton2341317\"
+        href=\"#2341317\" onclick=\"if (!window.__cfRLUnblockHandlers) return false;
+        toggleLyrics('2341317'); return false;\" data-cf-modified-61e6fa03e3c4dfd983d5c94f-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song2341317\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2341317\">(loading lyrics...)</td>\n</tr>\n<tr class=\"odd\">\n<td
+        width=\"20\"><a name=\"2341318\" class=\"anchor\"> </a>8.</td>\n<td class=\"wrapWords\">\nÉxodo\n</td>\n<td
+        align=\"right\">01:27</td>\n<td nowrap=\"nowrap\">&nbsp;\n<em>instrumental</em>\n</td>\n</tr>\n<tr
+        id=\"song2341318\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2341318\">(loading lyrics...)</td>\n</tr>\n<tr class=\"even\">\n<td
+        width=\"20\"><a name=\"2341319\" class=\"anchor\"> </a>9.</td>\n<td class=\"wrapWords\">\nAlmas
+        errantes\n</td>\n<td align=\"right\">05:32</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton2341319\" href=\"#2341319\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('2341319'); return false;\" data-cf-modified-61e6fa03e3c4dfd983d5c94f-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song2341319\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2341319\">(loading lyrics...)</td>\n</tr>\n<tr class=\"odd\">\n<td
+        width=\"20\"><a name=\"2341320\" class=\"anchor\"> </a>10.</td>\n<td class=\"wrapWords\">\nEra
+        de luz\n</td>\n<td align=\"right\">11:21</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton2341320\" href=\"#2341320\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('2341320'); return false;\" data-cf-modified-61e6fa03e3c4dfd983d5c94f-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song2341320\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2341320\">(loading lyrics...)</td>\n</tr>\n<tr>\n<td
+        colspan=\"2\">&nbsp;</td>\n<td align=\"right\"><strong>53:18</strong></td>\n<td>&nbsp;</td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>\n\n\n<div
+        id=\"album_tabs_lineup\">\n<div id=\"album_members\" class=\"tabs2lvl\">\n<ul>\n<li><a
+        href=\"#album_all_members_lineup\">Complete lineup</a></li> <li><a href=\"#album_members_lineup\">Band
+        members</a></li> <li><a href=\"#album_members_guest\">Guest/session musicians</a></li>
+        <li><a href=\"#album_members_misc\">Other staff</a></li> </ul>\n\n<div id=\"album_all_members_lineup\">\n<div
+        class=\"ui-tabs-panel-content\">\n<table class=\"display lineupTable\" cellpadding=\"0\"
+        cellspacing=\"0\">\n<tr class=\"lineupHeaders\">\n<td colspan=\"2\" align=\"right\">\nBand
+        members\n</td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"300\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Sergio_Mart%C3%ADnez/129613\">Sergio
+        Mart&iacute;nez</a>\n</td>\n<td>\nBass </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Iv%C3%A1n_M%C3%A9ndez/129614\">Iv&aacute;n
+        M&eacute;ndez</a>\n</td>\n<td>\nDrums, Percussion </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Jes%C3%BAs_Mart%C3%ADn/129612\">Jes&uacute;s
+        Mart&iacute;n</a>\n </td>\n<td>\nKeyboards, Vocals (backing) </td>\n</tr>\n<tr
+        class=\"lineupRow\">\n<td width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Daniel_Mart%C3%ADnez/129611\">Daniel
+        Mart&iacute;nez</a>\n</td>\n<td>\nGuitars (lead), Vocals (backing) </td>\n</tr>\n<tr
+        class=\"lineupRow\">\n<td width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Miguel_Gonz%C3%A1lez/129609\">Miguel
+        Gonz&aacute;lez</a>\n</td>\n<td>\nVocals, Guitars </td>\n</tr>\n<tr class=\"lineupHeaders\">\n<td
+        colspan=\"2\" align=\"right\">\nGuest/Session\n</td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Pedro_QuiricoToribio/547392\">Pedro
+        QuiricoToribio</a>\n</td>\n<td>\nViolin (Track 5) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Adr%C3%ADan_Men%C3%A9ndez/547393\">Adr&iacute;an
+        Men&eacute;ndez</a>\n</td>\n<td>\nBanjo (Track 5) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Alberto_Scarlatta/22801\">Alberto
+        Scarlatta</a>\n</td>\n<td>\nVocals (Track 10) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Luis_Ramos/547400\">Luis
+        Ramos</a>\n</td>\n<td>\nVocals (choirs) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Manuel_Torrado/547401\">Manuel
+        Torrado</a>\n</td>\n<td>\nVocals (choirs) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Diana_Calzada/547402\">Diana
+        Calzada</a>\n</td>\n<td>\nVocals (choirs) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Irene_Sandi%C3%B1a/547403\">Irene
+        Sandi&ntilde;a</a>\n</td>\n<td>\nVocals (choirs) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Beatriz_Romero/547404\">Beatriz
+        Romero</a>\n</td>\n<td>\nVocals (choirs) </td>\n</tr>\n<tr class=\"lineupHeaders\">\n<td
+        colspan=\"2\" align=\"right\">\nMiscellaneous staff\n</td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Fernando_Asensi/38250\">Fernando
+        Asensi</a>\n</td>\n<td>\nProducer, Mastering, Editing </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Enrique_Momp%C3%B3/38236\">Enrique
+        Momp&oacute;</a>\n</td>\n<td>\nProducer, Mastering, Editing </td>\n</tr>\n<tr
+        class=\"lineupRow\">\n<td width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Moira_Fee/547397\">Moira
+        Fee</a>\n</td>\n<td>\nPhotography </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Enrique_Tortosa/547399\">Enrique
+        Tortosa</a>\n</td>\n<td>\nCover art, Design </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Sergio_Mart%C3%ADnez/129613\">Sergi
+        Wild</a>\n</td>\n<td>\nLyrics (spanish) (Track 10) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Jes%C3%BAs_Mart%C3%ADn/129612\">Jes&uacute;s
+        Mart&iacute;n</a>\n</td>\n<td>\nLyrics (english) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Miguel_Gonz%C3%A1lez/129609\">Miguel
+        Gonz&aacute;lez</a>\n</td>\n<td>\nLyrics (spanish) </td>\n</tr>\n</table>\n</div>\n</div>\n\n<div
+        id=\"album_members_lineup\">\n<div class=\"ui-tabs-panel-content\">\n<table
+        class=\"display lineupTable\" cellpadding=\"0\" cellspacing=\"0\">\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Sergio_Mart%C3%ADnez/129613\">Sergio
+        Mart&iacute;nez</a>\n</td>\n<td>\nBass </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Iv%C3%A1n_M%C3%A9ndez/129614\">Iv&aacute;n
+        M&eacute;ndez</a>\n</td>\n<td>\nDrums, Percussion </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Jes%C3%BAs_Mart%C3%ADn/129612\">Jes&uacute;s
+        Mart&iacute;n</a>\n</td>\n<td>\nKeyboards, Vocals (backing) </td>\n</tr>\n<tr
+        class=\"lineupRow\">\n<td width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Daniel_Mart%C3%ADnez/129611\">Daniel
+        Mart&iacute;nez</a>\n</td>\n<td>\nGuitars (lead), Vocals (backing) </td>\n</tr>\n<tr
+        class=\"lineupRow\">\n<td width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Miguel_Gonz%C3%A1lez/129609\">Miguel
+        Gonz&aacute;lez</a>\n</td>\n<td>\nVocals, Guitars </td>\n</tr>\n</table>\n</div>\n</div>\n\n<div
+        id=\"album_members_guest\">\n<div class=\"ui-tabs-panel-content\">\n<table
+        class=\"display lineupTable\" cellpadding=\"0\" cellspacing=\"0\">\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Pedro_QuiricoToribio/547392\">Pedro
+        QuiricoToribio</a>\n</td>\n<td>\nViolin (Track 5) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Adr%C3%ADan_Men%C3%A9ndez/547393\">Adr&iacute;an
+        Men&eacute;ndez</a>\n</td>\n<td>\nBanjo (Track 5) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Alberto_Scarlatta/22801\">Alberto
+        Scarlatta</a>\n</td>\n<td>\nVocals (Track 10) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Luis_Ramos/547400\">Luis
+        Ramos</a>\n</td>\n<td>\nVocals (choirs) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Manuel_Torrado/547401\">Manuel
+        Torrado</a>\n</td>\n<td>\nVocals (choirs) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Diana_Calzada/547402\">Diana
+        Calzada</a>\n</td>\n<td>\nVocals (choirs) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Irene_Sandi%C3%B1a/547403\">Irene
+        Sandi&ntilde;a</a>\n</td>\n<td>\nVocals (choirs) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Beatriz_Romero/547404\">Beatriz
+        Romero</a>\n</td>\n<td>\nVocals (choirs) </td>\n</tr>\n</table>\n</div>\n</div>\n\n<div
+        id=\"album_members_misc\">\n<div class=\"ui-tabs-panel-content\">\n<table
+        class=\"display lineupTable\" cellpadding=\"0\" cellspacing=\"0\">\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Fernando_Asensi/38250\">Fernando
+        Asensi</a>\n</td>\n<td>\nProducer, Mastering, Editing </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Enrique_Momp%C3%B3/38236\">Enrique
+        Momp&oacute;</a>\n</td>\n<td>\nProducer, Mastering, Editing </td>\n</tr>\n<tr
+        class=\"lineupRow\">\n<td width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Moira_Fee/547397\">Moira
+        Fee</a>\n</td>\n<td>\nPhotography </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Enrique_Tortosa/547399\">Enrique
+        Tortosa</a>\n</td>\n<td>\nCover art, Design </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Sergio_Mart%C3%ADnez/129613\">Sergi
+        Wild</a>\n</td>\n<td>\nLyrics (spanish) (Track 10) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Jes%C3%BAs_Mart%C3%ADn/129612\">Jes&uacute;s
+        Mart&iacute;n</a>\n</td>\n<td>\nLyrics (english) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Miguel_Gonz%C3%A1lez/129609\">Miguel
+        Gonz&aacute;lez</a>\n</td>\n<td>\nLyrics (spanish) </td>\n</tr>\n</table>\n</div>\n</div>\n</div>\n</div>\n\n\n\n\n\n<div
+        id=\"album_tabs_reviews\" class=\"ui-tabs-hide\">\n<div id=\"album_reviews\"
+        class=\"tabs2lvl\">\n<div class=\"tool_strip top right writeAction\">\n<ul>\n<li><a
+        href=\"https://www.metal-archives.com/review/write/releaseId/329691\" class=\"btn_add\">Add</a></li>\n</ul>\n</div>\n</div>\n<div
+        class=\"ui-tabs-panel-content block_spacer_top_36\">\n<table id=\"review_list\"
+        class=\"display\" cellpadding=\"0\" cellspacing=\"0\">\n<tr class=\"even\">\n<td
+        nowrap=\"nowrap\"><a href=\"https://www.metal-archives.com/reviews/Phoenix_Rising_-_Fire_%26_Ashes/MMXII/329691/metalmadness88/290009\"
+        title=\"Read\" class=\"iconContainer ui-state-default ui-corner-all\"><span
+        class=\"ui-icon ui-icon-search\">Read</span></a></td>\n<td>Looking forward
+        to the Nova...</td>\n<td>100%</td>\n<td><a href=\"https://www.metal-archives.com/users/metalmadness88\"
+        class=\"profileMenu\">metalmadness88</a></td>\n<td>April 12th, 2012</td>\n</tr>\n</table>\n</div>\n</div>\n\n\n<div
+        id=\"album_tabs_notes\" class=\"ui-tabs-hide\">\n<div id=\"album_notes\" class=\"tabs2lvl\"></div>\n<div
+        class=\"ui-tabs-panel-content  block_spacer_top_20\">\n<p class=\"block_spacer_20\">Double
+        that includes two different versions, one with English lyrics and a second
+        one with Spanish Lyrics.</p>\n<p class=\"title_comment\">Recording information:</p>\n<p
+        class=\"block_spacer_20\">Recorded at Scud Records and Fireworks Estudios.</p>\n<p
+        class=\"title_comment\">Identifiers:</p>\n<p>Barcode: 4 046661 255928</p>\n</div>\n</div>\n\n</div>\n\n<div
+        id=\"auditTrail\">\n<table>\n<tr>\n<td>Added by: <a href=\"https://www.metal-archives.com/users/Finnvox07\"
+        class=\"profileMenu\">Finnvox07</a></td>\n<td align=\"right\">Modified by:
+        <a href=\"https://www.metal-archives.com/users/Lenny%20JTD\" class=\"profileMenu\">Lenny
+        JTD</a></td>\n</tr>\n<tr>\n<td>Added on: 2012-02-02 19:02:32</td>\n<td align=\"right\">Last
+        modified on: 2021-01-28 22:11:43</td>\n</tr>\n<tr>\n<td valign=\"top\">\n&nbsp;\n</td>\n<td
+        align=\"right\" valign=\"top\">\n</td>\n</tr>\n</table>\n</div>\n\n</div>\n</div>\n</div>\n<script
+        src=\"https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js\"
+        data-cf-settings=\"61e6fa03e3c4dfd983d5c94f-|49\" defer=\"\"></script></body>\n</html>\n"
+  recorded_at: Tue, 13 Apr 2021 16:42:51 GMT
+- request:
+    method: get
+    uri: https://ma.cache.headbang.re/albums/view/id/329691
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - MetalArchivesGemTestSuite/3.2.0 (user@example.com)
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - ma.cache.headbang.re
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+      Cache-Control:
+      - max-age=2592000
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Ray:
+      - 63f626680cebf3eb-LHR
+      Cf-Request-Id:
+      - '096db655050000f3eb0a805000000001'
+      Content-Security-Policy:
+      - frame-ancestors 'self'
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Tue, 13 Apr 2021 16:39:29 GMT
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Expires:
+      - Thu, 13 May 2021 16:39:29 GMT
+      Nel:
+      - '{"max_age":604800,"report_to":"cf-nel"}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=dTz%2Bnj4m931bRLOiqHEwB17M0HWTRKX2M9AtGGJo8JY%2BZ0hZoESN%2BYWWgGnIN03ADMT05ZLmmZbaO51Ct3%2FaIpn2txwGxSYpg7cIpj%2B%2BKjHlRmymNaWL"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - nginx
+      Vary:
+      - Accept-Encoding,User-Agent
+      X-Cache-Status:
+      - MISS
+      X-Frame-Options:
+      - SAMEORIGIN
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n<html
+        xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n<title>Phoenix Rising / Fire
+        & Ashes - MMXII - Encyclopaedia Metallum: The Metal Archives</title>\n<meta
+        http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n<meta
+        content=\"width=device-width, initial-scale=1\" name=\"viewport\" />\n<link
+        rel=\"stylesheet\" type=\"text/css\" href=\"/min/index.php?g=css\" />\n<script
+        type=\"7df4cba80a3f6b5b1112b5b0-text/javascript\" src=\"/min/index.php?g=js\"></script>\n<script
+        type=\"7df4cba80a3f6b5b1112b5b0-text/javascript\">\r\n\t\t\tvar URL_SITE\t=
+        'https://www.metal-archives.com/';\r\n\t\t\tvar URL_IMAGES\t= 'https://www.metal-archives.com/images/';\r\n\t\t\tvar
+        URL_CSS\t\t= 'https://www.metal-archives.com/css/';\r\n\t\t\tvar csrfToken\t=
+        '';\r\n\r\n\t\t\t$(document).ready(function() {\r\n\t\t\t\ttoggleFixedPositioning(1280,
+        600);\r\n\t\t\t\texecuteOnAllPages();\r\n\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t});\r\n\r\n\r\n\t\t</script>\n<noscript>\r\n\t\t\t<style
+        type=\"text/css\">\r\n\t\t\t\t.no-js { display: block !important; }\r\n\t\t\t</style>\r\n\t\t</noscript>\n<!--[if
+        lt IE 8]>\r\n\t\t\t<script src=\"http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js\"></script>\r\n\t\t\t
+        <link rel=\"stylesheet\" type=\"text/css\" href=\"https://www.metal-archives.com/css/default/oldie.css\"
+        />\r\n\t\t<![endif]-->\n<script type=\"7df4cba80a3f6b5b1112b5b0-text/javascript\">\r\n\t\t\t
+        \ var _gaq = _gaq || [];\r\n\t\t\t  _gaq.push(['_setAccount', 'UA-4046749-4']);\r\n\t\t\t
+        \ _gaq.push(['_trackPageview']);\r\n\r\n\t\t\t  (function() {\r\n\t\t\t    var
+        ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async
+        = true;\r\n\t\t\t    ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+        : 'http://www') + '.google-analytics.com/ga.js';\r\n\t\t\t    var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);\r\n\t\t\t  })();\r\n\t\t</script>\n</head>\n<body>\n<div
+        id=\"wrapper\">\n<div id=\"header\">\n<a href=\"https://www.metal-archives.com/\"
+        id=\"MA_logo\">Metal Archives</a>\n<div class=\"clear loading\"><img src=\"https://www.metal-archives.com/images/loading.gif\"
+        alt=\"loading\" width=\"12\" height=\"12\" /> loading...</div>\n<div id=\"search_box\">\n<form
+        id=\"search_form\" action=\"https://www.metal-archives.com/search\" method=\"get\">\n<div>\n<label>Search:</label><br
+        />\n<input name=\"searchString\" type=\"text\" id=\"searchQueryBox\" size=\"25\"
+        value=\"\" tabindex=\"1\" />\n<select name=\"type\" tabindex=\"2\">\n<option
+        value=\"band_name\">Band name</option>\n<option value=\"band_genre\">Music
+        genre</option>\n<option value=\"band_themes\">Lyrical themes</option>\n<option
+        value=\"album_title\">Album title</option>\n<option value=\"song_title\">Song
+        title</option>\n<option value=\"label_name\">Label</option>\n<option value=\"artist_alias\">Artist</option>\n<option
+        value=\"user_name\">User profile</option>\n<option value=\"google\">Google</option>\n</select>\n<br
+        />\n<a href=\"https://www.metal-archives.com/search/advanced/?searchString=&type=\"
+        class=\"float_left\" tabindex=\"4\">Advanced search</a>\n<button type=\"submit\"
+        class=\"btn_submit float_right\" tabindex=\"3\">Submit</button>\n</div>\n</form>\n</div>\n<div
+        id=\"top_menu_box\">\n<ul class=\"menu_style_1\">\n<li><a href=\"https://www.metal-archives.com/content/help\">Help</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/content/rules\">Rules</a></li>\n<li><a
+        href=\"https://forum.metal-archives.com\" target=\"_top\">Forum</a></li>\n</ul>\n<ul
+        class=\"menu_style_2\">\n<li><a href=\"https://www.metal-archives.com/content/faq\">FAQ</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/content/support\">Support Us</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/content/tools\">Add-ons</a></li>\n</ul>\n</div>\n</div>\n<div
+        id=\"left_col\">\n<div id=\"member_box\">\n <form name=\"login_form\" id=\"login_form\"
+        action=\"https://www.metal-archives.com/authentication/login\" method=\"post\">\n<div>\n<label>Username</label><br
+        />\n<input type=\"text\" name=\"loginUsername\" />\n<label>Password</label><br
+        />\n<input type=\"password\" name=\"loginPassword\" />\n<input type=\"hidden\"
+        name=\"origin\" value=\"/albums/view/id/329691\" />\n<button type=\"submit\"
+        class=\"btn_login float_right\">Login</button>\n</div>\n</form>\n<a href=\"https://www.metal-archives.com/user/signup\"
+        class=\"float-left writeAction\">Register</a>\n<span class=\"float_right\"><a
+        href=\"https://www.metal-archives.com/user/forgot-password\" class=\"float-left
+        writeAction\">Forgot login?</a> </span>\n<div class=\"clear\"> </div>\n</div>\n<div
+        id=\"left_menu_box\">\n<ul class=\"menu_style_3 block_spacer_20\">\n<li>\nBands\n<ul>\n<li><a
+        href=\"https://www.metal-archives.com/browse/letter\">alphabetical</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/browse/country\">country</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/browse/genre\">genre</a></li>\n</ul>\n</li>\n<li>\nLabels\n<ul>\n<li><a
+        href=\"https://www.metal-archives.com/label\">alphabetical</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/label/country\">country</a></li>\n</ul>\n</li>\n<li><a
+        href=\"https://www.metal-archives.com/review/browse\">Reviews</a></li>\n</ul>\n<ul
+        class=\"menu_style_3 block_spacer_20\">\n<li><a href=\"https://www.metal-archives.com/artist/rip\">R.I.P.</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/band/random\">Random Band</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/user/list\">User rankings</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/news\">News archive</a></li>\n</ul>\n<ul
+        class=\"menu_style_3 ornement_30\">\n<li><a href=\"https://www.metal-archives.com/report/list\">Reports</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/todo\">Contribute / To do</a></li>\n</ul>\n</div>\n<div
+        id=\"left_text_box\">\n<p class=\"small_text center\"> &copy; 2002-2021<br
+        />Encyclopaedia Metallum </p>\n<p class=\"small_text center\">Best viewed<br
+        /> <a href=\"http://www.getfirefox.com\" target=\"_blank\">without</a> Internet
+        Explorer, <br />in 1280 x 960 resolution<br /> or higher.</p>\n</div>\n<div>\n<p
+        class=\"small_text center\"><a href=\"https://www.metal-archives.com/content/pp\">Privacy
+        Policy</a></p>\n</div>\n</div>\n<div id=\"content_wrapper\">\n<script type=\"7df4cba80a3f6b5b1112b5b0-text/javascript\"
+        src=\"https://www.metal-archives.com/js/jquery/jquery.form.js\"></script>\n<script
+        type=\"7df4cba80a3f6b5b1112b5b0-text/javascript\">\n\n\t$(document).ready(function()
+        {\n\t\t$(\".no-js\").removeClass(\"no-js\");\n\t\t$('#album_tabs').tabs({
+        beforeLoad: cacheTab }).show();\n\t\t$('#album_members').tabs();\n\t\t$('.albumMenu').click(toggleAlbumMenu);\n\t\t
+        $('#album_members').tabs( { active : 1 } );\t\t\t\t\t\t\ttoggleLyrics(0);\n\t\t\t});\n\t\n\tfunction
+        hideToolMenu(event) {\n\t\t $('.toolMenu-content').hide();\n\t}\n\t\n\tfunction
+        makeChildVersion() {\n\t\tvar releaseId = 329691;\n\t\tvar newParentId = prompt(\"Make
+        a child of which album ID?\");\n\t\t\n\t\tif(newParentId != null) {\n\t\t\n\t\t\t$('.loading').show();\n\t\t\t$.post(URL_SITE
+        + 'review/ajax-validate-move/json/1', { 'releaseId' : newParentId, \"oldReleaseId\":
+        releaseId }, function(result) {\n\t\t\t\t$('.loading').hide();\n\t\t\t\tif(result.reviewConflict)
+        {\n\t\t\t\t\talert(\"This action would cause at least two reviews by the same
+        user to be listed for one album. This is not allowed. One of the reviews will
+        need to be deleted first.\");\n\t\t\t\t}\n\t\t\t\telse if(result.success)
+        {\n\t\t\t\t\tvar confirmMove = confirm(\"Make this album (and all its own
+        versions, if any) a version of \" + result.band + \" - \" + result.release
+        + \"?\");\n\t\t\t\t\t\n\t\t\t\t\tif(confirmMove) {\n\t\t\t\t\t\tvar params
+        = { 'releaseId' : releaseId, \"newParentId\" : newParentId, 'csrfToken': window.csrfToken};\n\t\t\t\t\t\t$('.loading').show();\n\t\t\t\t\t\t$.post(URL_SITE
+        + 'release/ajax-make-child/json/1', params, function(result) {\n\t\t\t\t\t\t\t$('.loading').hide();\n\t\t\t\t\t\t\tif(result.success)
+        {\n\t\t\t\t\t\t\t\tlocation.href = \"https://www.metal-archives.com/albums/Phoenix_Rising_-_Fire_%26_Ashes/MMXII/329691\";\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\telse
+        {\n\t\t\t\t\t\t\t\talert(\"An error occurred: \" + result.error);\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t},
+        'json');\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t\telse {\n\t\t\t\t\talert(\"An error
+        occurred: \" + result.error);\n\t\t\t\t}\n\t\t\t}, 'json');\t\t\t\n\t\t}\n\t}\n
+        \   \n    \n</script>\n<div id=\"album_sidebar\">\n<a href=\"https://www.metal-archives.com/bands/Phoenix_Rising_-_Fire_%26_Ashes/3540341226#band_tab_discography\">Phoenix
+        Rising / Fire & Ashes</a>\n> MMXII\n\n<div class=\"album_img\">\n<a class=\"image\"
+        id=\"cover\" title=\"Phoenix Rising / Fire & Ashes - MMXII\" href=\"https://www.metal-archives.com/images/3/2/9/6/329691.jpg?2251\"><img
+        src=\"https://www.metal-archives.com/images/3/2/9/6/329691.jpg?2251\" title=\"Click
+        to zoom\" alt=\"Phoenix Rising / Fire & Ashes - MMXII\" border=\"0\" /></a>\n</div>\n\n<div
+        id=\"affiliation-links\">\n<span class=\"title\">Buy from...</span>\n<br />\n<ul
+        id=\"buyLinks\" class=\"menu_style_5\">\n<li>\n<a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=29&rid=329691\">eBay</a>\nmore...
+        <a href=\"#more\" onclick=\"if (!window.__cfRLUnblockHandlers) return false;
+        $('#sub29').toggle(); return false;\" data-cf-modified-7df4cba80a3f6b5b1112b5b0-=\"\">>></a><br
+        />\n<ul id=\"sub29\" style=\"display: none; margin-top: 0px; margin-bottom:
+        0px;\">\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=23&rid=329691\">eBay
+        Canada</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=25&rid=329691\">eBay
+        UK</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=58&rid=329691\">eBay
+        Germany</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=24&rid=329691\">eBay
+        France</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=37&rid=329691\">eBay
+        Spain</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=35&rid=329691\">eBay
+        Belgium</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=26&rid=329691\">eBay
+        Netherlands</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=27&rid=329691\">eBay
+        Italy</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=28&rid=329691\">eBay
+        Australia</a></li>\n</ul>\n</li>\n</ul>\n</div>\n\n<table cellspacing=\"1\"
+        cellpadding=\"1\" width=\"262\" class=\"chronology\">\n<tr class=\"hidden\">\n<th
+        class=\"spacer\"></th>\n<th colspan=\"2\"></th>\n<th class=\"spacer\"></th>\n</tr>\n<tr>\n<th
+        colspan=\"4\"><span>Phoenix Rising / Fire & Ashes</span> discography (main)</th>\n</tr>\n<tr
+        class=\"prevNext\">\n<td class=\"arrows\"> </td>\n<td class=\"prev\">\n</td>\n<td
+        class=\"next\">\n<a href=\"https://www.metal-archives.com/albums/Phoenix_Rising_-_Fire_%26_Ashes/Versus/410990\"
+        title=\"Versus (Full-length)\">Versus</a><br />(2014)\n</td>\n<td class=\"arrows\"><a
+        href=\"https://www.metal-archives.com/albums/Phoenix_Rising_-_Fire_%26_Ashes/Versus/410990\"
+        title=\"Versus (Full-length)\">></a> </td>\n</tr>\n<tr>\n<th colspan=\"4\"><span>Phoenix
+        Rising / Fire & Ashes</span> discography (all)</th>\n</tr>\n<tr class=\"prevNext\">\n<td
+        class=\"arrows\"> </td>\n<td class=\"prev\">\n</td>\n<td class=\"next\">\n<a
+        href=\"https://www.metal-archives.com/albums/Phoenix_Rising_-_Fire_%26_Ashes/Versus/410990\"
+        title=\"Versus (Full-length)\">Versus</a><br />(2014)\n</td>\n<td class=\"arrows\"><a
+        href=\"https://www.metal-archives.com/albums/Phoenix_Rising_-_Fire_%26_Ashes/Versus/410990\"
+        title=\"Versus (Full-length)\">></a> </td>\n</tr>\n</table>\n</div>\n<div
+        id=\"album_content\">\n<div class=\"tool_strip right\">\n<ul>\n<li><a title=\"Report
+        a mistake or additional information for this page\" href=\"javascript:popupReportDialog(4,
+        329691);\" class=\"btn_report_error writeAction\"> </a></li>\n<li>\n<a href=\"https://www.metal-archives.com/bands/Phoenix_Rising_-_Fire_%26_Ashes/3540341226\"
+        title=\"Back to Phoenix Rising / Fire & Ashes\" class=\"btn_back\"> </a>\n</li>\n</ul>\n</div>\n\n<div
+        id=\"album_info\">\n\n<h1 class=\"album_name\"><a href=\"https://www.metal-archives.com/albums/Phoenix_Rising_-_Fire_%26_Ashes/MMXII/329691\">MMXII</a></h1>\n<h2
+        class=\"band_name\">\n<a href=\"https://www.metal-archives.com/bands/Phoenix_Rising_-_Fire_%26_Ashes/3540341226\">Phoenix
+        Rising / Fire & Ashes</a>\n</h2>\n\n<div class=\"clear block_spacer_5\"></div>\n<div
+        id=\"message\"> </div>\n\n<div class=\"clear block_spacer_20\"></div>\n<dl
+        class=\"float_left\">\n<dt>Type:</dt>\n<dd>Full-length</dd>\n<dt>Release date:</dt>\n<dd>March
+        23rd, 2012</dd>\n<dt>Catalog ID:</dt>\n<dd>SAR010-2 SP</dd>\n</dl>\n<dl class=\"float_right\">\n<dt>Label:</dt>\n<dd><a
+        href=\"https://www.metal-archives.com/labels/Sonic_Attack_Records/23789#label_tabs_albums\">Sonic
+        Attack Records</a></dd>\n<dt>Format:</dt>\n<dd>2CD</dd>\n<dt>Reviews:</dt>\n<dd>\n1
+        <a href=\"https://www.metal-archives.com/reviews/Phoenix_Rising_-_Fire_%26_Ashes/MMXII/329691/\">review</a>
+        (avg. 100%)\n</dd>\n</dl>\n</div>\n<div id=\"album_tabs\" class=\"clear tabs
+        block_spacer_top_20 ui-tabs no-js\">\n<ul class=\"ui-tabs-nav\">\n<li><a href=\"#album_tabs_tracklist\">Songs</a></li>\n<li><a
+        href=\"#album_tabs_lineup\">Lineup</a></li>\n<li><a href=\"https://www.metal-archives.com/release/ajax-versions/current/329691/parent/329691\">Other
+        versions</a></li> <li><a href=\"#album_tabs_reviews\">Reviews</a></li> <li><a
+        href=\"#album_tabs_notes\">Additional notes</a></li> </ul>\n\n<div id=\"album_tabs_tracklist\"
+        class=\"ui-tabs-hide\">\n<div id=\"album_songs\" class=\"tabs2lvl\">\n\n</div>\n<div
+        class=\"ui-tabs-panel-content block_spacer_top_20\">\n<script type=\"7df4cba80a3f6b5b1112b5b0-text/javascript\">\nfunction
+        toggleLyrics(songId) {\n    var lyricsRow = $('#song' + songId);\n    lyricsRow.toggle();\n
+        \   var lyrics = $('#lyrics_' + songId);\n\tif (lyrics.html() == '(loading
+        lyrics...)') {\n    \tvar realId = songId;\n\t\tif(!$.isNumeric(songId.substring(songId.length
+        -1, songId.length))) {\n\t\t\trealId = songId.substring(0, songId.length -1);\n\t\t}\n\t\tlyrics.load(URL_SITE
+        + \"release/ajax-view-lyrics/id/\" + realId);\n    }\n    // toggle link\n
+        \   var linkLabel = \"lyrics\";\n    $(\"#lyricsButton\" + songId).text(lyricsRow.css(\"display\")
+        == \"none\" ? \"Show \" + linkLabel : \"Hide \" + linkLabel);\n    return
+        false;\n}\n\n</script>\n<table class=\"display table_lyrics\" cellpadding=\"0\"
+        cellspacing=\"0\">\n<tbody>\n<tr class=\"discRow\">\n<td colspan=\"4\">\nDisc\n1\n</td>\n</tr>\n<tr
+        class=\"even\">\n<td width=\"20\"><a name=\"2308753\" class=\"anchor\"> </a>1.</td>\n<td
+        class=\"wrapWords\">\nTenebris Revelantur\n</td>\n<td align=\"right\">02:17</td>\n<td
+        nowrap=\"nowrap\">&nbsp;\n<a id=\"lyricsButton2308753\" href=\"#2308753\"
+        onclick=\"if (!window.__cfRLUnblockHandlers) return false; toggleLyrics('2308753');
+        return false;\" data-cf-modified-7df4cba80a3f6b5b1112b5b0-=\"\">Instrumental</a>\n</td>\n</tr>\n<tr
+        id=\"song2308753\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2308753\">(loading lyrics...)</td>\n</tr>\n<tr class=\"odd\">\n<td
+        width=\"20\"><a name=\"2308754\" class=\"anchor\"> </a>2.</td>\n<td class=\"wrapWords\">\nAgoraphobia\n</td>\n<td
+        align=\"right\">05:19</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a id=\"lyricsButton2308754\"
+        href=\"#2308754\" onclick=\"if (!window.__cfRLUnblockHandlers) return false;
+        toggleLyrics('2308754'); return false;\" data-cf-modified-7df4cba80a3f6b5b1112b5b0-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song2308754\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2308754\">(loading lyrics...)</td>\n</tr>\n<tr class=\"even\">\n<td
+        width=\"20\"><a name=\"2308755\" class=\"anchor\"> </a>3.</td>\n<td class=\"wrapWords\">\nThe
+        Chosen One\n</td>\n<td align=\"right\">06:05</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton2308755\" href=\"#2308755\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('2308755'); return false;\" data-cf-modified-7df4cba80a3f6b5b1112b5b0-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song2308755\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2308755\">(loading lyrics...)</td>\n</tr>\n<tr class=\"odd\">\n<td
+        width=\"20\"><a name=\"2308756\" class=\"anchor\"> </a>4.</td>\n<td class=\"wrapWords\">\nLast
+        Eternal Night\n</td>\n<td align=\"right\">05:49</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton2308756\" href=\"#2308756\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('2308756'); return false;\" data-cf-modified-7df4cba80a3f6b5b1112b5b0-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song2308756\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2308756\">(loading lyrics...)</td>\n</tr>\n<tr class=\"even\">\n<td
+        width=\"20\"><a name=\"2308757\" class=\"anchor\"> </a>5.</td>\n<td class=\"wrapWords\">\nFury
+        and Rage\n</td>\n<td align=\"right\">04:08</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton2308757\" href=\"#2308757\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('2308757'); return false;\" data-cf-modified-7df4cba80a3f6b5b1112b5b0-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song2308757\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2308757\">(loading lyrics...)</td>\n</tr>\n<tr class=\"odd\">\n<td
+        width=\"20\"><a name=\"2308758\" class=\"anchor\"> </a>6.</td>\n<td class=\"wrapWords\">\nMy
+        Love Still Remains\n</td>\n<td align=\"right\">04:54</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton2308758\" href=\"#2308758\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('2308758'); return false;\" data-cf-modified-7df4cba80a3f6b5b1112b5b0-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song2308758\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2308758\">(loading lyrics...)</td>\n</tr>\n<tr class=\"even\">\n<td
+        width=\"20\"><a name=\"2308759\" class=\"anchor\"> </a>7.</td>\n<td class=\"wrapWords\">\nAbaddon\n</td>\n<td
+        align=\"right\">06:26</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a id=\"lyricsButton2308759\"
+        href=\"#2308759\" onclick=\"if (!window.__cfRLUnblockHandlers) return false;
+        toggleLyrics('2308759'); return false;\" data-cf-modified-7df4cba80a3f6b5b1112b5b0-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song2308759\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2308759\">(loading lyrics...)</td>\n</tr>\n<tr class=\"odd\">\n<td
+        width=\"20\"><a name=\"2308760\" class=\"anchor\"> </a>8.</td>\n<td class=\"wrapWords\">\nExodus\n</td>\n<td
+        align=\"right\">01:27</td>\n<td nowrap=\"nowrap\">&nbsp;\n<em>instrumental</em>\n</td>\n</tr>\n<tr
+        id=\"song2308760\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2308760\">(loading lyrics...)</td>\n</tr>\n<tr class=\"even\">\n<td
+        width=\"20\"><a name=\"2308761\" class=\"anchor\"> </a>9.</td>\n<td class=\"wrapWords\">\nLost
+        Souls\n</td>\n<td align=\"right\">05:32</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton2308761\" href=\"#2308761\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('2308761'); return false;\" data-cf-modified-7df4cba80a3f6b5b1112b5b0-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song2308761\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2308761\">(loading lyrics...)</td>\n</tr>\n<tr class=\"odd\">\n<td
+        width=\"20\"><a name=\"2308762\" class=\"anchor\"> </a>10.</td>\n<td class=\"wrapWords\">\nNova
+        Era\n</td>\n<td align=\"right\">11:21</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton2308762\" href=\"#2308762\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('2308762'); return false;\" data-cf-modified-7df4cba80a3f6b5b1112b5b0-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song2308762\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2308762\">(loading lyrics...)</td>\n</tr>\n<tr>\n<td
+        colspan=\"2\">&nbsp;</td>\n<td align=\"right\"><strong>53:18</strong></td>\n<td>&nbsp;</td>\n</tr>\n<tr
+        class=\"discRow\">\n<td colspan=\"4\">\nDisc\n2\n</td>\n</tr>\n<tr class=\"even\">\n<td
+        width=\"20\"><a name=\"2341311\" class=\"anchor\"> </a>1.</td>\n<td class=\"wrapWords\">\nTenebris
+        Revelantur\n</td>\n<td align=\"right\">02:17</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton2341311\" href=\"#2341311\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('2341311'); return false;\" data-cf-modified-7df4cba80a3f6b5b1112b5b0-=\"\">Instrumental</a>\n</td>\n</tr>\n<tr
+        id=\"song2341311\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2341311\">(loading lyrics...)</td>\n</tr>\n<tr class=\"odd\">\n<td
+        width=\"20\"><a name=\"2341312\" class=\"anchor\"> </a>2.</td>\n<td class=\"wrapWords\">\nAgoraphobia\n</td>\n<td
+        align=\"right\">05:19</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a id=\"lyricsButton2341312\"
+        href=\"#2341312\" onclick=\"if (!window.__cfRLUnblockHandlers) return false;
+        toggleLyrics('2341312'); return false;\" data-cf-modified-7df4cba80a3f6b5b1112b5b0-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song2341312\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2341312\">(loading lyrics...)</td>\n</tr>\n<tr class=\"even\">\n<td
+        width=\"20\"><a name=\"2341313\" class=\"anchor\"> </a>3.</td>\n<td class=\"wrapWords\">\nLa
+        profecía\n</td>\n<td align=\"right\">06:05</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton2341313\" href=\"#2341313\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('2341313'); return false;\" data-cf-modified-7df4cba80a3f6b5b1112b5b0-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song2341313\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2341313\">(loading lyrics...)</td>\n</tr>\n<tr class=\"odd\">\n<td
+        width=\"20\"><a name=\"2341314\" class=\"anchor\"> </a>4.</td>\n<td class=\"wrapWords\">\nNoche
+        eterna\n</td>\n<td align=\"right\">05:49</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton2341314\" href=\"#2341314\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('2341314'); return false;\" data-cf-modified-7df4cba80a3f6b5b1112b5b0-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song2341314\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2341314\">(loading lyrics...)</td>\n</tr>\n<tr class=\"even\">\n<td
+        width=\"20\"><a name=\"2341315\" class=\"anchor\"> </a>5.</td>\n<td class=\"wrapWords\">\nRabia
+        y dolor\n</td>\n<td align=\"right\">04:08</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton2341315\" href=\"#2341315\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('2341315'); return false;\" data-cf-modified-7df4cba80a3f6b5b1112b5b0-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song2341315\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2341315\">(loading lyrics...)</td>\n</tr>\n<tr class=\"odd\">\n<td
+        width=\"20\"><a name=\"2341316\" class=\"anchor\"> </a>6.</td>\n<td class=\"wrapWords\">\nEl
+        cielo y la tierra\n</td>\n<td align=\"right\">04:54</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton2341316\" href=\"#2341316\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('2341316'); return false;\" data-cf-modified-7df4cba80a3f6b5b1112b5b0-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song2341316\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2341316\">(loading lyrics...)</td>\n</tr>\n<tr class=\"even\">\n<td
+        width=\"20\"><a name=\"2341317\" class=\"anchor\"> </a>7.</td>\n<td class=\"wrapWords\">\nAbaddon\n</td>\n<td
+        align=\"right\">06:26</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a id=\"lyricsButton2341317\"
+        href=\"#2341317\" onclick=\"if (!window.__cfRLUnblockHandlers) return false;
+        toggleLyrics('2341317'); return false;\" data-cf-modified-7df4cba80a3f6b5b1112b5b0-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song2341317\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2341317\">(loading lyrics...)</td>\n</tr>\n<tr class=\"odd\">\n<td
+        width=\"20\"><a name=\"2341318\" class=\"anchor\"> </a>8.</td>\n<td class=\"wrapWords\">\nÉxodo\n</td>\n<td
+        align=\"right\">01:27</td>\n<td nowrap=\"nowrap\">&nbsp;\n<em>instrumental</em>\n</td>\n</tr>\n<tr
+        id=\"song2341318\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2341318\">(loading lyrics...)</td>\n</tr>\n<tr class=\"even\">\n<td
+        width=\"20\"><a name=\"2341319\" class=\"anchor\"> </a>9.</td>\n<td class=\"wrapWords\">\nAlmas
+        errantes\n</td>\n<td align=\"right\">05:32</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton2341319\" href=\"#2341319\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('2341319'); return false;\" data-cf-modified-7df4cba80a3f6b5b1112b5b0-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song2341319\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2341319\">(loading lyrics...)</td>\n</tr>\n<tr class=\"odd\">\n<td
+        width=\"20\"><a name=\"2341320\" class=\"anchor\"> </a>10.</td>\n<td class=\"wrapWords\">\nEra
+        de luz\n</td>\n<td align=\"right\">11:21</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton2341320\" href=\"#2341320\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('2341320'); return false;\" data-cf-modified-7df4cba80a3f6b5b1112b5b0-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song2341320\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2341320\">(loading lyrics...)</td>\n</tr>\n<tr>\n<td
+        colspan=\"2\">&nbsp;</td>\n<td align=\"right\"><strong>53:18</strong></td>\n<td>&nbsp;</td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>\n\n\n<div
+        id=\"album_tabs_lineup\">\n<div id=\"album_members\" class=\"tabs2lvl\">\n<ul>\n<li><a
+        href=\"#album_all_members_lineup\">Complete lineup</a></li> <li><a href=\"#album_members_lineup\">Band
+        members</a></li> <li><a href=\"#album_members_guest\">Guest/session musicians</a></li>
+        <li><a href=\"#album_members_misc\">Other staff</a></li> </ul>\n\n<div id=\"album_all_members_lineup\">\n<div
+        class=\"ui-tabs-panel-content\">\n<table class=\"display lineupTable\" cellpadding=\"0\"
+        cellspacing=\"0\">\n<tr class=\"lineupHeaders\">\n<td colspan=\"2\" align=\"right\">\nBand
+        members\n</td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"300\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Sergio_Mart%C3%ADnez/129613\">Sergio
+        Mart&iacute;nez</a>\n</td>\n<td>\nBass </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Iv%C3%A1n_M%C3%A9ndez/129614\">Iv&aacute;n
+        M&eacute;ndez</a>\n</td>\n<td>\nDrums, Percussion </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Jes%C3%BAs_Mart%C3%ADn/129612\">Jes&uacute;s
+        Mart&iacute;n</a>\n</td>\n<td>\nKeyboards, Vocals (backing) </td>\n</tr>\n<tr
+        class=\"lineupRow\">\n<td width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Daniel_Mart%C3%ADnez/129611\">Daniel
+        Mart&iacute;nez</a>\n</td>\n<td>\nGuitars (lead), Vocals (backing) </td>\n</tr>\n<tr
+        class=\"lineupRow\">\n<td width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Miguel_Gonz%C3%A1lez/129609\">Miguel
+        Gonz&aacute;lez</a>\n</td>\n<td>\nVocals, Guitars </td>\n</tr>\n<tr class=\"lineupHeaders\">\n<td
+        colspan=\"2\" align=\"right\">\nGuest/Session\n</td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Pedro_QuiricoToribio/547392\">Pedro
+        QuiricoToribio</a>\n</td>\n<td>\nViolin (Track 5) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Adr%C3%ADan_Men%C3%A9ndez/547393\">Adr&iacute;an
+        Men&eacute;ndez</a>\n</td>\n<td>\nBanjo (Track 5) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Alberto_Scarlatta/22801\">Alberto
+        Scarlatta</a>\n</td>\n<td>\nVocals (Track 10) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Luis_Ramos/547400\">Luis
+        Ramos</a>\n</td>\n<td>\nVocals (choirs) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Manuel_Torrado/547401\">Manuel
+        Torrado</a>\n</td>\n<td>\nVocals (choirs) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Diana_Calzada/547402\">Diana
+        Calzada</a>\n</td>\n<td>\nVocals (choirs) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Irene_Sandi%C3%B1a/547403\">Irene
+        Sandi&ntilde;a</a>\n</td>\n<td>\nVocals (choirs) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Beatriz_Romero/547404\">Beatriz
+        Romero</a>\n</td>\n<td>\nVocals (choirs) </td>\n</tr>\n<tr class=\"lineupHeaders\">\n<td
+        colspan=\"2\" align=\"right\">\nMiscellaneous staff\n</td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Fernando_Asensi/38250\">Fernando
+        Asensi</a>\n</td>\n<td>\nProducer, Mastering, Editing </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Enrique_Momp%C3%B3/38236\">Enrique
+        Momp&oacute;</a>\n</td>\n<td>\nProducer, Mastering, Editing </td>\n</tr>\n<tr
+        class=\"lineupRow\">\n<td width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Moira_Fee/547397\">Moira
+        Fee</a>\n</td>\n<td>\nPhotography </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Enrique_Tortosa/547399\">Enrique
+        Tortosa</a>\n</td>\n<td>\nCover art, Design </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Sergio_Mart%C3%ADnez/129613\">Sergi
+        Wild</a>\n</td>\n<td>\nLyrics (spanish) (Track 10) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Jes%C3%BAs_Mart%C3%ADn/129612\">Jes&uacute;s
+        Mart&iacute;n</a>\n</td>\n<td>\nLyrics (english) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Miguel_Gonz%C3%A1lez/129609\">Miguel
+        Gonz&aacute;lez</a>\n</td>\n<td>\nLyrics (spanish) </td>\n</tr>\n</table>\n</div>\n</div>\n\n<div
+        id=\"album_members_lineup\">\n<div class=\"ui-tabs-panel-content\">\n<table
+        class=\"display lineupTable\" cellpadding=\"0\" cellspacing=\"0\">\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Sergio_Mart%C3%ADnez/129613\">Sergio
+        Mart&iacute;nez</a>\n</td>\n<td>\nBass </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Iv%C3%A1n_M%C3%A9ndez/129614\">Iv&aacute;n
+        M&eacute;ndez</a>\n</td>\n<td>\nDrums, Percussion </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Jes%C3%BAs_Mart%C3%ADn/129612\">Jes&uacute;s
+        Mart&iacute;n</a>\n</td>\n<td>\nKeyboards, Vocals (backing) </td>\n</tr>\n<tr
+        class=\"lineupRow\">\n<td width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Daniel_Mart%C3%ADnez/129611\">Daniel
+        Mart&iacute;nez</a>\n</td>\n<td>\nGuitars (lead), Vocals (backing) </td>\n</tr>\n<tr
+        class=\"lineupRow\">\n<td width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Miguel_Gonz%C3%A1lez/129609\">Miguel
+        Gonz&aacute;lez</a>\n</td>\n<td>\nVocals, Guitars </td>\n</tr>\n</table>\n</div>\n</div>\n\n<div
+        id=\"album_members_guest\">\n<div class=\"ui-tabs-panel-content\">\n<table
+        class=\"display lineupTable\" cellpadding=\"0\" cellspacing=\"0\">\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Pedro_QuiricoToribio/547392\">Pedro
+        QuiricoToribio</a>\n</td>\n<td>\nViolin (Track 5) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Adr%C3%ADan_Men%C3%A9ndez/547393\">Adr&iacute;an
+        Men&eacute;ndez</a>\n</td>\n<td>\nBanjo (Track 5) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Alberto_Scarlatta/22801\">Alberto
+        Scarlatta</a>\n</td>\n<td>\nVocals (Track 10) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Luis_Ramos/547400\">Luis
+        Ramos</a>\n</td>\n<td>\nVocals (choirs) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Manuel_Torrado/547401\">Manuel
+        Torrado</a>\n</td>\n<td>\nVocals (choirs) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Diana_Calzada/547402\">Diana
+        Calzada</a>\n</td>\n<td>\nVocals (choirs) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Irene_Sandi%C3%B1a/547403\">Irene
+        Sandi&ntilde;a</a>\n</td>\n<td>\nVocals (choirs) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Beatriz_Romero/547404\">Beatriz
+        Romero</a>\n</td>\n<td>\nVocals (choirs) </td>\n</tr>\n</table>\n</div>\n</div>\n\n<div
+        id=\"album_members_misc\">\n<div class=\"ui-tabs-panel-content\">\n<table
+        class=\"display lineupTable\" cellpadding=\"0\" cellspacing=\"0\">\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Fernando_Asensi/38250\">Fernando
+        Asensi</a>\n</td>\n<td>\nProducer, Mastering, Editing </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Enrique_Momp%C3%B3/38236\">Enrique
+        Momp&oacute;</a>\n</td>\n<td>\nProducer, Mastering, Editing </td>\n</tr>\n<tr
+        class=\"lineupRow\">\n<td width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Moira_Fee/547397\">Moira
+        Fee</a>\n</td>\n<td>\nPhotography </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Enrique_Tortosa/547399\">Enrique
+        Tortosa</a>\n</td>\n<td>\nCover art, Design </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Sergio_Mart%C3%ADnez/129613\">Sergi
+        Wild</a>\n</td>\n<td>\nLyrics (spanish) (Track 10) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Jes%C3%BAs_Mart%C3%ADn/129612\">Jes&uacute;s
+        Mart&iacute;n</a>\n</td>\n<td>\nLyrics (english) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Miguel_Gonz%C3%A1lez/129609\">Miguel
+        Gonz&aacute;lez</a>\n</td>\n<td>\nLyrics (spanish) </td>\n</tr>\n</table>\n</div>\n</div>\n</div>\n</div>\n\n\n\n\n\n<div
+        id=\"album_tabs_reviews\" class=\"ui-tabs-hide\">\n<div id=\"album_reviews\"
+        class=\"tabs2lvl\">\n<div class=\"tool_strip top right writeAction\">\n<ul>\n<li><a
+        href=\"https://www.metal-archives.com/review/write/releaseId/329691\" class=\"btn_add\">Add</a></li>\n</ul>\n</div>\n</div>\n<div
+        class=\"ui-tabs-panel-content block_spacer_top_36\">\n<table id=\"review_list\"
+        class=\"display\" cellpadding=\"0\" cellspacing=\"0\">\n<tr class=\"even\">\n<td
+        nowrap=\"nowrap\"><a href=\"https://www.metal-archives.com/reviews/Phoenix_Rising_-_Fire_%26_Ashes/MMXII/329691/metalmadness88/290009\"
+        title=\"Read\" class=\"iconContainer ui-state-default ui-corner-all\"><span
+        class=\"ui-icon ui-icon-search\">Read</span></a></td>\n<td>Looking forward
+        to the Nova...</td>\n<td>100%</td>\n<td><a href=\"https://www.metal-archives.com/users/metalmadness88\"
+        class=\"profileMenu\">metalmadness88</a></td>\n<td>April 12th, 2012</td>\n</tr>\n</table>\n</div>\n</div>\n\n\n<div
+        id=\"album_tabs_notes\" class=\"ui-tabs-hide\">\n<div id=\"album_notes\" class=\"tabs2lvl\"></div>\n<div
+        class=\"ui-tabs-panel-content  block_spacer_top_20\">\n<p class=\"block_spacer_20\">Double
+        that includes two different versions, one with English lyrics and a second
+        one with Spanish Lyrics.</p>\n<p class=\"title_comment\">Recording information:</p>\n<p
+        class=\"block_spacer_20\">Recorded at Scud Records and Fireworks Estudios.</p>\n<p
+        class=\"title_comment\">Identifiers:</p>\n<p>Barcode: 4 046661 255928</p>\n</div>\n</div>\n\n</div>\n\n<div
+        id=\"auditTrail\">\n<table>\n<tr>\n<td>Added by: <a href=\"https://www.metal-archives.com/users/Finnvox07\"
+        class=\"profileMenu\">Finnvox07</a></td>\n<td align=\"right\">Modified by:
+        <a href=\"https://www.metal-archives.com/users/Lenny%20JTD\" class=\"profileMenu\">Lenny
+        JTD</a></td>\n</tr>\n<tr>\n<td>Added on: 2012-02-02 19:02:32</td>\n<td align=\"right\">Last
+        modified on: 2021-01-28 22:11:43</td>\n</tr>\n<tr>\n<td valign=\"top\">\n&nbsp;\n</td>\n<td
+        align=\"right\" valign=\"top\">\n</td>\n</tr>\n</table>\n</div>\n\n</div>\n</div>\n</div>\n<script
+        src=\"https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js\"
+        data-cf-settings=\"7df4cba80a3f6b5b1112b5b0-|49\" defer=\"\"></script></body>\n</html>\n"
+  recorded_at: Tue, 13 Apr 2021 16:42:52 GMT
+recorded_with: VCR 6.0.0

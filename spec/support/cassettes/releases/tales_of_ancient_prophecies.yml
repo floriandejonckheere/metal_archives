@@ -1,0 +1,859 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://ma.cache.headbang.re/albums/artist/id/416934
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - MetalArchivesGemTestSuite/3.2.0 (user@example.com)
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - ma.cache.headbang.re
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+      Cache-Control:
+      - max-age=2592000
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Ray:
+      - 63f61fa5f8cd4c3e-AMS
+      Cf-Request-Id:
+      - '096db21bbc00004c3eba060000000001'
+      Content-Security-Policy:
+      - frame-ancestors 'self'
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Tue, 13 Apr 2021 16:34:52 GMT
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Expires:
+      - Thu, 13 May 2021 16:34:52 GMT
+      Nel:
+      - '{"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"group":"cf-nel","endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=1TYZ8%2FRzksVc87Qh%2BNDl9WOTIufBM%2BQTTVJIRxgAfpDO%2BH5foFzhLNTO5Du%2F5u6OWNg7ugmen%2BTgQJ7zPYHQmlkNbK6fR9w2cYwAH6iKuMEEt6BtL%2FHq"}],"max_age":604800}'
+      Server:
+      - nginx
+      Vary:
+      - Accept-Encoding,User-Agent
+      X-Cache-Status:
+      - MISS
+      X-Frame-Options:
+      - SAMEORIGIN
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n<html
+        xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n<title>Twilight Force - Tales
+        of Ancient Prophecies - Encyclopaedia Metallum: The Metal Archives</title>\n<meta
+        http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n<meta
+        content=\"width=device-width, initial-scale=1\" name=\"viewport\" />\n<link
+        rel=\"stylesheet\" type=\"text/css\" href=\"/min/index.php?g=css\" />\n<script
+        type=\"4253a8202d86e24bf069b823-text/javascript\" src=\"/min/index.php?g=js\"></script>\n<script
+        type=\"4253a8202d86e24bf069b823-text/javascript\">\r\n\t\t\tvar URL_SITE\t=
+        'https://www.metal-archives.com/';\r\n\t\t\tvar URL_IMAGES\t= 'https://www.metal-archives.com/images/';\r\n\t\t\tvar
+        URL_CSS\t\t= 'https://www.metal-archives.com/css/';\r\n\t\t\tvar csrfToken\t=
+        '';\r\n\r\n\t\t\t$(document).ready(function() {\r\n\t\t\t\ttoggleFixedPositioning(1280,
+        600);\r\n\t\t\t\texecuteOnAllPages();\r\n\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t});\r\n\r\n\r\n\t\t</script>\n<noscript>\r\n\t\t\t<style
+        type=\"text/css\">\r\n\t\t\t\t.no-js { display: block !important; }\r\n\t\t\t</style>\r\n\t\t</noscript>\n<!--[if
+        lt IE 8]>\r\n\t\t\t<script src=\"http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js\"></script>\r\n\t\t\t
+        <link rel=\"stylesheet\" type=\"text/css\" href=\"https://www.metal-archives.com/css/default/oldie.css\"
+        />\r\n\t\t<![endif]-->\n<script type=\"4253a8202d86e24bf069b823-text/javascript\">\r\n\t\t\t
+        \ var _gaq = _gaq || [];\r\n\t\t\t  _gaq.push(['_setAccount', 'UA-4046749-4']);\r\n\t\t\t
+        \ _gaq.push(['_trackPageview']);\r\n\r\n\t\t\t  (function() {\r\n\t\t\t    var
+        ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async
+        = true;\r\n\t\t\t    ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+        : 'http://www') + '.google-analytics.com/ga.js';\r\n\t\t\t    var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);\r\n\t\t\t  })();\r\n\t\t</script>\n</head>\n<body>\n<div
+        id=\"wrapper\">\n<div id=\"header\">\n<a href=\"https://www.metal-archives.com/\"
+        id=\"MA_logo\">Metal Archives</a>\n<div class=\"clear loading\"><img src=\"https://www.metal-archives.com/images/loading.gif\"
+        alt=\"loading\" width=\"12\" height=\"12\" /> loading...</div>\n<div id=\"search_box\">\n<form
+        id=\"search_form\" action=\"https://www.metal-archives.com/search\" method=\"get\">\n<div>\n<label>Search:</label><br
+        />\n<input name=\"searchString\" type=\"text\" id=\"searchQueryBox\" size=\"25\"
+        value=\"\" tabindex=\"1\" />\n<select name=\"type\" tabindex=\"2\">\n<option
+        value=\"band_name\">Band name</option>\n<option value=\"band_genre\">Music
+        genre</option>\n<option value=\"band_themes\">Lyrical themes</option>\n<option
+        value=\"album_title\">Album title</option>\n<option value=\"song_title\">Song
+        title</option>\n<option value=\"label_name\">Label</option>\n<option value=\"artist_alias\">Artist</option>\n<option
+        value=\"user_name\">User profile</option>\n<option value=\"google\">Google</option>\n</select>\n<br
+        />\n<a href=\"https://www.metal-archives.com/search/advanced/?searchString=&type=\"
+        class=\"float_left\" tabindex=\"4\">Advanced search</a>\n<button type=\"submit\"
+        class=\"btn_submit float_right\" tabindex=\"3\">Submit</button>\n</div>\n</form>\n</div>\n<div
+        id=\"top_menu_box\">\n<ul class=\"menu_style_1\">\n<li><a href=\"https://www.metal-archives.com/content/help\">Help</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/content/rules\">Rules</a></li>\n<li><a
+        href=\"https://forum.metal-archives.com\" target=\"_top\">Forum</a></li>\n</ul>\n<ul
+        class=\"menu_style_2\">\n<li><a href=\"https://www.metal-archives.com/content/faq\">FAQ</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/content/support\">Support Us</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/content/tools\">Add-ons</a></li>\n</ul>\n</div>\n</div>\n<div
+        id=\"left_col\">\n<div id=\"member_box\">\n <form name=\"login_form\" id=\"login_form\"
+        action=\"https://www.metal-archives.com/authentication/login\" method=\"post\">\n<div>\n<label>Username</label><br
+        />\n<input type=\"text\" name=\"loginUsername\" />\n<label>Password</label><br
+        />\n<input type=\"password\" name=\"loginPassword\" />\n<input type=\"hidden\"
+        name=\"origin\" value=\"/albums/artist/id/416934\" />\n<button type=\"submit\"
+        class=\"btn_login float_right\">Login</button>\n</div>\n</form>\n<a href=\"https://www.metal-archives.com/user/signup\"
+        class=\"float-left writeAction\">Register</a>\n<span class=\"float_right\"><a
+        href=\"https://www.metal-archives.com/user/forgot-password\" class=\"float-left
+        writeAction\">Forgot login?</a> </span>\n<div class=\"clear\"> </div>\n</div>\n<div
+        id=\"left_menu_box\">\n<ul class=\"menu_style_3 block_spacer_20\">\n<li>\nBands\n<ul>\n<li><a
+        href=\"https://www.metal-archives.com/browse/letter\">alphabetical</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/browse/country\">country</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/browse/genre\">genre</a></li>\n</ul>\n</li>\n<li>\nLabels\n<ul>\n<li><a
+        href=\"https://www.metal-archives.com/label\">alphabetical</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/label/country\">country</a></li>\n</ul>\n</li>\n<li><a
+        href=\"https://www.metal-archives.com/review/browse\">Reviews</a></li>\n</ul>\n<ul
+        class=\"menu_style_3 block_spacer_20\">\n<li><a href=\"https://www.metal-archives.com/artist/rip\">R.I.P.</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/band/random\">Random Band</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/user/list\">User rankings</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/news\">News archive</a></li>\n</ul>\n<ul
+        class=\"menu_style_3 ornement_30\">\n<li><a href=\"https://www.metal-archives.com/report/list\">Reports</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/todo\">Contribute / To do</a></li>\n</ul>\n</div>\n<div
+        id=\"left_text_box\">\n<p class=\"small_text center\"> &copy; 2002-2021<br
+        />Encyclopaedia Metallum </p>\n<p class=\"small_text center\">Best viewed<br
+        /> <a href=\"http://www.getfirefox.com\" target=\"_blank\">without</a> Internet
+        Explorer, <br />in 1280 x 960 resolution<br /> or higher.</p>\n</div>\n<div>\n<p
+        class=\"small_text center\"><a href=\"https://www.metal-archives.com/content/pp\">Privacy
+        Policy</a></p>\n</div>\n</div>\n<div id=\"content_wrapper\">\n<script type=\"4253a8202d86e24bf069b823-text/javascript\"
+        src=\"https://www.metal-archives.com/js/jquery/jquery.form.js\"></script>\n<script
+        type=\"4253a8202d86e24bf069b823-text/javascript\">\n\n\t$(document).ready(function()
+        {\n\t\t$(\".no-js\").removeClass(\"no-js\");\n\t\t$('#album_tabs').tabs({
+        beforeLoad: cacheTab }).show();\n\t\t$('#album_members').tabs();\n\t\t$('.albumMenu').click(toggleAlbumMenu);\n\t\t
+        $('#album_members').tabs( { active : 1 } );\t\t\t\t\t\t\ttoggleLyrics(0);\n\t\t\t});\n\t\n\tfunction
+        hideToolMenu(event) {\n\t\t $('.toolMenu-content').hide();\n\t}\n\t\n\tfunction
+        makeChildVersion() {\n\t\tvar releaseId = 416934;\n\t\tvar newParentId = prompt(\"Make
+        a child of which album ID?\");\n\t\t\n\t\tif(newParentId != null) {\n\t\t\n\t\t\t$('.loading').show();\n\t\t\t$.post(URL_SITE
+        + 'review/ajax-validate-move/json/1', { 'releaseId' : newParentId, \"oldReleaseId\":
+        releaseId }, function(result) {\n\t\t\t\t$('.loading').hide();\n\t\t\t\tif(result.reviewConflict)
+        {\n\t\t\t\t\talert(\"This action would cause at least two reviews by the same
+        user to be listed for one album. This is not allowed. One of the reviews will
+        need to be deleted first.\");\n\t\t\t\t}\n\t\t\t\telse if(result.success)
+        {\n\t\t\t\t\tvar confirmMove = confirm(\"Make this album (and all its own
+        versions, if any) a version of \" + result.band + \" - \" + result.release
+        + \"?\");\n\t\t\t\t\t\n\t\t\t\t\tif(confirmMove) {\n\t\t\t\t\t\tvar params
+        = { 'releaseId' : releaseId, \"newParentId\" : newParentId, 'csrfToken': window.csrfToken};\n\t\t\t\t\t\t$('.loading').show();\n\t\t\t\t\t\t$.post(URL_SITE
+        + 'release/ajax-make-child/json/1', params, function(result) {\n\t\t\t\t\t\t\t$('.loading').hide();\n\t\t\t\t\t\t\tif(result.success)
+        {\n\t\t\t\t\t\t\t\tlocation.href = \"https://www.metal-archives.com/albums/Twilight_Force/Tales_of_Ancient_Prophecies/416934\";\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\telse
+        {\n\t\t\t\t\t\t\t\talert(\"An error occurred: \" + result.error);\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t},
+        'json');\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t\telse {\n\t\t\t\t\talert(\"An error
+        occurred: \" + result.error);\n\t\t\t\t}\n\t\t\t}, 'json');\t\t\t\n\t\t}\n\t}\n
+        \   \n    \n</script>\n<div id=\"album_sidebar\">\n<a href=\"https://www.metal-archives.com/bands/Twilight_Force/3540382043#band_tab_discography\">Twilight
+        Force</a>\n> Tales of Ancient Prophecies\n\n<div class=\"album_img\">\n<a
+        class=\"image\" id=\"cover\" title=\"Twilight Force - Tales of Ancient Prophecies\"
+        href=\"https://www.metal-archives.com/images/4/1/6/9/416934.jpg?1616\"><img
+        src=\"https://www.metal-archives.com/images/4/1/6/9/416934.jpg?1616\" title=\"Click
+        to zoom\" alt=\"Twilight Force - Tales of Ancient Prophecies\" border=\"0\"
+        /></a>\n</div>\n\n<div id=\"affiliation-links\">\n<span class=\"title\">Buy
+        from...</span>\n<br />\n<ul id=\"buyLinks\" class=\"menu_style_5\">\n<li>\n<a
+        target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=29&rid=416934\">eBay</a>\nmore...
+        <a href=\"#more\" onclick=\"if (!window.__cfRLUnblockHandlers) return false;
+        $('#sub29').toggle(); return false;\" data-cf-modified-4253a8202d86e24bf069b823-=\"\">>></a><br
+        />\n<ul id=\"sub29\" style=\"display: none; margin-top: 0px; margin-bottom:
+        0px;\">\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=23&rid=416934\">eBay
+        Canada</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=25&rid=416934\">eBay
+        UK</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=58&rid=416934\">eBay
+        Germany</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=24&rid=416934\">eBay
+        France</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=37&rid=416934\">eBay
+        Spain</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=35&rid=416934\">eBay
+        Belgium</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=26&rid=416934\">eBay
+        Netherlands</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=27&rid=416934\">eBay
+        Italy</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=28&rid=416934\">eBay
+        Australia</a></li>\n</ul>\n</li>\n</ul>\n</div>\n\n<table cellspacing=\"1\"
+        cellpadding=\"1\" width=\"262\" class=\"chronology\">\n<tr class=\"hidden\">\n<th
+        class=\"spacer\"></th>\n<th colspan=\"2\"></th>\n<th class=\"spacer\"></th>\n</tr>\n<tr>\n<th
+        colspan=\"4\"><span>Twilight Force</span> discography (main)</th>\n</tr>\n<tr
+        class=\"prevNext\">\n<td class=\"arrows\"> </td>\n<td class=\"prev\">\n</td>\n<td
+        class=\"next\">\n<a href=\"https://www.metal-archives.com/albums/Twilight_Force/Heroes_of_Mighty_Magic/586439\"
+        title=\"Heroes of Mighty Magic (Full-length)\">Heroes of Mighty Magic</a><br
+        />(2016)\n</td>\n<td class=\"arrows\"><a href=\"https://www.metal-archives.com/albums/Twilight_Force/Heroes_of_Mighty_Magic/586439\"
+        title=\"Heroes of Mighty Magic (Full-length)\">></a> </td>\n</tr>\n <tr>\n<th
+        colspan=\"4\"><span>Twilight Force</span> discography (all)</th>\n</tr>\n<tr
+        class=\"prevNext\">\n<td class=\"arrows\"><a href=\"https://www.metal-archives.com/albums/Twilight_Force/The_Power_of_the_Ancient_Force/416942\"
+        title=\"The Power of the Ancient Force (Single)\"><</a> </td>\n<td class=\"prev\">\n<a
+        href=\"https://www.metal-archives.com/albums/Twilight_Force/The_Power_of_the_Ancient_Force/416942\"
+        title=\"The Power of the Ancient Force (Single)\">The Power of the Ancient
+        Force</a><br />(2014)\n</td>\n<td class=\"next\">\n<a href=\"https://www.metal-archives.com/albums/Twilight_Force/Gates_of_Glory/508862\"
+        title=\"Gates of Glory (Single)\">Gates of Glory</a><br />(2015)\n</td>\n<td
+        class=\"arrows\"><a href=\"https://www.metal-archives.com/albums/Twilight_Force/Gates_of_Glory/508862\"
+        title=\"Gates of Glory (Single)\">></a> </td>\n</tr>\n</table>\n</div>\n<div
+        id=\"album_content\">\n<div class=\"tool_strip right\">\n<ul>\n<li><a title=\"Report
+        a mistake or additional information for this page\" href=\"javascript:popupReportDialog(4,
+        416934);\" class=\"btn_report_error writeAction\"> </a></li>\n<li>\n<a href=\"https://www.metal-archives.com/bands/Twilight_Force/3540382043\"
+        title=\"Back to Twilight Force\" class=\"btn_back\"> </a>\n</li>\n</ul>\n</div>\n\n<div
+        id=\"album_info\">\n\n<h1 class=\"album_name\"><a href=\"https://www.metal-archives.com/albums/Twilight_Force/Tales_of_Ancient_Prophecies/416934\">Tales
+        of Ancient Prophecies</a></h1>\n<h2 class=\"band_name\">\n<a href=\"https://www.metal-archives.com/bands/Twilight_Force/3540382043\">Twilight
+        Force</a>\n</h2>\n\n<div class=\"clear block_spacer_5\"></div>\n<div id=\"message\">
+        </div>\n\n<div class=\"clear block_spacer_20\"></div>\n<dl class=\"float_left\">\n<dt>Type:</dt>\n<dd>Full-length</dd>\n<dt>Release
+        date:</dt>\n<dd>June 4th, 2014</dd>\n<dt>Catalog ID:</dt>\n<dd>BLOD091CD</dd>\n</dl>\n<dl
+        class=\"float_right\">\n<dt>Label:</dt>\n<dd><a href=\"https://www.metal-archives.com/labels/Black_Lodge_Records/27402#label_tabs_albums\">Black
+        Lodge Records</a></dd>\n<dt>Format:</dt>\n<dd>CD</dd>\n<dt>Reviews:</dt>\n<dd>\n10
+        <a href=\"https://www.metal-archives.com/reviews/Twilight_Force/Tales_of_Ancient_Prophecies/416934/\">reviews</a>
+        (avg. 90%)\n</dd>\n</dl>\n</div>\n<div id=\"album_tabs\" class=\"clear tabs
+        block_spacer_top_20 ui-tabs no-js\">\n<ul class=\"ui-tabs-nav\">\n<li><a href=\"#album_tabs_tracklist\">Songs</a></li>\n<li><a
+        href=\"#album_tabs_lineup\">Lineup</a></li>\n<li><a href=\"https://www.metal-archives.com/release/ajax-versions/current/416934/parent/416934\">Other
+        versions</a></li> <li><a href=\"#album_tabs_reviews\">Reviews</a></li> <li><a
+        href=\"#album_tabs_notes\">Additional notes</a></li> </ul>\n\n<div id=\"album_tabs_tracklist\"
+        class=\"ui-tabs-hide\">\n<div id=\"album_songs\" class=\"tabs2lvl\">\n\n</div>\n<div
+        class=\"ui-tabs-panel-content block_spacer_top_20\">\n<script type=\"4253a8202d86e24bf069b823-text/javascript\">\nfunction
+        toggleLyrics(songId) {\n    var lyricsRow = $('#song' + songId);\n    lyricsRow.toggle();\n
+        \   var lyrics = $('#lyrics_' + songId);\n\tif (lyrics.html() == '(loading
+        lyrics...)') {\n    \tvar realId = songId;\n\t\tif(!$.isNumeric(songId.substring(songId.length
+        -1, songId.length))) {\n\t\t\trealId = songId.substring(0, songId.length -1);\n\t\t}\n\t\tlyrics.load(URL_SITE
+        + \"release/ajax-view-lyrics/id/\" + realId);\n    }\n    // toggle link\n
+        \   var linkLabel = \"lyrics\";\n    $(\"#lyricsButton\" + songId).text(lyricsRow.css(\"display\")
+        == \"none\" ? \"Show \" + linkLabel : \"Hide \" + linkLabel);\n    return
+        false;\n}\n\n</script>\n<table class=\"display table_lyrics\" cellpadding=\"0\"
+        cellspacing=\"0\">\n<tbody>\n<tr class=\"even\">\n<td width=\"20\"><a name=\"2881674\"
+        class=\"anchor\"> </a>1.</td>\n<td class=\"wrapWords\">\nEnchanted Dragon
+        of Wisdom\n</td>\n<td align=\"right\">04:43</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton2881674\" href=\"#2881674\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('2881674'); return false;\" data-cf-modified-4253a8202d86e24bf069b823-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song2881674\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2881674\">(loading lyrics...)</td>\n</tr>\n<tr class=\"odd\">\n<td
+        width=\"20\"><a name=\"2881675\" class=\"anchor\"> </a>2.</td>\n<td class=\"wrapWords\">\nThe
+        Power of the Ancient Force\n</td>\n<td align=\"right\">05:03</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton2881675\" href=\"#2881675\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('2881675'); return false;\" data-cf-modified-4253a8202d86e24bf069b823-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song2881675\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2881675\">(loading lyrics...)</td>\n</tr>\n<tr class=\"even\">\n<td
+        width=\"20\"><a name=\"2881676\" class=\"anchor\"> </a>3.</td>\n<td class=\"wrapWords\">\nTwilight
+        Horizon\n</td>\n<td align=\"right\">04:59</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton2881676\" href=\"#2881676\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('2881676'); return false;\" data-cf-modified-4253a8202d86e24bf069b823-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song2881676\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2881676\">(loading lyrics...)</td>\n</tr>\n<tr class=\"odd\">\n<td
+        width=\"20\"><a name=\"2881677\" class=\"anchor\"> </a>4.</td>\n<td class=\"wrapWords\">\nThe
+        Summoning\n</td>\n<td align=\"right\">00:43</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton2881677\" href=\"#2881677\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('2881677'); return false;\" data-cf-modified-4253a8202d86e24bf069b823-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song2881677\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2881677\">(loading lyrics...)</td>\n</tr>\n<tr class=\"even\">\n<td
+        width=\"20\"><a name=\"2881678\" class=\"anchor\"> </a>5.</td>\n<td class=\"wrapWords\">\nWhispering
+        Winds\n</td>\n<td align=\"right\">00:51</td>\n<td nowrap=\"nowrap\">&nbsp;\n<em>instrumental</em>\n</td>\n</tr>\n<tr
+        id=\"song2881678\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2881678\">(loading lyrics...)</td>\n</tr>\n<tr class=\"odd\">\n<td
+        width=\"20\"><a name=\"2881679\" class=\"anchor\"> </a>6.</td>\n<td class=\"wrapWords\">\nFall
+        of the Eternal Winter\n</td>\n<td align=\"right\">04:54</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton2881679\" href=\"#2881679\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('2881679'); return false;\" data-cf-modified-4253a8202d86e24bf069b823-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song2881679\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2881679\">(loading lyrics...)</td>\n</tr>\n<tr class=\"even\">\n<td
+        width=\"20\"><a name=\"2881680\" class=\"anchor\"> </a>7.</td>\n<td class=\"wrapWords\">\nForest
+        of Destiny\n</td>\n<td align=\"right\">04:06</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton2881680\" href=\"#2881680\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('2881680'); return false;\" data-cf-modified-4253a8202d86e24bf069b823-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song2881680\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2881680\">(loading lyrics...)</td>\n</tr>\n<tr class=\"odd\">\n<td
+        width=\"20\"><a name=\"2881681\" class=\"anchor\"> </a>8.</td>\n<td class=\"wrapWords\">\nIn
+        the Mighty Hall of the Fire King\n</td>\n<td align=\"right\">00:55</td>\n<td
+        nowrap=\"nowrap\">&nbsp;\n<a id=\"lyricsButton2881681\" href=\"#2881681\"
+        onclick=\"if (!window.__cfRLUnblockHandlers) return false; toggleLyrics('2881681');
+        return false;\" data-cf-modified-4253a8202d86e24bf069b823-=\"\">Show lyrics</a>\n</td>\n</tr>\n<tr
+        id=\"song2881681\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2881681\">(loading lyrics...)</td>\n</tr>\n<tr class=\"even\">\n<td
+        width=\"20\"><a name=\"2881682\" class=\"anchor\"> </a>9.</td>\n<td class=\"wrapWords\">\nMade
+        of Steel\n</td>\n<td align=\"right\">04:46</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton2881682\" href=\"#2881682\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('2881682'); return false;\" data-cf-modified-4253a8202d86e24bf069b823-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song2881682\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2881682\">(loading lyrics...)</td>\n</tr>\n<tr class=\"odd\">\n<td
+        width=\"20\"><a name=\"2881683\" class=\"anchor\"> </a>10.</td>\n<td class=\"wrapWords\">\nSword
+        of Magic Steel\n</td>\n<td align=\"right\">01:05</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton2881683\" href=\"#2881683\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('2881683'); return false;\" data-cf-modified-4253a8202d86e24bf069b823-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song2881683\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2881683\">(loading lyrics...)</td>\n</tr>\n<tr class=\"even\">\n<td
+        width=\"20\"><a name=\"2881684\" class=\"anchor\"> </a>11.</td>\n<td class=\"wrapWords\">\nGates
+        of Glory\n</td>\n<td align=\"right\">03:55</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton2881684\" href=\"#2881684\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('2881684'); return false;\" data-cf-modified-4253a8202d86e24bf069b823-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song2881684\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2881684\">(loading lyrics...)</td>\n</tr>\n<tr>\n<td
+        colspan=\"2\">&nbsp;</td>\n<td align=\"right\"><strong>36:00</strong></td>\n<td>&nbsp;</td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>\n\n\n<div
+        id=\"album_tabs_lineup\">\n<div id=\"album_members\" class=\"tabs2lvl\">\n<ul>\n<li><a
+        href=\"#album_all_members_lineup\">Complete lineup</a></li> <li><a href=\"#album_members_lineup\">Band
+        members</a></li> <li><a href=\"#album_members_guest\">Guest/session musicians</a></li>
+        <li><a href=\"#album_members_misc\">Other staff</a></li> </ul>\n\n<div id=\"album_all_members_lineup\">\n<div
+        class=\"ui-tabs-panel-content\">\n<table class=\"display lineupTable\" cellpadding=\"0\"
+        cellspacing=\"0\">\n<tr class=\"lineupHeaders\">\n<td colspan=\"2\" align=\"right\">\nBand
+        members\n</td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"300\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Robban_B%C3%A4ck/417019\">Roberto</a>\n</td>\n<td>\nDrums,
+        Percussion </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"300\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Christian_Eriksson/568392\">Christian
+        Hedgren</a>\n</td>\n<td>\nVocals </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Philip_Lindh/567279\">Felipe</a>\n</td>\n<td>\nGuitars,
+        Guitars (acoustic), Lute, Vocals (backing), Songwriting, Lyrics </td>\n</tr>\n<tr
+        class=\"lineupRow\">\n<td width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Eldhrimnir/31367\">Daniele</a>\n
+        </td>\n<td>\nKeyboards, Piano, Violin, Cembalo, Vocals (backing), Narration,
+        Songwriting, Lyrics </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"300\"
+        valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Borne/565659\">Borne</a>\n</td>\n<td>\nBass
+        </td>\n</tr>\n<tr class=\"lineupHeaders\">\n<td colspan=\"2\" align=\"right\">\nGuest/Session\n</td>\n</tr>\n<tr
+        class=\"lineupRow\">\n<td width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Hvergelmer/31363\">Andreas
+        O.</a>\n</td>\n<td>\nGuitars (rhythm), Vocals (backing) </td>\n</tr>\n<tr
+        class=\"lineupRow\">\n<td width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Hanna_Turi/678347\">Hanna
+        Berglund</a>\n</td>\n<td>\nVocals (backing) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Barbro_Beckman/841048\">Barbro
+        Beckman</a>\n</td>\n<td>\nVocals (backing) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Kenny_Leckremo/221180\">Kenny
+        Leckremo</a>\n</td>\n<td>\nVocals (track 6) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Joakim_Brod%C3%A9n/2947\">Joakim
+        Brod&eacute;n</a>\n</td>\n<td>\nVocals (track 1, 2, 11) </td>\n</tr>\n<tr
+        class=\"lineupHeaders\">\n<td colspan=\"2\" align=\"right\">\nMiscellaneous
+        staff\n</td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"300\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Philip_Lindh/567279\">Felipe</a>\n</td>\n<td>\nMixing,
+        Art direction, Cover concept </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"300\"
+        valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Eldhrimnir/31367\">Daniele</a>\n</td>\n<td>\nMixing,
+        Mastering, Engineering, Art direction, Cover concept, Logo, Sound design </td>\n</tr>\n<tr
+        class=\"lineupRow\">\n<td width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Martin_Hanford/88022\">Martin
+        Hanford</a>\n</td>\n<td>\nCover art </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Hasse_Eriksson/594198\">Hasse
+        Eriksson</a>\n</td>\n<td>\nPhotography </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Emma_Eklund_Kornborg/594199\">Emma
+        Eklund Kornborg</a>\n</td>\n<td>\nEditing </td>\n</tr>\n</table>\n</div>\n</div>\n
+        \n<div id=\"album_members_lineup\">\n<div class=\"ui-tabs-panel-content\">\n<table
+        class=\"display lineupTable\" cellpadding=\"0\" cellspacing=\"0\">\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Robban_B%C3%A4ck/417019\">Roberto</a>\n</td>\n<td>\nDrums,
+        Percussion </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"300\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Christian_Eriksson/568392\">Christian
+        Hedgren</a>\n</td>\n<td>\nVocals </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Philip_Lindh/567279\">Felipe</a>\n</td>\n<td>\nGuitars,
+        Guitars (acoustic), Lute, Vocals (backing), Songwriting, Lyrics </td>\n</tr>\n<tr
+        class=\"lineupRow\">\n<td width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Eldhrimnir/31367\">Daniele</a>\n</td>\n<td>\nKeyboards,
+        Piano, Violin, Cembalo, Vocals (backing), Narration, Songwriting, Lyrics </td>\n</tr>\n<tr
+        class=\"lineupRow\">\n<td width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Borne/565659\">Borne</a>\n</td>\n<td>\nBass
+        </td>\n</tr>\n</table>\n</div>\n</div>\n\n<div id=\"album_members_guest\">\n<div
+        class=\"ui-tabs-panel-content\">\n<table class=\"display lineupTable\" cellpadding=\"0\"
+        cellspacing=\"0\">\n<tr class=\"lineupRow\">\n<td width=\"300\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Hvergelmer/31363\">Andreas O.</a>\n</td>\n<td>\nGuitars
+        (rhythm), Vocals (backing) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"300\"
+        valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Hanna_Turi/678347\">Hanna
+        Berglund</a>\n</td>\n<td>\nVocals (backing) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Barbro_Beckman/841048\">Barbro
+        Beckman</a>\n</td>\n<td>\nVocals (backing) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Kenny_Leckremo/221180\">Kenny
+        Leckremo</a>\n</td>\n<td>\nVocals (track 6) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Joakim_Brod%C3%A9n/2947\">Joakim
+        Brod&eacute;n</a>\n</td>\n<td>\nVocals (track 1, 2, 11) </td>\n</tr>\n</table>\n</div>\n</div>\n\n<div
+        id=\"album_members_misc\">\n<div class=\"ui-tabs-panel-content\">\n<table
+        class=\"display lineupTable\" cellpadding=\"0\" cellspacing=\"0\">\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Philip_Lindh/567279\">Felipe</a>\n</td>\n<td>\nMixing,
+        Art direction, Cover concept </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"300\"
+        valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Eldhrimnir/31367\">Daniele</a>\n</td>\n<td>\nMixing,
+        Mastering, Engineering, Art direction, Cover concept, Logo, Sound design </td>\n</tr>\n<tr
+        class=\"lineupRow\">\n<td width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Martin_Hanford/88022\">Martin
+        Hanford</a>\n</td>\n<td>\nCover art </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Hasse_Eriksson/594198\">Hasse
+        Eriksson</a>\n</td>\n<td>\nPhotography </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Emma_Eklund_Kornborg/594199\">Emma
+        Eklund Kornborg</a>\n</td>\n<td>\nEditing </td>\n</tr>\n</table>\n</div>\n</div>\n</div>\n</div>\n\n\n\n\n\n<div
+        id=\"album_tabs_reviews\" class=\"ui-tabs-hide\">\n<div id=\"album_reviews\"
+        class=\"tabs2lvl\">\n<div class=\"tool_strip top right writeAction\">\n<ul>\n<li><a
+        href=\"https://www.metal-archives.com/review/write/releaseId/416934\" class=\"btn_add\">Add</a></li>\n</ul>\n</div>\n</div>\n<div
+        class=\"ui-tabs-panel-content block_spacer_top_36\">\n<table id=\"review_list\"
+        class=\"display\" cellpadding=\"0\" cellspacing=\"0\">\n<tr class=\"odd\">\n<td
+        nowrap=\"nowrap\"><a href=\"https://www.metal-archives.com/reviews/Twilight_Force/Tales_of_Ancient_Prophecies/416934/Feast_for_the_Damned/550038\"
+        title=\"Read\" class=\"iconContainer ui-state-default ui-corner-all\"><span
+        class=\"ui-icon ui-icon-search\">Read</span></a></td>\n<td>One of the greatest
+        power...</td>\n<td>94%</td>\n<td><a href=\"https://www.metal-archives.com/users/Feast%20for%20the%20Damned\"
+        class=\"profileMenu\">Feast for the Damned</a></td>\n<td>October 30th, 2019</td>\n</tr>\n<tr
+        class=\"even\">\n<td nowrap=\"nowrap\"><a href=\"https://www.metal-archives.com/reviews/Twilight_Force/Tales_of_Ancient_Prophecies/416934/Mr_Matt/426891\"
+        title=\"Read\" class=\"iconContainer ui-state-default ui-corner-all\"><span
+        class=\"ui-icon ui-icon-search\">Read</span></a></td>\n<td>Absolutely magical
+        (what...</td>\n<td>97%</td>\n<td><a href=\"https://www.metal-archives.com/users/Mr%20Matt\"
+        class=\"profileMenu\">Mr Matt</a></td>\n<td>August 30th, 2018</td>\n</tr>\n<tr
+        class=\"odd\">\n<td nowrap=\"nowrap\"><a href=\"https://www.metal-archives.com/reviews/Twilight_Force/Tales_of_Ancient_Prophecies/416934/Caleb9000/359849\"
+        title=\"Read\" class=\"iconContainer ui-state-default ui-corner-all\"><span
+        class=\"ui-icon ui-icon-search\">Read</span></a></td>\n<td>Lord Of Evil, Do
+        Play Heed!</td>\n<td>94%</td>\n<td><a href=\"https://www.metal-archives.com/users/Caleb9000\"
+        class=\"profileMenu\">Caleb9000</a></td>\n<td>February 25th, 2016</td>\n</tr>\n<tr
+        class=\"even\">\n<td nowrap=\"nowrap\"><a href=\"https://www.metal-archives.com/reviews/Twilight_Force/Tales_of_Ancient_Prophecies/416934/Valfars_Ghost/362797\"
+        title=\"Read\" class=\"iconContainer ui-state-default ui-corner-all\"><span
+        class=\"ui-icon ui-icon-search\">Read</span></a></td>\n<td>Cotton Candy: my
+        Guilty...</td>\n<td>86%</td>\n<td><a href=\"https://www.metal-archives.com/users/Valfars%20Ghost\"
+        class=\"profileMenu\">Valfars Ghost</a></td>\n<td>June 13th, 2015</td>\n</tr>\n<tr
+        class=\"odd\">\n<td nowrap=\"nowrap\"><a href=\"https://www.metal-archives.com/reviews/Twilight_Force/Tales_of_Ancient_Prophecies/416934/Dragonchaser/117580\"
+        title=\"Read\" class=\"iconContainer ui-state-default ui-corner-all\"><span
+        class=\"ui-icon ui-icon-search\">Read</span></a></td>\n<td>Magic Powers Summon
+        Wings...</td>\n<td>70%</td>\n<td><a href=\"https://www.metal-archives.com/users/Dragonchaser\"
+        class=\"profileMenu\">Dragonchaser</a></td>\n<td>December 29th, 2014</td>\n</tr>\n<tr
+        class=\"even\">\n<td nowrap=\"nowrap\"><a href=\"https://www.metal-archives.com/reviews/Twilight_Force/Tales_of_Ancient_Prophecies/416934/hells_unicorn/29518\"
+        title=\"Read\" class=\"iconContainer ui-state-default ui-corner-all\"><span
+        class=\"ui-icon ui-icon-search\">Read</span></a></td>\n<td>A new force arrives
+        at...</td>\n<td>95%</td>\n<td><a href=\"https://www.metal-archives.com/users/hells_unicorn\"
+        class=\"profileMenu\">hells_unicorn</a></td>\n<td>September 28th, 2014</td>\n</tr>\n<tr
+        class=\"odd\">\n<td nowrap=\"nowrap\"><a href=\"https://www.metal-archives.com/reviews/Twilight_Force/Tales_of_Ancient_Prophecies/416934/Larry6990/330688\"
+        title=\"Read\" class=\"iconContainer ui-state-default ui-corner-all\"><span
+        class=\"ui-icon ui-icon-search\">Read</span></a></td>\n<td>There Is Lightning
+        In Their...</td>\n<td>89%</td>\n<td><a href=\"https://www.metal-archives.com/users/Larry6990\"
+        class=\"profileMenu\">Larry6990</a></td>\n<td>July 16th, 2014</td>\n</tr>\n<tr
+        class=\"even\">\n<td nowrap=\"nowrap\"><a href=\"https://www.metal-archives.com/reviews/Twilight_Force/Tales_of_Ancient_Prophecies/416934/Spiner202/193921\"
+        title=\"Read\" class=\"iconContainer ui-state-default ui-corner-all\"><span
+        class=\"ui-icon ui-icon-search\">Read</span></a></td>\n<td>Twilight Force
+        - Tales of...</td>\n<td>94%</td>\n<td><a href=\"https://www.metal-archives.com/users/Spiner202\"
+        class=\"profileMenu\">Spiner202</a></td>\n<td>July 15th, 2014</td>\n</tr>\n<tr
+        class=\"odd\">\n<td nowrap=\"nowrap\"><a href=\"https://www.metal-archives.com/reviews/Twilight_Force/Tales_of_Ancient_Prophecies/416934/PowerProg_Adam/830\"
+        title=\"Read\" class=\"iconContainer ui-state-default ui-corner-all\"><span
+        class=\"ui-icon ui-icon-search\">Read</span></a></td>\n<td>Currently the best
+        debut of...</td>\n<td>90%</td>\n<td><a href=\"https://www.metal-archives.com/users/PowerProg_Adam\"
+        class=\"profileMenu\">PowerProg_Adam</a></td>\n<td>June 19th, 2014</td>\n</tr>\n<tr
+        class=\"even\">\n<td nowrap=\"nowrap\"><a href=\"https://www.metal-archives.com/reviews/Twilight_Force/Tales_of_Ancient_Prophecies/416934/ghoulemperor/338350\"
+        title=\"Read\" class=\"iconContainer ui-state-default ui-corner-all\"><span
+        class=\"ui-icon ui-icon-search\">Read</span></a></td>\n<td>The Golden Example
+        Of Great...</td>\n<td>95%</td>\n<td><a href=\"https://www.metal-archives.com/users/ghoulemperor\"
+        class=\"profileMenu\">ghoulemperor</a></td>\n<td>June 9th, 2014</td>\n</tr>\n</table>\n</div>\n</div>\n\n\n<div
+        id=\"album_tabs_notes\" class=\"ui-tabs-hide\">\n<div id=\"album_notes\" class=\"tabs2lvl\"></div>\n<div
+        class=\"ui-tabs-panel-content  block_spacer_top_20\">\n<p class=\"block_spacer_20\"><b>Release
+        dates:</b><br />\nJune 4th Scandinavia <br />\nJune 6th Worldwide</p>\n<p
+        class=\"title_comment\">Identifiers:</p>\n<p>Barcode: 6 66366 000919</p>\n</div>\n</div>\n\n</div>\n\n<div
+        id=\"auditTrail\">\n<table>\n<tr>\n<td>Added by: <a href=\"https://www.metal-archives.com/users/Azmodes\"
+        class=\"profileMenu\">Azmodes</a></td>\n<td align=\"right\">Modified by: <a
+        href=\"https://www.metal-archives.com/users/Storm%20of%20the%20Light's%20Bane\"
+        class=\"profileMenu\">Storm of the Light's Bane</a></td>\n</tr>\n<tr>\n<td>Added
+        on: 2014-06-04 08:01:45</td>\n<td align=\"right\">Last modified on: 2020-04-14
+        12:09:29</td>\n</tr>\n<tr>\n<td valign=\"top\">\n&nbsp;\n</td>\n<td align=\"right\"
+        valign=\"top\">\n</td>\n</tr>\n</table>\n</div>\n\n</div>\n</div>\n</div>\n<script
+        src=\"https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js\"
+        data-cf-settings=\"4253a8202d86e24bf069b823-|49\" defer=\"\"></script></body>\n</html>\n"
+  recorded_at: Tue, 13 Apr 2021 16:38:15 GMT
+- request:
+    method: get
+    uri: https://ma.cache.headbang.re/albums/view/id/416934
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - MetalArchivesGemTestSuite/3.2.0 (user@example.com)
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - ma.cache.headbang.re
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+      Cache-Control:
+      - max-age=2592000
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Ray:
+      - 63a39fb8ab4be6a0-LHR
+      Cf-Request-Id:
+      - '093a22276d0000e6a0eb82e000000001'
+      Content-Security-Policy:
+      - frame-ancestors 'self'
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Tue, 13 Apr 2021 16:34:52 GMT
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Expires:
+      - Thu, 13 May 2021 16:34:52 GMT
+      Nel:
+      - '{"max_age":604800,"report_to":"cf-nel"}'
+      Report-To:
+      - '{"max_age":604800,"group":"cf-nel","endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=NcTXs%2FmWVesnjCiBupErEt3arqbT67pnhqQwvsACHVfvfjJdL88EXD84DuHIerbqBdea8SVjded6K2%2FzbToj2TXbrLT18lO0Wnzcbm31UGKLNyD1AKSp"}]}'
+      Server:
+      - nginx
+      Vary:
+      - Accept-Encoding,User-Agent
+      X-Cache-Status:
+      - HIT
+      X-Frame-Options:
+      - SAMEORIGIN
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n<html
+        xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n<title>Twilight Force - Tales
+        of Ancient Prophecies - Encyclopaedia Metallum: The Metal Archives</title>\n<meta
+        http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n<meta
+        content=\"width=device-width, initial-scale=1\" name=\"viewport\" />\n<link
+        rel=\"stylesheet\" type=\"text/css\" href=\"/min/index.php?g=css\" />\n<script
+        type=\"05c761a13c90283890383f38-text/javascript\" src=\"/min/index.php?g=js\"></script>\n<script
+        type=\"05c761a13c90283890383f38-text/javascript\">\r\n\t\t\tvar URL_SITE\t=
+        'https://www.metal-archives.com/';\r\n\t\t\tvar URL_IMAGES\t= 'https://www.metal-archives.com/images/';\r\n\t\t\tvar
+        URL_CSS\t\t= 'https://www.metal-archives.com/css/';\r\n\t\t\tvar csrfToken\t=
+        '';\r\n\r\n\t\t\t$(document).ready(function() {\r\n\t\t\t\ttoggleFixedPositioning(1280,
+        600);\r\n\t\t\t\texecuteOnAllPages();\r\n\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t});\r\n\r\n\r\n\t\t</script>\n<noscript>\r\n\t\t\t<style
+        type=\"text/css\">\r\n\t\t\t\t.no-js { display: block !important; }\r\n\t\t\t</style>\r\n\t\t</noscript>\n<!--[if
+        lt IE 8]>\r\n\t\t\t<script src=\"http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js\"></script>\r\n\t\t\t
+        <link rel=\"stylesheet\" type=\"text/css\" href=\"https://www.metal-archives.com/css/default/oldie.css\"
+        />\r\n\t\t<![endif]-->\n<script type=\"05c761a13c90283890383f38-text/javascript\">\r\n\t\t\t
+        \ var _gaq = _gaq || [];\r\n\t\t\t  _gaq.push(['_setAccount', 'UA-4046749-4']);\r\n\t\t\t
+        \ _gaq.push(['_trackPageview']);\r\n\r\n\t\t\t  (function() {\r\n\t\t\t    var
+        ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async
+        = true;\r\n\t\t\t    ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+        : 'http://www') + '.google-analytics.com/ga.js';\r\n\t\t\t    var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);\r\n\t\t\t  })();\r\n\t\t</script>\n</head>\n<body>\n<div
+        id=\"wrapper\">\n<div id=\"header\">\n<a href=\"https://www.metal-archives.com/\"
+        id=\"MA_logo\">Metal Archives</a>\n<div class=\"clear loading\"><img src=\"https://www.metal-archives.com/images/loading.gif\"
+        alt=\"loading\" width=\"12\" height=\"12\" /> loading...</div>\n<div id=\"search_box\">\n<form
+        id=\"search_form\" action=\"https://www.metal-archives.com/search\" method=\"get\">\n<div>\n<label>Search:</label><br
+        />\n<input name=\"searchString\" type=\"text\" id=\"searchQueryBox\" size=\"25\"
+        value=\"\" tabindex=\"1\" />\n<select name=\"type\" tabindex=\"2\">\n<option
+        value=\"band_name\">Band name</option>\n<option value=\"band_genre\">Music
+        genre</option>\n<option value=\"band_themes\">Lyrical themes</option>\n<option
+        value=\"album_title\">Album title</option>\n<option value=\"song_title\">Song
+        title</option>\n<option value=\"label_name\">Label</option>\n<option value=\"artist_alias\">Artist</option>\n<option
+        value=\"user_name\">User profile</option>\n<option value=\"google\">Google</option>\n</select>\n<br
+        />\n<a href=\"https://www.metal-archives.com/search/advanced/?searchString=&type=\"
+        class=\"float_left\" tabindex=\"4\">Advanced search</a>\n<button type=\"submit\"
+        class=\"btn_submit float_right\" tabindex=\"3\">Submit</button>\n</div>\n</form>\n</div>\n<div
+        id=\"top_menu_box\">\n<ul class=\"menu_style_1\">\n<li><a href=\"https://www.metal-archives.com/content/help\">Help</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/content/rules\">Rules</a></li>\n<li><a
+        href=\"https://forum.metal-archives.com\" target=\"_top\">Forum</a></li>\n</ul>\n<ul
+        class=\"menu_style_2\">\n<li><a href=\"https://www.metal-archives.com/content/faq\">FAQ</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/content/support\">Support Us</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/content/tools\">Add-ons</a></li>\n</ul>\n</div>\n</div>\n<div
+        id=\"left_col\">\n<div id=\"member_box\">\n <form name=\"login_form\" id=\"login_form\"
+        action=\"https://www.metal-archives.com/authentication/login\" method=\"post\">\n<div>\n<label>Username</label><br
+        />\n<input type=\"text\" name=\"loginUsername\" />\n<label>Password</label><br
+        />\n<input type=\"password\" name=\"loginPassword\" />\n<input type=\"hidden\"
+        name=\"origin\" value=\"/albums/view/id/416934\" />\n<button type=\"submit\"
+        class=\"btn_login float_right\">Login</button>\n</div>\n</form>\n<a href=\"https://www.metal-archives.com/user/signup\"
+        class=\"float-left writeAction\">Register</a>\n<span class=\"float_right\"><a
+        href=\"https://www.metal-archives.com/user/forgot-password\" class=\"float-left
+        writeAction\">Forgot login?</a> </span>\n<div class=\"clear\"> </div>\n</div>\n<div
+        id=\"left_menu_box\">\n<ul class=\"menu_style_3 block_spacer_20\">\n<li>\nBands\n<ul>\n<li><a
+        href=\"https://www.metal-archives.com/browse/letter\">alphabetical</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/browse/country\">country</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/browse/genre\">genre</a></li>\n</ul>\n</li>\n<li>\nLabels\n<ul>\n<li><a
+        href=\"https://www.metal-archives.com/label\">alphabetical</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/label/country\">country</a></li>\n</ul>\n</li>\n<li><a
+        href=\"https://www.metal-archives.com/review/browse\">Reviews</a></li>\n</ul>\n<ul
+        class=\"menu_style_3 block_spacer_20\">\n<li><a href=\"https://www.metal-archives.com/artist/rip\">R.I.P.</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/band/random\">Random Band</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/user/list\">User rankings</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/news\">News archive</a></li>\n</ul>\n<ul
+        class=\"menu_style_3 ornement_30\">\n<li><a href=\"https://www.metal-archives.com/report/list\">Reports</a></li>\n<li><a
+        href=\"https://www.metal-archives.com/todo\">Contribute / To do</a></li>\n</ul>\n</div>\n<div
+        id=\"left_text_box\">\n<p class=\"small_text center\"> &copy; 2002-2021<br
+        />Encyclopaedia Metallum </p>\n<p class=\"small_text center\">Best viewed<br
+        /> <a href=\"http://www.getfirefox.com\" target=\"_blank\">without</a> Internet
+        Explorer, <br />in 1280 x 960 resolution<br /> or higher.</p>\n</div>\n<div>\n<p
+        class=\"small_text center\"><a href=\"https://www.metal-archives.com/content/pp\">Privacy
+        Policy</a></p>\n</div>\n</div>\n<div id=\"content_wrapper\">\n<script type=\"05c761a13c90283890383f38-text/javascript\"
+        src=\"https://www.metal-archives.com/js/jquery/jquery.form.js\"></script>\n<script
+        type=\"05c761a13c90283890383f38-text/javascript\">\n\n\t$(document).ready(function()
+        {\n\t\t$(\".no-js\").removeClass(\"no-js\");\n\t\t$('#album_tabs').tabs({
+        beforeLoad: cacheTab }).show();\n\t\t$('#album_members').tabs();\n\t\t$('.albumMenu').click(toggleAlbumMenu);\n\t\t
+        $('#album_members').tabs( { active : 1 } );\t\t\t\t\t\t\ttoggleLyrics(0);\n\t\t\t});\n\t\n\tfunction
+        hideToolMenu(event) {\n\t\t $('.toolMenu-content').hide();\n\t}\n\t\n\tfunction
+        makeChildVersion() {\n\t\tvar releaseId = 416934;\n\t\tvar newParentId = prompt(\"Make
+        a child of which album ID?\");\n\t\t\n\t\tif(newParentId != null) {\n\t\t\n\t\t\t$('.loading').show();\n\t\t\t$.post(URL_SITE
+        + 'review/ajax-validate-move/json/1', { 'releaseId' : newParentId, \"oldReleaseId\":
+        releaseId }, function(result) {\n\t\t\t\t$('.loading').hide();\n\t\t\t\tif(result.reviewConflict)
+        {\n\t\t\t\t\talert(\"This action would cause at least two reviews by the same
+        user to be listed for one album. This is not allowed. One of the reviews will
+        need to be deleted first.\");\n\t\t\t\t}\n\t\t\t\telse if(result.success)
+        {\n\t\t\t\t\tvar confirmMove = confirm(\"Make this album (and all its own
+        versions, if any) a version of \" + result.band + \" - \" + result.release
+        + \"?\");\n\t\t\t\t\t\n\t\t\t\t\tif(confirmMove) {\n\t\t\t\t\t\tvar params
+        = { 'releaseId' : releaseId, \"newParentId\" : newParentId, 'csrfToken': window.csrfToken};\n\t\t\t\t\t\t$('.loading').show();\n\t\t\t\t\t\t$.post(URL_SITE
+        + 'release/ajax-make-child/json/1', params, function(result) {\n\t\t\t\t\t\t\t$('.loading').hide();\n\t\t\t\t\t\t\tif(result.success)
+        {\n\t\t\t\t\t\t\t\tlocation.href = \"https://www.metal-archives.com/albums/Twilight_Force/Tales_of_Ancient_Prophecies/416934\";\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\telse
+        {\n\t\t\t\t\t\t\t\talert(\"An error occurred: \" + result.error);\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t},
+        'json');\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t\telse {\n\t\t\t\t\talert(\"An error
+        occurred: \" + result.error);\n\t\t\t\t}\n\t\t\t}, 'json');\t\t\t\n\t\t}\n\t}\n
+        \   \n    \n</script>\n<div id=\"album_sidebar\">\n<a href=\"https://www.metal-archives.com/bands/Twilight_Force/3540382043#band_tab_discography\">Twilight
+        Force</a>\n> Tales of Ancient Prophecies\n\n<div class=\"album_img\">\n<a
+        class=\"image\" id=\"cover\" title=\"Twilight Force - Tales of Ancient Prophecies\"
+        href=\"https://www.metal-archives.com/images/4/1/6/9/416934.jpg?1616\"><img
+        src=\"https://www.metal-archives.com/images/4/1/6/9/416934.jpg?1616\" title=\"Click
+        to zoom\" alt=\"Twilight Force - Tales of Ancient Prophecies\" border=\"0\"
+        /></a>\n</div>\n\n<div id=\"affiliation-links\">\n<span class=\"title\">Buy
+        from...</span>\n<br />\n<ul id=\"buyLinks\" class=\"menu_style_5\">\n<li>\n<a
+        target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=29&rid=416934\">eBay</a>\nmore...
+        <a href=\"#more\" onclick=\"if (!window.__cfRLUnblockHandlers) return false;
+        $('#sub29').toggle(); return false;\" data-cf-modified-05c761a13c90283890383f38-=\"\">>></a><br
+        />\n<ul id=\"sub29\" style=\"display: none; margin-top: 0px; margin-bottom:
+        0px;\">\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=23&rid=416934\">eBay
+        Canada</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=25&rid=416934\">eBay
+        UK</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=58&rid=416934\">eBay
+        Germany</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=24&rid=416934\">eBay
+        France</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=37&rid=416934\">eBay
+        Spain</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=35&rid=416934\">eBay
+        Belgium</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=26&rid=416934\">eBay
+        Netherlands</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=27&rid=416934\">eBay
+        Italy</a></li>\n<li><a target=\"_blank\" href=\"https://www.metal-archives.com/affiliate/?pid=28&rid=416934\">eBay
+        Australia</a></li>\n</ul>\n</li>\n</ul>\n</div>\n\n<table cellspacing=\"1\"
+        cellpadding=\"1\" width=\"262\" class=\"chronology\">\n<tr class=\"hidden\">\n<th
+        class=\"spacer\"></th>\n<th colspan=\"2\"></th>\n<th class=\"spacer\"></th>\n</tr>\n<tr>\n<th
+        colspan=\"4\"><span>Twilight Force</span> discography (main)</th>\n</tr>\n<tr
+        class=\"prevNext\">\n<td class=\"arrows\"> </td>\n<td class=\"prev\">\n</td>\n<td
+        class=\"next\">\n<a href=\"https://www.metal-archives.com/albums/Twilight_Force/Heroes_of_Mighty_Magic/586439\"
+        title=\"Heroes of Mighty Magic (Full-length)\">Heroes of Mighty Magic</a><br
+        />(2016)\n</td>\n<td class=\"arrows\"><a href=\"https://www.metal-archives.com/albums/Twilight_Force/Heroes_of_Mighty_Magic/586439\"
+        title=\"Heroes of Mighty Magic (Full-length)\">></a> </td>\n</tr>\n <tr>\n<th
+        colspan=\"4\"><span>Twilight Force</span> discography (all)</th>\n</tr>\n<tr
+        class=\"prevNext\">\n<td class=\"arrows\"><a href=\"https://www.metal-archives.com/albums/Twilight_Force/The_Power_of_the_Ancient_Force/416942\"
+        title=\"The Power of the Ancient Force (Single)\"><</a> </td>\n<td class=\"prev\">\n<a
+        href=\"https://www.metal-archives.com/albums/Twilight_Force/The_Power_of_the_Ancient_Force/416942\"
+        title=\"The Power of the Ancient Force (Single)\">The Power of the Ancient
+        Force</a><br />(2014)\n</td>\n<td class=\"next\">\n<a href=\"https://www.metal-archives.com/albums/Twilight_Force/Gates_of_Glory/508862\"
+        title=\"Gates of Glory (Single)\">Gates of Glory</a><br />(2015)\n</td>\n<td
+        class=\"arrows\"><a href=\"https://www.metal-archives.com/albums/Twilight_Force/Gates_of_Glory/508862\"
+        title=\"Gates of Glory (Single)\">></a> </td>\n</tr>\n</table>\n</div>\n<div
+        id=\"album_content\">\n<div class=\"tool_strip right\">\n<ul>\n<li><a title=\"Report
+        a mistake or additional information for this page\" href=\"javascript:popupReportDialog(4,
+        416934);\" class=\"btn_report_error writeAction\"> </a></li>\n<li>\n<a href=\"https://www.metal-archives.com/bands/Twilight_Force/3540382043\"
+        title=\"Back to Twilight Force\" class=\"btn_back\"> </a>\n</li>\n</ul>\n</div>\n\n<div
+        id=\"album_info\">\n\n<h1 class=\"album_name\"><a href=\"https://www.metal-archives.com/albums/Twilight_Force/Tales_of_Ancient_Prophecies/416934\">Tales
+        of Ancient Prophecies</a></h1>\n<h2 class=\"band_name\">\n<a href=\"https://www.metal-archives.com/bands/Twilight_Force/3540382043\">Twilight
+        Force</a>\n</h2>\n\n<div class=\"clear block_spacer_5\"></div>\n<div id=\"message\">
+        </div>\n\n<div class=\"clear block_spacer_20\"></div>\n<dl class=\"float_left\">\n<dt>Type:</dt>\n<dd>Full-length</dd>\n<dt>Release
+        date:</dt>\n<dd>June 4th, 2014</dd>\n<dt>Catalog ID:</dt>\n<dd>BLOD091CD</dd>\n</dl>\n<dl
+        class=\"float_right\">\n<dt>Label:</dt>\n<dd><a href=\"https://www.metal-archives.com/labels/Black_Lodge_Records/27402#label_tabs_albums\">Black
+        Lodge Records</a></dd>\n<dt>Format:</dt>\n<dd>CD</dd>\n<dt>Reviews:</dt>\n<dd>\n10
+        <a href=\"https://www.metal-archives.com/reviews/Twilight_Force/Tales_of_Ancient_Prophecies/416934/\">reviews</a>
+        (avg. 90%)\n</dd>\n</dl>\n</div>\n<div id=\"album_tabs\" class=\"clear tabs
+        block_spacer_top_20 ui-tabs no-js\">\n<ul class=\"ui-tabs-nav\">\n<li><a href=\"#album_tabs_tracklist\">Songs</a></li>\n<li><a
+        href=\"#album_tabs_lineup\">Lineup</a></li>\n<li><a href=\"https://www.metal-archives.com/release/ajax-versions/current/416934/parent/416934\">Other
+        versions</a></li> <li><a href=\"#album_tabs_reviews\">Reviews</a></li> <li><a
+        href=\"#album_tabs_notes\">Additional notes</a></li> </ul>\n\n<div id=\"album_tabs_tracklist\"
+        class=\"ui-tabs-hide\">\n<div id=\"album_songs\" class=\"tabs2lvl\">\n\n</div>\n<div
+        class=\"ui-tabs-panel-content block_spacer_top_20\">\n<script type=\"05c761a13c90283890383f38-text/javascript\">\nfunction
+        toggleLyrics(songId) {\n    var lyricsRow = $('#song' + songId);\n    lyricsRow.toggle();\n
+        \   var lyrics = $('#lyrics_' + songId);\n\tif (lyrics.html() == '(loading
+        lyrics...)') {\n    \tvar realId = songId;\n\t\tif(!$.isNumeric(songId.substring(songId.length
+        -1, songId.length))) {\n\t\t\trealId = songId.substring(0, songId.length -1);\n\t\t}\n\t\tlyrics.load(URL_SITE
+        + \"release/ajax-view-lyrics/id/\" + realId);\n    }\n    // toggle link\n
+        \   var linkLabel = \"lyrics\";\n    $(\"#lyricsButton\" + songId).text(lyricsRow.css(\"display\")
+        == \"none\" ? \"Show \" + linkLabel : \"Hide \" + linkLabel);\n    return
+        false;\n}\n\n</script>\n<table class=\"display table_lyrics\" cellpadding=\"0\"
+        cellspacing=\"0\">\n<tbody>\n<tr class=\"even\">\n<td width=\"20\"><a name=\"2881674\"
+        class=\"anchor\"> </a>1.</td>\n<td class=\"wrapWords\">\nEnchanted Dragon
+        of Wisdom\n</td>\n<td align=\"right\">04:43</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton2881674\" href=\"#2881674\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('2881674'); return false;\" data-cf-modified-05c761a13c90283890383f38-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song2881674\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2881674\">(loading lyrics...)</td>\n</tr>\n<tr class=\"odd\">\n<td
+        width=\"20\"><a name=\"2881675\" class=\"anchor\"> </a>2.</td>\n<td class=\"wrapWords\">\nThe
+        Power of the Ancient Force\n</td>\n<td align=\"right\">05:03</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton2881675\" href=\"#2881675\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('2881675'); return false;\" data-cf-modified-05c761a13c90283890383f38-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song2881675\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2881675\">(loading lyrics...)</td>\n</tr>\n<tr class=\"even\">\n<td
+        width=\"20\"><a name=\"2881676\" class=\"anchor\"> </a>3.</td>\n<td class=\"wrapWords\">\nTwilight
+        Horizon\n</td>\n<td align=\"right\">04:59</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton2881676\" href=\"#2881676\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('2881676'); return false;\" data-cf-modified-05c761a13c90283890383f38-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song2881676\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2881676\">(loading lyrics...)</td>\n</tr>\n<tr class=\"odd\">\n<td
+        width=\"20\"><a name=\"2881677\" class=\"anchor\"> </a>4.</td>\n<td class=\"wrapWords\">\nThe
+        Summoning\n</td>\n<td align=\"right\">00:43</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton2881677\" href=\"#2881677\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('2881677'); return false;\" data-cf-modified-05c761a13c90283890383f38-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song2881677\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2881677\">(loading lyrics...)</td>\n</tr>\n<tr class=\"even\">\n<td
+        width=\"20\"><a name=\"2881678\" class=\"anchor\"> </a>5.</td>\n<td class=\"wrapWords\">\nWhispering
+        Winds\n</td>\n<td align=\"right\">00:51</td>\n<td nowrap=\"nowrap\">&nbsp;\n<em>instrumental</em>\n</td>\n</tr>\n<tr
+        id=\"song2881678\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2881678\">(loading lyrics...)</td>\n</tr>\n<tr class=\"odd\">\n<td
+        width=\"20\"><a name=\"2881679\" class=\"anchor\"> </a>6.</td>\n<td class=\"wrapWords\">\nFall
+        of the Eternal Winter\n</td>\n<td align=\"right\">04:54</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton2881679\" href=\"#2881679\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('2881679'); return false;\" data-cf-modified-05c761a13c90283890383f38-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song2881679\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2881679\">(loading lyrics...)</td>\n</tr>\n<tr class=\"even\">\n<td
+        width=\"20\"><a name=\"2881680\" class=\"anchor\"> </a>7.</td>\n<td class=\"wrapWords\">\nForest
+        of Destiny\n</td>\n<td align=\"right\">04:06</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton2881680\" href=\"#2881680\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('2881680'); return false;\" data-cf-modified-05c761a13c90283890383f38-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song2881680\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2881680\">(loading lyrics...)</td>\n</tr>\n<tr class=\"odd\">\n<td
+        width=\"20\"><a name=\"2881681\" class=\"anchor\"> </a>8.</td>\n<td class=\"wrapWords\">\nIn
+        the Mighty Hall of the Fire King\n</td>\n<td align=\"right\">00:55</td>\n<td
+        nowrap=\"nowrap\">&nbsp;\n<a id=\"lyricsButton2881681\" href=\"#2881681\"
+        onclick=\"if (!window.__cfRLUnblockHandlers) return false; toggleLyrics('2881681');
+        return false;\" data-cf-modified-05c761a13c90283890383f38-=\"\">Show lyrics</a>\n</td>\n</tr>\n<tr
+        id=\"song2881681\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2881681\">(loading lyrics...)</td>\n</tr>\n<tr class=\"even\">\n<td
+        width=\"20\"><a name=\"2881682\" class=\"anchor\"> </a>9.</td>\n<td class=\"wrapWords\">\nMade
+        of Steel\n</td>\n<td align=\"right\">04:46</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton2881682\" href=\"#2881682\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('2881682'); return false;\" data-cf-modified-05c761a13c90283890383f38-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song2881682\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2881682\">(loading lyrics...)</td>\n</tr>\n<tr class=\"odd\">\n<td
+        width=\"20\"><a name=\"2881683\" class=\"anchor\"> </a>10.</td>\n<td class=\"wrapWords\">\nSword
+        of Magic Steel\n</td>\n<td align=\"right\">01:05</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton2881683\" href=\"#2881683\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('2881683'); return false;\" data-cf-modified-05c761a13c90283890383f38-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song2881683\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2881683\">(loading lyrics...)</td>\n</tr>\n<tr class=\"even\">\n<td
+        width=\"20\"><a name=\"2881684\" class=\"anchor\"> </a>11.</td>\n<td class=\"wrapWords\">\nGates
+        of Glory\n</td>\n<td align=\"right\">03:55</td>\n<td nowrap=\"nowrap\">&nbsp;\n<a
+        id=\"lyricsButton2881684\" href=\"#2881684\" onclick=\"if (!window.__cfRLUnblockHandlers)
+        return false; toggleLyrics('2881684'); return false;\" data-cf-modified-05c761a13c90283890383f38-=\"\">Show
+        lyrics</a>\n</td>\n</tr>\n<tr id=\"song2881684\" class=\"displayNone\" height=\"0\">\n<td>&nbsp;</td>\n<td
+        colspan=\"3\" id=\"lyrics_2881684\">(loading lyrics...)</td>\n</tr>\n<tr>\n<td
+        colspan=\"2\">&nbsp;</td>\n<td align=\"right\"><strong>36:00</strong></td>\n<td>&nbsp;</td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>\n\n\n<div
+        id=\"album_tabs_lineup\">\n<div id=\"album_members\" class=\"tabs2lvl\">\n<ul>\n<li><a
+        href=\"#album_all_members_lineup\">Complete lineup</a></li> <li><a href=\"#album_members_lineup\">Band
+        members</a></li> <li><a href=\"#album_members_guest\">Guest/session musicians</a></li>
+        <li><a href=\"#album_members_misc\">Other staff</a></li> </ul>\n\n<div id=\"album_all_members_lineup\">\n<div
+        class=\"ui-tabs-panel-content\">\n<table class=\"display lineupTable\" cellpadding=\"0\"
+        cellspacing=\"0\">\n<tr class=\"lineupHeaders\">\n<td colspan=\"2\" align=\"right\">\nBand
+        members\n</td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"300\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Robban_B%C3%A4ck/417019\">Roberto</a>\n</td>\n<td>\nDrums,
+        Percussion </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"300\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Christian_Eriksson/568392\">Christian
+        Hedgren</a>\n</td>\n<td>\nVocals </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Philip_Lindh/567279\">Felipe</a>\n</td>\n<td>\nGuitars,
+        Guitars (acoustic), Lute, Vocals (backing), Songwriting, Lyrics </td>\n</tr>\n<tr
+        class=\"lineupRow\">\n<td width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Eldhrimnir/31367\">Daniele</a>\n
+        </td>\n<td>\nKeyboards, Piano, Violin, Cembalo, Vocals (backing), Narration,
+        Songwriting, Lyrics </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"300\"
+        valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Borne/565659\">Borne</a>\n</td>\n<td>\nBass
+        </td>\n</tr>\n<tr class=\"lineupHeaders\">\n<td colspan=\"2\" align=\"right\">\nGuest/Session\n</td>\n</tr>\n<tr
+        class=\"lineupRow\">\n<td width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Hvergelmer/31363\">Andreas
+        O.</a>\n</td>\n<td>\nGuitars (rhythm), Vocals (backing) </td>\n</tr>\n<tr
+        class=\"lineupRow\">\n<td width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Hanna_Turi/678347\">Hanna
+        Berglund</a>\n</td>\n<td>\nVocals (backing) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Barbro_Beckman/841048\">Barbro
+        Beckman</a>\n</td>\n<td>\nVocals (backing) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Kenny_Leckremo/221180\">Kenny
+        Leckremo</a>\n</td>\n<td>\nVocals (track 6) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Joakim_Brod%C3%A9n/2947\">Joakim
+        Brod&eacute;n</a>\n</td>\n<td>\nVocals (track 1, 2, 11) </td>\n</tr>\n<tr
+        class=\"lineupHeaders\">\n<td colspan=\"2\" align=\"right\">\nMiscellaneous
+        staff\n</td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"300\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Philip_Lindh/567279\">Felipe</a>\n</td>\n<td>\nMixing,
+        Art direction, Cover concept </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"300\"
+        valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Eldhrimnir/31367\">Daniele</a>\n</td>\n<td>\nMixing,
+        Mastering, Engineering, Art direction, Cover concept, Logo, Sound design </td>\n</tr>\n<tr
+        class=\"lineupRow\">\n<td width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Martin_Hanford/88022\">Martin
+        Hanford</a>\n</td>\n<td>\nCover art </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Hasse_Eriksson/594198\">Hasse
+        Eriksson</a>\n</td>\n<td>\nPhotography </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Emma_Eklund_Kornborg/594199\">Emma
+        Eklund Kornborg</a>\n</td>\n<td>\nEditing </td>\n</tr>\n</table>\n</div>\n</div>\n
+        \n<div id=\"album_members_lineup\">\n<div class=\"ui-tabs-panel-content\">\n<table
+        class=\"display lineupTable\" cellpadding=\"0\" cellspacing=\"0\">\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Robban_B%C3%A4ck/417019\">Roberto</a>\n</td>\n<td>\nDrums,
+        Percussion </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"300\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Christian_Eriksson/568392\">Christian
+        Hedgren</a>\n</td>\n<td>\nVocals </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Philip_Lindh/567279\">Felipe</a>\n</td>\n<td>\nGuitars,
+        Guitars (acoustic), Lute, Vocals (backing), Songwriting, Lyrics </td>\n</tr>\n<tr
+        class=\"lineupRow\">\n<td width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Eldhrimnir/31367\">Daniele</a>\n</td>\n<td>\nKeyboards,
+        Piano, Violin, Cembalo, Vocals (backing), Narration, Songwriting, Lyrics </td>\n</tr>\n<tr
+        class=\"lineupRow\">\n<td width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Borne/565659\">Borne</a>\n</td>\n<td>\nBass
+        </td>\n</tr>\n</table>\n</div>\n</div>\n\n<div id=\"album_members_guest\">\n<div
+        class=\"ui-tabs-panel-content\">\n<table class=\"display lineupTable\" cellpadding=\"0\"
+        cellspacing=\"0\">\n<tr class=\"lineupRow\">\n<td width=\"300\" valign=\"top\">\n<a
+        href=\"https://www.metal-archives.com/artists/Hvergelmer/31363\">Andreas O.</a>\n</td>\n<td>\nGuitars
+        (rhythm), Vocals (backing) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"300\"
+        valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Hanna_Turi/678347\">Hanna
+        Berglund</a>\n</td>\n<td>\nVocals (backing) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Barbro_Beckman/841048\">Barbro
+        Beckman</a>\n</td>\n<td>\nVocals (backing) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Kenny_Leckremo/221180\">Kenny
+        Leckremo</a>\n</td>\n<td>\nVocals (track 6) </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Joakim_Brod%C3%A9n/2947\">Joakim
+        Brod&eacute;n</a>\n</td>\n<td>\nVocals (track 1, 2, 11) </td>\n</tr>\n</table>\n</div>\n</div>\n\n<div
+        id=\"album_members_misc\">\n<div class=\"ui-tabs-panel-content\">\n<table
+        class=\"display lineupTable\" cellpadding=\"0\" cellspacing=\"0\">\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Philip_Lindh/567279\">Felipe</a>\n</td>\n<td>\nMixing,
+        Art direction, Cover concept </td>\n</tr>\n<tr class=\"lineupRow\">\n<td width=\"300\"
+        valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Eldhrimnir/31367\">Daniele</a>\n</td>\n<td>\nMixing,
+        Mastering, Engineering, Art direction, Cover concept, Logo, Sound design </td>\n</tr>\n<tr
+        class=\"lineupRow\">\n<td width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Martin_Hanford/88022\">Martin
+        Hanford</a>\n</td>\n<td>\nCover art </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Hasse_Eriksson/594198\">Hasse
+        Eriksson</a>\n</td>\n<td>\nPhotography </td>\n</tr>\n<tr class=\"lineupRow\">\n<td
+        width=\"300\" valign=\"top\">\n<a href=\"https://www.metal-archives.com/artists/Emma_Eklund_Kornborg/594199\">Emma
+        Eklund Kornborg</a>\n</td>\n<td>\nEditing </td>\n</tr>\n</table>\n</div>\n</div>\n</div>\n</div>\n\n\n\n\n\n<div
+        id=\"album_tabs_reviews\" class=\"ui-tabs-hide\">\n<div id=\"album_reviews\"
+        class=\"tabs2lvl\">\n<div class=\"tool_strip top right writeAction\">\n<ul>\n<li><a
+        href=\"https://www.metal-archives.com/review/write/releaseId/416934\" class=\"btn_add\">Add</a></li>\n</ul>\n</div>\n</div>\n<div
+        class=\"ui-tabs-panel-content block_spacer_top_36\">\n<table id=\"review_list\"
+        class=\"display\" cellpadding=\"0\" cellspacing=\"0\">\n<tr class=\"odd\">\n<td
+        nowrap=\"nowrap\"><a href=\"https://www.metal-archives.com/reviews/Twilight_Force/Tales_of_Ancient_Prophecies/416934/Feast_for_the_Damned/550038\"
+        title=\"Read\" class=\"iconContainer ui-state-default ui-corner-all\"><span
+        class=\"ui-icon ui-icon-search\">Read</span></a></td>\n<td>One of the greatest
+        power...</td>\n<td>94%</td>\n<td><a href=\"https://www.metal-archives.com/users/Feast%20for%20the%20Damned\"
+        class=\"profileMenu\">Feast for the Damned</a></td>\n<td>October 30th, 2019</td>\n</tr>\n<tr
+        class=\"even\">\n<td nowrap=\"nowrap\"><a href=\"https://www.metal-archives.com/reviews/Twilight_Force/Tales_of_Ancient_Prophecies/416934/Mr_Matt/426891\"
+        title=\"Read\" class=\"iconContainer ui-state-default ui-corner-all\"><span
+        class=\"ui-icon ui-icon-search\">Read</span></a></td>\n<td>Absolutely magical
+        (what...</td>\n<td>97%</td>\n<td><a href=\"https://www.metal-archives.com/users/Mr%20Matt\"
+        class=\"profileMenu\">Mr Matt</a></td>\n<td>August 30th, 2018</td>\n</tr>\n<tr
+        class=\"odd\">\n<td nowrap=\"nowrap\"><a href=\"https://www.metal-archives.com/reviews/Twilight_Force/Tales_of_Ancient_Prophecies/416934/Caleb9000/359849\"
+        title=\"Read\" class=\"iconContainer ui-state-default ui-corner-all\"><span
+        class=\"ui-icon ui-icon-search\">Read</span></a></td>\n<td>Lord Of Evil, Do
+        Play Heed!</td>\n<td>94%</td>\n<td><a href=\"https://www.metal-archives.com/users/Caleb9000\"
+        class=\"profileMenu\">Caleb9000</a></td>\n<td>February 25th, 2016</td>\n</tr>\n<tr
+        class=\"even\">\n<td nowrap=\"nowrap\"><a href=\"https://www.metal-archives.com/reviews/Twilight_Force/Tales_of_Ancient_Prophecies/416934/Valfars_Ghost/362797\"
+        title=\"Read\" class=\"iconContainer ui-state-default ui-corner-all\"><span
+        class=\"ui-icon ui-icon-search\">Read</span></a></td>\n<td>Cotton Candy: my
+        Guilty...</td>\n<td>86%</td>\n<td><a href=\"https://www.metal-archives.com/users/Valfars%20Ghost\"
+        class=\"profileMenu\">Valfars Ghost</a></td>\n<td>June 13th, 2015</td>\n</tr>\n<tr
+        class=\"odd\">\n<td nowrap=\"nowrap\"><a href=\"https://www.metal-archives.com/reviews/Twilight_Force/Tales_of_Ancient_Prophecies/416934/Dragonchaser/117580\"
+        title=\"Read\" class=\"iconContainer ui-state-default ui-corner-all\"><span
+        class=\"ui-icon ui-icon-search\">Read</span></a></td>\n<td>Magic Powers Summon
+        Wings...</td>\n<td>70%</td>\n<td><a href=\"https://www.metal-archives.com/users/Dragonchaser\"
+        class=\"profileMenu\">Dragonchaser</a></td>\n<td>December 29th, 2014</td>\n</tr>\n<tr
+        class=\"even\">\n<td nowrap=\"nowrap\"><a href=\"https://www.metal-archives.com/reviews/Twilight_Force/Tales_of_Ancient_Prophecies/416934/hells_unicorn/29518\"
+        title=\"Read\" class=\"iconContainer ui-state-default ui-corner-all\"><span
+        class=\"ui-icon ui-icon-search\">Read</span></a></td>\n<td>A new force arrives
+        at...</td>\n<td>95%</td>\n<td><a href=\"https://www.metal-archives.com/users/hells_unicorn\"
+        class=\"profileMenu\">hells_unicorn</a></td>\n<td>September 28th, 2014</td>\n</tr>\n<tr
+        class=\"odd\">\n<td nowrap=\"nowrap\"><a href=\"https://www.metal-archives.com/reviews/Twilight_Force/Tales_of_Ancient_Prophecies/416934/Larry6990/330688\"
+        title=\"Read\" class=\"iconContainer ui-state-default ui-corner-all\"><span
+        class=\"ui-icon ui-icon-search\">Read</span></a></td>\n<td>There Is Lightning
+        In Their...</td>\n<td>89%</td>\n<td><a href=\"https://www.metal-archives.com/users/Larry6990\"
+        class=\"profileMenu\">Larry6990</a></td>\n<td>July 16th, 2014</td>\n</tr>\n<tr
+        class=\"even\">\n<td nowrap=\"nowrap\"><a href=\"https://www.metal-archives.com/reviews/Twilight_Force/Tales_of_Ancient_Prophecies/416934/Spiner202/193921\"
+        title=\"Read\" class=\"iconContainer ui-state-default ui-corner-all\"><span
+        class=\"ui-icon ui-icon-search\">Read</span></a></td>\n<td>Twilight Force
+        - Tales of...</td>\n<td>94%</td>\n<td><a href=\"https://www.metal-archives.com/users/Spiner202\"
+        class=\"profileMenu\">Spiner202</a></td>\n<td>July 15th, 2014</td>\n</tr>\n<tr
+        class=\"odd\">\n<td nowrap=\"nowrap\"><a href=\"https://www.metal-archives.com/reviews/Twilight_Force/Tales_of_Ancient_Prophecies/416934/PowerProg_Adam/830\"
+        title=\"Read\" class=\"iconContainer ui-state-default ui-corner-all\"><span
+        class=\"ui-icon ui-icon-search\">Read</span></a></td>\n<td>Currently the best
+        debut of...</td>\n<td>90%</td>\n<td><a href=\"https://www.metal-archives.com/users/PowerProg_Adam\"
+        class=\"profileMenu\">PowerProg_Adam</a></td>\n<td>June 19th, 2014</td>\n</tr>\n<tr
+        class=\"even\">\n<td nowrap=\"nowrap\"><a href=\"https://www.metal-archives.com/reviews/Twilight_Force/Tales_of_Ancient_Prophecies/416934/ghoulemperor/338350\"
+        title=\"Read\" class=\"iconContainer ui-state-default ui-corner-all\"><span
+        class=\"ui-icon ui-icon-search\">Read</span></a></td>\n<td>The Golden Example
+        Of Great...</td>\n<td>95%</td>\n<td><a href=\"https://www.metal-archives.com/users/ghoulemperor\"
+        class=\"profileMenu\">ghoulemperor</a></td>\n<td>June 9th, 2014</td>\n</tr>\n</table>\n</div>\n</div>\n\n\n<div
+        id=\"album_tabs_notes\" class=\"ui-tabs-hide\">\n<div id=\"album_notes\" class=\"tabs2lvl\"></div>\n<div
+        class=\"ui-tabs-panel-content  block_spacer_top_20\">\n<p class=\"block_spacer_20\"><b>Release
+        dates:</b><br />\nJune 4th Scandinavia <br />\nJune 6th Worldwide</p>\n<p
+        class=\"title_comment\">Identifiers:</p>\n<p>Barcode: 6 66366 000919</p>\n</div>\n</div>\n\n</div>\n\n<div
+        id=\"auditTrail\">\n<table>\n<tr>\n<td>Added by: <a href=\"https://www.metal-archives.com/users/Azmodes\"
+        class=\"profileMenu\">Azmodes</a></td>\n<td align=\"right\">Modified by: <a
+        href=\"https://www.metal-archives.com/users/Storm%20of%20the%20Light's%20Bane\"
+        class=\"profileMenu\">Storm of the Light's Bane</a></td>\n</tr>\n<tr>\n<td>Added
+        on: 2014-06-04 08:01:45</td>\n<td align=\"right\">Last modified on: 2020-04-14
+        12:09:29</td>\n</tr>\n<tr>\n<td valign=\"top\">\n&nbsp;\n</td>\n<td align=\"right\"
+        valign=\"top\">\n</td>\n</tr>\n</table>\n</div>\n\n</div>\n</div>\n</div>\n<script
+        src=\"https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js\"
+        data-cf-settings=\"05c761a13c90283890383f38-|49\" defer=\"\"></script></body>\n</html>\n"
+  recorded_at: Tue, 13 Apr 2021 16:38:15 GMT
+recorded_with: VCR 6.0.0

@@ -1,16 +1,17 @@
 # frozen_string_literal: true
 
 RSpec.describe MetalArchives::Release do
+  subject(:release) { described_class.new(id: id) }
+
   it_behaves_like "it is initializable"
 
-  describe "properties" do
-    it "Tales of Ancient Prophecies has properties" do
-      release = described_class.find 416_934
+  describe "Tales of Ancient Prophecies" do
+    let(:id) { 416_934 }
 
-      expect(release).to be_instance_of described_class
-      expect(release.id).to eq 416_934
+    around { |example| VCR.use_cassette("releases/tales_of_ancient_prophecies", &example) }
+
+    it "has properties" do
       expect(release.title).to eq "Tales of Ancient Prophecies"
-      expect(release.band.id).to eq 3_540_382_043
       expect(release.type).to eq :full_length
       expect(release.date_released).to eq Date.new(2014, 6, 4)
       expect(release.catalog_id).to eq "BLOD091CD"
@@ -20,13 +21,18 @@ RSpec.describe MetalArchives::Release do
       expect(release.notes).to be_nil
     end
 
-    it "...And Oceans has properties" do
-      release = described_class.find 123_563
+    it "has a band" do
+      expect(release.band.id).to eq 3_540_382_043
+    end
+  end
 
-      expect(release).to be_instance_of described_class
-      expect(release.id).to eq 123_563
+  describe "...And Oceans" do
+    let(:id) { 123_563 }
+
+    around { |example| VCR.use_cassette("releases/and_oceans", &example) }
+
+    it "has properties" do
       expect(release.title).to eq "...and Oceans"
-      expect(release.band.id).to eq 231
       expect(release.type).to eq :compilation
       expect(release.date_released).to eq Date.new(2001)
       expect(release.catalog_id).to eq "NMLP 025"
@@ -36,16 +42,26 @@ RSpec.describe MetalArchives::Release do
       expect(release.notes).to be_nil
     end
 
-    it "From Chaos To Eternity has multiple cds" do
-      release = described_class.find 596_840
+    it "has a band" do
+      expect(release.band.id).to eq 231
+    end
+  end
 
-      expect(release.format).to eq :cd
+  describe "MMXII" do
+    let(:id) { 329_691 }
+
+    around { |example| VCR.use_cassette("releases/mmxii", &example) }
+
+    it "has properties" do
+      expect(release.title).to eq "MMXII"
+      expect(release.type).to eq :full_length
+      expect(release.date_released).to eq Date.new(2012, 3, 23)
+      expect(release.catalog_id).to eq "SAR010-2 SP"
+      expect(release.format).to eq :"2cd"
     end
 
-    it "Live in Canada 2005 - The Dark Secret has cd format" do
-      release = described_class.find 100_770
-
-      expect(release.format).to eq :cd
+    it "has a band" do
+      expect(release.band.id).to eq 3_540_341_226
     end
   end
 

@@ -104,7 +104,7 @@ module MetalArchives
     # - rdoc-ref:MetalArchives::Errors::NotFoundError when receiving status code 404
     # - rdoc-ref:MetalArchives::Errors::APIError when receiving status code >= 400
     #
-    attribute :format, type: :symbol, enum: [:cd, :cassette, :vinyl, :vhs, :dvd, :"2dvd", :digital, :blu_ray, :other, :unknown]
+    attribute :format, type: :symbol, enum: [:cd, :"2cd", :cassette, :vinyl, :vhs, :dvd, :"2dvd", :digital, :blu_ray, :other, :unknown]
 
     ##
     # :attr_reader: limitation
