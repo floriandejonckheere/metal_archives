@@ -43,6 +43,25 @@ module MetalArchives
       end
 
       ##
+      # Parse an ID from a URI
+      #
+      # [Params]
+      #- +string+: +String+
+      #
+      # [Returns]
+      # - +integer+
+      #
+      def id(string)
+        return if string.blank?
+
+        URI(string)
+          .path
+          .split("/")
+          .last
+          .to_i
+      end
+
+      ##
       # Parse a URI and rewrite host if necessary
       #
       # [Params]

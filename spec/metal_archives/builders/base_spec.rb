@@ -27,6 +27,17 @@ RSpec.describe MetalArchives::Builders::Base do
     end
   end
 
+  describe "#id" do
+    it "returns nil" do
+      expect(builder.id(nil)).to be_nil
+      expect(builder.id("")).to be_nil
+    end
+
+    it "returns an integer" do
+      expect(builder.id("https://www.example.com/view/id/32#tab_all")).to eq 32
+    end
+  end
+
   describe "#uri" do
     it "returns URIs" do
       expect(builder.uri(URI("https://www.metal-archives.com/band/view/id/32")).to_s).to eq "https://www.metal-archives.com/band/view/id/32"
