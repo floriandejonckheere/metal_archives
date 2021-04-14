@@ -24,7 +24,7 @@ module MetalArchives
         # TODO: other versions
         # TODO: reviews
         # TODO: additional notes
-      rescue => e
+      rescue StandardError => e
         e.backtrace.each { |b| MetalArchives.config.logger.error b }
 
         raise Errors::ParserError, e.message
