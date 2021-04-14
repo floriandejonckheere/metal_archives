@@ -1,0 +1,131 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://ma.cache.headbang.re/search/ajax-artist-search/?query=Alberto%2BRionda
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - MetalArchivesGemTestSuite/3.2.0 (user@example.com)
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - ma.cache.headbang.re
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+      Cache-Control:
+      - max-age=2592000
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Ray:
+      - 63ff9d776c8ac791-AMS
+      Cf-Request-Id:
+      - '0973a0bea30000c7911e8c0000000001'
+      Content-Security-Policy:
+      - frame-ancestors 'self'
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 14 Apr 2021 20:23:28 GMT
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Expires:
+      - Fri, 14 May 2021 20:23:28 GMT
+      Nel:
+      - '{"max_age":604800,"report_to":"cf-nel"}'
+      Report-To:
+      - '{"group":"cf-nel","endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=7hkqfAuwDuQ8LvVkoiP7nP%2FRobBvMhy%2FFVcGsFWOILSlv0FX3ffnXpFOLvGVDtAXqwtAxlIaZPCrIP75RPBFbnv6Ckh3nxnfEhDANofJljuCDb1%2FRp8p"}],"max_age":604800}'
+      Server:
+      - nginx
+      Vary:
+      - Accept-Encoding,User-Agent
+      X-Cache-Status:
+      - HIT
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '595'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{ \r\n\t\"error\": \"\",\r\n\t\"iTotalRecords\": 1,\r\n\t\"iTotalDisplayRecords\":
+        1,\r\n\t\"sEcho\": 0,\r\n\t\"aaData\": [\r\n\t\t\t[\r\n\t\t\t\"<a href=\\\"https://www.metal-archives.com/artists/Alberto_Rionda/60908\\\">Alberto
+        Rionda</a> \",\r\n\t\t\t\"Alberto Rionda\",\r\n\t\t\t\"Spain\",\r\n\t\t\t\"<a
+        href=\\\"https://www.metal-archives.com/bands/Avalanch/5795\\\">Avalanch</a>,
+        <a href=\\\"https://www.metal-archives.com/bands/N%C3%B6rthwind/4579\\\">Nörthwind</a>,
+        <a href=\\\"https://www.metal-archives.com/bands/The_Stormrider/8478\\\">The
+        Stormrider</a>, <a href=\\\"https://www.metal-archives.com/bands/Atalaya/43677\\\">Atalaya</a>,
+        etc.&nbsp;\"\r\n\t\t]\r\n\t\t\t\t]\r\n}"
+  recorded_at: Wed, 14 Apr 2021 20:26:51 GMT
+- request:
+    method: get
+    uri: https://ma.cache.headbang.re/search/ajax-artist-search/?query=SomeNonExistantName
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - MetalArchivesGemTestSuite/3.2.0 (user@example.com)
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - ma.cache.headbang.re
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+      Cache-Control:
+      - max-age=2592000
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Ray:
+      - 63a39c4209385463-LHR
+      Cf-Request-Id:
+      - '093a1ffd4a00005463cd16e000000001'
+      Content-Security-Policy:
+      - frame-ancestors 'self'
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 14 Apr 2021 20:23:29 GMT
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Expires:
+      - Fri, 14 May 2021 20:23:29 GMT
+      Nel:
+      - '{"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=OKhaOApfht61M3bPYsc6HtmlYn%2F%2FfStpGUkUwKgIY1Qve5mDB8lZxoJTQ00zCp9lVVk24yP0gXVSrWUrMpqLjJLZ%2BG4vKwR2cZtJCB1IYwQvOQ5Srx4y"}],"max_age":604800,"group":"cf-nel"}'
+      Server:
+      - nginx
+      Vary:
+      - Accept-Encoding,User-Agent
+      X-Cache-Status:
+      - HIT
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '104'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{ \r\n\t\"error\": \"\",\r\n\t\"iTotalRecords\": 0,\r\n\t\"iTotalDisplayRecords\":
+        0,\r\n\t\"sEcho\": 0,\r\n\t\"aaData\": [\r\n\t\t]\r\n}"
+  recorded_at: Wed, 14 Apr 2021 20:26:52 GMT
+recorded_with: VCR 6.0.0

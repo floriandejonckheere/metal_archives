@@ -118,6 +118,38 @@ RSpec.describe MetalArchives::Artist do
   end
 
   describe "methods" do
+    describe "#find_by" do
+      use_cassette! "artists/methods/find_by"
+
+      it "finds by name" do
+        artist = described_class.find_by(name: "Alberto Rionda")
+
+        expect(artist.id).to eq 60_908
+      end
+
+      it "returns nil when no artist found" do
+        artist = described_class.find_by(name: "SomeNonExistantName")
+
+        expect(artist).to be_nil
+      end
+    end
+
+    describe "#find_by!" do
+      use_cassette! "artists/methods/find_by"
+
+      it "finds by name" do
+        artist = described_class.find_by!(name: "Alberto Rionda")
+
+        expect(artist.id).to eq 60_908
+      end
+
+      it "returns nil when no artist found" do
+        artist = described_class.find_by!(name: "SomeNonExistantName")
+
+        expect(artist).to be_nil
+      end
+    end
+
     describe "find" do
       it "finds an artist" do
         artist = described_class.find 60_908
@@ -145,36 +177,6 @@ RSpec.describe MetalArchives::Artist do
         expect(-> { described_class.find!(-1) }).to raise_error MetalArchives::Errors::APIError
         expect(-> { described_class.find! 0 }).to raise_error MetalArchives::Errors::NotFoundError
         expect(-> { described_class.find! nil }).to raise_error MetalArchives::Errors::NotFoundError
-      end
-    end
-
-    describe "find_by" do
-      it "finds an artist" do
-        artist = described_class.find_by name: "Alberto Rionda"
-
-        expect(artist).to be_instance_of described_class
-        expect(artist.id).to eq 60_908
-      end
-
-      it "returns nil on invalid id" do
-        artist = described_class.find_by name: "SomeNonExistantName"
-
-        expect(artist).to be_nil
-      end
-    end
-
-    describe "find_by!" do
-      it "finds an artist" do
-        artist = described_class.find_by! name: "Alberto Rionda"
-
-        expect(artist).to be_instance_of described_class
-        expect(artist.id).to eq 60_908
-      end
-
-      it "returns nil on invalid id" do
-        artist = described_class.find_by! name: "SomeNonExistantName"
-
-        expect(artist).to be_nil
       end
     end
 

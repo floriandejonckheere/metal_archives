@@ -200,49 +200,57 @@ module MetalArchives
       ##
       # Find by attributes
       #
-      # Returns rdoc-ref:Artist or nil when no results
+      # [Params]
+      # - +query+: +Hash+ containing one or more of the following keys:
+      #   - +name+: +String+
+      #
+      # [Returns]
+      # - rdoc-ref:MetalArchives::Artist or +nil+
       #
       # [Raises]
       # - rdoc-ref:MetalArchives::Errors::ParserError when parsing failed. Please report this error.
       # - rdoc-ref:MetalArchives::Errors::APIError when receiving status code >= 400
       #
-      # [+query+]
-      #     Hash containing one or more of the following keys:
-      #     - +:name+: +String+
-      #
-      def find_by(name:)
-        params = { query: name&.to_s }
+      def find_by(query)
+        params = { query: CGI.escape(query.fetch(:name)) }
 
-        response = MetalArchives.http.get "/search/ajax-artist-search/", params
-        json = JSON.parse response.to_s
+        json = JSON
+          .parse(MetalArchives.http.get("/search/ajax-artist-search/", params).body.to_s)
+          .dig("aaData", 0, 0)
 
-        return nil if json["aaData"].empty?
+        return unless json
 
-        data = json["aaData"].first
-        id = Nokogiri::HTML(data.first).xpath("//a/@href").first.value.delete('\\').split("/").last.gsub(/\D/, "").to_i
+        url = Nokogiri::HTML(CGI.unescapeHTML(json))
+          .at("a")
+          .attr("href")
 
-        find id
+        return unless url
+
+        id = Types::URI.cast(url).path.split("/").last.to_i
+
+        return unless id
+
+        find(id)
       end
 
       ##
-      # Find by attributes (no lazy loading)
+      # Find by attributes
       #
-      # Returns rdoc-ref:Artist or nil when no results
+      # [Params]
+      # - +query+: +Hash+ containing one or more of the following keys:
+      #   - +name+: +String+
+      #
+      # [Returns]
+      # - rdoc-ref:MetalArchives::Artist
       #
       # [Raises]
       # - rdoc-ref:MetalArchives::Errors::ParserError when parsing failed. Please report this error.
       # - rdoc-ref:MetalArchives::Errors::NotFoundError when receiving status code 404
       # - rdoc-ref:MetalArchives::Errors::APIError when receiving status code >= 400
       #
-      # [+query+]
-      #     Hash containing one or more of the following keys:
-      #     - +:name+: +String+
-      #
-      def find_by!(name:)
-        obj = find_by(name: name)
-        obj.load! if obj && !obj.loaded?
-
-        obj
+      def find_by!(query)
+        find_by(query)
+          &.tap(&:load!)
       end
 
       ##
