@@ -25,6 +25,10 @@ module MetalArchives
         # TODO: releases
         # TODO: links
         # TODO: notes
+      rescue => e
+        e.backtrace.each { |b| MetalArchives.config.logger.error b }
+
+        raise Errors::ParserError, e.message
       end
 
       private

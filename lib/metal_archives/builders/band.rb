@@ -38,6 +38,10 @@ module MetalArchives
         band.releases = releases(
           http.get("/band/discography/id/#{band.id}/tab/all"),
         )
+      rescue => e
+        e.backtrace.each { |b| MetalArchives.config.logger.error b }
+
+        raise Errors::ParserError, e.message
       end
 
       private

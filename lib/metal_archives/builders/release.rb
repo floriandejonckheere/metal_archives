@@ -20,11 +20,14 @@ module MetalArchives
           http.get("/albums/artist/id/#{release.id}"),
         ))
 
-        # TODO: label
         # TODO: songs
         # TODO: other versions
         # TODO: reviews
         # TODO: additional notes
+      rescue => e
+        e.backtrace.each { |b| MetalArchives.config.logger.error b }
+
+        raise Errors::ParserError, e.message
       end
 
       private
