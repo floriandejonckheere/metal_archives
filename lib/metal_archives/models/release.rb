@@ -330,6 +330,141 @@ module MetalArchives
       def all
         search ""
       end
+
+      TYPE_TO_QUERY = {
+        full_length: 1,
+        live: 2,
+        demo: 3,
+        single: 4,
+        ep: 5,
+        video: 6,
+        boxed_set: 7,
+        split: 8,
+        compilation: 10,
+        split_video: 12,
+        collaboration: 13,
+      }.freeze
+
+      TYPE_TO_SYM = {
+        "Full-length" => :full_length,
+        "Live album" => :live,
+        "Demo" => :demo,
+        "Single" => :single,
+        "EP" => :ep,
+        "Video" => :video,
+        "Boxed set" => :boxed_set,
+        "Split" => :split,
+        "Compilation" => :compilation,
+        "Split video" => :split_video,
+        "Collaboration" => :collaboration,
+      }.freeze
+
+      FORMAT_TO_QUERY = {
+        cd: "CD",
+        cassette: "Cassette",
+        vinyl: "Vinyl*",
+        vhs: "VHS",
+        dvd: "DVD",
+        "2dvd": "2DVD",
+        digital: "Digital",
+        blu_ray: "Blu-ray*",
+        other: "Other",
+        unknown: "Unknown",
+      }.freeze
+
+      FORMAT_TO_SYM = {
+        "CD" => :cd,
+        "Cassette" => :cassette,
+        "VHS" => :vhs,
+        "DVD" => :dvd,
+        "2DVD" => :"2dvd",
+        "Digital" => :digital,
+        "Other" => :other,
+        "Unknown" => :unknown,
+      }.freeze
+
+      ##
+      # Map attributes to MA attributes
+      #
+      # Returns +Hash+
+      #
+      # [+params+]
+      #     +Hash+
+      #
+      def map_params(query)
+        {
+          bandName: query[:band_name] || "",
+          releaseTitle: query[:title] || "",
+          releaseYearFrom: query[:from_year] || "",
+          releaseMonthFrom: query[:from_month] || "",
+          releaseYearTo: query[:to_year] || "",
+          releaseMonthTo: query[:to_month] || "",
+          country: map_countries(query[:country]) || "",
+          location: query[:location] || "",
+          releaseLabelName: query[:label_name] || "",
+          releaseCatalogNumber: query[:catalog_id] || "",
+          releaseIdentifiers: query[:identifier] || "",
+          releaseRecordingInfo: query[:recording_info] || "",
+          releaseDescription: query[:version_description] || "",
+          releaseNotes: query[:notes] || "",
+          genre: query[:genre] || "",
+          releaseType: map_types(query[:types]),
+          releaseFormat: map_formats(query[:formats]),
+        }
+      end
+
+      ##
+      # Map MA release type to query parameters
+      #
+      # Returns +Array+ of +Integer+
+      #
+      # [+types+]
+      #     +Array+ containing one or more +Symbol+, see rdoc-ref:Release.type
+      #
+      def map_types(type_syms)
+        return unless type_syms
+
+        types = []
+        type_syms.each do |type|
+          raise Errors::ParserError, "Unknown type: #{type}" unless TYPE_TO_QUERY[type]
+
+          types << TYPE_TO_QUERY[type]
+        end
+
+        types
+      end
+
+      ##
+      # Map MA release type to +Symbol+
+      #
+      # Returns +Symbol+, see rdoc-ref:Release.type
+      #
+      def map_type(type)
+        raise Errors::ParserError, "Unknown type: #{type}" unless TYPE_TO_SYM[type]
+
+        TYPE_TO_SYM[type]
+      end
+
+      ##
+      # Map MA release format to query parameters
+      #
+      # Returns +Array+ of +Integer+
+      #
+      # [+types+]
+      #     +Array+ containing one or more +Symbol+, see rdoc-ref:Release.type
+      #
+      def map_formats(format_syms)
+        return unless format_syms
+
+        formats = []
+        format_syms.each do |format|
+          raise Errors::ParserError, "Unknown format: #{format}" unless FORMAT_TO_QUERY[format]
+
+          formats << FORMAT_TO_QUERY[format]
+        end
+
+        formats
+      end
     end
   end
 end
