@@ -9,13 +9,9 @@ module MetalArchives
       def self.cast(value)
         return if value.blank?
 
-        value
-          .to_s
-          .gsub(/^"/, "")
-          .gsub(/"$/, "")
-          .gsub(/[[:space:]]/, " ")
+        String
+          .cast(value)
           .tr("-", "_")
-          .strip
           .parameterize(separator: "_")
           .to_sym
       end
