@@ -52,7 +52,7 @@ module MetalArchives
       end
 
       def format(string)
-        return :vinyl if string.include? "vinyl"
+        return :vinyl if string.downcase.include? "vinyl"
 
         string
       end
