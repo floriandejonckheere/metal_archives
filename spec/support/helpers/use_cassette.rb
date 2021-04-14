@@ -1,11 +1,12 @@
 # frozen_string_literal: true
 
 module UseCassette
-  def use_cassette!(name)
-    around { |example| VCR.use_cassette(name, re_record_interval: 1.month, &example) }
+  def use_cassette!(name, **options)
+    options = { re_record_interval: 1.month }.merge(options)
+    around { |example| VCR.use_cassette(name, **options, &example) }
   end
 end
 
 RSpec.configure do |config|
-  config.include UseCassette
+  config.extend UseCassette
 end
