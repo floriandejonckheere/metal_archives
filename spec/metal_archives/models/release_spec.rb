@@ -8,7 +8,7 @@ RSpec.describe MetalArchives::Release do
   describe "Tales of Ancient Prophecies" do
     let(:id) { 416_934 }
 
-    around { |example| VCR.use_cassette("releases/tales_of_ancient_prophecies", &example) }
+    use_cassette! "releases/tales_of_ancient_prophecies"
 
     it "has properties" do
       expect(release.title).to eq "Tales of Ancient Prophecies"
@@ -33,7 +33,7 @@ RSpec.describe MetalArchives::Release do
   describe "...And Oceans" do
     let(:id) { 123_563 }
 
-    around { |example| VCR.use_cassette("releases/and_oceans", &example) }
+    use_cassette! "releases/and_oceans"
 
     it "has properties" do
       expect(release.title).to eq "...and Oceans"
@@ -58,7 +58,7 @@ RSpec.describe MetalArchives::Release do
   describe "MMXII" do
     let(:id) { 329_691 }
 
-    around { |example| VCR.use_cassette("releases/mmxii", &example) }
+    use_cassette! "releases/mmxii"
 
     it "has properties" do
       expect(release.title).to eq "MMXII"

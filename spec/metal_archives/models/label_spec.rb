@@ -8,7 +8,7 @@ RSpec.describe MetalArchives::Label do
   describe "AFM Records" do
     let(:id) { 17 }
 
-    around { |example| VCR.use_cassette("labels/afm", &example) }
+    use_cassette! "labels/afm"
 
     it "has properties" do
       expect(label.name).to eq "AFM Records"

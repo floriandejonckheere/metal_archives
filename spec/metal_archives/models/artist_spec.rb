@@ -8,7 +8,7 @@ RSpec.describe MetalArchives::Artist do
   describe "Alberto Rionda" do
     let(:id) { 60_908 }
 
-    around { |example| VCR.use_cassette("artists/alberto_rionda", &example) }
+    use_cassette! "artists/alberto_rionda"
 
     it "has attributes" do
       expect(artist.name).to eq "Alberto Rionda"
@@ -45,7 +45,7 @@ RSpec.describe MetalArchives::Artist do
   describe "Mayhem" do
     let(:id) { 4752 }
 
-    around { |example| VCR.use_cassette("artists/mayhem", &example) }
+    use_cassette! "artists/mayhem"
 
     it "has attributes" do
       expect(artist.name).to eq "Marco Apostolo"
@@ -63,7 +63,7 @@ RSpec.describe MetalArchives::Artist do
   describe "Azel Oliver" do
     let(:id) { 613_096 }
 
-    around { |example| VCR.use_cassette("artists/azel_oliver", &example) }
+    use_cassette! "artists/azel_oliver"
 
     it "has attributes" do
       expect(artist.name).to eq "Azel Oliver"
@@ -80,7 +80,7 @@ RSpec.describe MetalArchives::Artist do
   describe "Lemmy Kilmister" do
     let(:id) { 260 }
 
-    around { |example| VCR.use_cassette("artists/lemmy_kilmister", &example) }
+    use_cassette! "artists/lemmy_kilmister"
 
     it "has attributes" do
       expect(artist.name).to eq "Ian Fraser Kilmister"
