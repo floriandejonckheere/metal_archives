@@ -52,6 +52,9 @@ RSpec/FilePath:
 RSpec/MultipleExpectations:
   Enabled: false
 
+Style/Documentation:
+  Enabled: false
+
 Style/FrozenStringLiteralComment:
   Enabled: true
 
