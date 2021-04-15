@@ -272,32 +272,7 @@ module MetalArchives
       def search_by(query)
         params = Parsers::Release.map_params query
 
-        l = lambda do
-          @start ||= 0
-
-          if @max_items && @start >= @max_items
-            []
-          else
-            response = MetalArchives.http.get "/search/ajax-advanced/searching/albums", params.merge(iDisplayStart: @start)
-            json = JSON.parse response.to_s
-
-            @max_items = json["iTotalRecords"]
-
-            objects = []
-
-            json["aaData"].each do |data|
-              # Create Release object for every ID in the results list
-              id = Nokogiri::HTML(data.first).xpath("//a/@href").first.value.delete('\\').split("/").last.gsub(/\D/, "").to_i
-              objects << Release.find(id)
-            end
-
-            @start += 200
-
-            objects
-          end
-        end
-
-        MetalArchives::Collection.new l
+        MetalArchives.Collection(Artist).new("/search/ajax-advanced/searching/albums", params)
       end
 
       ##

@@ -1,78 +1,35 @@
 # frozen_string_literal: true
 
-# rubocop:disable RSpec/InstanceVariable
 RSpec.describe MetalArchives::Collection do
-  subject(:collection) { described_class.new }
+  subject(:collection) { MetalArchives.Collection(my_class).new("/search/ajax-artist-search/", query: "Alberto+R") }
 
-  it "iterates" do
-    l = lambda do
-      @i ||= 0
+  let(:my_class) do
+    Class.new do
+      attr_accessor :id
 
-      next [] if @i >= 100
-
-      items = (@i..(@i + 9)).to_a
-      @i += 10
-
-      items
-    end
-
-    c = described_class.new l
-
-    i = 0
-    c.each do |item|
-      expect(item).to eq i
-      i += 1
-    end
-  end
-
-  it "returns" do
-    l = lambda do
-      @i ||= 0
-
-      raise StandardError if @i >= 100
-
-      items = (@i..(@i + 9)).to_a
-      @i += 10
-
-      items
-    end
-
-    c = described_class.new l
-
-    i = 0
-    c.each do |item|
-      break if i == 99
-
-      expect(item).to eq i
-      i += 1
-    end
-
-    expect(i).to eq 99
-  end
-
-  describe "empty?" do
-    it "is not empty" do
-      l = lambda do
-        @i ||= 0
-
-        next [] if @i >= 100
-
-        items = (@i..(@i + 9)).to_a
-        @i += 10
-
-        items
+      def self.find(id)
+        @id = id
       end
-
-      c = described_class.new l
-
-      expect(c).not_to be_empty
     end
+  end
 
-    it "is empty" do
-      c = described_class.new -> { [] }
+  use_cassette! "collection"
 
-      expect(c).to be_empty
+  describe "#each" do
+    it "iterates" do
+      expect { |block| collection.each(&block) }.to yield_control.twice
+    end
+  end
+
+  describe "#length" do
+    it "returns the total length" do
+      expect(collection.length).to eq 2
+    end
+  end
+
+  describe "#empty?" do
+    it "returns empty" do
+      expect(collection).not_to be_empty
     end
   end
 end
-# rubocop:enable RSpec/InstanceVariable

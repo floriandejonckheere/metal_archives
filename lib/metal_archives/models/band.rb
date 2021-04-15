@@ -364,32 +364,7 @@ module MetalArchives
       def search_by(query)
         params = map_params query
 
-        l = lambda do
-          @start ||= 0
-
-          if @max_items && @start >= @max_items
-            []
-          else
-            response = MetalArchives.http.get "/search/ajax-advanced/searching/bands", params.merge(iDisplayStart: @start)
-            json = JSON.parse response.to_s
-
-            @max_items = json["iTotalRecords"]
-
-            objects = []
-
-            json["aaData"].each do |data|
-              # Create Band object for every ID in the results list
-              id = Nokogiri::HTML(data.first).xpath("//a/@href").first.value.delete('\\').split("/").last.gsub(/\D/, "").to_i
-              objects << Band.find(id)
-            end
-
-            @start += 200
-
-            objects
-          end
-        end
-
-        MetalArchives::Collection.new l
+        MetalArchives.Collection(Artist).new("/search/ajax-advanced/searching/bands", params)
       end
 
       ##

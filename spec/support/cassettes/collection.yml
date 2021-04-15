@@ -1,0 +1,139 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://ma.cache.headbang.re/search/ajax-artist-search/?iDisplayStart=0&query=Alberto%2BR
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - MetalArchivesGemTestSuite/3.2.0 (user@example.com)
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - ma.cache.headbang.re
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+      Cache-Control:
+      - max-age=2592000
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Ray:
+      - 640815a1fd80063d-LHR
+      Cf-Request-Id:
+      - '0978ebd93d0000063da5042000000001'
+      Content-Security-Policy:
+      - frame-ancestors 'self'
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 15 Apr 2021 20:58:42 GMT
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Expires:
+      - Sat, 15 May 2021 20:58:42 GMT
+      Nel:
+      - '{"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=tUBUcoK%2FzBETXFX5dkdQiqUpGqneyb2rCQIdRV4fpihv7wjpaOvBR8b4gx5N6t4Pk26nKZYgnyBP2p5fiOByOpebiD%2BHJ%2BhjgI%2BtMoQdfAG%2Bp3sYlHi%2F"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - nginx
+      Vary:
+      - Accept-Encoding,User-Agent
+      X-Cache-Status:
+      - HIT
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '834'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{ \r\n\t\"error\": \"\",\r\n\t\"iTotalRecords\": 2,\r\n\t\"iTotalDisplayRecords\":
+        2,\r\n\t\"sEcho\": 0,\r\n\t\"aaData\": [\r\n\t\t\t[\r\n\t\t\t\"<a href=\\\"https://www.metal-archives.com/artists/Alberto_R./251636\\\">Alberto
+        R.</a> \",\r\n\t\t\t\"Alberto R.\",\r\n\t\t\t\"Spain\",\r\n\t\t\t\"<a href=\\\"https://www.metal-archives.com/bands/Alcoh%C3%B3lica/78216\\\">Alcohólica</a>&nbsp;\"\r\n\t\t]\r\n\t\t\t\t,\r\n\t\t\t\t\t[\r\n\t\t\t\"<a
+        href=\\\"https://www.metal-archives.com/artists/Al_Cisneros/6475\\\">Al Cisneros</a>
+        \",\r\n\t\t\t\"Alberto R. Cisneros\",\r\n\t\t\t\"United States\",\r\n\t\t\t\"<a
+        href=\\\"https://www.metal-archives.com/bands/Shrinebuilder/3540292809\\\">Shrinebuilder</a>,
+        <a href=\\\"https://www.metal-archives.com/bands/Sleep/2891\\\">Sleep</a>,
+        <a href=\\\"https://www.metal-archives.com/bands/Om/33472\\\">Om</a>, <a href=\\\"https://www.metal-archives.com/bands/Asbestosdeath/97829\\\">Asbestosdeath</a>,
+        etc.&nbsp;\"\r\n\t\t]\r\n\t\t\t\t]\r\n}"
+  recorded_at: Thu, 15 Apr 2021 21:02:05 GMT
+- request:
+    method: get
+    uri: https://ma.cache.headbang.re/search/ajax-artist-search/?query=Alberto%2BR
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - MetalArchivesGemTestSuite/3.2.0 (user@example.com)
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - ma.cache.headbang.re
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+      Cache-Control:
+      - max-age=2592000
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Ray:
+      - 6408193b68ab06ed-LHR
+      Cf-Request-Id:
+      - '0978ee1925000006ed122e2000000001'
+      Content-Security-Policy:
+      - frame-ancestors 'self'
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 15 Apr 2021 20:58:43 GMT
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Expires:
+      - Sat, 15 May 2021 20:58:43 GMT
+      Nel:
+      - '{"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=0MownuPHlzAxaJnXUL9%2F%2FQBR6APh7DM7Jetv9y5ze1Cl5qhAzyGYwC2uGzxMWLncx0vzWE4IflvthgCRPs%2F1mg7lFf1gKB4dgcjv51MGflfxxqnYjSDA"}]}'
+      Server:
+      - nginx
+      Vary:
+      - Accept-Encoding,User-Agent
+      X-Cache-Status:
+      - HIT
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '834'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{ \r\n\t\"error\": \"\",\r\n\t\"iTotalRecords\": 2,\r\n\t\"iTotalDisplayRecords\":
+        2,\r\n\t\"sEcho\": 0,\r\n\t\"aaData\": [\r\n\t\t\t[\r\n\t\t\t\"<a href=\\\"https://www.metal-archives.com/artists/Alberto_R./251636\\\">Alberto
+        R.</a> \",\r\n\t\t\t\"Alberto R.\",\r\n\t\t\t\"Spain\",\r\n\t\t\t\"<a href=\\\"https://www.metal-archives.com/bands/Alcoh%C3%B3lica/78216\\\">Alcohólica</a>&nbsp;\"\r\n\t\t]\r\n\t\t\t\t,\r\n\t\t\t\t\t[\r\n\t\t\t\"<a
+        href=\\\"https://www.metal-archives.com/artists/Al_Cisneros/6475\\\">Al Cisneros</a>
+        \",\r\n\t\t\t\"Alberto R. Cisneros\",\r\n\t\t\t\"United States\",\r\n\t\t\t\"<a
+        href=\\\"https://www.metal-archives.com/bands/Shrinebuilder/3540292809\\\">Shrinebuilder</a>,
+        <a href=\\\"https://www.metal-archives.com/bands/Sleep/2891\\\">Sleep</a>,
+        <a href=\\\"https://www.metal-archives.com/bands/Om/33472\\\">Om</a>, <a href=\\\"https://www.metal-archives.com/bands/Asbestosdeath/97829\\\">Asbestosdeath</a>,
+        etc.&nbsp;\"\r\n\t\t]\r\n\t\t\t\t]\r\n}"
+  recorded_at: Thu, 15 Apr 2021 21:02:05 GMT
+recorded_with: VCR 6.0.0

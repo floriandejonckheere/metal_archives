@@ -7,35 +7,66 @@ module MetalArchives
   class Collection
     include Enumerable
 
+    class_attribute :class_name
+
+    attr_reader :endpoint, :params, :cursor
+
     ##
     # Construct a new Collection
     #
-    # [+proc+]
-    #   +Proc+ or +lambda+, called repeatedly when iterating. Should return an array of results (stateful),
-    #   should return an empty array when there are no results left.
+    # [Params]
+    # - +endpoint+: JSON endpoint
+    # - +params+: Hash
     #
-    def initialize(proc)
-      @proc = proc
+    def initialize(endpoint, params)
+      @endpoint = endpoint
+      @params = params
+
+      @cursor = 0
     end
 
-    ##
-    # Calls the given block once for each element, passing that element as a parameter.
-    # If no block is given, an Enumerator is returned.
-    #
-    def each(&block)
-      return to_enum :each unless block
+    def each
+      return to_enum(:each) unless block_given?
 
       loop do
-        items = instance_exec(&@proc)
+        break if cursor >= length
 
-        items.each(&block)
+        json = JSON
+          .parse(MetalArchives.http.get(endpoint, params.merge(iDisplayStart: cursor)))
 
-        break if items.empty?
+        @length ||= json["iTotalRecords"].to_i
+
+        json
+          .fetch("aaData")
+          .each do |data|
+          url = Nokogiri::HTML(CGI.unescapeHTML(data.first))
+            .at("a")
+            .attr("href")
+
+          id = Types::URI.cast(url).path.split("/").last.to_i
+
+          yield class_name.find(id)
+        end
+
+        @cursor += json.count
       end
     end
 
+    def length
+      @length ||= JSON
+        .parse(MetalArchives.http.get(endpoint, params))
+        .fetch("iTotalRecords")
+        .to_i
+    end
+
     def empty?
-      first.nil?
+      length.zero?
+    end
+  end
+
+  def self.Collection(class_name)
+    Class.new(Collection) do
+      self.class_name = class_name
     end
   end
 end

@@ -256,44 +256,21 @@ module MetalArchives
       ##
       # Search by name
       #
-      # Returns rdoc-ref:Collection of rdoc-ref:Artist
+      # [Params]
+      # - +query+: +Hash+ containing one or more of the following keys:
+      #   - +name+: +String+
+      #
+      # [Returns]
+      # - rdoc-ref:Collection of rdoc-ref:Artist
       #
       # [Raises]
       # - rdoc-ref:MetalArchives::Errors::ParserError when parsing failed. Please report this error.
       # - rdoc-ref:MetalArchives::Errors::APIError when receiving status code >= 400
       #
-      # [+name+]
-      #     +String+
-      #
-      def search(name)
-        params = { query: name.to_s }
+      def search(query)
+        params = { query: CGI.escape(query.fetch(:name)) }
 
-        l = lambda do
-          @start ||= 0
-
-          if @max_items && @start >= @max_items
-            []
-          else
-            response = MetalArchives.http.get "/search/ajax-artist-search/", params.merge(iDisplayStart: @start)
-            json = JSON.parse response.to_s
-
-            @max_items = json["iTotalRecords"]
-
-            objects = []
-
-            json["aaData"].each do |data|
-              # Create Artist object for every ID in the results list
-              id = Nokogiri::HTML(data.first).xpath("//a/@href").first.value.delete('\\').split("/").last.gsub(/\D/, "").to_i
-              objects << Artist.find(id)
-            end
-
-            @start += 200
-
-            objects
-          end
-        end
-
-        MetalArchives::Collection.new l
+        MetalArchives.Collection(Artist).new("/search/ajax-artist-search/", params)
       end
 
       ##
